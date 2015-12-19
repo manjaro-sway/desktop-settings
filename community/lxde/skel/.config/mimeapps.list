@@ -1,0 +1,27 @@
+[Default Applications]
+inode/directory=pcmanfm.desktop
+x-scheme-handler/http=userapp-Pale Moon-TWNL3X.desktop
+x-scheme-handler/https=userapp-Pale Moon-TWNL3X.desktop
+x-scheme-handler/ftp=userapp-Pale Moon-TWNL3X.desktop
+x-scheme-handler/chrome=userapp-Pale Moon-TWNL3X.desktop
+text/html=userapp-Pale Moon-TWNL3X.desktop
+application/x-extension-htm=userapp-Pale Moon-TWNL3X.desktop
+application/x-extension-html=userapp-Pale Moon-TWNL3X.desktop
+application/x-extension-shtml=userapp-Pale Moon-TWNL3X.desktop
+application/xhtml+xml=userapp-Pale Moon-TWNL3X.desktop
+application/x-extension-xhtml=userapp-Pale Moon-TWNL3X.desktop
+application/x-extension-xht=userapp-Pale Moon-TWNL3X.desktop
+
+[Added Associations]
+inode/directory=pcmanfm.desktop;
+x-scheme-handler/http=midori.desktop;userapp-Pale Moon-TWNL3X.desktop;
+x-scheme-handler/https=midori.desktop;userapp-Pale Moon-TWNL3X.desktop;
+x-scheme-handler/ftp=userapp-Pale Moon-TWNL3X.desktop;
+x-scheme-handler/chrome=userapp-Pale Moon-TWNL3X.desktop;
+text/html=userapp-Pale Moon-TWNL3X.desktop;
+application/x-extension-htm=userapp-Pale Moon-TWNL3X.desktop;
+application/x-extension-html=userapp-Pale Moon-TWNL3X.desktop;
+application/x-extension-shtml=userapp-Pale Moon-TWNL3X.desktop;
+application/xhtml+xml=userapp-Pale Moon-TWNL3X.desktop;
+application/x-extension-xhtml=userapp-Pale Moon-TWNL3X.desktop;
+application/x-extension-xht=userapp-Pale Moon-TWNL3X.desktop;

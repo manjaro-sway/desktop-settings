@@ -1,0 +1,174 @@
+[options]
+font = Terminus 12
+scrollback_lines = 10000
+scroll_on_output = false
+scroll_on_keystroke = true
+resize_grip = false
+audible_bell = false
+visible_bell = false
+search_wrap = true
+mouse_autohide = false
+allow_bold = false
+dynamic_title = true
+urgent_on_bell = true
+clickable_url = true
+
+# "system", "on" or "off"
+cursor_blink = off
+
+# "block", "underline" or "ibeam"
+cursor_shape = block
+
+# $BROWSER is used by default
+browser = google-chrome-unstable
+
+# word characters used for word selection
+# (default if unset: all graphic non-punctuation/space characters)
+#word_chars = -A-Za-z0-9,./?%&#:_=+@~
+
+# set size hints for the window
+#size_hints = false
+
+[colors]
+#SOlarized_dark
+background = #002b36
+foreground = #35BF5C
+color0 = #073642
+color1 = #dc322f
+color2 = #859900
+color3 = #b58900
+color4 = #268bd2
+color5 = #d33682
+color6 = #2aa198
+color7 = #eee8d5
+color8 = #002b36
+color9 = #cb4b16
+color10 = #586e75
+color11 = #657b83
+color12 = #839496
+color13 = #6c71c4
+color14 = #93a1a1
+color15 = #fdf6e3
+
+#solarized_light
+#background = #fdf6e3
+#foreground = #657b83
+#color0 = #eee8d5
+#color1 = #dc322f
+#color2 = #859900
+#color3 = #b58900
+#color4 = #268bd2
+#color5 = #d33682
+#color6 = #2aa198
+#color7 = #073642
+#color8 = #fdf6e3
+#color9 = #cb4b16
+#color10 = #93a1a1
+#color11 = #839496
+#color12 = #657b83
+#color13 = #6c71c4
+#color14 = #586e75
+#color15 = #002b36
+
+
+#background = #2E2C28
+#foreground = #35BF5C
+#foreground_bold = #DADDE2
+# foreground_dim =
+
+# if unset, will reverse foreground and background
+# cursor =
+# highlight =
+
+# colors from color0 to color254 can be set
+
+# BLACK
+#color0 = #5C5955
+#color8 = #6F7277
+
+# WHITE
+#color7 = #DADDE2
+#color15 = #F6F9FF
+
+# RED
+#color1 = #C7756E
+#color9 = #F9A299
+
+# YELLOW
+#color3 = #9F8A4B
+#color11 = #CFB776
+
+# GREEN
+#color2 = #59996B
+#color10 = #85C796
+
+# CYAN
+#color6 = #009BAA
+#color14 = #42CAD9
+
+# BLUE
+#color4 = #5B8FCA
+#color12 = #8BBCFA
+
+# MAGENTA
+#color5 = #B378AB
+#color13 = #E3A5DA
+
+#color40 = #272621
+#color41 = #2E2C28
+#color42 = #494642
+#color43 = #34322E
+#color44 = #5C5955
+#color45 = #6F7277
+#color46 = #A3A6AB
+#color47 = #DADDE2
+#color48 = #F6F9FF
+
+#color16 = #F9A299
+#color17 = #C7756E
+
+#color18 = #EAAB80
+#color19 = #B97E56
+
+#color20 = #CFB776
+#color21 = #9F8A4B
+
+#color22 = #ACC17E
+#color23 = #7F9353
+
+#color24 = #85C796
+#color25 = #59996B
+
+#color26 = #5DCBB7
+#color27 = #259C8A
+
+#color28 = #42CAD9
+#color29 = #009BAA
+
+#color30 = #58C5F1
+#color31 = #0497C1
+
+#color32 = #8BBCFA
+#color33 = #5B8FCA
+
+#color34 = #BDB0F2
+#color35 = #8E83C2
+
+#color36 = #E3A5DA
+#color37 = #B378AB
+
+#color38 = #F79FBA
+#color39 = #C6728D
+
+[hints]
+font = Monospace 8
+foreground = #2E2C28
+background = #A3A6AB
+active_foreground = #272621
+active_background = #42CAD9
+border = #5C5955
+padding = 2
+border_width = 1
+roundness = 2
+
+# vim: ft=dosini cms=#%s

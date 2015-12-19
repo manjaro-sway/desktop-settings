@@ -1,0 +1,16 @@
+[Desktop Entry]
+Type=Application
+Name=Lock Screen
+GenericName=Lock Screen
+Comment=Lock the current session
+Exec=i3lock
+Icon=system-lock-screen
+Categories=LXQt;Screensaver
+OnlyShowIn=LXQt;
+
+Name[pt]=Bloquear
+Comment[pt]=Bloquear a sessão atual
+Comment[de]=aktuelle Sitzung sperren
+Name[de]=Bildschirm sperren
+
+NoDisplay=true

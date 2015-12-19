@@ -1,0 +1,20 @@
+# GIMP gimprc
+# 
+# This is your personal gimprc file.  Any variable defined in this file takes
+# precedence over the value defined in the system-wide gimprc:
+# /etc/gimp/2.0/gimprc
+# Most values can be set within GIMP by changing some options in the
+# Preferences dialog.
+
+(color-management
+    (mode off)
+    (rgb-profile "/usr/share/color/rgb/AdobeRGB1998.icc")
+    (display-profile-from-gdk no)
+    (display-rendering-intent perceptual)
+    (simulation-rendering-intent perceptual)
+    (simulation-gamut-check no)
+    (out-of-gamut-color (color-rgb 0.501961 0.501961 0.501961))
+    (display-module "CdisplayLcms"))
+
+
+# end of gimprc

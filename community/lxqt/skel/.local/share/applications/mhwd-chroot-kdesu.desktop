@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Chroot
+Comment=GUI for chroot
+Categories=System;
+Icon=system-run
+TryExec=kdesu
+Exec=mhwd-chroot
+NoDisplay=true

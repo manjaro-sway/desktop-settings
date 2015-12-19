@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="launchers" mtime="1421303939" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>xfce4-appfinder;/usr/share/applications/xfce4-appfinder.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>exo-terminal-emulator;/usr/share/applications/exo-terminal-emulator.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>pale moon;/usr/share/applications/palemoon.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>thunar;/usr/share/applications/Thunar.desktop</stringvalue>
+		</li>
+	</entry>
+	<entry name="groupbutton_left_click_double" mtime="1421303336" type="bool" value="false"/>
+	<entry name="gkeys_select_next_group_skip_launchers" mtime="1421303336" type="bool" value="false"/>
+	<entry name="locked_list_no_overlap" mtime="1421303336" type="bool" value="false"/>
+	<entry name="separate_wine_apps" mtime="1421303336" type="bool" value="true"/>
+	<entry name="gkeys_select_previous_group_keystr" mtime="1421303336" type="string">
+		<stringvalue>&lt;super&gt;&lt;shift&gt;Tab</stringvalue>
+	</entry>
+	<entry name="progress_custom_fg_color" mtime="1421303336" type="bool" value="false"/>
+	<entry name="groupbutton_shift_and_left_click_double" mtime="1421303336" type="bool" value="false"/>
+	<entry name="use_number_shortcuts" mtime="1421303336" type="bool" value="true"/>
+	<entry name="gkeys_select_next_group_keystr" mtime="1421303336" type="string">
+		<stringvalue>&lt;super&gt;Tab</stringvalue>
+	</entry>
+	<entry name="progress_fg_color" mtime="1421303336" type="string">
+		<stringvalue>#772953</stringvalue>
+	</entry>
+	<entry name="groupbutton_shift_and_middle_click_double" mtime="1421303336" type="bool" value="false"/>
+	<entry name="opacify_alpha" mtime="1421303336" type="int" value="5"/>
+	<entry name="gkeys_select_previous_window_keystr" mtime="1421303336" type="string">
+		<stringvalue>&lt;super&gt;&lt;control&gt;&lt;shift&gt;Tab</stringvalue>
+	</entry>
+	<entry name="badge_bg_color" mtime="1421303336" type="string">
+		<stringvalue>#CDCDCD</stringvalue>
+	</entry>
+	<entry name="groupbutton_attention_notification_type" mtime="1421303336" type="string">
+		<stringvalue>red</stringvalue>
+	</entry>
+	<entry name="windowbutton_shift_and_left_click_action" mtime="1421303336" type="string">
+		<stringvalue>select or minimize window</stringvalue>
+	</entry>
+	<entry name="badge_custom_bg_color" mtime="1421303336" type="bool" value="false"/>
+	<entry name="groupbutton_shift_and_right_click_double" mtime="1421303336" type="bool" value="false"/>
+	<entry name="progress_bg_alpha" mtime="1421303336" type="int" value="64"/>
+	<entry name="preview_minimized" mtime="1421303336" type="bool" value="true"/>
+	<entry name="media_buttons" mtime="1421303336" type="bool" value="true"/>
+	<entry name="old_menu" mtime="1421303336" type="bool" value="false"/>
+	<entry name="groupbutton_shift_and_left_click_action" mtime="1421303336" type="string">
+		<stringvalue>launch application</stringvalue>
+	</entry>
+	<entry name="groupbutton_right_click_double" mtime="1421303336" type="bool" value="false"/>
+	<entry name="select_one_window" mtime="1421303336" type="string">
+		<stringvalue>select or minimize window</stringvalue>
+	</entry>
+	<entry name="windowbutton_close_popup_on_middle_click" mtime="1421303336" type="bool" value="false"/>
+	<entry name="popup_align" mtime="1421303336" type="string">
+		<stringvalue>center</stringvalue>
+	</entry>
+	<entry name="badge_use_custom_font" mtime="1421303336" type="bool" value="false"/>
+	<entry name="preview_size" mtime="1421303336" type="int" value="150"/>
+	<entry name="popup_delay" mtime="1421303336" type="int" value="250"/>
+	<entry name="select_next_use_lastest_active" mtime="1421303336" type="bool" value="false"/>
+	<entry name="unity" mtime="1421303336" type="bool" value="true"/>
+	<entry name="groupbutton_middle_click_action" mtime="1421303336" type="string">
+		<stringvalue>close all windows</stringvalue>
+	</entry>
+	<entry name="windowbutton_close_popup_on_shift_and_left_click" mtime="1421303336" type="bool" value="false"/>
+	<entry name="select_multiple_windows" mtime="1421303336" type="string">
+		<stringvalue>select or minimize all</stringvalue>
+	</entry>
+	<entry name="dockmanager" mtime="1421303336" type="bool" value="false"/>
+	<entry name="windowbutton_close_popup_on_shift_and_middle_click" mtime="1421303336" type="bool" value="false"/>
+	<entry name="windowbutton_scroll_up" mtime="1421303336" type="string">
+		<stringvalue>shade window</stringvalue>
+	</entry>
+	<entry name="gkeys_select_previous_group" mtime="1421303336" type="bool" value="false"/>
+	<entry name="windowbutton_close_popup_on_scroll_up" mtime="1421303336" type="bool" value="false"/>
+	<entry name="windowbutton_shift_and_right_click_action" mtime="1421303336" type="string">
+		<stringvalue>no action</stringvalue>
+	</entry>
+	<entry name="second_popup_delay" mtime="1421303336" type="int" value="30"/>
+	<entry name="opacify_smoothness" mtime="1421303336" type="int" value="5"/>
+	<entry name="windowbutton_close_popup_on_shift_and_right_click" mtime="1421303336" type="bool" value="false"/>
+	<entry name="opacify_duration" mtime="1421303336" type="int" value="100"/>
+	<entry name="locked_list_in_menu" mtime="1421303336" type="bool" value="true"/>
+	<entry name="popup_style_file" mtime="1421303336" type="string">
+		<stringvalue>dbx.tar.gz</stringvalue>
+	</entry>
+	<entry name="separate_prism_apps" mtime="1421303336" type="bool" value="true"/>
+	<entry name="opacify_fade" mtime="1421303336" type="bool" value="true"/>
+	<entry name="groupbutton_shift_and_right_click_action" mtime="1421303336" type="string">
+		<stringvalue>no action</stringvalue>
+	</entry>
+	<entry name="groupbutton_left_click_action" mtime="1421303336" type="string">
+		<stringvalue>select</stringvalue>
+	</entry>
+	<entry name="delay_on_select_all" mtime="1421303336" type="bool" value="true"/>
+	<entry name="show_close_button" mtime="1421303336" type="bool" value="true"/>
+	<entry name="badge_custom_fg_color" mtime="1421303336" type="bool" value="false"/>
+	<entry name="groupbutton_show_tooltip" mtime="1421303821" type="bool" value="true"/>
+	<entry name="badge_fg_alpha" mtime="1421303336" type="int" value="255"/>
+	<entry name="gkeys_select_next_window_keystr" mtime="1421303336" type="string">
+		<stringvalue>&lt;super&gt;&lt;control&gt;Tab</stringvalue>
+	</entry>
+	<entry name="badge_font" mtime="1421303336" type="string">
+		<stringvalue>sans 10</stringvalue>
+	</entry>
+	<entry name="groupbutton_scroll_up" mtime="1421303336" type="string">
+		<stringvalue>select previous window</stringvalue>
+	</entry>
+	<entry name="groupbutton_middle_click_double" mtime="1421303336" type="bool" value="false"/>
+	<entry name="windowbutton_close_popup_on_left_click" mtime="1421303336" type="bool" value="true"/>
+	<entry name="window_title_width" mtime="1421303336" type="int" value="140"/>
+	<entry name="windowbutton_scroll_down" mtime="1421303336" type="string">
+		<stringvalue>unshade window</stringvalue>
+	</entry>
+	<entry name="gkeys_select_next_group" mtime="1421303336" type="bool" value="false"/>
+	<entry name="progress_custom_bg_color" mtime="1421303336" type="bool" value="false"/>
+	<entry name="windowbutton_middle_click_action" mtime="1421303336" type="string">
+		<stringvalue>close window</stringvalue>
+	</entry>
+	<entry name="preview" mtime="1421303336" type="bool" value="false"/>
+	<entry name="windowbutton_left_click_action" mtime="1421303336" type="string">
+		<stringvalue>select or minimize window</stringvalue>
+	</entry>
+	<entry name="groupbutton_scroll_down" mtime="1421303336" type="string">
+		<stringvalue>select next window</stringvalue>
+	</entry>
+	<entry name="windowbutton_right_click_action" mtime="1421303336" type="string">
+		<stringvalue>show menu</stringvalue>
+	</entry>
+	<entry name="separate_ooo_apps" mtime="1421303336" type="bool" value="true"/>
+	<entry name="theme" mtime="1421303336" type="string">
+		<stringvalue>Glassified</stringvalue>
+	</entry>
+	<entry name="windowbutton_shift_and_middle_click_action" mtime="1421303336" type="string">
+		<stringvalue>no action</stringvalue>
+	</entry>
+	<entry name="gkeys_select_next_window" mtime="1421303336" type="bool" value="false"/>
+	<entry name="quicklist" mtime="1421303336" type="bool" value="true"/>
+	<entry name="progress_fg_alpha" mtime="1421303336" type="int" value="255"/>
+	<entry name="badge_bg_alpha" mtime="1421303336" type="int" value="255"/>
+	<entry name="workspace_behavior" mtime="1421303336" type="string">
+		<stringvalue>switch</stringvalue>
+	</entry>
+	<entry name="no_popup_for_one_window" mtime="1421303336" type="bool" value="false"/>
+	<entry name="windowbutton_close_popup_on_scroll_down" mtime="1421303336" type="bool" value="false"/>
+	<entry name="groupbutton_shift_and_middle_click_action" mtime="1421303336" type="string">
+		<stringvalue>no action</stringvalue>
+	</entry>
+	<entry name="progress_bg_color" mtime="1421303336" type="string">
+		<stringvalue>#CDCDCD</stringvalue>
+	</entry>
+	<entry name="badge_fg_color" mtime="1421303336" type="string">
+		<stringvalue>#020202</stringvalue>
+	</entry>
+	<entry name="groupbutton_right_click_action" mtime="1421303336" type="string">
+		<stringvalue>show menu</stringvalue>
+	</entry>
+	<entry name="windowbutton_close_popup_on_right_click" mtime="1421303336" type="bool" value="false"/>
+	<entry name="opacify" mtime="1421303336" type="bool" value="false"/>
+	<entry name="show_only_current_desktop" mtime="1421303336" type="bool" value="false"/>
+	<entry name="opacify_group" mtime="1421303336" type="bool" value="false"/>
+	<entry name="gkeys_select_previous_window" mtime="1421303336" type="bool" value="false"/>
+	<entry name="show_only_current_monitor" mtime="1421303336" type="bool" value="false"/>
+	<entry name="select_next_activate_immediately" mtime="1421303336" type="bool" value="false"/>
+</gconf>

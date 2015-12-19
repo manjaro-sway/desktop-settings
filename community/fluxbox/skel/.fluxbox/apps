@@ -1,0 +1,112 @@
+[app] (name=fbrun)
+  [Position]	(CENTER)	{0 0}
+  [Layer]	{2}
+[end]
+[app] (name=plank) (class=Plank)
+  [Layer]	{8}
+[end]
+[app] (name=hexchat) (class=Hexchat)
+  [Dimensions]	{40% 33%}
+  [Position]	(UPPERLEFT)	{34% 36%}
+  [Close]	{yes}
+[end]
+[app] (name=lxterminal) (class=Lxterminal)
+  [Dimensions]	{56% 73%}
+  [Position]	(UPPERLEFT)	{34% 7%}
+  [Alpha]	{210}
+  [Close]	{yes}
+[end]
+[app] (name=pcmanfm) (class=Pcmanfm)
+  [Dimensions]	{75% 81%}
+  [Position]	(UPPERLEFT)	{16% 9%}
+  [Close]	{yes}
+[end]
+[app] (name=lxmusic) (class=Lxmusic)
+  [Position]	(UPPERLEFT)	{26% 32%}
+  [Close]	{yes}
+[end]
+[app] (name=Pinta) (class=Pinta)
+  [Dimensions]	{95% 93%}
+  [Fullscreen]	{no}
+  [Close]	{yes}
+[end]
+[app] (name=Navigator) (class=Pale moon) (role=browser)
+  [Dimensions]	{93% 85%}
+  [Position]	(UPPERLEFT)	{3% 3%}
+  [Close]	{yes}
+[end]
+[app] (name=abiword) (class=Abiword) (role=topLevelWindow)
+  [Position]	(UPPERLEFT)	{5% 0%}
+  [Close]	{yes}
+[end]
+[app] (name=gnumeric) (class=Gnumeric)
+  [Dimensions]	{75% 80%}
+  [Position]	(UPPERLEFT)	{24% 1%}
+  [Close]	{yes}
+[end]
+[app] (name=galculator) (class=Galculator)
+  [Position]	(UPPERLEFT)	{35% 37%}
+  [Close]	{yes}
+[end]
+[app] (name=vlc) (class=Vlc) (role=vlc-main)
+  [Position]	(UPPERLEFT)	{19% 13%}
+  [Alpha]	{255}
+  [Close]	{yes}
+[end]
+[app] (name=mousepad) (class=Mousepad)
+  [Dimensions]	{63% 68%}
+  [Position]	(UPPERLEFT)	{34% 15%}
+  [Close]	{yes}
+[end]
+[app] (name=pamac-manager) (class=Pamac-manager)
+  [Position]	(UPPERLEFT)	{5% 0%}
+  [Close]	{yes}
+[end]
+[app] (name=gpartedbin) (class=GParted)
+  [Position]	(UPPERLEFT)	{12% 11%}
+  [Close]	{yes}
+[end]
+[app] (name=lxappearance) (class=Lxappearance)
+  [Dimensions]	{61% 74%}
+  [Position]	(UPPERLEFT)	{21% 14%}
+  [Close]	{yes}
+[end]
+[app] (name=nitrogen) (class=Nitrogen)
+  [Position]	(UPPERLEFT)	{45% 0%}
+  [Close]	{yes}
+[end]
+[app] (name=pavucontrol) (class=Pavucontrol)
+  [Dimensions]	{56% 59%}
+  [Position]	(UPPERLEFT)	{30% 21%}
+  [Close]	{yes}
+[end]
+[app] (name=system-config-printer.py) (class=System-config-printer.py)
+  [Dimensions]	{53% 51%}
+  [Position]	(UPPERLEFT)	{27% 30%}
+  [Close]	{yes}
+[end]
+[app] (name=xfce4-notifyd-config) (class=Xfce4-notifyd-config)
+  [Position]	(UPPERLEFT)	{49% 18%}
+  [Close]	{yes}
+[end]
+[app] (name=system-config-printer.py) (class=System-config-printer.py)
+  [Dimensions]	{53% 51%}
+  [Position]	(UPPERLEFT)	{27% 30%}
+  [Close]	{yes}
+[end]
+[app] (name=xfce4-notifyd-config) (class=Xfce4-notifyd-config)
+  [Position]	(UPPERLEFT)	{49% 18%}
+  [Close]	{yes}
+[end]
+[app] (name=xfburn) (class=Xfburn)
+  [Dimensions]  {60% 69%}
+  [Position]    {UPPERLEFT)     {15% 7%}
+  [Close]	{yes}
+[end]
+[app] (name=timeset-gui) (class=Timeset-gui)
+  [Position]	{UPPERLEFT}	{35% 13%}
+  [Close]	{yes}
+[app] (name=lxrandr) (class=Lxrandr)
+  [Position]	(UPPERLEFT)	{41% 10%}
+  [Close]	{yes}
+[end]

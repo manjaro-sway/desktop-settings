@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Close
+Comment=Close the active window
+Exec=wmctrl -c :ACTIVE:
+Terminal=false
+Type=Application
+Icon=/usr/share/icons/gnome/32x32/actions/window-close.png
+StartupNotify=false
+Hidden=true
+X-XFCE-Source=file:///usr/share/applications/close_active-manjaro-netbook.desktop

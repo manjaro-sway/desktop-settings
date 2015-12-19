@@ -1,0 +1,150 @@
+# lxpanel <profile> config file. Manually editing is not recommended.
+# Use preference dialog in lxpanel to adjust config when you can.
+
+Global {
+    edge=bottom
+    allign=left
+    margin=0
+    widthtype=percent
+    width=100
+    height=35
+    transparent=1
+    tintcolor=#13351e
+    alpha=50
+    autohide=0
+    heightwhenhidden=2
+    setdocktype=1
+    setpartialstrut=1
+    usefontcolor=1
+    fontsize=12
+    fontcolor=#8ab6d9
+    usefontsize=1
+    background=0
+    backgroundfile=/usr/share/lxpanel/images/background.png
+    iconsize=33
+    loglevel=2
+}
+
+Plugin {
+    type = space
+    Config {
+        Size=2
+    }
+}
+
+Plugin {
+    type = menu
+    Config {
+        image=/usr/share/backgrounds/manjaro-logo.png
+        system {
+        }
+        separator {
+        }
+        item {
+            command=run
+        }
+        separator {
+        }
+        item {
+            image=gnome-logout
+            command=logout
+        }
+    }
+}
+
+Plugin {
+    type = space
+    Config {
+        Size=2
+    }
+}
+
+Plugin {
+    type = launchbar
+    Config {
+        Button {
+            id=pcmanfm.desktop
+        }
+        Button {
+            id=/usr/share/applications/lxterminal.desktop
+        }
+        Button {
+            id=/usr/share/applications/hexchat.desktop
+        }
+        Button {
+            id=/usr/share/applications/palemoon.desktop
+        }
+    }
+}
+
+Plugin {
+    type = space
+    Config {
+        Size=4
+    }
+}
+
+Plugin {
+    type = taskbar
+    expand=1
+    Config {
+        tooltips=1
+        IconsOnly=0
+        ShowAllDesks=0
+        UseMouseWheel=1
+        UseUrgencyHint=1
+        FlatButton=0
+        MaxTaskWidth=100
+        spacing=1
+        GroupedTasks=0
+    }
+}
+
+Plugin {
+    type = pager
+}
+
+Plugin {
+    type = cpu
+}
+
+Plugin {
+    type = tray
+}
+
+Plugin {
+    type = dclock
+    Config {
+        ClockFmt=%R
+        TooltipFmt=%A %x
+        BoldFont=1
+        IconOnly=0
+        CenterText=0
+    }
+}
+
+Plugin {
+    type = batt
+    Config {
+        HideIfNoBattery=0
+        AlarmCommand=xmessage Battery low
+        AlarmTime=5
+        BackgroundColor=black
+        BorderWidth=1
+        ChargingColor1=#28f200
+        ChargingColor2=#22cc00
+        DischargingColor1=#ffee00
+        DischargingColor2=#d9ca00
+        Size=12
+    }
+}
+
+Plugin {
+    type = launchbar
+    Config {
+        Button {
+            id=lxde-logout.desktop
+        }
+    }
+}
+

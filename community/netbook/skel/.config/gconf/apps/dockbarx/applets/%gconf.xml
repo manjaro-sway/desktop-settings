@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="applet_list" mtime="1421303791" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>DockbarX</stringvalue>
+		</li>
+	</entry>
+</gconf>

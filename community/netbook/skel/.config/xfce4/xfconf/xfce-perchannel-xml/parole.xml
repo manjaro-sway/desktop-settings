@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="parole" version="1.0">
+  <property name="window" type="empty">
+    <property name="maximized" type="bool" value="true"/>
+  </property>
+</channel>

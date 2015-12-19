@@ -1,0 +1,21 @@
+#
+# ~/.xprofile
+#
+# sourced by /etc/lxdm/Xsession
+#
+
+# Dbus-related fix to get everything working properly...
+if which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
+    eval "$(dbus-launch --sh-syntax --exit-with-session)"
+fi
+
+# Check if if the standard Home directories exist (Documents, Downloads, etc.), and
+# if not, then create them
+if [ -x /usr/bin/xdg-user-dirs-update ] ; then
+    /usr/bin/xdg-user-dirs-update
+fi
+
+# Environment variables
+#
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+. .initde 2>/dev/null

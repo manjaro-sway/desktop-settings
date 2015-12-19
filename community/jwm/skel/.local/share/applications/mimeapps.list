@@ -1,0 +1,17 @@
+[Default Applications]
+application/x-executable=medit.desktop
+application/pdf=epdfview.desktop
+text/plain=leafpad.desktop
+application/xml=medit.desktop
+application/x-shellscript=medit.desktop
+image/png=viewnior.desktop;
+inode/directory=pcmanfm.deskop;
+
+[Added Associations]
+application/x-executable=medit.desktop;
+application/pdf=epdfview.desktop;
+text/plain=leafpad.desktop;
+application/xml=medit.desktop;
+application/x-shellscript=medit.desktop;
+image/png=viewnior.desktop;
+inode/directory=pcmanfm.deskop;
