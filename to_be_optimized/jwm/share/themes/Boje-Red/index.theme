@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Boje-Red
+Comment=Slick and simple dark theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Boje-Red
+MetacityTheme=Boje-Red
+IconTheme=nouveGnomeGray
+CursorTheme=Shere_Khan_X
+ButtonLayout=:minimize,maximize,close

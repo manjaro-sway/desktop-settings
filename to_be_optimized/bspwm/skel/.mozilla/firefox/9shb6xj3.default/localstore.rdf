@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="chrome://browser/content/browser.xul#PersonalToolbar"
+                   collapsed="false" />
+  <RDF:Description RDF:about="chrome://browser/content/preferences/preferences.xul">
+    <NC:persist RDF:resource="chrome://browser/content/preferences/preferences.xul#BrowserPreferences"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://browser/content/browser.xul#main-window"
+                   width="994"
+                   height="958"
+                   screenX="0"
+                   screenY="28"
+                   sizemode="maximized" />
+  <RDF:Description RDF:about="chrome://browser/content/places/bookmarkProperties.xul#bookmarkproperties"
+                   screenX="420"
+                   screenY="343"
+                   width="440" />
+  <RDF:Description RDF:about="chrome://browser/content/places/bookmarkProperties.xul">
+    <NC:persist RDF:resource="chrome://browser/content/places/bookmarkProperties.xul#bookmarkproperties"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://browser/content/browser.xul">
+    <NC:persist RDF:resource="chrome://browser/content/browser.xul#main-window"/>
+    <NC:persist RDF:resource="chrome://browser/content/browser.xul#PersonalToolbar"/>
+    <NC:persist RDF:resource="chrome://browser/content/browser.xul#sidebar-box"/>
+    <NC:persist RDF:resource="chrome://browser/content/browser.xul#sidebar-title"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://browser/content/browser.xul#sidebar-title"
+                   value="" />
+  <RDF:Description RDF:about="chrome://browser/content/preferences/preferences.xul#BrowserPreferences"
+                   lastSelected="paneMain"
+                   screenX="306"
+                   screenY="229" />
+</RDF:RDF>
