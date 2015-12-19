@@ -1,0 +1,7 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Window actions
+Exec=/usr/bin/gnome-pie -o 395
+Encoding=UTF-8
+Type=Application
+Icon=stock_unknown

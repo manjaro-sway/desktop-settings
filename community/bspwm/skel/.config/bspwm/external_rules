@@ -1,0 +1,113 @@
+#! /bin/bash
+out='/tmp/winodws'
+wid=$1
+class=$2
+instance=$3
+
+# Debug info
+#echo "id		$wid" >> $out
+#echo "title	$(xtitle $wid)" >> $out
+#echo "class	$class" >> $out
+#echo "ins		$instance" >> $out
+
+function getWinIDByInstance {
+	instance=$1
+	if [ "$2" != "" ]; then
+		desk="-d $2"
+	fi
+	for id in $(echo bspc query -W $desk| sh); do
+		ins=$(xprop -id $id| grep _CLASS| cut -d" " -f3| sed -e s/^.// -e s/..$//)
+			if [ "$instance" == $ins ]; then
+				echo $id
+				break
+			fi
+	done
+}
+
+function getWinIDByTitle {
+	titleSearch=$1
+	if [ "$2" != "" ]; then
+		desk="-d $2"
+	fi
+	for id in $(echo bspc query -W $desk| sh); do
+		title="$(xtitle $id)"
+			if [[ "$title" == *$titleSearch ]]; then
+				echo $id
+				break
+			fi
+	done
+}
+
+# place Steam windows
+if [ "$class" == "Steam" ]; then
+	title=$(xtitle $wid)
+	case "$title" in
+		# main window
+		"Steam")
+			echo desktop=5 split_dir=left
+			sleep 0.05 && bspc window $wid -r 0.55 &
+			;;
+		# Friend list
+		"Friends")
+			echo steamfreunde >> $out
+			chatID=$(getWinIDByTitle '- Chat' '5')
+			teamspeakID=$(getWinIDByTitle 'TeamSpeak 3' '5')
+			echo $chatID $teamspeakID >> $out
+			if [ "$chatID" != "" ] && [ "$teamspeakID" != "" ]; then
+				bspc window $chatID -r 0.68
+				echo desktop=5 split_dir=right window=$chatID
+				sleep 0.05 && bspc window $chatID -p up &
+				sleep 0.06 && bspc window $chatID -r 0.55 &
+				sleep 0.07 && bspc window $teamspeakID -w $chatID &
+			elif [ "$chatID" != "" ]; then
+				bspc window $chatID -r 0.68 
+				echo desktop=5 split_dir=right window=$chatID
+			elif [ "$teamspeakID" != "" ]; then
+				bspc window $teamspeakID -r 0.68
+				echo desktop=5 split_dir=right window=$teamspeakID
+			else
+				echo desktop=5 split_dir=right 
+				sleep 0.05 && bspc window $wid -r 0.55 &
+			fi
+			;;
+		# Chat window
+		*"- Chat"|""|"Untitled")
+			echo "steamchat" >> $out
+			freundeID=$(getWinIDByTitle "Friends" "5")
+			teamspeakID=$(getWinIDByTitle 'TeamSpeak 3' '5')
+			if [ "$teamspeakID" != "" ]; then
+				bspc window $teamspeakID -r 0.55
+				echo desktop=5 split_dir=down window=$teamspeakID
+			elif [ "$freundeID" != "" ]; then
+				bspc window $freundeID -r 0.68
+				echo desktop=5 split_dir=left window=$freundeID
+			else
+				echo desktop=5 split_dir=right
+			fi
+			;;
+		*)
+			echo "unbekanntes Steam Fenster $title" >> $out
+	esac
+	exit
+fi
+
+# place Teamspeak
+if [ "$class" == "TeamSpeak 3" ]; then
+	chatID=$(getWinIDByTitle '- Chat' '5')
+	if [ "$chatID" != "" ]; then
+		bspc window $chatID -r 0.55
+		echo desktop=5 split_dir=up window=$chatID
+	else
+		steamID=$(getWinIDByTitle 'Steam' '5')
+		freundeID=$(getWinIDByTitle "Friends" "5")
+		if [ "$freundeID" != "" ]; then
+			bspc window $freundeID -r 0.65
+			echo desktop=5 split_dir=left window=$freundeID
+		else
+			echo desktop=5 split_dir=right window=$steamID
+		fi
+	fi
+	exit
+fi
+
+echo >> $out

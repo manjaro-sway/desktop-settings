@@ -1,0 +1,332 @@
+#!/bin/bash
+
+#  updated on 04.12.2015 14:11:24
+#  version 0.1
+
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2 of the License, or
+#  (at your option) any later version.
+#  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#  
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software
+#  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+#  MA 02110-1301, USA.
+#  
+
+#########################################################################################
+# Design based on IceFox script                                                         #
+# Modified, adapted and improved by pekman and excalibur1234                            #
+# Some modifications based on the pacli and mhwd-tui (thx @Chrysostomus) made by Holmes #                     			                        
+# Contact and suggestions: pekman@openmailbox.org (JWMconf holmes_holmes@live.com)      #
+# Freenode: #manjaropek #manjaro-geek #manjaro			                        #
+# Topic discussion 						                        #
+#			http://polr.me/Pacli1			                        #
+#			http://polr.me/Pacli2					        #
+#                       http://bit.ly/1NKCL5e 						#
+#			http://bit.ly/1NKCOOp			                        #  
+#########################################################################################
+
+function help_text() {
+	less 	<<-EOF
+Welcome to JWMconf Control Center Shell Configure's information page.
+JWMconf is an interactive configure JWM for your command line terminal. It provides an easy user interface to edit configuration files of the JWM. You can also edit other files.
+
+HOME SCREEN
+JWMconf Control Center Shell Configure's home screen is split into two parts: 
+The upper part focuses on JWM files. Also has some important options for maintenance of JWM. The lower part provides options to edit other settings files: Wbar, Conky, Dunst, Top, Rofi, Gmrun, Slim and Oblogout. Choose an option by entering its number and pressing [Enter].
+
+ATTENTION
+*The numbers 20 and 21 can break your system. WARNING! USE WITH CAUTION.
+
+0 - EXIT JWMCONF
+"clear && exit"
+This will exit JWMconf and clear your terminal.
+
+00 - INFORMATION JWMCONF
+Display this information page.
+
+1- REFRESH CONFIGURATION JWM
+"jwm -restart"
+Restart JWM by sending _JWM_RESTART to the root window.
+
+2- REFRESH MENU JWM
+"jwm -reload"
+Reload menu by sending _JWM_RELOAD to the root window.
+
+3- CHECK ERROR JWM
+"jwm -p"
+To check the JWM configuration and return syntax errors (including associated line numbers).
+
+4- EDIT MENU JWM
+This option is to edit the Menu settings (in ~/.jwm/menu). To edit the Menu is used nano editor.
+
+5- EDIT TRAY JWM
+This option is to edit the Tray settings (in ~/.jwm/tray). To edit the Tray is used nano editor.
+
+6- EDIT START JWM
+This option is to edit the Start settings (in ~/.jwm/start). To edit the Start is used nano editor.
+
+7- EDIT THEME JWM
+This option is to edit the Theme settings (in ~/.jwm/theme). To edit the Theme is used nano editor.
+
+8- EDIT KEYS JWM
+This option is to edit the Keys settings (in ~/.jwm/keys). To edit the Keys is used nano editor.
+
+9- EDIT GROUPS JWM
+This option is to edit the Groups settings (in ~/.jwm/groups). To edit the Groups is used nano editor.
+
+10- EDIT PREFERENCES JWM
+This option is to edit the Preferences settings (in ~/.jwm/preferences). To edit the Preferences is used nano editor.
+
+11- EDIT JWMRC
+This option is to edit the jwmrc settings (in ~/.jwmrc). To edit the jwmrc is used nano editor.
+
+12- COMMANDS MANUAL JWM
+General commands manual of the Joe's Window Manager (JWM). JWM is a window manager for X11 Window Sustem.
+
+13- VERSION JWM
+"jwm -v"
+Display version information JWM.
+
+14- EDIT WBAR
+Wbar is a simple and highly customizable quick-launch dock.
+This option is to edit the Wbar settings (in ~/.wbar). To edit the Wbar is used nano editor.
+
+15- EDIT CONKY
+Conky a light-weight system monitor.
+This option is to edit the Conky settings ((in ~/.conkyrc). To edit the Conky is used nano editor.
+
+16- EDIT DUNST
+Dunst is a lightweight replacement for the notification-daemons provided by most desktop environments.
+This option is to edit the Dunst settings (in ~/.config/dunst/dunstrc). To edit the Dunst is used nano editor.
+
+17- EDIT TOP
+Top command displays processor activity of your Linux box and also displays tasks managed by kernel in real-time.
+This option is to edit the Top settings (in ~/.toprc). To edit the Top is used nano editor.
+
+18- EDIT ROFI
+A window switcher, run dialog and dmenu replacement.
+This option is to edit the Rofi settings (in ~/.Xresources). To edit the Rofi is used nano editor.
+
+19- EDIT GMRUN
+Gmrun (Gnome Completion-Run) is an lightweight application launcher similar to GNOME Run, Application Finder, KRunner, etc. 
+This option is to edit the Gmrun settings (in ~/.gmrunrc). To edit the Gmrun is used nano editor.
+
+20- EDIT SLIM
+Slim is an acronym for Simple Login Manager. Lightweight and easily configurable, Slim requires minimal dependencies.
+This option is to edit the Slim settings (in /etc/slim.conf). To edit the Slim is used nano editor.
+
+21- EDIT OBLOGOUT
+Oblogout is an optional, configurable logout script that presents a graphical interface (i.e. buttons) to cancel, logout, restart, etc.
+This option is to edit the Oblogout settings (in /etc/oblogout.conf). To edit the Oblogout is used nano editor.
+ 
+To exit this information page, press "q".
+	EOF
+}
+
+# set colors
+RED='\e[41m'
+BLUE='\e[44m'
+ORANGE='\e[46m'
+NC='\e[0m'
+    while true; do
+    clear
+    echo ""
+    echo -e "                  $NC JWMconf Control Center Shell Configure $NC "
+    echo ""
+    echo -e "                      $NC ::WARNING! USE WITH CAUTION:: $NC"
+    echo -e " ┌─────────────────────────────────────────────────────────────────────────┐"
+    echo -e " │  $NC  1  $NC  Refresh Configuration JWM          $NC  2  $NC  Refresh Menu JWM      │"
+    echo -e " │  $NC  3  $NC  Check Error JWM                    $NC  4  $NC  Edit Menu JWM         │"
+    echo -e " │  $NC  5  $NC  Edit Tray JWM                      $NC  6  $NC  Edit Start JWM        │"
+    echo -e " │  $NC  7  $NC  Edit Theme JWM                     $NC  8  $NC  Edit Keys JWM         │"
+    echo -e " │  $NC  9  $NC  Edit Groups JWM                    $NC 10  $NC  Edit Preferences JWM  │"
+    echo -e " │  $NC 11  $NC  Edit jwmrc                         $NC 12  $NC  Commands Manual JWM   │"
+    echo -e " │  $NC 13  $NC  Version JWM                                                     │"
+     echo " └─────────────────────────────────────────────────────────────────────────┘" 
+    echo ""
+    echo " ┌─────────────────────────────────────────────────────────────────────────┐"
+    echo -e " │  $NC 14  $NC  Edit Wbar                          $NC 15  $NC  Edit Conky            │"
+    echo -e " │  $NC 16  $NC  Edit Dunst                         $NC 17  $NC  Edit Top              │"
+    echo -e " │  $NC 18  $NC  Edit Rofi                          $NC 19  $NC  Edit Gmrun            │"
+    echo -e " │  $NC 20  $NC  *Edit Slim                         $NC 21  $NC  *Edit Oblogout        │"
+    echo " └─────────────────────────────────────────────────────────────────────────┘"
+    echo ""
+    echo -e "        $NC Select a number and press [Enter] - 0 Exit - 00 Information$NC"
+    echo ""
+    read choix
+    case $choix in
+        1)
+            echo
+            jwm -restart
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        2)
+            echo
+            jwm -reload
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        3)
+            echo
+            jwm -p
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        4)
+            echo
+            nano ~/.jwm/menu
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        5)
+            echo
+            nano ~/.jwm/tray
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        6)
+            echo ""
+            nano ~/.jwm/start
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        7)
+            echo ""
+            nano ~/.jwm/theme
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read 
+	    ;;
+        8)
+            echo ""
+            nano ~/.jwm/keys
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        9)
+            echo ""
+            nano ~/.jwm/groups
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        10)
+            echo ""
+            nano ~/.jwm/preferences
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        11)
+            echo ""
+            nano ~/.jwmrc
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+
+        12)
+            echo ""
+            man jwm
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        13)
+            echo
+            jwm -v
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+
+        14)
+            echo ""
+            nano ~/.wbar
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        15)
+            echo ""
+            nano ~/.conkyrc
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        16)
+            echo ""
+            nano ~/.config/dunst/dunstrc
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        17)
+            echo ""
+            nano ~/.toprc
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        18)
+            echo ""
+            nano ~/.Xresources
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        19)
+            echo ""
+            nano ~/.gmrunrc
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        20)
+            echo ""
+            sudo nano /etc/slim.conf
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        21)
+            echo ""
+            sudo nano /etc/oblogout.conf
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+         0)
+            clear && exit
+            read
+            ;;
+        00)
+            echo
+            help_text
+            echo
+            ;;
+        *)
+            echo -e "$NC ::WRONG OPTION:: $NC"
+            echo "Wait and try again later..."
+            echo ""
+            sleep 3
+            clear
+            ;;
+    esac
+    done
+fi

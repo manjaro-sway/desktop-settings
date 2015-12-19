@@ -1,0 +1,25 @@
+[Default Applications]
+x-scheme-handler/http=userapp-Pale Moon-NZ0HSX.desktop
+x-scheme-handler/https=userapp-Pale Moon-NZ0HSX.desktop
+x-scheme-handler/ftp=userapp-Pale Moon-NZ0HSX.desktop
+x-scheme-handler/chrome=userapp-Pale Moon-NZ0HSX.desktop
+text/html=userapp-Pale Moon-NZ0HSX.desktop
+application/x-extension-htm=userapp-Pale Moon-NZ0HSX.desktop
+application/x-extension-html=userapp-Pale Moon-NZ0HSX.desktop
+application/x-extension-shtml=userapp-Pale Moon-NZ0HSX.desktop
+application/xhtml+xml=userapp-Pale Moon-NZ0HSX.desktop
+application/x-extension-xhtml=userapp-Pale Moon-NZ0HSX.desktop
+application/x-extension-xht=userapp-Pale Moon-NZ0HSX.desktop
+
+[Added Associations]
+x-scheme-handler/http=userapp-Pale Moon-NZ0HSX.desktop;
+x-scheme-handler/https=userapp-Pale Moon-NZ0HSX.desktop;
+x-scheme-handler/ftp=userapp-Pale Moon-NZ0HSX.desktop;
+x-scheme-handler/chrome=userapp-Pale Moon-NZ0HSX.desktop;
+text/html=userapp-Pale Moon-NZ0HSX.desktop;
+application/x-extension-htm=userapp-Pale Moon-NZ0HSX.desktop;
+application/x-extension-html=userapp-Pale Moon-NZ0HSX.desktop;
+application/x-extension-shtml=userapp-Pale Moon-NZ0HSX.desktop;
+application/xhtml+xml=userapp-Pale Moon-NZ0HSX.desktop;
+application/x-extension-xhtml=userapp-Pale Moon-NZ0HSX.desktop;
+application/x-extension-xht=userapp-Pale Moon-NZ0HSX.desktop;

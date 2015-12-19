@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=dmenu
+Comment=
+Exec=dlauncher
+Icon=preferences-system-search-symbolic
+Path=
+Terminal=false
+StartupNotify=false

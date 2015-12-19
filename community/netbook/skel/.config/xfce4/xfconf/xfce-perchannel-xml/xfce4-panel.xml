@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-panel" version="1.0">
+  <property name="configver" type="int" value="2"/>
+  <property name="panels" type="array">
+    <value type="int" value="1"/>
+    <property name="panel-1" type="empty">
+      <property name="position" type="string" value="p=6;x=25;y=28"/>
+      <property name="mode" type="uint" value="1"/>
+      <property name="length" type="uint" value="100"/>
+      <property name="size" type="uint" value="31"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="1"/>
+        <value type="int" value="2"/>
+        <value type="int" value="3"/>
+        <value type="int" value="4"/>
+        <value type="int" value="5"/>
+        <value type="int" value="6"/>
+        <value type="int" value="7"/>
+        <value type="int" value="8"/>
+      </property>
+    </property>
+  </property>
+  <property name="plugins" type="empty">
+    <property name="plugin-1" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="14213032871.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-2" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="14213032982.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-3" type="string" value="dockbarx"/>
+    <property name="plugin-4" type="string" value="mixer">
+      <property name="sound-card" type="string" value="HDAIntelAlsamixer"/>
+      <property name="track" type="string" value="Master"/>
+      <property name="command" type="string" value="xfce4-mixer"/>
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+    </property>
+    <property name="plugin-5" type="string" value="systray">
+      <property name="names-visible" type="array">
+        <value type="string" value="networkmanager applet"/>
+        <value type="string" value="manjaro-settings-manager-daemon"/>
+        <value type="string" value="pamac-tray"/>
+        <value type="string" value="blueman-applet"/>
+      </property>
+      <property name="size-max" type="uint" value="24"/>
+      <property name="show-frame" type="bool" value="false"/>
+    </property>
+    <property name="plugin-6" type="string" value="power-manager-plugin"/>
+    <property name="plugin-7" type="string" value="applicationsmenu">
+      <property name="show-tooltips" type="bool" value="true"/>
+      <property name="button-title" type="string" value=""/>
+      <property name="show-button-title" type="bool" value="false"/>
+      <property name="button-icon" type="string" value="start-here-manjaro"/>
+    </property>
+    <property name="plugin-8" type="string" value="clock">
+      <property name="mode" type="uint" value="4"/>
+      <property name="show-military" type="bool" value="false"/>
+    </property>
+  </property>
+</channel>

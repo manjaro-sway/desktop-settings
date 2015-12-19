@@ -1,0 +1,5 @@
+XTerm*background: #ffffff
+XTerm*foreground: #1f1f1f
+XTerm*reverseVideo: on
+XTerm*faceName: Terminus:size=11:antialias=true
+XTerm*selectToClipboard: true

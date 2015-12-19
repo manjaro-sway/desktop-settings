@@ -1,0 +1,10 @@
+# Renaming Destop in the user's language
+xdg-user-dirs-update --force >/dev/null
+newname=$(awk -F[\"\/] '/^XDG_DESKTOP_DIR=/ {print $3}' .config/user-dirs.dirs)
+if [ $newname != Desktop ]; then
+    cp -d Desktop/* $newname 2>/dev/null
+    rm -rf Desktop
+fi
+sed -i 's/Exec=/Exec=gksu /' $newname/manjaro-settings-manager.desktop
+sed -i 's/Exec=/Exec=gksu /' $newname/pamac-manager.desktop
+rm .initde

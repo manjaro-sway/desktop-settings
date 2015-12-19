@@ -1,0 +1,61 @@
+item = Terminal
+cmd = termite
+icon = NULL
+
+item = Browser
+cmd = google-chrome-unstable
+icon = NULL
+
+item = Filemanager
+cmd = spacefm
+icon = NULL
+
+separator
+
+Submenu = Programs
+
+	icon = NULL
+
+	Submenu = Drawing
+	
+		icon = NULL
+	
+		item = Gimp
+		cmd = gimp
+		icon = NULL
+	
+		item = Inkscape
+		cmd = inkscape
+		icon = NULL
+	
+	Submenu = Games
+	
+		icon = NULL
+	
+		item = Super Tux Kart
+		cmd = 
+		icon = NULL
+	
+		item = Super Tux
+		cmd = 
+		icon = NULL
+
+	Submenu = Music
+
+		icon = NULL
+
+		item = ncmpcpp
+		cmd = urxvt -e "ncmpcpp"
+		icon = NULL
+
+		item = mpdviz
+		cmd = urxvt -e sh -c "mpdviz -i true"
+		icon = NULL
+
+	Submenu = Write
+
+		icon = NULL
+
+		item = LibreOffice
+		cmd = libreoffice
+		icon = NULL

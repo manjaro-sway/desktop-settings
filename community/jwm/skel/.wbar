@@ -1,0 +1,43 @@
+i: /usr/share/pixmaps/wbar/dock1.png
+c: wbar --pos bottom --offset 5 --isize 32 --idist 5 --nanim 5 --filter 1 --fc 0xffb1222b
+t: /usr/share/fonts/TTF/Roboto-Bold/9
+
+i: /usr/share/icons/AwOkenWhite/clear/128x128/apps/alunn-pacman-24.png
+c: xterm ~/.managers/pacli
+t: Pacli
+
+i: /usr/share/icons/AwOkenWhite/clear/128x128/apps/aptana.png
+c: xterm ~/.managers/jwmconf
+t: JWMConf
+
+i: /usr/share/icons/AwOkenWhite/clear/128x128/apps/terminal2.png
+c: sakura
+t: Sakura
+
+i: /usr/share/icons/AwOkenWhite/clear/128x128/apps/system-file-manager2.png
+c: pcmanfm
+t: PCManFM
+
+i: /usr/share/icons/AwOkenWhite/clear/128x128/categories/applications-internet2.png
+c: palemoon
+t: Pale Moon
+
+i: /usr/share/icons/AwOkenWhite/clear/128x128/apps/empathy.png
+c: hexchat
+t: HexChat
+
+i: /usr/share/icons/AwOkenWhite/clear/128x128/apps/abiword.png
+c: abiword
+t: Abiword
+
+i: /usr/share/icons/AwOkenWhite/clear/128x128/apps/multimedia-audio-player.png
+c: lxmusic
+t: LXMusic
+
+i: /usr/share/icons/AwOkenWhite/clear/128x128/mimetypes/video-x-generic2.png
+c: smplayer
+t: SMPlayer
+
+i: /usr/share/icons/AwOkenWhite/clear/128x128/actions/system-shutdown-panel.png
+c: oblogout
+t: Session

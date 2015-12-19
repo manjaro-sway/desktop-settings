@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=claws-mail
+Hidden=true
+Name=claws-mail
+Type=Application
+Version=1.0
+X-LXQt-Need-Tray=true

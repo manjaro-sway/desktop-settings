@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=packsize
+Comment=Packages size with usage
+Comment[fr]=Taille paquets et appelants
+Categories=System;
+Icon=libreoffice-database
+TryExec=packsize
+Exec=packsize

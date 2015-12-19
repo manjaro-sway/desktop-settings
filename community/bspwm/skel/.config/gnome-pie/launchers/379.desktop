@@ -1,0 +1,7 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Window list
+Exec=/usr/bin/gnome-pie -o 379
+Encoding=UTF-8
+Type=Application
+Icon=window-manager

@@ -1,0 +1,17 @@
+[Desktop Entry]
+Type=Application
+Name=Screenshot
+GenericName=Screenshot
+Comment=Take a screenshot
+Exec=lximage-qt --screenshot
+Icon=camera-photo
+Categories=Graphics;Utility;Core;Qt;
+StartupNotify=true
+Name[pt]=Captura de ecrã
+GenericName[pt]=Captura de ecrã
+Comment[pt]=Obter uma captura de ecrã
+Name[de]=Bildschirmfoto
+GenericName[de]=Bildschirmfoto
+Comment[de]=Erstelle ein Bildschirmfoto
+NoDisplay=true
+

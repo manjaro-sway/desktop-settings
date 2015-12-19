@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=compton -b
+Hidden=true
+Name=compton
+Type=Application
+Version=1.0

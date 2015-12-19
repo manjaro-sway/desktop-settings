@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="popup_style_file" mtime="1421303791" type="string">
+		<stringvalue>gradent.tar.gz</stringvalue>
+	</entry>
+	<entry name="color8" mtime="1421303337" type="string">
+		<stringvalue>#000000</stringvalue>
+	</entry>
+	<entry name="color7" mtime="1421303337" type="string">
+		<stringvalue>#000000</stringvalue>
+	</entry>
+	<entry name="color6" mtime="1421303337" type="string">
+		<stringvalue>#000000</stringvalue>
+	</entry>
+	<entry name="color5_alpha" mtime="1421303337" type="int" value="127"/>
+	<entry name="color5" mtime="1421303337" type="string">
+		<stringvalue>#ff0000</stringvalue>
+	</entry>
+	<entry name="color4" mtime="1421303337" type="string">
+		<stringvalue>#9C9C9C</stringvalue>
+	</entry>
+	<entry name="color3" mtime="1421303337" type="string">
+		<stringvalue>#ffffff</stringvalue>
+	</entry>
+	<entry name="color2" mtime="1421303337" type="string">
+		<stringvalue>#FFFFFF</stringvalue>
+	</entry>
+	<entry name="color1_alpha" mtime="1421303337" type="int" value="156"/>
+	<entry name="color1" mtime="1421303337" type="string">
+		<stringvalue>#ffffff</stringvalue>
+	</entry>
+</gconf>

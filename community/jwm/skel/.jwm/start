@@ -1,0 +1,15 @@
+<JWM>
+
+    <!-- Startup for program. -->
+    <StartupCommand>nitrogen --restore</StartupCommand>
+    <StartupCommand>sleep 1s && pamac-tray &</StartupCommand> 
+    <StartupCommand>sleep 2s && volumeicon &</StartupCommand>
+    <StartupCommand>sleep 3s && nm-applet &</StartupCommand>
+    <StartupCommand>sleep 5s && conky &</StartupCommand>
+    <StartupCommand>sleep 7s && wbar &</StartupCommand>
+    <StartupCommand>sleep 10s && /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &</StartupCommand>    
+    <StartupCommand>sleep 12s && xautolock -time 20 -locker 'i3lock -i $HOME/.i3lock/pretending_about_the_future.png' &</StartupCommand>
+    <StartupCommand>sleep 13s && xrdb merge .Xresources &</StartupCommand>
+    <StartupCommand>compton -c --shadow-exclude 'g:e:wbar'</StartupCommand>
+
+</JWM>

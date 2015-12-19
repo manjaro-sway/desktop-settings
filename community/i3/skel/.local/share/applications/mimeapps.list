@@ -1,0 +1,10 @@
+[Added Associations]
+image/jpeg=gpicview.desktop;pinta.desktop;
+image/png=gpicview.desktop;pinta.desktop;
+image/bmp=gpicview.desktop;pinta.desktop;
+application/xml=mousepad.desktop;
+text/plain=mousepad.desktop;
+application/x-shellscript=mousepad.desktop;
+application/octet-stream=mousepad.desktop;
+inode/directory=pcmanfm.desktop;
+audio/mpeg=vlc.desktop;

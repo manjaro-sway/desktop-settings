@@ -1,0 +1,28 @@
+! XTerm Settings
+*background: #b1222b
+*foreground: #161616
+XTerm*reverseVideo: on
+xterm*faceName: Monospace:size=10:antialias=true
+xterm*font: 7x13
+xterm*geometry: 80x26
+
+! Rofi Settings
+rofi.opacity: 90
+rofi.width: 50
+rofi.lines: 5
+rofi.columns: 1
+rofi.font: Roboto 9
+rofi.fg: #b1222b
+rofi.bg: #161616
+rofi.hlfg: #161616
+rofi.hlbg: #b1222b
+rofi.bc: #b1222b
+rofi.bw: 2
+rofi.loc: 0
+rofi.padding: 2
+rofi.yoffset: -2
+rofi.xoffset: 0
+rofi.fixed-num-lines: false
+rofi.hmode: false
+rofi.terminal: sakura
+rofi.ssh-set-title: true
