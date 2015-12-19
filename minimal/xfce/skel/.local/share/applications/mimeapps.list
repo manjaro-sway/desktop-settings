@@ -1,0 +1,20 @@
+[Default Applications]
+application/pdf=raktpdf.desktop
+text/plain=mousepad.desktop
+image/jpeg=viewnior.desktop
+application/xml=mousepad.desktop
+image/png=viewnior.desktop
+image/gif=viewnior.desktop
+video/x-ms-wmv=parole.desktop
+video/mp4=parole.desktop
+video/x-flv=parole.desktop
+video/ogg=parole.desktop
+video/x-ogm+ogg=parole.desktop
+video/x-theora+ogg=parole.desktop
+
+[Added Associations]
+application/octet-stream=mousepad.desktop;
+application/x-gettext-translation=mousepad.desktop;
+application/x-wine-extension-ini=mousepad.desktop;
+image/gif=viewnior.desktop;gimp.desktop;
+

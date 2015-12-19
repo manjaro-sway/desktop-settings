@@ -1,0 +1,5 @@
+[Branding]
+Homepage=http://www.manjaro.org/
+
+[Favorites]
+FavoriteURLs=/usr/share/applications/qupzilla.desktop,/usr/share/applications/org.kde.dolphin.desktop,/usr/share/applications/org.kde.konsole.desktop,/usr/share/applications/systemsettings.desktop 
