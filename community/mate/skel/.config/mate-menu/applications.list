@@ -1,0 +1,12 @@
+location:/usr/share/applications/firefox.desktop
+location:/usr/share/applications/hexchat.desktop
+location:/usr/share/applications/pamac-updater.desktop
+location:/usr/share/applications/thunderbird.desktop
+separator
+location:/usr/share/applications/galculator.desktop
+location:/usr/share/applications/pluma.desktop
+separator
+location:/usr/share/applications/mate-system-monitor.desktop
+location:/usr/share/applications/mate-volume-control.desktop
+location:/usr/share/applications/pamac-manager.desktop
+location:/usr/share/applications/manjaro-settings-manager.desktop

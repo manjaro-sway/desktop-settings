@@ -1,3 +1,5 @@
+#!/usr/bin/env xdg-open
+
 [Desktop Entry]
 Name=HexChat
 GenericName=IRC Client
@@ -10,4 +12,4 @@ Categories=GTK;Network;IRCClient;
 StartupNotify=true
 X-GNOME-UsesNotifications=true
 MimeType=x-scheme-handler/irc;x-scheme-handler/ircs;
-Name[en_US]=Manjaro IRC Help (Live)
+Name[en_US]=Manjaro Help (Live)
