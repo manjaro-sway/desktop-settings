@@ -108,7 +108,7 @@ bspc config external_rules_command /usr/bin/pseudo_automatic_mode
 #bspc config external_rules_command /usr/bin/adjust-new-window
 
 ##Autostart apps
-#Deybindings daemon
-sxhkd &
+#Keybindings daemon
+#sxhkd &
 #Source autostartfile. Uncomment this if you use bspwm-git
 #. $HOME/.config/bspwm/autostart

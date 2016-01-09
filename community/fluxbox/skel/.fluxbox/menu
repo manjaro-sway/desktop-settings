@@ -16,6 +16,7 @@
   [exec] (qpdfview) {qpdfview --unique}
 [end]
 [submenu] (Graphics)
+  [exec] (Color Picker Gcolor2 {gcolor2}
   [exec] (Image Viewer) {gpicview}
   [exec] (Pinta) {pinta}
   [exec] (Simple Scan) {simple-scan}
@@ -56,6 +57,7 @@
   [exec] (Manjaro Settings Manager) {manjaro-settings-manager}
   [exec] (Monitor Settings) {lxrandr}
   [exec] (Network Connections) {nm-connection-editor}
+  [exec] (Preferred Applications) {libfm-pref-apps}
   [exec] (Print Settings) {system-config-printer}
   [exec] (Privilege granting) {gksu-properties}
 [end]

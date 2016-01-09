@@ -1,13 +1,18 @@
-total_run_times         0
-short_units         yes
-pad_percents         2
-times_in_seconds true
-if_up_strictness address
-update_interval 2.0
-
-TEXT
-
-C\
+conky.config = {
+	background = false,
+	cpu_avg_samples = 2,
+	net_avg_samples = 2,
+	no_buffers = true,
+	out_to_stderr = false,
+	update_interval = 2.0,
+	uppercase = false,
+	times_in_seconds = true,
+	use_spacer = 'none',
+	if_up_strictness = 'address',
+};
+ 
+conky.text =
+[[C\
 #Hide infos button
 ${if_existing /tmp/conkytoggle 1}%{A:toggleconky.sh:}- %{A}\
 #Network
@@ -75,3 +80,4 @@ $endif\
 ${endif}\
 ##Clock
  ${time %H:%M}
+]];

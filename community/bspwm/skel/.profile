@@ -1,16 +1,19 @@
-# /etc/profile
+# $HOME/.profile
 
 #Set our umask
 umask 022
 
 # Set our default path
-PATH="/usr/local/sbin:/usr/local/bin:/usr/bin/core_perl:/usr/bin:$HOME/.config/bspwm/panel:$HOME/scripts"
+PATH="/usr/local/sbin:/usr/local/bin:/usr/bin/core_perl:/usr/bin:$HOME/.config/bspwm/panel:$HOME/.bin"
 export PANEL_FIFO="/tmp/panel-fifo"
 export PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 export BSPWM_SOCKET="/tmp/bspwm-socket"
 export PANEL_HEIGHT=25
 export XDG_CONFIG_DIRS=/usr/etc/xdg:/etc/xdg
+export GUI_EDITOR=gedit
+export EDITOR=nano
+export BROWSER=midori
 
 # Load profiles from /etc/profile.d
 if test -d /etc/profile.d/; then
@@ -30,4 +33,4 @@ unset TERMCAP
 
 # Man is much better than us at figuring this out
 unset MANPATH
-BROWSER=/usr/bin/xdg-open
+BROWSER=/usr/bin/midori

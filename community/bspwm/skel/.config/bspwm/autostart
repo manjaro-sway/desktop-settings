@@ -47,3 +47,5 @@ limepanel &
 notify-send "Welcome to Manjaro-bspwm! " "Press super + F1 to show keybindings" &
 ##Run screenlock when suspending
 run_once i3lock-wait-for-suspend &
+##multimonitor support. Save monitor configurations with "autorandr.sh --save <profile>"
+srandrd atorandr.sh --change

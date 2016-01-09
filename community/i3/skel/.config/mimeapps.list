@@ -1,0 +1,31 @@
+[Default Applications]
+x-scheme-handler/http=userapp-Pale Moon-06IX9X.desktop
+x-scheme-handler/https=userapp-Pale Moon-06IX9X.desktop
+x-scheme-handler/ftp=userapp-Pale Moon-06IX9X.desktop
+x-scheme-handler/chrome=userapp-Pale Moon-06IX9X.desktop
+text/html=userapp-Pale Moon-06IX9X.desktop
+application/x-extension-htm=userapp-Pale Moon-06IX9X.desktop
+application/x-extension-html=userapp-Pale Moon-06IX9X.desktop
+application/x-extension-shtml=userapp-Pale Moon-06IX9X.desktop
+application/xhtml+xml=userapp-Pale Moon-06IX9X.desktop
+application/x-extension-xhtml=userapp-Pale Moon-06IX9X.desktop
+application/x-extension-xht=userapp-Pale Moon-06IX9X.desktop
+image/jpeg=gpicview.desktop
+image/png=gpicview.desktop
+text/plain=mousepad.desktop
+
+[Added Associations]
+x-scheme-handler/http=userapp-Pale Moon-06IX9X.desktop;
+x-scheme-handler/https=userapp-Pale Moon-06IX9X.desktop;
+x-scheme-handler/ftp=userapp-Pale Moon-06IX9X.desktop;
+x-scheme-handler/chrome=userapp-Pale Moon-06IX9X.desktop;
+text/html=userapp-Pale Moon-06IX9X.desktop;
+application/x-extension-htm=userapp-Pale Moon-06IX9X.desktop;
+application/x-extension-html=userapp-Pale Moon-06IX9X.desktop;
+application/x-extension-shtml=userapp-Pale Moon-06IX9X.desktop;
+application/xhtml+xml=userapp-Pale Moon-06IX9X.desktop;
+application/x-extension-xhtml=userapp-Pale Moon-06IX9X.desktop;
+application/x-extension-xht=userapp-Pale Moon-06IX9X.desktop;
+image/jpeg=gpicview.desktop;
+image/png=gpicview.desktop;
+text/plain=mousepad.desktop;

@@ -1,6 +1,11 @@
 [ -r /etc/profile.d/cnf.sh ] && . /etc/profile.d/cnf.sh
 
+
+#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+. /etc/profile.d/fzf.zsh
+export BROWSER=/usr/bin/midori
+export EDITOR=/usr/bin/nano
 
 TERM=xterm
 case $TERM in
@@ -121,9 +126,20 @@ cleanse() {
         sudo bleachbit -c --preset
 }
 
-PROMPT="┌─[%n@%M]-[%4~]%(!.#.$) 
-└─>>  "
+PROMPT="%{$fg[green]%}┌─[%4~]-[%n@%M]%(!.#.$) 
+└─%(?.%{$fg[green]%}>>  %{$reset_color%}.%{$fg[red]%}>> %{$reset_color%})"
 RPROMPT="%(?.%{$fg[green]%}✓ %{$reset_color%}.%{$fg[red]%}✗ %{$reset_color%})"
 
-#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+## Base16 Shell color themes.
+#possible themes: 3024, apathy, ashes, atelierdune, atelierforest, atelierhearth,
+#atelierseaside, bespin, brewer, chalk, codeschool, colors, default, eighties, 
+#embers, flat, google, grayscale, greenscreen, harmonic16, isotope, londontube,
+#marrakesh, mocha, monokai, ocean, paraiso, pop (dark only), railscasts, shapesifter,
+#solarized, summerfruit, tomorrow, twilight
 
+theme="tomorrow"
+
+#Possible variants: dark and light
+shade="dark"
+BASE16_SHELL="$HOME/.config/base16-shell/base16-$theme.$shade.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
