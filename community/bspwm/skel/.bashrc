@@ -11,8 +11,9 @@ xhost +local:root > /dev/null 2>&1
 
 complete -cf sudo
 
+export BROWSER=/usr/bin/midori
 export EDITOR=/usr/bin/nano
-export HISTSIZE=10000
+export HISTSIZE=1000
 export HISTFILESIZE=${HISTSIZE}
 export HISTCONTROL=ignoreboth
 export JAVA_FONTS=/usr/share/fonts/TTF

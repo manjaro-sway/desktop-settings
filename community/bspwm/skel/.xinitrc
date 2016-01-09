@@ -16,8 +16,7 @@ fi
 if which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
     eval "$(dbus-launch --sh-syntax --exit-with-session)"
 fi
-DMENU_FN="-zevv-peep-medium-*-normal--20-175-*-*-c-*-iso8859-15"
-#DMENU_FN="-*-terminus-medium-r-normal-*-20-*-*-*-*-*-iso10646-*"
+DMENU_FN="Terminus-15"
 DMENU_NB="#000000"
 DMENU_NF="#99CC99"
 DMENU_SB="#99CC99"
@@ -25,10 +24,6 @@ DMENU_SF="#000000"
 DMENU_OPTIONS="-fn $DMENU_FN -nb $DMENU_NB -nf $DMENU_NF -sf $DMENU_SF -sb $DMENU_SB"
 #export DMENU_FN DMENU_NB DMENU_NF DMENU_SF DMENU_SB DMENU_OPTIONS
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
-export GUI_EDITOR=gedit
-export EDITOR=nano
-export TERMINAL_CMD=terminal
-export BROWSER=midori
 if [ -x /usr/bin/xdg-user-dirs-update ]; then
 
    /usr/bin/xdg-user-dirs-update
@@ -39,7 +34,7 @@ session=${1:-bspwm}
 
 case $session in
     awesome           ) exec awesome;;
-    bspwm             ) exec bspwm;;
+    bspwm             ) exec bspwm-session;;
     catwm             ) exec catwm;;
     spectrwm          ) exec spectrwm;;
     cinnamon          ) exec cinnamon-session;;

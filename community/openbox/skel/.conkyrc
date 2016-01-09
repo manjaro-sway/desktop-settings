@@ -1,0 +1,43 @@
+conky.config = {
+alignment = 'bottom_center',
+background = true,
+--border_margin = 5,
+--border_width = 5,
+border_inner_margin= 5,
+default_color = '31363d',
+double_buffer = true,
+draw_borders = false,
+draw_outline = false,
+draw_shades = false,
+gap_x = 510,
+gap_y = 350,
+maximum_width = 500,
+minimum_width = 245,
+no_buffers = true,
+override_utf8_locale = true,
+own_window = true,
+own_window_title = 'conky',
+own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+own_window_transparent = true,
+own_window_type = 'desktop',
+text_buffer_size = 8000,
+total_run_times = 0,
+update_interval = 1,
+uppercase = false,
+use_xft = true,
+xftalpha = 1
+}
+conky.text = [[
+${font Roboto:pixelsize=40}${alignc}${time %d %b, %Y}${font}
+
+${font Roboto:pixelsize=13}${alignc}${time %H:%M:%S I %a} I Frankfurt ${font Roboto:pixelsize=13}${alignc} ${weather http://weather.noaa.gov/pub/data/observations/metar/stations/ EDDF temperature temperature 15}°C
+
+${font Roboto:pixelsize=13}${alignc} USER: ${color 199ab7}${execi 5000 whoami}${color} I MACHINE: ${color 199ab7}$nodename${color} I UPTIME: ${color e74c3c}$uptime${color}
+${font Roboto:pixelsize=13}${alignc} DISTRIBUTION: ${color 199ab7}${execi 6000 awk -F'=' '/DESCRIPTION/ {print $2}' /etc/lsb-release |sed 's/"//g'}${color} I VERSION: ${color 199ab7}${execi 6000 awk -F'=' '/DISTRIB_RELEASE=/ {printf $2" "} /CODENAME/ {print $2}' /etc/lsb-release}${color}
+${font Roboto:pixelsize=13}${alignc} ARCHITECTURE: ${color 199ab7}${machine}${color} I KERNEL: ${color 199ab7}${kernel}${color}
+${font Roboto:pixelsize=13}${alignc} ROOT: ${color e74c3c}${fs_free /}${color} / ${color 199ab7}${fs_used /}${color} I HOME: ${color e74c3c}${fs_free /home}${color} / ${color 199ab7}${fs_used /home}${color}
+${font Roboto:pixelsize=13}${alignc} CPU: ${color e74c3c}${cpu cpu0}%${color} I HD: ${color e74c3c}${fs_used_perc}%${color} I SYS TEMP: ${color e74c3c}${hwmon temp 1}°C${color}
+${font Roboto:pixelsize=13}${alignc} WIFI: ${color e74c3c}${wireless_link_qual wlp3s0}%${color} I BATTERY: ${color e74c3c}${battery_percent BAT1}%${color} I ${font Roboto:pixelsize=13}${alignc} SWAP: ${color e74c3c}$swap${color}
+
+${font Roboto:pixelsize=13}${alignc} ${color 199ab7}${execi 5000 whoami}${color}, YOU CAN INSTALL ${color e74c3c}${execpi 12000 checkupdates | wc -l}${color} UPDATE(S)
+]]

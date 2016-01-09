@@ -35,25 +35,37 @@ bindsym $mod+Shift+q kill
 # start program launcher
 bindsym $mod+d exec --no-startup-id dmenu_recency
 
+################################################################################################
+## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
+################################################################################################
+
+exec --no-startup-id volumeicon
+bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+#exec --no-startup-id pulseaudio
+#exec --no-startup-id pa-applet
+#bindsym $mod+Ctrl+m exec pavucontrol
+
+################################################################################################
+
 # Screen brightness controls
 # bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
-# bindsym $mod+F1 exec thunderbird
+bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec palemoon
 bindsym $mod+F3 exec pcmanfm
+# bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec gksu pcmanfm
-bindsym $mod+F4 exec libreoffice
+bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
-bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec "scrot -e 'mv $f ~/Screenshots'; sleep 1; exec notify-send 'screenshot has been saved to ~/Screenshots'"
 bindsym $mod+Print --release exec "scrot -ue 'mv $f ~/Screenshots'; sleep 1; exec notify-send 'screenshot has been saved to ~/Screenshots'"
 bindsym $mod+Shift+Print --release exec "notify-send 'selection will be saved to ~/Screenshots'; scrot -se 'mv $f ~/Screenshots'"
 bindsym $mod+Shift+h exec qpdfview i3_help.pdf
-bindsym $mod+Ctrl+x exec xkill
+bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # focus_follows_mouse no
 
@@ -261,10 +273,11 @@ bar {
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id nm-applet
-exec --no-startup-id volumeicon
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
+ exec --no-startup-id pulseaudio
+ exec --no-startup-id pa-applet
 # exec --no-startup-id blueman
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id compton -b
