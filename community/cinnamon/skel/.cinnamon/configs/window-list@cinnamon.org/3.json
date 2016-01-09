@@ -1,0 +1,39 @@
+{
+    "enable-alerts": {
+        "type": "checkbox",
+        "default": true,
+        "description": "Show an alert in the window list when a window from another workspace requires attention",
+        "value": true
+    },
+    "enable-scrolling": {
+        "type": "checkbox",
+        "default": false,
+        "description": "Enable mouse-wheel scrolling in the window list",
+        "value": false
+    },
+    "reverse-scrolling": {
+        "type": "checkbox",
+        "default": false,
+        "description": "Reverse the direction of mouse-wheel scrolling in the window list",
+        "value": false
+    },
+    "middle-click-close": {
+        "type": "checkbox",
+        "default": true,
+        "description": "Middle click to close window",
+        "value": true
+    },
+    "buttons-use-entire-space": {
+        "type": "checkbox",
+        "default": false,
+        "description": "Window buttons can have different sizes and use the entire space available",
+        "value": false
+    },
+    "window-preview": {
+        "type": "checkbox",
+        "default": true,
+        "description": "Show window thumbnails on hover",
+        "value": true
+    },
+    "__md5__": "11ff3327c0eb4c5c371a52cf16741cd3"
+}

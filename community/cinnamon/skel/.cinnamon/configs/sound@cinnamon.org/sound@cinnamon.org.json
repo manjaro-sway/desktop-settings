@@ -1,0 +1,83 @@
+{
+    "showtrack": {
+        "type": "checkbox",
+        "default": false,
+        "description": "Show song information on the panel",
+        "value": false
+    },
+    "truncatetext": {
+        "type": "spinbutton",
+        "default": 30,
+        "min": 5,
+        "max": 512,
+        "units": "characters",
+        "step": 1,
+        "description": "Limit song information to",
+        "dependency": "showtrack",
+        "indent": true,
+        "value": 30
+    },
+    "middleClickAction": {
+        "type": "combobox",
+        "default": "mute",
+        "options": {
+            "Toggle Mute": "mute",
+            "Toggle Play / Pause": "player"
+        },
+        "description": "Action on middle click",
+        "value": "mute"
+    },
+    "showalbum": {
+        "type": "checkbox",
+        "default": false,
+        "description": "Show album art as icon",
+        "value": false
+    },
+    "hideSystray": {
+        "type": "checkbox",
+        "description": "Hide system tray icons for compatible players",
+        "default": true,
+        "value": true
+    },
+    "separator": {
+        "type": "separator"
+    },
+    "playerControl": {
+        "type": "checkbox",
+        "default": true,
+        "description": "Control Players",
+        "value": true
+    },
+    "extendedPlayerControl": {
+        "type": "checkbox",
+        "default": false,
+        "description": "Show Loop and Shuffle controls",
+        "dependency": "playerControl",
+        "indent": true,
+        "value": false
+    },
+    "positionLabelType": {
+        "type": "combobox",
+        "default": "length",
+        "description": "Position label",
+        "options": {
+            "Song length": "length",
+            "Countdown": "countdown"
+        },
+        "dependency": "playerControl",
+        "indent": true,
+        "value": "length"
+    },
+    "_knownPlayers": {
+        "type": "generic",
+        "default": [
+            "banshee",
+            "vlc"
+        ],
+        "value": [
+            "banshee",
+            "vlc"
+        ]
+    },
+    "__md5__": "59367c467d00034c7a3ab517fbb263dc"
+}

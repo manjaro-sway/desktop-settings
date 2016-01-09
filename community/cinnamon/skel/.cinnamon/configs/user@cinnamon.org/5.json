@@ -1,0 +1,9 @@
+{
+    "display-name": {
+        "type": "checkbox",
+        "default": false,
+        "description": "Display user name on panel",
+        "value": false
+    },
+    "__md5__": "e7b7d1635de7617981a962a1849686a5"
+}

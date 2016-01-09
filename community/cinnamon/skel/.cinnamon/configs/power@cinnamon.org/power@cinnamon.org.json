@@ -1,0 +1,15 @@
+{
+    "labelinfo": {
+        "type": "radiogroup",
+        "description": "Display",
+        "default": "nothing",
+        "options": {
+            "Show percentage": "percentage",
+            "Show time remaining": "time",
+            "Show percentage and time remaining": "percentage_time",
+            "Hide label": "nothing"
+        },
+        "value": "nothing"
+    },
+    "__md5__": "57d6e284d97de2f0429316c834972bc7"
+}
