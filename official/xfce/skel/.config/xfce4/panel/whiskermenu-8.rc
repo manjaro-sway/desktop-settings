@@ -1,0 +1,17 @@
+button-icon=/usr/share/icons/whiskermenu-manjaro.svg
+launcher-show-name=true
+launcher-show-description=true
+favorites=exo-terminal-emulator.desktop,exo-file-manager.desktop,exo-web-browser.desktop,exo-mail-reader.desktop,pamac-manager.desktop
+menu-width=400
+menu-height=519
+command-settings=xfce4-settings-manager
+show-command-settings=true
+command-lockscreen=xflock4
+show-command-lockscreen=true
+command-switchuser=dm-tool switch-to-greeter
+show-command-switchuser=true
+command-logout=xfce4-session-logout
+show-command-logout=true
+command-menueditor=menulibre
+show-command-menueditor=true
+

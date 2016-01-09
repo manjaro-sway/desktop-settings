@@ -1,0 +1,30 @@
+[General]
+shadeSortColumn=true
+BrowserApplication=firefox
+ColorScheme=Maia
+Name=Maia
+
+[Icons]
+Theme=maia
+
+[KDE]
+ChangeCursor=true
+ColorScheme=Maia
+contrast=7
+LookAndFeelPackage=org.kde.maia.desktop
+widgetStyle=breeze
+
+[Paths]
+Trash=$HOME/Desktop/Trash/
+
+[PreviewSettings]
+MaximumSize=3145728
+camera=true
+file=true
+fonts=true
+
+[Directories]
+dir_pixmap=/usr/share/pixmaps
+
+[KFileDialog Settings]
+Breadcrumb Navigation=true
