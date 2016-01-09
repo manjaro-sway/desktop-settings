@@ -1,0 +1,106 @@
+[Appearance]
+ShowModeButtons=true
+
+[Autoreplace List]
+Direction0=o
+Direction1=o
+Pattern0=\\[\\[([^\\s]+)\\]\\]#
+Pattern1=(BUG:|bug:)([0-9]+)#
+Regex0=1
+Regex1=1
+Replace0=http://en.wikipedia.org/wiki/Special:Search?go=Go&search=%1#
+Replace1=https://bugs.kde.org/show_bug.cgi?id=%2#
+
+[Button List]
+Button0=Op,/OP %u%n
+Button1=DeOp,/DEOP %u%n
+Button2=WhoIs,/WHOIS %s,%%u%n
+Button3=Version,/CTCP %s,%%u VERSION%n
+Button4=Kick,/KICK %u%n
+Button5=Ban,/BAN %u%n
+Button6=Part,/PART %c Leaving...%n
+Button7=Quit,/QUIT Leaving...%n
+
+[Channel 0]
+EnableNotifications=true
+Name=#manjaro
+Password=
+
+[Channel 1]
+EnableNotifications=true
+Name=#manjaro-talk
+Password=
+
+[General Options]
+ShowRealNames=true
+ShowTrayIcon=true
+
+[Identity 0]
+AuthType=nickserv
+AutomaticAway=false
+AutomaticUnaway=false
+AwayInactivity=10
+AwayMessage=
+AwayNick=
+AwayReason=Gone away for now
+Bot=nickserv
+Codec=UTF-8
+Ident=manjaro-kde5
+InsertRememberLineOnAway=false
+KickReason=User terminated!
+Name=manjaro-kde5
+Nicknames=manjaro-kde5,manjaro-kde5-,manjaro-kde5_,manjaro-kde5--,manjaro-kde5__
+NickservCommand=identify
+PartReason=Konversation terminated!
+Password=
+PemClientCertFile=
+PreShellCommand=
+QuitReason=Konversation terminated!
+Realname=manjaro-kde5
+ReturnMessage=
+SaslAccount=
+ShowAwayMessage=false
+
+[Notification Messages]
+ChannelListNoServerSelected=1
+ChannelListWarning=1
+ClearLogfileQuestion=1
+CloseQueryAfterIgnore=1
+HideMenuBarWarning=1
+HideOnCloseInfo=1
+IgnoreNick=1
+Invitation=0
+QuitChannelTab=1
+QuitDCCChatTab=1
+QuitQueryTab=1
+QuitServerTab=1
+QuitWithActiveDccTransfers=1
+ReconnectWithDifferentServer=1
+ReuseExistingConnection=1
+SaveLogfileNote=1
+UnignoreNick=1
+WarnEncodingConflict=1
+systemtrayquitKonversation=1
+
+[OSD]
+OSDBackgroundColor=58,58,58
+OSDUseCustomColors=true
+UseOSD=true
+
+[Server 0]
+Password=
+Port=8001
+SSLEnabled=false
+Server=chat.freenode.net
+
+[ServerGroup 0]
+AutoConnect=false
+AutoJoinChannels=Channel 0,Channel 1
+ChannelHistory=Channel 0,Channel 1
+ConnectCommands=
+EnableNotifications=true
+Expanded=false
+Identity=manjaro-kde5
+Name=freenode
+NotifyList=
+ServerList=Server 0

@@ -1,0 +1,23 @@
+[Default Applications]
+application/pdf=qpdfview.desktop
+text/plain=mousepad.desktop
+image/jpeg=viewnior.desktop
+application/xml=mousepad.desktop
+image/png=viewnior.desktop
+image/gif=viewnior.desktop
+video/x-ms-wmv=vlc.desktop
+video/mp4=vlc.desktop
+video/x-flv=vlc.desktop
+video/ogg=vlc.desktop
+video/x-ogm+ogg=vlc.desktop
+video/x-theora+ogg=vlc.desktop
+application/x-cd-image=open-fuse-iso.desktop
+application/x-raw-disk-image=open-fuse-iso.desktop
+
+[Added Associations]
+application/pdf=qpdfview.desktop;
+application/octet-stream=mousepad.desktop;
+application/x-gettext-translation=mousepad.desktop;
+application/x-wine-extension-ini=mousepad.desktop;
+image/gif=viewnior.desktop;gimp.desktop;
+
