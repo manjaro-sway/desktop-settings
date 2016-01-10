@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[en_US]=mumble
+Name[en_US]=connect to our mumble server for help
+Exec=mumble mumble://kyle.tk
+Comment[en_US]=connects to storm's mumble server
+Name=connect to our mumble server for help
+Comment=get help in person on our mumble server
+Icon=mumble
