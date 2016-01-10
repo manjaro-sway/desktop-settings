@@ -42,4 +42,4 @@
 #/usr/bin/synclient TouchpadOff=1 &
 
 ## Background
-feh --bg-scale /usr/share/wallpapers/manjaro-15-09.png &
+feh --bg-scale /usr/share/backgrounds/maia.png &
