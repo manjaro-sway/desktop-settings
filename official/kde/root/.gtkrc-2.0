@@ -1,0 +1,16 @@
+# File created by KDE Gtk Config
+# Configs for GTK2 programs 
+
+include "/usr/share/themes/Maia/gtk-2.0/gtkrc"
+style "user-font" 
+{
+	font_name="Noto Sans Regular"
+}
+widget_class "*" style "user-font"
+gtk-font-name="Noto Sans Regular 10"
+gtk-theme-name="Maia"
+gtk-icon-theme-name="maia"
+gtk-fallback-icon-theme="hicolor"
+gtk-toolbar-style=GTK_TOOLBAR_ICONS
+gtk-menu-images=1
+gtk-button-images=1

@@ -1,0 +1,7 @@
+[General]
+EditableUrl=false
+ShowCopyMoveMenu=true
+ShowFullPath=true
+
+[DetailsMode]
+ExpandableFolders=true
