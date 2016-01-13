@@ -1,0 +1,24 @@
+#!/bin/sh
+
+xdg=$(xdg-user-dir DESKTOP)
+src='/usr/share/applications'
+
+if [[ -f /usr/bin/thus ]];then
+	cp $src/thus.desktop $xdg/thus.desktop
+	chmod a+x $xdg/thus.desktop
+fi
+
+if [[ -f /usr/bin/calamares ]];then
+	cp $src/calamares.desktop $xdg/calamares.desktop
+	chmod a+x $xdg/calamares.desktop
+fi
+
+if [[ -f /usr/bin/setup ]] || [[ -L /usr/bin/setup ]];then
+	cp $src/installer-launcher-cli.desktop $xdg/installer-launcher-cli.desktop
+	chmod a+x $xdg/installer-launcher-cli.desktop
+fi
+
+if [[ -f "/usr/share/doc/livecd/Beginner_User_Guide.pdf" ]]; then
+	ln -sf /usr/share/doc/livecd/Beginner_User_Guide.pdf \
+	"$xdg/Beginner User Guide.pdf"
+fi
