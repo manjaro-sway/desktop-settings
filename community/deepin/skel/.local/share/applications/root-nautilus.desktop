@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=Root-Filemanager
+Comment=Access and organize files with root priviliges
+Keywords=root;administrator;folder;manager;explore;disk;filesystem;
+Exec=gksu nautilus
+Icon=gksu
+Terminal=false
+Type=Application
+DBusActivatable=true
+StartupNotify=true
+Categories=GNOME;GTK;Utility;Core;FileManager;
+MimeType=inode/directory;application/x-gnome-saved-search;
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=nautilus
+X-GNOME-Bugzilla-Component=general
+X-GNOME-Bugzilla-Version=3.18.1
+X-GNOME-UsesNotifications=true

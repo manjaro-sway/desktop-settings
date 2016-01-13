@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Oblogout
+Comment=Logout Script
+Icon=boot
+Exec=oblogout_blur
+Terminal=false
+Type=Application
+Categories=Openbox;Application;Utility;
+Name[en_GB]=oblogout_blur

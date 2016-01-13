@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.9.4
+Type=Application
+Name=disable dpms
+Comment=Disable DPMS in Live-Session
+Exec=/opt/livecd/disable-dpms
+StartupNotify=false
+Terminal=false
+Hidden=false
+
