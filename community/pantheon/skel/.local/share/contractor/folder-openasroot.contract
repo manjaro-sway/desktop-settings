@@ -1,0 +1,7 @@
+[Contractor Entry]
+Name=Open folder as root
+Icon=pantheon-files
+Description=Open current folder as root privilege
+MimeType=inode;
+Exec=gksudo pantheon-files %U
+Gettext-Domain=pantheon-files
