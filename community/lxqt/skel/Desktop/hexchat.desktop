@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Manjaro Chat Room
-Comment=Get support for Manjaro over realtime Internet Relay Chat
-Exec=hexchat irc://chat.freenode.net/manjaro
-Icon=hexchat
-Terminal=false
-Type=Application
-StartupNotify=true
