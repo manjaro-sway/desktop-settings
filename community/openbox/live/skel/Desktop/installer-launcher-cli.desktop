@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Install Manjaro Linux (cli)
-GenericName=Cli Installer
-Comment=Install the operating system to disk
-Exec=sudo /usr/bin/setup
-Icon=utilities-terminal
-Terminal=true
-Type=Application
-Categories=System;
