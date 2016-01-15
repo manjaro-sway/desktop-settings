@@ -2,6 +2,6 @@
 Type=Application
 Name=Play Login Sound
 Comment=Plays a sound whenever you log in
-Exec=/usr/bin/canberra-gtk-play --id="desktop-login" --description="GNOME Login"
+Exec=/usr/bin/canberra-gtk-play --id="desktop-login" --description="Sonar Login"
 X-GNOME-Autostart-enabled=true
 NoDisplay=false
