@@ -1,7 +1,7 @@
 [Desktop Entry]
-Exec=live-session
-Name=live-session
+Exec=desktop-items
+Name=desktop-items
 Comment=Live session desktop items
 Type=Application
-Version=0.9.9
+Version=16.01
 
