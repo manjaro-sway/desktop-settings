@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="ThreeDimensional" mtime="1452648889" type="bool" value="false"/>
+	<entry name="ZoomPercent" mtime="1452648854" type="float" value="1.2"/>
+	<entry name="IconSize" mtime="1452648898" type="int" value="46"/>
+	<entry name="Plugins" mtime="1452649615" type="list" ltype="string">
+	</entry>
+	<entry name="Position" mtime="1452649609" type="string">
+		<stringvalue>Bottom</stringvalue>
+	</entry>
+	<entry name="SortList" mtime="1452649615" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>/usr/share/applications/pcmanfm.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/usr/share/applications/lxterminal.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/usr/share/applications/palemoon.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/usr/share/applications/claws-mail.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/usr/share/applications/abiword.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/usr/share/applications/pinta.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/usr/share/applications/galculator.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/usr/share/applications/gnumeric.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/usr/share/applications/vlc.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/usr/share/applications/oblogout_blur.desktop</stringvalue>
+		</li>
+	</entry>
+	<entry name="Launchers" mtime="1452649598" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>file:///usr/share/applications/pcmanfm.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>file:///usr/share/applications/palemoon.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>file:///usr/share/applications/lxterminal.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>file:///usr/share/applications/claws-mail.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>file:///usr/share/applications/abiword.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>file:///usr/share/applications/pinta.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>file:///usr/share/applications/galculator.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>file:///usr/share/applications/gnumeric.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>file:///usr/share/applications/vlc.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/usr/share/applications/oblogout_blur.desktop</stringvalue>
+		</li>
+	</entry>
+	<entry name="WindowManager" mtime="1452648127" type="bool" value="true"/>
+</gconf>

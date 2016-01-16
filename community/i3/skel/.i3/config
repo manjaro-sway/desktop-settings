@@ -124,6 +124,13 @@ bindsym $mod+Shift+s sticky toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
+# move the currently focused window to the scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym $mod+minus scratchpad show
+
 # Workspace names
 # set $ws1 1:
 # set $ws2 2:
@@ -252,23 +259,6 @@ mode "resize" {
 # Lock screen
 bindsym $mod+9 exec --no-startup-id blurlock
 
-# Start i3bar to display a workspace bar (plus the system information i3status if available)
-bar {
-	status_command i3status
-#	wheel_up_cmd nop
-#	wheel_down_cmd nop
-	font pango:Cantarell,Icons 9
-	colors {
-		separator #2ECC71
-		background #000000
-		statusline #DDDDDD
-		focused_workspace #FFFFFF #2ECC71 #000000
-		active_workspace #000000 #A4A28D #FFFFFF
-		inactive_workspace #A4A28D #000000 #DDDDDD
-		urgent_workspace #2ECC71 #900000 #FFFFFF
-	}
-}
-
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore
@@ -285,10 +275,30 @@ exec --no-startup-id start_conky_grey
 # exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 10 -locker blurlock
 
+# Start i3bar to display a workspace bar (plus the system information i3status if available)
+bar {
+	status_command i3status
+#	wheel_up_cmd nop
+#	wheel_down_cmd nop
+	font pango:Cantarell,Icons 9
+	colors {
+		separator #2ECC71
+		background #000000
+		statusline #DDDDDD
+
+#                                  border  backgr. text
+		focused_workspace  #FFFFFF #2ECC71 #000000
+		active_workspace   #000000 #A4A28D #FFFFFF
+		inactive_workspace #A4A28D #000000 #DDDDDD
+		urgent_workspace   #2ECC71 #900000 #FFFFFF
+	}
+}
+
 # Theme colors
-client.focused #2ECC71 #2ECC71 #000000 #FFFFFF
-client.unfocused #222222 #222222 #2ECC71 #222222
-client.urgent #274D01 #900000 #FFFFFF #900000
+# class          border  backgr. text    indicator
+client.focused   #E8E3D1 #E8E3D1 #000000 #2ECC71
+client.unfocused #16404B #16404B #2ECC71 #222222
+client.urgent    #274D01 #900000 #FFFFFF #900000
 
 #############################
 ### settings for i3-gaps: ###

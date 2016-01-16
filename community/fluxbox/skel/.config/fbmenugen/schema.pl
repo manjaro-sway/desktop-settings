@@ -78,5 +78,5 @@ our $SCHEMA = [
 
 {sep => 'undef'},
 
-{item =>	['oblogout',			'Exit',			'shutdown/restart']}
+{item =>	['oblogout_blur',		'Exit',			'shutdown/restart']}
 ]
