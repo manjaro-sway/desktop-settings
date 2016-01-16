@@ -1,6 +1,0 @@
-[General]
-DelayedCheck=true
-
-# bnc#803536 -- will be effective with 4.10.95
-[Notification Messages]
-phonon_always_forget_devices=true
