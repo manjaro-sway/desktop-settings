@@ -1,0 +1,31 @@
+#!/bin/sh
+
+xdg=$(xdg-user-dir DESKTOP)
+src='/usr/share/applications'
+
+if [[ -f /usr/bin/thus ]];then
+	ln -sf $src/thus.desktop $xdg/thus.desktop
+fi
+
+if [[ -f /usr/bin/calamares ]];then
+	ln -sf $src/calamares.desktop $xdg/calamares.desktop
+fi
+
+if [[ -f /usr/bin/setup ]] || [[ -L /usr/bin/setup ]];then
+	ln -sf $src/installer-launcher-cli.desktop $xdg/installer-launcher-cli.desktop
+fi
+
+if [[ -f "/usr/share/doc/livecd/Beginner_User_Guide.pdf" ]]; then
+	ln -sf /usr/share/doc/livecd/Beginner_User_Guide.pdf \
+	"$xdg/Beginner User Guide.pdf"
+fi
+
+if [[ -f "$src/manjaro-welcome.desktop" ]]; then
+	ln -sf $src/manjaro-welcome.desktop \
+	"$xdg/manjaro-welcome.desktop"
+fi
+
+if [[ -f "$src/hexchat.desktop" ]]; then
+	ln -sf $src/hexchat.desktop \
+	"$xdg/hexchat.desktop"
+fi
