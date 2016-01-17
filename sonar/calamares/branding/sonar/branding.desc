@@ -1,12 +1,12 @@
 ---
-componentName:  sonar-gnome
+componentName:  sonar
 
 strings:
     productName:         Sonar GNU Linux
     shortProductName:    Sonar
     version:             2016.1
     shortVersion:        2016.1
-    versionedName:       Sonar GNU Linux  2016.1 "Gnome Edition"
+    versionedName:       Sonar GNU Linux  2016.1
     shortVersionedName:  Sonar Linux 2016.1
     bootloaderEntryName: Sonar
 
