@@ -1,9 +1,9 @@
 [Desktop Entry]
 Name=Install Sonar Linux
-GenericName=Live Installer
+GenericName=Live Installer (Calamares)
 Comment=Install the operating system to disk
-Exec=/usr/bin/thus
-Icon=/usr/share/thus/data/images/manjaro/manjaro-icon.png
+Exec=sudo /usr/bin/calamares
+Icon=calamares
 Terminal=False
 Type=Application
 Categories=System;
