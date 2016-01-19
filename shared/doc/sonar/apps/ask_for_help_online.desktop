@@ -1,0 +1,23 @@
+[Desktop Entry]
+Comment[de_DE]=connects to the sonar and talking Arch channels for assistance
+Comment=connects to the sonar and talking Arch channels for assistance
+Comment[en_US]=connects to the sonar and talking Arch channels for assistance
+Exec=pidgin -c /etc/purple/
+GenericName[de_DE]=
+GenericName=
+Icon=pidgin
+Icon[en_US]=pidgin
+MimeType=
+Name[de_DE]=ask for help online
+Name=ask for help online
+Name[en_US]=ask for help online
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=1.0
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
