@@ -1,0 +1,23 @@
+[Desktop Entry]
+Comment[de_DE]=get help in person on our mumble server
+Comment=get help in person on our mumble server
+Comment[en_US]=connects to storm's mumble server
+Exec=mumble mumble://kyle.tk
+GenericName[de_DE]=
+GenericName=
+Icon=mumble
+Icon[en_US]=mumble
+MimeType=
+Name[de_DE]=connect to our mumble server for help
+Name=connect to our mumble server for help
+Name[en_US]=connect to our mumble server for help
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=1.0
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
