@@ -1,0 +1,20 @@
+[org.cinnamon.desktop.background]
+picture-options='stretched'
+picture-uri='file:///usr/share/backgrounds/bg_i_10.jpg'
+
+[org.cinnamon.desktop.interface]
+cursor-theme='Simple-and-Soft'
+gtk-theme='Vertex-Dark'
+icon-theme='maia'
+
+[org.cinnamon.theme]
+name='Vertex'
+
+[org.gnome.Terminal.Legacy.Profile]
+allow-bold=true
+background-color='rgb(69,70,73)'
+font='Droid Sans Mono 11'
+foreground-color='rgb(220,233,235)'
+palette=['rgb(0,0,0)', 'rgb(170,0,0)', 'rgb(0,170,0)', 'rgb(170,85,0)', 'rgb(0,0,170)', 'rgb(170,0,170)', 'rgb(0,170,170)', 'rgb(170,170,170)', 'rgb(85,85,85)', 'rgb(255,85,85)', 'rgb(85,255,85)', 'rgb(255,255,85)', 'rgb(85,85,255)', 'rgb(255,85,255)', 'rgb(85,255,255)', 'rgb(255,255,255)']
+rewrap-on-resize=true
+visible-name='manjaro'
