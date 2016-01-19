@@ -1,0 +1,7 @@
+[org.pantheon.desktop.background]
+picture-uri="file:///usr/share/backgrounds/maia.png"
+
+[org.pantheon.desktop.interface]
+cursor-theme="Menda-Cursor"
+gtk-theme="maia"
+icon-theme="Maia"
