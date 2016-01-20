@@ -1,0 +1,7 @@
+[Desktop Entry]
+Comment=Manjaro Welcome
+Terminal=false
+Icon=/usr/share/icons/manjaro-maia.png
+Name=Manjaro Welcome
+Exec=manjaro-welcome
+Type=Application
