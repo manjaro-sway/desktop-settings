@@ -1,7 +1,20 @@
-[org.pantheon.desktop.background]
-picture-uri="file:///usr/share/backgrounds/maia.png"
+[org.gnome.desktop.background]
+picture-options="zoom"
+picture-uri="file:///usr/share/backgrounds/inscription.jpg"
 
-[org.pantheon.desktop.interface]
-cursor-theme="Menda-Cursor"
-gtk-theme="maia"
-icon-theme="Maia"
+[org.gnome.desktop.interface]
+gtk-im-module="gtk-im-context-simple"
+icon-theme="elementary-add"
+
+[org.gtk.Settings.FileChooser]
+location-mode="path-bar"
+show-hidden="false"
+show-size-column="true"
+sidebar-widht="148"
+sort-column="name"
+sort-directories-first="false"
+sort-order="ascending"
+
+[org-pantheon-scratch.settings]
+plugins-enable=['detect-indent', 'folder-manager', 'contractor']
+
