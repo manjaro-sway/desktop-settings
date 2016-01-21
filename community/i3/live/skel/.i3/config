@@ -36,8 +36,6 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id dmenu_recency
 # bindsym $mod+d exec j4-dmenu-desktop --dmenu="dmenu -fn "-xos4-terminus-medium-r-*-*-14-*" -nb '#000000' -nf '#FFFFFF' -sb '#2ECC71' -sf '#333333' -i"
 
-<<<<<<< HEAD:community/i3/overlay-livecd/etc/skel/.i3/config
-=======
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
@@ -50,7 +48,6 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 
 ################################################################################################
 
->>>>>>> c8eb2ceecd2264899531fca9dd80d15e4b4cf275:community/i3/live-overlay/etc/skel/.i3/config
 # Screen brightness controls
 # bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
@@ -326,7 +323,7 @@ gaps outer 0
 # Smart gaps (gaps used if only more than one container on the workspace)
 smart_gaps on
 
-# Smart borders (draw borders around container only if it is not the only container on this workspace) 
+# Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
 smart_borders on
 
