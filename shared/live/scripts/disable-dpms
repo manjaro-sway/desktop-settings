@@ -1,0 +1,6 @@
+#!/bin/bash
+## DPMS - Display Power Management Settings
+## These are disabled by default to prevent auto-actions when
+## the system is idle, such as screen blanking (10 mins) or
+## suspending (1 hour).
+(sleep 15s && xset -dpms; xset s off) &
