@@ -1,0 +1,2 @@
+#!/bin/bash
+(sleep 15s && pulseaudio-ctl up 75%) &
