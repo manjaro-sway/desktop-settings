@@ -1,8 +1,8 @@
 [org.gnome.desktop.background]
-picture-uri="file:///usr/share/backgrounds/maia.png"
-show-desktop-items="true"
+picture-uri='file:///usr/share/backgrounds/maia.png'
+show-desktop-items=true
 
 [org.gnome.desktop.interface]
-cursor-theme="Menda-Cursor"
-gtk-theme="maia"
-icon-theme="Maia"
+cursor-theme='Menda-Cursor'
+gtk-theme='maia'
+icon-theme='Maia'
