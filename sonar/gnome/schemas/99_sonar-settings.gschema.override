@@ -1,8 +1,20 @@
 [org.gnome.desktop.background]
 picture-uri="file:///usr/share/backgrounds/maia.png"
-show-desktop-items="true"
+show-desktop-icons=true
 
 [org.gnome.desktop.interface]
 cursor-theme="Menda-Cursor"
-gtk-theme="maia"
-icon-theme="Maia"
+gtk-theme="Maia"
+icon-theme="maia"
+toolkit-accessibility=true
+
+[org.gnome.desktop.a11y.applications]
+screen-keyboard-enabled=true
+screen-magnifier-enabled=true
+screen-reader-enabled=true
+
+[org.gnome.desktop.sound]
+input-feedback-sounds=true
+
+[org.gnome.desktop.input-sources]
+show-all-sources=true
