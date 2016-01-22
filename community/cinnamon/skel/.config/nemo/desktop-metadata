@@ -1,5 +1,6 @@
 [directory]
 nemo-icon-view-keep-aligned=true
+nemo-icon-view-tighter-layout=false
 
 [trash]
 nemo-icon-position=64,422
