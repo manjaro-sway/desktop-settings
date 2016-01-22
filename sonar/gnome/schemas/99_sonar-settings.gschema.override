@@ -1,11 +1,8 @@
 [org.gnome.desktop.background]
-picture-uri="file:///usr/share/backgrounds/maia.png"
+picture-uri="file:///usr/share/backgrounds/sonar.jpg"
 show-desktop-icons=true
 
 [org.gnome.desktop.interface]
-cursor-theme="Menda-Cursor"
-gtk-theme="Maia"
-icon-theme="maia"
 toolkit-accessibility=true
 
 [org.gnome.desktop.a11y.applications]
