@@ -76,6 +76,10 @@ our $SCHEMA = [
   {raw => q([restart] (Restart))},
 {end_cat => undef},
 
+# Time Settings (GUI)
+# TimeSet (CLI)
+# menu_de neu!!
+
 {sep => 'undef'},
 
 {item =>	['oblogout_blur',		'Exit',			'shutdown/restart']}
