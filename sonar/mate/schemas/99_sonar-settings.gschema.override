@@ -1,7 +1,18 @@
 [org.mate.desktop.background]
-picture-uri="file:///usr/share/backgrounds/maia.png"
+picture-filename="/usr/share/backgrounds/sonar.png"
 
-[org.mate.desktop.interface]
-cursor-theme="Menda-Cursor"
-gtk-theme="maia"
-icon-theme="Maia"
+[org.mate.interface]
+accessibility=true
+
+[org.mate.accessibility-keyboard]
+enable=true
+
+[org.mate.applications-at-mobility]
+startup=true
+
+[org.mate.sound]
+event-sounds=true
+input-feedback-sounds=true
+
+[org.mate.applications-at-visual]
+startup=true
