@@ -2,11 +2,11 @@
 nemo-icon-view-keep-aligned=true
 
 [trash]
-nemo-icon-position=64,422
+nemo-icon-position=64,602
 icon-scale=1
 
 [home]
-nemo-icon-position=64,102
+nemo-icon-position=64,202
 icon-scale=1
 
 [network]
@@ -18,5 +18,5 @@ nemo-icon-position=64,262
 icon-scale=1
 
 [computer]
-nemo-icon-position=64,22
+nemo-icon-position=64,122
 icon-scale=1
