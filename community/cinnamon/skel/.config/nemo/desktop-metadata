@@ -1,21 +1,16 @@
 [directory]
 nemo-icon-view-keep-aligned=true
-nemo-icon-view-tighter-layout=false
 
 [trash]
-nemo-icon-position=64,422
+nemo-icon-position=64,582
+icon-scale=1
+
+[MJRO1603.volume]
+nemo-icon-position=64,182
 icon-scale=1
 
 [home]
 nemo-icon-position=64,102
-icon-scale=1
-
-[network]
-nemo-icon-position=64,182
-icon-scale=1
-
-[MJRO1512.volume]
-nemo-icon-position=64,262
 icon-scale=1
 
 [computer]
