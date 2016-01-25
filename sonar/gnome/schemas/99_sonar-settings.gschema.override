@@ -11,6 +11,7 @@ screen-magnifier-enabled=false
 screen-reader-enabled=true
 
 [org.gnome.desktop.sound]
+event-sounds=true
 input-feedback-sounds=true
 
 [org.gnome.desktop.input-sources]
