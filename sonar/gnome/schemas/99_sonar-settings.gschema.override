@@ -6,8 +6,8 @@ show-desktop-icons=true
 toolkit-accessibility=true
 
 [org.gnome.desktop.a11y.applications]
-screen-keyboard-enabled=true
-screen-magnifier-enabled=true
+screen-keyboard-enabled=false
+screen-magnifier-enabled=false
 screen-reader-enabled=true
 
 [org.gnome.desktop.sound]
