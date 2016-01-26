@@ -8,6 +8,7 @@ picture-uri='file:///usr/share/backgrounds/bg_i_10.jpg'
 
 [org.cinnamon.desktop.interface]
 cursor-theme='Simple-and-Soft'
+font-name='Cantarell 10'
 gtk-theme='Vertex'
 icon-theme='maia'
 
