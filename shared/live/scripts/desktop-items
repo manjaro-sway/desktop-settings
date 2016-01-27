@@ -4,19 +4,18 @@ xdg=$(xdg-user-dir DESKTOP)
 src='/usr/share/applications'
 
 if [[ -f /usr/bin/thus ]];then
-	cp $src/thus.desktop $xdg/thus.desktop
-	chmod a+x $xdg/thus.desktop
+	install -Dm755 $src/thus.desktop \
+	$xdg/thus.desktop
 fi
 
 if [[ -f /usr/bin/calamares ]];then
-	cp $src/calamares.desktop $xdg/calamares.desktop
+	install -Dm755 $src/calamares.desktop \
 	$xdg/calamares.desktop
-	chmod a+x $xdg/calamares.desktop
 fi
 
 if [[ -f /usr/bin/setup ]] || [[ -L /usr/bin/setup ]];then
-	cp $src/installer-launcher-cli.desktop $xdg/installer-launcher-cli.desktop
-	chmod a+x $xdg/installer-launcher-cli.desktop
+	install -Dm755 $src/installer-launcher-cli.desktop \
+	$xdg/installer-launcher-cli.desktop
 fi
 
 if [[ -f "/usr/share/doc/livecd/Beginner_User_Guide.pdf" ]]; then
@@ -25,15 +24,13 @@ if [[ -f "/usr/share/doc/livecd/Beginner_User_Guide.pdf" ]]; then
 fi
 
 if [[ -f "$src/manjaro-welcome.desktop" ]]; then
-	cp $src/manjaro-welcome.desktop \
+	install -Dm755 $src/manjaro-welcome.desktop \
 	"$xdg/manjaro-welcome.desktop"
-	chmod a+x $xdg/manjaro-welcome.desktop
 fi
 
 if [[ -f "$src/hexchat.desktop" ]]; then
-	cp $src/hexchat.desktop \
+	install -Dm755 $src/hexchat.desktop \
 	"$xdg/hexchat.desktop"
-	chmod a+x $xdg/hexchat.desktop
 fi
 
 # support sonar
@@ -49,13 +46,11 @@ if [[ -f "/usr/share/sonar/users_guide.odt" ]]; then
 fi
 
 if [[ -f "$src/ask_for_help_online.desktop" ]]; then
-	cp $src/ask_for_help_online.desktop \
+	install -Dm755 $src/ask_for_help_online.desktop \
 	"$xdg/ask_for_help_online.desktop"
-	chmod a+x $xdg/ask_for_help_online.desktop
 fi
 
 if [[ -f "$src/connect_to_our_mumble_server_for_help.desktop" ]]; then
-	cp $src/connect_to_our_mumble_server_for_help.desktop \
+	install -Dm755 $src/connect_to_our_mumble_server_for_help.desktop \
 	"$xdg/connect_to_our_mumble_server_for_help.desktop"
-	chmod a+x $xdg/connect_to_our_mumble_server_for_help.desktop
 fi
