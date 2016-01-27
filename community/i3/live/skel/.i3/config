@@ -272,8 +272,8 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id .conky/start_conky_live_grey
-# exec --no-startup-id .conky/start_conky_live_green
+exec --no-startup-id start_conky_live_grey
+# exec --no-startup-id start_conky_live_green
 exec --no-startup-id manjaro-welcome
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
