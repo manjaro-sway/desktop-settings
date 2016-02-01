@@ -1,7 +1,6 @@
 [com.solus-project.budgie-panel]
 builtin-theme=true
 dark-theme=true
-panels=['09af7ee6-afc3-11e5-a1a6-08002797a777']
 
 [org.gnome.desktop.background]
 picture-uri='file:///usr/share/backgrounds/manj_wallpaper.jpg'
