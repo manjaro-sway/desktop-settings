@@ -1,3 +1,0 @@
-#!/bin/sh
-
-touch $(xdg-user-dir TEMPLATES)/Empty\ File
