@@ -9,7 +9,7 @@ picture-uri='file:///usr/share/backgrounds/bg_i_10.jpg'
 [org.cinnamon.desktop.interface]
 cursor-theme='Simple-and-Soft'
 font-name='Cantarell 10'
-gtk-theme='Vertex'
+gtk-theme='Vertex Maia'
 icon-theme='maia'
 
 [org.cinnamon.desktop.screensaver]
@@ -22,11 +22,11 @@ use-custom-format=true
 
 [org.cinnamon.desktop.wm.preferences]
 num-workspaces=2
-theme='Vertex'
+theme='Vertex Maia'
 titlebar-font='Cantarell 10'
 
 [org.cinnamon.theme]
-name='Vertex'
+name='Vertex Maia'
 
 [org.gnome.Terminal.Legacy.Profile]
 allow-bold=true
