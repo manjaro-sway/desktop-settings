@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=WindowMenu
+Comment=
+Exec=WindowMenu
+Icon=preferences-system-sharing-symbolic
+Path=
+Terminal=false
+StartupNotify=false

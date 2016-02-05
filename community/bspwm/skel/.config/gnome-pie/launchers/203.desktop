@@ -1,0 +1,7 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Session
+Exec=/usr/bin/gnome-pie -o 203
+Encoding=UTF-8
+Type=Application
+Icon=gnome-session-halt

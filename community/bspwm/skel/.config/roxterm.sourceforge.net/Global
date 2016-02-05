@@ -1,0 +1,7 @@
+[roxterm options]
+prefer_dark_theme=1
+only_warn_running=1
+encoding=UTF-8
+hide_menubar=1
+warn_close=1
+colour_scheme=Solarized-dark
