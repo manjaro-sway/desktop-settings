@@ -1,0 +1,7 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Window controls
+Exec=/usr/bin/gnome-pie -o 167
+Encoding=UTF-8
+Type=Application
+Icon=stock_unknown

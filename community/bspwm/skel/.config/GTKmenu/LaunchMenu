@@ -1,0 +1,63 @@
+item = Run
+cmd = dboxrun
+icon = /usr/share/icons/Adwaita/scalable/actions/system-run-symbolic.svg
+
+item = Find
+cmd = finder
+icon = /usr/share/icons/Adwaita/scalable/apps/preferences-system-search-symbolic.svg
+
+item = Terminal
+cmd = roxterm
+icon = /usr/share/icons/Adwaita/scalable/apps/utilities-terminal-symbolic.svg
+
+item = Browser
+cmd = chromium
+icon = /usr/share/icons/Adwaita/scalable/apps/web-browser-symbolic.svg
+
+item = Files
+cmd = spacefm
+icon = /usr/share/icons/Adwaita/scalable/apps/system-file-manager-symbolic.svg
+
+item = Editor
+cmd = gedit
+icon = /usr/share/icons/Adwaita/scalable/apps/text-editor-symbolic.svg
+
+item = Package Manager
+cmd = roxterm -e pacli
+icon = /usr/share/icons/Adwaita/scalable/apps/system-software-install-symbolic.svg
+
+item = Main menu
+cmd = roxterm -e bmenu
+icon = /usr/share/icons/Adwaita/scalable/apps/utilities-system-monitor-symbolic.svg
+
+separator
+
+
+submenu = Exit
+
+	icon = /usr/share/icons/Adwaita/scalable/actions/system-shutdown-symbolic.svg
+
+	item = Lock screen
+	cmd = screenlock
+	icon = /usr/share/icons/Adwaita/scalable/status/changes-allow-symbolic.svg
+
+	item = Logout
+	cmd = bspc quit 1
+	icon = /usr/share/icons/Adwaita/scalable/actions/application-exit-symbolic.svg
+	
+	item = Suspend
+	cmd = systemctl suspend
+	icon = /usr/share/icons/Adwaita/scalable/apps/utilities-system-monitor-symbolic.svg
+	
+	item = Hibenate
+	cmd = systemctl hibernate
+	icon = /usr/share/icons/Adwaita/scalable/actions/document-save-symbolic.svg
+	
+	item = Reboot
+	cmd = reboot
+	icon = /usr/share/icons/Adwaita/scalable/actions/view-refresh-symbolic.svg
+	
+	item = Shutdown
+	cmd = poweroff
+	icon = /usr/share/icons/Adwaita/scalable/actions/system-shutdown-symbolic.svg
+	

@@ -1,0 +1,5 @@
+button1action="gapgrab"
+button2action="BspwmWindowMenu"
+button3action="dboxmenu"
+button4action="bspc desktop -f next"
+button5action="bspc desktop -f prev"

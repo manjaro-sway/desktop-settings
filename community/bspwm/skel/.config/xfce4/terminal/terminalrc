@@ -1,0 +1,27 @@
+[Configuration]
+FontName=Terminess Powerline 14
+MiscAlwaysShowTabs=FALSE
+MiscBell=FALSE
+MiscBordersDefault=TRUE
+MiscCursorBlinks=FALSE
+MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
+MiscDefaultGeometry=80x24
+MiscInheritGeometry=FALSE
+MiscMenubarDefault=TRUE
+MiscMouseAutohide=FALSE
+MiscToolbarDefault=FALSE
+MiscConfirmClose=TRUE
+MiscCycleTabs=TRUE
+MiscTabCloseButtons=TRUE
+MiscTabCloseMiddleClick=TRUE
+MiscTabPosition=GTK_POS_TOP
+MiscHighlightUrls=TRUE
+ScrollingOnOutput=FALSE
+ScrollingBar=TERMINAL_SCROLLBAR_NONE
+TitleMode=TERMINAL_TITLE_REPLACE
+CommandLoginShell=TRUE
+ColorCursor=#9999cccc9999
+ColorForeground=#9999cccc9999
+ColorBackground=#2f1e2e
+ColorPalette=#2f2f1e1e2e2e;#efef61615555;#4848b6b68585;#fefec4c41818;#0606b6b6efef;#81815b5ba4a4;#5b5bc4c4bfbf;#a3a39e9e9b9b;#77776e6e7171;#efef61615555;#4848b6b68585;#fefec4c41818;#0606b6b6efef;#81815b5ba4a4;#5b5bc4c4bfbf;#e7e7e9e9dbdb
+
