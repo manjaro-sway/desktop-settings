@@ -1,0 +1,141 @@
+[2014:07:25:09:23:18:980253 WARNING] Failed to find pie configuration file "pies.conf"! (This should only happen when Gnome-Pie is started for the first time...)
+[2014:07:25:09:23:18:980382 WARNING] Failed to find settings file "gnome-pie.conf"! (This should only happen when Gnome-Pie is started for the first time...)
+[2014:07:25:09:23:18:980503 MESSAGE] Welcome to Gnome-Pie 0.5.5!
+[2014:07:25:09:23:18:981786 MESSAGE] Creating new configuration file in "/home/matti/.config/gnome-pie/pies.conf".
+[2014:07:25:09:23:18:999948  ERROR ] gnome_pie_action_registry_new_for_app_info: assertion 'info != NULL' failed
+[2014:07:25:09:23:19:000035  ERROR ] gnome_pie_pie_add_action: assertion 'action != NULL' failed
+[2014:07:25:09:23:19:001800 WARNING] Failed to find file ".gtk-bookmarks"!
+[2014:07:25:09:23:19:031773 WARNING] Failed to look up menu_file for "applications.menu"
+[2014:07:25:09:23:19:032430 MESSAGE] Saving Pies to "/home/matti/.config/gnome-pie/pies.conf".
+[2014:07:25:09:23:19:092459 WARNING] Icon "gnome-pie" not found! Using default icon...
+[2014:07:25:09:23:19:129302 WARNING] Error loading settings: gnome-pie.conf not found! Using defaults...
+[2014:07:25:09:23:19:133963 WARNING] No theme specified! Using default...
+[2014:07:25:09:23:19:139335 MESSAGE] Started happily...
+[2014:07:25:09:25:11:820591 MESSAGE] Saving Pies to "/home/matti/.config/gnome-pie/pies.conf".
+[2014:07:25:09:25:25:235271 MESSAGE] Caught signal (15), bye!
+[2014:07:26:15:40:36:942535 MESSAGE] Welcome to Gnome-Pie 0.5.5!
+[2014:07:26:15:40:36:945238 MESSAGE] Loading Pies from "/home/matti/.config/gnome-pie/pies.conf".
+[2014:07:26:15:40:36:990349 WARNING] Failed to look up menu_file for "applications.menu"
+[2014:07:26:15:40:37:081195 WARNING] Failed to find file ".gtk-bookmarks"!
+[2014:07:26:15:40:37:367678 WARNING] Icon "gnome-pie" not found! Using default icon...
+[2014:07:26:15:40:37:436506 MESSAGE] Started happily...
+[2014:07:26:15:42:37:390619 MESSAGE] Saving Pies to "/home/matti/.config/gnome-pie/pies.conf".
+[2014:09:08:20:30:27:694875 MESSAGE] Welcome to Gnome-Pie 0.5.5!
+[2014:09:08:20:30:27:703682 MESSAGE] Loading Pies from "/home/matti/.config/gnome-pie/pies.conf".
+[2014:09:08:20:30:27:750355 WARNING] Failed to look up menu_file for "applications.menu"
+[2014:09:08:20:30:27:869159 WARNING] Failed to find file ".gtk-bookmarks"!
+[2014:09:08:20:30:28:223120 MESSAGE] Started happily...
+[2014:09:08:20:45:38:725469 MESSAGE] Saving Pies to "/home/matti/.config/gnome-pie/pies.conf".
+[2014:09:08:20:55:16:364458 MESSAGE] Welcome to Gnome-Pie 0.5.5!
+[2014:09:08:20:55:16:366214 MESSAGE] Loading Pies from "/home/matti/.config/gnome-pie/pies.conf".
+[2014:09:08:20:55:16:411023 WARNING] Failed to look up menu_file for "applications.menu"
+[2014:09:08:20:55:16:512273 WARNING] Failed to find file ".gtk-bookmarks"!
+[2014:09:08:20:55:16:890223 MESSAGE] Started happily...
+[2014:09:08:21:20:23:770645 MESSAGE] Caught signal (15), bye!
+[2014:09:08:22:02:42:317027 MESSAGE] Welcome to Gnome-Pie 0.5.5!
+[2014:09:08:22:02:42:319252 MESSAGE] Loading Pies from "/home/matti/.config/gnome-pie/pies.conf".
+[2014:09:08:22:02:42:360817 WARNING] Failed to look up menu_file for "applications.menu"
+[2014:09:08:22:02:42:465394 WARNING] Failed to find file ".gtk-bookmarks"!
+[2014:09:08:22:02:42:848044 MESSAGE] Started happily...
+[2014:09:08:22:13:01:122384  ERROR ] gnome_pie_pie_get_id: assertion 'self != NULL' failed
+[2014:09:08:22:13:01:122589  ERROR ] gnome_pie_pie_get_id: assertion 'self != NULL' failed
+[2014:09:08:22:13:01:122704  ERROR ] gnome_pie_pie_manager_get_name_of: assertion 'id != NULL' failed
+[2014:09:08:22:13:01:122843  ERROR ] gnome_pie_pie_get_id: assertion 'self != NULL' failed
+[2014:09:08:22:13:01:122949  ERROR ] gnome_pie_pie_manager_get_accelerator_label_of: assertion 'id != NULL' failed
+[2014:09:08:22:13:01:123119  ERROR ] gnome_pie_pie_get_icon: assertion 'self != NULL' failed
+[2014:09:08:22:13:01:123215  ERROR ] string_contains: assertion 'self != NULL' failed
+[2014:09:08:22:13:01:123307  ERROR ] gnome_pie_pie_get_icon: assertion 'self != NULL' failed
+[2014:09:08:22:13:01:123500  ERROR ] gnome_pie_pie_preview_renderer_load_pie: assertion 'pie != NULL' failed
+[2014:09:08:22:13:01:123686  ERROR ] gnome_pie_pie_get_action_groups: assertion 'self != NULL' failed
+[2014:09:08:22:13:01:123793  ERROR ] gee_abstract_collection_get_size: assertion 'self != NULL' failed
+[2014:09:08:22:13:40:593640  ERROR ] gnome_pie_pie_get_id: assertion 'self != NULL' failed
+[2014:09:08:22:13:40:593886  ERROR ] gnome_pie_pie_get_id: assertion 'self != NULL' failed
+[2014:09:08:22:13:40:594024  ERROR ] gnome_pie_pie_manager_get_name_of: assertion 'id != NULL' failed
+[2014:09:08:22:13:40:594194  ERROR ] gnome_pie_pie_get_id: assertion 'self != NULL' failed
+[2014:09:08:22:13:40:594322  ERROR ] gnome_pie_pie_manager_get_accelerator_label_of: assertion 'id != NULL' failed
+[2014:09:08:22:13:40:594527  ERROR ] gnome_pie_pie_get_icon: assertion 'self != NULL' failed
+[2014:09:08:22:13:40:594649  ERROR ] string_contains: assertion 'self != NULL' failed
+[2014:09:08:22:13:40:594763  ERROR ] gnome_pie_pie_get_icon: assertion 'self != NULL' failed
+[2014:09:08:22:13:40:595005  ERROR ] gnome_pie_pie_preview_renderer_load_pie: assertion 'pie != NULL' failed
+[2014:09:08:22:13:40:595279  ERROR ] gnome_pie_pie_get_action_groups: assertion 'self != NULL' failed
+[2014:09:08:22:13:40:595386  ERROR ] gee_abstract_collection_get_size: assertion 'self != NULL' failed
+[2014:09:08:22:13:52:998415 MESSAGE] Saving Pies to "/home/matti/.config/gnome-pie/pies.conf".
+[2014:09:16:11:49:34:451438 MESSAGE] Welcome to Gnome-Pie 0.5.5!
+[2014:09:16:11:49:34:459029 MESSAGE] Loading Pies from "/home/matti/.config/gnome-pie/pies.conf".
+[2014:09:16:11:49:34:881808 MESSAGE] Started happily...
+[2014:09:16:11:49:58:353837 MESSAGE] Caught signal (15), bye!
+[2014:09:18:12:31:23:936613 MESSAGE] Welcome to Gnome-Pie 0.5.5!
+[2014:09:18:12:31:23:946250 MESSAGE] Loading Pies from "/home/matti/.config/gnome-pie/pies.conf".
+[2014:09:18:12:31:24:260628 MESSAGE] Started happily...
+[2014:09:18:17:24:08:862033 MESSAGE] Caught signal (15), bye!
+[2014:09:18:17:24:14:782975 MESSAGE] Welcome to Gnome-Pie 0.5.5!
+[2014:09:18:17:24:14:784310 MESSAGE] Loading Pies from "/home/matti/.config/gnome-pie/pies.conf".
+[2014:09:18:17:24:15:077359 MESSAGE] Started happily...
+[2014:09:18:19:02:12:617834 WARNING] Failed to look up menu_file for "applications.menu"
+[2014:09:18:19:09:41:017098 MESSAGE] Saving Pies to "/home/matti/.config/gnome-pie/pies.conf".
+[2014:09:18:20:13:06:128545 MESSAGE] Caught signal (15), bye!
+[2014:09:18:20:13:09:892985 MESSAGE] Welcome to Gnome-Pie 0.5.5!
+[2014:09:18:20:13:09:894799 MESSAGE] Loading Pies from "/home/matti/.config/gnome-pie/pies.conf".
+[2014:09:18:20:13:10:203686 MESSAGE] Started happily...
+[2014:09:18:20:15:27:062945 MESSAGE] Saving Pies to "/home/matti/.config/gnome-pie/pies.conf".
+[2014:09:18:20:34:04:817325 MESSAGE] Saving Pies to "/home/matti/.config/gnome-pie/pies.conf".
+[2014:09:18:21:37:33:719375 MESSAGE] Saving Pies to "/home/matti/.config/gnome-pie/pies.conf".
+[2014:09:18:21:40:52:139482 MESSAGE] Caught signal (15), bye!
+[2014:09:18:21:41:25:236616 MESSAGE] Welcome to Gnome-Pie 0.5.5!
+[2014:09:18:21:41:25:239081 MESSAGE] Loading Pies from "/home/matti/.config/gnome-pie/pies.conf".
+[2014:09:18:21:41:25:541212 MESSAGE] Started happily...
+[2014:09:19:09:00:40:513180 WARNING] Failed to look up menu_file for "applications.menu"
+[2014:09:19:09:05:09:159983 MESSAGE] Saving Pies to "/home/matti/.config/gnome-pie/pies.conf".
+[2014:09:19:10:08:45:452811 MESSAGE] Welcome to Gnome-Pie 0.5.5!
+[2014:09:19:10:08:45:460997 MESSAGE] Loading Pies from "/home/matti/.config/gnome-pie/pies.conf".
+[2014:09:19:10:08:45:605535 WARNING] Failed to look up menu_file for "applications.menu"
+[2014:09:19:10:08:45:950756 MESSAGE] Started happily...
+[2014:09:19:14:43:24:897460 MESSAGE] Welcome to Gnome-Pie 0.5.5!
+[2014:09:19:14:43:24:905138 MESSAGE] Loading Pies from "/home/matti/.config/gnome-pie/pies.conf".
+[2014:09:19:14:43:25:071169 WARNING] Failed to look up menu_file for "applications.menu"
+[2014:09:19:14:43:25:351511 MESSAGE] Started happily...
+[2014:09:23:22:53:56:476163 MESSAGE] Welcome to Gnome-Pie 0.5.5!
+[2014:09:23:22:53:56:479227 MESSAGE] Loading Pies from "/home/matti/.config/gnome-pie/pies.conf".
+[2014:09:23:22:53:56:650715 WARNING] Failed to look up menu_file for "applications.menu"
+[2014:09:23:22:53:56:912535 MESSAGE] Started happily...
+[2014:09:23:22:56:46:709995 MESSAGE] Caught signal (15), bye!
+[2014:09:23:22:56:53:102137 MESSAGE] Welcome to Gnome-Pie 0.5.5!
+[2014:09:23:22:56:53:104906 MESSAGE] Loading Pies from "/home/matti/.config/gnome-pie/pies.conf".
+[2014:09:23:22:56:53:224952 WARNING] Failed to look up menu_file for "applications.menu"
+[2014:09:23:22:56:53:425896 MESSAGE] Started happily...
+[2014:09:23:23:05:37:264128 MESSAGE] Saving Pies to "/home/matti/.config/gnome-pie/pies.conf".
+[2014:10:03:14:48:13:944726 MESSAGE] Welcome to Gnome-Pie 0.5.5!
+[2014:10:03:14:48:13:949006 MESSAGE] Loading Pies from "/home/matti/.config/gnome-pie/pies.conf".
+[2014:10:03:14:48:14:436534 MESSAGE] Started happily...
+[2014:10:03:15:02:48:195836 MESSAGE] Saving Pies to "/home/matti/.config/gnome-pie/pies.conf".
+[2014:10:03:15:09:45:020837  ERROR ] gnome_pie_pie_get_id: assertion 'self != NULL' failed
+[2014:10:03:15:09:45:021030  ERROR ] gnome_pie_pie_get_id: assertion 'self != NULL' failed
+[2014:10:03:15:09:45:021212  ERROR ] gnome_pie_pie_manager_get_name_of: assertion 'id != NULL' failed
+[2014:10:03:15:09:45:021343  ERROR ] gnome_pie_pie_get_id: assertion 'self != NULL' failed
+[2014:10:03:15:09:45:021436  ERROR ] gnome_pie_pie_manager_get_accelerator_label_of: assertion 'id != NULL' failed
+[2014:10:03:15:09:45:021588  ERROR ] gnome_pie_pie_get_icon: assertion 'self != NULL' failed
+[2014:10:03:15:09:45:021673  ERROR ] string_contains: assertion 'self != NULL' failed
+[2014:10:03:15:09:45:021755  ERROR ] gnome_pie_pie_get_icon: assertion 'self != NULL' failed
+[2014:10:03:15:09:45:021935  ERROR ] gnome_pie_pie_preview_renderer_load_pie: assertion 'pie != NULL' failed
+[2014:10:03:15:09:45:022079  ERROR ] gnome_pie_pie_get_action_groups: assertion 'self != NULL' failed
+[2014:10:03:15:09:45:022178  ERROR ] gee_abstract_collection_get_size: assertion 'self != NULL' failed
+[2014:10:03:15:10:01:186351 WARNING] Failed to find file ".gtk-bookmarks"!
+[2014:10:03:15:11:49:546264 MESSAGE] Saving Pies to "/home/matti/.config/gnome-pie/pies.conf".
+[2014:10:03:15:15:08:424578 MESSAGE] Welcome to Gnome-Pie 0.5.5!
+[2014:10:03:15:15:08:426808 MESSAGE] Loading Pies from "/home/matti/.config/gnome-pie/pies.conf".
+[2014:10:03:15:15:08:738627 MESSAGE] Started happily...
+[2014:10:03:15:23:45:380698 MESSAGE] Caught signal (15), bye!
+[2014:10:03:20:42:38:201399 MESSAGE] Welcome to Gnome-Pie 0.5.5!
+[2014:10:03:20:42:38:205081 MESSAGE] Loading Pies from "/home/matti/.config/gnome-pie/pies.conf".
+[2014:10:03:20:42:38:736439 MESSAGE] Started happily...
+[2014:10:03:23:03:39:562997 MESSAGE] Welcome to Gnome-Pie 0.5.5!
+[2014:10:03:23:03:39:563608 MESSAGE] Gnome-Pie is already running. Sending request to open pie 167.
+[2014:10:03:23:40:35:911356 WARNING] Failed to fetch xid: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface 'org.ayatana.bamf.window' on object at path /org/ayatana/bamf/window/31457283
+[2014:10:03:23:40:35:918930 WARNING] Failed to fetch type: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface 'org.ayatana.bamf.window' on object at path /org/ayatana/bamf/window/31457283
+[2014:10:03:23:40:35:920012 WARNING] Failed to fetch monitor: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface 'org.ayatana.bamf.window' on object at path /org/ayatana/bamf/window/31457283
+[2014:10:03:23:40:35:920673 WARNING] Failed to fetch maximized state: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface 'org.ayatana.bamf.window' on object at path /org/ayatana/bamf/window/31457283
+[2014:10:03:23:40:35:921298 WARNING] Failed to fetch xid: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface 'org.ayatana.bamf.window' on object at path /org/ayatana/bamf/window/31457283
+[2014:10:03:23:40:35:930154 WARNING] Unable to fetch children: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface 'org.ayatana.bamf.view' on object at path /org/ayatana/bamf/application/0x22ebaf0
+
+[2014:10:03:23:40:35:930679 WARNING] Failed to fetch path: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface 'org.ayatana.bamf.application' on object at path /org/ayatana/bamf/application/0x22ebaf0
+[2014:10:04:00:13:19:560836 MESSAGE] Caught signal (15), bye!

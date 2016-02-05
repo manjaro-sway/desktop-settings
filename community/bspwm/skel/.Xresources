@@ -1,0 +1,236 @@
+! Custom part
+! -----------
+
+! Perl extensions loaded
+URxvt.perl-ext-common: clipboard
+
+! define some colourschemes
+
+! Solarized color scheme for the X Window System
+! http://ethanschoonover.com/solarized
+! Common
+#define Solarized_yellow       #b58900
+#define Solarized_orange       #cb4b16
+#define Solarized_red          #dc322f
+#define Solarized_magenta      #d33682
+#define Solarized_violet       #6c71c4
+#define Solarized_blue         #268bd2
+#define Solarized_cyan         #2aa198
+#define Solarized_green        #859900
+
+! Dark
+#define Solarized_dark_base03  #002b36
+#define Solarized_dark_base02  #073642
+#define Solarized_dark_base01  #586e75
+#define Solarized_dark_base00  #657b83
+#define Solarized_dark_base0   #839496
+#define Solarized_dark_base1   #93a1a1
+#define Solarized_dark_base2   #eee8d5
+#define Solarized_dark_base3   #fdf6e3
+
+! Light
+#define Solarized_light_base03 #fdf6e3
+#define Solarized_light_base02 #eee8d5
+#define Solarized_light_base01 #93a1a1
+#define Solarized_light_base00 #839496
+#define Solarized_light_base0  #657b83
+#define Solarized_light_base1  #586e75
+#define Solarized_light_base2  #073642
+#define Solarized_light_base3  #002b36
+
+! Molokai
+#define Molokai_black        #1B1D1E
+#define Molokai_red          #B60050
+#define Molokai_red2         #FF0000
+#define Molokai_green        #88BB22
+#define Molokai_brown        #C47F2C
+#define Molokai_blue         #30309B
+#define Molokai_purple       #7E40A5
+#define Molokai_cyan         #4699AF
+#define Molokai_light_grey   #9999AA
+#define Molokai_dark_grey    #303030
+#define Molokai_light_red    #F92672
+#define Molokai_light_green  #80FF00
+#define Molokai_yellow       #FFBA68
+#define Molokai_light_blue   #7070F0
+#define Molokai_light_purple #BB88DD
+#define Molokai_light_cyan   #66D9EF
+#define Molokai_white        #F8F8F2
+
+! Lucius theme, light
+#define Lucius_black        #626262
+#define Lucius_red          #af0000
+#define Lucius_red2         #FF0000
+#define Lucius_green        #008700
+#define Lucius_brown        #af8700
+#define Lucius_blue         #87afd7
+#define Lucius_purple       #870087
+#define Lucius_cyan         #0087af
+#define Lucius_light_grey   #9e9e9e
+#define Lucius_dark_grey    #8a8a8a
+#define Lucius_light_red    #d70000
+#define Lucius_light_green  #00af00
+#define Lucius_yellow       #ffaf00
+#define Lucius_light_blue   #0087d7
+#define Lucius_light_purple #af00af
+#define Lucius_light_cyan   #00afd7
+#define Lucius_white        #eeeeee
+
+! Scrollbar
+URxvt.saveLines: 10000
+URxvt.scrollBar: false
+URxvt.scrollBar_right: true
+URxvt.scrollColor: #59595B
+URxvt.scrollBar_floating: false
+URxvt.scrollstyle: plain
+URxvt.scrollTtyOutput: False
+URxvt.scrollWithBuffer: False
+URxvt.thickness: 14
+urxvt*cursorBlink:      true
+
+! Fonts
+! URxvt.font: xft:Monospace:size=12
+urxvt*font:        -xos4-terminus-medium-*-*-*-18-*-*-*-*-*-*-*
+urxvt*boldFont:    -xos4-terminus-bold-*-*-*-18-*-*-*-*-*-*-*
+URxvt.letterSpace: -1
+
+! Classic copy/paste by Shift-Ctrl-c|v
+URxvt.iso14755: False
+URxvt.keysym.Control-Shift-C: perl:clipboard:copy
+URxvt.keysym.Control-Shift-V: perl:clipboard:paste
+
+! Fade when inactive
+URxvt*fading: 20
+
+! Xterm settings
+XTerm*termName: xterm-256color
+XTerm*selectToClipboard: true
+XTerm*locale: true
+XTerm*metaSendsEscape: true
+XTerm*saveLines: 4096
+XTerm*VT100.geometry: 80x22
+XTerm*foreground: #F2F2F2
+XTerm*background: #2B2B2C
+XTerm*color10:    #8cbc65
+XTerm*color12:    #0071ff
+XTerm*faceName: Monospace
+XTerm*faceSize: 11
+XTerm*scrollBar: true
+XTerm*rightScrollBar: true
+
+! UXTerm settings
+UXTerm*termName: xterm-256color
+UXTerm*locale: true
+UXTerm*metaSendsEscape: true
+UXTerm*saveLines: 4096
+UXTerm*VT100.geometry: 80x22
+UXTerm*foreground: #F2F2F2
+UXTerm*background: #2B2B2C
+UXTerm*color10:    #8cbc65
+UXTerm*color12:    #0071ff
+UXTerm*faceName: Monospace
+UXTerm*faceSize: 11
+UXTerm*scrollBar: true
+UXTerm*rightScrollBar: true
+! Colors -----------------------------------------------------------
+
+!URxvt Molokai
+! URxvt*background  : Molokai_black
+! URxvt*foreground  : Molokai_white
+URxvt.foreground: #99CC99
+URxvt.background: #000000
+URxvt*cursorColor : #99CC99
+URxvt*color0      : Molokai_black
+URxvt*color1      : Molokai_red
+URxvt*color2      : Molokai_green
+URxvt*color3      : Molokai_brown
+URxvt*color4      : Molokai_blue
+URxvt*color5      : Molokai_purple
+URxvt*color6      : Molokai_cyan
+URxvt*color7      : Molokai_light_grey
+URxvt*color8      : Molokai_dark_grey
+URxvt*color9      : Molokai_light_red
+URxvt*color10     : Molokai_light_green
+URxvt*color11     : Molokai_yellow
+URxvt*color12     : Molokai_light_blue
+URxvt*color13     : Molokai_light_purple
+URxvt*color14     : Molokai_light_cyan
+URxvt*color15     : Molokai_white
+
+!URxvt Solarized theme, light
+!URxvt*background             : Solarized_light_base03
+!URxvt*foreground             : Solarized_light_base0
+!URxvt*fading                 : 40
+!URxvt*fadeColor              : Solarized_light_base03
+!URxvt*cursorColor            : Solarized_light_base1
+!URxvt*pointerColorBackground : Solarized_light_base01
+!URxvt*pointerColorForeground : Solarized_light_base1
+!URxvt*color0                 : Solarized_light_base2
+!URxvt*color1                 : Solarized_red
+!URxvt*color2                 : Solarized_green
+!URxvt*color3                 : Solarized_yellow
+!URxvt*color4                 : Solarized_blue
+!URxvt*color5                 : Solarized_magenta
+!URxvt*color6                 : Solarized_cyan
+!URxvt*color7                 : Solarized_light_base2
+!URxvt*color8                 : Solarized_light_base03
+!URxvt*color9                 : Solarized_orange
+!URxvt*color10                : Solarized_light_base01
+!URxvt*color11                : Solarized_light_base00
+!URxvt*color12                : Solarized_light_base0
+!URxvt*color13                : Solarized_violet
+!URxvt*color14                : Solarized_light_base1
+!URxvt*color15                : Solarized_light_base3
+
+!URxvt Solarized theme, dark
+!URxvt*background             : Solarized_dark_base03
+!URxvt*foreground             : Solarized_dark_base0
+!URxvt*fading                 : 40
+!URxvt*fadeColor              : Solarized_dark_base03
+!URxvt*cursorColor            : Solarized_dark_base1
+!URxvt*pointerColorBackground : Solarized_dark_base01
+!URxvt*pointerColorForeground : Solarized_dark_base1
+!URxvt*color0                 : Solarized_dark_base2
+!URxvt*color1                 : Solarized_red
+!URxvt*color2                 : Solarized_green
+!URxvt*color3                 : Solarized_yellow
+!URxvt*color4                 : Solarized_blue
+!URxvt*color5                 : Solarized_magenta
+!URxvt*color6                 : Solarized_cyan
+!URxvt*color7                 : Solarized_dark_base2
+!URxvt*color8                 : Solarized_dark_base03
+!URxvt*color9                 : Solarized_orange
+!URxvt*color10                : Solarized_dark_base01
+!URxvt*color11                : Solarized_dark_base00
+!URxvt*color12                : Solarized_dark_base0
+!URxvt*color13                : Solarized_violet
+!URxvt*color14                : Solarized_dark_base1
+!URxvt*color15                : Solarized_dark_base3
+
+rofi.opacity: 85
+rofi.width: 500
+rofi.lines: 15
+rofi.columns: 1
+rofi.font: Terminus bold 10
+rofi.bw: 2
+rofi.padding: 2
+rofi.yoffset: 0
+rofi.xoffset: -2
+rofi.fixed-num-lines: true 
+rofi.hmode: false
+rofi.terminal: terminal
+rofi.ssh-set-title: true
+rofi.key: F12
+rofi.rkey: mod1+F2
+rofi.skey: mod1+F3
+rofi.location: 0
+
+rofi.fg:   #99CC99
+rofi.bg:   #000000
+rofi.hlfg: #000000
+rofi.hlbg: #99CC99
+rofi.bc:   #99CC99
+rofi.disable-history: false 
+rofi.levenshtein-sort: true 
+rofi.switchers: window,run
+Xcursor.theme: breeze

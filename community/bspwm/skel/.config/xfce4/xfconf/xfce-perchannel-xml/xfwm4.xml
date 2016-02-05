@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfwm4" version="1.0">
+  <property name="general" type="empty">
+    <property name="workspace_names" type="array">
+      <value type="string" value="1/I"/>
+      <value type="string" value="1/III"/>
+      <value type="string" value="1/II"/>
+      <value type="string" value="1/IV"/>
+      <value type="string" value="1/V"/>
+      <value type="string" value="web"/>
+      <value type="string" value="VII"/>
+      <value type="string" value="VIII"/>
+      <value type="string" value="IX"/>
+      <value type="string" value="X"/>
+    </property>
+    <property name="workspace_count" type="int" value="5"/>
+  </property>
+</channel>
