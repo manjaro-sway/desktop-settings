@@ -1,0 +1,7 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Applications
+Exec=/usr/bin/gnome-pie -o 566
+Encoding=UTF-8
+Type=Application
+Icon=applications-accessories

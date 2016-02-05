@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=DesktopMenu
+Comment=
+Exec=DesktopMenu
+Icon=preferences-desktop-display-symbolic
+Path=
+Terminal=false
+StartupNotify=false
