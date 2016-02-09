@@ -127,7 +127,7 @@ cleanse() {
 }
 
 ##Single line, simple prompt.
-PROMPT="%{$fg[green]%}[%n:%4~]-%(?.%{$fg[green]%}>>>  %{$reset_color%}.>>%{$fg[red]%}> %{$reset_color%})"
+PROMPT="%{$fg[green]%}[%n:%4~]-%(?.%{$fg[green]%}>>> %{$reset_color%}.>>%{$fg[red]%}> %{$reset_color%})"
 ##Multiline, fancy prompt.
 #PROMPT="%{$fg[green]%}┌─[%4~]-[%n@%M]%(!.#.$) 
 #└─%(?.%{$fg[green]%}>>  %{$reset_color%}.%{$fg[red]%}>> %{$reset_color%})"
