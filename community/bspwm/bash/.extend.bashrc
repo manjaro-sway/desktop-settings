@@ -33,7 +33,6 @@ alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
 alias more=less
 alias fixit='sudo rm -f /var/lib/pacman/db.lck && sudo pacman-mirrors -g && sudo pacman -Syyuu && sudo pacman -Suu'
-alias bspwm='startx /usr/bin/bspwm-session'
 alias bspwmrc='nano ~/.config/bspwm/bspwmrc'
 alias sxhkdrc='nano ~/.config/sxhkd/sxhkdrc'
 alias autostart='nano ~/.config/bspwm/autostart'
@@ -42,14 +41,6 @@ alias x='startx ~/.xinitrc'
 
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
-
-cleanse() {
-        sudo pacman -Rns $(pacman -Qtdq) ;
-        sudo pacman -Scc ;
-        sudo pacman-optimize ;
-        bleachbit -c --preset ;
-        sudo bleachbit -c --preset
-}
 
 #Command-not-found hook. Requires package command-not-found
 [ -r /etc/profile.d/cnf.sh ] && . /etc/profile.d/cnf.sh
