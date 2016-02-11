@@ -4,12 +4,12 @@ enabled-applets=['panel1:left:0:menu@cinnamon.org:0', 'panel1:left:1:show-deskto
 
 [org.cinnamon.desktop.background]
 picture-options='stretched'
-picture-uri='file:///usr/share/backgrounds/bg_i_10.jpg'
+picture-uri='file:///usr/share/backgrounds/maia.jpg'
 
 [org.cinnamon.desktop.interface]
 cursor-theme='Simple-and-Soft'
 font-name='Cantarell 10'
-gtk-theme='Vertex-Maia'
+gtk-theme='Vertex-Maia-Square'
 icon-theme='maia'
 
 [org.cinnamon.desktop.screensaver]
@@ -22,11 +22,11 @@ use-custom-format=true
 
 [org.cinnamon.desktop.wm.preferences]
 num-workspaces=2
-theme='Vertex-Maia'
+theme='Vertex-Maia-Square'
 titlebar-font='Cantarell 10'
 
 [org.cinnamon.theme]
-name='Vertex-Maia'
+name='Vertex-Maia-Square'
 
 [org.gnome.Terminal.Legacy.Profile]
 allow-bold=true
