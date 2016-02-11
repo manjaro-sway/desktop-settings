@@ -118,16 +118,8 @@ ex() {
   fi
 }
 
-cleanse() {
-        sudo pacman -Rns $(pacman -Qtdq) ;
-        sudo pacman -Scc ;
-        sudo pacman-optimize ;
-        bleachbit -c --preset ;
-        sudo bleachbit -c --preset
-}
-
 ##Single line, simple prompt.
-PROMPT="%{$fg[green]%}[%n:%4~]-%(?.%{$fg[green]%}>>>  %{$reset_color%}.>>%{$fg[red]%}> %{$reset_color%})"
+PROMPT="%{$fg[green]%}[%n:%4~]-%(?.%{$fg[green]%}>>> %{$reset_color%}.>>%{$fg[red]%}> %{$reset_color%})"
 ##Multiline, fancy prompt.
 #PROMPT="%{$fg[green]%}┌─[%4~]-[%n@%M]%(!.#.$) 
 #└─%(?.%{$fg[green]%}>>  %{$reset_color%}.%{$fg[red]%}>> %{$reset_color%})"
