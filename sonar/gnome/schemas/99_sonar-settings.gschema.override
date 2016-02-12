@@ -40,3 +40,12 @@ custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybin
 binding='<Alt><Super>o'
 command='/usr/bin/ocrdesktop'
 name='ocrdesktop'
+
+[org.gnome.gedit.preferences.editor]
+display-line-numbers=true
+
+[org.gnome.nautilus.preferences]
+sort-directories-first=true
+
+[org.gnome.shell]
+favorite-apps=['org.gnome.Nautilus.desktop', 'gnome-terminal.desktop', 'gnome-control-center.desktop', 'gnome-tweak-tool.desktop', 'ca.desrt.dconf-editor.desktop']
