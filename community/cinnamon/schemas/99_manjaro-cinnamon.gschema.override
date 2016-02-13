@@ -9,7 +9,7 @@ picture-uri='file:///usr/share/backgrounds/cinnamon-brown.jpg'
 [org.cinnamon.desktop.interface]
 cursor-theme='Simple-and-Soft'
 font-name='Cantarell 10'
-gtk-theme='Vertex-Maia'
+gtk-theme='Vertex-Maia-Square'
 icon-theme='maia'
 
 [org.cinnamon.desktop.screensaver]
