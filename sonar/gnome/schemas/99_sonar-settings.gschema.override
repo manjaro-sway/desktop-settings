@@ -1,9 +1,10 @@
 [org.gnome.desktop.background]
-picture-uri="file:///usr/share/backgrounds/sonar.jpg"
+picture-uri='file:///usr/share/backgrounds/sonar.jpg'
 show-desktop-icons=true
 
 [org.gnome.desktop.interface]
-toolkit-accessibility=true
+gtk-theme='Vertex-Maia'
+icon-theme='maia'
 
 [org.gnome.desktop.a11y.applications]
 screen-keyboard-enabled=false
@@ -16,3 +17,35 @@ input-feedback-sounds=true
 
 [org.gnome.desktop.input-sources]
 show-all-sources=true
+
+[org.gnome.desktop.wm.preferences]
+button-layout='appmenu:minimize,maximize,close'
+
+[org.gnome.desktop.screensaver]
+picture-uri='file:///usr/share/backgrounds/sonar.jpg'
+
+[org.gnome.desktop.datetime]
+automatic-timezone=true
+
+[org.gnome.settings-daemon.plugins.media-keys]
+magnifier='<Alt><Super>z'
+magnifier-zoom-in='<Alt><Super>plus'
+magnifier-zoom-out='<Alt><Super>minus'
+volume-down='<Primary><Super>Down'
+volume-mute='<Primary><Super>m'
+volume-up='<Primary><Super>Up'
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+
+[org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/]
+binding='<Alt><Super>o'
+command='/usr/bin/ocrdesktop'
+name='ocrdesktop'
+
+[org.gnome.gedit.preferences.editor]
+display-line-numbers=true
+
+[org.gnome.nautilus.preferences]
+sort-directories-first=true
+
+[org.gnome.shell]
+favorite-apps=['org.gnome.Nautilus.desktop', 'gnome-terminal.desktop', 'gnome-control-center.desktop', 'gnome-tweak-tool.desktop', 'ca.desrt.dconf-editor.desktop']

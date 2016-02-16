@@ -21,6 +21,7 @@ image/x-pcx=eog.desktop
 image/svg+xml=eog.desktop
 image/svg+xml-compressed=eog.desktop
 image/vnd.wap.wbmp=eog.desktop
+application/pdf=evince.desktop
 
 [Added Associations]
 image/bmp=eog.desktop;
@@ -45,3 +46,4 @@ image/x-pcx=eog.desktop;
 image/svg+xml=eog.desktop;
 image/svg+xml-compressed=eog.desktop;
 image/vnd.wap.wbmp=eog.desktop;
+application/pdf=evince.desktop;

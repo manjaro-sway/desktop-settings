@@ -8,28 +8,27 @@ desktop-settings
 
 ### minimal
 
-* lxqt
 * budgie
 * kde
+* lxqt
+* openbox
 * xfce
 
 ### community
 
 * bspwm
-* cinnamon
-* enlightenment
-* gnome
-* jwm
-* lxqt
-* netbook
-* pantheon
 * budgie
+* cinnamon
 * deepin
-* fluxbox
+* gnome
 * i3
 * lxde
+* lxqt
 * mate
-* openbox
-* gnome-sonar
-* mate-sonar
-* firefox
+* netbook
+* pantheon
+
+### sonar
+
+* gnome
+* mate
