@@ -4,7 +4,7 @@ enabled-applets=['panel1:left:0:menu@cinnamon.org:0', 'panel1:left:1:show-deskto
 
 [org.cinnamon.desktop.background]
 picture-options='stretched'
-picture-uri='file:///usr/share/backgrounds/gnome/Waves.jpg'
+picture-uri='file:///usr/share/backgrounds/maia.png'
 
 [org.cinnamon.desktop.interface]
 cursor-theme='Simple-and-Soft'
