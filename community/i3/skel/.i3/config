@@ -64,7 +64,7 @@ bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart du
 bindsym Print exec "scrot -e 'mv $f ~/Screenshots'; sleep 1; exec notify-send 'screenshot has been saved to ~/Screenshots'"
 bindsym $mod+Print --release exec "scrot -ue 'mv $f ~/Screenshots'; sleep 1; exec notify-send 'screenshot has been saved to ~/Screenshots'"
 bindsym $mod+Shift+Print --release exec "notify-send 'selection will be saved to ~/Screenshots'; scrot -se 'mv $f ~/Screenshots'"
-bindsym $mod+Shift+h exec qpdfview i3_help.pdf
+bindsym $mod+Shift+h exec qpdfview /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # focus_follows_mouse no
@@ -290,6 +290,9 @@ bar {
 		urgent_workspace   #2ECC71 #900000 #FFFFFF
 	}
 }
+
+# hide/unhide i3status bar
+bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class          border  backgr. text    indicator
