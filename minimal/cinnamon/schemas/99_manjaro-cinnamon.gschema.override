@@ -1,0 +1,49 @@
+[org.cinnamon]
+alttab-switcher-style='thumbnails+preview'
+enabled-applets=['panel1:left:0:menu@cinnamon.org:0', 'panel1:left:1:show-desktop@cinnamon.org:1', 'panel1:left:2:panel-launchers@cinnamon.org:2', 'panel1:left:3:window-list@cinnamon.org:3', 'panel1:right:0:notifications@cinnamon.org:4', 'panel1:right:1:workspace-switcher@cinnamon.org:17', 'panel1:right:2:expo@cinnamon.org:18', 'panel1:right:12:calendar@cinnamon.org:13', 'panel1:right:6:windows-quick-list@cinnamon.org:14', 'panel1:right:7:network@cinnamon.org:9', 'panel1:right:8:systray@cinnamon.org:12', 'panel1:right:9:power@cinnamon.org:11', 'panel1:right:11:sound@cinnamon.org:10', 'panel1:right:13:user@cinnamon.org:5']
+
+[org.cinnamon.desktop.background]
+picture-options='stretched'
+picture-uri='file:///usr/share/backgrounds/gnome/Waves.jpg'
+
+[org.cinnamon.desktop.interface]
+cursor-theme='Simple-and-Soft'
+font-name='Cantarell 10'
+gtk-theme='Vertex-Maia-Square'
+icon-theme='maia'
+
+[org.cinnamon.desktop.screensaver]
+ask-for-away-message=false
+date-format='%A %b %d'
+font-date='Comfortaa Light 18'
+font-message='Comfortaa Semi-Light 12'
+font-time='Comfortaa Semi-Light 64'
+use-custom-format=true
+
+[org.cinnamon.desktop.wm.preferences]
+num-workspaces=2
+theme='Vertex-Maia-Square'
+titlebar-font='Cantarell 10'
+
+[org.cinnamon.theme]
+name='Vertex-Maia'
+
+[org.gnome.Terminal.Legacy.Profile]
+allow-bold=true
+background-color='rgb(69,70,73)'
+use-theme-colors=false
+font='Droid Sans Mono Regular 11'
+foreground-color='rgb(220,233,235)'
+palette=['rgb(0,0,0)', 'rgb(170,0,0)', 'rgb(0,170,0)', 'rgb(170,85,0)', 'rgb(0,0,170)', 'rgb(170,0,170)', 'rgb(0,170,170)', 'rgb(170,170,170)', 'rgb(85,85,85)', 'rgb(255,85,85)', 'rgb(85,255,85)', 'rgb(255,255,85)', 'rgb(85,85,255)', 'rgb(255,85,255)', 'rgb(85,255,255)', 'rgb(255,255,255)']
+rewrap-on-resize=true
+visible-name='manjaro'
+
+[org.nemo.desktop]
+computer-icon-visible=true
+home-icon-visible=true
+trash-icon-visible=false
+volumes-visible=true
+
+[org.xfce.mousepad.preferences.view]
+color-scheme='classic'
+show-line-numbers=true
