@@ -21,7 +21,7 @@
 # set quiet
 
 ## Use auto-indentation.
-# set autoindent
+ set autoindent
 
 ## Back up files to the current filename plus a tilde.
  set backup
@@ -92,7 +92,7 @@
 # set nohelp
 
 ## Don't add newlines to the ends of files.
-# set nonewlines
+ set nonewlines
 
 ## Don't wrap text at all.
 # set nowrap
@@ -141,13 +141,13 @@
 ## will jump to that beginning (either forwards or backwards).  If the
 ## cursor is already at that position, it will jump to the true
 ## beginning of the line.
-# set smarthome
+ set smarthome
 
 ## Use smooth scrolling as the default.
 # set smooth
 
 ## Enable soft line wrapping (AKA full-line display).
-# set softwrap
+ set softwrap
 
 ## Use this spelling checker instead of the internal one.  This option
 ## does not properly have a default value.
@@ -157,7 +157,7 @@
  set suspend
 
 ## Use this tab size instead of the default; it must be greater than 0.
-# set tabsize 8
+ set tabsize 2
 
 ## Convert typed tabs to spaces.
 # set tabstospaces
