@@ -1,0 +1,79 @@
+conky.config = {
+	background = false,
+	cpu_avg_samples = 2,
+	net_avg_samples = 2,
+	no_buffers = true,
+	out_to_stderr = false,
+	update_interval = 2.0,
+	uppercase = false,
+	times_in_seconds = true,
+	use_spacer = 'none',
+	if_up_strictness = 'address',
+};
+ 
+conky.text =
+[[C\
+#Hide infos button
+${if_existing /tmp/conkytoggle 1}%{A:toggleconky.sh:}- %{A}\
+#Network
+%{A:networkmenuplacer.sh && nmcli_dmenu:}\
+${if_up enp2s0} ${else}\
+${if_up wlp1s0}${execi 7200 update-notifier}\
+	 \
+	${wireless_essid wlp1s0} ${else}\
+%{F\#ff606060} %{F\#FF99CC99}${endif}${endif}%{A}\
+#Battery
+%{A:dbright:}\
+${if_existing /sys/class/power_supply/BAT1/present 1}\
+	${if_match "${acpiacadapter}" == "off-line"}\
+		${if_match ${battery_percent BAT1} <= 100}\
+			${if_match ${battery_percent BAT1} <= 70}\
+				${if_match ${battery_percent BAT1} <= 40}\
+					 ${battery_percent BAT1}%\
+				$else \
+					 ${battery_percent BAT1}%\
+				$endif\
+			$else\
+				 ${battery_percent BAT1}%\
+			$endif\
+		$endif\
+		$else  ${battery_percent BAT1}%\
+	$endif\
+$endif\
+%{A} \
+%{A2:smartsplit && terminal -e ranger:}%{A:smartsplit && terminal -e htop:} ${memperc}% %{A}%{A}\
+##Cpu usage
+ $cpu% \
+##Temperature
+ $alignr${hwmon temp 1}°C \
+${else}%{A:toggleconky.sh:}+ %{A}\
+#Network
+%{A:networkmenuplacer.sh && nmcli_dmenu:}\
+${if_up enp2s0} ${else}\
+${if_up wlp1s0}${execi 7200 update-notifier}\
+		 \
+	${else}\
+%{F\#ff606060} %{F\#FF99CC99}${endif}${endif}%{A}\
+#Battery
+%{A:dbright:}\
+${if_existing /sys/class/power_supply/BAT1/present 1}\
+	${if_match "${acpiacadapter}" == "off-line"}\
+		${if_match ${battery_percent BAT1} <= 100}\
+			${if_match ${battery_percent BAT1} <= 70}\
+				${if_match ${battery_percent BAT1} <= 40}\
+					 ${battery_percent BAT1}%\
+				$else \
+					 ${battery_percent BAT1}%\
+				$endif\
+			$else\
+				 ${battery_percent BAT1}%\
+			$endif\
+		$endif\
+		$else  ${battery_percent BAT1}%\
+	$endif\
+$endif\
+%{A} \
+${endif}\
+##Clock
+ ${time %H:%M}
+]];
