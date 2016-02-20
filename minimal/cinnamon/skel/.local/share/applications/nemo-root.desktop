@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Root Filemanager
-Encoding=UTF-8
-Exec=gksu nemo
-Icon=gksu
-Terminal=false
-Type=Application
-StartupNotify=false
-Categories=GNOME;GTK;Utility;Core;
