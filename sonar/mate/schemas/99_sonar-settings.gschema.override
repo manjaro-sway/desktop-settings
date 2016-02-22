@@ -5,10 +5,10 @@ picture-filename="/usr/share/backgrounds/sonar.png"
 accessibility=true
 
 [org.mate.accessibility-keyboard]
-enable=true
+enable=false
 
 [org.mate.applications-at-mobility]
-startup=true
+startup=false
 
 [org.mate.sound]
 event-sounds=true
