@@ -26,7 +26,7 @@
         "default": "Menu",
         "description": "Text",
         "tooltip": "Enter custom text to show in the panel.",
-        "value": ""
+        "value": "Menu"
     },
     "show-places": {
         "type": "checkbox",
