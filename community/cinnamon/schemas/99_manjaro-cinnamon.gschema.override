@@ -29,6 +29,9 @@ titlebar-font='Cantarell 10'
 [org.cinnamon.theme]
 name='Vertex-Maia'
 
+[org.gnome.Terminal.ProfilesList]
+b1dcc9dd-5262-4d8d-a863-c897e6d979b9
+
 [org.gnome.Terminal.Legacy.Profile]
 allow-bold=true
 background-color='rgb(69,70,73)'
