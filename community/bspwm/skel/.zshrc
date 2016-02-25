@@ -132,7 +132,7 @@ PROMPT="%{$fg[green]%}[%n:%4~]-%(?.%{$fg[green]%}>>> %{$reset_color%}.>>%{$fg[re
 #marrakesh, mocha, monokai, ocean, paraiso, pop (dark only), railscasts, shapesifter,
 #solarized, summerfruit, tomorrow, twilight
 
-theme="solarized"
+theme="eighties"
 
 #Possible variants: dark and light
 shade="dark"

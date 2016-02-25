@@ -1,5 +1,5 @@
 ## Right click action
-button1action="smartsplit; mygtkmenui -- .config/GTKmenu/LaunchMenu"
+button1action="mygtkmenui -- .config/GTKmenu/LaunchMenu"
 #button1action="gapgrab"
 
 ## Left click action
