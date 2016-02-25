@@ -51,4 +51,4 @@ i3lock-wait-for-suspend &
 ## multimonitor support. Save monitor configurations with "autorandr.sh --save <profile>"
 srandrd atorandr.sh --change
 ## Notify about package updates
-update-checker 7200 &
+#update-checker 7200 &
