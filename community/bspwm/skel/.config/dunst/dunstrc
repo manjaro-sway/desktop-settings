@@ -142,7 +142,7 @@
     dmenu = /usr/bin/dmenu -p dunst:
     
     # Browser for opening urls in context menu.
-    browser = chromium
+    browser = midori
 
     # Align icons left/right/off
     icon_position = left
@@ -152,7 +152,7 @@
 
 [frame]
     width = 2
-    color = "#99CC99"
+    color = "#1ABB9B"
 
 [shortcuts]
 
@@ -180,17 +180,17 @@
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#000000"
-    foreground = "#99CC99"
+    foreground = "#1ABB9B"
     timeout = 10
 
 [urgency_normal]
     background = "#000000"
-    foreground = "#99CC99"
+    foreground = "#1ABB9B"
     timeout = 10
 
 [urgency_critical]
     background = "#000000"
-    foreground = "#99CC99"
+    foreground = "#1ABB9B"
     timeout = 0
 
 
