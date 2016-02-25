@@ -1,6 +1,7 @@
 [org.cinnamon]
 alttab-switcher-style='thumbnails+preview'
-enabled-applets=['panel1:left:0:menu@cinnamon.org:0', 'panel1:left:1:show-desktop@cinnamon.org:1', 'panel1:left:2:panel-launchers@cinnamon.org:2', 'panel1:left:3:window-list@cinnamon.org:3', 'panel1:right:0:notifications@cinnamon.org:4', 'panel1:right:1:workspace-switcher@cinnamon.org:17', 'panel1:right:2:expo@cinnamon.org:18', 'panel1:right:12:calendar@cinnamon.org:13', 'panel1:right:6:windows-quick-list@cinnamon.org:14', 'panel1:right:7:network@cinnamon.org:9', 'panel1:right:8:systray@cinnamon.org:12', 'panel1:right:9:power@cinnamon.org:11', 'panel1:right:11:sound@cinnamon.org:10', 'panel1:right:13:user@cinnamon.org:5']
+enabled-applets=['panel1:left:0:menu@cinnamon.org:0', 'panel1:left:1:separator@cinnamon.org:1', 'panel1:left:2:panel-launchers@cinnamon.org:2', 'panel1:left:3:separator@cinnamon.org:3', 'panel1:left:4:expo@cinnamon.org:4', 'panel1:left:5:show-desktop@cinnamon.org:5', 'panel1:left:6:window-list@cinnamon.org:6', 'panel1:right:0:notifications@cinnamon.org:7', 'panel1:right:1:workspace-switcher@cinnamon.org:8', 'panel1:right:2:windows-quick-list@cinnamon.org:9', 'panel1:right:3:separator@cinnamon.org:10', 'panel1:right:4:removable-drives@cinnamon.org:11', 'panel1:right:5:systray@cinnamon.org:12', 'panel1:right:6:separator@cinnamon.org:13', 'panel1:right:7:network@cinnamon.org:14', 'panel1:right:8:sound@cinnamon.org:15', 'panel1:right:9:power@cinnamon.org:16', 'panel1:right:10:inhibit@cinnamon.org:17', 'panel1:right:11:calendar@cinnamon.org:18', 'panel1:right:12:user@cinnamon.org:19']
+next-applet-id=20
 
 [org.cinnamon.desktop.background]
 picture-options='stretched'
@@ -9,7 +10,7 @@ picture-uri='file:///usr/share/backgrounds/cinnamon-brown.jpg'
 [org.cinnamon.desktop.interface]
 cursor-theme='Simple-and-Soft'
 font-name='Cantarell 10'
-gtk-theme='Vertex-Maia-Square'
+gtk-theme='Vertex-Maia'
 icon-theme='maia'
 
 [org.cinnamon.desktop.screensaver]
@@ -22,7 +23,7 @@ use-custom-format=true
 
 [org.cinnamon.desktop.wm.preferences]
 num-workspaces=2
-theme='Vertex-Maia-Square'
+theme='Vertex-Maia'
 titlebar-font='Cantarell 10'
 
 [org.cinnamon.theme]

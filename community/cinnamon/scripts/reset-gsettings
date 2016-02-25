@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for i in $(gsettings list-schemas | grep cinnamon)
+do
+	gsettings reset-recursively $i
+done
