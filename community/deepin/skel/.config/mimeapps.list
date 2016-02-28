@@ -51,6 +51,7 @@ image/x-xpixmap=gthumb.desktop
 text/plain=mousepad.desktop
 audio/mp4=deepin-movie.desktop
 application/x-shockwave-flash=deepin-movie.desktop
+application/pdf=evince.desktop
 
 [Added Associations]
 inode/directory=org.gnome.Nautilus.desktop;
@@ -105,3 +106,4 @@ image/x-xpixmap=gthumb.desktop;
 text/plain=mousepad.desktop;
 audio/mp4=deepin-movie.desktop;
 application/x-shockwave-flash=deepin-movie.desktop;
+application/pdf=evince.desktop;
