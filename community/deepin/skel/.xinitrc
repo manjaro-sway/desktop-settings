@@ -12,4 +12,9 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
-exec startdde
+
+DEFAULT_SESSION=deepin
+case $1 in
+  deepin) exec dbus-launch startdde ;;
+  *) exec dbus-launch  $DEFAULT_SESSION ;;
+esac
