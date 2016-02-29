@@ -45,7 +45,7 @@ limepanel &
 ## Edit ~/.stalonetrayrc if it is in wrong place.
 #sleep 2s && stalonetray --dockapp-mode simple &
 ## Welcome message
-notify-send "Welcome to Manjaro-bspwm! " "Press super + F1 to show keybindings" &
+#notify-send "Welcome to Manjaro-bspwm! " "Press super + F1 to show keybindings" &
 ## Run screenlock when suspending
 i3lock-wait-for-suspend &
 ## multimonitor support. Save monitor configurations with "autorandr.sh --save <profile>"
