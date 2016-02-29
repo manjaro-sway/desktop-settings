@@ -17,6 +17,7 @@
 
 		Super + g                     |- Cycle preset window gap options
 		Alt + Tab                     |- Cycle windows
+		Super + Tab                   |- Open window switcher
 		Super + x                     |- Close window
 		Super + shift + x             |- Kill window
 		Super + direction             |- Move focus to the direction
@@ -31,12 +32,13 @@
 		Ctrl + space                  |- Preselect where the next window will be opened
 		Alt + Enter                   |- Preselect/split the rootwindow
 		Super + b                     |- Balance windows
+		Alt + b                       |- Toggle automatic window balancing
 		Super + i                     |- Make window sticky
 		Super + t                     |- Toggle tiling/floating
 		Super + shift + t             |- Toggle pseudotiling	
 		Super + shift + f             |- Toggle fullscreen
 		Super + f                     |- Toggle monocle
-		ctrl + space                  |- Change window gap
+		Ctrl + space                  |- Change window gap
 		Super + o                     |- Make window private 
                               |  (Avoids splitting it automatically)
 		Super + Shift + q             |- Cleanly quit bspwm
