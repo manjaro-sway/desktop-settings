@@ -11,9 +11,9 @@
 	and super+ctrl+direction resizes windows.
 	
 	Arrow keys, wasd and hjkl represent directions and numbers represent
-	different workspaces.
+	different workspaces. 
 	 
-	###Window manipulation################################################################
+	### Window manipulation ################################################################
 
 		Super + g                     |- Cycle preset window gap options
 		Alt + Tab                     |- Cycle windows
@@ -21,13 +21,15 @@
 		Super + shift + x             |- Kill window
 		Super + direction             |- Move focus to the direction
 		Super + shift + direction     |- Move focused window to direction
-		Super + ctrl + direction      |- Resize focused window to direction 
+		Super + ctrl + direction      |- Resize focused window to direction
+		Alt + shift + direction       |- Preselect/split the rootwindow
 		Super + 1-9                   |- Focus the desktop with that number
 		Super + shift + 1-9           |- Move focused window to desktop with that number	
 		Super + Enter                 |- Move window to the biggest available space 
                               |  or preselection if there is one
 		Super + ctrl + Enter          |- Preselect where the next window will be opened
 		Ctrl + space                  |- Preselect where the next window will be opened
+		Alt + Enter                   |- Preselect/split the rootwindow
 		Super + b                     |- Balance windows
 		Super + i                     |- Make window sticky
 		Super + t                     |- Toggle tiling/floating
@@ -39,7 +41,7 @@
                               |  (Avoids splitting it automatically)
 		Super + Shift + q             |- Cleanly quit bspwm
 		Super + shift +r              |- Reload bspwms configuration file
-	###Mousecommands######################################################################
+	### Mousecommands ######################################################################
 		
 		Leftclick menus	              |- Close menu 
 		Super + scroll                |- Adjust window gap
@@ -48,7 +50,7 @@
 		Alt + leftclick               |- Spawn window manipulation menu on cursor
 		Alt_gr + leftclick            |- Split window depending on mouselocation
                               |  and spawn application menu
-	###Applications#######################################################################
+	### Applications #######################################################################
 
 		Super + p                     |- Dmenu (Run applications)
 		Super + space                 |- Dmenu (Run applications)
