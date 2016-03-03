@@ -11,5 +11,5 @@ button3action="mygtkmenui -- .config/GTKmenu/BspwmDesktopMenui"
 #button3action="dboxmenu"
 
 ## Mouse wheel actions
-button4action="bspc desktop -f next"
-button5action="bspc desktop -f prev"
+#button4action="bspc desktop -f next"
+#button5action="bspc desktop -f prev"
