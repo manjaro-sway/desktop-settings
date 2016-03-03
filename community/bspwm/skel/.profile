@@ -11,10 +11,10 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export BSPWM_SOCKET="/tmp/bspwm-socket"
 export PANEL_HEIGHT=25
 export XDG_CONFIG_DIRS=/usr/etc/xdg:/etc/xdg
-export GUI_EDITOR=gedit
-export EDITOR=nano
-export BROWSER=midori
-export TERMINAL=roxterm
+export GUI_EDITOR=/usr/bin/gedit
+export EDITOR=/usr/bin/nano
+export BROWSER=/usr/bin/midori
+export TERMINAL=/usr/bin/roxterm
 
 # Load profiles from /etc/profile.d
 if test -d /etc/profile.d/; then
@@ -34,4 +34,3 @@ unset TERMCAP
 
 # Man is much better than us at figuring this out
 unset MANPATH
-BROWSER=/usr/bin/midori
