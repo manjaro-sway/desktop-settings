@@ -13,9 +13,9 @@ if [[ -f /usr/bin/calamares ]];then
 	$xdg/calamares.desktop
 fi
 
-if [[ -f /usr/bin/setup ]] || [[ -L /usr/bin/setup ]];then
-	install -Dm755 $src/installer-launcher-cli.desktop \
-	$xdg/installer-launcher-cli.desktop
+if [[ -f /usr/bin/cli-installer ]];then
+	install -Dm755 $src/cli-installer.desktop \
+	$xdg/cli-installer.desktop
 fi
 
 if [[ -f "/usr/share/doc/livecd/Beginner_User_Guide.pdf" ]]; then
