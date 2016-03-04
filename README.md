@@ -9,7 +9,7 @@ desktop-settings
 ### minimal
 
 * budgie
-* kde
+* kde https://github.com/manjaro/manjaro-kde-settings
 * lxqt
 * openbox
 * xfce
