@@ -4,12 +4,12 @@ desktop-settings
 ### official
 
 * xfce
-* kde
+* kde https://github.com/manjaro/manjaro-kde-settings
 
 ### minimal
 
 * budgie
-* kde
+* kde https://github.com/manjaro/manjaro-kde-settings
 * lxqt
 * openbox
 * xfce
