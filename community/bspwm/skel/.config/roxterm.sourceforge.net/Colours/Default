@@ -1,5 +1,5 @@
 [roxterm colour scheme]
-foreground=#838394949696
+foreground=#1a1abbbb9b9b
 background=#00002b2b3636
 0=#070736364242
 1=#dcdc32322f2f
@@ -25,5 +25,5 @@ background=#00002b2b3636
 21=#888830308888
 22=#303088888888
 23=#d8d8d8d8d8d8
-cursor=#9393a1a1a1a1
+cursor=#1a1abbbb9b9b
 palette_size=16
