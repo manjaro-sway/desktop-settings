@@ -1,5 +1,5 @@
 [org.mate.desktop.background]
-picture-filename="/usr/share/backgrounds/sonar.png"
+picture-filename="/usr/share/backgrounds/sonar.jpg"
 
 [org.mate.interface]
 accessibility=true
@@ -13,6 +13,42 @@ startup=false
 [org.mate.sound]
 event-sounds=true
 input-feedback-sounds=true
-
+theme-name=freedesktop
 [org.mate.applications-at-visual]
 startup=true
+
+org.mate.Marco.global-keybindings
+run-command-terminal='<Control><Alt>t'
+switch-windows-backward='<Alt>Shift>Tab'
+
+org.mate.Marco.general
+compositing-fast-alt-tab=true
+
+org.mate.applications-terminal
+exec=gnome-terminal
+
+org.mate.interface
+buttons-have-icons=true
+menus-have-icons=true
+
+org.mate.SettingsDaemon.plugins.media-keys
+screenreader='<Alt>Super>s'
+volume-down='<Control>Super>Down'
+volume-up='<Control>Super>Up'
+volume-mute='<Control>Super>M'
+
+org.mate.desktop.keybindings.custom0
+action=/usr/bin/ocrdesktop
+binding='<Alt>Super>O'
+name="ocr the current window"
+
+org.mate.desktop.keybindings.custom1
+action=/usr/bin/mate-system-monitor
+binding='<Super>S'
+name="open the system monitor"
+
+org.mate.desktop.keybindings.custom2
+action="/usr/bin/mate-panel --replace"
+binding='<Super>R'
+name="reset the panel"
+
