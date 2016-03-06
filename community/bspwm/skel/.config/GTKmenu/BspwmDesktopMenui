@@ -93,3 +93,11 @@ submenu = External rules
 	item = Automatic mode
 	cmd = bspc config external_rules_command no
 	icon = /usr/share/icons/Adwaita/scalable/emblems/emblem-default-symbolic.svg
+	
+item = Manage rules
+cmd = roxterm -e bspwm-ruler
+icon = /usr/share/icons/Adwaita/scalable/apps/preferences-desktop-keyboard-shortcuts-symbolic.svg
+
+item = Choose wallpaper
+cmd = wallpaper
+icon = /usr/share/icons/Adwaita/scalable/apps/preferences-desktop-wallpaper-symbolic.svg

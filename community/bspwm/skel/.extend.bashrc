@@ -10,7 +10,7 @@ xhost +local:root > /dev/null 2>&1
 
 complete -cf sudo
 
-export BROWSER=/usr/bin/midori
+export BROWSER=/usr/bin/epiphany
 export EDITOR=/usr/bin/nano
 export HISTSIZE=1000
 export HISTFILESIZE=${HISTSIZE}
