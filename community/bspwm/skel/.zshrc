@@ -74,6 +74,8 @@ bindkey '^[[5~' history-beginning-search-backward   # Page up key
 bindkey '^[[6~' history-beginning-search-forward    # Page down key
 bindkey '^[Oc' forward-word
 bindkey '^[Od' backward-word
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5C' forward-word
 bindkey '^H' backward-kill-word
 
 HISTFILE=~/.zhistory

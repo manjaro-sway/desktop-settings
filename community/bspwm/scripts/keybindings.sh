@@ -59,9 +59,7 @@
 		Super + shift + b             |- Browser
 		Super + r                     |- File search
 		Super + e                     |- Explore files with SpaceFM
-		Super + shift + e             |- Explore files with Ranger    
-		Alt + Ctrl + t                |- Floating Terminal
-		Super + shift + z             |- Floating Terminal
+		Super + shift + e             |- Explore files with Ranger   
 		Super + shift + Return        |- Terminal
 		Super + z                     |- Terminal
 
