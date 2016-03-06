@@ -11,3 +11,6 @@ cursor-theme='deepin'
 gtk-theme='Arc-Dark'
 icon-theme='Moka'
 
+[org.gnome.desktop.wm.preferences]
+button-layout='appmenu:minimize,maximize,close'
+
