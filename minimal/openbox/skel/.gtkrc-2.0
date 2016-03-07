@@ -1,7 +1,7 @@
 # DO NOT EDIT! This file will be overwritten by LXAppearance.
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
-gtk-theme-name="Maia"
+gtk-theme-name="Vertex-Maia"
 gtk-icon-theme-name="maia"
 gtk-font-name="Cantarell 11"
 gtk-cursor-theme-name="Menda-Cursor"
