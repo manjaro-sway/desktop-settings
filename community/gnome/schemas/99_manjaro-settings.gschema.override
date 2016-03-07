@@ -7,7 +7,6 @@ secondary-color=#000000
 show-desktop-icons=false
 
 [org.gnome.desktop.interface]
-cursor-theme='deepin'
-gtk-theme='Arc-Dark'
-icon-theme='Moka'
+gtk-theme='Vertex-Maia'
+icon-theme='maia'
 
