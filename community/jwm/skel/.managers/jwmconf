@@ -1,0 +1,348 @@
+#!/bin/bash
+
+#  updated on 18.01.2016 19:45:49
+#  version 0.2
+
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software
+#  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+#  MA 02110-1301, USA.
+#
+
+#########################################################################################
+# Design based on IceFox script                                                         #
+# Modified, adapted and improved by pekman and excalibur1234                            #
+# Some modifications based on the pacli and mhwd-tui (thx @Chrysostomus) made by Holmes #
+# Contact and suggestions: pekman@openmailbox.org (JWMConf holmes_holmes@live.com)      #
+# Freenode: #manjaropek #manjaro-geek #manjaro                                          #
+# Topic discussion                                                                      #
+#                       http://polr.me/Pacli1                                           #
+#                       http://polr.me/Pacli2                                           #
+#                       http://bit.ly/1NKCL5e                                           #
+#                       http://bit.ly/1NKCOOp                                           #
+#########################################################################################
+
+function help_text() {
+	less 	<<-EOF
+Welcome to JWMConf Configuration Tool's information page.
+JWMconf is an interactive configure JWM for your command line terminal. It provides an easy user interface to edit configuration files of the JWM. You can also edit other files.
+
+HOME SCREEN
+JWMConf Configuration Tool's home screen is split into two parts: 
+The upper part focuses on JWM files. Also has some important options for maintenance of JWM. The lower part provides options to edit other settings files: Conky, Dunst, Gmrun, Bashrc, GTK2, GTK3, Xresources, LXDM and Oblogout. Choose an option by entering its number and pressing [Enter].
+
+ATTENTION
+*The number 19, 20, 21, 22 and 23 can break your system. WARNING! USE WITH CAUTION.
+
+0 - EXIT JWMCONF
+"clear && exit"
+This will exit JWMconf and clear your terminal.
+
+00 - INFORMATION JWMCONF
+Display this information page.
+
+1- REFRESH CONFIGURATION JWM
+"jwm -restart"
+Restart JWM by sending _JWM_RESTART to the root window.
+
+2- REFRESH MENU JWM
+"jwm -reload"
+Reload menu by sending _JWM_RELOAD to the root window.
+
+3- CHECK ERROR JWM
+"jwm -p"
+To check the JWM configuration and return syntax errors (including associated line numbers).
+
+4- EDIT MENU JWM
+This option is to edit the Menu settings (in ~/.jwm/menu). To edit the Menu is used medit editor.
+
+5- EDIT TRAY JWM
+This option is to edit the Tray settings (in ~/.jwm/tray). To edit the Tray is used medit editor.
+
+6- EDIT START JWM
+This option is to edit the Start settings (in ~/.jwm/start). To edit the Start is used medit editor.
+
+7- EDIT THEME JWM
+This option is to edit the Theme settings (in ~/.jwm/theme). To edit the Theme is used medit editor.
+
+8- EDIT KEYS JWM
+This option is to edit the Keys settings (in ~/.jwm/keys). To edit the Keys is used medit editor.
+
+9- EDIT GROUPS JWM
+This option is to edit the Groups settings (in ~/.jwm/groups). To edit the Groups is used medit editor.
+
+10- EDIT PREFERENCES JWM
+This option is to edit the Preferences settings (in ~/.jwm/preferences). To edit the Preferences is used medit editor.
+
+11- EDIT JWMRC
+This option is to edit the jwmrc settings (in ~/.jwmrc). To edit the jwmrc is used medit editor.
+
+12- COMMANDS MANUAL JWM
+General commands manual of the Joe's Window Manager (JWM). JWM is a window manager for X11 Window System.
+
+13- VERSION JWM
+"jwm -v"
+Display version information JWM.
+
+14- HOMEPAGE JWM
+Visit and know the website of JWM.
+
+15- EDIT CONKY
+Conky a lightweight system monitor.
+This option is to edit the Conky settings ((in ~/.conkyrc). To edit the Conky is used medit editor.
+
+16- EDIT DUNST
+Dunst is a lightweight replacement for the notification-daemons provided by most desktop environments.
+This option is to edit the Dunst settings (in ~/.config/dunst/dunstrc). To edit the Dunst is used medit editor.
+
+17- EDIT GMRUN
+Gmrun (Gnome Completion-Run) is an lightweight application launcher similar to GNOME Run, Application Finder, KRunner, etc. 
+This option is to edit the Gmrun settings (in ~/.gmrunrc). To edit the Gmrun is used medit editor.
+
+18- EDIT BASHRC
+Bash (Bourne-again Shell) is a command-line shell/programming language by the GNU Project.
+
+19- EDIT GTK2
+GTK+, or the GIMP Toolkit, is a multi-platform toolkit for creating graphical user interfaces. Offering a complete set of widgets, GTK+ is suitable for projects ranging from small one-off tools to complete application suites. Version 2.
+
+20- EDIT GTK3
+GTK+, or the GIMP Toolkit, is a multi-platform toolkit for creating graphical user interfaces. Offering a complete set of widgets, GTK+ is suitable for projects ranging from small one-off tools to complete application suites. Version 3.
+
+21- EDIT XRESOURCES
+Xresources is a user-level configuration dotfile, typically located at ~/.Xresources.
+
+22- EDIT LXDM
+LXDM is a lightweight display manager for the LXDE desktop environment. The UI is implemented with GTK+ 2.
+
+23- EDIT OBLOGOUT
+Oblogout is an optional, configurable logout script that presents a graphical interface (i.e. buttons) to cancel, logout, restart, shutdown, suspend.
+
+To exit this information page, press "q".
+	EOF
+}
+
+# set colors
+RED='\e[41m'
+BLUE='\e[44m'
+ORANGE='\e[46m'
+NC='\e[0m'
+    while true; do
+    clear
+    echo ""
+    echo -e "                       $NC JWMConf Configuration Tool $NC "
+    echo ""
+    echo -e "                      $NC ::WARNING! USE WITH CAUTION:: $NC"
+    echo -e " ┌─────────────────────────────────────────────────────────────────────────┐"
+    echo -e " │  $NC  1  $NC  Refresh Configuration JWM          $NC  2  $NC  Refresh Menu JWM      │"
+    echo -e " │  $NC  3  $NC  Check Error JWM                    $NC  4  $NC  Edit Menu JWM         │"
+    echo -e " │  $NC  5  $NC  Edit Tray JWM                      $NC  6  $NC  Edit Start JWM        │"
+    echo -e " │  $NC  7  $NC  Edit Theme JWM                     $NC  8  $NC  Edit Keys JWM         │"
+    echo -e " │  $NC  9  $NC  Edit Groups JWM                    $NC 10  $NC  Edit Preferences JWM  │"
+    echo -e " │  $NC 11  $NC  Edit jwmrc                         $NC 12  $NC  Commands Manual JWM   │"
+    echo -e " │  $NC 13  $NC  Version JWM                        $NC 14  $NC  Homepage JWM          │"
+    echo " └─────────────────────────────────────────────────────────────────────────┘" 
+    echo ""
+    echo " ┌─────────────────────────────────────────────────────────────────────────┐"
+    echo -e " │  $NC 15  $NC  Edit Conky                         $NC 16  $NC  Edit Dunst            │"
+    echo -e " │  $NC 17  $NC  Edit Gmrun                         $NC 18  $NC  Edit Bashrc           │"
+    echo -e " │  $NC 19  $NC *Edit GTK2              	      $NC 20  $NC *Edit GTK3             │"
+    echo -e " │  $NC 21  $NC *Edit Xresources 	              $NC 22  $NC *Edit LXDM             │"
+    echo -e " │  $NC 23  $NC *Edit Oblogout			                           │"
+    echo " └─────────────────────────────────────────────────────────────────────────┘"
+    echo ""
+    echo -e "        $NC Select a number and press [Enter] - 0 Exit - 00 Information$NC"
+    echo ""
+    read choix
+    case $choix in
+        1)
+            echo
+            jwm -restart
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        2)
+            echo
+            jwm -reload
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        3)
+            echo
+            jwm -p
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        4)
+            echo
+            medit ~/.jwm/menu
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        5)
+            echo
+            medit ~/.jwm/tray
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        6)
+            echo ""
+            medit ~/.jwm/start
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        7)
+            echo ""
+            medit ~/.jwm/theme
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read 
+            ;;
+        8)
+            echo ""
+            medit ~/.jwm/keys
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        9)
+            echo ""
+            medit ~/.jwm/groups
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        10)
+            echo ""
+            medit ~/.jwm/preferences
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        11)
+            echo ""
+            medit ~/.jwmrc
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        12)
+            echo ""
+            man jwm
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        13)
+            echo
+            jwm -v
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        14)
+            echo
+            elinks http://joewing.net/projects/jwm/index.shtml
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        15)
+            echo ""
+            medit ~/.conkyrc
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        16)
+            echo ""
+            medit ~/.config/dunst/dunstrc
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        17)
+            echo ""
+            medit ~/.gmrunrc
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+        18)
+            echo ""
+            medit $HOME/.bashrc
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+
+	19)
+            echo ""
+            medit $HOME/.gtkrc-2.0
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+	20)
+            echo ""
+            medit $HOME/.config/gtk-3.0/settings.ini
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;	
+	21)
+            echo ""
+            medit $HOME/.Xresources
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+	22)
+            echo ""
+            sudo medit /etc/lxdm/lxdm.conf
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+	23)
+            echo ""
+            sudo medit /etc/oblogout.conf
+            echo ""
+            echo -e "$NC Operation complete. To return to JWMconf press [Enter] $NC"
+            read
+            ;;
+
+        0)
+            clear && exit
+            read
+            ;;
+        00)
+            echo
+            help_text
+            echo
+            ;;
+        *)
+            echo -e "$NC ::WRONG OPTION:: $NC"
+            echo "Wait and try again later..."
+            echo ""
+            sleep 3
+            clear
+            ;;
+    esac
+    done
+fi
