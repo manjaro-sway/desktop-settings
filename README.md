@@ -19,6 +19,7 @@ desktop-settings
 * budgie
 * cinnamon
 * deepin
+* fluxbox
 * gnome
 * i3
 * lxde
