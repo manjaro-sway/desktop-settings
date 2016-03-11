@@ -1,12 +1,17 @@
 [org.gnome.desktop.background]
-color-shading-type=solid
-picture-options=zoom
 picture-uri='file:///usr/share/backgrounds/manj_gnome.jpg'
-primary-color=#000000
-secondary-color=#000000
 show-desktop-icons=false
 
 [org.gnome.desktop.interface]
 gtk-theme='Vertex-Maia'
 icon-theme='maia'
+
+[org.gnome.desktop.wm.preferences]
+titlebar-uses-system-font=false
+button-layout='appmenu:minimize,maximize,close'
+
+[org.gnome.shell]
+always-show-log-out=true
+favorite-apps=['pamac-manager.desktop', 'firefox.desktop', 'empathy.desktop', 'org.gnome.Nautilus.desktop', 'gnome-terminal.desktop', 'org.gnome.gedit.desktop', 'hexchat.desktop', 'org.gnome.Screenshot.desktop', 'ca.desrt.dconf-editor.desktop']
+enabled-extensions=['dash-to-dock@micxgx.gmail.com', 'gnomenu@panacier.gmail.com', 'mediaplayer@patapon.info', 'openweather-extension@jenslody.de', 'drive-menu@gnome-shell-extensions.gcampax.github.com']
 

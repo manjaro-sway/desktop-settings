@@ -7,6 +7,5 @@ picture-uri='file:///usr/share/backgrounds/manj_wallpaper.jpg'
 show-desktop-icons=false
 
 [org.gnome.desktop.interface]
-cursor-theme='deepin'
 gtk-theme='Arc-Dark'
 icon-theme='Moka'
