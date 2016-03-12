@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<JWM>
+
+    <!-- Visual Style Window. -->
+    <WindowStyle decorations="flat">
+        <Font>Cantarell-10:antialias=true:encoding=utf8</Font>
+        <Width>2</Width>
+        <Height>18</Height>
+        <Corner>2</Corner>
+        <Foreground>#F9F9F9</Foreground>
+        <Background>#444851</Background>
+        <Outline>#444851</Outline>
+        <Opacity>0.8</Opacity>
+        <Active>
+            <Foreground>#F9F9F9</Foreground>
+            <Background>#444851</Background>
+            <Outline>#444851</Outline>
+        </Active>
+    </WindowStyle>
+
+    <!-- Visual Style Window Buttons. -->
+        <ButtonClose>/usr/share/themes/buttons/jwm/close.png</ButtonClose>
+        <ButtonMax>/usr/share/themes/buttons/jwm/max.png</ButtonMax>
+        <ButtonMaxActive>/usr/share/themes/buttons/jwm/maxact.png</ButtonMaxActive>
+        <ButtonMin>/usr/share/themes/buttons/jwm/min.png</ButtonMin>
+
+    <!-- Visual Style Menu. -->
+    <MenuStyle>
+        <Font>Cantarell-10:antialias=true:encoding=utf8</Font>
+        <Foreground>#F9F9F9</Foreground>
+        <Background>#444851</Background>
+	<Outline>#444851</Outline>
+        <Active>
+            <Foreground>#F9F9F9</Foreground>
+            <Background>#db6823</Background>
+        </Active>
+    </MenuStyle>
+
+    <!-- Visual Style Tray. -->
+    <TrayStyle decorations="flat">
+        <Font>Cantarell-10:antialias=true:encoding=utf8</Font>
+        <Background>#444851</Background>
+        <Foreground>#F9F9F9</Foreground>
+        <Outline>#444851</Outline>
+        <Active>
+            <Foreground>#F9F9F9</Foreground>
+            <Background>#db6823</Background>
+        </Active>
+    </TrayStyle>
+
+    <!-- Visual Style Pager. -->
+    <PagerStyle>
+        <Outline>#444851</Outline>
+        <Font>Cantarell-8:antialias=true:encoding=utf8</Font>
+        <Text>#F9F9F9</Text>
+        <Foreground>#444851</Foreground>
+        <Background>#2b2b2b</Background>
+        <Active>
+            <Foreground>#db6823</Foreground>
+            <Background>#565656</Background>
+        </Active>
+    </PagerStyle>
+
+    <!-- Visual Style Pop. -->
+    <PopupStyle>
+        <Font>Cantarell-10:antialias=true:encoding=utf8</Font>
+        <Outline>#414244</Outline>
+        <Foreground>#F9F9F9</Foreground>
+        <Background>#414244</Background>
+    </PopupStyle>
+
+</JWM>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<JWM>
+
+    <!-- Tray of the environment. -->
+    <Tray x="0" y="-1" height="23" autohide="off" halign="fixed" valign="bottom">
+	<Spacer width="5"/>    
+        <TrayButton icon="/usr/share/icons/Faenza/places/96/logotray.png" label="Apps">root:3</TrayButton>
+        <Spacer width="5"/>
+	<TrayButton icon="/usr/share/icons/Ultra Flat Orange/places/scalable/folder.svg" label="Places">root:7</TrayButton>        
+	<Spacer width="5"/>	
+	<TrayButton icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/cs-language.svg" popup="Web Browser">exec:palemoon</TrayButton>
+	<Spacer width="5"/>
+        <Pager labeled="true"/>
+        <TaskList maxwidth="130" border="false"/>
+	<Dock/>        
+	<Spacer width="5"/>
+        <Clock format="%H:%M:%S"></Clock>
+	<Spacer width="5"/>	
+	<TrayButton icon="/usr/share/icons/Ultra Flat Orange/actions/scalable/exit.svg" popup="Exit">exec:oblogout</TrayButton>
+	<Spacer width="5"/>
+     </Tray>
+
+</JWM>
