@@ -98,11 +98,10 @@ workspace_auto_back_and_forth yes
 bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
-# split in horizontal orientation
+# split orientation
 bindsym $mod+h split h;exec notify-send 'tile horizontally'
-
-# split in vertical orientation
 bindsym $mod+v split v;exec notify-send 'tile vertically'
+bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -309,9 +308,6 @@ client.urgent    #CB4B16 #DC322F #FDF6E3 #268BD2
 #############################
 ### settings for i3-gaps: ###
 #############################
-
-# Disable window titlebars entirely
-for_window [class="^.*"] border pixel 2
 
 # Set inner/outer gaps
 gaps inner 10
