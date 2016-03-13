@@ -1,8 +1,9 @@
 [org.gnome.desktop.background]
-picture-uri='file:///usr/share/backgrounds/manj_gnome.jpg'
+picture-uri='file:///usr/share/backgrounds/black_leather_manjaro_linux_by_tefrem34.jpg'
 show-desktop-icons=false
 
 [org.gnome.desktop.interface]
+cursor-theme=Simple-and-Soft
 gtk-theme='Vertex-Maia'
 icon-theme='maia'
 
