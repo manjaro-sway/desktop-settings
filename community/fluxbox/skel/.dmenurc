@@ -1,0 +1,26 @@
+#!/bin/bash
+# ~/.dmenurc
+
+## define the font for dmenu to be used
+#DMENU_FN="-zevv-peep-medium-*-normal--20-175-*-*-c-*-iso8859-15"
+#DMENU_FN="-*-terminus-medium-r-normal-*-20-*-*-*-*-*-iso10646-*"
+DMENU_FN="Cantarell-9"
+
+## background colour for unselected menu-items
+DMENU_NB="#000000"
+
+## textcolour for unselected menu-items
+DMENU_NF="#DDDDDD"
+
+## background colour for selected menu-items
+DMENU_SB="#2ECC71"
+
+## textcolour for selected menu-items
+DMENU_SF="#333333"
+
+## command for the terminal application to be used:
+TERMINAL_CMD="lxterminal -e"
+
+## export our variables
+DMENU_OPTIONS="-fn $DMENU_FN -nb $DMENU_NB -nf $DMENU_NF -sf $DMENU_SF -sb $DMENU_SB"
+export DMENU_FN DMENU_NB DMENU_NF DMENU_SF DMENU_SB DMENU_OPTIONS TERMINAL
