@@ -1,0 +1,38 @@
+#!/bin/sh
+# /usr/bin/fb-screenshot
+
+if ! [ -d "$HOME/Screenshots" ]; then
+	mkdir $HOME/Screenshots
+fi
+
+case "$1" in
+    --desk|-d)
+        scrot -e 'mv $f ~/Screenshots' &&
+	sleep 1 &&
+	notify-send 'screenshot has been saved to ~/Screenshots'
+        ;;
+    --window|-w)
+	scrot -ue 'mv $f ~/Screenshots' &&
+	sleep 1 &&
+	notify-send 'screenshot has been saved to ~/Screenshots'
+	;;
+    --select|-s)
+	notify-send 'selection will be saved to ~/Screenshots' &
+	scrot -se 'mv $f ~/Screenshots' &&
+	sleep 1 && notify-send 'screenshot has been saved in ~/Screenshots'
+	;;
+    *)
+        echo "
+== ! fb-screenshot: missing or wrong argument ! ==
+
+available options:
+
+--desk | -d (full screen)
+--window | -w (active window)
+--select | -s (selection)
+"
+
+        exit 2
+esac
+
+exit 0
