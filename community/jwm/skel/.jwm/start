@@ -13,6 +13,3 @@
     <StartupCommand>sleep 8s && xrdb merge .Xresources &</StartupCommand>
     
 </JWM>
-
-
-
