@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ `pidof compton` ]; then
+        echo "Stopping compton"
+        killall compton
+else
+        echo "Starting compton"
+        compton &
+fi
+exit
