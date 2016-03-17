@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<JWM>
+
+    <!-- Startup for program. -->
+    <StartupCommand>nitrogen --restore &</StartupCommand>
+    <StartupCommand>xcompmgr -c &</StartupCommand>
+    <StartupCommand>sleep 1s && volumeicon &</StartupCommand>
+    <StartupCommand>sleep 2s && clipit &</StartupCommand>
+    <StartupCommand>sleep 3s && conky &</StartupCommand>
+    <StartupCommand>sleep 5s && notify-send "Hello, welcome to Manjaro JWM Community Edition!" &</StartupCommand>
+    <StartupCommand>sleep 6s && xautolock -time 20 -locker 'i3lock -c 414244' &</StartupCommand>
+    <StartupCommand>sleep 7s && /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &</StartupCommand>
+    <StartupCommand>sleep 8s && xrdb merge .Xresources &</StartupCommand>
+    
+</JWM>

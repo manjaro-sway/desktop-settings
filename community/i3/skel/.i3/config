@@ -8,7 +8,7 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 2
+new_window pixel 1
 new_float normal
 
 # Hide borders
@@ -16,12 +16,12 @@ hide_edge_borders none
 
 # change borders
 bindsym $mod+u border none
-bindsym $mod+y border pixel 2
+bindsym $mod+y border pixel 1
 bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Cantarell 9
+font pango:Cantarell 10
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -61,9 +61,9 @@ bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym Print exec "scrot -e 'mv $f ~/Screenshots'; sleep 1; exec notify-send 'screenshot has been saved to ~/Screenshots'"
-bindsym $mod+Print --release exec "scrot -ue 'mv $f ~/Screenshots'; sleep 1; exec notify-send 'screenshot has been saved to ~/Screenshots'"
-bindsym $mod+Shift+Print --release exec "notify-send 'selection will be saved to ~/Screenshots'; scrot -se 'mv $f ~/Screenshots'"
+bindsym Print exec --no-startup-id i3-scrot
+bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
+bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Shift+h exec qpdfview /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
@@ -98,11 +98,10 @@ workspace_auto_back_and_forth yes
 bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
-# split in horizontal orientation
+# split orientation
 bindsym $mod+h split h;exec notify-send 'tile horizontally'
-
-# split in vertical orientation
 bindsym $mod+v split v;exec notify-send 'tile vertically'
+bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -178,11 +177,11 @@ bindsym $mod+Shift+8 move container to workspace number 8; workspace 8
 # assign [class="Skype"] 5
 
 # Open specific applications in floating mode
-for_window [title="alsamixer"] floating enable border pixel 2
+for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="Calamares"] floating enable border normal
 for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
-for_window [class="Galculator"] floating enable border pixel 2
+for_window [class="Galculator"] floating enable border pixel 1
 for_window [class="GParted"] floating enable border normal
 for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Lightdm-gtk-greeter-settings"] floating enable
@@ -275,19 +274,25 @@ exec --no-startup-id xautolock -time 10 -locker blurlock
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
 	status_command i3status
-#	wheel_up_cmd nop
-#	wheel_down_cmd nop
-	font pango:Cantarell,Icons 9
+
+## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
+#	tray_output primary
+#	tray_output eDP1
+
+	wheel_up_cmd nop
+	wheel_down_cmd nop
+	font pango:Cantarell,Icons 10
 	colors {
-		separator #2ECC71
-		background #000000
-		statusline #DDDDDD
+#	background $transparent
+                background #002B36
+                statusline #EEE8D5
+		separator  #657B83
 
 #                                  border  backgr. text
-		focused_workspace  #FFFFFF #2ECC71 #000000
-		active_workspace   #000000 #A4A28D #FFFFFF
-		inactive_workspace #A4A28D #000000 #DDDDDD
-		urgent_workspace   #2ECC71 #900000 #FFFFFF
+		focused_workspace  #EEE8D5 #586E75 #FDF6E3
+#		active_workspace   #002B36 #A4A28D #FDF6E3
+		inactive_workspace #93A1A1 #002B36 #EEE8D5
+		urgent_workspace   #2AA198 #DC322F #FDF6E3
 	}
 }
 
@@ -296,20 +301,17 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class          border  backgr. text    indicator
-client.focused   #E8E3D1 #E8E3D1 #000000 #2ECC71
-client.unfocused #16404B #16404B #2ECC71 #222222
-client.urgent    #274D01 #900000 #FFFFFF #900000
+client.focused   #FDF6E3 #93A1A1 #002B36 #268BD2
+client.unfocused #073642 #586E75 #EEE8D5 #268BD2
+client.urgent    #CB4B16 #DC322F #FDF6E3 #268BD2
 
 #############################
 ### settings for i3-gaps: ###
 #############################
 
-# Disable window titlebars entirely
-for_window [class="^.*"] border pixel 2
-
 # Set inner/outer gaps
 gaps inner 10
-gaps outer 0
+gaps outer -4
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>

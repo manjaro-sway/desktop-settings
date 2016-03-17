@@ -3,16 +3,15 @@ desktop-settings
 
 ### official
 
-* xfce
-* kde https://github.com/manjaro/manjaro-kde-settings
+* [xfce] (https://github.com/manjaro/manjaro-xfce-settings)
+* [kde] (https://github.com/manjaro/manjaro-kde-settings)
 
 ### minimal
 
-* budgie
-* kde https://github.com/manjaro/manjaro-kde-settings
+* [kde] (https://github.com/manjaro/manjaro-kde-settings)
+* [xfce] (https://github.com/manjaro/manjaro-xfce-settings)
 * lxqt
 * openbox
-* xfce
 
 ### community
 
@@ -20,6 +19,7 @@ desktop-settings
 * budgie
 * cinnamon
 * deepin
+* fluxbox
 * gnome
 * i3
 * lxde
