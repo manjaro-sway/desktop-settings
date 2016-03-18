@@ -2,14 +2,14 @@
 <JWM>
 
     <!-- Startup for program. -->
-    <StartupCommand>nitrogen --restore &</StartupCommand>
-    <StartupCommand>xcompmgr -c &</StartupCommand>
-    <StartupCommand>sleep 1s && volumeicon &</StartupCommand>
-    <StartupCommand>sleep 2s && clipit &</StartupCommand>
-    <StartupCommand>sleep 3s && conky &</StartupCommand>
-    <StartupCommand>sleep 5s && notify-send "Hello, welcome to Manjaro JWM Community Edition!" &</StartupCommand>
-    <StartupCommand>sleep 6s && xautolock -time 20 -locker 'i3lock -c 414244' &</StartupCommand>
-    <StartupCommand>sleep 7s && /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &</StartupCommand>
-    <StartupCommand>sleep 8s && xrdb merge .Xresources &</StartupCommand>
+    <StartupCommand>nitrogen --restore &amp;</StartupCommand>
+    <StartupCommand>xcompmgr -c &amp;</StartupCommand>
+    <StartupCommand>sleep 1s &amp;&amp; volumeicon &amp;</StartupCommand>
+    <StartupCommand>sleep 2s &amp;&amp; clipit &amp;</StartupCommand>
+    <StartupCommand>sleep 3s &amp;&amp; conky &amp;</StartupCommand>
+    <StartupCommand>sleep 5s &amp;&amp; notify-send "Hello, welcome to Manjaro JWM Community Edition!" &amp;</StartupCommand>
+    <StartupCommand>sleep 6s &amp;&amp; xautolock -time 20 -locker 'i3lock -c 414244' &amp;</StartupCommand>
+    <StartupCommand>sleep 7s &amp;&amp; /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &amp;</StartupCommand>
+    <StartupCommand>sleep 8s &amp;&amp; xrdb merge .Xresources &amp;</StartupCommand>
     
 </JWM>

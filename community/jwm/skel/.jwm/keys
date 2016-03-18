@@ -31,7 +31,7 @@
     <Key mask="4" key="t">exec:sakura</Key>
     <Key mask="4" key="d">showdesktop</Key>
     <Key mask="4" key="m">smplayer</Key>
-    <Key key="Print">exec:scrot -e 'mv $f ~/Screenshots' && sleep 1 && notify-send 'Screenshot has been saved in ~/Screenshots'</Key>
+    <Key key="Print">exec:scrot -e 'mv $f ~/Screenshots' &amp;&amp; sleep 1 &amp;&amp; notify-send 'Screenshot has been saved in ~/Screenshots'</Key>
 
     <!-- Key system. -->
     <Key mask="4" key="F1">root:3</Key>

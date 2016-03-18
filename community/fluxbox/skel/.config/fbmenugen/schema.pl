@@ -27,6 +27,8 @@
 
 require "$ENV{HOME}/.config/fbmenugen/config.pl";
 
+my $editor = $CONFIG->{editor};
+
 our $SCHEMA = [
 {item =>	['lxterminal',			'Terminal',		'terminal']},
 {item =>	['pcmanfm',			'File Manager',		'file-manager']},
@@ -40,9 +42,9 @@ our $SCHEMA = [
 {begin_cat =>					['Tools',		]},
   {cat =>	['utility',			'Accessories',		'applications-utilities']},
   {begin_cat =>					['Screenshot',		]},
-    {item => 	['fb-screenshot -d',		'full screen',		]},
-    {item => 	['fb-screenshot -w',		'active window',	]},
-    {item => 	['fb-screenshot -s',		'select area',		]},
+    {item => 	['i3-scrot -d',		'full screen',		]},
+    {item => 	['i3-scrot -w',		'active window',	]},
+    {item => 	['i3-scrot -s',		'select area',		]},
   {end_cat => undef},
   {cat =>	['system',			'System',		'applications-system']},
   {cat =>	['settings',			'Settings',		'applications-accessories']},
@@ -65,13 +67,20 @@ our $SCHEMA = [
   {item =>	['nitrogen',			'Wallpaper',		]},
 {end_cat => undef},
 {begin_cat =>					['Fluxbox Settings',	]},
+  {item => ["$editor ~/.fluxbox/startup", 'Autostart', 'text-x-source']},
   {raw => q([config] (Behaviour))},
-  {raw => q([workspaces] (Workspace List))},
-  {regenerate =>				['Regenerate menu',     'gtk-refresh']},
- 
+  {raw => q([workspaces] (Workspace List))}, 
+  {begin_cat =>					['Menu Settings',	]},
+    {item => ["$editor ~/.config/fbmenugen/schema.pl", 'Menu Schema', 'text-x-source']},
+    {item => ["$editor ~/.config/fbmenugen/config.pl", 'Menu Config', 'text-x-source']},
+    {sep => 'undef'},
+    {item =>	['fbmenugen',			'Regenerate menu',	'gtk-refresh']},
+    {item =>	['fbmenugen -i',		'Regenerate menu with icons',	'gtk-refresh']},	
+  {end_cat => undef},
 {sep => 'undef'},
 
   {raw => q([commanddialog] (Command line))},
+  {item => ['compton_toggle',	'Toggle Compositor',	'gtk-refresh']},
   {raw => q([reconfig] (Reload config))},
   {raw => q([restart] (Restart))},
 {end_cat => undef},
