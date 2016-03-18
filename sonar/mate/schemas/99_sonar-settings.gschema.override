@@ -1,10 +1,7 @@
 [org.mate.desktop.background]
 picture-filename="/usr/share/backgrounds/sonar.jpg"
 
-[org.mate.interface]
-accessibility=true
-
-[org.mate.accessibility-keyboard]
+[org.mate.desktop.accessibility-keyboard]
 enable=false
 
 [org.mate.desktop.applications-at-mobility]
@@ -29,6 +26,7 @@ compositing-fast-alt-tab=true
 exec=gnome-terminal
 
 [org.mate.interface]
+accessibility=true
 buttons-have-icons=true
 menus-have-icons=true
 
