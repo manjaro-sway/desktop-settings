@@ -1,10 +1,7 @@
 [org.mate.desktop.background]
 picture-filename="/usr/share/backgrounds/sonar.jpg"
 
-[org.mate.interface]
-accessibility=true
-
-[org.mate.accessibility-keyboard]
+[org.mate.desktop.accessibility-keyboard]
 enable=false
 
 [org.mate.desktop.applications-at-mobility]
@@ -20,7 +17,7 @@ startup=true
 
 [org.mate.Marco.global-keybindings]
 run-command-terminal='<Control><Alt>t'
-switch-windows-backward='<Alt>Shift>Tab'
+switch-windows-backward='<Alt><Shift>Tab'
 
 [org.mate.Marco.general]
 compositing-fast-alt-tab=true
@@ -29,15 +26,16 @@ compositing-fast-alt-tab=true
 exec=gnome-terminal
 
 [org.mate.interface]
+accessibility=true
 buttons-have-icons=true
 menus-have-icons=true
 
 [org.mate.SettingsDaemon.plugins.media-keys]
-screenreader='<Alt>Super>s'
-volume-down='<Control>Super>Down'
-volume-up='<Control>Super>Up'
-volume-mute='<Control>Super>M'
-
+screenreader='<Alt><Super>s'
+volume-down='<Primary><Super>Down'
+volume-up='<Primary><Super>Up'
+volume-mute='<Primary><Super>M'
+logout='<Super>L'
 [org.mate.desktop.keybindings.custom0]
 action=/usr/bin/ocrdesktop
 binding='<Alt>Super>O'
