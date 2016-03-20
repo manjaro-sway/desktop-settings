@@ -13,8 +13,8 @@
     <RootMenu onroot="3">
         <Program icon="/usr/share/icons/Ultra Flat Orange/actions/scalable/system-run.svg" label="Run Applications">gmrun</Program>
         <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/terminal.svg" label="Terminal">sakura</Program>
-        <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/gnome-mines.svg" label="Pacli">xterm ~/.managers/pacli</Program>
-        <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/unity-control-center-info.svg" label="JWMConf">xterm ~/.managers/jwmconf</Program>
+        <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/gnome-mines.svg" label="Pacli">xterm /usr/bin/pacli</Program>
+        <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/unity-control-center-info.svg" label="JWMConf">xterm /usr/bin/jwmconf</Program>
         <Program icon="/usr/share/icons/Ultra Flat Orange/places/scalable/folder.svg" label="File Manager">pcmanfm</Program>
         <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/cs-language.svg" label="Web Browser">palemoon</Program>
         <Menu icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/imagemagick.svg" label="Screenshot">
@@ -25,8 +25,8 @@
         </Menu>
         <Separator/>
 	<Menu icon="/usr/share/icons/Ultra Flat Orange/categories/scalable/applications-utilities.svg" label="Accesories">
-            <Program icon="/usr/share/icons/hicolor/48x48/apps/tvm-burn-cd.png" label="ImageWriter ISO/USB">imagewriter</Program>
-            <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/textwrangler.svg" label="Leafpad Editor">leafpad</Program>
+            <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/ogmrip.svg" label="ImageWriter ISO/USB">imagewriter</Program>
+            <Program icon="/usr/share/icons/Adwaita/48x48/apps/accessories-text-editor.png" label="Leafpad Editor">leafpad</Program>
             <Program icon="/usr/share/icons/hicolor/48x48/apps/medit.png" label="Medit Editor">medit</Program>
            <Program icon="/usr/share/icons/hicolor/48x48/apps/xarchiver.png" label="Xarchiver Compressed">xarchiver</Program>
         </Menu>
@@ -37,8 +37,8 @@
             <Program icon="/usr/share/pixmaps/lxmusic.png" label="LXMusic Music">lxmusic</Program>        
             <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/smplayer.svg" label="SMPlayer Video">smplayer</Program>
         </Menu>
-        <Menu icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/network-wired.svg" label="Network">
-	    <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/networkmanager.png" label="NetworkManager">nm-applet</Program>
+        <Menu icon="/usr/share/icons/Adwaita/48x48/devices/network-wired.png" label="Network">
+	    <Program icon="/usr/share/icons/Ultra Flat Orange/devices/scalable/network-wired-disconected.svg" label="NetworkManager">nm-applet</Program>
             <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/hexchat.svg" label="HexChat IRC">hexchat</Program>        
             <Program icon="/usr/share/icons/hicolor/48x48/apps/palemoon.png" label="Pale Moon Browser">palemoon</Program>
         </Menu>
@@ -49,39 +49,39 @@
             <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/goa-panel.svg" label="Online PDF Tools">palemoon http://smallpdf.com/</Program>
             <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/gpicview.svg" label="Simple Scan">simple-scan</Program>
         </Menu>
-        <Menu icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/settings.svg" label="Settings">
+        <Menu icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/winetricks.svg" label="Settings">
             <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/gnome-display-panel.svg" label="ARandR Screen Editor">arandr</Program>
             <Program icon="/usr/share/icons/hicolor/scalable/devices/blueman-device.svg" label="BlueMan Adapters">blueman-adapters</Program>
             <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/blueman.svg" label="BlueMan Manager">blueman-manager</Program> 
             <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/input-keyboard.svg" label="Configure Mouse/keyboard">lxinput</Program>
             <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/gnome-color-manager.svg" label="Customize Look/Feel">lxappearance</Program>
-            <Program icon="/usr/share/icons/Faenza/places/96/logotray.png" label="Manjaro Settings Manager">manjaro-settings-manager -style=gtk</Program>
+            <Program icon="/usr/share/lxdm/themes/GrayOrange/nobody.png" label="Manjaro Settings Manager">manjaro-settings-manager -style=gtk</Program>
             <Program icon="/usr/share/icons/hicolor/48x48/apps/nitrogen.png" label="Nitrogen Wallpaper">nitrogen</Program>
             <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/preferences-desktop-icons.svg" label="Personalize LXDM">lxdm-config-pkexec</Program>
 	    <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/preferences-desktop-printer.svg" label="Printer Settings">system-config-printer</Program>
         </Menu>
-        <Menu icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/system.svg" label="System">
-		<Menu icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/script.svg" label="Script Install">
-            	    <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/script.svg" label="Firewall">gksu xterm ~/.scripts/firewall.sh</Program>        
-                    <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/script.svg" label="Multimedia">gksu xterm ~/.scripts/multimedia.sh</Program>
-                    <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/script.svg" label="OpenJDK">gksu xterm ~/.scripts/jdk.sh</Program>
-                    <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/script.svg" label="Printing">gksu xterm ~/.scripts/printing.sh</Program>
+        <Menu icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/utilities-run.svg" label="System">
+		<Menu icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/textwrangler.svg" label="Script Install">
+            	    <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/textwrangler.svg" label="Firewall">gksu xterm ~/.scripts/firewall.sh</Program>
+		    <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/textwrangler.svg" label="Java">gksu xterm ~/.scripts/java.sh</Program>        
+                    <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/textwrangler.svg" label="Multimedia">gksu xterm ~/.scripts/multimedia.sh</Program>
+                    <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/textwrangler.svg" label="Printing">gksu xterm ~/.scripts/printing.sh</Program>
         	</Menu>
          <Separator/>
             <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/gufw.svg" label="Gufw Firewall">gksu gufw</Program>
        	    <Program icon="/usr/share/hardinfo/pixmaps/logo.png" label="HardInfo">hardinfo</Program>
 	    <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/htop.svg" label="HTop Processes">sakura -e htop</Program>
-            <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/unity-control-center-info.svg" label="JWMConf Configuration">xterm ~/.managers/jwmconf</Program>            
-            <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/gnome-mines.svg" label="Pacli Package">xterm ~/.managers/pacli</Program>
+            <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/unity-control-center-info.svg" label="JWMConf Configuration">xterm /usr/bin/jwmconf</Program>            
+            <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/gnome-mines.svg" label="Pacli Package">xterm /usr/bin/pacli</Program>
             <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/preferences-desktop-user-password.svg" label="Privilege Granting">gksu-properties</Program>
             <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/krusader_root.svg" label="Root File Manager">gksu pcmanfm /</Program>         
             <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/utilities-terminal_su.svg" label="Root Terminal">gksu sakura</Program>            
             <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/rocket.svg" label="Temperature Sensors">xsensors</Program>
         </Menu>
         <Separator/>
-        <Menu icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/penguin.svg" label="Documentation">
-           <Program icon="/usr/share/icons/Faenza/places/96/logotray.png" label="Manjaro Beginner User Guide">epdfview /usr/share/doc/livecd/Beginner_User_Guide.pdf</Program>        
-           <Program icon="/usr/share/icons/Faenza/places/96/logotray.png" label="Manjaro JWM User Orientation Guide">epdfview /usr/share/doc/livecd/User_Orientation_Guide.pdf</Program>
+        <Menu icon="/usr/share/icons/Adwaita/48x48/apps/accessories-dictionary.png" label="Documentation">
+           <Program icon="/usr/share/lxdm/themes/GrayOrange/nobody.png" label="Manjaro Beginner User Guide">epdfview /usr/share/doc/livecd/Beginner_User_Guide.pdf</Program>        
+           <Program icon="/usr/share/lxdm/themes/GrayOrange/nobody.png" label="Manjaro JWM User Orientation Guide">epdfview /usr/share/doc/livecd/User_Orientation_Guide.pdf</Program>
         </Menu>
 	<Separator/>
           <Program icon="/usr/share/icons/Ultra Flat Orange/actions/scalable/exit.svg" label="Exit">oblogout</Program>

@@ -5,11 +5,10 @@
     <StartupCommand>nitrogen --restore &amp;</StartupCommand>
     <StartupCommand>xcompmgr -c &amp;</StartupCommand>
     <StartupCommand>sleep 1s &amp;&amp; volumeicon &amp;</StartupCommand>
-    <StartupCommand>sleep 2s &amp;&amp; clipit &amp;</StartupCommand>
-    <StartupCommand>sleep 3s &amp;&amp; conky &amp;</StartupCommand>
-    <StartupCommand>sleep 5s &amp;&amp; notify-send "Hello, welcome to Manjaro JWM Community Edition!" &amp;</StartupCommand>
-    <StartupCommand>sleep 6s &amp;&amp; xautolock -time 20 -locker 'i3lock -c 414244' &amp;</StartupCommand>
-    <StartupCommand>sleep 7s &amp;&amp; /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &amp;</StartupCommand>
-    <StartupCommand>sleep 8s &amp;&amp; xrdb merge .Xresources &amp;</StartupCommand>
+    <StartupCommand>sleep 2s &amp;&amp; conky &amp;</StartupCommand>
+    <StartupCommand>sleep 4s &amp;&amp; notify-send "Hello, welcome to Manjaro JWM Community Edition!" &amp;</StartupCommand>
+    <StartupCommand>sleep 5s &amp;&amp; xautolock -time 20 -locker 'i3lock -c 414244' &amp;</StartupCommand>
+    <StartupCommand>sleep 6s &amp;&amp; /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &amp;</StartupCommand>
+    <StartupCommand>sleep 7s &amp;&amp; xrdb merge .Xresources &amp;</StartupCommand>
     
 </JWM>
