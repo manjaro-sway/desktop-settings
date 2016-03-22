@@ -10,9 +10,11 @@ application/x-extension-shtml=userapp-Pale Moon-06IX9X.desktop
 application/xhtml+xml=userapp-Pale Moon-06IX9X.desktop
 application/x-extension-xhtml=userapp-Pale Moon-06IX9X.desktop
 application/x-extension-xht=userapp-Pale Moon-06IX9X.desktop
-image/jpeg=gpicview.desktop
-image/png=gpicview.desktop
+image/jpeg=viewnior.desktop;gpicview.desktop;
+image/png=viewnior.desktop;gpicview.desktop;
 text/plain=mousepad.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-U0C7EY.desktop
+message/rfc822=userapp-Thunderbird-U0C7EY.desktop
 
 [Added Associations]
 x-scheme-handler/http=userapp-Pale Moon-06IX9X.desktop;
@@ -26,6 +28,8 @@ application/x-extension-shtml=userapp-Pale Moon-06IX9X.desktop;
 application/xhtml+xml=userapp-Pale Moon-06IX9X.desktop;
 application/x-extension-xhtml=userapp-Pale Moon-06IX9X.desktop;
 application/x-extension-xht=userapp-Pale Moon-06IX9X.desktop;
-image/jpeg=gpicview.desktop;
-image/png=gpicview.desktop;
+image/jpeg=viewnior.desktop;gpicview.desktop;
+image/png=viewnior.desktop;gpicview.desktop;
 text/plain=mousepad.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-U0C7EY.desktop;
+message/rfc822=userapp-Thunderbird-U0C7EY.desktop;
