@@ -6,7 +6,7 @@
         <Program icon="/usr/share/icons/Ultra Flat Orange/places/scalable/folder-home.svg" label="Home">pcmanfm ~/</Program>
         <Program icon="/usr/share/icons/Ultra Flat Orange/places/scalable/folder-locked.svg" label="Root">gksu pcmanfm /</Program>
     <Separator/>
-	<Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/pacli.svg" label="Applications">pcmanfm menu://applications/</Program>
+	<Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/appset.svg" label="Applications">pcmanfm menu://applications/</Program>
         <Program icon="/usr/share/icons/Ultra Flat Orange/places/scalable/computer.svg" label="Devices">pcmanfm computer:///</Program>
         <Program icon="/usr/share/icons/Ultra Flat Orange/places/scalable/emptytrash.svg" label="Trash">pcmanfm trash:///</Program>
     </RootMenu>
