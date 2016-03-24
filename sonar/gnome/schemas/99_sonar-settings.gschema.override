@@ -14,6 +14,7 @@ screen-reader-enabled=true
 [org.gnome.desktop.sound]
 event-sounds=true
 input-feedback-sounds=true
+theme-name=sonar
 
 [org.gnome.desktop.input-sources]
 show-all-sources=true

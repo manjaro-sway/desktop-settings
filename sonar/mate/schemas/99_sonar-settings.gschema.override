@@ -10,7 +10,7 @@ startup=false
 [org.mate.desktop.sound]
 event-sounds=true
 input-feedback-sounds=true
-theme-name=freedesktop
+theme-name=sonar
 
 [org.mate.desktop.applications-at-visual]
 startup=true
