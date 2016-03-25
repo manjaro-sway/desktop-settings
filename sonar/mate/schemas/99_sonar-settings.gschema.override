@@ -31,15 +31,17 @@ buttons-have-icons=true
 menus-have-icons=true
 
 [org.mate.SettingsDaemon.plugins.media-keys]
-screenreader='<Alt><Super>s'
-volume-down='<Primary><Super>Down'
-volume-up='<Primary><Super>Up'
-volume-mute='<Primary><Super>M'
-logout='<Super>L'
+screenreader='<Alt><Mod4>S'
+volume-down='<Ctrl><Mod4>Down'
+volume-up='<Ctrl><Mod4>Up'
+volume-mute='<Ctrl><Mod4>M'
+logout='<Mod4>L'
+
+
 
 [org.mate.desktop.keybindings.custom0]
 action='/usr/bin/ocrdesktop'
-binding='<Alt>Super>O'
+binding='<Alt><Mod4>O'
 name='ocr the current window'
 
 [org.mate.desktop.keybindings.custom1]
