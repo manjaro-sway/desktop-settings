@@ -37,17 +37,17 @@ volume-up='<Primary><Super>Up'
 volume-mute='<Primary><Super>M'
 logout='<Super>L'
 
-[org.mate.desktop.keybindings.custom0]
+[org.mate.keybindings.custom0]
 action='/usr/bin/ocrdesktop'
 binding='<Alt>Super>O'
 name='ocr the current window'
 
-[org.mate.desktop.keybindings.custom1]
+[org.mate.keybindings.custom1]
 action='/usr/bin/mate-system-monitor'
 binding='<Super>S'
 name='open the system monitor'
 
-[org.mate.desktop.keybindings.custom2]
+[org.mate.keybindings.custom2]
 action='/usr/bin/mate-panel --replace'
 binding='<Super>R'
 name='reset the panel'
