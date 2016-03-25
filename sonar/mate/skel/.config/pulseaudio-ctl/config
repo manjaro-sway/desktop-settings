@@ -20,4 +20,5 @@
 # a setting will convert the percentage to a progress-bar in libnotify.
 #
 #BARCHART=yes
+
 SET=70%
