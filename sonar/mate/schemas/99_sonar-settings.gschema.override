@@ -32,9 +32,10 @@ menus-have-icons=true
 
 [org.mate.SettingsDaemon.plugins.media-keys]
 screenreader='<Alt><Super>s'
-volume-down='<Primary><Super>Down'
-volume-up='<Primary><Super>Up'
-volume-mute='<Primary><Super>M'
+volume-down='<Primary><Super>down'
+volume-up='<Primary><Super>up'
+volume-mute='<Primary><Super>m'
+volume-step=5
 logout='<Super>L'
 
 [org.mate.keybindings.custom0]
