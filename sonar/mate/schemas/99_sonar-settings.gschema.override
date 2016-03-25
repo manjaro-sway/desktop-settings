@@ -31,7 +31,6 @@ buttons-have-icons=true
 menus-have-icons=true
 
 [org.mate.SettingsDaemon.plugins.media-keys]
-<<<<<<< HEAD
 screenreader='<Alt><Mod4>S'
 volume-down='<Ctrl><Mod4>Down'
 volume-up='<Ctrl><Mod4>Up'
