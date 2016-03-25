@@ -37,19 +37,20 @@ volume-up='<Ctrl><Mod4>Up'
 volume-mute='<Ctrl><Mod4>M'
 logout='<Mod4>L'
 
+[org.gnome.settings-daemon.plugins.media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/','/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/','/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
 
-
-[org.mate.desktop.keybindings.custom0]
+[org.gnome.settings-daemon.plugins.media-keys:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/]
 action='/usr/bin/ocrdesktop'
 binding='<Alt><Mod4>O'
 name='ocr the current window'
 
-[org.mate.desktop.keybindings.custom1]
+[org.gnome.settings-daemon.plugins.media-keys:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/]
 action='/usr/bin/mate-system-monitor'
-binding='<Super>S'
+binding='<Mod4>S'
 name='open the system monitor'
 
-[org.mate.desktop.keybindings.custom2]
+[org.gnome.settings-daemon.plugins.media-keys:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/]
 action='/usr/bin/mate-panel --replace'
-binding='<Super>R'
+binding='<Mod4>R'
 name='reset the panel'
