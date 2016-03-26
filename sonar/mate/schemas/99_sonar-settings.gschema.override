@@ -16,8 +16,16 @@ theme-name='sonar'
 startup=true
 
 [org.mate.Marco.global-keybindings]
+run-command-1='<Alt><Mod4>o'
+run-command-2='<Mod4>s'
+run-command-3='<Mod4>r'
 run-command-terminal='<Control><Alt>t'
 switch-windows-backward='<Alt><Shift>Tab'
+
+[org.mate.Marco.keybinding-commands]
+command-1='ocrdesktop'
+command-2='mate-system-monitor'
+command-3='mate-panel --replace'
 
 [org.mate.Marco.general]
 compositing-fast-alt-tab=true
@@ -31,27 +39,9 @@ buttons-have-icons=true
 menus-have-icons=true
 
 [org.mate.SettingsDaemon.plugins.media-keys]
-screenreader='<Alt><Mod4>S'
+screenreader='<Alt><Mod4>s'
 volume-down='<Ctrl><Mod4>Down'
 volume-up='<Ctrl><Mod4>Up'
-volume-mute='<Ctrl><Mod4>M'
+volume-mute='<Ctrl><Mod4>m'
 volume-step=5
-logout='<Mod4>L'
-
-[org.gnome.settings-daemon.plugins.media-keys]
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/','/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/','/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
-
-[org.gnome.settings-daemon.plugins.media-keys:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/]
-action='/usr/bin/ocrdesktop'
-binding='<Alt><Mod4>O'
-name='ocr the current window'
-
-[org.gnome.settings-daemon.plugins.media-keys:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/]
-action='/usr/bin/mate-system-monitor'
-binding='<Mod4>S'
-name='open the system monitor'
-
-[org.gnome.settings-daemon.plugins.media-keys:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/]
-action='/usr/bin/mate-panel --replace'
-binding='<Mod4>R'
-name='reset the panel'
+logout='<Mod4>l'
