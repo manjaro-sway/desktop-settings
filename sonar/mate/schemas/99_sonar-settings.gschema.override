@@ -1,6 +1,9 @@
 [org.mate.background]
 picture-filename='/usr/share/backgrounds/sonar.jpg'
 
+[org.mate.NotificationDaemon]
+theme='coco'
+
 [org.mate.accessibility-keyboard]
 enable=false
 
@@ -15,18 +18,6 @@ theme-name='sonar'
 [org.mate.applications-at-visual]
 startup=true
 
-[org.mate.Marco.global-keybindings]
-run-command-1='<Alt><Mod4>o'
-run-command-2='<Mod4>s'
-run-command-3='<Mod4>r'
-run-command-terminal='<Control><Alt>t'
-switch-windows-backward='<Alt><Shift>Tab'
-
-[org.mate.Marco.keybinding-commands]
-command-1='ocrdesktop'
-command-2='mate-system-monitor'
-command-3='mate-panel --replace'
-
 [org.mate.Marco.general]
 compositing-fast-alt-tab=true
 
@@ -36,7 +27,108 @@ exec='gnome-terminal'
 [org.mate.interface]
 accessibility=true
 buttons-have-icons=true
+document-font-name='Sans 11'
+font-name='Sans 11'
+gtk-theme='Adwaita-Manjaro-dark'
+icon-theme='mate'
 menus-have-icons=true
+monospace-font-name='Monospace 11'
+
+[org.mate.panel]
+toplevel-id-list=['bottom']
+default-layout='sonar'
+object-id-list=['menu', 'launcher', 'object-0', 'object-1', 'object-2', 'windowlistapplet', 'object-3', 'showdesktopapplet', 'workspaceswitcherapplet', 'clockapplet', 'notificationarea']
+
+[org.mate.panel.toplevel:/org/mate/panel/toplevels/bottom/]
+orientation='bottom'
+y-bottom=0
+size=30
+expand=true
+
+[org.mate.panel.object:/org/mate/panel/objects/menu/]
+locked=true
+object-type='menu'
+panel-right-stick=false
+position=0
+toplevel-id='bottom'
+
+[org.mate.panel.object:/org/mate/panel/objects/launcher/]
+launcher-location='/usr/share/applications/firefox.desktop'
+locked=true
+menu-path='applications:/'
+object-type='launcher'
+panel-right-stick=false
+position=35
+toplevel-id='bottom'
+
+[org.mate.panel.object:/org/mate/panel/objects/object-0/]
+launcher-location='/usr/share/applications/caja-browser.desktop'
+locked=true
+object-type='launcher'
+panel-right-stick=false
+position=64
+toplevel-id='bottom'
+
+[org.mate.panel.object:/org/mate/panel/objects/object-1/]
+launcher-location='/usr/share/applications/gnome-terminal.desktop'
+locked=true
+object-type='launcher'
+panel-right-stick=false
+position=96
+toplevel-id='bottom'
+
+[org.mate.panel.object:/org/mate/panel/objects/object-2/]
+object-type='separator'
+locked=true
+panel-right-stick=false
+position=120
+toplevel-id='bottom'
+
+[org.mate.panel.object:/org/mate/panel/objects/windowlistapplet/]
+applet-iid='WnckletFactory::WindowListApplet'
+locked=true
+object-type='applet'
+panel-right-stick=false
+position=130
+toplevel-id='bottom'
+
+[org.mate.panel.object:/org/mate/panel/objects/object-3/]
+object-type='separator'
+panel-right-stick=true
+position=558
+toplevel-id='bottom'
+
+[org.mate.panel.object:/org/mate/panel/objects/showdesktopapplet/]
+applet-iid='WnckletFactory::ShowDesktopApplet'
+locked=true
+object-type='applet'
+panel-right-stick=true
+position=425
+toplevel-id='bottom'
+
+[org.mate.panel.object:/org/mate/panel/objects/workspaceswitcherapplet/]
+applet-iid='WnckletFactory::WorkspaceSwitcherApplet'
+locked=true
+object-type='applet'
+panel-right-stick=true
+position=405
+toplevel-id='bottom'
+
+[org.mate.panel.object:/org/mate/panel/objects/clockapplet/]
+applet-iid='ClockAppletFactory::ClockApplet'
+locked=true
+object-type='applet'
+panel-right-stick=true
+position=274
+toplevel-id='bottom'
+
+[org.mate.panel.object:/org/mate/panel/objects/notificationarea/]
+applet-iid='NotificationAreaAppletFactory::NotificationArea'
+locked=true
+object-type='applet'
+panel-right-stick=true
+position=1
+toplevel-id='bottom'
 
 [org.mate.SettingsDaemon.plugins.media-keys]
 screenreader='<Alt><Mod4>s'
@@ -45,3 +137,12 @@ volume-up='<Ctrl><Mod4>Up'
 volume-mute='<Ctrl><Mod4>m'
 volume-step=5
 logout='<Mod4>l'
+
+[org.gnome.Terminal.Legacy.Profile]
+allow-bold=true
+use-theme-colors=false
+background-color='rgb(0,0,0)'
+foreground-color='rgb(255,255,255)'
+font='Monospace Regular 12'
+rewrap-on-resize=true
+visible-name='sonar'
