@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Set Keybindings
+Comment=Custom Keybindings
+Exec=/usr/bin/set-keybindings
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
