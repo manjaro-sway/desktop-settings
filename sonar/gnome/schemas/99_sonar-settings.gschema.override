@@ -6,25 +6,26 @@ show-desktop-icons=true
 gtk-theme='Vertex-Maia'
 icon-theme='maia'
 
-[org.gnome.desktop.a11y.applications]
+[org.gnome.a11y.applications]
 screen-keyboard-enabled=false
 screen-magnifier-enabled=false
 screen-reader-enabled=true
 
-[org.gnome.desktop.sound]
+[org.gnome.sound]
 event-sounds=true
 input-feedback-sounds=true
+theme-name=sonar
 
-[org.gnome.desktop.input-sources]
+[org.gnome.input-sources]
 show-all-sources=true
 
-[org.gnome.desktop.wm.preferences]
+[org.gnome.wm.preferences]
 button-layout='appmenu:minimize,maximize,close'
 
-[org.gnome.desktop.screensaver]
+[org.gnome.screensaver]
 picture-uri='file:///usr/share/backgrounds/sonar.jpg'
 
-[org.gnome.desktop.datetime]
+[org.gnome.datetime]
 automatic-timezone=true
 
 [org.gnome.settings-daemon.plugins.media-keys]
@@ -34,9 +35,9 @@ magnifier-zoom-out='<Alt><Super>minus'
 volume-down='<Primary><Super>Down'
 volume-mute='<Primary><Super>m'
 volume-up='<Primary><Super>Up'
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+volume-step=5
 
-[org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/]
+[org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0]
 binding='<Alt><Super>o'
 command='/usr/bin/ocrdesktop'
 name='ocrdesktop'

@@ -3,10 +3,10 @@ builtin-theme=true
 dark-theme=true
 
 [org.gnome.desktop.background]
-picture-uri='file:///usr/share/backgrounds/black_leather_manjaro_linux_by_tefrem34.jpg'
+picture-uri='file:///usr/share/backgrounds/dark_grey_texture_by_tefrem34.jpg'
 show-desktop-icons=false
 
 [org.gnome.desktop.interface]
-cursor-theme=Simple-and-Soft
+cursor-theme='Simple-and-Soft'
 gtk-theme='Arc-Dark'
 icon-theme='Moka'

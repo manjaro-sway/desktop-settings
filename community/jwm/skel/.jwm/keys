@@ -30,8 +30,8 @@
     <Key mask="4" key="r">exec:gmrun</Key>
     <Key mask="4" key="t">exec:sakura</Key>
     <Key mask="4" key="d">showdesktop</Key>
-    <Key mask="4" key="m">smplayer</Key>
-    <Key key="Print">exec:scrot -e 'mv $f ~/Screenshots' && sleep 1 && notify-send 'Screenshot has been saved in ~/Screenshots'</Key>
+    <Key mask="4" key="m">exec:smplayer</Key>
+    <Key key="Print">exec:scrot -e 'mv $f ~/Screenshots' &amp;&amp; sleep 1 &amp;&amp; notify-send 'Screenshot has been saved in ~/Screenshots'</Key>
 
     <!-- Key system. -->
     <Key mask="4" key="F1">root:3</Key>
@@ -41,8 +41,8 @@
     <Key mask="4" key="u">exec:jwm -restart</Key>
 
     <!-- Key sound. -->
-    <Key mask="4" key="PgDn">>exec:amixer set Master 5%- </Key>
-    <Key mask="4" key="PgUp">exec:amixer set Master 5%+ </Key>
+    <Key mask="4" key="Next">exec:amixer set Master 5%- </Key>
+    <Key mask="4" key="Prior">exec:amixer set Master 5%+ </Key>
     <Key mask="4" key="0">exec:amixer set Master toggle</Key>
     
     <!-- Key toggle. -->
