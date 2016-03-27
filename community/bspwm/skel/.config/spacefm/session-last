@@ -5,7 +5,7 @@
 # If you delete all session* files, SpaceFM will be reset to factory defaults.
 
 [General]
-small_icon_size=32
+small_icon_size=24
 tool_icon_size=3
 
 [Window]
@@ -15,7 +15,6 @@ maximized=1
 
 [Desktop]
 show_wallpaper=1
-wallpaper=/home/matti/Pictures/pattern-abstract-hd-wallpaper-1920x1200-6110.jpg
 desk_open_mime=1
 bg1=4656,4125,12014
 bg2=0,0,48192
@@ -30,7 +29,7 @@ dev_menu_root-icn=dialog-warning-symbolic
 dev_root_mount-z=/usr/bin/udevil mount -o %o %v
 dev_root_unmount-z=/usr/bin/udevil umount %v
 dev_show_internal_drives-b=1
-dev_show_empty-b=1
+dev_show_empty-b=2
 dev_show_net-b=1
 dev_show_file-b=1
 dev_dispname-s=%v %s %l %m
@@ -68,7 +67,7 @@ main_new_window-key=110
 main_new_window-keymod=4
 main_root_window-key=65472
 main_root_window-icn=spacefm-root
-main_terminal-s=terminal
+main_terminal-s=roxterm
 main_terminal-key=65473
 main_terminal-icn=utilities-terminal-symbolic
 main_terminal-b=2
@@ -76,22 +75,18 @@ main_root_terminal-icn=utilities-terminal-symbolic
 main_save_tabs-b=1
 main_exit-key=113
 main_exit-keymod=4
-panel1_show-s=////var/lib/manjaro-tools/buildiso/bspwm/x86_64/bspwm-image/etc/skel////home/chrysostomus/isos/community////home/chrysostomus/isos/community/bspwm/16.03/x86_64////home/chrysostomus/isos/community/bspwm/16.03/x86_64
-panel1_show-x=3
+panel1_show-x=0
 panel1_show-key=49
 panel1_show-keymod=4
 panel1_show-b=1
-panel2_show-s=////home/chrysostomus////home/chrysostomus////home/chrysostomus////////boot////////home/chrysostomus////home/chrysostomus////boot////
 panel2_show-x=9
 panel2_show-key=50
 panel2_show-keymod=4
 panel2_show-b=2
-panel3_show-s=////home/chrysostomus
 panel3_show-x=0
 panel3_show-key=51
 panel3_show-keymod=4
 panel3_show-b=2
-panel4_show-s=////home/chrysostomus
 panel4_show-x=0
 panel4_show-key=52
 panel4_show-keymod=4
@@ -268,6 +263,7 @@ paste_as-key=65
 paste_as-keymod=5
 select_all-key=97
 select_all-keymod=4
+edit_root-icn=dialog-warning-symbolic
 prop_info-key=65293
 prop_info-keymod=8
 prop_perm-key=112
@@ -287,7 +283,8 @@ panel1_list_compact-b=2
 panel1_list_large-b=1
 panel1_show_hidden-key=104
 panel1_show_hidden-keymod=4
-panel1_show_hidden-b=1
+panel1_show_hidden-b=2
+panel1_font_dev-s=Terminus 12
 panel1_detcol_name-x=0
 panel1_detcol_name-b=1
 panel1_detcol_size-x=1
@@ -372,7 +369,7 @@ dev_single-b=1
 book_new-key=100
 book_new-keymod=4
 su_command-s=/bin/su
-gsu_command-s=/usr/bin/gksu
+gsu_command-s=/bin/su
 editor-s=gedit
 editor-b=2
 config_version-s=37
@@ -707,4 +704,6 @@ panel4_detcol_date2-b=2
 panel4_slider_positions2-s=0
 panel4_slider_positions2-x=0
 panel4_slider_positions2-y=0
+font_dlg-x=576
+font_dlg-y=344
 
