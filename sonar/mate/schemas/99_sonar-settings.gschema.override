@@ -1,6 +1,9 @@
 [org.mate.background]
 picture-filename='/usr/share/backgrounds/sonar.jpg'
 
+[org.mate.NotificationDaemon]
+theme='coco'
+
 [org.mate.accessibility-keyboard]
 enable=false
 
@@ -15,19 +18,8 @@ theme-name='sonar'
 [org.mate.applications-at-visual]
 startup=true
 
-[org.mate.Marco.global-keybindings]
-run-command-1='<Alt><Mod4>o'
-run-command-2='<Mod4>s'
-run-command-3='<Mod4>r'
-run-command-terminal='<Control><Alt>t'
-switch-windows-backward='<Alt><Shift>Tab'
-
-[org.mate.Marco.keybinding-commands]
-command-1='ocrdesktop'
-command-2='mate-system-monitor'
-command-3='mate-panel --replace'
-
 [org.mate.Marco.general]
+theme='Adwaita-Manjaro-dark'
 compositing-fast-alt-tab=true
 
 [org.mate.applications-terminal]
@@ -36,7 +28,18 @@ exec='gnome-terminal'
 [org.mate.interface]
 accessibility=true
 buttons-have-icons=true
+document-font-name='Sans 11'
+font-name='Sans 11'
+gtk-theme='Adwaita-Manjaro-dark'
+icon-theme='mate'
 menus-have-icons=true
+monospace-font-name='Monospace 11'
+
+[org.mate.peripherals-mouse]
+cursor-theme='Breeze'
+
+[org.mate.panel]
+default-layout='sonar'
 
 [org.mate.SettingsDaemon.plugins.media-keys]
 screenreader='<Alt><Mod4>s'
@@ -45,3 +48,12 @@ volume-up='<Ctrl><Mod4>Up'
 volume-mute='<Ctrl><Mod4>m'
 volume-step=5
 logout='<Mod4>l'
+
+[org.gnome.Terminal.Legacy.Profile]
+allow-bold=true
+use-theme-colors=false
+background-color='rgb(0,0,0)'
+foreground-color='rgb(255,255,255)'
+font='Monospace Regular 12'
+rewrap-on-resize=true
+visible-name='sonar'
