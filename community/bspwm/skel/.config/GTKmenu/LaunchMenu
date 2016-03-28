@@ -11,11 +11,11 @@ cmd = finder
 icon = /usr/share/icons/Adwaita/scalable/apps/preferences-system-search-symbolic.svg
 
 item = Terminal
-cmd = roxterm
+cmd = default-terminal
 icon = /usr/share/icons/Adwaita/scalable/apps/utilities-terminal-symbolic.svg
 
 item = Browser
-cmd = epiphany
+cmd = default-browser
 icon = /usr/share/icons/Adwaita/scalable/apps/web-browser-symbolic.svg
 
 item = Files
@@ -23,19 +23,18 @@ cmd = spacefm
 icon = /usr/share/icons/Adwaita/scalable/apps/system-file-manager-symbolic.svg
 
 item = Editor
-cmd = gedit
+cmd = default-editor
 icon = /usr/share/icons/Adwaita/scalable/apps/text-editor-symbolic.svg
 
 item = Package Manager
-cmd = roxterm -e pacli
+cmd = default-terminal -e pacli
 icon = /usr/share/icons/Adwaita/scalable/apps/system-software-install-symbolic.svg
 
 item = Main menu
-cmd = roxterm -e bmenu
+cmd = default-terminal -e bmenu
 icon = /usr/share/icons/Adwaita/scalable/apps/utilities-system-monitor-symbolic.svg
 
 separator
-
 
 submenu = Exit
 
