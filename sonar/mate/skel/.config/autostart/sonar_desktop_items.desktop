@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Sonar Desktop Items
+Exec=/usr/bin/sonar_desktop_items
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
