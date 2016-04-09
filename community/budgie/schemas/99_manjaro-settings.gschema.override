@@ -2,6 +2,9 @@
 builtin-theme=true
 dark-theme=true
 
+[com.solus-project.icon-tasklist]
+pinned-launchers=['firefox.desktop', 'hexchat.desktop', 'org.gnome.Nautilus.desktop']
+
 [org.gnome.desktop.background]
 picture-uri='file:///usr/share/backgrounds/dark_grey_texture_by_tefrem34.jpg'
 show-desktop-icons=false

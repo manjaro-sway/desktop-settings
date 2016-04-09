@@ -1,7 +1,0 @@
-[Sound Theme]
-Name=Sonar
-Comment="sonar's default sound theme."
-Directories=stereo
-
-[stereo]
-OutputProfile=stereo
