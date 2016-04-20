@@ -35,8 +35,11 @@ magnifier-zoom-out='<Alt><Super>minus'
 volume-down='<Primary><Super>Down'
 volume-mute='<Primary><Super>m'
 volume-up='<Primary><Super>Up'
+control-center='<Super>I'
 volume-step=5
 
+[org.gnome.wm.keybindings]
+show-desktop='<Primary><Alt>d
 [org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0]
 binding='<Alt><Super>o'
 command='/usr/bin/ocrdesktop'
