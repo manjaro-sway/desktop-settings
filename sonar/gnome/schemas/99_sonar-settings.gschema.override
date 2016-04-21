@@ -2,11 +2,11 @@
 picture-uri='file:///usr/share/backgrounds/sonar.jpg'
 show-desktop-icons=true
 
-[org.gnome.interface]
+[org.gnome.desktop.interface]
 gtk-theme='Vertex-Maia'
 icon-theme='maia'
 
-[org.gnome.applications]
+[org.gnome.a11y.applications]
 screen-keyboard-enabled=false
 screen-magnifier-enabled=false
 screen-reader-enabled=true
@@ -38,7 +38,7 @@ volume-up='<Primary><Super>Up'
 control-center='<Super>I'
 
 [org.gnome.wm.keybindings]
-show-desktop='<Primary><Alt>d'
+show-desktop='<Primary><Alt>d
 [org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0]
 binding='<Alt><Super>o'
 command='/usr/bin/ocrdesktop'
