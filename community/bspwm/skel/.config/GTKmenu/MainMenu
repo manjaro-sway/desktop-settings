@@ -6,16 +6,20 @@ item = Run
 cmd = dboxrun
 icon = /usr/share/icons/Adwaita/scalable/actions/system-run-symbolic.svg
 
+item = Applications
+cmd = morc_menu
+icon = /usr/share/icons/Adwaita/scalable/actions/open-menu-symbolic.svg
+
 item = Find
 cmd = finder
 icon = /usr/share/icons/Adwaita/scalable/apps/preferences-system-search-symbolic.svg
 
 item = Terminal
-cmd = roxterm
+cmd = default-terminal
 icon = /usr/share/icons/Adwaita/scalable/apps/utilities-terminal-symbolic.svg
 
 item = Browser
-cmd = epiphany
+cmd = default-browser
 icon = /usr/share/icons/Adwaita/scalable/apps/web-browser-symbolic.svg
 
 item = Files
@@ -23,15 +27,15 @@ cmd = spacefm
 icon = /usr/share/icons/Adwaita/scalable/apps/system-file-manager-symbolic.svg
 
 item = Editor
-cmd = gedit
+cmd = default-editor
 icon = /usr/share/icons/Adwaita/scalable/apps/text-editor-symbolic.svg
 
 item = Package Manager
-cmd = roxterm -e pacli
+cmd = default-terminal -e pacli
 icon = /usr/share/icons/Adwaita/scalable/apps/system-software-install-symbolic.svg
 
 item = Main menu
-cmd = roxterm -e bmenu
+cmd = default-terminal -e bmenu
 icon = /usr/share/icons/Adwaita/scalable/apps/utilities-system-monitor-symbolic.svg
 
 separator
@@ -40,27 +44,27 @@ submenu = Settings
 	icon = /usr/share/icons/Adwaita/scalable/emblems/emblem-system-symbolic.svg
 
 	item = Keybindings
-	cmd = gedit .config/sxhkd/sxhkdrc
+	cmd = default-editor .config/sxhkd/sxhkdrc
 	icon = /usr/share/icons/Adwaita/scalable/apps/preferences-desktop-keyboard-shortcuts-symbolic.svg
 
 	item = Bspwmrc
-	cmd = gedit .config/bspwm/bspwmrc
+	cmd = default-editor .config/bspwm/bspwmrc
 	icon = /usr/share/icons/Adwaita/scalable/apps/text-editor-symbolic.svg
 
 	item = Autostart
-	cmd = gedit .config/bspwm/autostart
+	cmd = default-editor .config/bspwm/autostart
 	icon = /usr/share/icons/Adwaita/scalable/actions/system-run-symbolic.svg
 		
 	item = Profile
-	cmd = gedit .profile
+	cmd = default-editor .profile
 	icon = /usr/share/icons/Adwaita/scalable/apps/user-info-symbolic.svg
 	
 	item = Dmenu settings
-	cmd = gedit .dmenurc
+	cmd = default-editor .dmenurc
 	icon = /usr/share/icons/Adwaita/scalable/actions/open-menu-symbolic.svg
 	
 	item = Panel settings
-	cmd = gedit .limepanelrc
+	cmd = default-editor .limepanelrc
 	icon = /usr/share/icons/Adwaita/scalable/actions/document-properties-symbolic.svg
 	
 	item = Appearance
@@ -72,7 +76,7 @@ submenu = Settings
 	icon = /usr/share/icons/Adwaita/scalable/status/security-high-symbolic.svg
 	
 	item = Network
-	cmd = roxterm -e nmtui
+	cmd = default-terminal -e nmtui
 	icon = /usr/share/icons/Adwaita/scalable/apps/preferences-system-network-symbolic.svg	
 separator	
 

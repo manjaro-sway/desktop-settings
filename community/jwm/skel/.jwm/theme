@@ -3,7 +3,7 @@
 
     <!-- Visual Style Window. -->
     <WindowStyle decorations="flat">
-        <Font>Cantarell-10:antialias=true:encoding=utf8</Font>
+        <Font align="center">Cantarell-10:antialias=true:encoding=utf8</Font>
         <Width>2</Width>
         <Height>18</Height>
         <Corner>2</Corner>
@@ -68,5 +68,10 @@
         <Foreground>#F9F9F9</Foreground>
         <Background>#414244</Background>
     </PopupStyle>
+
+    <!-- Visual Style Clock. -->
+    <ClockStyle>
+        <Font>Cantarell-10:weight=demibold:antialias=true:encoding=utf8</Font>
+    </ClockStyle>
 
 </JWM>

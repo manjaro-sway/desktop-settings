@@ -1,0 +1,18 @@
+#!/bin/sh
+
+if ! [ -f $HOME/.keybindings-set ]; then
+
+  gsettings set org.mate.Marco.keybinding-commands command-1 'ocrdesktop'
+  gsettings set org.mate.Marco.keybinding-commands command-2 'mate-system-monitor'
+  gsettings set org.mate.Marco.keybinding-commands command-3 'mate-panel --replace'
+
+  gsettings set org.mate.Marco.global-keybindings run-command-1 '<Alt><Mod4>o'
+  gsettings set org.mate.Marco.global-keybindings run-command-2 '<Mod4>s'
+  gsettings set org.mate.Marco.global-keybindings run-command-3 '<Mod4>r'
+
+  gsettings set org.mate.Marco.global-keybindings run-command-terminal '<Control><Alt>t'
+  gsettings set org.mate.Marco.global-keybindings switch-windows-backward '<Alt><Shift>Tab'
+
+  touch $HOME/.keybindings-set
+
+fi

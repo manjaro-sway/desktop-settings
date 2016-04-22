@@ -1,53 +1,59 @@
-[org.mate.desktop.background]
-picture-filename="/usr/share/backgrounds/sonar.jpg"
+[org.mate.background]
+picture-filename='/usr/share/backgrounds/sonar.jpg'
 
-[org.mate.desktop.accessibility-keyboard]
+[org.mate.NotificationDaemon]
+theme='coco'
+
+[org.mate.accessibility-keyboard]
 enable=false
 
-[org.mate.desktop.applications-at-mobility]
+[org.mate.applications-at-mobility]
 startup=false
 
-[org.mate.desktop.sound]
+[org.mate.sound]
 event-sounds=true
 input-feedback-sounds=true
-theme-name=freedesktop
+theme-name='sonar'
 
-[org.mate.desktop.applications-at-visual]
+[org.mate.applications-at-visual]
 startup=true
 
-[org.mate.Marco.global-keybindings]
-run-command-terminal='<Control><Alt>t'
-switch-windows-backward='<Alt><Shift>Tab'
-
 [org.mate.Marco.general]
+theme='Adwaita-Manjaro-dark'
 compositing-fast-alt-tab=true
 
-[org.mate.desktop.applications-terminal]
-exec=gnome-terminal
+[org.mate.applications-terminal]
+exec='gnome-terminal'
 
 [org.mate.interface]
 accessibility=true
 buttons-have-icons=true
+document-font-name='Sans 11'
+font-name='Sans 11'
+gtk-theme='Adwaita-Manjaro-dark'
+icon-theme='mate'
 menus-have-icons=true
+monospace-font-name='Monospace 11'
+
+[org.mate.peripherals-mouse]
+cursor-theme='Breeze'
+
+[org.mate.panel]
+default-layout='sonar'
 
 [org.mate.SettingsDaemon.plugins.media-keys]
-screenreader='<Alt><Super>s'
-volume-down='<Primary><Super>Down'
-volume-up='<Primary><Super>Up'
-volume-mute='<Primary><Super>M'
-logout='<Super>L'
-[org.mate.desktop.keybindings.custom0]
-action=/usr/bin/ocrdesktop
-binding='<Alt>Super>O'
-name="ocr the current window"
+screenreader='<Alt><Mod4>s'
+volume-down='<Ctrl><Mod4>Down'
+volume-up='<Ctrl><Mod4>Up'
+volume-mute='<Ctrl><Mod4>m'
+volume-step=5
+logout='<Mod4>l'
 
-[org.mate.desktop.keybindings.custom1]
-action=/usr/bin/mate-system-monitor
-binding='<Super>S'
-name="open the system monitor"
-
-[org.mate.desktop.keybindings.custom2]
-action="/usr/bin/mate-panel --replace"
-binding='<Super>R'
-name="reset the panel"
-
+[org.gnome.Terminal.Legacy.Profile]
+allow-bold=true
+use-theme-colors=false
+background-color='rgb(0,0,0)'
+foreground-color='rgb(255,255,255)'
+font='Monospace Regular 12'
+rewrap-on-resize=true
+visible-name='sonar'

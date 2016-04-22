@@ -1,5 +1,5 @@
 [Default Applications]
-application/pdf=atril.desktop
+application/pdf=evince.desktop
 text/plain=pluma.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop

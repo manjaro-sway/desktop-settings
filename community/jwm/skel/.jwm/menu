@@ -6,7 +6,7 @@
         <Program icon="/usr/share/icons/Ultra Flat Orange/places/scalable/folder-home.svg" label="Home">pcmanfm ~/</Program>
         <Program icon="/usr/share/icons/Ultra Flat Orange/places/scalable/folder-locked.svg" label="Root">gksu pcmanfm /</Program>
     <Separator/>
-	<Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/pacli.svg" label="Applications">pcmanfm menu://applications/</Program>
+	<Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/appset.svg" label="Applications">pcmanfm menu://applications/</Program>
         <Program icon="/usr/share/icons/Ultra Flat Orange/places/scalable/computer.svg" label="Devices">pcmanfm computer:///</Program>
         <Program icon="/usr/share/icons/Ultra Flat Orange/places/scalable/emptytrash.svg" label="Trash">pcmanfm trash:///</Program>
     </RootMenu>
@@ -65,7 +65,7 @@
             	    <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/textwrangler.svg" label="Firewall">gksu xterm ~/.scripts/firewall.sh</Program>
 		    <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/textwrangler.svg" label="Java">gksu xterm ~/.scripts/java.sh</Program>        
                     <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/textwrangler.svg" label="Multimedia">gksu xterm ~/.scripts/multimedia.sh</Program>
-                    <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/textwrangler.svg" label="Printing">gksu xterm ~/.scripts/printing.sh</Program>
+                    <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/textwrangler.svg" label="Printer">gksu xterm ~/.scripts/printer.sh</Program>
         	</Menu>
          <Separator/>
             <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/gufw.svg" label="Gufw Firewall">gksu gufw</Program>
@@ -79,10 +79,21 @@
             <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/rocket.svg" label="Temperature Sensors">xsensors</Program>
         </Menu>
         <Separator/>
-        <Menu icon="/usr/share/icons/Adwaita/48x48/apps/accessories-dictionary.png" label="Documentation">
-           <Program icon="/usr/share/lxdm/themes/GrayOrange/nobody.png" label="Manjaro Beginner User Guide">epdfview /usr/share/doc/livecd/Beginner_User_Guide.pdf</Program>        
-           <Program icon="/usr/share/lxdm/themes/GrayOrange/nobody.png" label="Manjaro JWM User Orientation Guide">epdfview /usr/share/doc/livecd/User_Orientation_Guide.pdf</Program>
-        </Menu>
+        <Menu icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/help.svg" label="Help">
+		<Menu icon="/usr/share/lxdm/themes/GrayOrange/nobody.png" label="Manjaro">
+           	    <Program icon="/usr/share/lxdm/themes/GrayOrange/nobody.png" label="Manjaro Beginner User Guide">epdfview /usr/share/doc/livecd/Beginner_User_Guide.pdf</Program>        
+      	    	    <Program icon="/usr/share/lxdm/themes/GrayOrange/nobody.png" label="Manjaro JWM User Orientation Guide">epdfview /usr/share/doc/livecd/User_Orientation_Guide.pdf</Program>
+		<Separator/>		    
+		    <Program icon="/usr/share/lxdm/themes/GrayOrange/nobody.png" label="Manjaro News">palemoon https://manjaro.github.io/</Program>
+		    <Program icon="/usr/share/lxdm/themes/GrayOrange/nobody.png" label="Manjaro Forum">palemoon https://forum.manjaro.org/index.php</Program>
+		    <Program icon="/usr/share/lxdm/themes/GrayOrange/nobody.png" label="Manjaro Wiki">palemoon https://wiki.manjaro.org/index.php?title=Main_Page</Program>
+		</Menu>
+		<Menu icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/grub-customizer.svg" label="JWM">
+           	    <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/grub-customizer.svg" label="JWM Projet">palemoon http://joewing.net/projects/jwm/index.shtml</Program>        
+           	    <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/grub-customizer.svg" label="JWM Configuration">palemoon http://joewing.net/projects/jwm/config.shtml</Program>
+		    <Program icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/grub-customizer.svg" label="JWM Wiki ArchLinux">palemoon https://wiki.archlinux.org/index.php/JWM</Program>
+        	</Menu>
+	</Menu>
 	<Separator/>
           <Program icon="/usr/share/icons/Ultra Flat Orange/actions/scalable/exit.svg" label="Exit">oblogout</Program>
         </RootMenu>
