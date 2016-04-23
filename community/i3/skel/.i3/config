@@ -270,7 +270,7 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id start_conky_solarized
+exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 10 -locker blurlock
 
@@ -282,20 +282,21 @@ bar {
 #	tray_output primary
 #	tray_output eDP1
 
-	wheel_up_cmd nop
-	wheel_down_cmd nop
+	bindsym button4 nop
+	bindsym button5 nop
 	font pango:Cantarell,Icons 10
+
 	colors {
 #	background $transparent
-                background #002B36
-                statusline #EEE8D5
-		separator  #657B83
+		background #2B2C2B
+                statusline #F9FAF9
+		separator  #454947
 
 #                                  border  backgr. text
-		focused_workspace  #EEE8D5 #586E75 #FDF6E3
-#		active_workspace   #002B36 #A4A28D #FDF6E3
-		inactive_workspace #93A1A1 #002B36 #EEE8D5
-		urgent_workspace   #2AA198 #DC322F #FDF6E3
+		focused_workspace  #F9FAF9 #16A085 #2B2C2B
+		active_workspace   #595B5B #353836 #FDF6E3
+		inactive_workspace #595B5B #353836 #EEE8D5
+		urgent_workspace   #16A085 #FDF6E3 #E5201D
 	}
 }
 
@@ -303,10 +304,14 @@ bar {
 bindsym $mod+m bar mode toggle
 
 # Theme colors
-# class          border  backgr. text    indicator
-client.focused   #FDF6E3 #93A1A1 #002B36 #268BD2
-client.unfocused #073642 #586E75 #EEE8D5 #268BD2
-client.urgent    #CB4B16 #DC322F #FDF6E3 #268BD2
+# class                 border  backgr. text    indic.  child_border
+client.focused          #16A085 #16A085 #FDF6E3 #FDF6E3
+client.focused_inactive #454947 #454947 #16A085 #454947
+client.unfocused        #353836 #353836 #16A085 #268BD2
+client.urgent           #CB4B16 #FDF6E3 #16A085 #268BD2
+client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
+
+client.background       #2B2C2B
 
 #############################
 ### settings for i3-gaps: ###

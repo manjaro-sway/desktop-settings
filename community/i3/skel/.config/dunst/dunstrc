@@ -24,14 +24,14 @@
     format = "%s %p\n%b"
     
     # Sort messages by urgency.
-    sort = no
+    sort = yes
     
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
     
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
-    alignment = left
+    alignment = center
     
     # The frequency with wich text that is longer than the notification
     # window allows bounces back and forth.
@@ -65,7 +65,7 @@
     # the top and down respectevly.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "0x0+25+25"
+    geometry = "0x4-25+25"
     
     # Shrink window if it's smaller than the width.  Will be ignored if
     # width is 0.
@@ -74,7 +74,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing windowmanager is
     # present (e.g. xcompmgr, compiz, etc.).
-    transparency = 17
+    transparency = 15
     
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     # for longer than idle_threshold seconds.
@@ -131,7 +131,7 @@
     #  * foreground: use the same color as the foreground;
     #  * frame: use the same color as the frame;
     #  * anything else will be interpreted as a X color.
-    separator_color = #2ECC71
+    separator_color = #454947
     
     # Print a notification on startup.
     # This is mainly for error detection, since dbus (re-)starts dunst
@@ -152,7 +152,7 @@
 
 [frame]
     width = 1
-    color = "#2ECC71"
+    color = "#16A085"
 
 [shortcuts]
 
@@ -179,18 +179,18 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#000000"
+    background = "#2B2C2B"
     foreground = "#888888"
     timeout = 10
 
 [urgency_normal]
-    background = "#000000"
-    foreground = "#ffffff"
+    background = "#2B2C2B"
+    foreground = "#F9FAF9"
     timeout = 10
 
 [urgency_critical]
-    background = "#900000"
-    foreground = "#ffffff"
+    background = "#D62929"
+    foreground = "#F9FAF9"
     timeout = 0
 
 
