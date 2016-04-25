@@ -41,7 +41,7 @@ xbacklight -set 15 &
 #run_once xfce4-panel -d
 #lemonpanel &
 ## The sleep part is delay before panel is spawned. You can remove it if you have reasonable fast hard drive.
-sleep 2 && limepanel &
+sleep 1 && limepanel &
 ## Light system tray to use with lemonbar. Disable if you dont need it. 
 ## Edit ~/.stalonetrayrc if it is in wrong place.
 #sleep 2s && stalonetray --dockapp-mode simple &
