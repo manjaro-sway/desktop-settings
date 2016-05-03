@@ -31,7 +31,7 @@
     
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
-    alignment = center
+    alignment = left
     
     # The frequency with wich text that is longer than the notification
     # window allows bounces back and forth.

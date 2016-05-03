@@ -52,7 +52,7 @@ XTerm*selectToClipboard: true
 
 URxvt.font: 9x15
 URxvt.depth: 32
-URxvt.background: [65]#000000
+URxvt.background: [80]#000000
 URxvt*scrollBar:                      false
 URxvt*mouseWheelScrollPage:           false
 URxvt*cursorBlink:                    true
