@@ -13,7 +13,7 @@ export PANEL_HEIGHT=25
 export XDG_CONFIG_DIRS=/usr/etc/xdg:/etc/xdg
 export GUI_EDITOR=/usr/bin/gedit
 export EDITOR=/usr/bin/nano
-export BROWSER=/usr/bin/xombrero
+export BROWSER=/usr/bin/light
 export TERMINAL=/usr/bin/roxterm
 
 # Load profiles from /etc/profile.d

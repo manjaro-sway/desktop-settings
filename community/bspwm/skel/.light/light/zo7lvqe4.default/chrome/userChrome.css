@@ -1,0 +1,513 @@
+/* set default namespace to XUL */
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/**************************** Tab Container ***************************/
+#TabsToolbar {
+  -moz-appearance: none !important;
+  box-shadow: inset 0 -5px rgba(0,0,0,0.02),
+              inset 0 -4px rgba(0,0,0,0.025),
+              inset 0 -3px rgba(0,0,0,0.03), 
+              inset 0 -2px rgba(0,0,0,0.035), 
+              inset 0 -1px rgba(0,0,0,0.05) !important;
+  background: -moz-linear-gradient(#454947, #373B39) !important;
+}
+
+#main-window[htitlemode] #TabsToolbar {
+  -moz-appearance: none !important;
+  box-shadow: inset 0 -5px rgba(0,0,0,0.02),
+              inset 0 -4px rgba(0,0,0,0.025),
+              inset 0 -3px rgba(0,0,0,0.03), 
+              inset 0 -2px rgba(0,0,0,0.035), 
+              inset 0 -1px rgba(0,0,0,0.05),
+              inset 0 1px rgba(255,255,255,0.15) !important;
+  background: -moz-linear-gradient(#454947, #373B39) !important;
+}
+
+#private-browsing-indicator {
+  background:  url("images/privatebrowsing-mask.png"),
+              -moz-linear-gradient(#454947, #373B39) !important;
+  box-shadow: inset 0 -5px rgba(0,0,0,0.02),
+              inset 0 -4px rgba(0,0,0,0.025),
+              inset 0 -3px rgba(0,0,0,0.03), 
+              inset 0 -2px rgba(0,0,0,0.035), 
+              inset 0 -1px rgba(0,0,0,0.05) !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+.toolbar-primary {
+  background-color: #2A2B2A !important;
+}
+
+.tabs-newtab-button > .toolbarbutton-icon,
+#new-tab-button > .toolbarbutton-icon {
+  -moz-appearance: none !important;
+  list-style-image: url("images/new-tab.png") !important;
+  -moz-image-region: auto !important;
+}
+
+#TabsToolbar .toolbarbutton-1,
+#TabsToolbar .toolbarbutton-1 > .toolbarbutton-menubutton-button {
+  -moz-appearance: none !important;
+  border-style: none !important;
+  padding: 0 3px !important;
+}
+
+/**************************** Search Icon ****************************/
+.search-go-button {
+  -moz-appearance: none !important;
+  list-style-image: url("images/search.png") !important;
+  -moz-image-region: auto !important;
+}
+
+/**************************** Tab-throbber ***************************/
+
+.tab-throbber {
+  list-style-image: url("images/connecting.png") !important;
+}
+
+.tab-throbber[progress] {
+  list-style-image: url("images/loading.png") !important;
+}
+
+/**************************** Bookmarks Bar ***************************/
+
+#navigator-toolbox #PersonalToolbar {
+  background: #333634 !important;
+  background-image: none !important;
+  padding: 3px !important;
+  padding-top: 2px !important;
+  box-shadow: inset 0 1px #151615,
+              inset 0 2px rgba(255,255,255,0.07) !important;
+}
+
+#navigator-toolbox:after {
+  background-color: #151615 !important;
+}
+
+/**************************** Navbar ***************************/
+#nav-bar {
+  -moz-appearance: none !important;
+  border-top: none !important;
+  box-shadow: inset 0 1px #151615,
+              inset 0 2px rgba(255,255,255,0.15) !important;
+
+  background: -moz-linear-gradient(#444745, #333634) !important;
+  color: #F3F5F3 !important;
+}
+
+/* Replace the default close tab icon with a white one */
+.tab-close-button[selected="true"],
+.tab-close-button:hover,
+.tab-close-button:active,
+.tabbrowser-tab:not([selected="true"]):hover .tab-close-button {
+    list-style-image: url("images/tab-close-selected.svg") !important;
+}
+
+.tab-close-button {
+    list-style-image: url("images/tab-close.svg") !important;
+}
+
+/*Selected tab background */
+.tabbrowser-tab[selected="true"],
+.tabbrowser-tab[selected="true"]:hover,
+.tabbrowser-tab:not([selected="true"]):hover {
+  background-color: rgba(0,0,0,0) !important;
+  color: #F3F5F3 !important;
+  text-shadow: 0 -1px rgba(0,0,0,0.7) !important;
+}
+
+.tabbrowser-tab:not([selected="true"]) {
+  background-color: rgba(0,0,0,0) !important;
+  color: #A7A8A7 !important;
+  text-shadow: 0 -1px rgba(0,0,0,0.7) !important;
+}
+
+.tab-background-middle[selected="true"] {
+  background-color: rgba(0,0,0,0) !important;
+}
+
+.tab-background-start[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
+.tab-background-end[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {
+  background-image: url("images/tabActiveStart.svg") !important;
+}
+
+.tab-background-end[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
+.tab-background-start[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {
+  background-image: url("images/tabActiveEnd.svg") !important;
+}
+
+.tab-background-middle[selected=true] {
+  background-image: url("images/tabActiveMiddle.svg") !important;
+}
+
+.tab-background-start[selected=true]:-moz-locale-dir(ltr)::after,
+.tab-background-end[selected=true]:-moz-locale-dir(rtl)::after {
+  background-image: none !important;
+}
+
+.tab-background-end[selected=true]:-moz-locale-dir(ltr)::after,
+.tab-background-start[selected=true]:-moz-locale-dir(rtl)::after {
+  background-image: none !important;
+}
+
+.tab-background-middle::after[selected=true] {
+  background-image: none !important;
+}
+
+/* Background tab separators (2px wide).
+   Also show separators beside the selected tab when dragging it. */
+#tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
+.tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
+#tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
+  -moz-margin-start: -1px !important;
+  -moz-margin-end: -1px !important;
+  background-image: url(images/tab-separator.svg) !important;
+  background-position: left bottom 1px !important;
+  background-repeat: no-repeat !important;
+  background-size: 2px 100% !important;
+  content: "" !important;
+  display: -moz-box !important;
+  width: 2px !important;
+}
+
+/* new tab button border and gradient on hover */
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]),
+.tabs-newtab-button:hover {
+  background-image: url(images/tab-start-hover.svg),
+                    url(images/tab-middle-hover.svg),
+                    url(images/tab-end-hover.svg) !important;
+  background-position: left bottom, 30px bottom, right bottom !important;
+  background-repeat: no-repeat !important;
+  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100% !important;
+}
+
+/************************* Text Input Boxes ***************************/
+#notification-popup-box {
+  background-color: transparent !important;
+  border-image: url("images/urlbar-arrow.png") 0 8 0 0 / 0 8px 0 0 !important;
+}
+
+#identity-box {
+  background-color: transparent !important;
+}
+
+.searchbar-textbox {
+  padding: 2px !important;
+}
+
+#nav-bar textbox {
+  -moz-appearance: none !important;
+  color: #F3F5F3 !important;
+  background-color: #2B2C2B !important;
+  border-radius: 2px !important;
+  border: 1px solid #171717 !important;
+  border-top-color: #0f0f0f !important;
+  transition: none !important;
+  box-shadow: 0 1px rgba(255,255,255,0.15),
+              inset 0 1px rgba(0,0,0,0.1) !important;
+}
+
+#nav-bar textbox[focused="true"] {
+  -moz-appearance: none !important;
+  color: #F3F5F3 !important;
+  background-color: #2B2C2B !important;
+  border-radius: 2px !important;
+  border: 1px solid #171717 !important;
+  border-top-color: #0f0f0f !important;
+  transition: none !important;
+  box-shadow: 0 1px rgba(255,255,255,0.15),
+              inset 0 1px #16a085,
+              inset 0 -1px #16a085,
+              inset 1px 0 #16a085,
+              inset -1px 0 #16a085 !important;
+}
+
+#nav-bar textbox[disabled="true"] {
+  -moz-appearance: none !important;
+  color: #7F8A7F !important;
+  background-color: #434644 !important;
+  border-radius: 2px !important;
+  border: 1px solid #171717 !important;
+  border-top-color: #0f0f0f !important;
+  transition: none !important;
+  box-shadow: 0 1px rgba(255,255,255,0.15) !important;
+}
+
+/* Places toolbar *//* ::::: bookmark buttons ::::: */
+
+#personal-bookmarks {
+  min-height: 18px !important;
+}
+
+toolbarbutton.bookmark-item {
+  -moz-appearance: none !important;
+  background: none !important;
+  border: 1px solid rgba(0,0,0,.0) !important;
+  border-radius: 2px !important;
+  padding: 4px !important;
+  color: #F3F5F3 !important;
+  text-shadow: 0 -1px rgba(0,0,0,0.7) !important;
+  box-shadow: none !important;
+}
+
+/* separator (between navbar menubuttons with dropmarker) colors */
+#nav-bar .toolbarbutton-1:not(:hover):not(:active):not([open]) > .toolbarbutton-menubutton-dropmarker::before,
+#nav-bar .toolbarbutton-1:active > .toolbarbutton-menubutton-dropmarker::before,
+#nav-bar .toolbaritem-combined-buttons > .toolbarbutton-1:-moz-any(:not(:hover):not([open]),[disabled]) + .toolbarbutton-1:-moz-any(:not(:hover):not([open]),[disabled])::before{
+  content: "" !important;
+  display: -moz-box !important;
+  width: 2px !important;
+  height: 18px !important;
+  -moz-margin-end: -1px !important;
+  border-image: url("images/navbar-separator.png") 0 0 0 2 / 0 0 0 2px !important;
+  background-clip: padding-box !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: 2px 18px !important;
+  box-shadow: none !important;
+  margin-left: -1px !important;
+}
+
+#PanelUI-button {
+  background: none !important;
+  border-image: url("images/navbar-separator.png") 0 0 0 2 / 0 0 0 2px !important;
+}
+
+/*hover*/
+#TabsToolbar .toolbarbutton-1:not([disabled]):hover > .toolbarbutton-icon,
+#TabsToolbar .toolbarbutton-1 > .toolbarbutton-menubutton-button:not([disabled]):hover > .toolbarbutton-icon,
+#nav-bar #forward-button:hover > .toolbarbutton-icon,
+toolbarbutton.bookmark-item:hover,
+#nav-bar .toolbarbutton-1:not([disabled]):-moz-any(:hover,[open]) > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
+#nav-bar .toolbarbutton-1:not([disabled]):hover > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon,
+#nav-bar .toolbarbutton-1:not([disabled]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-icon,
+#nav-bar .toolbarbutton-1:not([disabled]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-text,
+#nav-bar .toolbarbutton-1:not([disabled]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-badge-container {
+  background-color: rgba(0,0,0,0) !important;
+  border-color: #1e201f !important;
+  border-bottom-color: #040404 !important;
+  background-image: linear-gradient(to bottom,
+                                      #545a56,
+                                      #363837
+                                      ) !important;
+  background-clip: padding-box !important;
+  transition: none !important;
+  box-shadow: 0 1px rgba(0,0,0,0.1),
+              inset 0 1px rgba(255,255,255,0.15) !important;
+  color: #F3F5F3 !important;
+  text-shadow: 0 -1px rgba(0,0,0,0.7) !important;
+}
+
+#nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button:not([disabled]):not([open]):not(:active):hover > .toolbarbutton-icon,
+#nav-bar .toolbarbutton-1:not([buttonover]):not([open]):not(:active):hover > .toolbarbutton-menubutton-dropmarker:not([disabled]) > .dropmarker-icon {
+  background-color: rgba(0,0,0,0) !important;
+  border-color: #1e201f !important;
+  border-bottom-color: #040404 !important;
+  background-image: linear-gradient(to bottom,
+                                      #545a56,
+                                      #474A49
+                                      ) !important;
+  background-clip: padding-box !important;
+  transition: none !important;
+  box-shadow: 0 1px rgba(0,0,0,0.1),
+              inset 0 1px rgba(255,255,255,0.15) !important;
+  color: #F3F5F3 !important;
+  text-shadow: 0 -1px rgba(0,0,0,0.7) !important;
+}
+/*active*/
+#nav-bar .toolbarbutton-1[checked]:not(:active):hover > .toolbarbutton-icon,
+#TabsToolbar .toolbarbutton-1:not([disabled]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon,
+#TabsToolbar .toolbarbutton-1 > .toolbarbutton-menubutton-button:not([disabled]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon,
+#nav-bar #forward-button:not([disabled]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon,
+toolbarbutton.bookmark-item:hover:active:not([disabled="true"]),
+toolbarbutton.bookmark-item[open="true"],
+#nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button:not([disabled]):hover:active > .toolbarbutton-icon,
+#nav-bar .toolbarbutton-1[open] > .toolbarbutton-menubutton-dropmarker:not([disabled]) > .dropmarker-icon,
+#nav-bar .toolbarbutton-1:not([disabled]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon,
+#nav-bar .toolbarbutton-1:not([disabled]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-text,
+#nav-bar .toolbarbutton-1:not([disabled]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-badge-container {
+  background-color: rgba(0,0,0,0) !important;
+  border-color: #0d0d0d !important;
+  border-left-color: #1b1b1b !important;
+  border-right-color: #1b1b1b !important;
+  border-bottom-color: #1e1e1e !important;
+  background-image: linear-gradient(to bottom,
+                                      #262726,
+                                      #363937
+                                      ) !important;
+  background-clip: padding-box !important;
+  transition: none !important;
+  box-shadow: 0 1px rgba(255,255,255,0.2),
+              inset 0 1px 2px rgba(0,0,0,0.2) !important;
+  color: #F3F5F3 !important;
+  text-shadow: 0 -1px rgba(0,0,0,0.7) !important;
+}
+
+/*back-button*/
+window:not([chromehidden~="toolbar"]) #urlbar-container > #back-button:not([open]):not(:active):not([disabled]) > .toolbarbutton-icon {
+  border: 1px solid #1e201f !important;
+  background-image: linear-gradient(to bottom,
+                                      #4f5451,
+                                      #353735
+                                      ) !important;
+  box-shadow: 0 1px rgba(0,0,0,0.1),
+              inset 0 1px rgba(255,255,255,0.15) !important;
+  margin-right: -3px !important;
+  color: #F3F5F3 !important;
+  list-style-image: url("images/back.png") !important;
+  -moz-image-region: auto !important;
+}
+
+window:not([chromehidden~="toolbar"]) #urlbar-container > #back-button:not([open]):not(:active):not([disabled]):hover > .toolbarbutton-icon {
+  border: 1px solid #1e201f !important;
+  background-image: linear-gradient(to bottom,
+                                      #545a56,
+                                      #363837
+                                      ) !important;
+}
+
+window:not([chromehidden~="toolbar"]) #urlbar-container > #back-button:not([disabled]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon {
+  border: 1px solid #131414 !important;
+  margin-right: -3px !important;
+  list-style-image: url("images/back.png") !important;
+  -moz-image-region: auto !important;
+}
+
+window:not([chromehidden~="toolbar"]) #urlbar-container > #back-button:-moz-any([disabled],:not([open]):not([disabled]):not(:active)) > .toolbarbutton-icon {
+  border: 1px solid #1e201f !important;
+  background-image: none !important;
+  background-color: #434644 !important;
+  box-shadow: 0 1px rgba(0,0,0,0.1),
+              inset 0 1px rgba(255,255,255,0.15) !important;
+  margin-right: -3px !important;
+  list-style-image: url("images/back-insensitive.png") !important;
+  -moz-image-region: auto !important;
+  opacity: 1 !important;
+}
+
+/*forward-button*/
+#nav-bar #forward-button > .toolbarbutton-icon {
+  border: 1px solid #1e201f !important;
+  background-image: linear-gradient(to bottom,
+                                      #4f5451,
+                                      #353735
+                                      ) !important;
+  box-shadow: 0 1px rgba(0,0,0,0.1),
+              inset 0 1px rgba(255,255,255,0.15) !important;
+  margin-right: -1px !important;
+  list-style-image: url("images/forward.png") !important;
+  -moz-image-region: auto !important;
+}
+
+/*************************** Dropmarker *******************************/
+dropmarker {
+  -moz-appearance: none!important;
+  width: 16px!important;
+  height: 16px!important;
+  -moz-box-align: center!important;
+  -moz-box-pack: center!important;
+  list-style-image: url("images/arrow-dn[dropmarker].png")!important;
+  -moz-image-region: auto!important;
+}
+
+dropmarker:hover:active:not([disabled="true"]) {
+  padding-top: 2px!important;
+  padding-bottom: 0px!important;
+  -moz-padding-start: 2px!important;
+  -moz-padding-end: 0px!important;
+}
+
+dropmarker[disabled="true"] {
+  list-style-image: url("images/arrow-dn-dis.gif") !important;
+}
+
+.searchbar-dropmarker-image {
+  -moz-appearance: none!important;
+  list-style-image: url("images/arrow-dn[dropmarker].png")!important;
+  -moz-image-region: auto!important;
+  width: 7px!important;
+  height: 4px!important;
+  margin: 4px !important;
+  margin-left: 7px !important;
+}
+
+/*************************** Search Popup *******************************/
+.search-panel-current-engine {
+  border-bottom: 1px solid #151615 !important;
+}
+
+.search-panel-header {
+  background-color: #353836 !important;
+  border-top: 1px solid #151615 !important;
+  margin: 0 1px;
+  padding: 3px 5px;
+  color: #F3F5F3 !important;
+}
+
+.search-panel-input-value {
+  color: white !important;
+}
+
+.searchbar-engine-one-off-item {
+  border-right: 1px solid #202120 !important;
+  background-image: none !important;
+}
+
+.addengine-item:first-of-type,
+.search-panel-one-offs {
+  border-top: 1px solid #151615 !important;
+}
+
+.searchbar-engine-one-off-item:not(.last-row) {
+  border-bottom: 1px solid #202120 !important;
+}
+
+/*************************** Window Controls *******************************/
+#close-button, #restore-button, #minimize-button {
+  -moz-appearance: none !important;
+  list-style-image: url("images/window_button.svg") !important;
+  padding: 7px 6px 5px 6px !important;
+}
+
+#close-button:hover { list-style-image: url("images/close_prelight.svg") !important; }
+#close-button:active { list-style-image: url("images/close_pressed.svg") !important; }
+
+#restore-button:hover { list-style-image: url("images/max_prelight.svg") !important; }
+#restore-button:active { list-style-image: url("images/max_pressed.svg") !important; }
+
+#minimize-button:hover { list-style-image: url("images/min_prelight.svg") !important; }
+#minimize-button:active { list-style-image: url("images/min_pressed.svg") !important; }
+
+/* i really want this to be global */
+
+.autocomplete-richlistitem
+{
+    background: #2B2C2B !important;
+}
+
+.autocomplete-richlistitem[selected="true"]
+{
+    background: #16A085 !important;
+}
+
+.autocomplete-richlistitem[selected="true"]
+{
+    color: #1e1e1e !important;
+}
+
+.ac-normal-text {
+  color: #EAEAEA !important;
+}
+
+.ac-normal-text:hover {
+  color: #1e1e1e !important;
+}
+
+.ac-normal-text.ac-url-text {
+  color: #EAEAEA !important;
+}
+
+.ac-normal-text.ac-url-text:hover {
+  color: #393F3F !important;
+}
