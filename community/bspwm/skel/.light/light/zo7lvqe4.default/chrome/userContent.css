@@ -1,0 +1,251 @@
+@namespace html "http://www.w3.org/1999/xhtml";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/************ Fixes Color of Input/Entry Boxes within Web-Pages **************/
+input,
+textarea,
+select {
+  border-width: 1px !important;
+  border-radius: 2px;
+  background-color: white;
+  color: #333333;
+  -moz-appearance: none;
+}
+/*
+input[type="radio"],
+input[type="checkbox"] {
+border: 2px inset white ! important;
+background-color: white ! important;
+color: ThreeDFace ! important;
+-moz-appearance: none !important;
+}
+
+*|*::-moz-radio {
+background-color: white;
+-moz-appearance: none !important;
+}
+*/
+button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
+  border-width: 1px !important;
+  border-radius: 2px;
+  background-color: #eeeeee;
+  color: #333333;
+  -moz-appearance: none;
+}
+/*
+body {
+background-color: white;
+color: #333333;
+display: block;
+margin: 8px;
+-moz-appearance: none !important;
+}*/
+
+#header-search {
+  -moz-appearance: none !important;
+  padding-bottom: 3px !important;
+  color: #F3F5F3 !important;
+  background-color: #313133 !important;
+  border-radius: 2px !important;
+  border: 1px solid #171717 !important;
+  border-top-color: #0f0f0f !important;
+  transition: none !important;
+  box-shadow: 0 1px rgba(255,255,255,0.15),
+              inset 0 1px rgba(0,0,0,0.1) !important;
+}
+
+#header-search[focused="true"] {
+  -moz-appearance: none !important;
+  padding-bottom: 3px !important;
+  color: #F3F5F3 !important;
+  background-color: #313133 !important;
+  border-radius: 2px !important;
+  border: 1px solid #171717 !important;
+  border-top-color: #0f0f0f !important;
+  transition: none !important;
+  box-shadow: 0 1px rgba(255,255,255,0.15),
+              inset 0 1px #16a085,
+              inset 0 -1px #16a085,
+              inset 1px 0 #16a085,
+              inset -1px 0 #16a085 !important;
+}
+
+#header-search input,
+#header-search textarea {
+    -moz-appearance: none !important;
+  border: none !important;
+  color: #F3F5F3 !important;
+  background-color: #313133 !important;
+}
+
+/************ about pages **************/
+@-moz-document url("about:privatebrowsing") {
+
+  html|body {
+    background-color: #2b2c2b !important;
+    color: #F3F5F3 !important;
+  }
+
+}
+
+@-moz-document url("about:newtab") {
+
+  :root {
+    background-color: #2b2c2b !important;
+  }
+
+  /* SCROLLBOX */
+  #newtab-scrollbox:not([page-disabled]) {
+    color: #F3F5F3 !important;
+    background-color: #2b2c2b !important;
+  }
+
+  /* UNDO */
+  #newtab-undo-container {
+    border-color: #151615 !important;
+    background-color: rgba(255,255,255,.2) !important;
+    color: #F3F5F3 !important;
+  }
+
+  .newtab-undo-button {
+    color: #FF5317 !important;
+  }
+
+  #newtab-intro-panel h1 {
+    color: #B2C4BD !important;
+  }
+
+  /* SITES */
+  .newtab-site {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.8) !important;
+  }
+
+  .newtab-cell:not([ignorehover]) > .newtab-site:hover,
+  .newtab-site[dragged] {
+    border: 1px solid rgba(0,0,0,0.1) !important;
+    box-shadow: 0 0 6px 2px #16a085 !important;
+    margin: -1px !important;
+  }
+
+  /* TITLES */
+  #newtab-intro-what,
+  .newtab-sponsored,
+  .newtab-title {
+    color: #B9BAB9 !important;
+  }
+
+  .newtab-site:hover .newtab-title {
+    color: #F3F5F3 !important;
+  }
+
+  /* SEARCH */
+  #newtab-search-logo[active],
+  #newtab-search-logo:hover {
+    background-color: #444745 !important;
+    border: 1px solid rgba(0, 0, 0, 0.5) !important;
+  }
+
+  #newtab-search-text {
+    color: #F3F5F3 !important;
+    background: #232423 padding-box !important;
+    border: 1px solid #171717 !important;
+    border-top-color: #0f0f0f !important;
+    transition: none !important;
+    box-shadow: 0 1px rgba(255,255,255,0.1),
+                inset 0 1px rgba(0,0,0,0.1) !important;
+  }
+
+  #newtab-search-text:focus,
+  #newtab-search-text[autofocus] {
+    border-color: #16a085 !important;
+  }
+
+  #newtab-search-submit {
+    background-image: linear-gradient(to bottom,
+                                        #4f5451,
+                                        #353735
+                                        ) !important;
+    border: 1px solid #171717 !important;
+    border-top-color: #0f0f0f !important;
+    box-shadow: 0 1px rgba(255,255,255,0.1),
+                inset 0 1px rgba(255,255,255,0.15) !important;
+  }
+
+  #newtab-search-text:focus + #newtab-search-submit,
+  #newtab-search-text + #newtab-search-submit:hover,
+  #newtab-search-text[autofocus] + #newtab-search-submit {
+    border-color: #59fcb5 #45e7a3 #32d594 !important;
+  }
+
+  #newtab-search-text:focus + #newtab-search-submit,
+  #newtab-search-text[autofocus] + #newtab-search-submit {
+    background-image: linear-gradient(#16a085, #16a085) !important;
+    box-shadow: 0 1px 0 hsla(0,0%,100%,.2) inset,
+                0 0 0 1px hsla(0,0%,100%,.1) inset,
+                0 1px 0 hsla(210,54%,20%,.03) !important;
+  }
+
+  #newtab-search-text + #newtab-search-submit:hover {
+    background-image: linear-gradient(#66ffbd, #0dff9e) !important;
+    box-shadow: 0 1px 0 hsla(0,0%,100%,.2) inset,
+                0 0 0 1px hsla(0,0%,100%,.1) inset,
+                0 1px 0 hsla(210,54%,20%,.03),
+                0 0 4px hsla(206,100%,20%,.2) !important;
+  }
+
+  #newtab-search-text + #newtab-search-submit:hover:active {
+    box-shadow: 0 1px 1px hsla(211,79%,6%,.1) inset,
+                0 0 1px hsla(211,79%,6%,.2) inset !important;
+  }
+
+  #newtab-customize-panel .panel-arrowcontent,
+  #newtab-search-panel .panel-arrowcontent {
+    background: #353836 !important;
+  }
+
+  .newtab-customize-panel-item:not(:last-child),
+  .newtab-search-panel-engine:not(:last-child) {
+    border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+  }
+
+  .newtab-customize-panel-item > label,
+  .newtab-search-panel-engine > label {
+    color: #F3F5F3 !important;
+  }
+
+  .searchSuggestionTable {
+    background-color: #1E1F1E !important;
+    border-color: #1a1a1a !important;
+    box-shadow: none !important;
+  }
+
+  .searchSuggestionRow.formHistory + .searchSuggestionRow.remote > td {
+    border-top: 1px solid rgba(255,255,255,0.1) !important;
+  }
+
+}
+
+@-moz-document url("about:blank") {
+
+  body {
+    background-color: #2b2c2b;
+  }
+
+}
+
+/*Fix unreadable treeview text*/
+xul|treechildren::-moz-tree-cell-text {
+  color: #F3F5F3 !important;
+}
+
+
+/*Make about:config list readable*/
+#configTreeBody::-moz-tree-cell-text() {
+  color: white !important;
+}
+
