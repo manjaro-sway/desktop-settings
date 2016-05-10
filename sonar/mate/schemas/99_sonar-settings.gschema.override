@@ -49,7 +49,8 @@ volume-mute='<Ctrl><Mod4>m'
 volume-step=5
 logout='<Mod4>l'
 
-[org.mate.desktop.keybindings.custom-0]action='mate-system-monitor'
+[org.mate.desktop.keybindings.custom-0]
+action='mate-system-monitor'
 binding='<Mod4>s'
 name='open system monitor'
 
