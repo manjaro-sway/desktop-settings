@@ -39,7 +39,6 @@ volume-down='AudioLowerVolume'
 magnifier-zoom-in='<Super>equal'
 increase-text-size='<Alt>equal'
 magnifier='<Alt><Super>z'
-custom-keybindings=['org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0', 'org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom1']
 volume-mute='AudioMute'
 on-screen-keyboard='<Alt><Super>k'
 
@@ -50,8 +49,8 @@ binding='<Super>s'
 command='gnome-system-monitor'
 name='open system monitor'
 [org.gnome.settings-daemon.plugins.media-keys.custom-1]
-action='ocrdesktop'
-binding='<Alt><Mod4>o'
+command='ocrdesktop'
+binding='<Alt><Super>o'
 name='ocr the current window'
 [org.gnome.gedit.preferences.editor]
 display-line-numbers='true'
