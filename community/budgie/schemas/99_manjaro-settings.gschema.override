@@ -13,3 +13,6 @@ show-desktop-icons=false
 cursor-theme='Simple-and-Soft'
 gtk-theme='Vertex-Maia-Dark'
 icon-theme='Vertex-Maia'
+
+[org.gnome.Terminal.Legacy.Settings]
+schema-version=3
