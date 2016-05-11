@@ -6,10 +6,10 @@ show-desktop-icons=true
 gtk-theme='Vertex-Maia'
 icon-theme='maia'
 
-[org.gnome.a11y]
-screen-keyboard-enabled=false
-screen-magnifier-enabled=false
-screen-reader-enabled=true
+[org.gnome.a11y.applications]
+screen-keyboard-enabled='false'
+screen-magnifier-enabled='false'
+screen-reader-enabled='true'
 
 [org.gnome.sound]
 event-sounds='true'
@@ -32,7 +32,7 @@ automatic-timezone='true'
 decrease-text-size='<Alt>minus'
 screenreader='<Alt><Super>s'
 magnifier-zoom-out='<Super>minus'
-control-center='<Super>i'
+control-center='<Super>t'
 toggle-contrast='<Alt><Super>h'
 volume-up='AudioRaiseVolume'
 volume-down='AudioLowerVolume'
