@@ -49,6 +49,21 @@ volume-mute='<Ctrl><Mod4>m'
 volume-step=5
 logout='<Mod4>l'
 
+[org.mate.desktop.keybindings.custom-0]
+action='mate-system-monitor'
+binding='<Mod4>s'
+name='open system monitor'
+
+[org.mate.desktop.keybindings.custom-1]
+action='mate-panel --replace'
+binding='<Mod4>r'
+name='restart the panel'
+
+[org.mate.desktop.keybindings.custom-2]
+action='ocrdesktop'
+binding='<Alt><Mod4>o'
+name='ocr the current window'
+
 [org.gnome.Terminal.Legacy.Profile]
 allow-bold=true
 use-theme-colors=false
