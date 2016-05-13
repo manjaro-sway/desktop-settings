@@ -9,15 +9,15 @@ icon-theme='maia'
 [org.gnome.a11y.applications]
 screen-keyboard-enabled='false'
 screen-magnifier-enabled='false'
-screen-reader-enabled='true'
+screen-reader-enabled='True'
 
 [org.gnome.sound]
-event-sounds='true'
-input-feedback-sounds='true'
-theme-name='sonar'
+event-sounds='True'
+input-feedback-sounds='True'
+theme-name='Sonar'
 
 [org.gnome.input-sources]
-show-all-sources='true'
+show-all-sources='True'
 
 [org.gnome.wm.preferences]
 button-layout='appmenu:minimize,maximize,close'
@@ -26,7 +26,7 @@ button-layout='appmenu:minimize,maximize,close'
 picture-uri='file:///usr/share/backgrounds/sonar.jpg'
 
 [org.gnome.datetime]
-automatic-timezone='true'
+automatic-timezone='True'
 
 [org.gnome.settings-daemon.plugins.media-keys]
 decrease-text-size='<Alt>minus'
@@ -56,7 +56,7 @@ name='ocr the current window'
 display-line-numbers='true'
 
 [org.gnome.nautilus.preferences]
-sort-directories-first='true'
+sort-directories-first='True'
 
 [org.gnome.shell]
 favorite-apps=['org.gnome.Nautilus.desktop', 'gnome-terminal.desktop', 'gnome-control-center.desktop', 'gnome-tweak-tool.desktop', 'ca.desrt.dconf-editor.desktop']

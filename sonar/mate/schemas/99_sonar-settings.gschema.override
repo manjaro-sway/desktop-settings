@@ -5,7 +5,8 @@ picture-filename='/usr/share/backgrounds/sonar.jpg'
 theme='coco'
 
 [org.mate.accessibility-keyboard]
-enable=false
+togglekeys-enable=true
+enable=true
 
 [org.mate.applications-at-mobility]
 startup=false
@@ -72,3 +73,8 @@ foreground-color='rgb(255,255,255)'
 font='Monospace Regular 12'
 rewrap-on-resize=true
 visible-name='sonar'
+[org.mate.notification-daemon]
+popup-location='bottom_right'
+[org.mate.settings-daemon.plugins.xrandr]
+show-notification-icon='true'
+
