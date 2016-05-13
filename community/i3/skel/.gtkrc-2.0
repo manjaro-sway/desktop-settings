@@ -1,5 +1,5 @@
-gtk-theme-name="Numix Solarized"
-gtk-icon-theme-name="AwOken"
+gtk-theme-name="Vertex-Maia-Dark"
+gtk-icon-theme-name="Breeze-Maia-Dark"
 gtk-font-name="Cantarell 10"
 gtk-cursor-theme-name="Chameleon-Pearl-Regular-0.5"
 gtk-cursor-theme-size=0
@@ -11,6 +11,5 @@ gtk-enable-event-sounds=0
 gtk-enable-input-feedback-sounds=0
 gtk-xft-antialias=1
 gtk-xft-hinting=1
-gtk-xft-hintstyle="hintslight"
+gtk-xft-hintstyle="hintfull"
 gtk-xft-rgba="rgb"
-gtk-modules="gail:atk-bridge"

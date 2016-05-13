@@ -7,17 +7,17 @@ gtk-theme='Vertex-Maia'
 icon-theme='maia'
 
 [org.gnome.a11y.applications]
-screen-keyboard-enabled=false
-screen-magnifier-enabled=false
-screen-reader-enabled=true
+screen-keyboard-enabled='false'
+screen-magnifier-enabled='false'
+screen-reader-enabled='True'
 
 [org.gnome.sound]
-event-sounds=true
-input-feedback-sounds=true
-theme-name=sonar
+event-sounds='True'
+input-feedback-sounds='True'
+theme-name='Sonar'
 
 [org.gnome.input-sources]
-show-all-sources=true
+show-all-sources='True'
 
 [org.gnome.wm.preferences]
 button-layout='appmenu:minimize,maximize,close'
@@ -26,29 +26,37 @@ button-layout='appmenu:minimize,maximize,close'
 picture-uri='file:///usr/share/backgrounds/sonar.jpg'
 
 [org.gnome.datetime]
-automatic-timezone=true
+automatic-timezone='True'
 
 [org.gnome.settings-daemon.plugins.media-keys]
+decrease-text-size='<Alt>minus'
+screenreader='<Alt><Super>s'
+magnifier-zoom-out='<Super>minus'
+control-center='<Super>t'
+toggle-contrast='<Alt><Super>h'
+volume-up='AudioRaiseVolume'
+volume-down='AudioLowerVolume'
+magnifier-zoom-in='<Super>equal'
+increase-text-size='<Alt>equal'
 magnifier='<Alt><Super>z'
-magnifier-zoom-in='<Alt><Super>plus'
-magnifier-zoom-out='<Alt><Super>minus'
-volume-down='<Primary><Super>Down'
-volume-mute='<Primary><Super>m'
-volume-up='<Primary><Super>Up'
-control-center='<Super>I'
+volume-mute='AudioMute'
+on-screen-keyboard='<Alt><Super>k'
 
 [org.gnome.wm.keybindings]
-show-desktop='<Primary><Alt>d
-[org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0]
+show-desktop='<Primary><Alt>D'
+[org.gnome.settings-daemon.plugins.media-keys.custom-0]
+binding='<Super>s'
+command='gnome-system-monitor'
+name='open system monitor'
+[org.gnome.settings-daemon.plugins.media-keys.custom-1]
+command='ocrdesktop'
 binding='<Alt><Super>o'
-command='/usr/bin/ocrdesktop'
-name='ocrdesktop'
-
+name='ocr the current window'
 [org.gnome.gedit.preferences.editor]
-display-line-numbers=true
+display-line-numbers='true'
 
 [org.gnome.nautilus.preferences]
-sort-directories-first=true
+sort-directories-first='True'
 
 [org.gnome.shell]
 favorite-apps=['org.gnome.Nautilus.desktop', 'gnome-terminal.desktop', 'gnome-control-center.desktop', 'gnome-tweak-tool.desktop', 'ca.desrt.dconf-editor.desktop']
