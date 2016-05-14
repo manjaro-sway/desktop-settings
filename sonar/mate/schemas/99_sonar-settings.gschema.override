@@ -42,6 +42,11 @@ cursor-theme='Breeze'
 [org.mate.panel]
 default-layout='sonar'
 
+[org.mate.panel.toplevels.bottom.background]
+image='/usr/share/backgrounds/sonar.jpg'
+type='image'
+auto-hide=true
+
 [org.mate.SettingsDaemon.plugins.media-keys]
 screenreader='<Alt><Mod4>s'
 volume-down='<Ctrl><Mod4>Down'
