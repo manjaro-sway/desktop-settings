@@ -78,8 +78,14 @@ foreground-color='rgb(255,255,255)'
 font='Monospace Regular 12'
 rewrap-on-resize=true
 visible-name='sonar'
+
 [org.mate.notification-daemon]
 popup-location='bottom_right'
+
 [org.mate.settings-daemon.plugins.xrandr]
 show-notification-icon='true'
+
+[org.mate.screensaver]
+mode='random'
+lock-enabled=true
 
