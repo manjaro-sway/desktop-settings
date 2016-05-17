@@ -19,6 +19,9 @@ theme-name='Sonar'
 [org.gnome.input-sources]
 show-all-sources='True'
 
+[org.gnome.interface]
+toolkit-accessibility=true
+
 [org.gnome.wm.preferences]
 button-layout='appmenu:minimize,maximize,close'
 

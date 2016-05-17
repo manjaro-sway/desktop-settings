@@ -7,7 +7,7 @@ theme='coco'
 [org.mate.accessibility-keyboard]
 togglekeys-enable=true
 enable=true
-
+feature-state-change-beep=true
 [org.mate.applications-at-mobility]
 startup=false
 
@@ -39,13 +39,15 @@ monospace-font-name='Monospace 11'
 [org.mate.peripherals-mouse]
 cursor-theme='Breeze'
 
-[org.mate.panel]
+[org.mate.panel.toplevels.bottom]
 default-layout='sonar'
+expand=true
+auto-hide=true
+size=40
 
 [org.mate.panel.toplevels.bottom.background]
-image='/usr/share/backgrounds/sonar.jpg'
-type='image'
-auto-hide=true
+image=/usr/share/backgrounds/sonar.jpg
+type=image
 
 [org.mate.SettingsDaemon.plugins.media-keys]
 screenreader='<Alt><Mod4>s'
