@@ -37,7 +37,7 @@ menus-have-icons=true
 monospace-font-name='Monospace 11'
 
 [org.mate.peripherals-mouse]
-cursor-theme='Maia'
+cursor-theme='Maia-Cursor'
 
 [org.mate.panel.toplevels.bottom]
 default-layout='sonar'
