@@ -20,7 +20,7 @@ theme-name='sonar'
 startup=true
 
 [org.mate.Marco.general]
-theme='Adwaita-Manjaro-dark'
+theme='Vertex-Maia'
 compositing-fast-alt-tab=true
 
 [org.mate.applications-terminal]
@@ -31,13 +31,13 @@ accessibility=true
 buttons-have-icons=true
 document-font-name='Sans 11'
 font-name='Sans 11'
-gtk-theme='Adwaita-Manjaro-dark'
+gtk-theme='Vertex-Maia'
 icon-theme='mate'
 menus-have-icons=true
 monospace-font-name='Monospace 11'
 
 [org.mate.peripherals-mouse]
-cursor-theme='Breeze'
+cursor-theme='Maia'
 
 [org.mate.panel.toplevels.bottom]
 default-layout='sonar'
