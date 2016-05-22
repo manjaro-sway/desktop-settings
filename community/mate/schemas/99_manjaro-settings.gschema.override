@@ -1,7 +1,7 @@
 [org.mate.background]
 picture-filename='/usr/share/backgrounds/maia.png'
 
-[org.mate.desktop.interface]
+[org.mate.interface]
 cursor-theme="Maia-Cursor"
 gtk-theme='Vertex-Maia'
 icon-theme='Vertex-Maia'
