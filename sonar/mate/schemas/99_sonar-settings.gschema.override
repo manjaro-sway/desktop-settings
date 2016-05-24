@@ -5,8 +5,9 @@ picture-filename='/usr/share/backgrounds/sonar.jpg'
 theme='coco'
 
 [org.mate.accessibility-keyboard]
-enable=false
-
+togglekeys-enable=true
+enable=true
+feature-state-change-beep=true
 [org.mate.applications-at-mobility]
 startup=false
 
@@ -19,7 +20,7 @@ theme-name='sonar'
 startup=true
 
 [org.mate.Marco.general]
-theme='Adwaita-Manjaro-dark'
+theme='Vertex-Maia'
 compositing-fast-alt-tab=true
 
 [org.mate.applications-terminal]
@@ -30,16 +31,23 @@ accessibility=true
 buttons-have-icons=true
 document-font-name='Sans 11'
 font-name='Sans 11'
-gtk-theme='Adwaita-Manjaro-dark'
-icon-theme='mate'
+gtk-theme='Vertex-Maia'
+icon-theme='Vertex-Maia'
 menus-have-icons=true
 monospace-font-name='Monospace 11'
 
 [org.mate.peripherals-mouse]
-cursor-theme='Breeze'
+cursor-theme='Maia-Cursor'
 
-[org.mate.panel]
+[org.mate.panel.toplevels.bottom]
 default-layout='sonar'
+expand=true
+auto-hide=true
+size=40
+
+[org.mate.panel.toplevels.bottom.background]
+image=/usr/share/backgrounds/sonar.jpg
+type=image
 
 [org.mate.SettingsDaemon.plugins.media-keys]
 screenreader='<Alt><Mod4>s'
@@ -72,3 +80,14 @@ foreground-color='rgb(255,255,255)'
 font='Monospace Regular 12'
 rewrap-on-resize=true
 visible-name='sonar'
+
+[org.mate.notification-daemon]
+popup-location='bottom_right'
+
+[org.mate.settings-daemon.plugins.xrandr]
+show-notification-icon='true'
+
+[org.mate.screensaver]
+mode='random'
+lock-enabled=true
+

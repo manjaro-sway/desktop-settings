@@ -1,7 +1,14 @@
-[org.mate.desktop.background]
-picture-uri="file:///usr/share/backgrounds/mate1511.png"
+[org.mate.background]
+picture-filename='/usr/share/backgrounds/maia.png'
 
-[org.mate.desktop.interface]
-cursor-theme="Menda-Cursor"
-gtk-theme="Maia"
-icon-theme="maia"
+[org.mate.interface]
+cursor-theme="Maia-Cursor"
+gtk-theme='Vertex-Maia'
+icon-theme='Vertex-Maia'
+
+[org.mate.Marco.general]
+theme='Vertex-Maia'
+compositing-fast-alt-tab=true
+
+[org.mate.peripherals-mouse]
+cursor-theme='Maia-Cursor'
