@@ -1,0 +1,1 @@
+/home/matti/.config/fisherman/maia/fish_title.fish

@@ -1,0 +1,1 @@
+/home/matti/.config/fisherman/await/functions/await.fish

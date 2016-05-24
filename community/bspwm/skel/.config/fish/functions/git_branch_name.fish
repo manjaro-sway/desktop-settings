@@ -1,0 +1,1 @@
+/home/matti/.config/fisherman/git_util/functions/git_branch_name.fish
