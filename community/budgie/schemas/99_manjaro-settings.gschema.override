@@ -11,8 +11,16 @@ show-desktop-icons=false
 
 [org.gnome.desktop.interface]
 cursor-theme='Simple-and-Soft'
+documen-font-name='Sans 10'
+enable-animations=true
+font-name='Cantarell 10'
+gtk-im-module='gtk-im-context-simple'
 gtk-theme='Vertex-Maia-Dark'
 icon-theme='Vertex-Maia'
+monospace-font-name='Monospace 10'
 
-[org.gnome.Terminal.Legacy.Settings]
-schema-version=3
+[org.gnome.nautilus.icon-view]
+default-zoom-level='small'
+
+
+
