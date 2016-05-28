@@ -4,7 +4,7 @@ font_size = 11
 color_scheme = grey_on_black
 font_color = #aaaaaa
 background_color = #000000
-background_transparent = 0.9
+background_transparent = 0.8
 
 [keybind]
 show_manual = F1
