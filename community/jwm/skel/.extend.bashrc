@@ -1,5 +1,5 @@
 #
-# ~/.bashrc
+# ~/.extend.bashrc
 #
 
 if [ -f /etc/bash_completion ]; then
