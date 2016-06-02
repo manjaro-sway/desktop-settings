@@ -2,21 +2,19 @@
 <JWM>
 
     <!-- Tray of the environment. -->
-    <Tray x="0" y="-1" height="23" autohide="off" halign="fixed" valign="bottom">
+    <Tray x="0" y="-1" height="23" autohide="off" valign="top">
 	<Spacer width="5"/>
-        <TrayButton icon="/usr/share/lxdm/themes/GrayOrange/nobody.png" label="Apps">root:3</TrayButton>
+        <TrayButton label="Apps">root:3</TrayButton>
         <Spacer width="5"/>
-	<TrayButton icon="/usr/share/icons/Ultra Flat Orange/places/scalable/folder.svg" label="Places">root:7</TrayButton>
+	<TrayButton label="Places">root:7</TrayButton>
 	<Spacer width="5"/>
-	<TrayButton icon="/usr/share/icons/Ultra Flat Orange/apps/scalable/cs-language.svg" popup="Web Browser">exec:palemoon</TrayButton>
-	<Spacer width="5"/>
-        <Pager labeled="true"/>
+	 <Pager labeled="true"/>
         <TaskList maxwidth="130" border="false"/>
 	<Dock/>
 	<Spacer width="5"/>
-        <Clock format="%H:%M:%S"></Clock>
+        <Clock format="%H:%M"></Clock>
 	<Spacer width="5"/>
-	<TrayButton icon="/usr/share/icons/Ultra Flat Orange/actions/scalable/system-shutdown.svg" popup="Exit">exec:oblogout</TrayButton>
+	<TrayButton label="Exit">exec:oblogout</TrayButton>
 	<Spacer width="5"/>
      </Tray>
 

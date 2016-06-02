@@ -1,5 +1,5 @@
 #
-# ~/.extend.bashrc
+# ~/.bashrc
 #
 
 if [ -f /etc/bash_completion ]; then
@@ -23,8 +23,6 @@ shopt -s nocaseglob
 export HISTSIZE=10000
 export HISTFILESIZE=${HISTSIZE}
 export HISTCONTROL=ignoreboth
-
-# to avoid xdg-open fork-bomb, export $BROWSER from here
 export BROWSER=/usr/bin/palemoon
 
 # Alias system
@@ -63,7 +61,8 @@ alias np='nano PKGBUILD'
     }
 
 # greetings
-echo Hello, welcome to Manjaro JWM Community Edition!
+echo Welcome to Manjaro JWM Community Edition!
+echo
 
 # prompt programmed
-PS1="\[\e[0;1m\]┌─(\[\e[31;1m\]\u\[\e[0;1m\]) > {\[\e[36;1m\]\w\[\e[0;1m\]}\n└──┤ \[\e[0m\]"
+PS1="┌─[\d][\u@\h:\w]\n└─> "

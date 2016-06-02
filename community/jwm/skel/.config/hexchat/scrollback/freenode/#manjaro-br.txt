@@ -1,6 +1,0 @@
-T 1458610460 19*	Agora falando em 22#manjaro-br
-T 1458610460 22*	Tópico para 22#manjaro-br é: IRC Manjaro Brasil - www.manjaro-linux.com.br
-T 1458610460 22*	Tópico do 22#manjaro-br definido por 26holmeslinux!~holmeslin@unaffiliated/holmeslinux (24Sat Dec  5 15:50:18 2015)
-T 1458610480 19*	Agora falando em 22#manjaro-br
-T 1458610480 22*	Tópico para 22#manjaro-br é: IRC Manjaro Brasil - www.manjaro-linux.com.br
-T 1458610480 22*	Tópico do 22#manjaro-br definido por 26holmeslinux!~holmeslin@unaffiliated/holmeslinux (24Sat Dec  5 15:50:18 2015)
