@@ -8,7 +8,7 @@ notification_type=1
 [StatusIcon]
 stepsize=5
 onclick=xterm -e 'alsamixer'
-theme=White Gnome
+theme=Default
 use_panel_specific_icons=true
 lmb_slider=true
 mmb_mute=true
