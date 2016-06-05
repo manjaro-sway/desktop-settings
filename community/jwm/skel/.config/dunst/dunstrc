@@ -31,7 +31,7 @@ indicate_hidden = yes
     
 # Alignment of message text.
 # Possible values are "left", "center" and "right".
-alignment = left
+alignment = center
     
 # The frequency with wich text that is longer than the notification
 # window allows bounces back and forth.
@@ -63,7 +63,7 @@ ignore_newline = no
 # the top and down respectevly.
 # The width can be negative.  In this case the actual width is the
 # screen width minus the width defined in within the geometry option.
-geometry = "0x0+27+27"
+geometry = "0x0-1000-27"
     
 # Shrink window if it's smaller than the width.  Will be ignored if
 # width is 0.
@@ -141,7 +141,7 @@ browser = palemoon
 
 [frame]
 width = 1
-color = "#31363d"
+color = "#2b2c2b"
 
 [shortcuts]
 # Shortcuts are specified as [modifier+][modifier+]...key
@@ -167,18 +167,18 @@ context = ctrl+alt+c
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-background = "#ffffff"
-foreground = "#444851"
+background = "#454947"
+foreground = "#ffffff"
 timeout = 5
 
 [urgency_normal]
-background = "#db6823"
-foreground = "#444851"
+background = "#2b2c2b"
+foreground = "#ffffff"
 timeout = 10
 
 [urgency_critical]
-background = "#999999"
-foreground = "#444851"
+background = "#2b2c2b"
+foreground = "#ffffff"
 timeout = 0
 
 #Applications
@@ -186,5 +186,5 @@ timeout = 0
 [HexChat]
 appname = HexChat
 timeout = 0
-background = "#db6823"
-foreground = "#444851"
+background = "#454947"
+foreground = "#ffffff"
