@@ -22,5 +22,11 @@ monospace-font-name='Monospace 10'
 [org.gnome.nautilus.icon-view]
 default-zoom-level='small'
 
+[org.gnome.desktop.peripherals.touchpad]
+natural-scroll=false
+scroll-method='two-finger-scrolling'
+tap-to-click=true
+
+
 
 
