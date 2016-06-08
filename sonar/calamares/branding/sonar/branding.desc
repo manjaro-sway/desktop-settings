@@ -4,10 +4,10 @@ componentName:  sonar
 strings:
     productName:         Sonar GNU Linux
     shortProductName:    Sonar
-    version:             2016.1
-    shortVersion:        2016.1
-    versionedName:       Sonar GNU Linux  2016.1
-    shortVersionedName:  Sonar Linux 2016.1
+    version:             2016.06
+    shortVersion:        2016.06
+    versionedName:       Sonar GNU Linux  2016.06
+    shortVersionedName:  Sonar Linux 2016.06
     bootloaderEntryName: Sonar
 
 images:
