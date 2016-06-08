@@ -2,7 +2,7 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 gtk-theme-name="Vertex-Maia"
-gtk-icon-theme-name="maia"
+gtk-icon-theme-name="Vertex-Maia"
 gtk-font-name="Cantarell 11"
 gtk-cursor-theme-name="Menda-Cursor"
 gtk-cursor-theme-size=0
