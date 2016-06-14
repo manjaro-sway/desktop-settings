@@ -22,6 +22,7 @@ image/svg+xml=eog.desktop
 image/svg+xml-compressed=eog.desktop
 image/vnd.wap.wbmp=eog.desktop
 application/pdf=evince.desktop
+application/x-bittorrent=transmission-gtk.desktop
 
 [Added Associations]
 image/bmp=eog.desktop;
@@ -47,3 +48,4 @@ image/svg+xml=eog.desktop;
 image/svg+xml-compressed=eog.desktop;
 image/vnd.wap.wbmp=eog.desktop;
 application/pdf=evince.desktop;
+application/x-bittorrent=transmission-gtk.desktop;
