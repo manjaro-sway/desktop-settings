@@ -34,4 +34,29 @@
 	<Option>centered</Option>
     </Group>
 
+    <Group>
+        <Name>deadbeef</Name>
+        <Option>centered</Option>
+    </Group>
+
+    <Group>
+        <Name>smplayer</Name>
+        <Option>centered</Option>
+    </Group>
+
+    <Group>
+        <Name>hexchat</Name>
+        <Option>centered</Option>
+    </Group>
+
+    <Group>
+        <Name>palemoon</Name>
+        <Option>maximized</Option>
+    </Group>
+
+    <Group>
+        <Name>epdfview</Name>
+        <Option>centered</Option>
+    </Group>
+
 </JWM>

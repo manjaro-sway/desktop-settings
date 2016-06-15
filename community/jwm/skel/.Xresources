@@ -1,10 +1,10 @@
 ! XTerm Settings
-*background: #db6823
-*foreground: #444851
+*background: #16a085
+*foreground: #2b2c2b
 xterm*reverseVideo: on
 xterm*faceName: Liberation Mono:size=10:antialias=true
 xterm*font: 7x13
-xterm*geometry: 80x24
+xterm*geometry: 76x27
 
 ! Rofi Settings
 rofi.opacity: 90

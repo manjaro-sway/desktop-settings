@@ -4,8 +4,13 @@ show-desktop-icons=false
 
 [org.gnome.desktop.interface]
 cursor-theme='Simple-and-Soft'
+documen-font-name='Sans 10'
+enable-animations=true
+font-name='Cantarell 10'
+gtk-im-module='gtk-im-context-simple'
 gtk-theme='Vertex-Maia-Dark'
 icon-theme='Vertex-Maia'
+monospace-font-name='Monospace 10'
 
 [org.gnome.desktop.wm.preferences]
 titlebar-uses-system-font=false
@@ -14,10 +19,21 @@ button-layout='appmenu:minimize,maximize,close'
 [org.gnome.shell]
 always-show-log-out=true
 favorite-apps=['pamac-manager.desktop', 'firefox.desktop', 'empathy.desktop', 'org.gnome.Nautilus.desktop', 'gnome-terminal.desktop', 'org.gnome.gedit.desktop', 'hexchat.desktop', 'org.gnome.Screenshot.desktop', 'ca.desrt.dconf-editor.desktop']
-enabled-extensions=['dash-to-dock@micxgx.gmail.com', 'gnomenu@panacier.gmail.com', 'mediaplayer@patapon.info', 'openweather-extension@jenslody.de', 'drive-menu@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['dash-to-dock@micxgx.gmail.com', 'gnomenu@panacier.gmail.com', 'mediaplayer@patapon.info', 'openweather-extension@jenslody.de', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']
 
 [org.gnome.shell.extensions.user-theme]
 name="Vertex-Maia"
 
-[org.gnome.Terminal.Legacy.Settings]
-schema-version=3
+[org.gnome.nautilus.icon-view]
+default-zoom-level='small'
+
+[org.gnome.desktop.peripherals.touchpad]
+natural-scroll=false
+scroll-method='two-finger-scrolling'
+tap-to-click=true
+
+[org.gnome.shell.extensions.dash-to-dock]
+background-opacity=0.90000000000000002220
+custom-theme-running-dots=true
+dash-max-icon-size=32
+
