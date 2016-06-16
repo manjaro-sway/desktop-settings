@@ -72,7 +72,7 @@ submenu = Settings
 	icon = /usr/share/icons/Adwaita/scalable/apps/preferences-color-symbolic.svg
 
 	item = Firewall
-	cmd = gufw
+	cmd = zensu gufw
 	icon = /usr/share/icons/Adwaita/scalable/status/security-high-symbolic.svg
 	
 	item = Network
