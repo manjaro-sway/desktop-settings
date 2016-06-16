@@ -1,7 +1,7 @@
 ##run_once is a script in /usr/bin that prevents running script if it is running already
 ##
 ## To enable pulseaufio, uncomment this and run sudo pacman -S pavucontrol pulseaudio-ctl manjaro-pulse
-pulseaudio --start &
+#pulseaudio --start &
 #sleep 2s && volume 37 &
 ## Load appearance settings
 xsetroot -cursor_name left_ptr &
