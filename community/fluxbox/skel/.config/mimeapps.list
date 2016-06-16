@@ -33,6 +33,7 @@ video/x-ogm+ogg=vlc.desktop
 video/x-theora+ogg=vlc.desktop
 application/x-cd-image=open-fuse-iso.desktop
 application/x-raw-disk-image=open-fuse-iso.desktop
+application/x-bittorrent=transmission-gtk.desktop
 
 [Added Associations]
 application/pdf=qpdfview.desktop;
@@ -40,4 +41,4 @@ application/octet-stream=mousepad.desktop;
 application/x-gettext-translation=mousepad.desktop;
 application/x-wine-extension-ini=mousepad.desktop;
 image/gif=gpicview.desktop;gimp.desktop;
-
+application/x-bittorrent=transmission-gtk.desktop;
