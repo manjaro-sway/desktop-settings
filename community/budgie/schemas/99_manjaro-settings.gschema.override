@@ -11,7 +11,7 @@ show-desktop-icons=false
 
 [org.gnome.desktop.interface]
 cursor-theme='Simple-and-Soft'
-documen-font-name='Sans 10'
+document-font-name='Sans 10'
 enable-animations=true
 font-name='Cantarell 10'
 gtk-im-module='gtk-im-context-simple'
