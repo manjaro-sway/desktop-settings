@@ -87,6 +87,7 @@ visible-name='sonar'
 
 [org.mate.notification-daemon]
 popup-location='bottom_right'
+theme='coco'
 
 [org.mate.settings-daemon.plugins.xrandr]
 show-notification-icon='true'
