@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="gtk_theme" mtime="1367400973" type="string">
+		<stringvalue>Vertex-Maia</stringvalue>
+	</entry>
+</gconf>
