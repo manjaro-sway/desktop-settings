@@ -18,6 +18,7 @@ theme-name='sonar'
 
 [org.mate.applications-at-visual]
 startup=true
+exec='orca'
 
 [org.mate.Marco.general]
 theme='Vertex-Maia'
@@ -95,4 +96,6 @@ show-notification-icon='true'
 [org.mate.screensaver]
 mode='random'
 lock-enabled=true
+[org.mate.caja.preferences]
+date-format='informal'
 
