@@ -1,10 +1,11 @@
-[org.gnome.desktop.background]
+[org.gnome.background]
 picture-uri='file:///usr/share/backgrounds/sonar.jpg'
 show-desktop-icons=true
 
-[org.gnome.desktop.interface]
+[org.gnome.interface]
 gtk-theme='Vertex-Maia'
 icon-theme='maia'
+toolkit-accessibility=true
 
 [org.gnome.a11y.applications]
 screen-keyboard-enabled='false'
@@ -18,9 +19,6 @@ theme-name='Sonar'
 
 [org.gnome.input-sources]
 show-all-sources='True'
-
-[org.gnome.interface]
-toolkit-accessibility=true
 
 [org.gnome.wm.preferences]
 button-layout='appmenu:minimize,maximize,close'
@@ -37,12 +35,12 @@ screenreader='<Alt><Super>s'
 magnifier-zoom-out='<Super>minus'
 control-center='<Super>t'
 toggle-contrast='<Alt><Super>h'
-volume-down='<Ctrl><Super>Down'
-volume-up='<Ctrl><Super>Up'
+volume-down='<Primary><Super>Down'
+volume-up='<Primary><Super>Up'
 magnifier-zoom-in='<Super>equal'
 increase-text-size='<Alt>equal'
 magnifier='<Alt><Super>z'
-volume-mute='AudioMute'
+volume-mute='<Primary><Super>M'
 on-screen-keyboard='<Alt><Super>k'
 
 [org.gnome.wm.keybindings]
