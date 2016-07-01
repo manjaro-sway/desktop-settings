@@ -1,33 +1,33 @@
-[org.gnome.background]
+[org.gnome.desktop.background]
 picture-uri='file:///usr/share/backgrounds/sonar.jpg'
 show-desktop-icons=true
 
-[org.gnome.interface]
+[org.gnome.desktop.interface]
 gtk-theme='Vertex-Maia'
 icon-theme='maia'
 toolkit-accessibility=true
 
 [org.gnome.a11y.applications]
-screen-keyboard-enabled='false'
-screen-magnifier-enabled='false'
-screen-reader-enabled='true'
+screen-keyboard-enabled=false
+screen-magnifier-enabled=false
+screen-reader-enabled=true
 
 [org.gnome.sound]
-event-sounds='True'
-input-feedback-sounds='True'
-theme-name='Sonar'
+event-sounds=true
+input-feedback-sounds=true
+theme-name=sonar
 
 [org.gnome.input-sources]
-show-all-sources='True'
+show-all-sources=true
 
 [org.gnome.wm.preferences]
 button-layout='appmenu:minimize,maximize,close'
 
 [org.gnome.screensaver]
-picture-uri='file:///usr/share/backgrounds/sonar.jpg'
+picture-uri=file:///usr/share/backgrounds/sonar.jpg
 
 [org.gnome.datetime]
-automatic-timezone='True'
+automatic-timezone=true
 
 [org.gnome.settings-daemon.plugins.media-keys]
 decrease-text-size='<Alt>minus'
