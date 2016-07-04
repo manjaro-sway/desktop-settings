@@ -19,7 +19,7 @@ button-layout='appmenu:minimize,maximize,close'
 [org.gnome.shell]
 always-show-log-out=true
 favorite-apps=['pamac-manager.desktop', 'firefox.desktop', 'empathy.desktop', 'org.gnome.Nautilus.desktop', 'gnome-terminal.desktop', 'org.gnome.gedit.desktop', 'hexchat.desktop', 'org.gnome.Screenshot.desktop', 'ca.desrt.dconf-editor.desktop']
-enabled-extensions=['dash-to-dock@micxgx.gmail.com', 'gnomenu@panacier.gmail.com', 'mediaplayer@patapon.info', 'openweather-extension@jenslody.de', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['dash-to-dock@micxgx.gmail.com', 'gnomenu@panacier.gmail.com', 'openweather-extension@jenslody.de', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']
 
 [org.gnome.shell.extensions.user-theme]
 name="Vertex-Maia"
