@@ -14,8 +14,8 @@ screen-reader-enabled=true
 
 [org.gnome.sound]
 event-sounds=true
-input-feedback-sounds=true
-theme-name=sonar
+input-feedback-sounds='true'
+theme-name='sonar'
 
 [org.gnome.input-sources]
 show-all-sources=true
@@ -30,18 +30,17 @@ picture-uri=file:///usr/share/backgrounds/sonar.jpg
 automatic-timezone=true
 
 [org.gnome.settings-daemon.plugins.media-keys]
-decrease-text-size='<Alt>minus'
+decrease-text-size='<Alt><Super>minus'
 screenreader='<Alt><Super>s'
-magnifier-zoom-out='<Super>minus'
-control-center='<Super>t'
+magnifier-zoom-out='<Shift><Super>underscore'
 toggle-contrast='<Alt><Super>h'
+magnifier-zoom-in='<Shift><Super>plus'
+increase-text-size='<Alt><Super>equal'
+magnifier='<Alt><Super>m'
+on-screen-keyboard='<Alt><Super>k'
 volume-down='<Primary><Super>Down'
 volume-up='<Primary><Super>Up'
-magnifier-zoom-in='<Super>equal'
-increase-text-size='<Alt>equal'
-magnifier='<Alt><Super>z'
-volume-mute='<Primary><Super>M'
-on-screen-keyboard='<Alt><Super>k'
+volume-mute='<Primary><Super>m'
 
 [org.gnome.wm.keybindings]
 show-desktop='<Primary><Alt>D'
@@ -55,9 +54,6 @@ binding='<Alt><Super>o'
 name='ocr the current window'
 [org.gnome.gedit.preferences.editor]
 display-line-numbers='true'
-
-[org.gnome.nautilus.preferences]
-sort-directories-first='True'
 
 [org.gnome.shell]
 favorite-apps=['org.gnome.Nautilus.desktop', 'gnome-terminal.desktop', 'gnome-control-center.desktop', 'gnome-tweak-tool.desktop', 'ca.desrt.dconf-editor.desktop']
