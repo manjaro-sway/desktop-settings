@@ -2,7 +2,7 @@
 picture-uri='file:///usr/share/backgrounds/sonar.jpg'
 show-desktop-icons=true
 
-[org.gnome.desktop.interface]
+[org.gnome.interface]
 gtk-theme='Vertex-Maia'
 icon-theme='maia'
 toolkit-accessibility=true
@@ -14,8 +14,8 @@ screen-reader-enabled=true
 
 [org.gnome.sound]
 event-sounds=true
-input-feedback-sounds='true'
-theme-name='sonar'
+input-feedback-sounds=true
+theme-name=sonar
 
 [org.gnome.input-sources]
 show-all-sources=true
@@ -30,27 +30,27 @@ picture-uri=file:///usr/share/backgrounds/sonar.jpg
 automatic-timezone=true
 
 [org.gnome.settings-daemon.plugins.media-keys]
-decrease-text-size='<Alt><Super>minus'
-screenreader='<Alt><Super>s'
-magnifier-zoom-out='<Shift><Super>underscore'
-toggle-contrast='<Alt><Super>h'
-magnifier-zoom-in='<Shift><Super>plus'
-increase-text-size='<Alt><Super>equal'
-magnifier='<Alt><Super>m'
-on-screen-keyboard='<Alt><Super>k'
-volume-down='<Primary><Super>Down'
-volume-up='<Primary><Super>Up'
-volume-mute='<Primary><Super>m'
+decrease-text-size='<alt><super>minus'
+screenreader='<alt><super>s'
+magnifier-zoom-out='<shift><super>underscore'
+toggle-contrast='<alt><super>h'
+magnifier-zoom-in='<shift><super>plus'
+increase-text-size='<alt><super>equal'
+magnifier='<alt><super>m'
+on-screen-keyboard='<alt><super>k'
+volume-down='<primary><super>down'
+volume-up='<Primary><Super>up'
+volume-mute='<primary><super>m'
 
 [org.gnome.wm.keybindings]
-show-desktop='<Primary><Alt>D'
+show-desktop='<primary><alt>d'
 [org.gnome.settings-daemon.plugins.media-keys.custom-0]
-binding='<Super>s'
+binding='<super>s'
 command='gnome-system-monitor'
 name='open system monitor'
 [org.gnome.settings-daemon.plugins.media-keys.custom-1]
 command='ocrdesktop'
-binding='<Alt><Super>o'
+binding='<alt><super>o'
 name='ocr the current window'
 [org.gnome.gedit.preferences.editor]
 display-line-numbers='true'
