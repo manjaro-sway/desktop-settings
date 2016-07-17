@@ -2,9 +2,15 @@
 picture-uri='file:///usr/share/backgrounds/sonar.jpg'
 show-desktop-icons=true
 
-[org.gnome.interface]
+[org.gnome.desktop.interface]
+cursor-theme='Simple-and-Soft'
+document-font-name='Sans 10'
+enable-animations=true
+font-name='Cantarell 10'
+gtk-im-module='gtk-im-context-simple'
 gtk-theme='Vertex-Maia'
-icon-theme='maia'
+icon-theme='Vertex-Maia'
+monospace-font-name='Monospace 10'
 toolkit-accessibility=true
 
 [org.gnome.a11y.applications]
@@ -12,45 +18,45 @@ screen-keyboard-enabled=false
 screen-magnifier-enabled=false
 screen-reader-enabled=true
 
-[org.gnome.sound]
+[org.gnome.desktop.sound]
 event-sounds=true
 input-feedback-sounds=true
 theme-name=sonar
 
-[org.gnome.input-sources]
+[org.gnome.desktop.input-sources]
 show-all-sources=true
 
-[org.gnome.wm.preferences]
+[org.gnome.desktop.wm.preferences]
 button-layout='appmenu:minimize,maximize,close'
 
-[org.gnome.screensaver]
+[org.gnome.desktop.screensaver]
 picture-uri=file:///usr/share/backgrounds/sonar.jpg
 
-[org.gnome.datetime]
+[org.gnome.desktop.datetime]
 automatic-timezone=true
 
 [org.gnome.settings-daemon.plugins.media-keys]
-decrease-text-size='<alt><super>minus'
-screenreader='<alt><super>s'
-magnifier-zoom-out='<shift><super>underscore'
-toggle-contrast='<alt><super>h'
-magnifier-zoom-in='<shift><super>plus'
-increase-text-size='<alt><super>equal'
-magnifier='<alt><super>m'
-on-screen-keyboard='<alt><super>k'
-volume-down='<primary><super>down'
+decrease-text-size='<Alt><Super>minus'
+screenreader='<Alt><Super>s'
+magnifier-zoom-out='<Shift><Super>underscore'
+toggle-contrast='<Alt><Super>h'
+magnifier-zoom-in='<Shift><Super>plus'
+increase-text-size='<Alt><Super>equal'
+magnifier='<Alt><Super>m'
+on-screen-keyboard='<Alt><Super>k'
+volume-down='<Primary><Super>down'
 volume-up='<Primary><Super>up'
-volume-mute='<primary><super>m'
+volume-mute='<Primary><Super>m'
 
-[org.gnome.wm.keybindings]
-show-desktop='<primary><alt>d'
+[org.gnome.desktop.wm.keybindings]
+show-desktop='<Primary><Alt>d'
 [org.gnome.settings-daemon.plugins.media-keys.custom-0]
-binding='<super>s'
+binding='<Super>s'
 command='gnome-system-monitor'
 name='open system monitor'
 [org.gnome.settings-daemon.plugins.media-keys.custom-1]
 command='ocrdesktop'
-binding='<alt><super>o'
+binding='<Alt><Super>o'
 name='ocr the current window'
 [org.gnome.gedit.preferences.editor]
 display-line-numbers='true'
