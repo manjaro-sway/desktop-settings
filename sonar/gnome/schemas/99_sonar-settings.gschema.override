@@ -3,8 +3,14 @@ picture-uri='file:///usr/share/backgrounds/sonar.jpg'
 show-desktop-icons=true
 
 [org.gnome.desktop.interface]
+cursor-theme='Simple-and-Soft'
+document-font-name='Sans 10'
+enable-animations=true
+font-name='Cantarell 10'
+gtk-im-module='gtk-im-context-simple'
 gtk-theme='Vertex-Maia'
-icon-theme='maia'
+icon-theme='Vertex-Maia'
+monospace-font-name='Monospace 10'
 toolkit-accessibility=true
 
 [org.gnome.a11y.applications]
@@ -12,21 +18,21 @@ screen-keyboard-enabled=false
 screen-magnifier-enabled=false
 screen-reader-enabled=true
 
-[org.gnome.sound]
+[org.gnome.desktop.sound]
 event-sounds=true
-input-feedback-sounds='true'
-theme-name='sonar'
+input-feedback-sounds=true
+theme-name=sonar
 
-[org.gnome.input-sources]
+[org.gnome.desktop.input-sources]
 show-all-sources=true
 
-[org.gnome.wm.preferences]
+[org.gnome.desktop.wm.preferences]
 button-layout='appmenu:minimize,maximize,close'
 
-[org.gnome.screensaver]
+[org.gnome.desktop.screensaver]
 picture-uri=file:///usr/share/backgrounds/sonar.jpg
 
-[org.gnome.datetime]
+[org.gnome.desktop.datetime]
 automatic-timezone=true
 
 [org.gnome.settings-daemon.plugins.media-keys]
@@ -38,12 +44,12 @@ magnifier-zoom-in='<Shift><Super>plus'
 increase-text-size='<Alt><Super>equal'
 magnifier='<Alt><Super>m'
 on-screen-keyboard='<Alt><Super>k'
-volume-down='<Primary><Super>Down'
-volume-up='<Primary><Super>Up'
+volume-down='<Primary><Super>down'
+volume-up='<Primary><Super>up'
 volume-mute='<Primary><Super>m'
 
-[org.gnome.wm.keybindings]
-show-desktop='<Primary><Alt>D'
+[org.gnome.desktop.wm.keybindings]
+show-desktop='<Primary><Alt>d'
 [org.gnome.settings-daemon.plugins.media-keys.custom-0]
 binding='<Super>s'
 command='gnome-system-monitor'
