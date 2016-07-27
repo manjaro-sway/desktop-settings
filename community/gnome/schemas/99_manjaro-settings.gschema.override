@@ -1,5 +1,5 @@
 [org.gnome.desktop.background]
-picture-uri='file:///usr/share/backgrounds/black_leather_manjaro_linux_by_tefrem34.jpg'
+picture-uri='file:///usr/share/backgrounds/gnomeDark_1920x1080.png'
 show-desktop-icons=false
 
 [org.gnome.desktop.interface]
@@ -19,7 +19,7 @@ button-layout='appmenu:minimize,maximize,close'
 [org.gnome.shell]
 always-show-log-out=true
 favorite-apps=['pamac-manager.desktop', 'firefox.desktop', 'empathy.desktop', 'org.gnome.Nautilus.desktop', 'gnome-terminal.desktop', 'org.gnome.gedit.desktop', 'hexchat.desktop', 'org.gnome.Screenshot.desktop', 'ca.desrt.dconf-editor.desktop']
-enabled-extensions=['dash-to-dock@micxgx.gmail.com', 'gnomenu@panacier.gmail.com', 'openweather-extension@jenslody.de', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['dash-to-dock@micxgx.gmail.com', 'gnomenu@panacier.gmail.com', 'openweather-extension@jenslody.de', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'TaskBar@zpydr']
 
 [org.gnome.shell.extensions.user-theme]
 name="Vertex-Maia"
@@ -29,7 +29,6 @@ default-zoom-level='small'
 
 [org.gnome.desktop.peripherals.touchpad]
 natural-scroll=false
-scroll-method='two-finger-scrolling'
 tap-to-click=true
 
 [org.gnome.shell.extensions.dash-to-dock]
