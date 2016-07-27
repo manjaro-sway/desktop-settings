@@ -24,15 +24,18 @@ enabled-extensions=['dash-to-dock@micxgx.gmail.com', 'gnomenu@panacier.gmail.com
 [org.gnome.shell.extensions.user-theme]
 name="Vertex-Maia"
 
+[org.gnome.shell.extensions.dash-to-dock]
+background-opacity=0.90000000000000002220
+custom-theme-running-dots=true
+dash-max-icon-size=32
+
+[org.gnome.shell.extensions.gnomenu]
+panel-menu-keyboard-accelerator=['<Shift>F3']
+
 [org.gnome.nautilus.icon-view]
 default-zoom-level='small'
 
 [org.gnome.desktop.peripherals.touchpad]
 natural-scroll=false
 tap-to-click=true
-
-[org.gnome.shell.extensions.dash-to-dock]
-background-opacity=0.90000000000000002220
-custom-theme-running-dots=true
-dash-max-icon-size=32
 
