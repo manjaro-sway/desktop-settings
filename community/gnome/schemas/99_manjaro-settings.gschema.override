@@ -30,7 +30,7 @@ custom-theme-running-dots=true
 dash-max-icon-size=32
 
 [org.gnome.shell.extensions.gnomenu]
-panel-menu-keyboard-accelerator=['<Shift>F3']
+panel-menu-keyboard-accelerator='<Shift>F3'
 
 [org.gnome.nautilus.icon-view]
 default-zoom-level='small'
