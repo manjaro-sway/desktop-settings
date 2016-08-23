@@ -10,8 +10,8 @@ if ! [ -f $HOME/.desktop-items-created ]; then
     "$xdg/keyboard_shortcuts"
   fi
 
-  if [[ -f "/usr/share/sonar/users_guide.odt" ]]; then
-    ln -sf /usr/share/sonar/users_guide.odt \
+  if [[ -f "/usr/share/sonar/users guide.html" ]]; then
+    ln -sf /usr/share/sonar/users guide.html \
     "$xdg/users_guide"
   fi
 
