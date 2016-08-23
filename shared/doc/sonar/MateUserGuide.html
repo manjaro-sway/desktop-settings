@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Getting Started With Sonar GNU Linux</title>
+</head>
+
+<body id="PROGRAMS">
+<h1 align="center" id="home">Sonar GNU Linux 2016.06 mate users guide<br />
+</h1>
+<p align="center"><a href="#home">HOME</a> | <a href="#orca">NAVIGATION BASICS</a> | <a href="#wi-fi">CONNECT TO THE INTERNET</a> | <a href="#install">INSTALLING SONAR</a> | <a href="#programs">INSTALL SOFTWARE</a> | <a href="#dual_boot">DUAL BOOT SONAR AND WINDOWS</a></p>
+<p>Welcome to Sonar GNU Linux, a free, open source, easy to use, linux based operating system that’s specifically focused on disabilities of all kinds. This users guide will tell you the basics of using sonar, from beginning navigation to connecting to the internet, installation and configuring basic system settings. We will start with navigation using Orca but you may skip from topic to topic using the &quot;H&quot; button on your keyboard as this document is broken up by headers.</p>
+<h2 align="center" id="orca">NAVIGATING WITH ORCA SCREEN READER</h2>
+The screen reader software used by Sonar is called Orca, for a complete guide on using Orca Screen Reader please visith <a href="https://help.gnome.org/users/orca/stable/" target="_blank">the Orca Stable Release User's Guide.</a></p>
+The Modifier Key
+Orca has a special key called the "modifier key" which works similar to using Alt or Ctrl on your keyboard.  There are different options for the modifier key depending on which type of keyboard you have, desktop or laptop.  The keyboard type should be automatically detected by Orca and just because you are using a laptop you may still have a full desktop keyboard.  The difference is most often whether the computer you are using has the 10-key pad to the right of your QWERTY keyboard.
+<ul id=keyboards title=keyboards>
+<li>If you are using the Laptop layout, the default Orca Modifier will be CapsLock </li>
+<li>If you are using the Desktop layout, the Orca Modifier will be both Insert and KeyPad Insert, the latter being the same key as KeyPad 0 (while Num Lock is turned OFF. </li>
+</ul>
+If you are uncertain which is the correct modifier key you can try pressing any of the possible options listed above and the "H" button on your keyboard at the same time to put Orca into "learn mode".  While in this mode you can try different key combinations and Orca will tell you what it does or you can hear a list of Orca commands available.  To exit learn mode you simply press the "Esc" key to return to normal screen reader mode.  To get shortcut lists in learn mode you have the following 2 options:
+<ul id=learnmodes 
+<li>F2 - A list of Orca wide options</li>
+<li>F3 - A list of options for whatever application has the current focus</li>
+</ul>
+You can use your up and down arrows to scroll through the list of commands and press "Esc" to exit the list.  If you would like to change the modifier key you can follow these simple steps:
+<ol id="modifieer">
+<li>Get into the Orca Preferences dialog by pressing Orca Modifier+Space. </li>
+<li>Move to the Key Bindings page.</li>
+<li>Move to the Screen Reader Modifier Key(s) combobox.</li>
+<li>Arrow to the desired modifier. The available options are:</br>
+<ul id="modifieer_options">
+<li>Insert, KP_Insert (both keys)</li>
+<li>KP_Insert (only Key Pad Insert)</li>
+<li>Insert (Only Insert)</li>
+<li>Caps_Lock</li>
+</ul></li>
+<li>Press the Apply button.</li>
+</ol>
+Here are a couple of quick hints on how to navigate around documents, web pages and your computer using the Orca Screen Reader.
+<ol id="hints">
+<li>Tab - Moves the focus to the next item (this does not work in applications like a text editor or in the body of an email as you are drafting it)</li>
+<li>Shift + Tab - Moves the focus to the previous item</li>
+<li>Arrow Up - moves up one line</li>
+<li>Arrow Down - moves down one line</li>
+<li>Arrow Right - moves 1 character or object to the right</li>
+<li>Arrow Left - moves 1 character or object to the left</li>
+<li>H - will jump to the next heading on a webpage</li>
+<li>The 1, 2, 3, 4 and 5 keys above your QWERTY keyboard will jump to the heading of that level.</br>
+	***This means that if a Wiki article uses level 2 headings to seperate sections you can press "2" until you find the section you desire.</br>
+	***Orca will announce the heading level as it reads a web page to you.</br></li>
+</ol>  <p><tt><a href="#home">BACK TO TOP</a></tt>  </p>
+<h2 align="center" id="wi-fi">Connecting to the internet Using wifi<br />
+</h2>
+<p>If you connect to the internet using an ethernet cable, sonar will automatically connect to your network, you need not do anything special to get it going. The exception is if your network requires any kind of advanced security, passwords, encryption keys, etc. Most don’t. If yours does, you’ll be prompted to provide whatever the network needs. Sonar Mate is Wi-Fi ready, but it cannot automatically connect to your local network because it has to be set up. To do this<br />
+  1.  Press Ctrl+Alt+Tab to navigate to the bottom panel<br />
+  2.  Press Shift+Tab until you hear &quot;No Network Connection&quot; and press Enter<br />
+  3.  Select the network you want to connect to. You'll hear helpful percentages which tell you how strong the signal strength is, and whether it's secured or not<br />
+  4.  If the network requires a password, you'll get a prompt to enter it, type your password and press enter<br />
+That's it. From now on Mate will auto connect to that network when it's in range.</p>
+  <p><tt><a href="#home">BACK TO TOP</a></tt>  </p>
+<h2 align="center" id="install">INSTALLATION OF SONAR GNU LINUX:</h2>
+<p>1.  Download a stable copy of Sonar GNU Linux from &lt;a href=&quot;http://www.sonargnulinux.com/download&quot; target=&quot;_blank&quot; alt=&quot;Sonar GNU Linux Download Page&quot;&gt;the download page.&lt;/a&gt;<br />
+  2.  Create a DVD or live USB to install the disk image from.<br />
+  3.  Boot your computer from the installation media that you just created.<br />
+  **You may have issues if your computer's boot order has been changed OR if your PC has secure boot enabled and you are trying to install from a USB. <br />
+  **If so check the internet for how to access your specific computers boot menu.<br />
+  **Secure boot may need to be disabled in your UEFI settings which may require the aid of a sighted person or a hand held magnifier.<br />
+  4.  You will hear some tones after a short period of silence which means Sonar is loading.  Shortly after you should hear the Orca Screen Reader speaking, this means that you are now in the live desktop.<br />
+  5.  Use the arrow keys to navigate around the desktop until you find &quot;Install Sonar Linux (not &quot;Install Sonar Linux CLI&quot; or &quot;Install Sonar Linux (Calameras) as those options are not yet accessible) and press &quot;Enter&quot; on your keyboard.<br />
+  6.  After the installer finishes loading you will hear Orca say the title bar content (the name of the installer application itself) and you will hear it announce a language (i.e. English U.S.).  You can use the &quot;Tab&quot; button to navigate this list, once you have found your language then press &quot;Ctrl+Tab&quot; to exit the list and use Tab after to keep moving until you land on &quot;Forward&quot;, press &quot;Enter&quot;.<br />
+  7.  The next few screens work very similarly to the first screen, verify the correct item is selected and proceed to the next screen.<br />
+  **If Orca stops working during any point during the installation process it is usually fixed by pressing &quot;Esc&quot; - a window asking if you really want to quit the installer comes up.  Orca will read the window and you can then Tab to the &quot;No&quot; button and continue the installation.<br />
+  **In some cases Orca just does not start or something happens to make it become unresponsive, the following 2 tips will almost always do the job for getting Orca back to work:<br />
+  a.  To start orca, &quot;Alt+Windows Key+S&quot;.<br />
+  b.  To kill and restart Orca press &quot;Alt+F2&quot; then type &quot;Orca --replace&quot; (without quotes) and press Enter.<br />
+  8.  On the screen for choosing your time zone you may run into difficulty locating your particular location or even your country.  This is easily fixed after Sonar has been installed so if it is proving difficult it is often considered a best practice to bypass this by using &quot;Ctrl+Tab&quot; to exit the map section, then just &quot;Tab&quot; to the &quot;Forward&quot; button.<br />
+  9.  Sonar is set to automatically partition your hard disk, unless you know what you are doing you should just leave the disk allocation up to the installer and &quot;Tab&quot; to the &quot;Install Now&quot; button.<br />
+  **If you are trying to setup a dual boot with Windows 8 or later you should look at the section made for dual booting newer Windows versions and Sonar on UEFI.<br />
+  **A confirmation asking if you want to wipe the entire disk and continue installing Sonar pops up and you have to press &quot;Yes&quot; to continue<br />
+  10.  On the following screen you will be prompted for the following information:<br />
+  a.  Your Name - This is your actual name, your username comes later.<br />
+  b.  Hostname - This is the name you would like to give your computer for network browsing.<br />
+  c.  Username - This is the name you will use to login to the computer and for other security purposes.<br />
+  d.  Password and the next field confirm password are self explanatory.<br />
+  e.  Set a root password - When checked this enables the &quot;root&quot; user account.  The root account uses &quot;root&quot; for the username and has super user privledges.<br />
+  f.  The following 2 fields are for setting the root password which SHOULD differ from your user password.<br />
+  11.  Sonar should begin installing now and you can just relax and wait for it to finish.  Once completed you can restart your computer and it will boot right to your new Sonar installation.<br />
+</p> 
+  <p><tt><a href="#home">BACK TO TOP</a></tt>  </p>
+<h2 id="PROGRAMS"><H2 align="center">INSTALLING AND REMOVING SOFTWARE</H2>
+In pacman version 4.0, the GUI is a little gnome 3 like, with just one menu instead of the usual menu bar along the top.  It's just as easy to install software as always though.  
+Hear is how:
+<ol id="add_remove">
+<li>Press Alt+F1 to open the "System Tools Menu" and Tab to "Add and Remove Software" then hit Enter.</li>
+<li>When the app opens you will be in the search field, just start typing to find the software you are looking for.</li>
+<li>Give it a few seconds to search both the official repos and the aur. and Tab to the table, where your results are shown.</li>
+<li>When you find the software you want to install, right click (the Applications Key will mimic a right mouse click and it is located immediately to the left of the right hand Ctrl Key) and select Install. </br>
+***If for some reason using the applications key does not work press the numpad * key</br>
+*** which is directly above the  numpad 9 key.  You can install multiple packages just by moving</br>
+*** down the list, right clicking them and selecting install.</li>
+<li>Then Tab to Apply and click it when you want to install all your packages, this button will install all of the selected packages.</li>
+<li>You can also install optional dependencies of a program by right clicking it and select Install Optional Dependencies.</br>
+***This  brings up a dialog with a table with checkboxes for each optional dependency.</li>
+<li>Removing software is just as easy. Right click on an entry in the list  and select Remove, you'll be asked for your password, enter it and voila, that program is gone.</li>
+</ol>  <p><tt><a href="#home">BACK TO TOP</a></tt>  </p>
+<p><h2 align="center" id="dual_boot">>DUAL BOOTING SONAR GNULINUX AND WINDOWS ON A UEFI SYSTEM:</h2>
+Coupling Windows 10, Unified Extensible Firmware (UEFI) and secure boot means that installing and booting a second operating system like Sonar can be very difficult.  There are many, many tutorials online that address so many different methods that it can seem overwhelming.  A majority of these tutorials seem to run the risk of destroying both your Windows installation as well as your Linux new installation and potentially losing all of your data whether it is personal pictures or archived work.
+Although attempting to setup a dual boot system always has some sort of risk involved the method listed below has been successfully done without any loss of anything several times on several different system configurations.  Still there is no possible way of addressing every possible scenario so attempting this process is something you do at your own risk.  If you need assistance or have a question you can visit <a href="http://www.sonargnulinux.com" target="_blank">Sonar's Web Page</a> and join the support mailing list or find our Mumble server.
+</p><p>
+You may need the assistance of a sighted person or a magnification device to make changes to your UEFI settings.  This, much like the old BIOS is still not accessible and since this part of the computer is only available before the operating system loads we cannot fix that problem yet.
+</p><p>
+<blockquote>
+  <h3><em><strong>BEFORE YOU BEGIN YOU ARE VERY STRONGLY URGED TO CREATE A BACKUP</strong></em></h3>
+</blockquote>
+<h4>WINDOS SYSTEM PREPARATION:</h4>
+<ol id="winprep">
+<li>Right Click on the Start Button -OR- press Windows Key + X to bring up the admin menu.</li>
+<li>Select Power Options</li>
+<li>Click on Choose What The Poer Buttons Do</li>
+<li>Click on Change Settings That Are Currently Unavailable</li>
+<li>Uncheck the box for Turn On Fast Startup</li>
+<li>Click Save Changes and close that all out.</li>
+<li>Make some space on your hard drive for Sonar to be installed to if it is not already there.</br>
+<ul>
+<li>Use Disk Manager to Shrink your C:\ drive</li>
+<li>Use Diskpart to shrink your C:\ drive</li>
+<li>Whichever method you use make sure you figure out the space for Sonar -AND- a swap partition (my swap is 4GB but I have 8GB RAM, 2GB should work if space is an issue).</li>
+</ul></li></ol>
+<h4>UEFI PRAPERATION:</h4>
+<ol id="uefi_prep">
+<li>Now restart your computer and press whatever key it is to get into your UEFI settings (usually F1, F2, Del or Esc)</li>
+<li>Find the Boot section of your UEFI and Disable Secure Boot (you can try doing this with Secure Boot on but it may not work).</br>
+***You may need to set an Administrator password in the Security section of UEFI before you can do this, that requires a reboot and entering the admin password to get back in).</li>
+<li>Leaving the Boot Mode in UEFI but disabling Secure Boot you now restart your PC and boot to your installation media.</br>
+***You may need to button mash F9, F10, F11 and F12 as those are the usual suspects to bring up the boot menu if the PC doesn't just automatically do it.</li>
+
+<h4>INSTALLING SONAR:</h4>
+<ol id="install_sonar_db">
+<li>Once the Live Desktop is loaded you need to connect to Wi-Fi (it will make sense later on).</li>
+<li>Start the installation and carry on as normal until you get the option to erase the entire disk - change that to choose exactly where to install Manjaro.</li>
+<li>Create an ext4 partition in the unused space but leave the extra space for the swap.</li>
+<li>Use the remainder to create a swap partition.</li>
+<li>Now mount the Windows EFI partition as /boot/efi.</br>
+<ul>
+<li>It's around 100MB</li>
+<li>It's likely /dev/sda2 (sda1 is normally the Windows Recovery Partition - leave it).</li>
+</ul>
+<li>Finish up the installation as normal from here but DO NOT RESTART IT when installation is completed.</li>
+<li>Now you need to chroot into the newly installed Sonar instance.</br>
+<ul>
+<li>Install the package arch-install-scripts</li>
+<li>Make sure your root, boot and efi partitions are mounted</li>
+<li>Execute sudo arch-chroot /directory, where /directory is where your root partition is mounted.</li>
+</ul>
+<li>Install rEFInd via Pacman.</br>
+sudo pacman -S refind-efi</li>
+<li>Now run the installation command "refind-install" (without quotes).</li>
+<li>Restart your PC and see if the magic happens...</li>
+</ol>
+<h4>IT WENT RIGHT INTO WINDOWS?:</h4>
+<h6>This is a result of UEFI being forced to use the Windows Boot Loader before any other boot loader.</h6>
+<ol>
+<li>Reboot and go into your UEFI settings.</li>
+<li>Find the boot order and change 1.  Windows Boot Loader to 1. rEFInd (basically make rEFInd your 1st boot option) and save changes to reboot.</li>
+</ol>
+<h4>FINISHING TOUCHES:</h4>
+There is a very nice GUI built-in to rEFInd, however it is not built with accessibility in mind.  For that reason it is reccomended that you change the boot menu to a text only interface.
+<ol>
+<li>rEFInd should now be installed in /boot/efi/EFI/refind (no, I did not type any of that wrong), and you "should" have refind.conf ready to edit, if not rename refind.conf-sample to refind.conf and edit it.</li>
+<li>I just put mine in text only mode with 640X480 as my display settings, the graphical display was just tooooooo hard for me to see.</li>
+</ol> 
+<blockquote>
+
+</blockquote>
+</body>
+</html>
+<html><head></head><body></body></html>
