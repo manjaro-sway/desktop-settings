@@ -65,12 +65,16 @@ shopt -s checkwinsize
 
 shopt -s histappend
 
+export GTK_IM_MODULE_FILE=/etc/gtk-2.0/gtk.immodules
+export GTK_IM_MODULE_FILE=/usr/lib/gtk-3.0/3.0.0/immodules.cache
+
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 
-export QT_ACCESSIBILITY=1
+ibus-daemon -drx
 
+export QT_ACCESSIBILITY=1
 
 # better yaourt colors
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"

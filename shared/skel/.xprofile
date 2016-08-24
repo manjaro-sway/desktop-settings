@@ -1,7 +1,6 @@
 #
 # ~/.xprofile
 #
-# sourced by /etc/lxdm/Xsession
 #
 
 if which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
@@ -11,3 +10,5 @@ fi
 # Environment variables
 #
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+
+[[ -f ~/.extend.xprofile ]] && . ~/.extend.xprofile
