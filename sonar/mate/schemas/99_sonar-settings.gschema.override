@@ -24,8 +24,6 @@ exec='orca'
 theme='Vertex-Maia'
 compositing-fast-alt-tab=true
 
-[org.mate.applications-terminal]
-exec='gnome-terminal'
 
 [org.mate.interface]
 accessibility=true
@@ -50,9 +48,6 @@ size=40
 image='/usr/share/backgrounds/sonar.jpg'
 type='image'
 
-[org.mate.panel.toplevels.bottom.background]
-image=/usr/share/backgrounds/sonar.jpg
-type=image
 
 [org.mate.SettingsDaemon.plugins.media-keys]
 screenreader='<Alt><Mod4>s'
