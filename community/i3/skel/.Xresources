@@ -41,7 +41,7 @@ Xft.rgba: rgb
 Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
-Xcursor.theme: Chameleon-Pearl-Regular-0.5
+Xcursor.theme: Breeze
 Xcursor.size:  0
 
 XTerm*background: #272827
