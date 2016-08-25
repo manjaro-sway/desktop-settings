@@ -1,7 +1,7 @@
 desktop-settings
 ================
 
-Please maintrainers,, read first up on
+Please maintrainers, read up first on
 [environment variables] (https://wiki.archlinux.org/index.php/environment_variables)
 
 ### official
