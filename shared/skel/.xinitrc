@@ -11,9 +11,11 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
-
-DEFAULT_SESSION='i3 --shmlog-size 0'
+if [[ -f ~/.extend.xinitrc ]];then
+	. ~/.extend.xinitrc
+else
+	DEFAULT_SESSION=xfce4-session
+fi
 
 case $1 in
   awesome       ) exec dbus-launch awesome ;;
@@ -31,6 +33,7 @@ case $1 in
   lxqt          ) exec dbus-launch lxqt-session ;;
   mate          ) exec dbus-launch mate-session ;;
   xfce          ) exec dbus-launch xfce4-session ;;
+  openbox) exec dbus-launch openbox-session ;;
 
   *             ) exec dbus-launch $DEFAULT_SESSION ;;
 esac

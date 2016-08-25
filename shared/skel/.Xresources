@@ -1,0 +1,7 @@
+#
+# ~/.Xresources
+#
+#
+
+[[ -f ~/.extend.Xresources ]] && . ~/.extend.Xresources
+

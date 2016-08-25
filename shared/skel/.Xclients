@@ -6,5 +6,7 @@
 # Executed by xdm/gdm/kdm at login
 #
 
+[[ -f ~/.extend.Xclients ]] && . ~/.extend.Xclients
+
 /bin/bash --login -i ~/.xinitrc
 
