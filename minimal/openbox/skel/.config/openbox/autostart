@@ -27,8 +27,10 @@
 (sleep 1s && tint2) &
 
 ## Startup
-#(sleep 1s && pnmixer) &
-#(sleep 3s && conky) &
+
+[[ -f /usr/bin/pnmixer ]] && (sleep 1s && pnmixer) &
+[[ -f /usr/bin/conky ]] && (sleep 3s && conky) &
+
 (sleep 1s && nm-applet) &
 (sleep 1s && octopi-notifier) &
 
@@ -42,4 +44,4 @@
 #/usr/bin/synclient TouchpadOff=1 &
 
 ## Background
-feh --bg-scale /usr/share/backgrounds/maia.png &
+feh --bg-scale /usr/share/backgrounds/andromeda.png &
