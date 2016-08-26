@@ -3,5 +3,4 @@
 #
 #
 
-[[ -f ~/.extend.Xresources ]] && . ~/.extend.Xresources
-
+[[ -f ~/.extend.Xresources ]] && xrdb -merge -I$HOME ~/.extend.Xresources
