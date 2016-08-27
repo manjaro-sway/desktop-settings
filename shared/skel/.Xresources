@@ -1,6 +1,3 @@
-#
-# ~/.Xresources
-#
-#
 
-[[ -f ~/.extend.Xresources ]] && xrdb -merge -I$HOME ~/.extend.Xresources
+#include ".extend.Xresources"
+
