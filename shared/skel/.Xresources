@@ -1,5 +1,4 @@
+#if __has_include(".extend.Xresources")
+#include ".extend.Xresources"
+#endif
 
-ifstream ifile(.extend.Xresources);
-if (ifile) {
-  #include ".extend.Xresources"
-}
