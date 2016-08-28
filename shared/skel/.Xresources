@@ -1,3 +1,5 @@
 
-#include ".extend.Xresources"
-
+ifstream ifile(.extend.Xresources);
+if (ifile) {
+  #include ".extend.Xresources"
+}
