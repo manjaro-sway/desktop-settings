@@ -3,7 +3,7 @@ picture-uri='file:///usr/share/backgrounds/gnomeDark_1920x1080.png'
 show-desktop-icons=false
 
 [org.gnome.desktop.interface]
-cursor-theme='Maia-Cursor'
+cursor-theme='Breeze'
 document-font-name='Sans 11'
 enable-animations=true
 font-name='Cantarell 11'
@@ -31,11 +31,6 @@ dash-max-icon-size=32
 
 [org.gnome.nautilus.icon-view]
 default-zoom-level='small'
-
-[org.gnome.desktop.peripherals.touchpad]
-natural-scroll=false
-scroll-method='two-finger-scrolling'
-tap-to-click=true
 
 [org.gnome.settings-daemon.plugins.xsettings]
 antialiasing='rgba'
