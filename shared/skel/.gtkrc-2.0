@@ -1,18 +1,15 @@
 # DO NOT EDIT! This file will be overwritten by LXAppearance.
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
-gtk-theme-name="Adwaita-Maia"
-gtk-icon-theme-name="Breeze-Maia"
-gtk-font-name="Terminus 13"
-gtk-cursor-theme-name="Breeze"
-gtk-cursor-theme-size=0
-gtk-toolbar-style=GTK_TOOLBAR_ICONS
+include "$HOME/.gtkrc-2.0.mine"
+
+gtk-toolbar-style=GTK_TOOLBAR_BOTH
 gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
 gtk-button-images=1
 gtk-menu-images=1
 gtk-enable-event-sounds=1
 gtk-enable-input-feedback-sounds=1
-gtk-xft-antialias=0
-gtk-xft-hinting=0
-gtk-xft-hintstyle="hintmedium"
+gtk-xft-antialias=1
+gtk-xft-hinting=1
+gtk-xft-hintstyle="hintfull"
 gtk-xft-rgba="rgb"
