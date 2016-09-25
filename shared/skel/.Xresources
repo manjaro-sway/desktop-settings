@@ -14,3 +14,14 @@ Xft.rgba: rgb
 Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
+
+XTerm*selectToClipboard: true
+XTerm*locale: true
+XTerm*metaSendsEscape: true
+XTerm*background: #1f1f1f
+XTerm*foreground: #e7e7e7
+XTerm*pointerColor: #16A085
+XTerm*faceName: Monospace
+XTerm*faceSize: 11
+XTerm*scrollBar: true
+XTerm*rightScrollBar: true
