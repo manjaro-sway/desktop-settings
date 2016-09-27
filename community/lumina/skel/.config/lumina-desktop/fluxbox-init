@@ -73,7 +73,7 @@ session.cacheLife:	5
 session.ignoreBorder:	false
 session.tabsAttachArea:	Window
 session.tabPadding:	0
-session.keyFile:	/home/devtux/.config/lumina-desktop/fluxbox-keys
+session.keyFile:	~/.config/lumina-desktop/fluxbox-keys
 session.configVersion:	13
 session.autoRaiseDelay:	250
 session.cacheMax:	200
