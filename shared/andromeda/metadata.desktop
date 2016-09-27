@@ -1,0 +1,10 @@
+[SddmGreeterTheme]
+Name=manjaro
+Description=Manjaro SDDM Theme
+Author=oberon
+Type=sddm-theme
+Version=0.1
+MainScript=Main.qml
+ConfigFile=theme.conf
+Theme-Id=manjaro
+Theme-API=2.0
