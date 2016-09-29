@@ -137,6 +137,67 @@ Rectangle {
 
                 Row {
                     spacing: 4
+                    width: parent.width / 2
+                    z: 100
+
+                    Column {
+                        z: 100
+                        width: parent.width * 1.3
+                        spacing : 4
+                        anchors.bottom: parent.bottom
+
+                        Text {
+                            id: lblSession
+                            width: parent.width
+                            text: textConstants.session
+                            wrapMode: TextEdit.WordWrap
+                            font.bold: true
+                            font.pixelSize: 12
+                        }
+
+                        ComboBox {
+                            id: session
+                            width: parent.width; height: 30
+                            font.pixelSize: 14
+
+                            arrowIcon: "angle-down.png"
+
+                            model: sessionModel
+                            index: sessionModel.lastIndex
+
+                            KeyNavigation.backtab: password; KeyNavigation.tab: layoutBox
+                        }
+                    }
+
+                    Column {
+                        z: 101
+                        width: parent.width * 0.7
+                        spacing : 4
+                        anchors.bottom: parent.bottom
+
+                        Text {
+                            id: lblLayout
+                            width: parent.width
+                            text: textConstants.layout
+                            wrapMode: TextEdit.WordWrap
+                            font.bold: true
+                            font.pixelSize: 12
+                        }
+
+                        LayoutBox {
+                            id: layoutBox
+                            width: parent.width; height: 30
+                            font.pixelSize: 14
+
+                            arrowIcon: "angle-down.png"
+
+                            KeyNavigation.backtab: session; KeyNavigation.tab: loginButton
+                        }
+                    }
+                }
+
+                Row {
+                    spacing: 4
                     anchors.horizontalCenter: parent.horizontalCenter
                     property int btnWidth: Math.max(loginButton.implicitWidth,
                                                     shutdownButton.implicitWidth,
