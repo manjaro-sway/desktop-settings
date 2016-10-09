@@ -1,0 +1,71 @@
+mainबूट लोडर मदतWelcome to KDE
+Use this menu to select the desired function. If you have problems navigating in this help system, press F1 to enter the helpवर्णन of the help system. The main functions in this menu are:
+harddiskहार्ड डिस्कमधून बूट करा: This selection will not do anything to the system. It only starts a previously installed operating system.
+linuxस्थापना: This installation mode works on most machines. If you experience a system freeze during boot or problems with detection of your hardware components, such as disk controllers or network cards, try one of the following installation options.
+noacpiस्थापना--एसीपीआय अक्षम: Many of the currently-sold computers have incomplete or faulty ACPI implementations. This selection disables ACPI support in the kernel, but still enables many performance features, like DMA for IDE hard disks.
+nolapicस्थापना—एपीआयसी अक्षम: If the normal installation fails, this might be due to the system hardware not supporting local APIC. If this seems to be the case, use this option to install without local APIC support.
+failsafeस्थापना – सुरक्षित सेटिंग्स: If you were not successful with स्थापना, this selection might solve the issue.
+rescueबचाव प्रणाली: This boot image starts a small Linux system in RAM. This is useful if the system does not start properly. After booting this system, log in as root.
+firmwareफर्मवेअर चाचणी: Runs a BIOS test tool that validates ACPI and other parts of your BIOS.
+memtestस्मरण चाचणी: Memory testing is useful for more than checking installation of new memory modules. It is a stress test for a big part of your computer system and may indicate hardware problems.
+optबूट विकल्प: The boot options may change the behavior of your system completely. They are settings for the kernel.
+helpF1 Help: This is context sensitive. It will show different screens depending on the active element of the boot screen. There is also a description of this help system available.
+keytableF2: Set language and keyboard mapping used by the boot loader.
+videomodeF3 Video Mode: Here, choose between different screen resolutions while installing. If you encounter problems with the graphical installation, the अक्षर स्थिती may be a work-around for you.
+install_srcF4 Installation Source: Choose the installation source.
+driverupdateF6 Driver Update: For very new machines, a driver update may be needed to install the system.bitsसोफ्टवेयर प्रकार निवडYou have the choice to install the 32-bit or 64-bit version of KDE.
+परत जाmainबूट लोडर मदतdriverupdateड्रायव्हर अद्ययावतIf you need a driver update floppy or CD-ROM, press F6. The boot loader asks you to insert the driver update medium after loading the Linux kernel.
+A driver update is typically a floppy with new versions of hardware drivers or bug fixes needed during installation.
+परत जाmainबूट लोडर मदतfailsafeस्थापना – सुरक्षित सेटिंग्सSelect स्थापना – सुरक्षित सेटिंग्स if you encounter hangs while installing or irreproducible errors. This option disables DMA for IDE drives and all power management features. See also the kernel options for o_apmएपिएम, o_acpiएसिपिआई and o_ideआईडिई.
+परत जाmainबूट लोडर मदतfirmwareफर्मवेअर चाचणीStarts a BIOS checker that validates the ACPI tables and many other parts of your BIOS. Test results can be stored on usb disk or saved via network.
+परत जाmainबूट लोडर मदतharddiskहार्ड डिस्कमधून बूट कराSelect बूट स्थापना ओएस to start the system installed on your local hard disk. This system must be installed properly, because only the MBR (Master Boot Record) on the first hard disk is started. The device ID of the first hard disk is provided by the BIOS of the computer.
+Use this if you forgot to remove the CD or DVD from your drive and want to start the computer from the hard disk.
+परत जाmainबूट लोडर मदतhelpमदत प्रणाली वापरतानाThe boot loader online help is context sensitive. It gives information about the selected menu item or, if you are editing boot options, it tries to look up information about the option in which the cursor is positioned.
+Navigation Keys 
+  • ऊर्ध्वगामी बाण: highlight previous link  • अधोगामी बाण: highlight next link  • डावा बाण, बेकस्पेस: return to previous topic  • उजवा बाण, एन्टर, जागा: follow link  • पान वर: scroll up one page  • पान खाली: scroll down one page  • होम: go to page start  • एन्ड: go to page end  • एस्केप: leave help
+परत जाmainबूट लोडर मदतinstall_srcस्थापना स्त्रोतPress F4 to choose an installation source.
+This is the same as using the o_installस्थापना boot option.
+परत जाmainबूट लोडर मदतkeytableभाषा व किबोर्ड रचना निवडPress F2 to change language and keyboard layout the boot loader uses.
+परत जाmainबूट लोडर मदतlinuxस्थापनाSelect स्थापना to start the default installation. The optबूट विकल्प entered are used in the start-up. This item activates many features of commonly available hardware.
+परत जाmainबूट लोडर मदतmemtestस्मरण चाचणीThe included स्मरण चाचणी provides good possibilities to stress test the hardware of a system. Its main purpose is to detect broken RAM, but it also stresses many other parts of the system.
+There is no guarantee that the memory is good if no errors are found, although most of memory defects will be found.
+परत जाmainबूट लोडर मदतnoacpiस्थापना--एसीपीआय अक्षमCurrent hardware usually requires ACPI (Advanced Configuration and Power Interface) to control the interrupt handling. ACPI completely replaces the old APM system.
+Select स्थापना--एसीपीआय अक्षम if you encounter problems during boot of the kernel. Known problems with machines that have problems with ACPI are: 
+  • kernel freezes when booting  • PCI Cards are not detected or initialized properly
+You may also try the firmwareफर्मवेअर चाचणी boot option and look at the test results of the ACPI validation.
+परत जाmainबूट लोडर मदतnolapicस्थापना—एपीआयसी अक्षमNormally there are no problems with the APIC (Advanced Programmable Interrupt Controller). But if you seem to have some, try this option to boot without local APIC support.
+Please don't confuse this with noacpiएसिपिआई (Advanced Configuration and Power Interface).
+परत जाmainबूट लोडर मदतoptबूट विकल्पThere are two types of boot options available. First, there are options that affect the installer. Second, there are kernel options. Some of the more common options are:
+a) installer options 
+  • o_installस्थापना -- select an installation source  • networkनेटवर्क विकल्प -- the network options  • o_vncविएनसि विकल्प -- options for installation via VNC
+b) kernel options 
+  • o_splashस्प्लेश -- influence the behavior of the splash screen  • o_apmएपिएम -- toggle power management  • o_acpiएसिपिआई -- advanced configuration and power interface  • o_ideआईडिई -- control the IDE subsystem
+परत जाmainबूट लोडर मदतo_hostipo_netmasko_gatewaynetworkस्थापनेचे विकल्प : नेटवर्क विकल्पIt is possible to configure the network interface right now. The hardware will be detected later by YaST2. The minimum set of options to configure your network card consists of host IP and netmask. For example: 
+  • होस्टाआइपि=१९२.१६८.०.१० नेट्मास्क्= २५५.२५५.२५५.०
+or in a shorter form: 
+  • होस्टाआइपि=१९२.१६८.०.१०
+If you specified a o_installनेटवर्क बेस्ड स्थापना and do not specify both of these options, the installer tries to configure the network interface with डिएचसिपि. If you need a default gateway, specify this with the option गेटवे. For example: 
+  • गेटवे= १९२.१६८.०.१०
+परत जाoptबूट विकल्पo_acpiकेर्नल विकल्प = एसिपिआइACPI (Advanced Configuration and Power Interface) is a standard that defines power and configuration management interfaces between an operating system and the BIOS. By default, एसिपिआई is switched on when a BIOS is detected that is newer than from year 2000. There are several commonly used parameters to control the behavior of ACPI: 
+  • पिसिआइ=नो एसिपिआइ -- do not use ACPI to route PCI interrupts  • एसिपिआइ = ओल्ड बूट -- only the parts of ACPI that are relevant for booting remain activated  • एसिपिआइ = ओफ -- switch off ACPI completely  • एसिपिआइ =फोर्स -- switch on ACPI even if your BIOS is dated before 2000
+Especially on new computers, it replaces the old o_apmएपिएम system.
+परत जाoptबूट विकल्पo_apmकेर्नल विकल्प: एपिएमAPM is one of the two power management strategies used on current computers. It is mainly used with laptops for functions like suspend to disk, but it may also be responsible for switching off the computer after power down. APM relies on a correct working BIOS. If the BIOS is broken, APM may have only limited use or even prevent the computer from working. Therefore, it may be switched off with the parameter 
+  • एपिएम = ओफ -- switch off APM completely
+Some very new computers may take more advantage from the newer o_acpiएसिपिआई.
+परत जाoptबूट विकल्पo_ideकेर्नल विकल्प = आइडिईIDE is, unlike SCSI, commonly used in most desktop workstations. To circumvent some hardware problems that occur with IDE systems, use the kernel parameter: 
+  • आइडिई नोडिएमए -- switch off DMA for IDE drives
+परत जाoptबूट विकल्पo_installस्थापनेचे विकल्प: स्थापनाBy default, the local CD-ROMs are searched for the installation source. For a network install, select the स्थापना option. Possible installation protocols are 
+  • FTP  • NFS  • HTTP
+The syntax to use is just like standard URLs. For example, if your server is found at 192.168.0.1 and you want to do an NFS-based install from the directory /install on this server, specify the source as follows: 
+  • स्थापना =एनएफएस://१९२.१६८.०.१/ स्थापना
+The network card will either be configured with डिएचसिपि or you must specify the parameters yourself as described in the networkनेटवर्क विकल्प.
+परत जाoptबूट विकल्पo_splashकेर्नल विकल्प: स्प्लेशThe splash screen is the picture shown during system start-up. 
+  • स्प्लेश=० -- The splash screen is switched off. This may be useful with very old monitors or if some error occurs.  • स्प्लेश = वर्बोस -- Activates splash, kernel and boot messages are still shown.  • स्प्लेश= शांत -- Activates splash, but no messages. Instead a progress bar is drawn.
+परत जाoptबूट विकल्पo_vncpasswordo_vncस्थापनेचे विकल्प : विएनसिTo enable the VNC installation, specify the parameters vnc and vncpassword: 
+  • विएनसि=१ विएनसि पासवर्ड=उदाहरण
+The VNC server will be started and you may control YaST2 over any VNC client from a remote system.
+परत जाoptबूट विकल्पrescueबचाव प्रणालीThe बचाव प्रणाली is a small RAM disk base system. From there, it is possible to make all kinds of changes to an installed system. Because only low-level tools are available in this system, it is intended for experts.
+परत जाmainबूट लोडर मदतvideomodeव्हिडिओ स्थिती निवडPress F3 to get the list of video modes your graphics card supports. The highest mode your monitor can display is preselected.
+It is possible that your monitor cannot be detected automatically. In that case, select your preferred mode manually.
+If your system has problems with the graphics card during the installation, the अक्षर स्थिती may be a usable work-around.
+परत जाmainबूट लोडर मदत 

@@ -1,0 +1,75 @@
+mainAyuda del cargador de arranqueLe damos la bienvenida a KDE
+Utilice este menú para seleccionar la función deseada. Si tiene problemas para desplazarse por este sistema de ayuda, pulse F1 para acceder al helpDescripción del sistema de ayuda. Las funciones principales de este menú son:
+harddiskArrancar desde el disco duro: la selección de esta opción no hará nada en el sistema. Sólo iniciará un sistema operativo instalado previamente.
+linuxInstalación: este modo de instalación funciona en la mayoría de los equipos. Si experimenta un bloqueo del sistema durante el arranque o problemas a la hora de detectar los componentes de hardware, como los controladores de disco o las tarjetas de red, pruebe una de las siguientes opciones de instalación.
+noacpiInstalación: ACPI inhabilitado: muchos de los equipos que se venden actualmente cuentan con implementaciones de ACPI incompletas o erróneas. Esta opción inhabilita la compatibilidad con ACPI del núcleo, pero mantiene habilitadas muchas de las funciones de rendimiento, como DMA para los discos duros IDE.
+nolapicInstalación: APIC local inhabilitado: si la instalación normal no se lleva a cabo correctamente, puede deberse a que el hardware del sistema no sea compatible con APIC local. Si cree que es el caso, utilice esta opción para instalar sin compatibilidad con APIC local.
+failsafeInstalación: valores de configuración seguros: si no ha tenido éxito con Instalación, puede que al seleccionar esta opción se resuelva el problema.
+rescueSistema de rescate: esta imagen de arranque inicia un pequeño sistema Linux en la memoria RAM, lo que resulta útil si el sistema no se inicia correctamente. Tras arrancar este sistema, se debe entrar como usuario Root.
+firmwarePrueba de firmware: ejecutar una herramienta de prueba del BIOS que valida el sistema ACPI y otras partes del BIOS.
+memtestPrueba de memoria: la prueba de la memoria resulta útil no sólo para comprobar la instalación de nuevos módulos de memoria. Se trata de una prueba de carga de gran parte del sistema y puede poner de manifiesto otros problemas de hardware.
+optOpciones de arranque: las opciones de arranque pueden cambiar por completo el comportamiento del sistema. Son valores para el núcleo.
+helpF1 Ayuda: es sensible al contexto. Muestra distintas pantallas según el elemento activo de la pantalla de arranque. También hay disponible una descripción de este sistema de ayuda.
+keytableF2: definir el idioma y la distribución de teclado del cargador de arranque.
+videomodeF3 Modo de vídeo: aquí debe elegir entre varias resoluciones de pantalla durante la instalación. Si se producen problemas con la instalación gráfica, puede que la opción Modo de texto sirva de solución.
+install_srcF4 Origen de instalación: seleccionar el origen de instalación.
+driverupdateF6 Actualización del controlador: en los equipos muy nuevos, puede que sea necesario actualizar los controladores para instalar el sistema.bitsSelección de tipo de softwareTiene la posibilidad de instalar la versión de 32 o 64 bits de KDE.
+Volver a mainAyuda del cargador de arranquedriverupdateActualización de controladoresSi necesita un disquete o CD-ROM de actualización de los controladores, pulse F6. El cargador de arranque le pedirá que introduzca el medio de actualización después de cargar el núcleo de Linux.
+Las actualizaciones de los controladores suelen ser disquetes con versiones recientes de los controladores del hardware o con correcciones de errores necesarios durante la instalación.
+Volver a mainAyuda del cargador de arranquefailsafeInstalación: valores de configuración segurosSeleccione Instalación: valores de configuración seguros si se producen bloqueos o errores irreproducibles durante la instalación. Esta opción inhabilita DMA para las unidades IDE y todas las funciones de gestión de la energía. Consulte también las opciones del núcleo para o_apmapm, o_acpiACPI y o_ideide.
+Volver a mainAyuda del cargador de arranquefirmwarePrueba de firmwareInicia una comprobación del BIOS que valida las tablas ACPI y muchas otras partes del BIOS. Los resultados de la prueba se pueden almacenar en un disco USB o guardarse en la red.
+Volver a mainAyuda del cargador de arranqueharddiskArrancar desde el disco duroSeleccione Arrancar SO instalado para iniciar el sistema instalado en el disco duro local. Este sistema se debe instalar de forma correcta, ya que sólo se inicia el MBR (sector de arranque principal) del primer disco duro. El ID de dispositivo del primer disco duro lo proporciona el BIOS del equipo.
+Utilice esto si olvida retirar el CD o el DVD de la unidad y desea iniciar el equipo desde el disco duro.
+Volver a mainAyuda del cargador de arranquehelpUso del sistema de ayudaLa ayuda en línea del cargador de arranque es contextual. Proporciona información sobre el elemento de menú seleccionado o, si se están modificando las opciones de arranque, intenta buscar información sobre la opción en la que está situado el cursor.
+Teclas de navegación 
+  • Flecha arriba: resaltar el enlace anterior  • Flecha abajo: resaltar el enlace siguiente  • Flecha a la izquierda, Retroceso: volver al tema anterior  • Flecha a la derecha, Intro, Espacio: seguir el enlace  • Re Pág: retroceder una página  • Av Pág: avanzar una página  • Inicio: ir al principio de la página  • Fin: ir al final de la página  • Esc: salir de la ayuda
+Volver a mainAyuda del cargador de arranqueinstall_srcOrigen de instalaciónPulse F4 para elegir un origen de instalación.
+Esto equivale a utilizar la opción de arranque o_installinstall.
+Volver a mainAyuda del cargador de arranquekeytableSelección de idioma y distribución de tecladoPulse F2 para cambiar el idioma y la distribución de teclado del cargador de arranque.
+Volver a mainAyuda del cargador de arranquelinuxInstalaciónSeleccione Instalación para iniciar la instalación por defecto. Los valores de optOpciones de arranque introducidos se utilizan durante el inicio. Este elemento activa muchas funciones de los dispositivos de hardware más populares.
+Volver a mainAyuda del cargador de arranquememtestPrueba de memoriaEl Prueba de memoria incluido ofrece muchas posibilidades de realizar una prueba de carga del hardware de un sistema. Su objetivo principal es detectar RAM dañada, pero también analiza muchas otras partes del sistema.
+No existen garantías de que la memoria no tenga problemas si no se encuentran errores, aunque se detectarán la mayoría de los defectos de la memoria.
+Volver a mainAyuda del cargador de arranquenoacpiInstalación: ACPI inhabilitadoEl hardware actual normalmente requiere que ACPI controle la gestión de interrupciones. ACPI sustituye completamente al sistema APM anterior.
+Seleccione Instalación: ACPI inhabilitado si detecta problemas durante el arranque del núcleo. Estos son algunos de los problemas conocidos de los equipos que presentan problemas con ACPI: 
+  • El núcleo se bloquea al arrancar.  • Las tarjetas PCI no se detectan o no se inician adecuadamente.
+También puede probar la opción de arranque firmwarePrueba de firmware y observar los resultados de la prueba de validación de ACPI.
+Volver a mainAyuda del cargador de arranquenolapicInstalación: APIC local inhabilitadoNormalmente no se producen problemas con el sistema APIC (controlador avanzado de interrupciones programables, del inglés Advanced Programmable Interrupt Controller). Pero, si se produce alguno, pruebe esta opción para arrancar sin compatibilidad local con APIC.
+No confundir con noacpiACPI (interfaz avanzada de configuración y alimentación, del inglés Advanced Configuration and Power Interface).
+Volver a mainAyuda del cargador de arranqueoptOpciones de arranqueHay dos tipos de opciones de arranque disponibles. En primer lugar, las que afectan al instalador. En segundo, las opciones del núcleo. Algunas de las opciones más comunes son las siguientes:
+a) Opciones del instalador 
+  • o_installinstall -- seleccionar un origen de instalación  • networkOpciones de red -- opciones de red  • o_vncOpciones de VNC -- opciones de instalación mediante VNC
+b) Opciones del núcleo 
+  • o_splashsplash -- modificar el comportamiento de la pantalla inicial  • o_apmapm -- alternar la gestión avanzada de energía  • o_acpiACPI -- interfaz avanzada de configuración y alimentación  • o_ideide -- controlar el subsistema IDE
+Volver a mainAyuda del cargador de arranqueo_hostipo_netmasko_gatewaynetworkOpciones del instalador: opciones de redExiste la posibilidad de configurar la interfaz de red en este momento. YaST2 detectará el hardware en un momento posterior. El conjunto mínimo de opciones para configurar la tarjeta de red consiste en la máscara de red y la dirección IP del host. Por ejemplo: 
+  • hostip=192.168.0.10 netmask=255.255.255.0
+.
+O, de forma abreviada: 
+  • hostip=192.168.0.10/24
+.
+Si se indica un o_installInstalación basada en red pero no se especifican estas dos opciones, el instalador intentará configurar la interfaz de red con DHCP. Si se necesita un gateway por defecto, establezca la opción gateway. Por ejemplo: 
+  • gateway=192.168.0.8
+.
+Volver a optOpciones de arranqueo_acpiOpciones del núcleo: acpiACPI (interfaz avanzada de configuración y energía) es un estándar que define las interfaces de gestión de la configuración y la energía entre un sistema operativo y el BIOS. Por defecto, ACPI se activa cuando se detecta que el BIOS es posterior al año 2000. Habitualmente, se utilizan varios parámetros para controlar el comportamiento de ACPI: 
+  • pci=noacpi -- no utilizar ACPI para dirigir las interrupciones PCI  • acpi=oldboot -- sólo permanecen activadas las partes de ACPI relacionadas con el arranque  • acpi=off -- desactivar ACPI completamente  • acpi=force -- activar ACPI aunque el BIOS tenga fecha anterior a 2000
+Sustituye al sistema o_apmapm anterior, especialmente en los equipos más nuevos.
+Volver a optOpciones de arranqueo_apmOpciones del núcleo: apmAPM es una de las dos estrategias de gestión de la energía que se utilizan en los equipos actuales. Se utiliza principalmente en portátiles para funciones como la suspensión a disco, pero también puede ser responsable de apagar el equipo cuando se corta la alimentación. APM se fundamenta en un funcionamiento correcto del BIOS. Si el BIOS está dañado, puede que APM tenga un uso limitado, o que incluso impida que el equipo funcione. Por lo tanto, es posible desactivarlo con el parámetro 
+  • apm=off -- desactivar APM completamente
+.
+Algunos equipos muy nuevos pueden aprovechar mejor el sistema o_acpiACPI más reciente.
+Volver a optOpciones de arranqueo_ideOpciones del núcleo: ideIDE, a diferencia de SCSI, se utiliza en la mayoría de las estaciones de trabajo de escritorio. Para evitar algunos problemas de hardware que se producen con los sistemas IDE, utilice el parámetro del núcleo: 
+  • ide=nodma -- desactivar DMA para las unidades IDE
+Volver a optOpciones de arranqueo_installOpciones del instalador: installPor defecto, se busca el origen de la instalación en las unidades de CD-ROM locales. Para realizar una instalación desde la red, seleccione la opción install. Los protocolos de instalación posibles son 
+  • FTP  • NFS  • HTTP
+Se debe utilizar la misma sintaxis que con las direcciones URL normales. Por ejemplo, si el servidor se encuentra en 192.168.0.1 y desea efectuar una instalación basada en NFS desde el directorio /install de ese servidor, indique el origen de esta forma: 
+  • install=nfs://192.168.0.1/install
+La tarjeta de red se configurará con DHCP o se deberán indicar los parámetros manualmente como se describe en networkOpciones de red.
+Volver a optOpciones de arranqueo_splashOpciones del núcleo: splashLa pantalla inicial es la imagen que se muestra durante el inicio del sistema. 
+  • splash=0 -- La pantalla inicial se desactiva. Esto puede resultar útil con monitores muy antiguos o si se producen errores.  • splash=verbose -- Activa la pantalla inicial. Los mensajes de arranque y del núcleo se siguen mostrando.  • splash=silent -- Activa la pantalla inicial. En lugar de mensajes se muestra una barra de progreso.
+Volver a optOpciones de arranqueo_vncpasswordo_vncOpciones del instalador: vncPara habilitar la instalación de VNC, especifique los parámetros vnc y vncpassword: 
+  • vnc=1 vncpassword=ejemplo
+Se iniciará el servidor de VNC y podrá controlar YaST2 mediante cualquier cliente VNC desde un sistema remoto.
+Volver a optOpciones de arranquerescueSistema de rescateSistema de rescate es un pequeño sistema base en disco RAM que permite realizar cualquier tipo de cambio en un sistema instalado. Puesto que en este sistema sólo hay disponibles herramientas de bajo nivel, está dirigido a usuarios expertos.
+Volver a mainAyuda del cargador de arranquevideomodeSelección de modo de vídeoPulse F3 para obtener la lista de los modos de vídeo que admite la tarjeta gráfica. El mejor modo que admita el monitor estará preseleccionado.
+Es posible que su monitor no se detecte automáticamente. En ese caso, seleccione el modo que prefiera manualmente.
+Si su sistema tiene problemas con la tarjeta gráfica durante la instalación, puede que Modo de texto sirva como solución.
+Volver a mainAyuda del cargador de arranque 

@@ -1,0 +1,71 @@
+mainAjutor bootloaderBine-aţi venit la KDE
+Utilizaţi acest meniu pentru a selecta funcţia dorită. Dacă apar probleme la navigarea prin acest sistem de ajutor, apăsaţi F1 pentru a deschide helpdescriere al sistemului de ajutor. Funcţiile principale ale acestui meniu sunt:
+harddiskPorneşte de pe hard disc: Această opţiune nu are nici un efect asupra sistemului. Porneşte doar un sistem de operare instalat anterior.
+linuxInstalare: Acest mod de instalare funcţionează pe majoritatea maşinilor. Dacă sistemul se blochează la bootare sau dacă apar probleme la detectarea componentelor hardware, ca de exemplu controllere de disc sau plăci de reţea, încercaţi cu una dintre următoarele opţiuni de instalare.
+noacpiInstalare -- ACPI deactivat: Multe dintre calculatoarele actuale au implementări APIC incomplete sau defectuoase. Această opţiune deactivează suportul APIC din kernel, însă păstrează activate anumite funcţionalităţi pentru performanţă, ca de exemplu DMA pentru hard disk-uri IDE.
+nolapicInstalare -- APIC local dezactivat: Dacă instalarea normală eşuează, poate fi din cauza hardware-ului din sistem ce nu suportă APIC local. Dacă aceasta pare a fi cauza, utilizaţi această opţiune pentru a instala fără suport APIC local.
+failsafeInstalare -- Setări sigure: Dacă nu aţi reuşit cu Instalare, puteţi încerca această variantă.
+rescueSistem de salvare: Această imagine de boot porneşte un mini-sistem Linux în RAM. Poate fi util dacă sistemul nu porneşte corect. După bootare, autentificaţi-vă ca root.
+firmwareTest firmware: Rulează un utilitare de testare a BIOS-ului, ce validează ACPI şi alte părţi ale BIOS-ului dvs.
+memtestTest de memorie: Testarea memoriei nu este utilă doar pentru verificarea instalării noilor module de memorie. Este de asemenea un test de rezistenţă pentru o mare parte a sistemului dvs. şi poate descoperi eventualele probleme hardware existente.
+optOpţiuni de boot: Opţiunile de boot pot modifica complet comportamentul sistemului dvs. Sunt setări pentru kernel.
+helpF1 Ajutor: Acesta este sensibil la context. Va afişa diverse ecrane în funcţie de elementul activ din ecranul de boot. Există de asemenea o descriere a acestui sistem de ajutor.
+keytableF2: Setează limba şi aranjamentul de tastatură utilizate de bootloader.
+videomodeF3 Modul Video: Aici puteţi alege rezoluţia ecranului la instalare. Dacă apar probleme la instalarea grafică, o soluţie de moment poate fi mod text.
+install_srcF4 Sursa instalării: Alegeţi sursa de instalare.
+driverupdateF6 Actualizări drivere: În cazul computerelor foarte noi, pentru instalarea sistemului poate fi necesară o actualizare de drivere.bitsSelecţie tip softwarePuteţi alege între versiunea pe 32 de biţi şi 64 de biţi a KDE.
+Înapoi la mainAjutor bootloaderdriverupdateActualizare driverF6 Dacă aveţi nevoie de o dischetă sau un CD-ROM de actualizare a driverelor, apăsaţi F6. Bootloader-ul vă va cere să introduceţi mediul de actualizare după încărcarea kernelului Linux.
+O actualizare de driver este în mod normal o dischetă cu versiuni noi ale driverelor hardware sau corecturi de erori necesare în timpul instalării.
+Înapoi la mainAjutor bootloaderfailsafeInstalare -- Setări sigureSelectaţi Instalare -- Setări sigure dacă sistemul se blochează la instalare sau dacă apar erori ce nu se pot reproduce. Această opţiune deactivează DMA pentru unităţile IDE şi toate funcţionalităţile de gestiune a alimentării. Vedeţi şi opţiunile kernel pentru o_apmapm, o_acpiacpi şi o_ideide.
+Înapoi la mainAjutor bootloaderfirmwareTest firmwarePorneşte o aplicaţie de validare a BIOS-ului ce validează tabelele ACPI şi multe alte părţi ale BIOS-ului dvs. Rezultatele testului pot fi stocate pe un disc usb sau pot fi salvate prin reţea.
+Înapoi la mainAjutor bootloaderharddiskPorneşte de pe hard discSelectaţi Bootează sistemul de operare instalat pentru a porni sistemul instalat pe harddisk-ul dvs. local. Acest sistem trebuie să fie instala corect, deoarece va fi pornit doar MBR-ul (Master Boot Record) de pe primul harddisk. ID-ul de dispozitiv al primului harddisk este furnizat de BIOS-ul calculatorului.
+Utilizaţi această opţiune dacă aţi uitat să îndepărtaţi CD-ul sau DVD-ul din unitate şi doriţi să porniţi calculatorul de pe harddisk.
+Înapoi la mainAjutor bootloaderhelpUtilzarea sistemului de ajutorAjutorul online al bootloader-ului este dependent de context. Oferă informaţii despre elementul de meniu selectat sau, dacă editaţi opţiunile de boot, încearcă să caute informaţii despre opţiunea pe care este poziţionat cursorul.
+Taste de navigare 
+  • Săgeată în sus: se evidenţiază legătura precedentă  • Săgeată în jos: se evidenţiază legătura următoare  • Săgeată stânga, Inapoi: înapoi la tema anterioară  • Săgeată dreapta, Enter, Spaţiu: urmaţi linkul  • Pagină sus: derulează o pagină în sus  • Pagină jos: derulează o pagină în jos  • Acasă: salt la începutul paginii  • Sfârşit: salt la sfârşitul paginii  • Esc: părăseşte ajutorul
+Înapoi la mainAjutor bootloaderinstall_srcSursă de instalareApăsaţi F4 pentru a selecta o sursă de instalare.
+Este echivalent cu utilizarea opţiunii de boot o_installinstalează.
+Înapoi la mainAjutor bootloaderkeytableSelecţie limbă şi mapare tastaturăApăsaţi F2 pentru a modifica limba şi maparea de tastatură utilizată de bootloader.
+Înapoi la mainAjutor bootloaderlinuxInstalareSelectaţi Instalare pentru a porni instalarea implicită. optopţiuni de boot introduse sunt utilizate la pornire. Acest element activează diferite funcţii ale hardware-ului uzual disponibil.
+Înapoi la mainAjutor bootloadermemtestTest de memorieTest de memorie inclus oferă posibilitatea de a testa intensiv hardware-ul unui sistem. Scopul principal este detectarea de RAM defect, dar acţionează şi asupra altor părţi ale sistemului.
+Dacă nu au fost găsite erori, nu există garanţia că memoria este intactă, chiar dacă majoritatea defectelor de memorie sunt în general detectate.
+Înapoi la mainAjutor bootloadernoacpiInstalare -- ACPI deactivatConfiguraţia hardware actuală cere ACPI (Advanced Configuration and Power Interface) pentru controlul manipulării întreruperilor. ACPI înlocuieşte complet vechiul sistem APM.
+Selectaţi Instalare -- ACPI deactivat dacă apar probleme în timpul bootări kernelului. Problemele cunoscute ale maşinilor care prezintă probleme cu ACPI sunt: 
+  • kernelul se blochează la bootare  • plăcile PCI nu se detectează sau nu se iniţializează corect
+Puteţi încerca şi opţiunea de boot firmwareTest firmware şi consulta rezultatele testului de validare ACPI.
+Înapoi la mainAjutor bootloadernolapicInstalare -- APIC local dezactivatÎn mod normal nu sunt probleme cu APIC (Advanced Programmable Interrupt Controller). Dacă totuşi apar, încercaţi această opţiune pentru a boota fără suport APIC local.
+A nu se confunda cu noacpiACPI (Advanced Configuration and Power Interface).
+Înapoi la mainAjutor bootloaderoptOpţiuni de bootExistă două tipuri de opţiuni de boot disponibile: opţiunile ce afectează instalatorul şi opţiunile kernel. Câteva dintre opţiunile uzuale sunt:
+a) opţiuni instalator 
+  • o_installinstalează -- selectaţi o sursă de instalare  • networkopţiuni reţea -- opţiunile reţea  • o_vncopţiuni vnc -- opţiuni pentru instalarea via VNC
+b) opţiuni kernel 
+  • o_splashsplash -- influenţează comportamentul ecranului de întâmpinare  • o_apmapm -- comută gestiunea alimentării  • o_acpiacpi -- configurare avansată şi interfaţă alimentare  • o_ideide -- controlează subsistemul IDE
+Înapoi la mainAjutor bootloadero_hostipo_netmasko_gatewaynetworkOpţiuni instalare: Opţiuni reţeaPuteţi configura interfaţa de reţea chiar acum. Hardware-ul va fi detectat mai târziu de YaST. Opţiunile minime pentru configurarea plăcii de reţea sunt IP-ul gazdei şi masca de reţea. De exemplu: 
+  • hostip=192.168.0.10 netmask=255.255.255.0
+sau în formă prescurtată: 
+  • hostip=192.168.0.10/24
+Dacă aţi specificat un o_installinstalare bazată pe reţea şi nu aţi specificat ambele opţiuni, instalatorul încearcă să configureze interfaţa de reţea cu dhcp. Dacă necesitaţi un gateway implicit, specificaţi-l cu opţiunea gateway. De exemplu: 
+  • gateway=192.168.0.8
+Înapoi la optOpţiuni de booto_acpiOpţiuni kernel: acpiACPI (Advanced Configuration and Power Interface - Interfaţă avansată pentru configurare şi alimentare) este un standard ce defineşte interfeţele de gestiune a alimentării şi a configuraţiei între sistemul de operare şi BIOS. Implicit, acpi este activ dacă se detectează un BIOS mai nou de 2000. Există mai mulţi parametri utilizaţi pentru controlul comportamentului ACPI: 
+  • pci=noacpi -- nu utiliza ACPI pentru rutarea întreruperilor PCI  • acpi=oldboot -- rămân activate doar acele părţi ale ACPI relevante pentru boot  • acpi=off -- dezactivează ACPI complet  • acpi=force -- activează ACPI chiar dacă BIOS-ul este anterior anului 2000
+În special pe calculatoare noi, înlocuieşte vechiul sistem o_apmapm.
+Înapoi la optOpţiuni de booto_apmOpţiuni kernel: apmAPM este una dintre cele două strategii de gestiune a alimentării utilizate de calculatoarele moderne. Este utilizată în special pe laptop-uri pentru funcţii ca hibernarea, dar poate fi de asemenea responsabilă pentru deconectarea de la reţea a calculatorului după ce a fost oprit. APM se bazează pe un BIOS ce funcţionează corect. Dacă BIOS-ul este defect, APM poate funcţiona doar în mod restrâns sau poate chiar împiedica funcţionarea corectă a calculatorului. De aceea poate fi dezactivat cu parametrul 
+  • apm=off -- dezactivează APM complet
+Pentru unele calculatoare foarte noi poate fi mai avantajos mai noul o_acpiACPI.
+Înapoi la optOpţiuni de booto_ideOpţiuni kernel: ideIDE este, spre deosebire de SCSI, utilizat în mod curent de cele mai multe staţii de lucru desktop. Pentru a evita anumite probleme hardware ce apar pe sistemele IDE, utilizaţi parametrul kernel: 
+  • ide=nodma -- dezactivează DMA pentru unităţile IDE
+Înapoi la optOpţiuni de booto_installOpţiuni instalare: instaleazăImplicit, sursa de instalare se caută pe CD-ROM-urile locale. Pentru o instalare din reţea, selectaţi opţiunea instalează. Protocoalele de instalare posibile sunt 
+  • FTP  • NFS  • HTTP
+Sintaxa utilizată este ca şi cea a URL-urilor standard. De exemplu, dacă serverul dvs. se află la 192.168.0.1 şi doriţi o instalare pe bază de NFS de pe directorul /install de pe acest server, specificaţi sursa astfel: 
+  • install=nfs://192.168.0.1/install
+Placa de reţea va fi configurată fie cu dhcp, fie cu parametrii specificaţi de dvs. conform instrucţiunilor de la networkopţiuni reţea.
+Înapoi la optOpţiuni de booto_splashOpţiuni kernel: splash (ecran de pornire)Ecranul de start este imaginea afişată în timp ce porneşte sistemul. 
+  • splash=0 -- Ecranul de pornire este dezactivat. Acest lucru poate fi util pentru monitoarele foarte vechi sau în cazul apariţiei unei erori.  • splash=verbose -- Activează ecranului de pornire, mesajele kernel şi boot sunt afişate în continuare.  • splash=silent -- Activează ecranul de pornire, dar fără mesaje. În schimb se afişează o bară de progres.
+Înapoi la optOpţiuni de booto_vncpasswordo_vncOpţiuni instalare: vncPentru a activa instalarea VNC, specificaţi parametrii vnc şi vncpassword: 
+  • vnc=1 vncpassword=example
+Va fi pornit serverul VNC şi puteţi accesa YaST2 la distanţă utilizând orice tip de client VNC.
+Înapoi la optOpţiuni de bootrescueSistem de salvareSistem de salvare este un sistem de bază pe disc RAM. De acolo se pot efectua diferite modificări asupra unui sistem instalat. Deoarece acest sistem dispune doar de utilitare de nivel jos, este destinat experţilor.
+Înapoi la mainAjutor bootloadervideomodeSelecţie mod videoApăsaţi F3 pentru a obţine lista modurilor video suportate de placa dvs. grafică. Modul de afişare cel mai înalt suportat de monitor va fi preselectat.
+Este posibil ca monitorul dvs. să nu poată fi detectat automat. În acest caz, selectaţi manual modul dorit.
+Dacă la instalare pe sistemul dvs. apar probleme cu placa grafică, o soluţie posibilă este mod text.
+Înapoi la mainAjutor bootloader 

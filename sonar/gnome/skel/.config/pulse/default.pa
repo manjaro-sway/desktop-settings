@@ -1,0 +1,5 @@
+.include /etc/pulse/default.pa
+#switch to newly plugged in sound hardware
+load-module module-switch-on-connect
+#enable console screen readers
+load-module module-native-protocol-unix auth-anonymous=1 socket=/tmp/pulse.sock

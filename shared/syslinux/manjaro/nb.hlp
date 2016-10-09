@@ -1,0 +1,71 @@
+mainHjelp for oppstartslasterVelkommen til KDE
+Bruk denne menyen for å velge ønsket funksjon. Hvis du har problemer med å finne frem i hjelpesystemet, trykk F1 for å vise helpbeskrivelse for hjelpesystemet. Hovedfunksjonene i denne menyen er:
+harddiskStart fra harddisk: Dette valget gjør ingenting med systemet. Det starter bare et tidligere installert operativsystem.
+linuxInstallasjon: Denne installasjonsmodusen fungerer for de fleste datamaskiner. Hvis systemet fryser under oppstart eller hvis det oppstår problemer med registrering av maskinvarekomponenter, f.eks. diskkontrollere eller nettverkskort, kan du forsøke ett av følgende installasjonsvalg.
+noacpiInstallasjon--ACPI deaktivert: Mange datamaskiner har ufullstendige eller defekte ACPI-funksjoner. Dette valget deaktiverer ACPI-støtte i kjernen, men mange andre ytelsesfunksjoner vil fremdeles være aktivert, som DMA for IDE-harddisker.
+nolapicInstallasjon--Lokal APIC deaktivert: Hvis den vanlige installasjonen mislykkes, kan det skyldes at maskinvaren ikke støtter lokal APIC. Hvis dette ser ut til å være tilfellet, bruker du dette alternativet til å installere uten lokal APIC-støtte.
+failsafeInstallasjon--sikker modus: Hvis Installasjon mislyktes, kan dette valget løse problemet.
+rescueRedningssystem: Dette oppstartsdiskbildet starter et lite Linux-system fra minnet. Dette er nyttig hvis systemet ikke starter som det skal. Logg inn som rot etter at systemet har startet opp.
+firmwareFastvarekontroll: Kjører et BIOS-testverktøy som kontrollerer APCI og andre deler av BIOS.
+memtestMinnekontroll: Kontroll av minnet er nyttig i flere situasjoner enn testing av nye minnebrikker. Kontrollen er en belastningstest for store deler av systemet, og kan påvise forskjellige maskinvarefeil.
+optOppstartsalternativer: Oppstartsvalgene kan endre systemets funksjon helt. Det er innstillinger som påvirker kjernen.
+helpF1 Hjelp: Hjelpen er kontekstsensitiv. Ulike skjermbilder vil vises, avhengig av det aktive elementet på oppstartsskjermen. Det finnes også en beskrivelse av dette Hjelp-systemet.
+keytableF2: Angi språk og tastaturoppsett for oppstartslasteren.
+videomodeF3 Skjermmodus: Her kan du velge mellom ulike skjermoppløsninger for installasjonen. Hvis det oppstår problemer med den grafiske installasjonen, kan tekstmodus være en løsning.
+install_srcF4 Installasjonskilde: Velg installasjonskilden.
+driverupdateF6 Driveroppdatering: På helt nye maskiner kan det hende at du trenger en driveroppdatering for å installere systemet.bitsValg av programvaretypeDu kan velge å installere en 32-bit- eller 64-bit-versjon av KDE.
+Tilbake til mainHjelp for oppstartslasterdriverupdateDriveroppdateringTrykk F6 hvis du trenger en diskett eller en CD-ROM med en driveroppdatering. Oppstartslasteren vil be deg om å sette inn mediet med driveroppdateringen etter at Linux-kjernen er lastet.
+En driveroppdatering er vanligvis en diskett med nye versjoner av maskinvaredrivere eller oppdateringer som kreves for installasjonen.
+Tilbake til mainHjelp for oppstartslasterfailsafeInstallasjon--sikker modusVelgInstallasjon--sikker modus hvis systemet henger under installasjonen eller ved uforklarlige feil. Dette valget deaktiverer DMA for IDE-disker og alle strømstyringsfunksjoner. Se også kjernevalgene for o_apmapm, o_acpiacpi og o_ideide.
+Tilbake til mainHjelp for oppstartslasterfirmwareFastvarekontrollStarter en BIOS-testverktøy som bekrefter gyldigheten av ACPI-tabellene og mange andre deler av BIOS. Resultatene kan lagres på en USB-enhet eller via på nettverket.
+Tilbake til mainHjelp for oppstartslasterharddiskStart fra harddiskVelgStart installert OS for å starte systemet som er installert på den lokale harddisken. Dette systemet må være riktig installert fordi bare MBR (Master Boot Record) på første harddisk vil bli startet. Enhets-ID-en for første harddisk hentes fra datamaskinens BIOS.
+Bruk dette valget hvis du glemte å fjerne CD-en eller DVD-en fra stasjonen og vil starte datamaskinen fra harddisken.
+Tilbake til mainHjelp for oppstartslasterhelpBruke Hjelp-systemetDen elektroniske hjelpen for oppstartslasteren er kontekstsensitiv. Den gir informasjon om det valgte menyelementet eller forsøker å finne informasjon om valget som markøren er plassert på, når du redigerer oppstartsvalg.
+Navigasjonstaster 
+  • Pil opp: aktiver forrige lenke  • Pil ned: aktiver neste lenke  • Pil venstre, Backspace: tilbake til forrige emne  • Pil høyre, Enter, Mellomrom: følg lenken  • Page Up: bla én side oppover  • Page Down: bla én side nedover  • Home: til begynnelsen av siden  • End: til slutten av siden  • Esc: avslutt hjelpen
+Tilbake til mainHjelp for oppstartslasterinstall_srcInstallasjonskildeTrykk F4 for å velge en installasjonskilde.
+Dette er det samme som å bruke oppstartsvalget o_installinstaller.
+Tilbake til mainHjelp for oppstartslasterkeytableValg av språk og tastaturoppsettTrykk på F2 for å endre språket og tastaturoppsettet for oppstartslasteren.
+Tilbake til mainHjelp for oppstartslasterlinuxInstallasjonVelgInstallasjon for å starte en standardinstallasjon. Angitt optoppstartsalternativer benyttes ved oppstart. Dette elementet aktiverer mange funksjoner i vanlig tilgjengelig maskinvare.
+Tilbake til mainHjelp for oppstartslastermemtestMinnekontrollMinnekontroll gir gode muligheter til å kontrollere maskinvaren på systemet. Hovedformålet er å oppdage dårlige minnebrikker, men andre deler av systemet blir også kontrollert.
+Det er ikke helt sikkert at minnet er feilfritt dersom ingen feil blir funnet, selv om de fleste minnefeil vil bli funnet.
+Tilbake til mainHjelp for oppstartslasternoacpiInstallasjon--ACPI deaktivertNye datamaskiner krever iblant ACPI (Advanced Configuration and Power Interface) for å styre avbruddshandlingen. ACPI erstatter det tidligere APM-systemet.
+Velg Installasjon--ACPI deaktivert hvis det oppstår problemer under oppstart av kjernen. Vanlige problemer på maskiner med ACPI-feil er: 
+  • kjernen fryser under oppstart  • PCI-kort er ikke registrert eller riktig initialisert
+Du kan også forsøke oppstartsvalget firmwareFastvarekontroll og kontrollere testresultatene etter ACPI-kontrollen.
+Tilbake til mainHjelp for oppstartslasternolapicInstallasjon--Lokal APIC deaktivertVanligvis er det ingen problemer med APIC (Advanced Programmable Interrupt Controller). Hvis du likevel skulle støte på noen, forsøk dette valget for å starte uten lokal APIC-støtte.
+Ikke bland dette sammen med noacpiACPI (advanced configuration and power interface).
+Tilbake til mainHjelp for oppstartslasteroptOppstartsalternativerDet er to tilgjengelige typer oppstartsvalg, valg for installasjonsprogrammet og valg for kjernen. Noen av de vanligste valgene er:
+a) valg for installasjonsprogrammet 
+  • o_installinstaller -- velg en installasjonskilde  • networknettverksvalg -- nettverksvalg  • o_vncvnc-valg -- valg for installasjon via VNC
+b) valg for kjernen 
+  • o_splashskjerm -- påvirker oppstartsbildet  • o_apmapm -- slå strømstyring av og på  • o_acpiacpi -- avansert oppsett og strømstyringsvalg  • o_ideide -- kontroller IDE-systemet
+Tilbake til mainHjelp for oppstartslastero_hostipo_netmasko_gatewaynetworkInstallasjonsvalg: nettverksvalgDu kan sette opp nettverksgrensesnittet allerede nå. Maskinvaren vil ble registrert senere av YaST2. Du må minst angi IP-adressen og nettverksmasken for å konfigurere et nettverkskort. For eksempel:
+  • hostip=192.168.0.10 netmask=255.255.255.0
+eller i et kortere format: 
+  • hostip=192.168.0.10/24
+Hvis du spesifiserte en o_installnettverksbasert installasjon uten å definere disse to valgene, vil installasjonsprogrammet forsøke å konfigurere nettverksgrensesnittet med dhcp. Hvis du trenger en standard systemport, angir du dette med valget systemport. For eksempel: 
+  • gateway=192.168.0.8
+Tilbake til optOppstartsalternativero_acpiKjernevalg: acpiACPI (Advanced Configuration and Power Interface) er en standard som definerer kommunikasjonen med hensyn til strømstyring og konfigurasjon mellom et operativsystem og BIOS. Som standard aktiveres acpi dersom BIOS er nyere enn fra år 2000. Det finnes flere vanlige parametere som som styrer ACPI-funksjonen:
+  • pci=noacpi -- ikke bruk ACPI for å rute PCI-avbrudd  • acpi=oldboot -- bare de delene av ACPI som er relevant for oppstart, skal være aktivert  • acpi=off -- deaktiver ACPI helt  • acpi=force -- aktiver ACPI selv om BIOS er eldre enn fra 2000
+Spesielt på nye datamaskiner, erstatter dette det tidligere o_apmapm-systemet.
+Tilbake til optOppstartsalternativero_apmKjernevalg: apmAPM er én av to strømstyringsstrategier som brukes på moderne datamaskiner. APM brukes hovedsakelig på bærbare maskiner for funksjoner som diskdvale, men kan også slå av maskinen når strømmen brytes. APM krever at BIOS fungerer riktig. Hvis BIOS er skadet, har APM begrenset nytte, og kan til og med føre til at datamaskinen ikke fungerer. Derfor kan APM deaktiveres med parameteren 
+  • apm=off -- deaktiver APM helt
+For enkelte helt nye datamaskiner kan det være en fordel å bruke den nyere o_acpiACPI.
+Tilbake til optOppstartsalternativero_ideKjernevalg: ideIDE benyttes, i motsetning til SCSI, for de fleste skrivebordsmaskiner. For å unngå enkelte maskinvareproblemer som forekommer med IDE-systemer, bruk kjerneparameteren: 
+  • ide=nodma -- deaktiver DMA for IDE-disker
+Tilbake til optOppstartsalternativero_installInstallasjonsvalg: installerSom standard søker installasjonsprogrammet etter en kilde på lokale CD-ROM-stasjoner. For en nettverksinstallasjon, velg installer. Mulige installasjonsprotokoller er 
+  • FTP  • NFS  • HTTP
+Syntaksen er den samme som i vanlige nettadresser. Hvis for eksempel serveren befinner seg på 192.168.0.1 og du vil utføre en NFS-basert installasjon fra katalogen /install på denne serveren, angir du følgende kilde: 
+  • install=nfs://192.168.0.1/install
+Nettverkskortet vil enten bli konfigurert med dhcp, eller du må definere parametrene selv, som beskrevet i networknettverksvalg.
+Tilbake til optOppstartsalternativero_splashKjernevalg: splashOppstartsskjermen er bildet som vises når systemet starter opp. 
+  • splash=0 -- Oppstartsbildet slås av. Dette kan være nyttig for svært gamle skjermer, eller hvis det oppstår feil.  • splash=verbose -- Aktiverer et oppstartsbilde, men kjerne- og oppstartsmeldinger vises likevel.  • splash=silent -- Aktiverer et oppstartsbilde, men ingen meldinger. En forløpsindikator vises i stedet.
+Tilbake til optOppstartsalternativero_vncpasswordo_vncInstallasjonsvalg: vncFor å aktivere VNC-installasjon, definer parametrene vnc og vncpassword: 
+  • vnc=1 vncpassword=eksempel
+VNC-serveren vil bli startet, og du kan styre YaST2 via en VNC-klient fra et eksternt system.
+Tilbake til optOppstartsalternativerrescueRedningssystemRedningssystem er et lite grunnsystem som kjøres direkte fra minnet. Fra dette er det mulig å utføre alle slags endringer på et installert system. Dette systemet inneholder bare grunnleggende verktøy, og er beregnet på avanserte brukere.
+Tilbake til mainHjelp for oppstartslastervideomodeValg av skjermmodusTrykk F3 for å få opp en liste over skjermmoduser som støttes av grafikkortet. Den høyeste modusen som støttes av skjermen, er forhåndsvalgt.
+Det kan hende at skjermen ikke oppdages automatisk. Velg i så fall ønsket modus manuelt.
+Hvis systemet har problemer med grafikkortet under installasjonen, kan det hende at tekstmodus bruker en reserveløsning.
+Tilbake til mainHjelp for oppstartslaster 
