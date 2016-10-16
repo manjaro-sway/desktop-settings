@@ -1,4 +1,4 @@
-[org.gnome.desktop.background]
+[org.gnome.background]
 picture-uri='file:///usr/share/backgrounds/sonar.jpg'
 show-desktop-icons=true
 
@@ -18,7 +18,7 @@ screen-keyboard-enabled=false
 screen-magnifier-enabled=false
 screen-reader-enabled=true
 
-[org.gnome.desktop.sound]
+[org.gnome.sound]
 event-sounds=true
 input-feedback-sounds=true
 theme-name=sonar
@@ -29,7 +29,7 @@ show-all-sources=true
 [org.gnome.desktop.wm.preferences]
 button-layout='appmenu:minimize,maximize,close'
 
-[org.gnome.desktop.screensaver]
+[org.gnome.screensaver]
 picture-uri=file:///usr/share/backgrounds/sonar.jpg
 
 [org.gnome.desktop.datetime]
@@ -48,7 +48,7 @@ volume-down='<Primary><Super>down'
 volume-up='<Primary><Super>up'
 volume-mute='<Primary><Super>m'
 
-[org.gnome.desktop.wm.keybindings]
+[org.gnome.wm.keybindings]
 show-desktop='<Primary><Alt>d'
 [org.gnome.settings-daemon.plugins.media-keys.custom-0]
 binding='<Super>s'
