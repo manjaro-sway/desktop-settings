@@ -8,7 +8,7 @@ picture-options='stretched'
 picture-uri='file:///usr/share/backgrounds/cinnamon-brown.jpg'
 
 [org.cinnamon.desktop.interface]
-cursor-theme='Simple-and-Soft'
+cursor-theme='Breeze'
 font-name='Cantarell 10'
 gtk-theme='Vertex-Maia'
 icon-theme='maia'
