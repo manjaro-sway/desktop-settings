@@ -11,4 +11,4 @@ theme='Arc-Maia'
 compositing-fast-alt-tab=true
 
 [org.mate.peripherals-mouse]
-cursor-theme='Maia-Cursor'
+cursor-theme='Breeze'
