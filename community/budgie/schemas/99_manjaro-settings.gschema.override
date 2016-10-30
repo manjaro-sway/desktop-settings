@@ -15,8 +15,8 @@ document-font-name='Sans 11'
 enable-animations=true
 font-name='Cantarell 11'
 gtk-im-module='gtk-im-context-simple'
-gtk-theme='Vertex-Maia-Dark'
-icon-theme='Vertex-Maia'
+gtk-theme='Arc-Maia'
+icon-theme='Moka'
 monospace-font-name='Monospace 11'
 
 [org.gnome.nautilus.icon-view]

@@ -2,12 +2,12 @@
 picture-filename='/usr/share/backgrounds/maia.png'
 
 [org.mate.interface]
-cursor-theme="Maia-Cursor"
-gtk-theme='Vertex-Maia'
+cursor-theme="Breeze"
+gtk-theme='Arc-Maia'
 icon-theme='Vertex-Maia'
 
 [org.mate.Marco.general]
-theme='Vertex-Maia'
+theme='Arc-Maia'
 compositing-fast-alt-tab=true
 
 [org.mate.peripherals-mouse]
