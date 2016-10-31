@@ -289,6 +289,7 @@ exec_always --no-startup-id fix_xcursor
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
 	status_command i3status
+	position bottom
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 #	tray_output primary
