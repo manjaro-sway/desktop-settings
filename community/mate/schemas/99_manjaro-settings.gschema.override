@@ -3,7 +3,7 @@ picture-filename='/usr/share/backgrounds/maia.png'
 
 [org.mate.interface]
 cursor-theme="Breeze"
-gtk-theme='Arc-Maia'
+gtk-theme='Arc-Maia-Dark'
 icon-theme='Vertex-Maia'
 
 [org.mate.Marco.general]

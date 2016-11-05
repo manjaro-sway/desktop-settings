@@ -15,7 +15,7 @@ document-font-name='Sans 11'
 enable-animations=true
 font-name='Cantarell 11'
 gtk-im-module='gtk-im-context-simple'
-gtk-theme='Arc-Maia'
+gtk-theme='Arc-Maia-Darker'
 icon-theme='Moka'
 monospace-font-name='Monospace 11'
 

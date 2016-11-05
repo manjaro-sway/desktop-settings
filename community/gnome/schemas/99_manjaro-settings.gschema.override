@@ -8,7 +8,7 @@ document-font-name='Sans 11'
 enable-animations=true
 font-name='Cantarell 11'
 gtk-im-module='gtk-im-context-simple'
-gtk-theme='Vertex-Maia-Dark'
+gtk-theme='Arc-Maia-Darker'
 icon-theme='Vertex-Maia'
 monospace-font-name='Monospace 11'
 
@@ -22,7 +22,7 @@ favorite-apps=['pamac-manager.desktop', 'firefox.desktop', 'empathy.desktop', 'o
 enabled-extensions=['dash-to-dock@micxgx.gmail.com', 'gnomenu@panacier.gmail.com', 'openweather-extension@jenslody.de', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'TaskBar@zpydr']
 
 [org.gnome.shell.extensions.user-theme]
-name="Vertex-Maia"
+name="Arc-Maia-Dark"
 
 [org.gnome.shell.extensions.dash-to-dock]
 background-opacity=0.90000000000000002220
