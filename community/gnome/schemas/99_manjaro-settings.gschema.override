@@ -22,12 +22,22 @@ favorite-apps=['pamac-manager.desktop', 'firefox.desktop', 'empathy.desktop', 'o
 enabled-extensions=['dash-to-dock@micxgx.gmail.com', 'gnomenu@panacier.gmail.com', 'openweather-extension@jenslody.de', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'TaskBar@zpydr']
 
 [org.gnome.shell.extensions.user-theme]
-name="Arc-Maia-Dark"
+name="Arc-Maia-Darker"
 
 [org.gnome.shell.extensions.dash-to-dock]
 background-opacity=0.90000000000000002220
 custom-theme-running-dots=true
 dash-max-icon-size=32
+
+[org.gnome.Terminal.Legacy.Profile]
+allow-bold=true
+background-color='rgb(69,70,73)'
+use-theme-colors=false
+font='Droid Sans Mono Regular 11'
+foreground-color='rgb(220,233,235)'
+palette=['rgb(0,0,0)', 'rgb(170,0,0)', 'rgb(0,170,0)', 'rgb(170,85,0)', 'rgb(0,0,170)', 'rgb(170,0,170)', 'rgb(0,170,170)', 'rgb(170,170,170)', 'rgb(85,85,85)', 'rgb(255,85,85)', 'rgb(85,255,85)', 'rgb(255,255,85)', 'rgb(85,85,255)', 'rgb(255,85,255)', 'rgb(85,255,255)', 'rgb(255,255,255)']
+rewrap-on-resize=true
+visible-name='manjaro'
 
 [org.gnome.nautilus.icon-view]
 default-zoom-level='small'
