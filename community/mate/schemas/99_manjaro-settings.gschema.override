@@ -1,9 +1,10 @@
 [org.mate.background]
 picture-filename='/usr/share/backgrounds/mate-community.png'
+picture-options='stretched'
 
 [org.mate.interface]
 cursor-theme="Breeze"
-gtk-theme='Arc-Maia-Dark'
+gtk-theme='Arc-Maia-Darker'
 icon-theme='Vertex-Maia'
 
 [org.mate.Marco.general]
