@@ -7,15 +7,15 @@ cursor-theme="Breeze"
 gtk-theme='Arc-Maia-Darker'
 icon-theme='Vertex-Maia'
 
-[org.mate.Marco.general]
-theme='Arc-Maia'
+[org.mate.marco.general]
+theme='Arc-Maia-dark'
 compositing-fast-alt-tab=true
 
 [org.mate.peripherals-mouse]
 cursor-theme='Breeze'
 
 [org.mate.terminal.global]
-default-profile='korora'
+default-profile='manjaro'
 profile-list=['default', 'manjaro']
 
 [org.mate.terminal.profiles.manjaro]
