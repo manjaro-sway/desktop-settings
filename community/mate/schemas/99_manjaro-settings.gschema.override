@@ -8,10 +8,10 @@ gtk-theme='Arc-Maia-Darker'
 icon-theme='Vertex-Maia'
 
 [org.mate.marco.general]
-theme='Arc-Maia-dark'
+theme='Arc-Maia'
 compositing-fast-alt-tab=true
 
-[org.mate.desktop.peripherals.mouse.cursor-theme]
+[org.mate.peripherals.mouse]
 cursor-theme='Breeze'
 
 [org.mate.terminal.global]
