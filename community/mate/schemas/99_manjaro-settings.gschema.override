@@ -3,7 +3,6 @@ picture-filename='/usr/share/backgrounds/mate-community.png'
 picture-options='stretched'
 
 [org.mate.interface]
-cursor-theme="Breeze"
 gtk-theme='Arc-Maia-Darker'
 icon-theme='Vertex-Maia'
 
@@ -30,4 +29,4 @@ background-color='#070736364242'
 title-mode='ignore'
 
 [org.mate.panel.menubar]
-icon-name=distributor-logo-manjaro
+icon-name='distributor-logo-manjaro'
