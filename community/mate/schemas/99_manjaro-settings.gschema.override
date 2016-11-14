@@ -2,12 +2,12 @@
 picture-filename='/usr/share/backgrounds/mate-community.png'
 picture-options='stretched'
 
-[org.mate.interface]
+[org.mate.desktop.interface]
 gtk-theme='Arc-Maia-Darker'
 icon-theme='Vertex-Maia'
 
-[org.mate.marco.general]
-theme='Arc-Maia'
+[org.mate.Marco.general]
+theme='Arc-Maia-Darker'
 compositing-fast-alt-tab=true
 
 [org.mate.peripherals.mouse]
@@ -15,7 +15,7 @@ cursor-theme='Breeze'
 
 [org.mate.terminal.global]
 default-profile='manjaro'
-profile-list=['default', 'manjaro']
+profile-list=['manjaro']
 
 [org.mate.terminal.profiles.manjaro]
 foreground-color='#838394949696'
@@ -29,4 +29,4 @@ background-color='#070736364242'
 title-mode='ignore'
 
 [org.mate.panel.menubar]
-icon-name='distributor-logo-manjaro'
+icon-name='logo-manjaro'
