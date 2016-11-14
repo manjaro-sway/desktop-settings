@@ -2,7 +2,7 @@
 picture-filename='/usr/share/backgrounds/mate-community.png'
 picture-options='stretched'
 
-[org.mate.desktop.interface]
+[org.mate.interface]
 gtk-theme='Arc-Maia-Darker'
 icon-theme='Vertex-Maia'
 
@@ -10,7 +10,7 @@ icon-theme='Vertex-Maia'
 theme='Arc-Maia-Darker'
 compositing-fast-alt-tab=true
 
-[org.mate.peripherals.mouse]
+[org.mate.peripherals-mouse]
 cursor-theme='Breeze'
 
 [org.mate.terminal.global]
