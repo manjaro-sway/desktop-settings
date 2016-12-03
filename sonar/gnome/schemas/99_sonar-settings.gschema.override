@@ -1,4 +1,4 @@
-[org.gnome.background]
+[org.gnome.desktop.background]
 picture-uri='file:///usr/share/backgrounds/sonar.jpg'
 show-desktop-icons=true
 
@@ -13,12 +13,12 @@ icon-theme='Vertex-Maia'
 monospace-font-name='Monospace 10'
 toolkit-accessibility=true
 
-[org.gnome.a11y.applications]
+[org.gnome.desktop.a11y.applications]
 screen-keyboard-enabled=false
 screen-magnifier-enabled=false
 screen-reader-enabled=true
 
-[org.gnome.sound]
+[org.gnome.desktop.sound]
 event-sounds=true
 input-feedback-sounds=true
 theme-name=sonar
@@ -29,7 +29,7 @@ show-all-sources=true
 [org.gnome.desktop.wm.preferences]
 button-layout='appmenu:minimize,maximize,close'
 
-[org.gnome.screensaver]
+[org.gnome.desktop.screensaver]
 picture-uri=file:///usr/share/backgrounds/sonar.jpg
 
 [org.gnome.desktop.datetime]
@@ -48,12 +48,14 @@ volume-down='<Primary><Super>down'
 volume-up='<Primary><Super>up'
 volume-mute='<Primary><Super>m'
 
-[org.gnome.wm.keybindings]
+[org.gnome.desktop.wm.keybindings]
 show-desktop='<Primary><Alt>d'
+
 [org.gnome.settings-daemon.plugins.media-keys.custom-0]
 binding='<Super>s'
 command='gnome-system-monitor'
 name='open system monitor'
+
 [org.gnome.settings-daemon.plugins.media-keys.custom-1]
 command='ocrdesktop'
 binding='<Alt><Super>o'
@@ -62,4 +64,11 @@ name='ocr the current window'
 display-line-numbers='true'
 
 [org.gnome.shell]
+always-show-log-out=true
 favorite-apps=['org.gnome.Nautilus.desktop', 'gnome-terminal.desktop', 'gnome-control-center.desktop', 'gnome-tweak-tool.desktop', 'ca.desrt.dconf-editor.desktop']
+
+[org.gnome.shell.extensions.user-theme]
+name="Vertex-Maia"
+
+[org.gnome.settings-daemon.plugins.xsettings]
+antialiasing='rgba'
