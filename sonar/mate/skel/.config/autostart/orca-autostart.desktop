@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Type=Application
+Name=Orca screen reader
+Exec=/bin/orca
+NoDisplay=true
+AutostartCondition=GSettings org.gnome.desktop.a11y.applicationsscreen-reader-enable
+X-GNOME-AutoRestart=true
+#X-GNOME-Autostart-Phase=Initialization
+OnlyShowIn=GNOME;MATE;Unity;Cinnamon;
