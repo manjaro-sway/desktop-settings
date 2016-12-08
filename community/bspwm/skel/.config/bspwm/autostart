@@ -41,7 +41,8 @@ xbacklight -set 15 &
 #run_once xfce4-panel -d
 #lemonpanel &
 ## The sleep part is delay before panel is spawned. You can remove it if you have reasonable fast hard drive.
-sleep 1 && limepanel &
+limepanel &
+#mylime &
 ## Light system tray to use with lemonbar. Disable if you dont need it. 
 ## Edit ~/.stalonetrayrc if it is in wrong place.
 #sleep 2s && stalonetray --dockapp-mode simple &
@@ -52,4 +53,5 @@ i3lock-wait-for-suspend &
 ## multimonitor support. Save monitor configurations with "autorandr.sh --save <profile>"
 srandrd atorandr.sh --change
 ## Notify about package updates
-#update-checker 7200 &
+update-checker 7200 &
+fish -c "fisher up" && sed -i '/fisher up/d' ~/.config/bspwm/autostart
