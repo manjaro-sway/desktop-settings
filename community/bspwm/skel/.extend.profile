@@ -1,4 +1,4 @@
-# $HOME/.profile
+# $HOME/.extend.profile
 
 #Set our umask
 umask 022

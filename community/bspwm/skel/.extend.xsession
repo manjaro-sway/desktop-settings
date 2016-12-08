@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# ~/.xsession
+# ~/.extend.xsession
 #
 # Executed by xdm/gdm/kdm at login
 #

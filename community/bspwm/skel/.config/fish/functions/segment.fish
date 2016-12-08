@@ -1,1 +1,0 @@
-/home/matti/.config/fisherman/segment/functions/segment.fish

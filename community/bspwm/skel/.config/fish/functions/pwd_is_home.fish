@@ -1,1 +1,0 @@
-/home/matti/.config/fisherman/pwd_is_home/functions/pwd_is_home.fish
