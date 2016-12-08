@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Root-Filemanager
+Comment=Access and organize files with root priviliges
+Keywords=root;administrator;folder;manager;explore;disk;filesystem;
+Exec=gksu dde-file-manager
+Icon=gksu
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;Utility;Core;FileManager;
+MimeType=inode/directory;application/x-gnome-saved-search;

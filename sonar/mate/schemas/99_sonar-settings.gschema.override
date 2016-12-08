@@ -18,13 +18,12 @@ theme-name='sonar'
 
 [org.mate.applications-at-visual]
 startup=true
+exec='orca'
 
 [org.mate.Marco.general]
 theme='Vertex-Maia'
 compositing-fast-alt-tab=true
 
-[org.mate.applications-terminal]
-exec='gnome-terminal'
 
 [org.mate.interface]
 accessibility=true
@@ -39,15 +38,16 @@ monospace-font-name='Monospace 11'
 [org.mate.peripherals-mouse]
 cursor-theme='Maia-Cursor'
 
-[org.mate.panel.toplevels.bottom]
+[org.mate.panel]
 default-layout='sonar'
+[org.mate.panel.toplevels.bottom]
 expand=true
 auto-hide=true
 size=40
-
 [org.mate.panel.toplevels.bottom.background]
-image=/usr/share/backgrounds/sonar.jpg
-type=image
+image='/usr/share/backgrounds/sonar.jpg'
+type='image'
+
 
 [org.mate.SettingsDaemon.plugins.media-keys]
 screenreader='<Alt><Mod4>s'
@@ -83,6 +83,7 @@ visible-name='sonar'
 
 [org.mate.notification-daemon]
 popup-location='bottom_right'
+theme='coco'
 
 [org.mate.settings-daemon.plugins.xrandr]
 show-notification-icon='true'
@@ -90,4 +91,6 @@ show-notification-icon='true'
 [org.mate.screensaver]
 mode='random'
 lock-enabled=true
+[org.mate.caja.preferences]
+date-format='informal'
 

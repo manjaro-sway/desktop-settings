@@ -1,0 +1,71 @@
+mainAjuda do Carregador de BootBem-vindo à(ao) KDE.
+Use este menu para selecionar a função desejada. Se você tiver problemas ao navegar neste sistema de ajuda, pressione F1 para acessar helpdescrição do sistema de ajuda. As principais funções desse menu são:
+harddiskInicializar do Disco Rígido: Esta seleção não fará nada no sistema. Ela apenas iniciará um sistema operacional instalado anteriormente.
+linuxInstalação: Este modo de instalação funciona na maioria das máquinas. Se o sistema congelar durante a inicialização ou se houver problemas na detecção dos componentes de hardware, como controladoras de disco ou placas de rede, tente uma das seguintes opções de instalação.
+noacpiInstalação -- ACPI Desabilitada: Vários computadores vendidos atualmente têm implementações de ACPI incompletas ou corrompidas. Esta seleção desabilita o suporte à ACPI no kernel, mas ainda habilita vários recursos de desempenho, como DMA para discos rígidos IDE.
+nolapicInstalação -- APIC Local Desabilitada: Se a instalação normal falhar, é possível que o hardware do sistema não suporte a APIC local. Se isso for aparentemente o caso, use esta opção para instalar sem oferecer suporte à APIC local.
+failsafeInstalação -- Configurações Seguras: Se você não tiver êxito com Instalação, esta seleção talvez solucione o problema.
+rescueSistema de Recuperação: Esta imagem de boot inicia um pequeno sistema Linux na RAM. Isso é útil quando o sistema não é iniciado corretamente. Após inicializar esse sistema, efetue login como root.
+firmwareTeste de Firmware: Executa uma ferramenta de teste do BIOS que valida a ACPI e outras partes do seu BIOS.
+memtestTeste de Memória: O teste de memória é útil, pois não só verifica a instalação de novos módulos de memória, como também é útil como teste de estresse para uma grande parte do sistema do computador, podendo indicar problemas de hardware.
+optOpções de Boot: As opções de boot podem mudar completamente o comportamento de seu sistema. Elas são as configurações do kernel.
+helpF1 Ajuda: Esta opção é sensível ao contexto. Ela mostrará telas diferentes dependendo do elemento ativo da tela de boot. Também há uma descrição disponível desse sistema de ajuda.
+keytableF2: Define o idioma e o mapeamento do teclado usados pelo carregador de boot.
+videomodeF3 Modo de Vídeo: Escolha aqui uma das diferentes resoluções de tela durante a instalação. Se houver problemas com a instalação gráfica, o Modo de Texto poderá ser uma solução alternativa para você.
+install_srcF4 Fonte de Instalação: Escolhe a fonte de instalação.
+driverupdateF6 Atualização do Driver: Para máquinas muito novas, pode ser necessária uma atualização de driver para instalar o sistema.bitsSeleção do Tipo de SoftwareVocê tem a opção de instalar a versão de 32 ou 64 bits do KDE.
+Retornar para mainAjuda do Carregador de BootdriverupdateAtualização de DriverSe precisar de um disquete ou CD-ROM para atualização do driver, pressione F6. O carregador de boot pedirá que você insira a mídia de atualização do driver após carregar o kernel do Linux.
+Uma atualização de driver é geralmente um disquete com novas versões de drivers de hardware ou correções de bugs necessárias durante a instalação.
+Retornar para mainAjuda do Carregador de BootfailsafeInstalação -- Configurações SegurasSelecione Instalação -- Configurações Seguras se ocorrerem travamentos ou erros irreproduzíveis durante a instalação. Essa opção desabilita o DMA em unidades IDE e todos os recursos de gerenciamento de energia. Consulte também as opções do kernel para o_apmapm, o_acpiACPI e o_ideide.
+Retornar para mainAjuda do Carregador de BootfirmwareTeste de FirmwareInicia um verificador de BIOS que valida as tabelas ACPI e muitas outras partes do BIOS. Os resultados do teste podem ser armazenados em um disco removível ou gravados via rede.
+Retornar para mainAjuda do Carregador de BootharddiskInicializar do Disco RígidoSelecione Iniciar o SO Instalado para iniciar o sistema instalado no disco rígido local. Esse sistema deve estar instalado corretamente, pois apenas o MBR (Master Boot Record) no primeiro disco rígido é iniciado. O ID de dispositivo do primeiro disco rígido é fornecido pelo BIOS do computador.
+Use esta opção se tiver esquecido de retirar o CD ou o DVD da unidade e quiser iniciar o computador do disco rígido.
+Retornar para mainAjuda do Carregador de BoothelpUsando o sistema de ajudaA ajuda online do carregador de boot é sensível ao contexto. Ela fornece informações sobre o item de menu selecionado ou, se você estiver editando as opções de boot, ela tenta procurar informações sobre a opção em que o cursor está posicionado.
+Teclas de Navegação 
+  • Seta para Cima: realça o link anterior  • Seta para Baixo: realça o próximo link  • Seta para a Esquerda, Tecla Backspace: retorna ao tópico anterior  • Seta para a Direita, Tecla Enter, Tecla de Espaço: seguir o link  • Tecla Page Up: move uma página para cima  • Tecla Page Down: move uma página para baixo  • Tecla Home: vai para o início da página  • Tecla End: vai para o fim da página  • Tecla Esc: sai da ajuda
+Retornar para mainAjuda do Carregador de Bootinstall_srcFonte de InstalaçãoPressione F4 para escolher uma fonte de instalação.
+Isso é o mesmo que usar a opção de boot de o_installInstalar.
+Retornar para mainAjuda do Carregador de BootkeytableSeleção de Idioma e Layout de TecladoPressione F2 para mudar o idioma e o layout do teclado utilizados pelo carregador de boot.
+Retornar para mainAjuda do Carregador de BootlinuxInstalaçãoSelecione Instalação para iniciar a instalação padrão. Os optOpções de Boot digitados são usados na inicialização. Esse item ativa muitos recursos de hardware comumente disponível.
+Retornar para mainAjuda do Carregador de BootmemtestTeste de MemóriaO Teste de Memória incluído oferece boas possibilidades de realizar um teste de estresse no hardware de um sistema. Seu objetivo principal é detectar falhas de RAM, mas também testa várias outras partes do sistema.
+Não há garantia de que a memória esteja realmente funcionando corretamente se não forem encontrados erros; no entanto, quase todos os defeitos de memória são encontrados.
+Retornar para mainAjuda do Carregador de BootnoacpiInstalação -- ACPI DesabilitadaO hardware atual geralmente requer ACPI (Advanced Configuration and Power Interface) para controlar a manipulação da interrupção. A ACPI substitui completamente o antigo sistema APM.
+Selecione Instalação -- ACPI Desabilitada se houver problemas durante a inicialização do kernel. Os problemas conhecidos de máquinas com erros de ACPI são: 
+  • o kernel trava no boot  • As Placas PCI não foram detectadas ou inicializadas adequadamente
+Você também pode tentar a opção de boot de firmwareTeste de Firmware e ver os resultados do teste da validação da ACPI.
+Retornar para mainAjuda do Carregador de BootnolapicInstalação -- APIC Local DesabilitadaNormalmente não há problemas com o APIC (Advanced Programmable Interrupt Controller). Mas se você aparentemente tem alguns, tente esta opção para inicializar sem suporte local para APIC.
+Não confunda com o noacpiACPI (Advanced Configuration and Power Interface).
+Retornar para mainAjuda do Carregador de BootoptOpções de BootExistem dois tipos de opções de boot disponíveis. Primeiro, há opções que afetam o instalador. Segundo, há opções do kernel. Algumas das opções mais comuns são:
+a) opções do instalador 
+  • o_installInstalar -- seleciona uma fonte de instalação  • networkopções de rede -- as opções de rede  • o_vncOpções do VNC -- opções para instalação via VNC
+b) opções do kernel 
+  • o_splashSplash -- influencia o comportamento da splash screen  • o_apmapm -- alterna o gerenciamento de energia  • o_acpiACPI -- ACPI (Advanced Configuration and Power Interface)  • o_ideide -- controla o subsistema IDE
+Retornar para mainAjuda do Carregador de Booto_hostipo_netmasko_gatewaynetworkOpções do Instalador: Opções de RedeÉ possível configurar a interface de rede agora. O hardware será detectado posteriormente pelo YaST2. O conjunto mínimo de opções para configurar sua placa de rede consiste no IP do host e na máscara de rede. Por exemplo: 
+  • hostip=192.168.0.10 netmask=255.255.255.0
+ou abreviado: 
+  • hostip=192.168.0.10/24
+Se você tiver especificado um o_installinstalação baseada em rede e não especificar essas duas opções, o instalador tentará configurar a interface de rede com dhcp. Se precisar de um gateway padrão, especifique-o com a opção Gateway. Por exemplo: 
+  • gateway=192.168.0.8
+Retornar para optOpções de Booto_acpiOpções do Kernel: acpiA ACPI (Advanced Configuration and Power Interface - Interface de Energia e Configuração Avançada) é um padrão que define as interfaces de gerenciamento de energia e configuração entre um sistema operacional e o BIOS. Por padrão, ACPI é ativado quando é detectado um BIOS posterior ao ano 2000. Há vários parâmetros normalmente usados para controlar o comportamento da ACPI: 
+  • pci=noacpi -- não usa ACPI para rotear interrupções de PCI  • acpi=oldboot -- apenas as partes da ACPI relevantes para inicialização permanecem ativadas  • acpi=off -- desliga a ACPI completamente  • acpi=force -- liga a ACPI mesmo se o BIOS tiver data anterior a 2000
+Especialmente em computadores novos, substitui o sistema o_apmapm antigo.
+Retornar para optOpções de Booto_apmOpções do Kernel: apmO APM é uma das duas estratégias de gerenciamento de energia usadas nos computadores atuais. Ele é usado principalmente em laptops para funções como suspender para o disco, mas também pode ser responsável pela desativação do computador após uma queda de energia. O APM depende do correto funcionamento do BIOS. Se o BIOS estiver danificado, o APM poderá sofrer limitações ou até mesmo impedir o funcionamento do computador. Portanto, ele pode ser desativado com o parâmetro 
+  • apm=off -- desliga o APM completamente
+Alguns computadores muito novos podem tirar mais proveito do o_acpiACPI mais recente.
+Retornar para optOpções de Booto_ideOpções do Kernel: ideO IDE, diferente do SCSI, é normalmente usado na maioria das estações de trabalho. Para contornar alguns problemas de hardware que ocorrem nos sistemas IDE, use o parâmetro de kernel: 
+  • ide=nodma -- desliga o DMA das unidades IDE
+Retornar para optOpções de Booto_installOpções do Instalador: instalarPor padrão, a origem de instalação é pesquisada nos CD-ROMs locais. Para uma instalação em rede, selecione a opção Instalar. Os protocolos de instalação possíveis são 
+  • FTP  • NFS  • HTTP
+A sintaxe a ser usada é semelhante aos URLs padrão. Por exemplo, se o servidor for encontrado em 192.168.0.1 e você quiser fazer uma instalação com base em NFS a partir do diretório /install nesse servidor, especifique a origem da seguinte forma:
+  • install=nfs://192.168.0.1/install
+A placa de rede será configurada com dhcp ou você mesmo deverá especificar os parâmetros, conforme descrito em networkopções de rede.
+Retornar para optOpções de Booto_splashOpções do Kernel: splashA splash screen é a imagem mostrada durante a inicialização do sistema.
+  • splash=0 -- A splash screen está desligada. Isso pode ser útil com monitores muito antigos ou se ocorrer algum erro.  • splash=verbose -- Ativa splash, kernel e as mensagens de boot ainda são mostradas.  • splash=silent -- Ativa a splash, mas sem mensagens. Em vez disso, aparece uma barra de andamento.
+Retornar para optOpções de Booto_vncpasswordo_vncOpções do Instalador: vncPara habilitar a instalação do VNC, especifique os parâmetros vnc e vncpassword: 
+  • vnc=1 vncpassword=exemplo
+O servidor VNC será iniciado e você poderá controlar o YaST2 por qualquer cliente VNC de um sistema remoto.
+Retornar para optOpções de BootrescueSistema de RecuperaçãoO Sistema de Recuperação é um pequeno sistema básico de disco RAM. Com ele, é possível fazer todos os tipos de mudanças em um sistema instalado. Por conter apenas ferramentas de baixo nível, esse sistema destina-se a especialistas.
+Retornar para mainAjuda do Carregador de BootvideomodeSeleção do Modo de VídeoPressione F3 para obter a lista de modos de vídeo que sua placa de vídeo suporta. O modo mais alto que seu monitor pode exibir está pré-selecionado.
+É possível que seu monitor não seja detectado automaticamente. Nesse caso, selecione manualmente seu modo preferido.
+Se o seu sistema tiver problemas com a placa gráfica durante a instalação, o Modo de Texto poderá ser uma solução alternativa viável.
+Retornar para mainAjuda do Carregador de Boot 

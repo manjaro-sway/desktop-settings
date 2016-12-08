@@ -1,0 +1,71 @@
+mainNápověda zavaděčeVítá vás KDE
+Pomocí této nabídky vyberte požadovanou funkci. Pokud máte potíže s navigací v tomto systému nápovědy, stiskněte F1. Zobrazí se helpPopis systému nápovědy. Hlavní funkce této nabídky:
+harddiskSpustit z disku: Tato volba na systém nemá žádný vliv, pouze spustí dříve nainstalovaný operační systém.
+linuxInstalace: Tento režim instalace funguje ve většině počítačů. Pokud v průběhu instalace dojde k zablokování systému nebo se vyskytnou problémy s rozpoznáváním hardwarových součástí, například diskových řadičů nebo síťových karet, vyzkoušejte jednu z následujících možností instalace.
+noacpiInstalace -- bez ACPI: Mnoho počítačů prodávaných v současné době obsahuje neúplnou nebo chybnou implementaci rozhraní ACPI. Tato volba zakáže podporu rozhraní ACPI v jádře, ale přesto dovoluje řadu funkcí podporujících výkon, například přímý přístup do paměti (DMA) pro pevné disky s rozhraním IDE.
+nolapicInstalace -- bez místního APIC: Nepodaří-li se provést běžnou instalaci, může být příčinou skutečnost, že hardware počítače nepodporuje místní řadič APIC. Jedná -li se o tento případ, použijte následující parametr a proveďte instalaci bez podpory místního řadiče APIC.
+failsafeInstalace -- bezpečné nastavení: Pokud Instalace nebyla úspěšná, tato volba by mohla problém vyřešit.
+rescueZáchranný systém: Tento spouštěcí obraz spustí malý systém LINUX v paměti RAM. To je užitečné v případě, že se systém nespustí správně. Po spuštění tohoto systému se přihlaste jako uživatel root.
+firmwareTest firmwaru: Spustí testovací nástroj systému BIOS, který ověří rozhraní ACPI a další části systému BIOS.
+memtestTest paměti: Testování paměti je užitečné nejen pro kontrolu instalace nových paměťových modulů, ale je i náročným testem mnoha součástí systému počítače, při kterém mohou být odhaleny hardwarové problémy.
+optMožnosti spuštění: Parametry spouštění mohou úplně změnit chování systému. Jsou nastaveními jádra.
+helpF1 Nápověda: Jedná se o kontextovou nápovědu. Zobrazí různé obrazovky v závislosti na aktivním prvku spouštěcí obrazovky. K dispozici je také popis tohoto systému nápovědy.
+keytableF2: Nastavte jazyk a mapování klávesnice používané spouštěcím zavaděčem.
+videomodeF3 Video režim: Zde lze vybrat různá rozlišení obrazovky v průběhu instalace. Pokud během grafické instalace nastanou problémy, může být vhodným alternativním řešením Textový režim.
+install_srcF4 Zdroj instalace: Vyberte zdroj instalace.
+driverupdateF6 Aktualizace ovladačů: Při instalaci systému v nejnovějších počítačích bude pravděpodobně nutná aktualizace ovladačů.bitsVýběr softwaruMůžete zvolit instalaci 32bitové či 64bitové verze produktu KDE.
+Návrat k mainNápověda zavaděčedriverupdateAktualizace ovladačePotřebujete-li disketu či disk CD-ROM s aktualizacemi ovladačů, stiskněte F6. Po načtení jádra systému Linux zobrazí spouštěcí zavaděč výzvu k vložení média s aktualizacemi ovladačů.
+Aktualizace ovladače je obvykle disketa s novými verzemi ovladačů hardwaru nebo opravami chyb, které jsou nutné během instalace.
+Návrat k mainNápověda zavaděčefailsafeInstalace -- bezpečné nastaveníMožnost Instalace -- bezpečné nastavení vyberte, pokud během instalace dojde k zablokování nebo k chybám, které nelze reprodukovat. Tento parametr vypne přímý přístup k paměti (DMA) pro jednotky IDE a všechny funkce správy napájení. Viz také parametry jádra pro o_apmapm, o_acpiacpi a o_ideIDE.
+Návrat k mainNápověda zavaděčefirmwareTest firmwaruSpustí kontrolu systému BIOS, která ověřuje tabulky ACPI a mnoho dalších součástí systému BIOS. Výsledky těchto testů lze uložit na disk USB nebo prostřednictvím sítě.
+Návrat k mainNápověda zavaděčeharddiskSpustit z diskuChcete-li spustit systém nainstalovaný na místním pevném disku, vyberte Spustit nainstalovaný systém. Tento systém musí být nainstalovaný správně, protože se spouští pouze sektor MBR na prvním pevném disku. ID zařízení prvního pevného disku je uvedeno v systému BIOS počítače.
+Tuto možnost použijte v případě, že jste z jednotky zapomněli vyjmout disk CD nebo DVD a chcete počítač spustit z pevného disku.
+Návrat k mainNápověda zavaděčehelpPoužití systému nápovědyOnline nápověda zaváděcího programu pro spuštění je kontextová. Poskytuje informace o vybrané položce nabídky, nebo se pokouší vyhledat informace o parametru, na kterém je umístěný kurzor, upravujete-li parametry spuštění.
+Navigační klávesy 
+  • Šipka nahoru: označit předchozí odkaz  • Šipka dolů: označit další odkaz  • Šipka vlevo, Backspace: zpět k předchozímu tématu  • Šipka vpravo, Enter, Mezerník: přejít na odkaz  • Page Up: posunout nahoru o jednu stránku  • Page Down: posunout dolů o jednu stránku  • Home: přejít na začátek stránky  • End: přejít na konec stránky  • Esc: opustit nápovědu
+Návrat k mainNápověda zavaděčeinstall_srcZdroj instalaceChcete-li vybrat zdroj instalace, stiskněte F4.
+Je to stejné, jako použití parametru spouštění o_installInstalovat.
+Návrat k mainNápověda zavaděčekeytableVýběr jazyka a rozložení klávesniceChcete-li změnit jazyk a rozložení klávesnice používané spouštěcím zavaděčem, stiskněte F2.
+Návrat k mainNápověda zavaděčelinuxInstalaceChcete-li spustit výchozí instalaci, vyberte Instalace. Při spuštění budou použity zadané optMožnosti spuštění. Tato položka aktivuje řadu funkcí běžně dostupného hardwaru.
+Návrat k mainNápověda zavaděčememtestTest pamětiObsažený Test paměti nabízí výborné možnosti důkladně otestovat hardware počítače. Hlavním účelem je zjistit, zda není poškozená paměť RAM, ale zatíženy jsou i další součásti systému.
+Nejsou-li nalezeny žádné chyby, není ještě zaručeno, že je paměť v pořádku. Většina chyb paměti ale bude nalezena.
+Návrat k mainNápověda zavaděčenoacpiInstalace -- bez ACPISoučasný hardware obvykle pro manipulaci s přerušeními vyžaduje rozhraní ACPI (Advanced Configuration and Power Interface). Rozhraní ACPI zcela nahrazuje dříve používaný systém APM.
+Pokud při spouštění jádra nastanou problémy, vyberte možnost Instalace -- bez ACPI. Mezi známé problémy s počítači, které mají potíže s rozhraním ACPI, patří: 
+  • jádro při spouštění zatuhne  • Nelze nalézt nebo správně inicializovat karty PCI
+Také můžete zkusit použít parametr spouštění firmwareTest firmwaru a zkontrolovat výsledky testu ověření rozhraní ACPI.
+Návrat k mainNápověda zavaděčenolapicInstalace -- bez místního APICŘadič APIC (Advanced Programmable Interrupt Controller) obvykle nezpůsobuje žádné problémy. Pokud se však domníváte, že k takovým problémům došlo, pokuste se pomocí tohoto parametru o spuštění bez podpory místního řadiče APIC.
+Nezaměňujte s rozhraním noacpiacpi (Advanced Configuration and Power Interface).
+Návrat k mainNápověda zavaděčeoptMožnosti spuštěníK dispozici jsou dva typy parametrů spouštění. Prvním typem jsou parametry ovlivňující instalační program. Druhým typem jsou parametry jádra. Toto jsou některé běžné parametry:
+a) parametry instalačního programu 
+  • o_installInstalovat -- vybrat zdroj instalace  • networkMožnosti sítě -- parametry sítě  • o_vncMožnosti VNC -- parametry pro instalaci prostřednictvím VNC
+b) parametry jádra 
+  • o_splashÚvodní okno -- ovlivnit chování úvodní obrazovky  • o_apmapm -- přepnout řízení spotřeby  • o_acpiacpi -- rozhraní ACPI (advanced configuration and power interface)  • o_ideIDE -- ovládání subsystému IDE
+Návrat k mainNápověda zavaděčeo_hostipo_netmasko_gatewaynetworkMožnosti instalátoru: možnosti sítěNyní je možné nakonfigurovat síťové rozhraní. Hardware bude vyhledán později pomocí modulu YaST2. Pro konfiguraci síťové karty je nutné zadat minimálně adresu IP hostitele a síťovou masku. Příklad: 
+  • hostip=192.168.0.10 netmask=255.255.255.0
+nebo v kratší podobě: 
+  • hostip=192.168.0.10/24
+Pokud jste zadali o_installsíťová instalace a nezadáte oba tyto parametry, pokusí se instalační program nakonfigurovat síťové rozhraní pomocí protokolu dhcp. Potřebujete-li výchozí bránu, zadejte ji pomocí parametru Brána. Například: 
+  • gateway=192.168.0.8
+Návrat k optMožnosti spuštěnío_acpiMožnosti jádra: acpiRozhraní ACPI (Advanced Configuration and Power Interface) představuje standard, který definuje rozhraní nastavení správy napájení a konfigurace mezi operačním systémem a systémem BIOS. Ve výchozím nastavení je rozhraní acpi zapnuto, pokud je zjištěna verze systému BIOS vydaná po roce 2000. Chování rozhraní ACPI je obvykle řízeno několika parametry: 
+  • pci=noacpi -- nepoužívat ACPI k předávání přerušení PCI  • acpi=oldboot – ponechat aktivované pouze části rozhraní ACPI, které jsou potřebné ke spuštění  • acpi=off -- úplně vypnout ACPI  • acpi=force -- zapnout ACPI i pro systém BIOS vydaný před rokem 2000
+Zejména v nových počítačích nahrazuje dřívější systém o_apmapm.
+Návrat k optMožnosti spuštěnío_apmMožnosti jádra: apmRozhraní APM je jednou ze dvou strategií správy napájení v současných počítačích. Používá se zejména u přenosných počítačů pro funkce, jako je pozastavení s uložením na disk, může být ale zodpovědné i za vypnutí počítače po vypnutí napájení. Rozhraní APM je závislé na správně fungujícím systému BIOS. Nepracuje-li systém BIOS správně, může být použití rozhraní APM omezené, nebo může dokonce zabránit počítači v činnosti. Proto je lze vypnout pomocí parametru 
+  • apm=off -- úplně vypnout APM
+Některým modernějším počítačům může přinášet větší výhody novější rozhraní o_acpiacpi.
+Návrat k optMožnosti spuštěnío_ideMožnosti jádra: ideRozhraní IDE se narozdíl od rozhraní SCSI používá běžně ve většině osobních počítačů. Chcete-li předejít hardwarovým potížím, které mohou nastat u systémů s rozhraním IDE, použijte parametr jádra: 
+  • ide=nodma -- vypnout DMA pro jednotky IDE
+Návrat k optMožnosti spuštěnío_installMožnosti instalátoru: installVe výchozím nastavení jsou jako zdroj instalace prohledávány místní jednotky CD-ROM. Pro síťovou instalaci vyberte možnost Instalovat. Možné instalační protokoly: 
+  • FTP  • NFS  • HTTP
+Použijte stejnou syntaxi jako u adres URL. Pokud je například adresa serveru 192.168.0.1 a chcete provést instalaci na základě systému souborů NFS z adresáře /install umístěném na tomto serveru, zadejte zdroj takto: 
+  • install=nfs://192.168.0.1/install
+Síťová karta bude nakonfigurována buď pomocí protokolu dhcp, nebo je parametry potřeba zadat ručně podle popisu v networkMožnosti sítě.
+Návrat k optMožnosti spuštěnío_splashMožnosti jádra: splashÚvodní obrazovka je obrázek zobrazený během spouštění systému. 
+  • splash=0 -- Úvodní obrazovka je vypnutá. Toto nastavení může být užitečné u starších typů monitorů nebo v případě výskytu chyby.  • splash=verbose -- Aktivuje úvodní obrazovku, zprávy jádra a spouštění jsou zobrazeny.  • splash=silent -- Aktivuje úvodní obrazovku, nezobrazí však žádné zprávy. Namísto toho zobrazí indikátor průběhu.
+Návrat k optMožnosti spuštěnío_vncpasswordo_vncMožnosti instalátoru: vncChcete-li povolit instalaci VNC, zadejte parametry vnc a vncpassword: 
+  • vnc=1 vncpassword=example
+Bude spuštěn server VNC. Modul YaST2 bude možné ovládat ze vzdáleného systému pomocí libovolného klienta VNC.
+Návrat k optMožnosti spuštěnírescueZáchranný systémZáchranný systém je malý základní systém na disku RAM, ze kterého lze provádět různé druhy změn instalovaného systému. Tento základní systém je však určený pouze pro odborníky, protože obsahuje pouze nástroje nižší úrovně.
+Návrat k mainNápověda zavaděčevideomodeVýběr video režimuChcete-li zobrazit seznam režimů podporovaných grafickou kartou, stiskněte F3. Automaticky je předvolen nejlepší režim, který může monitor zobrazit.
+Může se stát, že monitor nelze rozpoznat automaticky. V takovém případě vyberte požadovaný režim ručně.
+Má-li systém během instalace problémy s grafickou kartou, může být užitečným alternativním řešením Textový režim.
+Návrat k mainNápověda zavaděče 

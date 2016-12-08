@@ -1,0 +1,71 @@
+mainGuida di boot loaderBenvenuto in KDE
+Utilizzare questo menu per selezionare la funzione desiderata. Se si riscontrano problemi durante la navigazione della Guida, premere F1 per visualizzare il helpdescrizione della Guida. Le principali funzioni disponibili nel menu sono:
+harddiskAvvio dal disco rigido: questa selezione non esegue alcuna operazione sul sistema. Avvia solo un sistema operativo precedentemente installato.
+linuxInstallazione: questa modalità di installazione funziona sulla maggior parte dei computer. Se il sistema si blocca durante l'avvio o se si verificano problemi nel rilevamento di componenti hardware quali controller del disco o schede di rete, provare a selezionare una delle seguenti opzioni di installazione.
+noacpiInstallazione -- ACPI disabilitata: molti computer attualmente in commercio presentano implementazioni ACPI incomplete o difettose. Con questa selezione si disabilita il supporto ACPI nel kernel, ma si abilitano molte funzioni prestazionali, quali il DMA per i dischi rigidi IDE.
+nolapicInstallazione -- APIC locale disabilitata: se l'installazione normale non viene completata, è possibile che il sistema hardware non supporti l'APIC locale. In questo caso, utilizzare l'opzione di installazione senza il supporto APIC locale.
+failsafeInstallazione -- Impostazioni di protezione: provare a utilizzare questa selezione se l'operazione con Installazione non è riuscita.
+rescueSistema di salvataggio: questa immagine di avvio carica un piccolo sistema Linux nella RAM. Ciò è utile se il sistema non si avvia correttamente. Dopo aver avviato il sistema, eseguire il login come utente root.
+firmwareVerifica firmware: avvia uno strumento di verifica del BIOS che convalida ACPI e altri componenti del BIOS.
+memtestVerifica della memoria: la verifica della memoria è utile non solo per verificare l'installazione dei nuovi moduli di memoria. È una verifica molto stressante per buona parte dei componenti del computer e può evidenziare problemi hardware.
+optOpzioni di avvio: le opzioni di avvio relative al kernel possono modificare completamente il comportamento del sistema in uso.
+helpF1 Guida: Guida contestuale. Vengono visualizzate schermate diverse in base all'elemento attivo nella schermata di avvio. È inoltre disponibile una descrizione di questa Guida.
+keytableF2: imposta la lingua e la mappatura della tastiera utilizzate dal boot loader.
+videomodeF3 Modalità video: qui è possibile scegliere più risoluzioni dello schermo durante l'installazione. Se si riscontrano problemi durante l'installazione grafica, è possibile utilizzare modalità testo per ovviarli.
+install_srcF4 Origine installazione: seleziona l'origine di installazione.
+driverupdateF6 Aggiornamento driver: sui computer molto recenti, può essere necessario aggiornare i driver per installare il sistema.bitsSelezione tipo di applicazioneSi può scegliere di installare la versione a 32 o 64 bit di KDE.
+Torna a mainGuida di boot loaderdriverupdateAggiornamento driverSe è necessario un disco floppy o un CD ROM di aggiornamento driver, premere F6. Dopo il caricamento del kernel Linux, verrà chiesto di inserire il supporto di aggiornamento driver.
+Un aggiornamento driver è costituito in genere da un disco floppy contenente nuove versioni dei driver hardware o correzioni dei bug necessarie durante l'installazione.
+Torna a mainGuida di boot loaderfailsafeInstallazione -- Impostazioni di protezioneSelezionare Installazione -- Impostazioni di protezione se si riscontrano interruzioni durante l'installazione oppure errori non riproducibili. Questa opzione disabilita il DMA per le unità IDE e tutte le funzioni di risparmio energia. Vedere anche le opzioni del kernel relative a o_apmapm, o_acpiACPI e o_ideide.
+Torna a mainGuida di boot loaderfirmwareVerifica firmwareAvvia il controllo del BIOS che convalida le tabelle ACPI e molte altre componenti del BIOS. È possibile memorizzare i risultati della verifica su un disco USB o salvarli in rete.
+Torna a mainGuida di boot loaderharddiskAvvio dal disco rigidoSelezionare Avvia sistema operativo installato per avviare il sistema installato nel disco rigido locale. Questo sistema deve essere installato correttamente perché viene avviato solo MBR (Master Boot Record) sul primo disco rigido. L'ID del dispositivo del primo disco rigido viene fornito dal BIOS del computer.
+Utilizzare questa opzione se si è dimenticato di rimuovere il CD o DVD dall'unità e per avviare il computer dal disco rigido.
+Torna a mainGuida di boot loaderhelpUso della Guida in lineaLa Guida online di boot loader è contestuale. Visualizza le informazioni sulla voce di menu selezionata, oppure, durante la modifica delle opzioni di avvio, tenta di consultare le informazioni relative all'opzione su cui è posizionato il cursore.
+Tasti di navigazione 
+  • Freccia su: evidenzia collegamento precedente  • Freccia giù: evidenzia collegamento successivo  • Freccia sinistra, Backspace: torna all'argomento precedente  • Freccia destra, Invio, Spazio: visita il collegamento  • Pagina Su: scorri su di una pagina  • Pagina Giù: scorri giù di una pagina  • Home: vai a inizio pagina  • Fine: vai a fine pagina  • Esc: esci dalla Guida
+Torna a mainGuida di boot loaderinstall_srcOrigine installazionePremere F4 per selezionare un'origine di installazione.
+Operazione equivalente all'uso dell'opzione di avvio o_installInstalla.
+Torna a mainGuida di boot loaderkeytableSelezione della lingua e del layout tastieraPremere F2 per cambiare la lingua e il layout della tastiera utilizzati dal boot loader.
+Torna a mainGuida di boot loaderlinuxInstallazioneSelezionare Installazione per avviare l'installazione di default. I optOpzioni di avvio immessi vengono utilizzati all'avvio. Questa voce attiva molte funzioni di componenti hardware comunemente disponibili.
+Torna a mainGuida di boot loadermemtestVerifica della memoriaIl Verifica della memoria incluso offre buone possibilità di verificare l'hardware di un sistema. Il suo scopo principale consiste nel rilevare interruzioni nella RAM, nonché altri problemi nel sistema.
+Nonostante la maggior parte dei difetti di memoria venga rilevata, non vi sono garanzie che la memoria funzioni correttamente se non si riscontrano errori.
+Torna a mainGuida di boot loadernoacpiInstallazione -- ACPI disabilitataL'hardware attuale di solito richiede ACPI (Advanced Configuration and Power Interface) per controllare la gestione degli interrupt. ACPI sostituisce completamente il vecchio sistema APM.
+Selezionare Installazione -- ACPI disabilitata se si riscontrano problemi durante l'avvio del kernel. I problemi noti nei computer dovuti all'ACPI sono: 
+  • il kernel si blocca durante l'avvio  • Le schede PCI non sono state rilevate o inizializzate correttamente
+È possibile anche provare con l'opzione di avvio firmwareVerifica firmware e consultare i risultati della verifica della convalida di ACPI.
+Torna a mainGuida di boot loadernolapicInstallazione -- APIC locale disabilitataDi norma non si verificano problemi con APIC (Advanced Programmable Interrupt Controller). Se dovessero verificarsi, provare a utilizzare questa opzione per eseguire l'avvio senza il supporto APIC locale.
+Non confondere questa opzione con noacpiACPI (Advanced Configuration and Power Interface).
+Torna a mainGuida di boot loaderoptOpzioni di avvioSono disponibili due tipi di opzioni di avvio: quelle che influenzano il programma di installazione e quelle che agiscono sul kernel. Alcune delle opzioni più comuni sono:
+a) opzioni programma di installazione 
+  • o_installInstalla -- seleziona un'origine di installazione  • networkopzioni di rete -- opzioni di rete  • o_vncopzioni vcn -- opzioni per l'installazione tramite VNC
+b) opzioni kernel 
+  • o_splashschermata di avvio -- influenza il comportamento della schermata di avvio  • o_apmapm -- alterna il risparmio energia  • o_acpiACPI -- configurazione avanzata e interfaccia per risparmio energia  • o_ideide -- controlla sottosistema IDE
+Torna a mainGuida di boot loadero_hostipo_netmasko_gatewaynetworkOpzioni programma di installazione: Opzioni di reteÈ possibile configurare subito l'interfaccia di rete. L'hardware verrà rilevato successivamente da YaST2. Per configurare la scheda di rete, è necessario specificare almeno l'IP host e la netmask. Ad esempio: 
+  • hostip=192.168.0.10 netmask=255.255.255.0
+o in forma abbreviata: 
+  • hostip=192.168.0.10/24
+Se si specifica un o_installinstallazione basata su rete ma non si specificano entrambe queste opzioni, il programma di installazione tenta di configurare l'interfaccia di rete con dhcp. Se è necessario un gateway di default, occorre specificarlo con l'opzione gateway. Ad esempio: 
+  • gateway=192.168.0.8
+Torna a optOpzioni di avvioo_acpiOpzioni kernel: acpiACPI (Advanced Configuration and Power Interface) è uno standard che definisce le interfacce di risparmio energia e configurazione tra un sistema operativo e il BIOS. Per default, ACPI viene attivato quando viene rilevato un BIOS successivo all'anno 2000. Esistono molti parametri comunemente utilizzati per controllare il comportamento di ACPI: 
+  • pci=noacpi -- non utilizzare ACPI per instradare gli interrupt PCI  • acpi=oldboot -- solo i componenti di ACPI relativi all'avvio rimangono attivi  • acpi=off -- disattiva completamente ACPI  • acpi=force -- attiva ACPI anche se la data del BIOS è anteriore al 2000
+Soprattutto sui nuovi computer, sostituisce il vecchio sistema o_apmapm.
+Torna a optOpzioni di avvioo_apmOpzioni kernel: apmAPM è una delle due strategie per il risparmio di energia utilizzata nei computer moderni. Viene utilizzata principalmente sui computer portatili per funzioni quali la sospensione su disco, tuttavia può controllare anche l'arresto del computer dopo lo spegnimento. La funzionalità APM dipende dal corretto funzionamento del BIOS. Se il BIOS non funziona correttamente, APM può essere utilizzata in maniera limitata o può addirittura impedire il funzionamento del computer. Pertanto, è possibile disattivarla con il parametro 
+  • apm=off -- disattiva completamente APM
+Alcuni computer di nuova generazione possono trarre ulteriori vantaggi dal recente o_acpiACPI.
+Torna a optOpzioni di avvioo_ideOpzioni kernel: ideNella maggior parte delle workstation desktop vengono utilizzati dispositivi IDE, anziché SCSI. Per eludere alcuni problemi hardware che possono verificarsi con i sistemi IDE, utilizzare il parametro del kernel: 
+  • ide=nodma -- disattiva DMA per le unità IDE
+Torna a optOpzioni di avvioo_installOpzioni programma di installazione: installPer default, l'origine di installazione viene ricercata nei CD-ROM locali. Per l'installazione di rete, selezionare l'opzione Installa. I protocolli di installazione possibili sono: 
+  • FTP  • NFS  • HTTP
+La sintassi da utilizzare è analoga agli URL standard. Se ad esempio il server è disponibile all'indirizzo 192.168.0.1 e si desidera eseguire un'installazione basata su NFS dalla directory /install di tale server, specificare l'origine come segue: 
+  • install=nfs://192.168.0.1/install
+La scheda di rete sarà configurata con dhcp oppure è necessario specificare manualmente i parametri come descritto in networkopzioni di rete.
+Torna a optOpzioni di avvioo_splashOpzioni kernel: schermata di avvioLa schermata di avvio corrisponde all'immagine visualizzata all'avvio del sistema. 
+  • schermata di avvio=0 -- La schermata di avvio viene disattivata. Ciò può essere utile per i monitor molto vecchi o se si verifica un errore.  • schermata di avvio=verbose -- Attiva la schermata di avvio e continua a visualizzare i messaggi del kernel e di avvio.  • schermata di avvio=silent -- Attiva la schermata di avvio, senza visualizzare messaggi. Viene visualizzata invece una barra di avanzamento.
+Torna a optOpzioni di avvioo_vncpasswordo_vncOpzioni programma di installazione: vncPer consentire l'installazione di VNC, specificare i parametri vnc e vncpassword: 
+  • vnc=1 vncpassword=example
+Il server VNC verrà avviato e sarà possibile controllare YaST2 tramite qualsiasi client VNC da un sistema remoto.
+Torna a optOpzioni di avviorescueSistema di salvataggioSistema di salvataggio un piccolo sistema di base caricato nella memoria RAM. Da qui è possibile apportare qualsiasi tipo di modifica a un sistema installato. Poiché nel sistema sono disponibili solo strumenti di basso livello, l'uso è consigliato a utenti esperti.
+Torna a mainGuida di boot loadervideomodeSelezione modalità videoPremere F3 per visualizzare l'elenco delle modalità video supportate dalla scheda grafica. Viene preselezionata la modalità più alta utilizzabile con il monitor.
+È possibile che il monitor non venga rilevato automaticamente. In tal caso, selezionare manualmente la modalità desiderata.
+Se nel sistema si verificano problemi con la scheda grafica durante l'installazione, è possibile utilizzare modalità testo per ovviarli.
+Torna a mainGuida di boot loader 

@@ -1,6 +1,9 @@
 desktop-settings
 ================
 
+Please maintrainers, read up first on
+[environment variables] (https://wiki.archlinux.org/index.php/environment_variables)
+
 ### official
 
 * [xfce] (https://github.com/manjaro/manjaro-xfce-settings)

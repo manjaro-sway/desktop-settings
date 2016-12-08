@@ -1,6 +1,6 @@
 [Default Applications]
-inode/directory=org.gnome.Nautilus.desktop
-application/x-gnome-saved-search=org.gnome.Nautilus.desktop
+inode/directory=dde-file-manager.desktop
+application/x-gnome-saved-search=dde-file-manager.desktop
 application/ogg=deepin-movie.desktop
 application/vnd.rn-realmedia=deepin-movie.desktop
 application/x-flac=deepin-movie.desktop
@@ -48,15 +48,15 @@ image/svg+xml=gthumb.desktop
 image/x-xbitmap=gthumb.desktop
 image/gif=gthumb.desktop
 image/x-xpixmap=gthumb.desktop
-text/plain=mousepad.desktop
+text/plain=org.gnome.gedit.desktop
 audio/mp4=deepin-movie.desktop
 application/x-shockwave-flash=deepin-movie.desktop
 application/pdf=evince.desktop
 application/x-bittorrent=transmission-gtk.desktop
 
 [Added Associations]
-inode/directory=org.gnome.Nautilus.desktop;
-application/x-gnome-saved-search=org.gnome.Nautilus.desktop;
+inode/directory=dde-file-manager.desktop;
+application/x-gnome-saved-search=dde-file-manager.desktop;
 application/ogg=deepin-movie.desktop;
 application/vnd.rn-realmedia=deepin-movie.desktop;
 application/x-flac=deepin-movie.desktop;
@@ -104,7 +104,7 @@ image/svg+xml=gthumb.desktop;
 image/x-xbitmap=gthumb.desktop;
 image/gif=gthumb.desktop;
 image/x-xpixmap=gthumb.desktop;
-text/plain=mousepad.desktop;
+text/plain=org.gnome.gedit.desktop;
 audio/mp4=deepin-movie.desktop;
 application/x-shockwave-flash=deepin-movie.desktop;
 application/pdf=evince.desktop;
