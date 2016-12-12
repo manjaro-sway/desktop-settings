@@ -24,6 +24,9 @@ exec='orca'
 theme='Vertex-Maia'
 compositing-fast-alt-tab=true
 
+[org.mate.Marco.global-keybindings]
+run-command-terminal='<Primary><Alt>t'
+
 
 [org.mate.interface]
 accessibility=true
