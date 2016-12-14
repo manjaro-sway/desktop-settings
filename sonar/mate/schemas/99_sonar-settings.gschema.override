@@ -22,6 +22,9 @@ event-sounds=true
 input-feedback-sounds=true
 theme-name='sonar'
 
+[org.mate.applications-at]
+screen-reader-enable=true
+
 [org.mate.applications-at-visual]
 startup=true
 exec='orca'
@@ -47,8 +50,8 @@ monospace-font-name='Monospace 11'
 cursor-theme='Breeze'
 
 [org.mate.terminal.global]
-default-profile='manjaro'
-profile-list=['manjaro']
+default-profile='sonar'
+profile-list=['sonar']
 
 [org.mate.terminal.profiles.manjaro]
 foreground-color='#838394949696'
