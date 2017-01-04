@@ -90,3 +90,6 @@ toplevel-id='bottom'
 position=10
 object-type='applet'
 
+[org.mate.NotificationDaemon]
+theme='slate'
+

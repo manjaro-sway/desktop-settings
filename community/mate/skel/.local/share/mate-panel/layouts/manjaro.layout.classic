@@ -1,0 +1,94 @@
+[Toplevel bottom]
+expand=true
+orientation=bottom
+size=24
+
+[Object menu-bar]
+object-type=applet
+applet-iid=MateMenuAppletFactory::MateMenuApplet
+toplevel-id=bottom
+position=0
+locked=true
+
+[Object show-desktop]
+object-type=applet
+applet-iid=WnckletFactory::ShowDesktopApplet
+toplevel-id=bottom
+position=1
+locked=true
+
+[Object firefox]
+locked=True
+position=10
+launcher-location=/usr/share/applications/firefox.desktop
+toplevel-id=bottom
+object-type=launcher
+menu-path=applications:/
+
+
+[Object mate-terminal]
+locked=True
+position=11
+launcher-location=/usr/share/applications/mate-terminal.desktop
+toplevel-id=bottom
+object-type=launcher
+menu-path=applications:/
+
+
+[Object caja]
+locked=True
+position=12
+launcher-location=/usr/share/applications/caja.desktop
+toplevel-id=bottom
+object-type=launcher
+menu-path=applications:/
+
+[Object window-list]
+object-type=applet
+applet-iid=WnckletFactory::WindowListApplet
+toplevel-id=bottom
+position=150
+locked=true
+
+
+[Object inhibit]
+object-type=applet
+applet-iid=InhibitAppletFactory::InhibitApplet
+toplevel-id=bottom
+position=6
+panel-right-stick=true
+locked=true
+
+[Object workspace-switcher]
+object-type=applet
+applet-iid=WnckletFactory::WorkspaceSwitcherApplet
+toplevel-id=bottom
+position=5
+panel-right-stick=true
+locked=true
+
+[Object notification-area]
+object-type=applet
+applet-iid=NotificationAreaAppletFactory::NotificationArea
+toplevel-id=bottom
+position=4
+panel-right-stick=true
+locked=true
+
+[Object clock]
+object-type=applet
+applet-iid=ClockAppletFactory::ClockApplet
+toplevel-id=bottom
+position=3
+panel-right-stick=true
+locked=true
+
+
+
+[Object shutdown]
+action-type=shutdown
+object-type=action
+position=2
+panel-right-stick=true
+toplevel-id=bottom
+locked=true
