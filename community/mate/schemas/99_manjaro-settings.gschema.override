@@ -24,6 +24,9 @@ bold-color='#000000000000'
 foreground-color='#000000000000'
 visible-name='Default'
 
+[org.mate.panel]
+default-layout='manjaro'
+
 [org.mate.panel.menubar]
 icon-name='logo-manjaro'
 
@@ -33,10 +36,10 @@ start-with-toolbar=true
 start-with-status-bar=true
 
 [org.mate.panel.general]
-object-id-list=['brisk-menu', 'window-list', 'notification-area', 'clock', 'show-desktop', 'object-0', 'object-1', 'object-2', 'object-3']
-toplevel-id-list=['top']
+object-id-list=['brisk-menu', 'window-list', 'notification-area', 'clock', 'show-desktop']
+toplevel-id-list=['bottom']
 
-[org.mate.panel.toplevels.top]
+[org.mate.panel.toplevels.bottom]
 expand=true
 orientation='bottom'
 screen=0
@@ -44,19 +47,19 @@ y-bottom=0
 size=25
 y=744
 
-[org.mate.panel.objects.object-2]
-applet-iid='WnckletFactory::WindowListApplet'
+[org.mate.panel.objects.brisk-menu]
+applet-iid='BriskMenuFactory::BriskMenu'
 locked=true
-toplevel-id='top'
-position=103
+toplevel-id='bottom'
+position=0
 object-type='applet'
-panel-right-stick=false
 
 [org.mate.panel.objects.clock]
+[org/mate/panel/objects/clock]
 applet-iid='ClockAppletFactory::ClockApplet'
 locked=true
-toplevel-id='top'
-position=0
+toplevel-id='bottom'
+position=10
 object-type='applet'
 panel-right-stick=true
 
@@ -67,33 +70,25 @@ custom-format=''
 [org.mate.panel.objects.notification-area]
 applet-iid='NotificationAreaAppletFactory::NotificationArea'
 locked=true
-toplevel-id='top'
-position=10
+toplevel-id='bottom'
+position=20
 object-type='applet'
 panel-right-stick=true
 
-[org.mate.panel.objects.object-1]
+[org.mate.panel.objects.show-desktop]
 applet-iid='WnckletFactory::ShowDesktopApplet'
 locked=true
-toplevel-id='top'
-position=71
-object-type='applet'
-panel-right-stick=false
-
-[org.mate.panel.objects.object-0]
-applet-iid='BriskMenuFactory::BriskMenu'
-locked=true
-toplevel-id='top'
+toplevel-id='bottom'
 position=0
 object-type='applet'
-panel-right-stick=false
+panel-right-stick=true
 
-[org.mate.panel.objects.object-3]
-applet-iid='NotificationAreaAppletFactory::NotificationArea'
-toplevel-id='top'
-position=661
+[org.mate.panel.objects.window-list]
+applet-iid='WnckletFactory::WindowListApplet'
+locked=true
+toplevel-id='bottom'
+position=10
 object-type='applet'
-panel-right-stick=false
 
 [org.mate.NotificationDaemon]
 theme='slate'
