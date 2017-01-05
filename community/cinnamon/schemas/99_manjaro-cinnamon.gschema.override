@@ -23,13 +23,51 @@ font-message='Comfortaa Semi-Light 12'
 font-time='Comfortaa Semi-Light 64'
 use-custom-format=true
 
+[org.cinnamon.desktop.sound]
+theme-name="LinuxMint"
+event-sounds=false
+input-feedback-sounds=false
+volume-sound-enabled=true
+volume-sound-file="/usr/share/sounds/LinuxMint/stereo/volume.oga"
+
 [org.cinnamon.desktop.wm.preferences]
 num-workspaces=2
 theme='Vertex-Maia'
 titlebar-font='Cantarell 10'
 
+[org.cinnamon.sounds]
+login-enabled=true
+login-file="/usr/share/sounds/LinuxMint/stereo/login.oga"
+logout-enabled=true
+logout-file="/usr/share/sounds/LinuxMint/stereo/logout.ogg"
+switch-enabled=true
+switch-file="/usr/share/sounds/LinuxMint/stereo/switch.oga"
+close-enabled=false
+close-file="/usr/share/sounds/LinuxMint/stereo/close.oga"
+map-enabled=false
+map-file="/usr/share/sounds/LinuxMint/stereo/map.oga"
+minimize-enabled=false
+minimize-file="/usr/share/sounds/LinuxMint/stereo/minimize.oga"
+maximize-enabled=false
+maximize-file="/usr/share/sounds/LinuxMint/stereo/maximize.oga"
+unmaximize-enabled=false
+unmaximize-file="/usr/share/sounds/LinuxMint/stereo/unmaximize.oga"
+tile-enabled=true
+tile-file="/usr/share/sounds/LinuxMint/stereo/tile.oga"
+plug-enabled=true
+plug-file="/usr/share/sounds/LinuxMint/stereo/plug.oga"
+unplug-enabled=true
+unplug-file="/usr/share/sounds/LinuxMint/stereo/unplug.oga"
+notification-enabled=false
+notification-file="/usr/share/sounds/LinuxMint/stereo/notification.oga"
+
 [org.cinnamon.theme]
 name='Vertex-Maia'
+
+[org.gnome.desktop.sound]
+theme-name="LinuxMint"
+event-sounds=false
+input-feedback-sounds=false
 
 [org.gnome.Terminal.Legacy.Profile]
 allow-bold=true
