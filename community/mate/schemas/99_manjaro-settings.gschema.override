@@ -9,6 +9,7 @@ icon-theme='Arc-Maia'
 [org.mate.Marco.general]
 theme='Arc-Maia-Darker'
 compositing-fast-alt-tab=true
+compositing-manager=true
 
 [org.mate.peripherals-mouse]
 cursor-theme='Breeze'
