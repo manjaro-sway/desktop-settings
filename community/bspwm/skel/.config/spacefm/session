@@ -23,6 +23,7 @@ shadow=0,0,0
 margin_top=30
 
 [Interface]
+always_show_tabs=0
 
 [MOD]
 dev_menu_root-icn=dialog-warning-symbolic
@@ -67,7 +68,7 @@ main_new_window-key=110
 main_new_window-keymod=4
 main_root_window-key=65472
 main_root_window-icn=spacefm-root
-main_terminal-s=roxterm
+main_terminal-s=sterm
 main_terminal-key=65473
 main_terminal-icn=utilities-terminal-symbolic
 main_terminal-b=2
@@ -284,7 +285,7 @@ panel1_list_large-b=1
 panel1_show_hidden-key=104
 panel1_show_hidden-keymod=4
 panel1_show_hidden-b=2
-panel1_font_dev-s=Terminus 12
+panel1_font_dev-s=xos4 Terminus 12
 panel1_detcol_name-x=0
 panel1_detcol_name-b=1
 panel1_detcol_size-x=1
