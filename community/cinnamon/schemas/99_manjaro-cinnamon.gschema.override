@@ -2,10 +2,12 @@
 alttab-switcher-style='thumbnails+preview'
 enabled-applets=['panel1:left:0:menu@cinnamon.org:0', 'panel1:left:1:separator@cinnamon.org:1', 'panel1:left:2:panel-launchers@cinnamon.org:2', 'panel1:left:3:separator@cinnamon.org:3', 'panel1:left:4:expo@cinnamon.org:4', 'panel1:left:5:show-desktop@cinnamon.org:5', 'panel1:left:6:window-list@cinnamon.org:6', 'panel1:right:0:notifications@cinnamon.org:7', 'panel1:right:1:workspace-switcher@cinnamon.org:8', 'panel1:right:2:windows-quick-list@cinnamon.org:9', 'panel1:right:3:separator@cinnamon.org:10', 'panel1:right:4:removable-drives@cinnamon.org:11', 'panel1:right:5:systray@cinnamon.org:12', 'panel1:right:6:separator@cinnamon.org:13', 'panel1:right:7:network@cinnamon.org:14', 'panel1:right:8:sound@cinnamon.org:15', 'panel1:right:9:power@cinnamon.org:16', 'panel1:right:10:inhibit@cinnamon.org:17', 'panel1:right:11:calendar@cinnamon.org:18', 'panel1:right:12:user@cinnamon.org:19']
 next-applet-id=20
+panels-resizable=['1:true']
+panels-height=['1:30']
 
 [org.cinnamon.desktop.background]
 picture-options='stretched'
-picture-uri='file:///usr/share/backgrounds/cinnamon-brown.jpg'
+picture-uri='file:///usr/share/backgrounds/Rez_cinnamon.jpg'
 
 [org.cinnamon.desktop.interface]
 cursor-theme='Breeze'
@@ -21,13 +23,51 @@ font-message='Comfortaa Semi-Light 12'
 font-time='Comfortaa Semi-Light 64'
 use-custom-format=true
 
+[org.cinnamon.desktop.sound]
+theme-name="LinuxMint"
+event-sounds=false
+input-feedback-sounds=false
+volume-sound-enabled=true
+volume-sound-file="/usr/share/sounds/LinuxMint/stereo/volume.oga"
+
 [org.cinnamon.desktop.wm.preferences]
 num-workspaces=2
 theme='Vertex-Maia'
 titlebar-font='Cantarell 10'
 
+[org.cinnamon.sounds]
+login-enabled=true
+login-file="/usr/share/sounds/LinuxMint/stereo/login.oga"
+logout-enabled=true
+logout-file="/usr/share/sounds/LinuxMint/stereo/logout.ogg"
+switch-enabled=true
+switch-file="/usr/share/sounds/LinuxMint/stereo/switch.oga"
+close-enabled=false
+close-file="/usr/share/sounds/LinuxMint/stereo/close.oga"
+map-enabled=false
+map-file="/usr/share/sounds/LinuxMint/stereo/map.oga"
+minimize-enabled=false
+minimize-file="/usr/share/sounds/LinuxMint/stereo/minimize.oga"
+maximize-enabled=false
+maximize-file="/usr/share/sounds/LinuxMint/stereo/maximize.oga"
+unmaximize-enabled=false
+unmaximize-file="/usr/share/sounds/LinuxMint/stereo/unmaximize.oga"
+tile-enabled=true
+tile-file="/usr/share/sounds/LinuxMint/stereo/tile.oga"
+plug-enabled=true
+plug-file="/usr/share/sounds/LinuxMint/stereo/plug.oga"
+unplug-enabled=true
+unplug-file="/usr/share/sounds/LinuxMint/stereo/unplug.oga"
+notification-enabled=false
+notification-file="/usr/share/sounds/LinuxMint/stereo/notification.oga"
+
 [org.cinnamon.theme]
 name='Vertex-Maia'
+
+[org.gnome.desktop.sound]
+theme-name="LinuxMint"
+event-sounds=false
+input-feedback-sounds=false
 
 [org.gnome.Terminal.Legacy.Profile]
 allow-bold=true
@@ -44,7 +84,3 @@ computer-icon-visible=true
 home-icon-visible=true
 trash-icon-visible=false
 volumes-visible=true
-
-[org.xfce.mousepad.preferences.view]
-color-scheme='classic'
-show-line-numbers=true

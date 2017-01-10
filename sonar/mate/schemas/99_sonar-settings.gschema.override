@@ -1,13 +1,19 @@
+[org.gnome.desktop.a11y.applications]
+screen-reader-enable=true
+
 [org.mate.background]
 picture-filename='/usr/share/backgrounds/sonar.jpg'
 
 [org.mate.NotificationDaemon]
 theme='coco'
+popup-location='bottom_right'
+
 
 [org.mate.accessibility-keyboard]
 togglekeys-enable=true
 enable=true
 feature-state-change-beep=true
+
 [org.mate.applications-at-mobility]
 startup=false
 
@@ -16,27 +22,47 @@ event-sounds=true
 input-feedback-sounds=true
 theme-name='sonar'
 
+[org.mate.applications-at]
+screen-reader-enable=true
+
 [org.mate.applications-at-visual]
 startup=true
 exec='orca'
 
 [org.mate.Marco.general]
-theme='Vertex-Maia'
+theme='Arc-Maia'
 compositing-fast-alt-tab=true
 
+[org.mate.Marco.global-keybindings]
+run-command-terminal='<Primary><Alt>t'
 
 [org.mate.interface]
 accessibility=true
 buttons-have-icons=true
 document-font-name='Sans 11'
 font-name='Sans 11'
-gtk-theme='Vertex-Maia'
+gtk-theme='Arc-Maia-Darker'
 icon-theme='Vertex-Maia'
 menus-have-icons=true
 monospace-font-name='Monospace 11'
 
 [org.mate.peripherals-mouse]
-cursor-theme='Maia-Cursor'
+cursor-theme='Breeze'
+
+[org.mate.terminal.global]
+default-profile='sonar'
+profile-list=['sonar']
+
+[org.mate.terminal.profiles.manjaro]
+foreground-color='#838394949696'
+visible-name='manjaro'
+palette='#070736364242:#DCDC32322F2F:#858599990000:#B5B589890000:#26268B8BD2D2:#D3D336368282:#2A2AA1A19898:#EEEEE8E8D5D5:#00002B2B3636:#CBCB4B4B1616:#58586E6E7575:#65657B7B8383:#838394949696:#6C6C7171C4C4:#9393A1A1A1A1:#FDFDF6F6E3E3'
+title='Mate Terminal'
+use-theme-colors=false
+bold-color-same-as-fg=false
+bold-color='#9393A1A1A1A1'
+background-color='#070736364242'
+title-mode='ignore'
 
 [org.mate.panel]
 default-layout='sonar'
@@ -47,7 +73,6 @@ size=40
 [org.mate.panel.toplevels.bottom.background]
 image='/usr/share/backgrounds/sonar.jpg'
 type='image'
-
 
 [org.mate.SettingsDaemon.plugins.media-keys]
 screenreader='<Alt><Mod4>s'
@@ -80,10 +105,6 @@ foreground-color='rgb(255,255,255)'
 font='Monospace Regular 12'
 rewrap-on-resize=true
 visible-name='sonar'
-
-[org.mate.notification-daemon]
-popup-location='bottom_right'
-theme='coco'
 
 [org.mate.settings-daemon.plugins.xrandr]
 show-notification-icon='true'
