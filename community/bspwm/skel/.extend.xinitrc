@@ -16,4 +16,4 @@ DMENU_OPTIONS="-fn $DMENU_FN -nb $DMENU_NB -nf $DMENU_NF -sf $DMENU_SF -sb $DMEN
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
  #Bspwm is kept as default
-DEFAULT_SESSION=bspwm
+DEFAULT_SESSION=bspwm-session
