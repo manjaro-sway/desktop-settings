@@ -14,7 +14,7 @@ export XDG_CONFIG_DIRS=/usr/etc/xdg:/etc/xdg
 export GUI_EDITOR=/usr/bin/gedit
 export EDITOR=/usr/bin/nano
 export BROWSER=/usr/bin/light
-export TERMINAL=/usr/bin/roxterm
+export TERMINAL=/usr/bin/sterm
 
 # Load profiles from /etc/profile.d
 if test -d /etc/profile.d/; then
