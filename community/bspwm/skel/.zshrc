@@ -4,13 +4,6 @@
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-
-TERM=xterm
-case $TERM in
-  xterm*)
-    precmd () {print -Pn "\e]0;%n@%m: %~\a"}
-    ;;
-esac
 # preexec is called just before any command line is executed
 function preexec() {
   title "$1" "%m(%35<...<%~)"
