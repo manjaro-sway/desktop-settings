@@ -58,7 +58,7 @@ plug-enabled=true
 plug-file="/usr/share/sounds/LinuxMint/stereo/plug.oga"
 unplug-enabled=true
 unplug-file="/usr/share/sounds/LinuxMint/stereo/unplug.oga"
-notification-enabled=false
+notification-enabled=true
 notification-file="/usr/share/sounds/LinuxMint/stereo/notification.oga"
 
 [org.cinnamon.theme]
