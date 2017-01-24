@@ -1,0 +1,1 @@
+You can put your scripts in this directory and they become available to use in dmenu and command line without specifying the full path.
