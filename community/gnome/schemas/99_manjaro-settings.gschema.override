@@ -1,5 +1,5 @@
 [org.gnome.desktop.background]
-picture-uri='file:///usr/share/backgrounds/gnomeDark_1920x1080.png'
+picture-uri='file:///usr/share/backgrounds/manjaro-gnome-wallpaper_1920_1200px.jpg'
 show-desktop-icons=false
 
 [org.gnome.desktop.interface]
@@ -9,7 +9,7 @@ enable-animations=true
 font-name='Cantarell 11'
 gtk-im-module='gtk-im-context-simple'
 gtk-theme='Arc-Maia-Darker'
-icon-theme='Vertex-Maia'
+icon-theme='Arc-Maia'
 monospace-font-name='Monospace 11'
 
 [org.gnome.desktop.wm.preferences]
