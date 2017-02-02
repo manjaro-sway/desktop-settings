@@ -301,16 +301,16 @@ bar {
 
 	colors {
 #	background $transparent
-		background #2B2C2B
-                statusline #F9FAF9
-		separator  #454947
+        background #292F34
+        statusline #F9FAF9
+        separator  #454947
 
 #                                  border  backgr. text
-		focused_workspace  #F9FAF9 #16A085 #2B2C2B
-		active_workspace   #595B5B #353836 #FDF6E3
-		inactive_workspace #595B5B #353836 #EEE8D5
-		urgent_workspace   #16A085 #FDF6E3 #E5201D
-	}
+        focused_workspace  #F9FAF9 #16A085 #2B2C2B
+        active_workspace   #595B5B #353836 #FDF6E3
+        inactive_workspace #595B5B #353836 #EEE8D5
+        urgent_workspace   #16A085 #FDF6E3 #E5201D
+    }
 }
 
 # hide/unhide i3status bar
