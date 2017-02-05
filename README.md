@@ -13,7 +13,7 @@ Please maintrainers, read up first on
 
 * [kde] (https://github.com/manjaro/manjaro-kde-settings)
 * [xfce] (https://github.com/manjaro/manjaro-xfce-settings)
-* lxqt
+* [lxqt] (https://github.com/manjaro/manjaro-lxqt-settings)
 * openbox
 
 ### community
@@ -23,10 +23,10 @@ Please maintrainers, read up first on
 * cinnamon
 * deepin
 * fluxbox
-* gnome
+* [gnome] (https://github.com/manjaro/manjaro-gnome-settings)
 * i3
 * lxde
-* lxqt
+* [lxqt] (https://github.com/manjaro/manjaro-lxqt-settings)
 * mate
 * netbook
 * pantheon
