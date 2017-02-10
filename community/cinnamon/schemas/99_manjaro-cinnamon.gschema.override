@@ -7,7 +7,7 @@ panels-height=['1:30']
 
 [org.cinnamon.desktop.background]
 picture-options='stretched'
-picture-uri='file:///usr/share/backgrounds/cinnamon-brown.jpg'
+picture-uri='file:///usr/share/backgrounds/Rez_cinnamon.jpg'
 
 [org.cinnamon.desktop.interface]
 cursor-theme='Breeze'
