@@ -8,8 +8,8 @@ document-font-name='Sans 10'
 enable-animations=true
 font-name='Cantarell 10'
 gtk-im-module='gtk-im-context-simple'
-gtk-theme='Vertex-Maia'
-icon-theme='Vertex-Maia'
+gtk-theme='Arc-Maia'
+icon-theme='Arc-Maia'
 monospace-font-name='Monospace 10'
 toolkit-accessibility=true
 
