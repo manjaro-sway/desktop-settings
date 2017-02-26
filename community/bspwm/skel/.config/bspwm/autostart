@@ -52,5 +52,4 @@ i3lock-wait-for-suspend &
 srandrd atorandr.sh --change
 ## Notify about package updates
 update-checker 7200 &
-fish -c "fisher up" && sed -i '/fisher up/d' ~/.config/bspwm/autostart
 
