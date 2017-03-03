@@ -7,13 +7,13 @@ panels-height=['1:30']
 
 [org.cinnamon.desktop.background]
 picture-options='stretched'
-picture-uri='file:///usr/share/backgrounds/Rez_cinnamon.jpg'
+picture-uri='file:///usr/share/backgrounds/cinnamon_default.jpg'
 
 [org.cinnamon.desktop.interface]
 cursor-theme='Breeze'
 font-name='Cantarell 10'
-gtk-theme='Vertex-Maia'
-icon-theme='maia'
+gtk-theme='Vertex-Maia-Dark'
+icon-theme='Vibrancy-Full-Dark-Teal'
 
 [org.cinnamon.desktop.screensaver]
 ask-for-away-message=false
@@ -32,7 +32,7 @@ volume-sound-file="/usr/share/sounds/LinuxMint/stereo/volume.oga"
 
 [org.cinnamon.desktop.wm.preferences]
 num-workspaces=2
-theme='Vertex-Maia'
+theme='Vertex-Maia-Dark'
 titlebar-font='Cantarell 10'
 
 [org.cinnamon.sounds]
