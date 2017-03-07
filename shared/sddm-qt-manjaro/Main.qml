@@ -73,7 +73,7 @@ Rectangle {
                     verticalAlignment: Text.AlignVCenter
                     height: text.implicitHeight
                     width: parent.width
-                    text: qsTr("password for the live session is: manjaro")
+                    text: qsTr("Manjaro Lxqt")
                     wrapMode: Text.WordWrap
                     font.pixelSize: 14
                     elide: Text.ElideRight
