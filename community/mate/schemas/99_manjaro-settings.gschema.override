@@ -14,6 +14,9 @@ compositing-manager=true
 [org.mate.peripherals-mouse]
 cursor-theme='Breeze'
 
+[org.mate.peripherals-touchpad]
+tap-to-click=true 
+
 [org.mate.terminal.global]
 default-profile='manjaro'
 profile-list=['manjaro']
