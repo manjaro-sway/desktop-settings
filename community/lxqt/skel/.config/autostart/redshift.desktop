@@ -1,6 +1,0 @@
-[Desktop Entry]
-Exec=redshift -l 45.0:2.0 -t 6000:6000
-Hidden=true
-Name=redshift
-Type=Application
-Version=1.0
