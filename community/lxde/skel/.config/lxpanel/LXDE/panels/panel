@@ -17,7 +17,7 @@ Global {
   heightwhenhidden=0
   usefontcolor=1
   fontcolor=#ffffff
-  background=1
+  background=0
   backgroundfile=/usr/share/lxpanel/images/background.png
 }
 Plugin {
