@@ -1,6 +1,0 @@
-[Default Applications]
-application/pdf=evince.desktop
-
-[Added Associations]
-application/pdf=evince.desktop;
-
