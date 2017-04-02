@@ -7,7 +7,7 @@ Global {
   margin=0
   widthtype=percent
   width=100
-  height=26
+  height=28
   transparent=0
   tintcolor=#000000
   alpha=0
@@ -15,10 +15,12 @@ Global {
   setpartialstrut=1
   autohide=0
   heightwhenhidden=0
-  usefontcolor=1
+  usefontcolor=0
   fontcolor=#ffffff
   background=0
   backgroundfile=/usr/share/lxpanel/images/background.png
+  iconsize=26
+  usefontsize=0
 }
 Plugin {
   type=menu
@@ -40,9 +42,8 @@ Plugin {
   }
 }
 Plugin {
-  type=space
+  type=separator
   Config {
-    Size=4
   }
 }
 Plugin {
@@ -53,9 +54,8 @@ Plugin {
   }
 }
 Plugin {
-  type=space
+  type=separator
   Config {
-    Size=4
   }
 }
 Plugin {
@@ -63,6 +63,9 @@ Plugin {
   Config {
     Button {
       id=pcmanfm.desktop
+    }
+    Button {
+      id=lxterminal.desktop
     }
     Button {
       id=firefox.desktop
