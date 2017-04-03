@@ -13,6 +13,6 @@ Exec=gksu leafpad %f
 Name=Default profile
 
 [X-Action-Profile profile-editasroot2]
-MimeTypes=applications/x-desktop;
+MimeTypes=application/x-desktop;
 Exec=gksu leafpad %f
 Name=Default profile
