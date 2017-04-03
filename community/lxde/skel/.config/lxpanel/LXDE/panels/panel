@@ -51,6 +51,7 @@ Plugin {
   Config {
     Button1=iconify
     Button2=shade
+    Toggle=1
   }
 }
 Plugin {
