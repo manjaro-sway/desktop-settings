@@ -4,11 +4,15 @@ Name=Edit as Root
 Name[fr]=Editer en tant que root
 Name[de]=Bearbeiten als root
 Icon=dialog-password
-Profiles=profile-editasroot
+Profiles=profile-editasroot;profile-editasroot2;
 
 [X-Action-Profile profile-editasroot]
-MimeTypes=text/plain
-TryExec=mousepad
-Exec=gksu mousepad %f
+MimeTypes=text/*;
+TryExec=leafpad
+Exec=gksu leafpad %f
 Name=Default profile
 
+[X-Action-Profile profile-editasroot2]
+MimeTypes=application/x-desktop;
+Exec=gksu leafpad %f
+Name=Default profile
