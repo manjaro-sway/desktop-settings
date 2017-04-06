@@ -336,6 +336,87 @@
                 <command>lxterminal</command>
             </action>
         </keybind>
+        <keybind key='W-KP_1'>
+            <action name='Unmaximize'/>
+            <action name='MoveResizeTo'>
+                <x>0</x>
+                <y>-0</y>
+                <width>50%</width>
+                <height>50%</height>
+            </action>
+        </keybind>
+        <keybind key='W-KP_2'>
+            <action name='Unmaximize'/>
+            <action name='MoveResizeTo'>
+                <x>0</x>
+                <y>-0</y>
+                <width>100%</width>
+                <height>50%</height>
+            </action>
+        </keybind>
+        <keybind key='W-KP_3'>
+            <action name='Unmaximize'/>
+            <action name='MoveResizeTo'>
+                <x>-0</x>
+                <y>-0</y>
+                <width>50%</width>
+                <height>50%</height>
+            </action>
+        </keybind>
+        <keybind key='W-KP_4'>
+            <action name='Unmaximize'/>
+            <action name='MoveResizeTo'>
+                <x>0</x>
+                <y>0</y>
+                <width>50%</width>
+                <height>100%</height>
+            </action>
+        </keybind>
+        <keybind key='W-KP_5'>
+            <action name='Unmaximize'/>
+            <action name='MoveResizeTo'>
+                <x>center</x>
+                <y>center</y>
+                <width>50%</width>
+                <height>50%</height>
+            </action>
+        </keybind>
+        <keybind key='W-KP_6'>
+            <action name='Unmaximize'/>
+            <action name='MoveResizeTo'>
+                <x>-0</x>
+                <y>0</y>
+                <width>50%</width>
+                <height>100%</height>
+            </action>
+        </keybind>
+        <keybind key='W-KP_7'>
+            <action name='Unmaximize'/>
+            <action name='MoveResizeTo'>
+                <x>0</x>
+                <y>0</y>
+                <width>50%</width>
+                <height>50%</height>
+            </action>
+        </keybind>
+        <keybind key='W-KP_8'>
+            <action name='Unmaximize'/>
+            <action name='MoveResizeTo'>
+                <x>0</x>
+                <y>0</y>
+                <width>100%</width>
+                <height>50%</height>
+            </action>
+        </keybind>
+        <keybind key='W-KP_9'>
+            <action name='Unmaximize'/>
+            <action name='MoveResizeTo'>
+                <x>-0</x>
+                <y>0</y>
+                <width>50%</width>
+                <height>50%</height>
+            </action>
+        </keybind>
     </keyboard>
     <mouse>
         <dragThreshold>8</dragThreshold>
