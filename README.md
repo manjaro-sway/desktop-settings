@@ -2,14 +2,14 @@ desktop-settings
 ================
 
 Please maintrainers, read up first on
-[environment variables] (https://wiki.archlinux.org/index.php/environment_variables)
+[environment variables](https://wiki.archlinux.org/index.php/environment_variables)
 
 ### manjaro
 
-* [xfce] (https://github.com/manjaro/manjaro-xfce-settings)
-* [kde] (https://github.com/manjaro/manjaro-kde-settings)
-* [lxqt] (https://github.com/manjaro/manjaro-lxqt-settings)
-* [gnome] (https://github.com/manjaro/manjaro-gnome-settings)
+* [xfce](https://github.com/manjaro/manjaro-xfce-settings)
+* [kde](https://github.com/manjaro/manjaro-kde-settings)
+* [lxqt](https://github.com/manjaro/manjaro-lxqt-settings)
+* [gnome](https://github.com/manjaro/manjaro-gnome-settings)
 
 ### community
 
