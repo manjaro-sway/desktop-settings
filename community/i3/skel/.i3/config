@@ -286,6 +286,63 @@ exec --no-startup-id start_conky_maia
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id fix_xcursor
 
+# Color palette used for the terminal ( ~/.extend.Xresources file )
+# Colors are gathered based on the documentation:
+# https://i3wm.org/docs/userguide.html#xresources
+# Change the variable name at the place you want to match the color
+# of your terminal like this:
+# [example]
+# If you want your bar to have the same background color as your 
+# terminal background change the line 362 from:
+# background  $i3_background
+# to:
+# background $term_background
+# Same logic applied to everything else.
+set_from_resource $term_background background
+set_from_resource $term_foreground foreground
+set_from_resource $term_color0     color0
+set_from_resource $term_color1     color1
+set_from_resource $term_color2     color2
+set_from_resource $term_color3     color3
+set_from_resource $term_color4     color4
+set_from_resource $term_color5     color5
+set_from_resource $term_color6     color6
+set_from_resource $term_color7     color7
+set_from_resource $term_color8     color8
+set_from_resource $term_color9     color9
+set_from_resource $term_color10    color10
+set_from_resource $term_color11    color11
+set_from_resource $term_color12    color12
+set_from_resource $term_color13    color13
+set_from_resource $term_color14    color14
+set_from_resource $term_color15    color15
+
+# Color palette used for i3 
+# Variables are set based on the documentation:
+# https://i3wm.org/dovs/userguide.html#variables
+# Changing the value of one of the variables will
+# effect all the areas with the same color.
+set $i3_background      #2B2C2B
+set $i3_text            #F9FAF9
+set $i3_separator       #454947
+set $i3_color1          #f9faf9
+set $i3_color2          #595B5B
+set $i3_color3          #353836
+set $i3_color4          #16A085
+set $i3_color5          #FDF6E3
+set $i3_color6          #EEE8D5
+set $i3_color7          #E5201D
+set $i3_color8          #808380
+set $i3_color9          #434745
+set $i3_color10         #454948
+set $i3_color11         #80FFF9
+set $i3_color12         #FDF6E3
+set $i3_color13         #CB4B16
+set $i3_color14         #268BD2
+set $i3_color15         #000000
+set $i3_color16         #ffffff
+set $i3_color17         #0c0c0c
+
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
 	status_command i3status
@@ -302,15 +359,15 @@ bar {
 
 	colors {
 #       background $transparent
-        background #2B2C2B
-        statusline #F9FAF9
-        separator  #454947
+        background $i3_background
+        statusline $i3_text
+        separator  $i3_separator
 
 #                                  border  backgr. text
-        focused_workspace  #F9FAF9 #16A085 #2B2C2B
-        active_workspace   #595B5B #353836 #FDF6E3
-        inactive_workspace #595B5B #353836 #EEE8D5
-        urgent_workspace   #16A085 #FDF6E3 #E5201D
+        focused_workspace   $i3_color1  $i3_color4  $i3_text
+        active_workspace    $i3_color2  $i3_color3  $i3_color5
+        inactive_workspace  $i3_color2  $i3_color3  $i3_color6
+        urgent_workspace    $i3_color4  $i3_color5  $i3_color7
     }
 }
 
@@ -318,14 +375,14 @@ bar {
 bindsym $mod+m bar mode toggle
 
 # Theme colors
-# class                 border  backgr. text    indic.  child_border
-client.focused          #808280 #808280 #80FFF9 #FDF6E3
-client.focused_inactive #434745 #434745 #16A085 #454948
-client.unfocused        #434745 #434745 #16A085 #454948
-client.urgent           #CB4B16 #FDF6E3 #16A085 #268BD2
-client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
+# class                 border      backgr.     text        indic.      child_border
+client.focused          $i3_color8  $i3_color8  $i3_color11 $i3_color12
+client.focused_inactive $i3_color9  $i3_color9  $i3_color4  $i3_color10
+client.unfocused        $i3_color9  $i3_color9  $i3_color4  $i3_color10
+client.urgent           $i3_color13 $i3_color12 $i3_color4  $i3_color14
+client.placeholder      $i3_color15 $i3_color17 $i3_color16 $i3_color15 $i3_color17
 
-client.background       #2B2C2B
+client.background       $i3_background
 
 #############################
 ### settings for i3-gaps: ###
