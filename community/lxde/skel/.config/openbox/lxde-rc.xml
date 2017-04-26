@@ -328,7 +328,7 @@
         </keybind>
         <keybind key='Print'>
             <action name='Execute'>
-                <command>scrot-with-notification</command>
+                <command>i3-scrot</command>
             </action>
         </keybind>
         <keybind key='C-A-t'>
