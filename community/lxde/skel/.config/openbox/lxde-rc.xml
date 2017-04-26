@@ -328,7 +328,7 @@
         </keybind>
         <keybind key='Print'>
             <action name='Execute'>
-                <command>scrot</command>
+                <command>sh -c &quot;$HOME/.config/scrot/scrot-with-notification.sh&quot;</command>
             </action>
         </keybind>
         <keybind key='C-A-t'>
