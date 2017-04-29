@@ -420,11 +420,19 @@
         <keybind key="XF86AudioRaiseVolume">
           <action name="Execute">
             <command>amixer set Master 5%+ unmute</command>
+            <startupnotify>
+              <enabled>yes</enabled>
+              <name>Increase Audio Volume</name>
+            </startupnotify>
           </action>
         </keybind>
         <keybind key="XF86AudioLowerVolume">
           <action name="Execute">
             <command>amixer set Master 5%- unmute</command>
+            <startupnotify>
+              <enabled>yes</enabled>
+              <name>Decrease Audio Volume</name>
+            </startupnotify>
           </action>
         </keybind>
         <keybind key="XF86MonBrightnessDown">
