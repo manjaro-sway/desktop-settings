@@ -12,7 +12,6 @@ export BSPWM_SOCKET="/tmp/bspwm-socket"
 export PANEL_HEIGHT=25
 export XDG_CONFIG_DIRS=/usr/etc/xdg:/etc/xdg
 export GUI_EDITOR=/usr/bin/gedit
-export EDITOR=/usr/bin/nano
 export BROWSER=/usr/bin/epiphany
 export TERMINAL=/usr/bin/sterm
 
