@@ -80,7 +80,7 @@
         "tooltip": "Select an icon to show in the panel.",
         "dependency": "menu-icon-custom",
         "indent": "true",
-        "value": "/usr/share/icons/manjaro-maia.png"
+        "value": "/usr/share/icons/manjaro-shiny.png"
     },
     "menu-label": {
         "type": "entry",

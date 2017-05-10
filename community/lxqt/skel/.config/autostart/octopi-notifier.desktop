@@ -1,9 +1,0 @@
-[Desktop Entry]
-Categories=GNOME;GTK;System;
-Exec=octopi-notifier
-Icon=octopi
-Name=Octopi Notifier
-StartupNotify=true
-Terminal=false
-Type=Application
-X-LXQt-Need-Tray=true

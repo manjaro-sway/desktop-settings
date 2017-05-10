@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Action
+Name=Open Folder as Root
+Icon=dialog-password
+Profiles=profile-openfolderasroot
+
+[X-Action-Profile profile-openfolderasroot]
+MimeTypes=inode/directory;
+Exec=gksu pcmanfm %u
+Name=Default profile
