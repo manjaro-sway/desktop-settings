@@ -4,7 +4,7 @@
 --]]
 
 theme = {}
-theme.dir = os.getenv("HOME") .. "/usr/share/awesome/themes/cesious"
+theme.dir = "/usr/share/awesome/themes/cesious"
 
 theme.font          = "Terminus 13"
 
