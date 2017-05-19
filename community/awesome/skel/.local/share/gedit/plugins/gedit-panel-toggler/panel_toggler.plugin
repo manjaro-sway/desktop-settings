@@ -1,0 +1,9 @@
+[Plugin]
+Loader=python3
+Module=panel_toggler
+IAge=3
+Name=Panel Toggler
+Description=Headerbar buttons for panel toggling.
+Authors=Jonian Guveli <jonian@hardpixel.eu>
+Copyright=Copyright © 2016 Hardpixel
+Website=http://hardpixel.eu
