@@ -435,24 +435,6 @@
             </startupnotify>
           </action>
         </keybind>
-        <keybind key="XF86MonBrightnessDown">
-          <action name="Execute">
-            <command>xbacklight -20</command>
-            <startupnotify>
-              <enabled>yes</enabled>
-              <name>Decrease screen brightness</name>
-            </startupnotify>
-          </action>
-        </keybind>
-        <keybind key="XF86MonBrightnessUp">
-          <action name="Execute">
-            <command>xbacklight +20</command>
-            <startupnotify>
-              <enabled>yes</enabled>
-              <name>Increase screen brightness</name>
-            </startupnotify>
-          </action>
-        </keybind>
     </keyboard>
     <mouse>
         <dragThreshold>8</dragThreshold>
