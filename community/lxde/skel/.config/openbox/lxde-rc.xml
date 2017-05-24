@@ -419,7 +419,7 @@
         </keybind>
         <keybind key="XF86AudioRaiseVolume">
           <action name="Execute">
-            <command>amixer set Master 5%+ unmute</command>
+            <command>pulseaudio-ctl up</command>
             <startupnotify>
               <enabled>yes</enabled>
               <name>Increase Audio Volume</name>
@@ -428,7 +428,7 @@
         </keybind>
         <keybind key="XF86AudioLowerVolume">
           <action name="Execute">
-            <command>amixer set Master 5%- unmute</command>
+            <command>pulseaudio-ctl down</command>
             <startupnotify>
               <enabled>yes</enabled>
               <name>Decrease Audio Volume</name>
