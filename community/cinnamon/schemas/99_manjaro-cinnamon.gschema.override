@@ -80,6 +80,7 @@ rewrap-on-resize=true
 visible-name='manjaro'
 
 [org.nemo.desktop]
+font='Cantarell 10'
 computer-icon-visible=true
 home-icon-visible=true
 trash-icon-visible=false

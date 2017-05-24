@@ -10,7 +10,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CONFIG_DIRS=/usr/etc/xdg:/etc/xdg
 export GUI_EDITOR=/usr/bin/l3afpad
 export BROWSER=/usr/bin/firefox
-export TERMINAL=/usr/bin/sterm
+export TERMINAL=/usr/bin/sterminal
 
 # Load profiles from /etc/profile.d
 if test -d /etc/profile.d/; then

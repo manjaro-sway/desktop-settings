@@ -47,7 +47,7 @@ end
 beautiful.init(awful.util.getdir("config") .. "/themes/cesious/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "sterm"
+terminal = "sterminal"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
