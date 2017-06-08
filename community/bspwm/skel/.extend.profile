@@ -12,7 +12,7 @@ export BSPWM_SOCKET="/tmp/bspwm-socket"
 export PANEL_HEIGHT=25
 export XDG_CONFIG_DIRS=/usr/etc/xdg:/etc/xdg
 export GUI_EDITOR=/usr/bin/gedit
-export BROWSER=/usr/bin/epiphany
+export BROWSER=/usr/bin/chromium
 export TERMINAL=/usr/bin/sterminal
 
 # Load profiles from /etc/profile.d
