@@ -331,6 +331,16 @@
                 <command>i3-scrot</command>
             </action>
         </keybind>
+        <keybind key='A-Print'>
+            <action name='Execute'>
+                <command>i3-scrot -w</command>
+            </action>
+        </keybind>
+        <keybind key='S-Print'>
+            <action name='Execute'>
+                <command>i3-scrot -s</command>
+            </action>
+        </keybind>
         <keybind key='C-A-t'>
             <action name='Execute'>
                 <command>lxterminal</command>
@@ -414,6 +424,42 @@
                 <x>-0</x>
                 <y>0</y>
                 <width>50%</width>
+                <height>50%</height>
+            </action>
+        </keybind>
+        <keybind key='W-Left'>
+             <action name='Unmaximize'/>
+            <action name='MoveResizeTo'>
+                <x>0</x>
+                <y>0</y>
+                <width>50%</width>
+                <height>100%</height>
+            </action>
+        </keybind>
+        <keybind key='W-Down'>
+            <action name='Unmaximize'/>
+            <action name='MoveResizeTo'>
+                <x>0</x>
+                <y>-0</y>
+                <width>100%</width>
+                <height>50%</height>
+            </action>
+        </keybind>
+        <keybind key='W-Right'>
+            <action name='Unmaximize'/>
+            <action name='MoveResizeTo'>
+                <x>-0</x>
+                <y>0</y>
+                <width>50%</width>
+                <height>100%</height>
+            </action>
+        </keybind>
+        <keybind key='W-Up'>
+            <action name='Unmaximize'/>
+            <action name='MoveResizeTo'>
+                <x>0</x>
+                <y>0</y>
+                <width>100%</width>
                 <height>50%</height>
             </action>
         </keybind>
