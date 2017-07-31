@@ -1,0 +1,41 @@
+[Toplevel top]
+orientation=top
+expand=true
+size=24
+
+[Object menu]
+object-type=menu
+toplevel-id=top
+position=0
+locked=true
+
+[Object matewindowpicker]
+object-type=applet
+applet-iid=MateWindowPickerFactory::MateWindowPicker
+toplevel-id=top
+position=10
+locked=true
+
+[Object workspaceswitcherapplet]
+object-type=applet
+applet-iid=WnckletFactory::WorkspaceSwitcherApplet
+toplevel-id=top
+position=20
+panel-right-stick=true
+locked=true
+
+[Object notification-area]
+object-type=applet
+applet-iid=NotificationAreaAppletFactory::NotificationArea
+toplevel-id=top
+position=10
+panel-right-stick=true
+locked=true
+
+[Object clockapplet]
+object-type=applet
+applet-iid=ClockAppletFactory::ClockApplet
+toplevel-id=top
+position=0
+panel-right-stick=true
+locked=true
