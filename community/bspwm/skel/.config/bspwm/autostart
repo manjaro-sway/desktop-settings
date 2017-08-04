@@ -40,7 +40,7 @@ xbacklight -set 15 &
 #run_once xfce4-panel -d
 #lemonpanel &
 limepanel &
-sleep 2s && bspc config top_padding 10
+sleep 2s && bspc config top_padding 10 &
 #mylime &
 ## Light system tray to use with lemonbar. Disable if you dont need it. 
 ## Edit ~/.stalonetrayrc if it is in wrong place.
