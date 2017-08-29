@@ -37,7 +37,7 @@
        on: 'Any' - any monitor, 'Mouse' - where the mouse is, 'Active' - where
        the active window is -->
     <theme>
-        <name>Vertex-Maia</name>
+        <name>Adapta-Maia</name>
         <titleLayout>NLIMC</titleLayout>
         <!--       available characters are NDSLIMC, each can occur at most once.
       N: window icon
