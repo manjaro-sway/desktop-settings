@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-notifyd" version="1.0">
+  <property name="applications" type="empty">
+    <property name="known_applications" type="array">
+      <value type="string" value="nm-applet"/>
+      <value type="string" value="Package Manager"/>
+      <value type="string" value="Xfce4-notifyd settings"/>
+    </property>
+  </property>
+  <property name="notify-location" type="uint" value="2"/>
+  <property name="log-level" type="uint" value="0"/>
+  <property name="log-level-apps" type="uint" value="0"/>
+  <property name="theme" type="string" value="Adapta-Eta-Maia"/>
+  <property name="initial-opacity" type="double" value="0.900000"/>
+</channel>
