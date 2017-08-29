@@ -3,7 +3,7 @@
 
 gtk-theme-name="Adapta-Eta-Maia"
 gtk-icon-theme-name="Arc-Maia"
-gtk-font-name="Sans 12"
+gtk-font-name="Sans 11"
 gtk-cursor-theme-name="Breeze"
 gtk-cursor-theme-size=18
 gtk-toolbar-style=GTK_TOOLBAR_BOTH_HORIZ
