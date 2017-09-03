@@ -2,7 +2,7 @@
 Name=Root-Filemanager
 Comment=Access and organize files with root priviliges
 Keywords=root;administrator;folder;manager;explore;disk;filesystem;
-Exec=gksu dde-file-manager
+Exec=dde-file-manager-pkexec
 Icon=gksu
 Terminal=false
 Type=Application
