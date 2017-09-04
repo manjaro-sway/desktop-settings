@@ -150,6 +150,9 @@
     # Paths to default icons.
     icon_folders = /usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/
 
+    # Limit icons size.
+    max_icon_size=128
+
 [frame]
     width = 1
     color = "#16A085"
