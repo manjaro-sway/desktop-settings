@@ -85,3 +85,6 @@ computer-icon-visible=true
 home-icon-visible=true
 trash-icon-visible=false
 volumes-visible=true
+
+[org.nemo.preferences]
+bulk-rename-tool=[b'gprename']
