@@ -18,8 +18,8 @@ document-font-name='Sans 11'
 enable-animations=true
 font-name='Cantarell 11'
 gtk-im-module='gtk-im-context-simple'
-gtk-theme='Vertex-Maia-Dark'
-icon-theme='Adapta-Maia'
+gtk-theme='Adapta-Maia'
+icon-theme='Arc-Maia'
 monospace-font-name='Monospace 11'
 
 [org.gnome.Terminal.Legacy.Profile]
