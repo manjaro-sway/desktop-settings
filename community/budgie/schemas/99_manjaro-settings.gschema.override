@@ -41,3 +41,6 @@ theme-name="Adapta-Nokto-Maia"
 icon-theme-name="Arc-Maia"
 font-name="Cantarell Regular 10"
 
+[org/gtk/Settings/FileChooser]
+sort-directories-first=true
+
