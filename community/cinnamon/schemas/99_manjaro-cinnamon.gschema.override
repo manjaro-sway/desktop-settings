@@ -87,4 +87,4 @@ trash-icon-visible=false
 volumes-visible=true
 
 [org.nemo.preferences]
-bulk-rename-tool=[b'gprename']
+bulk-rename-tool=[]
