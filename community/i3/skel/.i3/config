@@ -368,7 +368,7 @@ bar {
         focused_workspace   $i3_color1  $i3_color4  $i3_text
         active_workspace    $i3_color2  $i3_color3  $i3_color5
         inactive_workspace  $i3_color2  $i3_color3  $i3_color6
-	binding_mode        $i3_color4  $i3_color4  $i3_text
+        binding_mode        $i3_color4  $i3_color4  $i3_text
         urgent_workspace    $i3_color4  $i3_color5  $i3_color7
     }
 }
