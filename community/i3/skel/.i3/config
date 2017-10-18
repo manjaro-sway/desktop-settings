@@ -323,23 +323,23 @@ set_from_resource $term_color15    color15
 # https://i3wm.org/dovs/userguide.html#variables
 # Changing the value of one of the variables will
 # effect all the areas with the same color.
-set $i3_background      #2B2C2B
-set $i3_text            #F9FAF9
+set $i3_background      #2b2c2b
+set $i3_text            #f9faf9
 set $i3_separator       #454947
 set $i3_color1          #f9faf9
-set $i3_color2          #595B5B
+set $i3_color2          #595b5b
 set $i3_color3          #353836
-set $i3_color4          #16A085
-set $i3_color5          #FDF6E3
-set $i3_color6          #EEE8D5
-set $i3_color7          #E5201D
+set $i3_color4          #16a085
+set $i3_color5          #fdf6e3
+set $i3_color6          #eee8d5
+set $i3_color7          #e5201d
 set $i3_color8          #808380
 set $i3_color9          #434745
 set $i3_color10         #454948
-set $i3_color11         #80FFF9
-set $i3_color12         #FDF6E3
-set $i3_color13         #CB4B16
-set $i3_color14         #268BD2
+set $i3_color11         #80fff9
+set $i3_color12         #fdf6e3
+set $i3_color13         #cb4b16
+set $i3_color14         #268bd2
 set $i3_color15         #000000
 set $i3_color16         #ffffff
 set $i3_color17         #0c0c0c
@@ -364,12 +364,12 @@ bar {
         statusline $i3_text
         separator  $i3_separator
 
-#                                  border  backgr. text
-        focused_workspace   $i3_color1  $i3_color4  $i3_text
-        active_workspace    $i3_color2  $i3_color3  $i3_color5
-        inactive_workspace  $i3_color2  $i3_color3  $i3_color6
-        binding_mode        $i3_color4  $i3_color4  $i3_text
-        urgent_workspace    $i3_color4  $i3_color5  $i3_color7
+#                           border     backgr.        text
+        focused_workspace   $i3_color1 $i3_color4     $i3_text
+        active_workspace    $i3_color2 $i3_color3     $i3_color5
+        inactive_workspace  $i3_color2 $i3_color3     $i3_color6
+        binding_mode        $i3_color8 $i3_background $i3_text
+        urgent_workspace    $i3_color4 $i3_color5     $i3_color7
     }
 }
 
