@@ -346,6 +346,7 @@ set $i3_color17         #0c0c0c
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
+	i3bar_command i3bar
 	status_command i3status
 	position bottom
 
@@ -359,7 +360,6 @@ bar {
 	strip_workspace_numbers yes
 
 	colors {
-#       background $transparent
         background $i3_background
         statusline $i3_text
         separator  $i3_separator
