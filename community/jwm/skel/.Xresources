@@ -1,0 +1,42 @@
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+XTerm*background: #2b2b2b
+XTerm*foreground: #e7e7e7
+XTerm*pointerColor: #16A085
+XTerm*faceName: Fixed
+XTerm*faceSize: 11
+
+! XTerm Settings
+*background: #16a085
+*foreground: #2b2c2b
+xterm*reverseVideo: on
+xterm*faceName: Liberation Mono:size=10:antialias=true
+xterm*font: 7x13
+xterm*geometry: 76x27
+
+! Rofi Settings
+rofi.opacity: 90
+rofi.width: 50
+rofi.lines: 5
+rofi.columns: 1
+rofi.font: Roboto 9
+rofi.fg: #db6823
+rofi.bg: #444851
+rofi.hlfg: #444851
+rofi.hlbg: #db6823
+rofi.bc: #db6823
+rofi.bw: 2
+rofi.loc: 0
+rofi.padding: 2
+rofi.yoffset: -2
+rofi.xoffset: 0
+rofi.fixed-num-lines: false
+rofi.hmode: false
+rofi.terminal: sakura
+rofi.ssh-set-title: true

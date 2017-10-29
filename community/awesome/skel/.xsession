@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# ~/.Xclients
+# ~/.xsession
 #
 # Executed by xdm/gdm/kdm at login
 #
