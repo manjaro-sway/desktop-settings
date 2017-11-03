@@ -9,9 +9,6 @@ usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
-export EDITOR=/usr/bin/nano
-export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
-
 # merge in defaults and keymaps
 
 if [ -f $sysresources ]; then
