@@ -9,10 +9,10 @@ Profiles=profile-editasroot;profile-editasroot2;
 [X-Action-Profile profile-editasroot]
 MimeTypes=text/*;
 TryExec=leafpad
-Exec=gksu leafpad %f
+Exec=gksudo leafpad %f
 Name=Default profile
 
 [X-Action-Profile profile-editasroot2]
 MimeTypes=application/x-desktop;
-Exec=gksu leafpad %f
+Exec=gksudo leafpad %f
 Name=Default profile

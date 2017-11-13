@@ -6,5 +6,5 @@ Profiles=profile-openfolderasroot
 
 [X-Action-Profile profile-openfolderasroot]
 MimeTypes=inode/directory;
-Exec=gksu pcmanfm %u
+Exec=gksudo pcmanfm %u
 Name=Default profile
