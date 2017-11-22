@@ -53,4 +53,4 @@ i3lock-wait-for-suspend &
 srandrd atorandr.sh --change
 ## Notify about package updates
 update-checker 7200 &
-xcape -e 'Super_L=F9'
+xcape -e 'Super_L=Super_L|Shift_L|space'
