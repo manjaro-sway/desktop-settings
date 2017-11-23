@@ -1,6 +1,7 @@
 [global]
     font = xos4 Terminus 13
-    
+    frame_width = 1
+    frame_color = "#1ABB9B"
     # Allow a small subset of html markup:
     #   <b>bold</b>
     #   <i>italic</i>
@@ -11,7 +12,7 @@
     # <http://developer.gnome.org/pango/stable/PangoMarkupFormat.html>.
     # If markup is not allowed, those tags will be stripped out of the
     # message.
-    allow_markup = yes
+    markup = yes
     
     # The format of the message.  Possible variables are:
     #   %a  appname
@@ -43,7 +44,7 @@
     # Show age of message if message is older than show_age_threshold
     # seconds.
     # Set to -1 to disable.
-    show_age_threshold = 60
+    show_age_threshold = -1
     
     # Split notifications into multiple lines if they don't fit into
     # geometry.
@@ -74,7 +75,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing windowmanager is
     # present (e.g. xcompmgr, compiz, etc.).
-    transparency = 15
+    transparency = 0
     
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     # for longer than idle_threshold seconds.
@@ -139,20 +140,16 @@
     startup_notification = false
     
     # dmenu path.
-    dmenu = /usr/bin/dmenu -p dunst:
+    dmenu = /usr/bin/rofi -dmenu -p
     
     # Browser for opening urls in context menu.
-    browser = palemoon
+    browser = default-browser
 
     # Align icons left/right/off
     icon_position = left
 
     # Paths to default icons.
-    icon_folders = /usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/
-
-[frame]
-    width = 1
-    color = "#16A085"
+    icon_path = /usr/share/icons/Breeze-Maia-Dark/status/32:/usr/share/icons/Breeze-Maia-Dark/devices/32/:/usr/share/icons/Breeze-Maia-Dark/apps/32/:/usr/share/icons/Breeze-Maia-Dark/categories/32:/usr/share/icons/Breeze-Maia-Dark/mimetypes/32/
 
 [shortcuts]
 
@@ -162,16 +159,16 @@
     # Xev might be helpful to find names for keys.
     
     # Close notification.
-    close = mod1+space
+    # close = mod1+space
     
     # Close all notifications.
     # close_all = ctrl+shift+space
-    close_all = ctrl+mod1+space
+    # close_all = ctrl+mod1+space
 
     # Redisplay last message(s).
     # On the US keyboard layout "grave" is normally above TAB and left
     # of "1".
-    history = ctrl+mod4+h 
+    history = ctrl+mod1+v 
     
     # Context menu.
     context = ctrl+mod1+c
@@ -179,12 +176,12 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#2B2C2B"
+    background = "#2f343f"
     foreground = "#888888"
     timeout = 10
 
 [urgency_normal]
-    background = "#2B2C2B"
+    background = "#2f343f"
     foreground = "#F9FAF9"
     timeout = 10
 
