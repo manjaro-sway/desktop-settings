@@ -1,13 +1,13 @@
 [org.mate.background]
-picture-filename='/usr/share/backgrounds/manjaro-mate/mate-community.png'
+picture-filename='/usr/share/backgrounds/manjaro-mate/manjaro-mate.jpg'
 picture-options='stretched'
 
 [org.mate.interface]
-gtk-theme='Arc-Maia-Darker'
+gtk-theme='Adapta-Maia'
 icon-theme='Arc-Maia'
 
 [org.mate.Marco.general]
-theme='Arc-Maia-Darker'
+theme='Adapta-Maia'
 compositing-fast-alt-tab=true
 compositing-manager=true
 
