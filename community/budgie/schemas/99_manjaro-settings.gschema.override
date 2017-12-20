@@ -13,7 +13,7 @@ show-desktop-icons=false
 picture-uri='file:///usr/share/backgrounds/manjaro-budgie/manjaro-nologo.jpg'
 
 [org.gnome.desktop.interface]
-cursor-theme='Breeze'
+cursor-theme='xcursor-breeze'
 document-font-name='Sans 11'
 enable-animations=true
 font-name='Cantarell 11'

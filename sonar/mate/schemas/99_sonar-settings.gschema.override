@@ -47,7 +47,7 @@ menus-have-icons=true
 monospace-font-name='Monospace 11'
 
 [org.mate.peripherals-mouse]
-cursor-theme='Breeze'
+cursor-theme='xcursor-breeze'
 
 [org.mate.terminal.global]
 default-profile='sonar'

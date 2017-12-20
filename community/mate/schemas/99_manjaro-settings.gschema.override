@@ -12,7 +12,7 @@ compositing-fast-alt-tab=true
 compositing-manager=true
 
 [org.mate.peripherals-mouse]
-cursor-theme='Breeze'
+cursor-theme='xcursor-breeze'
 
 [org.mate.peripherals-touchpad]
 tap-to-click=true 
