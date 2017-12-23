@@ -1,7 +1,7 @@
 gtk-theme-name="Vertex-Maia-Dark"
 gtk-icon-theme-name="Vibrancy-Full-Dark-Teal"
 gtk-font-name="Noto Sans 10"
-gtk-cursor-theme-name="Breeze"
+gtk-cursor-theme-name="xcursor-breeze"
 gtk-xft-antialias=1
 gtk-xft-hinting=1
 gtk-xft-hintstyle="hintfull"
