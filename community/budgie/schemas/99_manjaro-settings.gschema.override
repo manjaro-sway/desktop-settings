@@ -36,7 +36,7 @@ visible-name='manjaro'
 default-zoom-level='small'
 
 [x.dm.slick-greeter]
-background="/usr/share/backgrounds/manjaro-budgie/future-logo2.jpg"
+background="/usr/share/backgrounds/manjaro-budgie/manjaro-budgie.jpg"
 theme-name="Adapta-Nokto-Maia"
 icon-theme-name="Arc-Maia"
 font-name="Cantarell Regular 10"

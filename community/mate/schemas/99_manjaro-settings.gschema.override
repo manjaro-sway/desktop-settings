@@ -97,3 +97,9 @@ object-type='applet'
 [org.mate.NotificationDaemon]
 theme='slate'
 
+[x.dm.slick-greeter]
+background="/usr/share/backgrounds/manjaro-mate/manjaro-mate.png"
+theme-name="Adapta-Nokto-Maia"
+icon-theme-name="Arc-Maia"
+font-name="Cantarell Regular 10"
+
