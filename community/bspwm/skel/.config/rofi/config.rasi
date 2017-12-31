@@ -71,7 +71,7 @@ configuration {
     highlight:     underline bold #ffffff;
 
     transparent: rgba(0,0,0,0);
-    font: "Sauce Code Powerline Medium 16";
+    font: "xos4 Terminus 16";
 }
 #window {
     location: center;
@@ -100,7 +100,7 @@ configuration {
     background-color: @tcyan;
 }
 #message {
-    font: "Sauce Code Powerline ExtraLight 10";
+    font: "xos4 Terminus 10";
     color: @black;
 }
 
@@ -111,7 +111,7 @@ configuration {
     border: 2px 2px 2px 2px;
     border-radius:  30px 30px 0px 0px;
     border-color: @foreground;
-    font: "Sauce Code Pro 18";
+    font: "xos4 Terminus 18";
 }
 #entry,prompt,case-indicator {
     text-font: inherit;
