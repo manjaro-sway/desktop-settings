@@ -287,7 +287,7 @@ exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
-# Color palette used for the terminal ( ~/.extend.Xresources file )
+# Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
 # https://i3wm.org/docs/userguide.html#xresources
 # Change the variable name at the place you want to match the color
@@ -324,12 +324,12 @@ set_from_resource $term_color15    color15
 # Changing the value of one of the variables will
 # effect all the areas with the same color.
 set $i3_background      #2b2c2b
-set $i3_text            #f9faf9
+set $i3_text            #292f34
 set $i3_separator       #454947
 set $i3_color1          #f9faf9
 set $i3_color2          #595b5b
 set $i3_color3          #353836
-set $i3_color4          #16a085
+set $i3_color4          #1abc9c
 set $i3_color5          #fdf6e3
 set $i3_color6          #eee8d5
 set $i3_color7          #e5201d
@@ -367,7 +367,7 @@ bar {
 #                           border     backgr.        text
         focused_workspace   $i3_color1 $i3_color4     $i3_text
         active_workspace    $i3_color2 $i3_color3     $i3_color5
-        inactive_workspace  $i3_color2 $i3_color3     $i3_color6
+        inactive_workspace  $i3_color2 $i3_color17    $i3_color6
         binding_mode        $i3_color8 $i3_background $i3_text
         urgent_workspace    $i3_color4 $i3_color5     $i3_color7
     }
