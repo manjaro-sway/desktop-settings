@@ -25,13 +25,16 @@ tap-to-click=true
 default-profile='manjaro'
 profile-list=['manjaro']
 
-[org.mate.terminal.profiles.manjaro]
-background-color='#454546464949'
-palette='#000000000000:#CCCC00000000:#4E4D9A9A0605:#C4C3A0A00000:#34346564A4A3:#7575504F7B7B:#060598979A9A:#D3D3D7D6CFCF:#555457565352:#EFEF29282928:#8A89E2E23434:#FCFBE9E84F4F:#72729F9ECFCF:#ADAC7F7EA8A8:#3434E2E2E2E2:#EEEDEEEDECEB'
-bold-color='#000000000000'
-foreground-color='#DCDCE9E9EBEB'
+[org.mate.terminal.profiles.korora]
+foreground-color='#838394949696'
+visible-name='manjaro'
+palette='#070736364242:#DCDC32322F2F:#858599990000:#B5B589890000:#26268B8BD2D2:#D3D336368282:#2A2AA1A19898:#EEEEE8E8D5D5:#00002B2B3636:#CBCB4B4B1616:#58586E6E7575:#65657B7B8383:#838394949696:#6C6C7171C4C4:#9393A1A1A1A1:#FDFDF6F6E3E3'
+title='Mate Terminal'
 use-theme-colors=false
-visible-name='Manjaro'
+bold-color-same-as-fg=false
+bold-color='#9393A1A1A1A1'
+background-color='#070736364242'
+title-mode='ignore'
 
 [org.mate.panel]
 default-layout='manjaro'
