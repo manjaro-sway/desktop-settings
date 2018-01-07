@@ -6,7 +6,7 @@
 DMENU_FN="Noto-10.5"
 
 ## background colour for unselected menu-items
-DMENU_NB="#14191D"
+DMENU_NB="#2B2C2B"
 
 ## textcolour for unselected menu-items
 DMENU_NF="#F9FAF9"
