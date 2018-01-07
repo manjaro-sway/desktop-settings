@@ -295,7 +295,7 @@ exec_always --no-startup-id fix_xcursor
 # [example]
 # If you want your bar to have the same background color as your 
 # terminal background change the line 362 from:
-# background  $i3_background
+# background #14191D
 # to:
 # background $term_background
 # Same logic applied to everything else.
@@ -318,32 +318,6 @@ set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
-# Color palette used for i3 
-# Variables are set based on the documentation:
-# https://i3wm.org/dovs/userguide.html#variables
-# Changing the value of one of the variables will
-# effect all the areas with the same color.
-set $i3_background      #2b2c2b
-set $i3_text            #292f34
-set $i3_separator       #454947
-set $i3_color1          #f9faf9
-set $i3_color2          #595b5b
-set $i3_color3          #353836
-set $i3_color4          #1abc9c
-set $i3_color5          #fdf6e3
-set $i3_color6          #eee8d5
-set $i3_color7          #e5201d
-set $i3_color8          #808380
-set $i3_color9          #434745
-set $i3_color10         #454948
-set $i3_color11         #80fff9
-set $i3_color12         #fdf6e3
-set $i3_color13         #cb4b16
-set $i3_color14         #268bd2
-set $i3_color15         #000000
-set $i3_color16         #ffffff
-set $i3_color17         #0c0c0c
-
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
 	i3bar_command i3bar
@@ -360,31 +334,31 @@ bar {
 	strip_workspace_numbers yes
 
 	colors {
-        background $i3_background
-        statusline $i3_text
-        separator  $i3_separator
+        background #2B2C2B
+        statusline #F9FAF9
+        separator  #454947
 
-#                           border     backgr.        text
-        focused_workspace   $i3_color1 $i3_color4     $i3_text
-        active_workspace    $i3_color2 $i3_color3     $i3_color5
-        inactive_workspace  $i3_color2 $i3_color17    $i3_color6
-        binding_mode        $i3_color8 $i3_background $i3_text
-        urgent_workspace    $i3_color4 $i3_color5     $i3_color7
-    }
+#                      border  backgr. text
+	focused_workspace  #F9FAF9 #1ABC9C #292F34
+	active_workspace   #595B5B #353836 #FDF6E3
+	inactive_workspace #595B5B #14191D #EEE8D5
+	binding_mode       #808280 #2C2C2C #F9FAF9
+	urgent_workspace   #1ABC9C #FDF6E3 #E5201D
+	}
 }
 
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
 
 # Theme colors
-# class                 border      backgr.     text        indic.      child_border
-client.focused          $i3_color8  $i3_color8  $i3_color11 $i3_color12
-client.focused_inactive $i3_color9  $i3_color9  $i3_color4  $i3_color10
-client.unfocused        $i3_color9  $i3_color9  $i3_color4  $i3_color10
-client.urgent           $i3_color13 $i3_color12 $i3_color4  $i3_color14
-client.placeholder      $i3_color15 $i3_color17 $i3_color16 $i3_color15 $i3_color17
+# class                   border  backgr. text    indicator  child_border
+  client.focused          #808280 #808280 #80FFF9 #FDF6E3
+  client.focused_inactive #434745 #434745 #1ABC9C #454948
+  client.unfocused	      #434745 #434745 #1ABC9C #454948
+  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
+  client.placeholder      #000000 #0c0c0c #ffffff #000000
 
-client.background       $i3_background
+  client.background       #2B2C2B
 
 #############################
 ### settings for i3-gaps: ###
