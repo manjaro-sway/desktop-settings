@@ -333,30 +333,30 @@ bar {
 	font xft:Noto Sans 10.5
 	strip_workspace_numbers yes
 
-	colors {
-        background #2B2C2B
+    colors {
+        background #283339
         statusline #F9FAF9
         separator  #454947
 
 #                      border  backgr. text
-	focused_workspace  #F9FAF9 #1ABC9C #292F34
-	active_workspace   #595B5B #353836 #FDF6E3
-	inactive_workspace #595B5B #14191D #EEE8D5
-	binding_mode       #808280 #2C2C2C #F9FAF9
-	urgent_workspace   #1ABC9C #FDF6E3 #E5201D
-	}
+        focused_workspace  #F9FAF9 #16a085 #292F34
+        active_workspace   #595B5B #353836 #FDF6E3
+        inactive_workspace #595B5B #14191D #EEE8D5
+        binding_mode       #16a085 #2C2C2C #F9FAF9
+        urgent_workspace   #16a085 #FDF6E3 #E5201D
+    }
 }
 
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
 
 # Theme colors
-# class                   border  backgr. text    indicator  child_border
-  client.focused          #808280 #808280 #80FFF9 #FDF6E3
-  client.focused_inactive #434745 #434745 #1ABC9C #454948
-  client.unfocused	      #434745 #434745 #1ABC9C #454948
+# class                   border  backgr. text    indic.   child_border
+  client.focused          #556064 #556064 #80FFF9 #FDF6E3
+  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
+  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
   client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-  client.placeholder      #000000 #0c0c0c #ffffff #000000
+  client.placeholder      #000000 #0c0c0c #ffffff #000000 
 
   client.background       #2B2C2B
 
