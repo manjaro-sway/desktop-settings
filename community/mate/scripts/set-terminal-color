@@ -18,6 +18,5 @@ gsettings set org.mate.terminal.profile:/org/mate/terminal/profiles/default/ bol
 
 #Remove the .desktop entry in HOME user folder
 
-rm $HOME/.local/$app
 rm $HOME/.config/autostart/$app.desktop
 

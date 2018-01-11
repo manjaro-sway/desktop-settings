@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=$HOME/.local/set-terminal-color
+Exec=set-terminal-color
 Name=set-terminal-color
 Comment=Set MATE terminal color schemas
 Type=Application
