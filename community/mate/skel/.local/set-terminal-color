@@ -6,6 +6,7 @@ palette="#1B1B1D1D1E1E:#F9F926267272:#8282B4B41414:#FDFD97971F1F:#5656C2C2D6D6:#
 bd_color="#FFFFFFFFFFFF"
 fg_color="#A0A0A0A0A0A0"
 bg_color="#1C1C1C1C1C1C"
+app=set-terminal-color
 
 gsettings set org.mate.terminal.profile:/org/mate/terminal/profiles/default/ background-color $bg_color
 gsettings set org.mate.terminal.profile:/org/mate/terminal/profiles/default/ foreground-color $fg_color
@@ -15,7 +16,8 @@ gsettings set org.mate.terminal.profile:/org/mate/terminal/profiles/default/ pal
 gsettings set org.mate.terminal.profile:/org/mate/terminal/profiles/default/ use-theme-colors false
 gsettings set org.mate.terminal.profile:/org/mate/terminal/profiles/default/ bold-color-same-as-fg false
 
-#autoremove 
+#Remove the .desktop entry in HOME user folder
 
-rm $HOME/.config/autostart/set-terminal-color
+rm $HOME/.local/$app
+rm $HOME/.config/autostart/$app.desktop
 
