@@ -1,5 +1,5 @@
 [global]
-    font = Cantarell 10
+    font = Noto Sans 10
     
     # Allow a small subset of html markup:
     #   <b>bold</b>
@@ -131,7 +131,7 @@
     #  * foreground: use the same color as the foreground;
     #  * frame: use the same color as the frame;
     #  * anything else will be interpreted as a X color.
-    separator_color = #454947
+    separator_color = #263238
     
     # Print a notification on startup.
     # This is mainly for error detection, since dbus (re-)starts dunst
@@ -155,7 +155,7 @@
 
 [frame]
     width = 1
-    color = "#16A085"
+    color = "#788388"
 
 [shortcuts]
 
@@ -182,12 +182,12 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#2B2C2B"
-    foreground = "#888888"
+    background = "#263238"
+    foreground = "#556064"
     timeout = 10
 
 [urgency_normal]
-    background = "#2B2C2B"
+    background = "#263238"
     foreground = "#F9FAF9"
     timeout = 10
 
