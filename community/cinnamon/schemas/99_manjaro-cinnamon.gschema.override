@@ -25,7 +25,7 @@ use-custom-format=true
 
 [org.cinnamon.desktop.sound]
 theme-name="LinuxMint"
-event-sounds=false
+event-sounds=true
 input-feedback-sounds=false
 volume-sound-enabled=true
 volume-sound-file="/usr/share/sounds/LinuxMint/stereo/volume.oga"
