@@ -1,4 +1,7 @@
 [global]
+    frame_width = 1
+    frame_color = "#788388"
+    
     font = Noto Sans 10
     
     # Allow a small subset of html markup:
@@ -11,7 +14,7 @@
     # <http://developer.gnome.org/pango/stable/PangoMarkupFormat.html>.
     # If markup is not allowed, those tags will be stripped out of the
     # message.
-    allow_markup = yes
+    markup = yes
     
     # The format of the message.  Possible variables are:
     #   %a  appname
@@ -148,14 +151,10 @@
     icon_position = left
 
     # Paths to default icons.
-    icon_folders = /usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/
+    icon_path = /usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/
 
     # Limit icons size.
     max_icon_size=128
-
-[frame]
-    width = 1
-    color = "#788388"
 
 [shortcuts]
 
