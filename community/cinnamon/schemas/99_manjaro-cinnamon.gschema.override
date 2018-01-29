@@ -10,9 +10,9 @@ picture-options='stretched'
 picture-uri='file:///usr/share/backgrounds/cinnamon_default.jpg'
 
 [org.cinnamon.desktop.interface]
-cursor-theme='xcursor-breeze'
+cursor-theme='xcursor-breeze-snow'
 font-name='Cantarell 10'
-gtk-theme='Vertex-Maia-Dark'
+gtk-theme='Adapta-Nokto-Eta-Maia'
 icon-theme='Vibrancy-Full-Dark-Teal'
 
 [org.cinnamon.desktop.screensaver]
@@ -32,7 +32,7 @@ volume-sound-file="/usr/share/sounds/LinuxMint/stereo/volume.oga"
 
 [org.cinnamon.desktop.wm.preferences]
 num-workspaces=2
-theme='Vertex-Maia-Dark'
+theme='Adapta-Nokto-Eta-Maia'
 titlebar-font='Cantarell 10'
 
 [org.cinnamon.sounds]
@@ -62,22 +62,12 @@ notification-enabled=true
 notification-file="/usr/share/sounds/LinuxMint/stereo/notification.oga"
 
 [org.cinnamon.theme]
-name='Vertex-Maia'
+name='Adapta-Nokto-Maia'
 
 [org.gnome.desktop.sound]
 theme-name="LinuxMint"
 event-sounds=false
 input-feedback-sounds=false
-
-[org.gnome.Terminal.Legacy.Profile]
-allow-bold=true
-background-color='rgb(69,70,73)'
-use-theme-colors=false
-font='Droid Sans Mono Regular 11'
-foreground-color='rgb(220,233,235)'
-palette=['rgb(0,0,0)', 'rgb(170,0,0)', 'rgb(0,170,0)', 'rgb(170,85,0)', 'rgb(0,0,170)', 'rgb(170,0,170)', 'rgb(0,170,170)', 'rgb(170,170,170)', 'rgb(85,85,85)', 'rgb(255,85,85)', 'rgb(85,255,85)', 'rgb(255,255,85)', 'rgb(85,85,255)', 'rgb(255,85,255)', 'rgb(85,255,255)', 'rgb(255,255,255)']
-rewrap-on-resize=true
-visible-name='manjaro'
 
 [org.nemo.desktop]
 font='Cantarell 10'
