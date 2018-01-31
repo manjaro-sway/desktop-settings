@@ -17,7 +17,7 @@ sh ~/.fehbg &
 #xfdesktop -D &
 ## compositing. Required for shadows, transparency and stuff. 
 ## Reduces flicker. Disabling saves resources.
-compton -b &
+#compton -b &
 ## hides mouse when you are not using it. When mouse is hidden, rootmenu considers mouse on desktop, so actions can be triggered.
 #run_once unclutter &
 ## enable local fonts in .fonts directory
@@ -55,3 +55,4 @@ srandrd atorandr.sh --change
 update-checker 7200 &
 xcape -e 'Super_L=Super_L|Shift_L|space' &
 dbus-launch gsettings set org.mate.NotificationDaemon theme 'slider' && sed -i '/gsettings/d' ~/.config/bspwm/autostart &
+#lxpolkit &
