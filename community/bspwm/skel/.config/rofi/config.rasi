@@ -8,8 +8,8 @@ configuration {
 	modi: 							"combi,:rofind";
 	//combi-modi: 					"window,drun,\/:rofind,run";
 	combi-modi: 					"window,drun,run";
-	me-select-entry:				"Mouse2";
-	me-accept-entry:				"Mouse1";
+	me-select-entry:				"MouseSecondary";
+	me-accept-entry:				"MousePrimary";
 	scroll-method: 1;
     // The display name of this browser
     display-ssh:                   "ssh";
