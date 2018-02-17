@@ -1,7 +1,7 @@
 ##run_once is a script in /usr/bin that prevents running script if it is running already
 ##
 ## To enable pulseaufio, uncomment this and run sudo pacman -S pavucontrol pulseaudio-ctl manjaro-pulse
-pulseaudio --start &
+#pulseaudio --start &
 #sleep 2s && volume 37 &
 ## Load appearance settings
 xsetroot -cursor_name left_ptr &
@@ -46,7 +46,7 @@ sleep 2s && bspc config top_padding 10 &
 ## Edit ~/.stalonetrayrc if it is in wrong place.
 #sleep 2s && stalonetray --dockapp-mode simple &
 ## Welcome message
-#notify-send "Welcome to Manjaro-bspwm! " "Press super + F1 to show keybindings" &
+notify-send "Welcome to Manjaro-bspwm! " "Press super + F1 to show keybindings" &
 ## Run screenlock when suspending
 i3lock-wait-for-suspend &
 ## multimonitor support. Save monitor configurations with "autorandr.sh --save <profile>"
@@ -54,5 +54,5 @@ srandrd atorandr.sh --change
 ## Notify about package updates
 update-checker 7200 &
 xcape -e 'Super_L=Super_L|Shift_L|space' &
-dbus-launch gsettings set org.mate.NotificationDaemon theme 'slider' && sed -i '/gsettings/d' ~/.config/bspwm/autostart &
+#dbus-launch gsettings set org.mate.NotificationDaemon theme 'slider' && sed -i '/gsettings/d' ~/.config/bspwm/autostart &
 #lxpolkit &
