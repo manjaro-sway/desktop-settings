@@ -48,7 +48,7 @@ sleep 2s && bspc config top_padding 10 &
 ## Welcome message
 notify-send "Welcome to Manjaro-bspwm! " "Press super + F1 to show keybindings" &
 ## Run screenlock when suspending
-i3lock-wait-for-suspend &
+#i3lock-wait-for-suspend &
 ## multimonitor support. Save monitor configurations with "autorandr.sh --save <profile>"
 srandrd atorandr.sh --change
 ## Notify about package updates
