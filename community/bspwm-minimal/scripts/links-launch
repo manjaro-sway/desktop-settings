@@ -1,0 +1,8 @@
+#!/bin/dash
+if [ -z "$@" ]; then
+	site=startpage.com
+else
+	site="$@"
+fi
+
+exec xlinks -g $site
