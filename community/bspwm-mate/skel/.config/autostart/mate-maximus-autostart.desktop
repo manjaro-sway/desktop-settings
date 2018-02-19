@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Maximus Window Management
+Comment=Controls the displaying of windows
+Icon=preferences-system-windows
+Exec=mate-maximus
+Terminal=false
+Type=Application
+Categories=
+OnlyShowIn=MATE;
+X-MATE-Autostart-Notify=false
+X-MATE-Autostart-enabled=false

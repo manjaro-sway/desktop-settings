@@ -1,0 +1,173 @@
+Hi!
+
+Wellcome to using manjaro bspwm edition. This is a short beginners guide for the custom features of this edition.
+
+Table of contents
+
+1.		Introduction	
+1.1.	What is bspwm?
+1.2.	What is bspwm-manjaro?
+
+2.		Basic usage
+2.1.	Virtual desktops
+2.2.	Window states
+2.3.	Mouse
+2.4.	Keyboard
+2.5.	Configuration
+2.6.	Scripts
+
+3.		Terminal
+3.1.	Shells
+3.2.	Custom tools
+3.3.	Network
+
+4.		Support
+---------------------
+
+
+1.		Introduction
+
+	Bspwm manjaro is a minimalistic community edition of manjaro. It aims to be as light and efficient as possible while still remaining somewhat accessible and discoverable for beginners. However, you need to realize that this edition is not as beginner friendly nor as complete as other manjaro editions are. It is not a complete desktop, but a skeleton around which you can build your own enviroment. Graphical tools are included for most basic tasks, but there is command line alternative provided for almost everything, because this edition attempts to make command line more accessible and easier to use. 
+	
+-------
+1.1. 	What is bspwm?
+
+	Bspwm is a tiling window manager based on binary space partitioning. This means that it manages windows by tiling them based on dividing existing space into two portions. One of the open windows shrinks to make space for a new window. Its tiling paradigm is manual like with i3 or herbstluftwm, but it's unique method provides simultaneously finer control over windows than the alternatives, and less need to excercise that control. Simply opening and closing windows produces mostly sane window layouts. 
+
+	Like other tiling window managers, bspwm uses extremely little system resources and is easily controllable with keyboard. What distinguishes it from other tilers is its strict adherence to unix philosophy: it is a simple tool that only does one thing, but communicates with other applications through simple text streams. It does not provide keybindings, buttons or grahical user interface. It does not draw titlebars to windows. It does not draw panels or desktop. It just manages windows. This makes it extremely flexible when it comes to choosing other tools you want to use, and also makes it easily scriptable. It easy to produce almost any window behavior you desire with simple shell scripts. 
+	
+	See "man bspwm" to read thorough documentation about bspwm commands and usage.
+	
+-------
+1.2. 	What is bspwm-manjaro?
+
+	This edition uses customized version of bspwm, bspwm-manjaro. It is a snapshot of a developement version of bspwm with a few modifications: 
+		- it uses bspwm-session file to run bspwm in order to provide separate autostart file, make sure that programs quit cleanly when bspwm exits, and to set sxhkd to use dash as shell for commands.
+		- unlike normal bspwm, it provides default settings for keybindings, window rules and many other things.
+		- When/if there is a backwards incompatible syntax change in bspwm on update, install script tries to update your configuration files to work with the new version. Success cannot be guaranteed, and your old files are backed up when this happens.
+		
+	Also provided are "bspwm-scripts", a large collection of scripts that can simplify window controlling with bspwm, and two custom panels based on lemonbar: lemonpanel and limepanel (default). These are all shell scripts that are easy to modify to your liking. See section 2.3. for details.
+
+-------
+2.		Basic usage
+
+	Manjaro bspwm edition does not use display manager. You login to console, and if you do so on TTY1 (default), bspwm is started automatically. If you wish to setup autologin, xlogin is installed for this purpose and can be easily enabled with the postinstallation script provided (just run "postinstall" in your terminal). Note that autologin starts x server on TTY7, while login in TTY1 starts x on that TTY. 
+
+	If you wish to start bspwm or some other window manager on another TTY, there is alias setup for that. Just run command "x" to start bspwm. To start some other window manager or desktop, use name of that enviroment as an argument. For example, to start gnome, run "x gnome".   
+	
+-------
+2.1.	Virtual desktops	
+	Like other tiling window managers, bspwm makes extensive use of virtual desktops. That is why there is no option to minimize windows: you have enough desktops for all your windows and they are easily accessible. To show/focus a desktop, holder super key and press number of that desktop.
+
+	By default bspwm creates a single unnamed desktop on every monitor. However, you can create, rename and destroy desktops on fly. By default bspwm-manjaro creates 5 desktops named with roman numerals on your monitor. If more than one monitor is connected, it creates 10 desktops and tries to divide them between monitors evenly. Desktops are monitor specific in bspwm. However, bspwm-manjaro includes scripts to emulate multihead behavior of i3 and xmonad, if you prefer one of those. See your sxhkdrc for details.
+
+-------
+2.2. 	Window states
+
+	Bspwm has several possible window states. Floating windows can have any size and position. Pseudo-tiled windows can have any size but are centered in their place. Tiled windows have size and place determined by their node. Full screen windows just cover everything. 
+	
+	Additionally, bspwm has a few window flags. Sticky windows are visible on all workspaces. Private windows are not splitted when bspwm is in automatic mode (this is not default in bspwm-manjaro). Locked windows do not close with regular super+x keybinding.
+	
+-------
+2.3. 	Mouse
+
+	Bspwm has good mouse support for a tiling window manager, and this edition enhances it further by adding a few menus and desktop actions. 
+	
+	You can manipulate windows with mouse when you press super key (the windows key on many systems). You can move them by dragging them with left mouse button and resize them by dragging with middle and right mouse buttons. This native bspwm behavior and can be configured with bspc commands. See "man bspc" for details.
+	
+	You can open the window action menu by holding alt key and clicking on a window. This menu allows you to close windows and set various window states.
+	
+	Holding alt_gr and clicking a mouse will split the focused window and spawn an applications menu. This means that the app you choose to run gets spawned exactly where you spawned the menu.
+	
+	Left clicking the desktop gives you an applications menu. Right clicking the desktop gives you the desktop action menu. Middle clicking the desktop gives you a window action menu.
+	
+	All the mentioned menus can be configured in files located at ~/.config/GTKmenu. All the mentioned desktop actions can be configured by editing the file ~/.rootmenurc. They are provided by process "rootmenu" that lets you bind any commands to desktop click actions.
+
+-------	
+2.4. 	Keyboard
+
+	Press super+F1 to see quicklist of keybidings. See ~/.config/sxhkd/sxhkdrc to see everything and edit keybindings.
+	Super+x closes windows. Super+z opens terminal. Super+space lets you run applications.
+
+-------
+2.5. 	Configuration
+
+	The most important configuration files are ~/.profile, ~/.config/bspwm/bspwmrc, ~/.config/bspwm/autostart and ~/.config/sxhkd/sxhkdrc. They are commented extensively and should be easy to understand.
+	
+	If you want to edit bspwm settings with an interactive tool, try running "bspwm-ruler".
+	
+	For most configuration needs you might have, there is option in tool "bmenu".
+	
+-------	
+2.6.	Scripts
+
+	Most of the custom scripts are provided by packages bspwm-scripts, limepanel, rootmenu and lemonpanel. They are mostly bash and dash scripts. You can get a list of them by running "pacman -Ql <package_name>".
+	To edit their behavior, if you for example want to customize your panel beyond just changing colors, this is the recommended procedure (using limepanel as an example):
+	
+	1)  Copy the script you wish to change into your ~/.bin under different name:
+		cp /usr/bin/limepanel ~/.bin/mylime
+	2)	Edit the copy any way you like.
+	3)	Use your version instead of the original.
+	
+	This way you do not need root priviledges to edit the file, and your changes are not overwritten by pacman updates.
+	
+-------	
+3.		Terminal
+
+	Bspwm edition uses roxterm as its default terminal. If you want something even light, install rxvt-unicode and use the launcher script "terminal". Both are preconfigured.
+	
+-------
+3.1.	Shells
+
+	The default shell is zsh instead of bash. The its settings can be edited from ~/.zshrc. It provides automatic launching of bspwm on login in tty1, excellent tab completion, spelling corretion, and bash compatible syntax. This is the shell that is started when you log into console in tty.
+	
+	Roxterm is set launch different shell, however: fish. It is used here instead of zsh because it provides following advantages: autosuggestion, syntax highlighting and fzf keybindings. It is also slightly lighter on ram than zsh. It is not set as the default shell however, because this is known to cause issues with bspwm, because it is not compatible with bash syntax. If you have problems trying some bspwm commands, run first zsh and then try again. If you dislike fish you can disable it from your roxterm settings.
+	
+	Extra fzf keybindings provided by fish are: 
+		- Ctrl-t: file finder (multi-select enabled)
+		- Ctrl-r: search past commands
+		- Ctrl-x: execute past commands without confirmation
+		- Alt-c: cd into directories
+
+	Fish is used with fisherman plugin manager. See https://github.com/fisherman/fisherman for details.
+	
+-------	
+3.2.	Custom tools
+	Bspwm edition has some extra commandline tools that you may find useful:
+		
+		ranger			(file manager)
+		mc				(file manager)
+		bmenu			(main menu)
+		pacli			(pacman frontend)
+		postinstall		(postinstallation options)
+		htop			(task manager)
+		mhwd-chroot		(automatically chroot into another linux installation)
+		mhwd-tui		(manage kernels and drivers)
+		brandr			(manage monitors)
+		hibernator		(setup hibernation and swapfile)
+		clonezilla		(powerful backup tool)
+		dfc				(show disk usage by disk)
+		ncdu			(show disk usage by file)
+		speedtest-cli	(test network speed)
+		bmon			(monitor bandwith usage)
+		scrot			(take screenshots)
+		moc				(music player)
+		bc				(calculator)
+		ps_mem 			(show ram usage sorted by process)
+
+-------
+3.3.	Network
+
+	This edition comes with the command line tool wpa_tui. It can be used to replace networkmanager with systemd-network. This has advantage of being more minimalistic option and using less system resources. However, networkmanager provides much nicer frontends (nmtui, nmcli-dmenu). To use this, run "wpa_tui" from command line and choose option 7.
+
+-------
+4.		Support
+
+	If you have questions or problems related to this manjaro edition, post in forum.manjaro.org/c/support-for-community-editions. Use the tag "bspwm" and write @chrysostomus somewhere in your message. 
+
+	If you have general manjaro related	questions or problems (package management, this or that app does not work, etc), post in forum.manjaro.org/c/techinical-issues-and-assistance. Use the search function before posting, and note that your answer can probably found most easily by searching https://wiki.archlinux.org/. 
+	
+	If you find bugs in bspwm or sxhkd, open a issue in https://github.com/baskerville/bspwm/issues/ or https://github.com/baskerville/sxhkd/issues/ respectively. Note that bspwm-manjaro is customized version of bspwm, and you should first try to replicate the issue with bspwm-git.
+	
+
+	

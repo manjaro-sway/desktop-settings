@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=bspwm
+Hidden=false
+X-MATE-Autostart-enabled=true
+Name[en_US]=Bspwm
+Name=Bspwm
+Comment[en_US]=Window manager
+Comment=Window manager

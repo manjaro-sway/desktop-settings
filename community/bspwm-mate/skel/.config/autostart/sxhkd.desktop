@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=sxhkd
+Hidden=false
+X-MATE-Autostart-enabled=true
+Name[en_US]=Keybindings
+Name=Keybindings
+Comment[en_US]=Simple hotkey daemon
+Comment=Simple hotkey daemon

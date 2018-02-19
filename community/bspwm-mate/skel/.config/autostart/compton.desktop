@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=compton -D
+Hidden=false
+X-MATE-Autostart-enabled=true
+Name[en_US]=Compositor
+Name=Compositor
+Comment[en_US]=Compton
+Comment=Compton

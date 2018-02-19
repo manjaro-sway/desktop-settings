@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=xcape -e 'Super_L=Super_L|Shift_L|space'
+Hidden=false
+X-MATE-Autostart-enabled=true
+Name[en_US]=Super key
+Name=Super key
+Comment[en_US]=Bind super key to rofi
+Comment=Bind super key to rofi

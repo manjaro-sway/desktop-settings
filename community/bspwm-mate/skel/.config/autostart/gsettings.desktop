@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=dbus-launch gsettings set org.mate.session.required-components windowmanager bspwm
+Hidden=false
+X-MATE-Autostart-enabled=true
+Name[en_US]=Set windowmanager
+Name=Set windowmanager
+Comment[en_US]=Set window manager to bspwm
+Comment=Set window manager to bspwm

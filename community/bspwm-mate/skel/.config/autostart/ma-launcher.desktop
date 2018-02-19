@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=ma-launcher
+Comment=create Manjaro-Architect launcher
+Exec=/usr/bin/ma-launcher
+X-MATE-Autostart-enabled=true
