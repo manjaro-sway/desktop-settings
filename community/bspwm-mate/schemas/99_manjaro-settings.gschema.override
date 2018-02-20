@@ -43,9 +43,10 @@ custom-format=''
 theme='slider'
 
 [x.dm.slick-greeter]
-background="/usr/share/backgrounds/lockscreen.png"
+background="/usr/share/backgrounds/manjarowall17_07.jpg"
 theme-name="Breath-Dark"
 icon-theme-name="Arc-Maia"
 font-name="Noto Sans 12"
+draw-grid=false
 
 
