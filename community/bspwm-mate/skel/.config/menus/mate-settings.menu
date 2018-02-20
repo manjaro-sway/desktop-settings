@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<!DOCTYPE Menu
+  PUBLIC '-//freedesktop//DTD Menu 1.0//EN'
+  'http://standards.freedesktop.org/menu-spec/menu-1.0.dtd'>
+<Menu>
+	<Name>Desktop</Name>
+	<MergeFile type="parent">/etc/xdg/menus/mate-settings.menu</MergeFile>
+	<Menu>
+		<Name>Preferences</Name>
+		<Include>
+			<Filename>mozo-made-3.desktop</Filename>
+		</Include>
+		<Include>
+			<Filename>mozo-made-4.desktop</Filename>
+		</Include>
+		<Include>
+			<Filename>mozo-made-5.desktop</Filename>
+		</Include>
+		<Layout>
+			<Merge type="menus"/>
+			<Menuname>Hardware</Menuname>
+			<Menuname>Internet and Network</Menuname>
+			<Menuname>Look and Feel</Menuname>
+			<Menuname>Other</Menuname>
+			<Menuname>Personal</Menuname>
+			<Filename>mate-about-me.desktop</Filename>
+			<Filename>pamac-manager.desktop</Filename>
+			<Filename>mate-appearance-properties.desktop</Filename>
+			<Filename>mate-at-properties.desktop</Filename>
+			<Filename>blueman-adapters.desktop</Filename>
+			<Filename>blueman-manager.desktop</Filename>
+			<Filename>matecc.desktop</Filename>
+			<Filename>mate-display-properties.desktop</Filename>
+			<Filename>thunar-settings.desktop</Filename>
+			<Filename>gufw.desktop</Filename>
+			<Filename>mate-keyboard.desktop</Filename>
+			<Filename>mate-keybinding.desktop</Filename>
+			<Filename>kvantummanager.desktop</Filename>
+			<Filename>lightdm-settings.desktop</Filename>
+			<Filename>mozo.desktop</Filename>
+			<Filename>manjaro-settings-manager.desktop</Filename>
+			<Filename>mate-tweak.desktop</Filename>
+			<Filename>mate-settings-mouse.desktop</Filename>
+			<Filename>nm-connection-editor.desktop</Filename>
+			<Filename>networkmanager_dmenu.desktop</Filename>
+			<Filename>mate-network-properties.desktop</Filename>
+			<Filename>mate-notification-properties.desktop</Filename>
+			<Filename>mate-power-preferences.desktop</Filename>
+			<Filename>mate-default-applications-properties.desktop</Filename>
+			<Filename>system-config-printer.desktop</Filename>
+			<Filename>qt5ct.desktop</Filename>
+			<Filename>thunar-volman-settings.desktop</Filename>
+			<Filename>pamac-updater.desktop</Filename>
+			<Filename>mate-session-properties.desktop</Filename>
+			<Filename>mate-theme-installer.desktop</Filename>
+			<Filename>compton-conf.desktop</Filename>
+			<Filename>mate-window-properties.desktop</Filename>
+			<Filename>mozo-made-3.desktop</Filename>
+			<Filename>mozo-made-4.desktop</Filename>
+			<Filename>mozo-made-5.desktop</Filename>
+			<Merge type="files"/>
+		</Layout>
+	</Menu>
+</Menu>

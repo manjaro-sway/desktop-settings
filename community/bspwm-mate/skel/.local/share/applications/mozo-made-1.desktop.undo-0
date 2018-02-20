@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon=chromium
+Icon[en_US]=chromium
+Name[en_US]=Browser
+Exec=chromium
+Comment[en_US]=Web browser
+Name=Browser
+Comment=Web browser

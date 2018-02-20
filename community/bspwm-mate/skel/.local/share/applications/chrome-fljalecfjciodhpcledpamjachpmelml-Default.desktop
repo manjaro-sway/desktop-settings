@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Caret
+Exec=/usr/bin/chromium --profile-directory=Default --app-id=fljalecfjciodhpcledpamjachpmelml
+Icon=chrome-fljalecfjciodhpcledpamjachpmelml-Default
+StartupWMClass=crx_fljalecfjciodhpcledpamjachpmelml

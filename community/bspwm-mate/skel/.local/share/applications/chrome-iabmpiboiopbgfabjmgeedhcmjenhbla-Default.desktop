@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=VNC® Viewer for Google Chrome™
+Exec=/usr/bin/chromium --profile-directory=Default --app-id=iabmpiboiopbgfabjmgeedhcmjenhbla
+Icon=chrome-iabmpiboiopbgfabjmgeedhcmjenhbla-Default
+StartupWMClass=crx_iabmpiboiopbgfabjmgeedhcmjenhbla

@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<!DOCTYPE Menu
+  PUBLIC '-//freedesktop//DTD Menu 1.0//EN'
+  'http://standards.freedesktop.org/menu-spec/menu-1.0.dtd'>
+<Menu>
+	<Name>Applications</Name>
+	<MergeFile type="parent">/etc/xdg/menus/mate-applications.menu</MergeFile>
+	<Include>
+		<Filename>mozo-made.desktop</Filename>
+	</Include>
+	<Include>
+		<Filename>mozo-made-1.desktop</Filename>
+	</Include>
+	<Layout>
+		<Merge type="menus"/>
+		<Filename>mozo-made-1.desktop</Filename>
+		<Filename>mozo-made.desktop</Filename>
+		<Menuname>Accessories</Menuname>
+		<Menuname>chrome-apps</Menuname>
+		<Menuname>Education</Menuname>
+		<Menuname>Games</Menuname>
+		<Menuname>Graphics</Menuname>
+		<Menuname>Internet</Menuname>
+		<Menuname>Office</Menuname>
+		<Menuname>Other</Menuname>
+		<Menuname>Development</Menuname>
+		<Menuname>Multimedia</Menuname>
+		<Menuname>System</Menuname>
+		<Menuname>Universal Access</Menuname>
+		<Merge type="files"/>
+	</Layout>
+</Menu>
