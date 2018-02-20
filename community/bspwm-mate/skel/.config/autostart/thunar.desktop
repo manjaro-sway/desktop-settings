@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=thunar --daemon
+Hidden=false
+X-MATE-Autostart-enabled=true
+Name[en_US]=Thunar
+Name=Thunar
+Comment[en_US]=Start thunar daemon
+Comment=Start thunar daemon
