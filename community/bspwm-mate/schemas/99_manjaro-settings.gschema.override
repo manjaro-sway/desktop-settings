@@ -9,6 +9,7 @@ picture-options='stretched'
 [org.mate.interface]
 gtk-theme='Breath-Dark'
 icon-theme='Breeze-Maia-Dark'
+gtk-decoration-layout='menu:close'
 
 [org.mate.Marco.general]
 theme='Adapta-Maia'
@@ -49,4 +50,38 @@ icon-theme-name="Arc-Maia"
 font-name="Noto Sans 12"
 draw-grid=false
 
+[org.mate.desktop.applications.terminal]
+exec='sterminal'
 
+[org.gnome.gedit.preferences.editor]
+display-right-margin=false
+highlight-current-line=false
+create-backup-copy=false
+bracket-matching=true
+scheme='monokai-extended'
+tabs-size=uint32 4
+editor-font='xos4 Terminus 12'
+display-line-numbers=true
+wrap-mode='word'
+background-pattern='grid'
+use-default-font=false
+ensure-trailing-newline=false
+wrap-last-split-mode='word'
+auto-indent=true
+auto-save-interval=uint32 10
+
+[org.gnome.gedit.plugins]
+active-plugins=['externaltools', 'findinfiles', 'sort', 'snippets', 'multiedit', 'smartspaces', 'bracketcompletion', 'codecomment', 'wordcompletion', 'docinfo', 'textsize']
+
+[org.gnome.nautilus.preferences]
+show-move-to-trash-shortcut-changed-dialog=false
+click-policy='single'
+search-view='icon-view'
+default-folder-viewer='icon-view'
+show-create-link=true
+sort-directories-first=true
+show-image-thumbnails='always'
+search-filter-time-type='last_modified'
+
+[org.gnome.nautilus.icon-view]
+default-zoom-level='small'
