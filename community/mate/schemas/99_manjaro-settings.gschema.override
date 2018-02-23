@@ -8,7 +8,7 @@ picture-options='stretched'
 
 [org.mate.interface]
 gtk-theme='Adapta-Maia'
-icon-theme='Arc-Maia'
+icon-theme='Papirus-Adapta-Maia'
 
 [org.mate.Marco.general]
 theme='Adapta-Maia'
@@ -93,7 +93,7 @@ theme='slate'
 [x.dm.slick-greeter]
 background="/usr/share/backgrounds/manjaro-mate/manjaro-mate.jpg"
 theme-name="Adapta-Nokto-Maia"
-icon-theme-name="Arc-Maia"
+icon-theme-name="Papirus-Adapta-Maia"
 font-name="Cantarell Regular 10"
 
 

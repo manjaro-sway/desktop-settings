@@ -19,7 +19,7 @@ enable-animations=true
 font-name='Cantarell 11'
 gtk-im-module='gtk-im-context-simple'
 gtk-theme='Adapta-Maia'
-icon-theme='Arc-Maia'
+icon-theme='Papirus-Adapta-Maia'
 monospace-font-name='Monospace 11'
 
 [org.gnome.Terminal.Legacy.Profile]
@@ -38,7 +38,7 @@ default-zoom-level='small'
 [x.dm.slick-greeter]
 background="/usr/share/backgrounds/manjaro-budgie/manjaro-budgie.jpg"
 theme-name="Adapta-Nokto-Maia"
-icon-theme-name="Arc-Maia"
+icon-theme-name="Papirus-Adapta-Maia"
 font-name="Cantarell Regular 10"
 
 [org/gtk/Settings/FileChooser]
