@@ -10,3 +10,5 @@ run nm-applet
 run update-checker
 run light-locker
 run pulseaudio -D
+run pa-applet
+run compton -D
