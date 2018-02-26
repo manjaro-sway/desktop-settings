@@ -6,10 +6,6 @@ item = Run
 cmd = dboxrun
 icon = /usr/share/icons/Adwaita/scalable/actions/system-run-symbolic.svg
 
-item = Applications
-cmd = morc_menu
-icon = /usr/share/icons/Adwaita/scalable/actions/open-menu-symbolic.svg
-
 item = Find
 cmd = finder
 icon = /usr/share/icons/Adwaita/scalable/apps/preferences-system-search-symbolic.svg

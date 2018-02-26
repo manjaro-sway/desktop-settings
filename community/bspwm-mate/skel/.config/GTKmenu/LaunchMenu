@@ -2,10 +2,6 @@ item = Run
 cmd = dboxrun
 icon = /usr/share/icons/Adwaita/scalable/actions/system-run-symbolic.svg
 
-item = Applications
-cmd = rofi-show
-icon = /usr/share/icons/Adwaita/scalable/actions/open-menu-symbolic.svg
-
 item = Find
 cmd = rofi-finder.sh
 icon = /usr/share/icons/Adwaita/scalable/apps/preferences-system-search-symbolic.svg
