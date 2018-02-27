@@ -47,7 +47,7 @@ end
 beautiful.init(awful.util.getdir("config") .. "/themes/cesious/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "sterminal"
+terminal = "defaul-terminal"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -347,7 +347,9 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
               {description = "decrease the number of columns", group = "layout"}),
     awful.key({ modkey,           }, "space", function () awful.util.spawn("/usr/bin/dmenu_recency")          end,
-              {description = "select next", group = "layout"}),
+              {description = "launch dmenu", group = "launcher"}),
+    awful.key({ modkey, "Shift"   }, "p", function () awful.util.spawn("/usr/bin/rofi -show")          end,
+              {description = "launch rofi", group = "launcher"}),
     awful.key({ modkey,           }, "e", function () awful.util.spawn("/usr/bin/pcmanfm")          end,
               {description = "select next", group = "layout"}),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
