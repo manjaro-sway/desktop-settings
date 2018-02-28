@@ -47,9 +47,9 @@ end
 beautiful.init(awful.util.getdir("config") .. "/themes/cesious/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "sterminal"
+terminal = "urxvtc"
 editor = os.getenv("EDITOR") or "micro"
-editor_cmd = st .. " -e " .. editor
+editor_cmd = "st " .. editor
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
