@@ -1,0 +1,11 @@
+[Added Associations]
+text/x-lua=micro.desktop;mousepad.desktop;
+application/xml=mousepad.desktop;chromium.desktop;
+application/x-shellscript=mousepad.desktop;
+text/plain=mousepad.desktop;micro.desktop;
+
+[Default Applications]
+application/xml=mousepad.desktop
+text/x-lua=mousepad.desktop
+application/x-shellscript=mousepad.desktop
+text/plain=mousepad.desktop
