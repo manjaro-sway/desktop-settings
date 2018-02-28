@@ -8,10 +8,10 @@ PATH="/usr/local/sbin:/usr/local/bin:/usr/bin/core_perl:/usr/bin"
 export PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CONFIG_DIRS=/usr/etc/xdg:/etc/xdg
-export GUI_EDITOR=/usr/bin/l3afpad
-export BROWSER=/usr/bin/firefox
-export TERMINAL=/usr/bin/sterminal
-export EDITOR=/usr/bin/nano
+export GUI_EDITOR=/usr/bin/gedit
+export BROWSER=/usr/bin/chromium
+export TERMINAL=/usr/bin/terminal
+export EDITOR=/usr/bin/micro
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 

@@ -47,9 +47,9 @@ end
 beautiful.init(awful.util.getdir("config") .. "/themes/cesious/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "defaul-terminal"
-editor = os.getenv("EDITOR") or "nano"
-editor_cmd = terminal .. " -e " .. editor
+terminal = "sterminal"
+editor = os.getenv("EDITOR") or "micro"
+editor_cmd = st .. " -e " .. editor
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -348,10 +348,12 @@ globalkeys = gears.table.join(
               {description = "decrease the number of columns", group = "layout"}),
     awful.key({ modkey,           }, "space", function () awful.util.spawn("/usr/bin/dmenu_recency")          end,
               {description = "launch dmenu", group = "launcher"}),
+    awful.key({ modkey, Shift     }, "b", function () awful.util.spawn("/usr/bin/chromium")          end,
+              {description = "launch Browser", group = "launcher"}),
     awful.key({ modkey, "Shift"   }, "p", function () awful.util.spawn("/usr/bin/rofi -show")          end,
               {description = "launch rofi", group = "launcher"}),
-    awful.key({ modkey,           }, "e", function () awful.util.spawn("/usr/bin/pcmanfm")          end,
-              {description = "select next", group = "layout"}),
+    awful.key({ modkey,           }, "e", function () awful.util.spawn("/usr/bin/thunar")          end,
+              {description = "launch filemanager", group = "launcher"}),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
               {description = "select previous", group = "layout"}),
 

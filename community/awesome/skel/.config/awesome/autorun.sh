@@ -6,11 +6,11 @@ function run {
   fi
 }
 run nm-applet
-run update-checker
+run dbus-launch update-checker
 run light-locker
 run pulseaudio -D
-run pa-applet
-run compton -D
-run xcape -e 'Super_L=Super_L|Shift_L|space'
+run compton
+run xcape -e 'Super_L=Super_L|Shift_L|p'
 run lxpolkit
 run thunar --daemon
+run urxvtd

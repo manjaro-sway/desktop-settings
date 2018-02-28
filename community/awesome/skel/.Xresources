@@ -1,0 +1,116 @@
+! Base16 Eighties
+! Scheme: Chris Kempson (http://chriskempson.com)
+
+#define base00 #2d2d2d
+#define base01 #393939
+#define base02 #515151
+#define base03 #747369
+#define base04 #a09f93
+#define base05 #d3d0c8
+#define base06 #e8e6df
+#define base07 #f2f0ec
+#define base08 #f2777a
+#define base09 #f99157
+#define base0A #ffcc66
+#define base0B #99cc99
+#define base0C #66cccc
+#define base0D #6699cc
+#define base0E #cc99cc
+#define base0F #d27b53
+
+*foreground:   base05
+#ifdef background_opacity
+*background:   [background_opacity]base00
+#else
+*background:   base00
+#endif
+*cursorColor:  base05
+
+*color0:       base00
+*color1:       base08
+*color2:       base0B
+*color3:       base0A
+*color4:       base0D
+*color5:       base0E
+*color6:       base0C
+*color7:       base05
+
+*color8:       base03
+*color9:       base08
+*color10:      base0B
+*color11:      base0A
+*color12:      base0D
+*color13:      base0E
+*color14:      base0C
+*color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*color16:      base09
+*color17:      base0F
+*color18:      base01
+*color19:      base02
+*color20:      base04
+*color21:      base06
+
+
+! URxvt.font:                       9x15,xft:TerminessTTFNerdFontMono
+
+! alternative font settings with 'terminus':
+URxvt.font:      -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
+!URxvt.bold.font: -xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
+
+URxvt*scrollBar:                  false
+URxvt*mouseWheelScrollPage:       false
+URxvt*cursorBlink:                true
+URxvt*saveLines:                  5000
+
+! for 'fake' transparency (without Compton) uncomment the following three lines
+! URxvt*inheritPixmap:            true
+! URxvt*transparent:              true
+! URxvt*shading:                  138
+
+! other possible settings:
+URxvt.iso14755: false
+!URxvt.perl-ext:
+!URxvt.perl-ext-common:
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+!! Cursor word movement
+URxvt*altSendsEscape: true
+URxvt.keysym.Control-Up:   \033[1;5A
+URxvt.keysym.Control-Down:    \033[1;5B
+URxvt.keysym.Control-Left:    \033[1;5D
+URxvt.keysym.Control-Right:    \033[1;5C
+URxvt.clipboard.autocopy: true
+! URxvt.keysym.M-C-v:              perl:clipboard:paste_escaped
+! URxvt*termName:                  string
+! URxvt*geometry:                  geometry
+! URxvt*chdir:                     string
+! URxvt*reverseVideo:              boolean
+! URxvt*loginShell:                boolean
+! URxvt*multiClickTime:            number
+! URxvt*jumpScroll:                boolean
+! URxvt*skipScroll:                boolean
+! URxvt*pastableTabs:              boolean
+! URxvt*scrollstyle:               plain
+! URxvt*scrollBar_right:           boolean
+! URxvt*scrollBar_floating:        true
+! URxvt*scrollBar_align:           mode
+! URxvt*thickness:                 number
+! URxvt*scrollTtyOutput:           boolean
+! URxvt*scrollTtyKeypress:         boolean
+! URxvt*scrollWithBuffer:          boolean
+! URxvt*tintColor:                 !7DA55
+! URxvt*blurRadius:                HxV
+! URxvt*fading:                    number
+! URxvt*fadeColor:                 color
+! URxvt*utmpInhibit:               boolean
+! URxvt*urgentOnBell:              boolean
+! URxvt*visualBell:                boolean
+! URxvt*mapAlert:                  boolean
+! URxvt*meta8:                     boolean
+! URxvt*tripleclickwords:          boolean
+! URxvt*insecure:                  boolean
+! URxvt*cursorUnderline:           boolean
+! URxvt*pointerBlank:              boolean
