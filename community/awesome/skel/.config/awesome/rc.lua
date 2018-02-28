@@ -49,8 +49,7 @@ beautiful.init(awful.util.getdir("config") .. "/themes/cesious/theme.lua")
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvtc"
 editor = os.getenv("EDITOR") or "micro"
-editor_cmd = "st " .. editor
-
+terminal2 = "st"
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
 -- If you do not like this or do not have such a key,
@@ -100,7 +99,7 @@ end
 myawesomemenu = {
     { "hotkeys", function() return false, hotkeys_popup.show_help end },
     { "manual", terminal .. " -e man awesome" },
-    { "edit config", string.format("%s -e %s %s", terminal, editor, awesome.conffile) },
+    { "edit config", string.format("%s -e %s %s", terminal2, editor, awesome.conffile) },
     { "restart", awesome.restart },
     { "quit", function() awesome.quit() end }
 }
@@ -258,10 +257,10 @@ awful.screen.connect_for_each_screen(function(s)
             mykeyboardlayout,
             seperator,
             wibox.widget.systray(),
-            volseperator,
-            volumecfg.widget,
-			seperator,
-            batwidget,
+          --  volseperator,
+          --  volumecfg.widget,
+		  --  seperator,
+          --  batwidget,
             seperator,
             mytextclock,
             s.mylayoutbox,
@@ -535,17 +534,22 @@ awful.rules.rules = {
       }, properties = { floating = true }},
 
     -- Add titlebars to normal clients and dialogs
-    { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = true }
+    { rule_any = {type = { "normal", "dialog" } },
+      except_any = { role = { "browser" }, class = { "Gedit", "gedit", "Nautilus", "Pamac-manager", "Pamac-updater" } },
+      properties = { titlebars_enabled = true }
     },
-
+	
     -- Set Firefox to always map on the tag named "2" on screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { screen = 1, tag = "2" } },
+
+
 }
 -- }}}
 
 -- {{{ Signals
+
+
 -- Signal function to execute when a new client appears.
 client.connect_signal("manage", function (c)
     -- Set the windows at the slave,
@@ -592,19 +596,19 @@ client.connect_signal("request::titlebars", function(c)
         },
         { -- Right
             awful.titlebar.widget.floatingbutton (c),
-            awful.titlebar.widget.maximizedbutton(c),
             awful.titlebar.widget.stickybutton   (c),
-            awful.titlebar.widget.ontopbutton    (c),
+           -- awful.titlebar.widget.ontopbutton    (c),
+            awful.titlebar.widget.maximizedbutton(c),
             awful.titlebar.widget.closebutton    (c),
             layout = wibox.layout.fixed.horizontal()
         },
         layout = wibox.layout.align.horizontal
     }
         -- Hide the menubar if we are not floating
-    local l = awful.layout.get(c.screen)
-    if not (l.name == "floating" or c.floating) then
-        awful.titlebar.hide(c)
-    end
+   -- local l = awful.layout.get(c.screen)
+   -- if not (l.name == "floating" or c.floating) then
+   --     awful.titlebar.hide(c)
+   -- end
 end)
 
 -- Enable sloppy focus, so that focus follows mouse.
@@ -617,15 +621,48 @@ end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+
+-- Disable borders on lone windows
+-- Handle border sizes of clients.
+for s = 1, screen.count() do screen[s]:connect_signal("arrange", function ()
+  local clients = awful.client.visible(s)
+  local layout = awful.layout.getname(awful.layout.get(s))
+
+  for _, c in pairs(clients) do
+    -- No borders with only one humanly visible client
+    if c.maximized then
+      -- NOTE: also handled in focus, but that does not cover maximizing from a
+      -- tiled state (when the client had focus).
+      c.border_width = 0
+    elseif awful.client.floating.get(c) or layout == "floating" then
+      c.border_width = beautiful.border_width
+    elseif layout == "max" or layout == "fullscreen" then
+      c.border_width = 0
+    else
+      local tiled = awful.client.tiled(c.screen)
+      if #tiled == 1 then -- and c == tiled[1] then
+        tiled[1].border_width = 0
+        -- if layout ~= "max" and layout ~= "fullscreen" then
+        -- XXX: SLOW!
+        -- awful.client.moveresize(0, 0, 2, 0, tiled[1])
+        -- end
+      else
+        c.border_width = beautiful.border_width
+      end
+    end
+  end
+end)
+end
+
 -- }}}
 
-client.connect_signal("property::floating", function (c)
-    if c.floating then
-        awful.titlebar.show(c)
-    else
-        awful.titlebar.hide(c)
-    end
-end)
+--client.connect_signal("property::floating", function (c)
+--    if c.floating then
+--        awful.titlebar.show(c)
+--    else
+--        awful.titlebar.hide(c)
+--    end
+--end)
 
 awful.util.spawn_with_shell("~/.config/awesome/autorun.sh")
 
@@ -635,3 +672,4 @@ local globalkeys = awful.util.table.join(
     awful.key({}, "XF86AudioLowerVolume", function() volumecfg:down() end),
     awful.key({}, "XF86AudioMute",        function() volumecfg:toggle() end)
 )
+

@@ -6,9 +6,9 @@
 theme = {}
 theme.dir = "/usr/share/awesome/themes/cesious"
 
-theme.font          = "Terminus 13"
+theme.font          = "Terminus 12"
 
-theme.bg_normal     = "#2F343F"
+theme.bg_normal     = "#2D323C"
 theme.bg_focus      = "#404552"
 theme.bg_urgent     = "#000000"
 theme.bg_minimize   = "#101010"
@@ -19,7 +19,7 @@ theme.fg_focus      = "#ffffff"
 theme.fg_urgent     = "#ff0000"
 theme.fg_minimize   = "#ffffff"
 
-theme.border_width  = 2
+theme.border_width  = 1
 theme.border_normal = "#000000"
 theme.border_focus  = "#16A085"
 theme.border_marked = "#16A085"
@@ -42,7 +42,7 @@ theme.taglist_squares_unsel = theme.dir .. "/taglist/squarew.png"
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
 theme.menu_submenu_icon = theme.dir .. "/icons/submenu.png"
-theme.menu_height = 25
+theme.menu_height = 15
 theme.menu_width  = 200
 
 -- You can add as many variables as
@@ -74,7 +74,7 @@ theme.titlebar_maximized_button_focus_inactive  = theme.dir .. "/titlebar/maximi
 theme.titlebar_maximized_button_normal_active   = theme.dir .. "/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active    = theme.dir .. "/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = "/usr/share/backgrounds/manjarowall17_03.jpg"
+theme.wallpaper = "/usr/share/backgrounds/manjarowall17_05.jpg"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh      = theme.dir .. "/layouts/fairh.png"
