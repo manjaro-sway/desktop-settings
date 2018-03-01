@@ -9,7 +9,7 @@ run nm-applet
 run dbus-launch update-checker
 run light-locker
 run pulseaudio -D
-run compton
+run compton --shadow-exclude '!focused'
 run xcape -e 'Super_L=Super_L|Shift_L|p'
 run lxpolkit
 run thunar --daemon
