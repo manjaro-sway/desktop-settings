@@ -1,57 +1,40 @@
 ! Base16 Eighties
 ! Scheme: Chris Kempson (http://chriskempson.com)
 
-#define base00 #2d2d2d
-#define base01 #393939
-#define base02 #515151
-#define base03 #747369
-#define base04 #a09f93
-#define base05 #d3d0c8
-#define base06 #e8e6df
-#define base07 #f2f0ec
-#define base08 #f2777a
-#define base09 #f99157
-#define base0A #ffcc66
-#define base0B #99cc99
-#define base0C #66cccc
-#define base0D #6699cc
-#define base0E #cc99cc
-#define base0F #d27b53
-
-*foreground:   base05
+*foreground:   #d3d0c8
 #ifdef background_opacity
-*background:   [background_opacity]base00
+*background:   [background_opacity]#2d2d2d
 #else
-*background:   base00
+*background:   #2d2d2d
 #endif
-*cursorColor:  base05
+*cursorColor:  #d3d0c8
 
-*color0:       base00
-*color1:       base08
-*color2:       base0B
-*color3:       base0A
-*color4:       base0D
-*color5:       base0E
-*color6:       base0C
-*color7:       base05
+*color0:       #2d2d2d
+*color1:       #f2777a
+*color2:       #99cc99
+*color3:       #ffcc66
+*color4:       #6699cc
+*color5:       #cc99cc
+*color6:       #66cccc
+*color7:       #d3d0c8
 
-*color8:       base03
-*color9:       base08
-*color10:      base0B
-*color11:      base0A
-*color12:      base0D
-*color13:      base0E
-*color14:      base0C
-*color15:      base07
+*color8:       #747369
+*color9:       #f2777a
+*color10:      #99cc99
+*color11:      #ffcc66
+*color12:      #6699cc
+*color13:      #cc99cc
+*color14:      #66cccc
+*color15:      #f2f0ec
 
 ! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
 ! use 'shell' template to set these if necessary
-*color16:      base09
-*color17:      base0F
-*color18:      base01
-*color19:      base02
-*color20:      base04
-*color21:      base06
+*color16:      #f99157
+*color17:      #d27b53
+*color18:      #393939
+*color19:      #515151
+*color20:      #a09f93
+*color21:      #e8e6df
 
 
 ! URxvt.font:                       9x15,xft:TerminessTTFNerdFontMono
