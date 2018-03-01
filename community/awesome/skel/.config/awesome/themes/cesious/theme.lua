@@ -74,7 +74,7 @@ theme.titlebar_maximized_button_focus_inactive  = theme.dir .. "/titlebar/maximi
 theme.titlebar_maximized_button_normal_active   = theme.dir .. "/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active    = theme.dir .. "/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = "/usr/share/backgrounds/manjarowall17_05.jpg"
+theme.wallpaper = "/usr/share/backgrounds/awesome-scrabble3.png"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh      = theme.dir .. "/layouts/fairh.png"
