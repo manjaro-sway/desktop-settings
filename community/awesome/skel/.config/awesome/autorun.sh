@@ -13,7 +13,6 @@ run compton --shadow-exclude '!focused'
 run xcape -e 'Super_L=Super_L|Shift_L|p'
 run /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
 run thunar --daemon
-run urxvtd
 run xfce4-power-manager
 run pa-applet
 run xrdb merge ~/.Xresources
