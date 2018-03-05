@@ -18,3 +18,4 @@ run pa-applet
 run xrdb merge ~/.Xresources
 run xfsettingsd
 run gnome-keyring-daemon
+run urxvtd
