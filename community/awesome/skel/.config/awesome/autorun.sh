@@ -17,3 +17,4 @@ run xfce4-power-manager
 run pa-applet
 run xrdb merge ~/.Xresources
 run xfsettingsd
+run gnome-keyring-daemon
