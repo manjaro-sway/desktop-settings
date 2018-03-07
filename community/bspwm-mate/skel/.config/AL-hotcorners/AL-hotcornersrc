@@ -1,0 +1,6 @@
+[Hot Corners]
+top_left_corner_command = skippy-xd
+top_right_corner_command = rofi -show
+bottom_left_corner_command = 
+bottom_right_corner_command = 
+
