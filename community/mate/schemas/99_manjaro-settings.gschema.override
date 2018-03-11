@@ -36,6 +36,9 @@ start-with-status-bar=true
 object-id-list=['brisk-menu', 'window-list', 'notification-area', 'clock', 'show-desktop']
 toplevel-id-list=['bottom']
 
+[org.mate.caja.preferences]
+thumbnail-limit=1073741824
+
 [org.mate.panel.toplevels.bottom]
 expand=true
 orientation='bottom'
@@ -52,7 +55,6 @@ position=0
 object-type='applet'
 
 [org.mate.panel.objects.clock]
-[org/mate/panel/objects/clock]
 applet-iid='ClockAppletFactory::ClockApplet'
 locked=true
 toplevel-id='bottom'
