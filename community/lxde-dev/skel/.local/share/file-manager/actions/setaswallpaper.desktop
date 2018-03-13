@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Action
+Name=Set As Wallpaper
+Name[fr]=Définir comme fond d'écran
+Icon=user-desktop
+Profiles=profile-setaswallpaper
+
+[X-Action-Profile profile-setaswallpaper]
+MimeTypes=image/*;
+Exec=pcmanfm -w %f
+Name=Default profile
