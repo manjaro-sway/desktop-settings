@@ -35,6 +35,9 @@ visible-name='manjaro'
 [org.gnome.nautilus.icon-view]
 default-zoom-level='small'
 
+[org.gnome.nautilus.preferences]
+thumbnail-limit=1073741824
+
 [x.dm.slick-greeter]
 background="/usr/share/backgrounds/manjaro-budgie/manjaro-budgie.jpg"
 theme-name="Adapta-Nokto-Maia"
