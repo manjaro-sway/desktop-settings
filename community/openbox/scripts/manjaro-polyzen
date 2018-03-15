@@ -1,0 +1,163 @@
+#!/usr/bin/env bash
+
+# manjaro-polyzen: polybar session manager script for Manjaro
+# Copyright (C) 2017 Nathaniel Maia <natemaia10@gmail.com>
+
+if ! hash polybar zenity find read &>/dev/null; then
+    echo "[ERROR]: Missing Commands. It is required to install 'polybar' 'zenity' 'readline' 'findutils'"
+    exit 1
+fi
+
+if ! [[ $WM ]]; then
+    readonly window_Managers=(bspwm i3 openbox xfce awesome)
+    for i in "${window_Managers[@]}"; do
+        if [[ $(wmctrl -m | grep -i name | awk '{print tolower($2)}') == "$i" ]]; then
+            readonly WM=$i ; break
+        elif [[ $(xprop -root -notype | grep "WM_NAME =" | tr -d '"' | awk '{print tolower($3)}') == "$i" ]]; then
+            readonly WM=$i ; break
+        elif [[ $(awk '{print tolower($0)}' <<< "$XDG_CURRENT_DESKTOP") == "$i" ]]; then
+            readonly WM=$i ; break
+        fi
+    done
+fi
+
+readonly TITLE="Manjaro Polybar Manager"
+readonly ICON="--window-icon=/usr/share/icons/manjaro/maia/48x48.png"
+readonly CHECKLIST="zenity --width=400 --height=500 $ICON --list --checklist --multiple"
+readonly QUESTION="zenity --question $ICON --width=300"
+readonly CONFPATH="$HOME/.config/polybar"
+readonly START="$HOME/.config/openbox/autostart"
+readonly USAGE='
+USAGE: manjaro-polyzen [OPTIONS] [SESSIONFILE]
+\nOPTIONS:
+\t-z, --session\tUse entered SESSIONFILE rather than default
+\t-h, --help\tPrint this usage message and exit
+\nWith no command options, the script uses the current WM-sessionfile
+To start session at login, add the following line to autostart:
+\tsleep 1; manjaro-polybar-session &'
+
+# SESSIONFILE is mutable by user
+if [[ $WM ]]; then
+    SESSIONFILE="$CONFPATH/sessions/$WM-sessionfile"
+else
+    SESSIONFILE="$CONFPATH/sessions/sessionfile"
+fi
+case $1 in
+    -h|-H|--help) echo -e "$USAGE" ; exit 0 ;;
+    -z|--session)
+        if [[ $2 ]]; then
+            SESSIONFILE=$2
+        else
+            echo "Invalid Session.. Exiting" ; exit 2
+        fi
+esac
+
+if ! [[ -d $CONFPATH ]] && [[ -d /etc/skel/.config/polybar ]]; then
+    cp -rf /etc/skel/.config/polybar "$HOME/.config/"
+elif ! [[ -d $CONFPATH ]]; then
+    mkdir -p "$CONFPATH" ; cp -f /usr/share/doc/polybar/config "$CONFPATH/config"
+fi
+
+running_Bars() {
+    if [[ $(pidof polybar) ]]; then
+        TEMPFILE=$(mktemp --tmpdir polybars.XXXX)
+        pgrep -a polybar >> "$TEMPFILE"
+    fi
+}
+
+readonly FILES=($(find -L "$CONFPATH" -maxdepth 4 -type f))
+find_Bars() {
+    fill_Arrays() {
+        barPath[$1]="$2"
+        barArray[$1]="$3"
+        if [[ -e $TEMPFILE ]] && grep -q "$2 $3" "$TEMPFILE"; then
+            checkMark[$1]="TRUE"
+        else
+            checkMark[$1]="FALSE"
+        fi
+    }
+
+    local n=0
+    for config in "${FILES[@]}"; do
+        bar_Names=($(grep '^\[bar/.*\]$' "$config" | sed 's/]//' | cut -d '/' -f2))
+        for bar in "${bar_Names[@]}"; do
+            [[ "$bar" != "master" ]] && fill_Arrays "$n" "$config" "$bar"
+            n=$((n + 1))
+        done
+    done
+
+    BARS=""
+    for ((i=0; i<=${#barArray[@]}; i++)); do
+        BARS="$BARS ${checkMark[$i]} ${barArray[$i]}"
+    done
+}
+
+create_Session() {
+    mkdir -p "$CONFPATH/sessions"
+    echo -e "# Polybar $WM Sessionfile
+# DO NO edit this file, it will be overwritten by manjaro-polyzen
+# Instead make a custom sessionfile and use the -z FILE or --session FILE option
+# To load session at startup use the following line\n\n# sleep 1; manjaro-polybar-session &\n" > "$SESSIONFILE"
+    for bar in $ANSWER; do
+        for config in "${barPath[@]}"; do
+            if grep -q "^\[bar/$bar\]" "$config" && ! grep -q "$config $bar" "$SESSIONFILE"; then
+                echo "$config $bar" >> "$SESSIONFILE" ; break
+            fi
+        done
+    done
+    [[ $(pidof polybar) ]] && pkill polybar
+    while read -r c b; do
+        if [[ "$c $b" =~ ^#.*$ ]] || ! ([[ $c ]] && [[ $b ]]) || ! [[ -f "$c" ]]; then
+            continue
+        else
+            polybar --reload --config="$c" "$b" &
+        fi
+    done < "$SESSIONFILE"
+
+    sleep 0.5
+    if [[ $(pidof polybar) ]]; then
+        if [[ -f $START ]] && ! grep -q "manjaro-polybar-session" "$START"; then
+            if grep -q "polybar" "$START"; then
+                sed -i '/polybar/ c sleep 1; manjaro-polybar-session &' "$START"
+            elif grep -q "tint2" "$START"; then
+                sed -i '/tint2/ a sleep 1; manjaro-polybar-session &' "$START"
+                sed -i '/tint2/d' "$START"
+            elif grep -q "nitrogen" "$START"; then
+                sed -i '/nitrogen/ a sleep 1; manjaro-polybar-session &' "$START"
+            else
+                sed -i '1s/^/sleep 1; manjaro-polybar-session & \n/' "$START"
+            fi
+        fi
+    fi
+}
+
+main() {
+    while ! [[ $ANSWER ]]; do
+        running_Bars
+        find_Bars
+        MSG="<big><b>Select bars to launch</b></big>\n\nRunning bars are check marked\n\nTo disable a bar:"
+        MSG="$MSG <b>uncheck and click Ok</b>\n\nSession will be saved to: <b>$(basename "$SESSIONFILE")</b>\n"
+        ANSWER=$($CHECKLIST --title="$TITLE" --text="$MSG" --separator=" " --column="Select" --column="Bars" $BARS)
+        if [[ $? == 1 ]]; then
+            ANSWER=NONE
+        elif ! [[ $ANSWER ]]; then
+            if [[ $(pidof polybar) ]]; then
+                MSG="<big><b>No Bars Selected</b></big>\n\nWhat would you like to do?"
+                if $QUESTION --title="$TITLE" --ok-label="Go Back" --cancel-label="Stop Bars" --text="$MSG" &>/dev/null; then
+                    ANSWER="" ; continue
+                else
+                    pkill polybar ; echo -n "" > "$SESSIONFILE" ; ANSWER=NONE
+                fi
+            else
+                ANSWER=NONE
+            fi
+        else
+            create_Session
+        fi
+        [[ -e $TEMPFILE ]] && rm -r "$TEMPFILE"
+    done
+}
+
+main
+
+exit 0

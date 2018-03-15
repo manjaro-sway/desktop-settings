@@ -1,0 +1,228 @@
+#!/usr/bin/env bash
+
+# Written for use in Manjaro by Josiah Ward
+# Touched up and improved by Nathaniel Maia
+
+if ! hash zenity &>/dev/null; then
+    echo "[ERROR]: Missing Commands. It is required to install 'zenity'"
+    exit 1
+fi
+if [[ $# -gt 0 ]]; then
+    echo -e "This program takes no arguments.. Just run $(basename "$0")"
+    exit 2
+fi
+
+if ! [[ $WM ]]; then
+    readonly window_Managers=(bspwm i3 openbox xfce awesome)
+    for i in "${window_Managers[@]}"; do
+        if [[ $(wmctrl -m | grep -i name | awk '{print tolower($2)}') == "$i" ]]; then
+            readonly WM=$i ; break
+        elif [[ $(xprop -root -notype | grep "WM_NAME =" | tr -d '"' | awk '{print tolower($3)}') == "$i" ]]; then
+            readonly WM=$i ; break
+        elif [[ $(awk '{print tolower($0)}' <<< "$XDG_CURRENT_DESKTOP") == "$i" ]]; then
+            readonly WM=$i ; break
+        fi
+    done
+fi
+
+readonly PPATH="$HOME/.config/polybar"
+readonly TPATH="$HOME/.config/tint2"
+readonly START="$HOME/.config/openbox/autostart"
+readonly ICON="--window-icon=/usr/share/icons/manjaro/maia/48x48.png"
+readonly LIST="zenity $ICON --list --radiolist --width=350 --height=400"
+readonly TITLE="Manjaro Panel Chooser"
+readonly MESSAGE="<big><b>Manjaro Panel Chooser</b></big>\n\nWhat would you like to do?"
+
+if [[ $WM ]]; then
+    PSESSION="$PPATH/sessions/$WM-sessionfile"
+    TSESSION="$TPATH/sessions/$WM-sessionfile"
+else
+    PSESSION="$PPATH/sessions/sessionfile"
+    TSESSION="$TPATH/sessions/sessionfile"
+fi
+
+setup() {
+    DOCKS=""
+    dockArr=()
+    dockCheck=(plank docky cairo-dock)
+    for i in "${dockCheck[@]}"; do
+        if hash "$i" &>/dev/null && pgrep "$i" &>/dev/null; then
+            DOCKS="$DOCKS TRUE $i"
+            dockArr+=("$i")
+        elif hash "$i" &>/dev/null; then
+            DOCKS="$DOCKS FALSE $i"
+            dockArr+=("$i")
+        fi
+    done
+}
+
+setup_polybar() {
+    if ! [[ -d $PPATH ]] && [[ -d /etc/skel/.config/polybar ]]; then
+        cp -rf /etc/skel/.config/polybar "$HOME/.config/"
+        sed -i '/base/{n;N;N;d}' "$PPATH/config"
+        sed -i "/base/ a include-file = ${HOME}/.config/polybar/master.conf" "$PPATH/config"
+        sed -i "/base/ a include-file = ${HOME}/.config/polybar/modules.conf" "$PPATH/config"
+        sed -i "s/liveuser/${USER}/g" "$PSESSION"
+    fi
+
+    if [[ -f $START ]] && ! grep -q "manjaro-polybar-session" "$START"; then
+        if grep -q "polybar" "$START"; then
+            sed -i '/polybar/ c sleep 1; manjaro-polybar-session &' "$START"
+        elif grep -q "tint2" "$START"; then
+            sed -i '/tint2/ a sleep 1; manjaro-polybar-session &' "$START"
+            sed -i '/tint2/d' "$START"
+        elif grep -q "nitrogen" "$START"; then
+            sed -i '/nitrogen/ a sleep 1; manjaro-polybar-session &' "$START"
+        else
+            sed -i '1s/^/sleep 1; manjaro-polybar-session & \n/' "$START"
+        fi
+    fi
+
+    if ! [[ -f $PSESSION ]]; then
+        mkdir -p "$PPATH/sessions"
+        echo "$PPATH/config $WM-bar" > "$PSESSION"
+    fi
+
+    [[ $(pidof tint2) ]] && pkill tint2
+    [[ $(pidof polybar) ]] && pkill polybar
+    if hash manjaro-polybar-session &>/dev/null; then
+        manjaro-polybar-session &
+    else
+        polybar --reload --config="$HOME/.config/polybar/config" "$WM-bar" &
+    fi
+}
+
+setup_tint2() {
+    if ! [[ -d $TPATH ]] && [[ -d /etc/skel/.config/tint2 ]]; then
+        cp -rf /etc/skel/.config/tint2 "$HOME/.config/"
+    fi
+
+    if [[ -f $START ]] && ! grep -q "manjaro-tint2-session" "$START"; then
+        if grep -q "tint2" "$START"; then
+            sed -i '/tint2/ a sleep 1; manjaro-tint2-session &' "$START"
+            sed -i '/tint2/d' "$START"
+        elif grep -q "polybar" "$START"; then
+            sed -i '/polybar/ a sleep 1; manjaro-tint2-session &' "$START"
+            sed -i '/polybar/d' "$START"
+        elif grep -q "nitrogen" "$START"; then
+            sed -i '/nitrogen/ a sleep 1; manjaro-tint2-session &' "$START"
+        else
+            sed -i '1s/^/manjaro-tint2-session & \n/' "$START"
+        fi
+    fi
+
+    if ! [[ -f $TSESSION ]]; then
+        mkdir -p "$TPATH/sessions"
+        echo "$TPATH/tint2rc" > "$TSESSION"
+    fi
+
+    [[ $(pidof tint2) ]] && pkill tint2
+    [[ $(pidof polybar) ]] && pkill polybar
+    if hash manjaro-tint2-session &>/dev/null; then
+        manjaro-tint2-session &
+    else
+        tint2 -c "$TPATH/tint2rc" &>/dev/null &
+    fi
+}
+
+main_dialog() {
+    # Setup dialog depending on what apps we have installed
+    if hash tint2 polybar &>/dev/null; then
+        if [[ ${#dockArr[@]} -gt 0 ]]; then
+            choice=$($LIST --title="$TITLE" --text="$MESSAGE" --column Select \
+                --column Option FALSE "Setup Polybar" FALSE "Setup Tint2" FALSE "Setup or Disable Docks")
+        else
+            choice=$($LIST --title="$TITLE" --text="$MESSAGE" --column Select \
+                --column Option FALSE "Setup Polybar" FALSE "Setup Tint2")
+        fi
+    elif hash polybar &>/dev/null; then
+        if [[ ${#dockArr[@]} -gt 0 ]]; then
+            choice=$($LIST --title="$TITLE" --text="$MESSAGE" --column Select \
+                --column Option FALSE "Setup Polybar" FALSE "Setup or Disable Docks")
+        else
+            choice=$($LIST --title="$TITLE" --text="$MESSAGE" --column Select --column Option FALSE "Setup Polybar")
+        fi
+    elif hash tint2 &>/dev/null; then
+        if [[ ${#dockArr[@]} -gt 0 ]]; then
+            choice=$($LIST --title="$TITLE" --text="$MESSAGE" --column Select \
+                --column Option FALSE "Setup Tint2" FALSE "Setup or Disable Docks")
+        else
+            choice=$($LIST --title="$TITLE" --text="$MESSAGE" --column Select --column Option FALSE "Setup Tint2")
+        fi
+    else
+        XMSG="<big><b>No Panels or Docks Found..</b></big>\n\nPlease install one and try again"
+        choice=$(zenity --info --title="$TITLE" --width=300 --text="$XMSG")
+    fi
+    [[ $? == 1 ]] && exit 0
+}
+
+setup_dock() {
+    while ! [[ $dock ]]; do
+        setup
+        dock=$(zenity --list --checklist --multiple $ICON --title="$TITLE" \
+            --text="<big><b>Please Choose Docks to Setup</b></big>
+            \nRunning docks will be checkmarked\nTo disable a running dock:\n\tUn-checkmark it and press Ok\n" \
+            --width=350 --height=400 --column="Select" --column="Dock" $DOCKS \
+            --cancel-label="Go Back" --ok-label="Ok" --separator=" ")
+        if [[ $? == 1 ]]; then dock="" choice="" ; break; fi
+        if ! [[ $dock ]]; then
+            for d in "${dockArr[@]}"; do
+                if pgrep "$d" &>/dev/null; then pkill "$d"; fi
+                if [[ -e "$START" ]] && grep -q "$d" "$START"; then sed -i "/${d}/d" "$START"; fi
+            done
+            check_if_done "Disabling Docks"
+        else
+            for d in "${dockArr[@]}"; do
+                if pgrep "$d" &>/dev/null; then pkill "$d"; fi
+                if [[ -e "$START" ]] && grep -q "$d" "$START"; then sed -i "/${d}/d" "$START"; fi
+            done
+            for selected in $dock; do
+                if [[ -e "$START" ]] && ! grep -q "$selected" "$START"; then echo "sleep 1; $selected &" >> "$START"; fi
+                $selected &
+            done
+            check_if_done "Dock Setup"
+        fi
+    done
+}
+
+check_choice_made() {
+    if ! [[ "$choice" ]]; then
+        sure=$(zenity $ICON --title="$TITLE" --question --width=250 --height=150 \
+            --text="<big><b>Nothing Selected</b></big>\n\nWant to go back?" &>/dev/null)
+        if [[ $? == 1 ]]; then
+            exit 0
+        else
+            choice="" dock=""
+        fi
+    fi
+}
+
+check_if_done() {
+    am_done=$(zenity $ICON --title="$TITLE" --question --width=250 \
+        --height=150 --ok-label="Yes Please" --cancel-label="No Thanks" \
+        --text="<big><b>$1 Complete</b></big>\n\nWant to do something else?" &>/dev/null)
+    if [[ $? == 1 ]]; then
+        exit 0
+    else
+        choice="" dock=""
+    fi
+}
+
+panel_switch() {
+    while ! [[ "$choice" ]]; do
+        setup
+        main_dialog
+        check_choice_made
+        if [[ "$choice" == *Polybar ]]; then
+            setup_polybar
+        elif [[ "$choice" == *Tint2 ]]; then
+            setup_tint2
+        elif [[ "$choice" = *Docks ]]; then
+            setup_dock
+        fi
+    done
+}
+
+panel_switch
+
+exit 0

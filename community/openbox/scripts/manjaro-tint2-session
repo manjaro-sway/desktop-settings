@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+
+# manjaro-tint2-session: a script to read a saved Tint2 session file
+# Copyright (C) 2015 damo <damo@bunsenlabs.org>
+# Borrowed with love by the Manjaro boys.
+
+readonly CONFPATH="$HOME/.config/tint2"
+readonly USAGE="USAGE:\n\tmanjaro-tint2-session [OPTIONS] [SESSIONFILE]
+\nOPTIONS:\n\n\t-z, --session\tUse entered SESSIONFILE rather than default
+\t-h, --help\tPrint this usage message and exit
+\n\tWith no command argument, the script uses the default session file
+\n\t'$CONFPATH/sessions/$WM-sessionfile'
+\n\nTo start session at login, add the following line to autostart:
+\n\tmanjaro-tint2-session &"
+
+if ! hash tint2 read &>/dev/null; then
+    echo "[ERROR]: Missing Commands. It is required to install 'tint2' 'readline'"
+    exit 1
+fi
+
+if ! [[ $WM ]]; then
+    readonly window_Managers=(bspwm i3 openbox xfce awesome)
+    for i in "${window_Managers[@]}"; do
+        if [[ $(wmctrl -m | grep -i name | awk '{print tolower($2)}') == "$i" ]]; then
+            readonly WM=$i ; break
+        elif [[ $(xprop -root -notype | grep "WM_NAME =" | tr -d '"' | awk '{print tolower($3)}') == "$i" ]]; then
+            readonly WM=$i ; break
+        elif [[ $(awk '{print tolower($0)}' <<< "$XDG_CURRENT_DESKTOP") == "$i" ]]; then
+            readonly WM=$i ; break
+        fi
+    done
+fi
+
+# as always SESSIONFILE is mutable
+if [[ $WM ]]; then
+    SESSIONFILE="$CONFPATH/sessions/$WM-sessionfile"
+else
+    SESSIONFILE="$CONFPATH/sessions/sessionfile"
+fi
+case $1 in
+    -h|-H|--help) clear ; echo -e "$USAGE" ; exit 0 ;;
+    -z|*session)
+        if [[ $2 ]] && [[ -f $2 ]]; then
+            SESSIONFILE="$2"
+        else
+            echo "Invalid Session.. Exiting" ; exit 2
+        fi
+esac
+
+start_Session() {
+    if [[ -f $SESSIONFILE ]]; then
+        while [[ $(pidof tint2) ]]; do pkill tint2; sleep 0.2; done
+        while read -r c; do
+            if [[ "$c" =~ ^#.*$ ]] || [[ "$c" == "" ]] || ! [[ -f "$c" ]]; then
+                continue
+            else
+                tint2 -c "$c" &
+            fi
+        done < "$SESSIONFILE"
+    else
+        echo -e "No suitable sessions found\n\nTry running manjaro-tint2zen or manjaro-panel chooser to setup a session"
+    fi
+
+    sleep 0.5
+    if ! [[ "$(pidof tint2)" ]] && hash manjaro-tint2zen &>/dev/null; then
+        manjaro-tint2zen &
+    fi
+}
+
+start_Session
+
+exit 0

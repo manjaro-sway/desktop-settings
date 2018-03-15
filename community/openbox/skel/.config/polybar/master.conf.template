@@ -1,0 +1,65 @@
+;=====================================================
+;     Colors & Settings
+;=====================================================
+
+[colors]
+background = {{.Data.bar_background}}
+foreground = {{.Data.terminal_foreground}}
+moderate   = {{index .Data.terminal_colors 3}}
+urgent     = {{index .Data.terminal_colors 1}}
+trim       = {{index .Data.terminal_colors 4}}
+blue       = {{index .Data.terminal_colors 4}}
+pink       = {{index .Data.terminal_colors 1}}
+orange     = {{index .Data.terminal_colors 3}}
+purple     = {{index .Data.terminal_colors 5}}
+yellow     = {{index .Data.terminal_colors 3}}
+border     = {{.Data.border_color}}
+
+
+[settings]
+throttle-output        = 5
+throttle-output-for    = 10
+throttle-input-for     = 30
+compositing-background = source
+compositing-foreground = source
+compositing-overline   = source
+compositing-underline  = source
+compositing-border     = source
+screenchange-reload    = true
+format-foreground      = ${colors.foreground}
+format-background      = ${colors.background}
+
+;=====================================================
+;    Master Bar
+;=====================================================
+
+[bar/master]
+width               = {{.Data.bar_width}}
+height              = {{.Data.bar_height}}
+border-size         = {{.Data.border_all}}
+border-top-size     = {{.Data.border_top}}
+border-bottom-size  = {{.Data.border_bottom}}
+radius              = {{.Data.bar_radius}}
+bottom              = {{.Data.bar_bottom}}
+line-size           = {{.Data.border_pixels}}
+font-0              = "{{.Data.bar_font0}}"
+font-1              = "FontAwesome:size=10:antialias=false;2"
+font-2              = "MaterialIcons:size=10:antialias=false;2"
+font-3              = "icomoon:size=10:antialias=false;2"
+font-4              = "Ubuntu Nerd Font:size=10:antialias=false;2"
+offset-x            = 0
+offset-y            = 0
+fixed-center        = true
+border-color        = ${colors.border}
+background          = ${colors.background}
+foreground          = ${colors.foreground}
+module-margin       = 0
+padding-right       = 0
+padding-left        = 0
+separator           = │
+scroll-up           = pamixer -i 2
+scroll-down         = pamixer -d 2
+click-middle        = skippy-xd --activate-window-picker
+double-click-left   = networkmanager_dmenu
+double-click-middle = skippy-xd --activate-window-picker
+double-click-right  = pavucontrol &

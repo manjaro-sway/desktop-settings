@@ -1,47 +1,29 @@
-## ManjaroBox Autostart File
-##
-##
-##
-## Note that global autostart .desktop files will also be in
-## /etc/xdg/openbox/autostart. These will include applications
-## such as the Network Manager and Parcellite
-##
+# launch compton if enabled
+manjaro-compositor --start &
 
-## DPMS - Display Power Management Signaling
-## This is disabled by default to prevent auto-actions when
-## the system is idle, such as screen blanking (10 mins) or
-## suspending (1 hour).
+#$HOME/.config/setup &
+# enable numlock, commented out for laptop users
+numlockx on &
 
+# restore wallpaper
+nitrogen --restore &
 
+# start panel
+#sleep 1; manjaro-polybar-session &
+#sleep 1; polybar --config=$HOME/.config/polybar/config openbox-bar &
 
-## Ensure that obmenu-generator (a pipe menu) is set to the user.
-## Does this for each session (i.e. ease of use for addtional
-## accounts where created.
+# system tray
+sleep 1; trayer --edge bottom --align left --widthtype request --SetDockType false --expand true &
 
-#(sleep 2s && xset -dpms; xset s off) &
+# Openbox autostart
+ob-autostart -d &
 
-## Basic compositing effects
-(sleep 1s && compton -CGb) &
+# PolicyKit authentication
+lxpolkit &
 
-## Panel
-(sleep 1s && tint2) &
+# Required for xfce settings to work
+xfsettingsd &
 
-## Startup
+# set user shortcuts for file managers
+xdg-user-dirs-gtk-update &
 
-[[ -f /usr/bin/pnmixer ]] && (sleep 1s && pnmixer) &
-[[ -f /usr/bin/conky ]] && (sleep 3s && conky) &
-
-(sleep 1s && nm-applet) &
-(sleep 1s && octopi-notifier) &
-
-## Optionally enable file manager in daemon mode for automounting
-(sleep 1s && pcmanfm-qt -d) &
-
-## Optionally enable screensaver
-#(sleep 1s && xautolock -time 15 -locker 'xlock -mode blank') &
-
-## Optionally disable touchpad
-#/usr/bin/synclient TouchpadOff=1 &
-
-## Background
-feh --bg-scale /usr/share/backgrounds/andromeda.png &
