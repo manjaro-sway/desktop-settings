@@ -46,8 +46,8 @@ else
     menuSeparator "$FAIL_MSG"
     if hash pamac-manager &>/dev/null; then
         menuItem "Install with Package Manager" "pamac-manager"
-    elif hash termite pacli &>/dev/null; then
-        menuItem "Install with Package Manager" "termite -e pacli"
+    elif hash termite pacui &>/dev/null; then
+        menuItem "Install with Package Manager" "termite -e pacui"
     fi
 fi
 menuEnd
