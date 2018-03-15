@@ -82,7 +82,7 @@
       <menu id="obConfig" label="Openbox">
         <item label="Settings Editor">
           <action name="Execute">
-            <command>obconf</command>
+            <command>lxappearance</command>
           </action>
         </item>
         <item label="Menu Editor">
@@ -92,7 +92,7 @@
         </item>
         <item label="Keybind Editor">
           <action name="Execute">
-            <command>obkey</command>
+            <command>lxhotkey</command>
           </action>
         </item>
         <item label="Autostart Editor">
