@@ -8,18 +8,14 @@
     cat:       add a category inside the menu             {cat => ["name", "label", "icon"]},
     sep:       horizontal line separator                  {sep => undef}, {sep => "label"},
     pipe:      a pipe menu entry                         {pipe => ["command", "label", "icon"]},
-    raw:       any valid Openbox XML string               {raw => q(xml string)},
-    begin_cat: begin of a category                  {begin_cat => ["name", "icon"]},
+    file:      include the content of an XML file        {file => "/path/to/file.xml"},
+    raw:       any XML data supported by Openbox          {raw => q(xml data)},
+    begin_cat: beginning of a category              {begin_cat => ["name", "icon"]},
     end_cat:   end of a category                      {end_cat => undef},
     obgenmenu: generic menu settings                {obgenmenu => ["label", "icon"]},
     exit:      default "Exit" action                     {exit => ["label", "icon"]},
 
 =cut
-
-# NOTE:
-#    * Keys and values are case sensitive. Keep all keys lowercase.
-#    * ICON can be a either a direct path to an icon or a valid icon name
-#    * Category names are case insensitive. (X-XFCE and x_xfce are equivalent)
 
 require "$ENV{HOME}/.config/obmenu-generator/config.pl";
 
@@ -27,90 +23,66 @@ require "$ENV{HOME}/.config/obmenu-generator/config.pl";
 my $editor = $CONFIG->{editor};
 
 our $SCHEMA = [
-    #          COMMAND                 LABEL                ICON
-    {item => ['xdg-open .',        'File Manager',      'file-manager']},
-    {item => ['qterminal',             'Terminal',          'terminal']},
-    {item => ['xdg-open http:',    'Web Browser',       'web-browser']},
-#     {item => ['gmrun',             'Run command',       'system-run']},
-#     {item => ['pidgin',            'Instant messaging', 'system-users']},
-
-    {sep => 'Applications'},
-
-    #          NAME            LABEL                ICON
-    {cat => ['utility',     'Accessories', 'applications-utilities']},
-    {cat => ['development', 'Development', 'applications-development']},
-    {cat => ['education',   'Education',   'applications-science']},
-    {cat => ['game',        'Games',       'applications-games']},
-    {cat => ['graphics',    'Graphics',    'applications-graphics']},
-    {cat => ['audiovideo',  'Multimedia',  'applications-multimedia']},
-    {cat => ['network',     'Network',     'applications-internet']},
-    {cat => ['office',      'Office',      'applications-office']},
-    {cat => ['other',       'Other',       'applications-other']},
-    {cat => ['settings',    'Settings',    'applications-accessories']},
-    {cat => ['system',      'System',      'applications-system']},
-
-    #{cat => ['qt',          'QT Applications',    'qtlogo']},
-    #{cat => ['gtk',         'GTK Applications',   'gnome-applications']},
-    #{cat => ['x_xfce',      'XFCE Applications',  'applications-other']},
-    #{cat => ['gnome',       'GNOME Applications', 'gnome-applications']},
-    #{cat => ['consoleonly', 'CLI Applications',   'applications-utilities']},
-
-    #                  LABEL          ICON
-    #{begin_cat => ['My category',  'cat-icon']},
-    #             ... some items ...
-    #{end_cat   => undef},
-
-    #            COMMAND     LABEL        ICON
-    #{pipe => ['obbrowser', 'Disk', 'drive-harddisk']},
-
-    ## Generic advanced settings
-    #{sep       => undef},
-    #{obgenmenu => ['Openbox Settings', 'applications-engineering']},
-    #{sep       => undef},
-
-    ## Custom advanced settings
+    # Format:  NAME, LABEL, ICON
+    {sep => "Manjaro Openbox"},
+    {item => ['exo-open --launch TerminalEmulator', 'Terminal', 'terminal']},
+    {item => ['exo-open --launch WebBrowser ', 'Web Browser', 'firefox']},
+    {item => ['exo-open --launch FileManager', 'File Manager', 'file-manager']},
     {sep => undef},
-    {begin_cat => ['Advanced Settings', 'gnome-settings']},
-
-        # Configuration files
-#         {item      => ["$editor ~/.conkyrc",              'Conky RC',    $editor]},
-        {item      => ["$editor ~/.config/tint2/tint2rc", 'Tint2 Panel', $editor]},
-
-        # obmenu-generator category
-        {begin_cat => ['Obmenu-Generator', 'menu-editor']},
-            {item      => ["$editor ~/.config/obmenu-generator/schema.pl", 'Menu Schema', $editor]},
-            {item      => ["$editor ~/.config/obmenu-generator/config.pl", 'Menu Config', $editor]},
-
-            {sep  => undef},
-            {item => ['obmenu-generator -p',    'Generate a pipe menu',              'menu-editor']},
-            {item => ['obmenu-generator -s',    'Generate a static menu',            'menu-editor']},
-            {item => ['obmenu-generator -p -i', 'Generate a pipe menu with icons',   'menu-editor']},
-            {item => ['obmenu-generator -s -i', 'Generate a static menu with icons', 'menu-editor']},
-            {sep  => undef},
-
-            {item    => ['obmenu-generator -d', 'Refresh Icon Set', 'gtk-refresh']},
-        {end_cat => undef},
-
-        # Openbox category
-        {begin_cat => ['Openbox', 'openbox']},
-            {item      => ['openbox --reconfigure',               'Reconfigure Openbox', 'openbox']},
-            {item      => ["$editor ~/.config/openbox/autostart", 'Openbox Autostart',    $editor]},
-            {item      => ["$editor ~/.config/openbox/rc.xml",    'Openbox RC',           $editor]},
-            {item      => ["$editor ~/.config/openbox/menu.xml",  'Openbox Menu',         $editor]},
-        {end_cat => undef},
-
-        # Pacman category
-#         {begin_cat => ['Pacman / Servers', 'package-manager-icon']},
-#             {item      => ["gksu $editor /etc/makepkg.conf",        'Makepkg Config',    'start-here']},
-#             {item      => ["gksu $editor /etc/pacman.conf",         'Pacman Config',     'start-here']},
-#             {item      => ["gksu $editor /etc/pacman.d/mirrorlist", 'Pacman Mirrorlist', 'start-here']},
-#         {end_cat => undef},
+    {cat => ['utility', 'Accessories', 'applications-utilities']},
+    {cat => ['development', 'Development', 'applications-development']},
+    {cat => ['education', 'Education', 'applications-science']},
+    {cat => ['game', 'Games', 'applications-games']},
+    {cat => ['graphics', 'Graphics', 'applications-graphics']},
+    {cat => ['audiovideo', 'Multimedia', 'applications-multimedia']},
+    {cat => ['network', 'Network', 'applications-internet']},
+    {cat => ['office', 'Office', 'applications-office']},
+    {cat => ['other', 'Other', 'applications-other']},
+    {cat => ['settings', 'Settings', 'gnome-settings']},
+    {cat => ['system', 'System', 'applications-system']},
+    {sep => undef},
+    {pipe => ['manjaro-places-pipemenu --recent ~/', 'Places', 'folder']},
+    {sep => undef},
+    {begin_cat => ['Preferences', 'theme']},
+    {begin_cat => ['Openbox', 'openbox']},
+    {item => ['obconf', 'Settings Editor', 'theme']},
+    {item => ['kickshaw', 'Menu Editor', 'openbox']},
+    {item => ['obkey', 'Keybind Editor', 'openbox']},
+    {item => ['ob-autostart', 'Autostart Editor',      'openbox']},
+    {sep => undef},
+    {item => ["exo-open ~/.config/openbox/menu.xml", 'Edit menu.xml', 'text-xml']},
+    {item => ["exo-open ~/.config/openbox/rc.xml", 'Edit rc.xml', 'text-xml']},
+    {item => ["exo-open ~/.config/openbox/autostart", 'Edit autostart', 'text-xml']},
+    {sep => undef},
+    {item => ['openbox --restart', 'Openbox Restart', 'openbox']},
+    {item => ['openbox --reconfigure', 'Openbox Reconfigure', 'openbox']},
+    {end_cat => undef},
+    {item => ['xfce4-appearance-settings', 'GTK Appearance', 'preferences-desktop-theme']},
+    {item => ['nitrogen', 'Change Wallpaper', 'nitrogen']},
+    {sep => undef},
+    {pipe => ['manjaro-compositor', 'Compositor', 'compton']},
+    {pipe => ['manjaro-polybar-pipemenu', 'Polybar', 'polybar']},
+    {pipe => ['manjaro-conky-pipemenu', 'Conky', 'conky']},
+    {pipe => ['manjaro-tint2-pipemenu', 'Tint2', 'tint2']},
+    {item => ['rofi-theme-selector', 'Rofi Theme', 'theme']},
+    {item => ['manjaro-panel-chooser', 'Panel Chooser', 'panel']},
+    {sep => undef},
+    {item => ['xfce4-settings-manager', 'Xfce4 Settings Manager', 'preferences-desktop']},
+    {item => ['pavucontrol', 'Pulseaudio Preferences', 'multimedia-volume-control']},
+    {item => ['exo-preferred-applications', 'Preferred Applications', 'preferred-applications']},
+    {item => ['arandr', 'Screen Layout Editor', 'display']},
     {end_cat => undef},
     {sep => undef},
-
-    ## The xscreensaver lock command
-#     {item => ['xscreensaver-command -lock', 'Lock', 'lock']},
-
-    # This options uses the default Openbox's action "Exit"
-    {exit => ['Exit', 'exit']},
-]
+    {begin_cat => ['Menu Generator', 'menu-editor']},
+    {item => ["$editor ~/.config/obmenu-generator/schema.pl", 'Menu Layout', 'text-x-source']},
+    {sep  => undef},
+    {item => ['obmenu-generator -p', 'Generate a pipe menu', 'menu-editor']},
+    {item => ['obmenu-generator -s -c', 'Generate a static menu', 'menu-editor']},
+    {end_cat => undef},
+    {item => ["switchmenu -static", 'Switch Menu', 'menu-editor']},
+    {pipe => ['manjaro-kb-pipemenu', 'Display Keybinds', 'cs-keyboard']},
+    {pipe => ['manjaro-help-pipemenu', 'Help and Info', 'info']},
+    {sep => undef},
+    {item => ['i3lock-fancy -p', 'Lock Screen', 'lock']},
+    {item => ['oblogout', 'Exit Openbox', 'exit']},
+    ]

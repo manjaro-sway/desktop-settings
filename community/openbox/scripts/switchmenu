@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+readonly CURR="$HOME/.config/openbox/menu.xml"
+readonly BASE="$HOME/.config/openbox/menu-switcher/menu-static.xml"
+readonly BACK="$HOME/.config/openbox/menu-switcher/menu-static.xml.bak"
+
+if [[ "$1" == '-dynamic' ]] || [[ "$1" == '--dynamic' ]] || [[ "$1" == '-d' ]]; then
+    if hash obmenu-generator &>/dev/null; then
+        if [[ -e $CURR ]]; then
+            mkdir -p "$HOME/.config/openbox/menu-switcher"
+            cp "$CURR" "$BASE"
+            cp "$BASE" "$BACK"
+            obmenu-generator -p
+        else
+            notify-send 'Ooops!' 'Unable to find ~/.config/openbox/menu.xml.. Make sure it exists and try again.'
+            exit 1
+        fi
+    else
+        notify-send 'Ooops!' 'obmenu-generator is required.. Make sure it is installed and try again.'
+        exit 1
+    fi
+elif [[ "$1" == '-static' ]] || [[ "$1" == '--static' ]] || [[ "$1" == '-s' ]]; then
+    if [[ -e $BASE ]]; then
+        cp "$BASE" "$CURR"
+        openbox --reconfigure
+    elif [[ -e $BACK ]]; then
+        cp "$BACK" "$CURR"
+        openbox --reconfigure
+    else
+        notify-send 'Ooops!' 'Cannot find menu to restore. Please run [switchmenu --dynamic]'
+        exit 1
+    fi
+fi
+
+exit 0

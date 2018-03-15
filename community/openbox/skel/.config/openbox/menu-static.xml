@@ -9,7 +9,7 @@
     </item>
     <item label="Web Browser">
       <action name="Execute">
-        <command>exo-open --launch WebBrowser</command>
+        <command>exo-open --launch FileManager</command>
       </action>
     </item>
     <item label="File Manager">

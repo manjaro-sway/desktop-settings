@@ -36,6 +36,16 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
     unset f
 fi
 
+if [ -f ~/.xprofile ]; then
+    . ~/.xprofile
+fi
+
+gnome-keyring-daemon --start --components=pkcs11 &
+lxpolkit &
+kbdrate -d 400 -r 50
+xset r rate 400 50
+xset s 3600 3600
+
 get_session(){
 	local dbus_args=(--sh-syntax --exit-with-session)
 	case $1 in

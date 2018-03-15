@@ -1,0 +1,152 @@
+#!/usr/bin/env bash
+
+# Manjaro Conky selection and switcher script
+# Original concept by damo <damo@bunsenlabs.org> for BunsenLabs Linux, April 2015
+# Rewritten by Nathaniel Maia for Manjaro, December 2017
+
+readonly CPATH="$HOME/.config/conky"
+readonly TITLE="Manjaro Conky Manager"
+readonly ICON="--window-icon=/usr/share/icons/Manjaro-Light/64x64/places/distributor-logo-archlabs.png"
+readonly INFO="zenity --info $ICON --width=200 --height=100"
+readonly QUESTION="zenity --question $ICON --width=300"
+readonly CHECKLIST="zenity $ICON --width=450 --height=500 --list --checklist --multiple"
+readonly TEXTENTRY="zenity $ICON --entry --width=350 --height=200"
+readonly MSG="<big>This session will be saved to:</big>\n\n<b>$SESSIONFILE</b>\n"
+readonly USAGE="\vUSAGE:\tmanjaro-conkyzen [OPTION]...FILES
+\v\tWith no command option the script runs the gui
+\v\t-h,--help   : this USAGE help
+\t-f,--file   : FILEPATH : specify file to save session to
+\t-z          : Run gui filename entry dialog for new saved session
+\v\tWhen the dialog opens, any running conkys will be checkmarked.
+\tClick \"OK\" and all running conkys are stopped, and all
+\tcheckmarked conkys are started.
+\v\tTo stop a conky just uncheck it, and \"OK\"
+\vEXAMPLES:\n\n\tSave session to a new saved-session file with:
+\v\t\tmanjaro-conkyzen -f sessionfile-name
+\v\tTo start the default conky session at login
+\tadd the following line to autostart:
+\v\tsleep 2 && manjaro-conky-session --autostart &\v"
+
+# Mutable values
+SESSIONFILE="$CPATH/conky-sessionfile"
+SESSIONS="$CPATH/saved-sessions"  # used by pipemenu
+
+if ! hash conky read find &>/dev/null; then
+    echo -e "[ERROR]: This script requires the following be installed
+    \n\t\t'conky'\t  'findutils'\t'readline'" ; exit 2
+fi
+
+if ! [[ -d $CPATH ]] && [[ -d /etc/skel/.config/conky ]]; then
+    cp -rf /etc/skel/.config/conky "$HOME/.config/"
+elif ! [[ -d $CPATH ]]; then
+    mkdir -p "$CPATH"
+fi
+
+running_conky() {
+    if [[ $(pidof conky) ]]; then
+        TEMPFILE=$(mktemp --tmpdir conky.XXXX)
+        pgrep -a conky > "$TEMPFILE"
+    fi
+}
+
+readonly FILES=($(find -L "$CPATH" -maxdepth 4 -type f))
+find_conky() {
+    LIST=""
+    for f in "${FILES[@]}"; do
+        NAME=$(basename "$f")
+        if [[ $NAME = *conkyrc ]] || [[ $NAME = *conky ]] || [[ $NAME == 'conkyrc' ]]; then
+            if [[ -e $TEMPFILE ]] && grep -q "$f" "$TEMPFILE"; then
+                LIST="$LIST TRUE $NAME"
+            else
+                LIST="$LIST FALSE $NAME"
+            fi
+        fi
+    done
+}
+
+write_Sessions() {
+    SESSIONFILE="$CPATH/$1"
+    echo "sessionfile= $SESSIONFILE"
+    [[ ! -f $SESSIONS ]] && echo -n "" > "$SESSIONS"
+    if grep -qx "$SESSIONFILE" "$SESSIONS"; then
+        if [[ $2 = "-z" ]]; then
+            local XMSG="<big>Filename already in use</big>\n\nOverwrite it?"
+            if ! $QUESTION --title="Conky sessionfile" --text="$XMSG" &>/dev/null; then
+                exit 0
+            fi
+        else
+            echo "Session was previously saved with the same name. Overwrite it? (y|N)"
+            read -r ans
+            if ! grep -q '[yY]' <<< "$ans"; then
+                exit 0
+            fi
+        fi
+    else
+        cp "$SESSIONS" "$SESSIONS.bkp"
+        echo "$SESSIONFILE" >> "$SESSIONS"
+    fi
+}
+
+choose_Conkys() {
+    while ! [[ $ANSWER ]]; do
+        running_conky
+        find_conky
+        ANSWER=$($CHECKLIST --title="$TITLE" --separator=" " --text="$MSG" --column="Select" --column="Conky" $LIST)
+        if [[ $? == 1 ]]; then
+            [[ -f $SESSIONS.bkp ]] && mv "$SESSIONS.bkp" "$SESSIONS"
+            ANSWER=NONE
+        elif ! [[ $ANSWER ]]; then
+            if [[ $(pidof conky) ]]; then
+                local XMSG="<big>No Conky Selected</big>\n\nClose all running Conkys and exit?"
+                if $QUESTION --title="$TITLE" --cancel-label="Go Back" --text="$XMSG" &>/dev/null; then
+                    ANSWER=NONE ; killall conky
+                else
+                    [[ -f $SESSIONS.bkp ]] && mv "$SESSIONS.bkp" "$SESSIONS"
+                    ANSWER="" ; continue
+                fi
+            else
+                ANSWER=NONE
+            fi
+        else
+            echo -n "" > "$SESSIONFILE"
+            [[ $(pidof conky) ]] && killall conky
+            for name in $ANSWER; do
+                for file in "${FILES[@]}"; do
+                    if [[ $(basename "$file") = "$name" ]]; then
+                        echo "$file"
+                        echo "conky -c $file & sleep 0.5" >> "$SESSIONFILE"
+                        conky -c "$file" ; break
+                    fi
+                done
+            done
+        fi
+        [[ -e $TEMPFILE ]] && rm -f "$TEMPFILE"
+    done
+}
+
+
+case $1 in
+    -h|--help) echo -e "$USAGE" ; exit 0 ;;
+    -f|--files)
+        if [[ "$2" ]]; then
+            SESSIONFILE="$2"
+            write_Sessions "$SESSIONFILE"
+        else
+            echo "No saved-session file specified!" ; echo -e "$USAGE" ; exit 2
+        fi
+        ;;
+    -z)
+        XMSG="File to be saved in\n\n$CPATH/\n"
+        ENTRY=$($TEXTENTRY --title="Save Conky sessionfile" --entry-text="New Session Name" --text="$XMSG")
+        if [[ $? == 1 ]]; then exit 0; fi
+        if [[ -z $ENTRY ]]; then
+            XMSG="No File Specified Exiting..."
+            $INFO --title="Conky sessionfile" --text="$XMSG" &>/dev/null ; exit 1
+        else
+            write_Sessions "$ENTRY" "-z"
+        fi
+esac
+
+choose_Conkys
+
+exit 0
