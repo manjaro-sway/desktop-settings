@@ -5,7 +5,7 @@ iconfont="font\-logos:size=15:antialias=true"
 thirdfont="TerminessTTF Nerd Font:size=14:antialias=true"
 #thirdfont="Ionicons:size=16:antialias=true"
 gap=10
-main_menu="rofi -config "~/.config/rofi/config-monocle.rasi" -theme-str "#window { location: northwest; border: 0; width: 350; y-offset: 25px;}" -show drun -display-drun 'Run ->'"
+main_menu='rofi -config "~/.config/rofi/config-extended.rasi" -show drun -display-drun 'Run''
 networkmenu="networkmenu.sh"
 wifi_indicator=true
 window_button="%{A:bspc node -c:} %{A}"

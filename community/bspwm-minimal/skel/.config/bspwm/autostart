@@ -55,6 +55,6 @@ srandrd atorandr.sh --change
 update-checker 7200 &
 xcape -e 'Super_L=Super_L|Shift_L|space' &
 dbus-launch gsettings set org.mate.NotificationDaemon theme 'slider' && sed -i '/gsettings/d' ~/.config/bspwm/autostart &
-cp /etc/skel/.config/sxhkd/sxhkdrc-minimal ~/.config/sxhkd/sxhkdrc && pkill -USR1 -x sxhkd && sed -i '/sxhkdrc-minimal/d' ~/.config/bspwm/autostart &
+mv ~/.config/sxhkd/sxhkdrc-minimal ~/.config/sxhkd/sxhkdrc && sleep 1 && pkill -USR1 -x sxhkd && sleep 1 && sed -i '/sxhkdrc-minimal/d' ~/.config/bspwm/autostart &
 #lxpolkit &
 
