@@ -4,16 +4,16 @@
 
 =for comment
 
-    item:      add an item inside the menu               {item => ["command", "label", "icon"]},
-    cat:       add a category inside the menu             {cat => ["name", "label", "icon"]},
-    sep:       horizontal line separator                  {sep => undef}, {sep => "label"},
-    pipe:      a pipe menu entry                         {pipe => ["command", "label", "icon"]},
-    file:      include the content of an XML file        {file => "/path/to/file.xml"},
-    raw:       any XML data supported by Openbox          {raw => q(xml data)},
+    item:      add an item inside the menu          {item => ["command", "label", "icon"]},
+    cat:       add a category inside the menu       {cat => ["name", "label", "icon"]},
+    sep:       horizontal line separator            {sep => undef}, {sep => "label"},
+    pipe:      a pipe menu entry                    {pipe => ["command", "label", "icon"]},
+    file:      include the content of an XML file   {file => "/path/to/file.xml"},
+    raw:       any XML data supported by Openbox    {raw => q(xml data)},
     begin_cat: beginning of a category              {begin_cat => ["name", "icon"]},
-    end_cat:   end of a category                      {end_cat => undef},
+    end_cat:   end of a category                    {end_cat => undef},
     obgenmenu: generic menu settings                {obgenmenu => ["label", "icon"]},
-    exit:      default "Exit" action                     {exit => ["label", "icon"]},
+    exit:      default "Exit" action                {exit => ["label", "icon"]},
 
 =cut
 
@@ -45,10 +45,10 @@ our $SCHEMA = [
     {sep => undef},
     {begin_cat => ['Preferences', 'theme']},
     {begin_cat => ['Openbox', 'openbox']},
-    {item => ['obconf', 'Settings Editor', 'theme']},
+    {item => ['lxappearance', 'Settings Editor', 'theme']},
     {item => ['kickshaw', 'Menu Editor', 'openbox']},
-    {item => ['obkey', 'Keybind Editor', 'openbox']},
-    {item => ['ob-autostart', 'Autostart Editor',      'openbox']},
+    {item => ['lxhotkey', 'Keybind Editor', 'openbox']},
+    {item => ['ob-autostart', 'Autostart Editor', 'openbox']},
     {sep => undef},
     {item => ["exo-open ~/.config/openbox/menu.xml", 'Edit menu.xml', 'text-xml']},
     {item => ["exo-open ~/.config/openbox/rc.xml", 'Edit rc.xml', 'text-xml']},
@@ -79,7 +79,7 @@ our $SCHEMA = [
     {item => ['obmenu-generator -p', 'Generate a pipe menu', 'menu-editor']},
     {item => ['obmenu-generator -s -c', 'Generate a static menu', 'menu-editor']},
     {end_cat => undef},
-    {item => ["switchmenu -static", 'Switch Menu', 'menu-editor']},
+    {item => ["switchmenu --static", 'Switch Menu', 'menu-editor']},
     {pipe => ['manjaro-kb-pipemenu', 'Display Keybinds', 'cs-keyboard']},
     {pipe => ['manjaro-help-pipemenu', 'Help and Info', 'info']},
     {sep => undef},

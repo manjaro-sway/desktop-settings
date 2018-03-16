@@ -1,16 +1,12 @@
-# launch compton if enabled
+# compton
 manjaro-compositor --start &
 
 #$HOME/.config/setup &
 # enable numlock, commented out for laptop users
-numlockx on &
+# numlockx &
 
 # restore wallpaper
 nitrogen --restore &
-
-# start panel
-#sleep 1; manjaro-polybar-session &
-#sleep 1; polybar --config=$HOME/.config/polybar/config openbox-bar &
 
 # system tray
 sleep 1; trayer --edge bottom --align left --widthtype request --SetDockType false --expand true &
@@ -24,6 +20,5 @@ lxpolkit &
 # Required for xfce settings to work
 xfsettingsd &
 
-# set user shortcuts for file managers
+# Side shortcuts for file managers
 xdg-user-dirs-gtk-update &
-
