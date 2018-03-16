@@ -15,73 +15,8 @@ include-file = $HOME/.config/polybar/modules.conf
 inherit = bar/master
 
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor = HDMI1
+monitor =
 
-modules-left   = jgmenu config workspaces
+modules-left   = jgmenu workspaces menu
 modules-center = window_switch clock
 modules-right  = pkg memory temperature coreuse network volume
-
-; All available modules (some require configuration in modules.conf)
-; redshift github jgmenu filesystem mpd wired-network wireless-network battery menu volume-bar bspwm
-; pkg keyboard memory temperature coreuse network clock volume i3-workspaces workspaces window_switch
-
-
-;;;;;; Tray is commented out ;;;;;;;;
-;tray-position = center
-;tray-padding = 10
-;tray-background = ${colors.background}
-;tray-offset-x = 20%
-
-
-
-;=====================================================
-;     i3 Bars
-;=====================================================
-
-[bar/i3-bar]
-inherit = bar/master
-
-; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor =
-
-modules-left   = config i3 menu
-modules-center = clock
-modules-right  = pkg memory temperature coreuse network volume
-
-; All available modules (some require configuration in modules.conf)
-; redshift github filesystem jgmenu mpd wired-network wireless-network battery menu volume-bar bspwm
-; pkg keyboard memory temperature coreuse network clock volume i3-workspaces workspaces window_switch
-
-
-;;;;;; Tray is commented out ;;;;;;;;
-;tray-position = center
-;tray-padding = 10
-;tray-background = ${colors.background}
-;tray-offset-x = 20%
-
-
-
-;=====================================================
-;     Bspwm Bars
-;=====================================================
-
-[bar/bspwm-bar]
-inherit = bar/master
-
-; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor =
-
-modules-left   = bspwm menu
-modules-center = clock
-modules-right  = pkg memory temperature coreuse network volume
-
-; All available modules (some require configuration in modules.conf)
-; redshift github filesystem mpd jgmenu wired-network wireless-network battery menu volume-bar bspwm
-; pkg keyboard memory temperature coreuse network clock volume i3-workspaces workspaces window_switch
-
-
-;;;;;; Tray is commented out ;;;;;;;;
-;tray-position = center
-;tray-padding = 10
-;tray-background = ${colors.background}
-;tray-offset-x = 20%
