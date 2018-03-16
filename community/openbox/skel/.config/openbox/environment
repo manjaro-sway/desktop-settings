@@ -1,20 +1,17 @@
-#
-# User-specific variables should be placed in $HOME/.config/openbox/environment
-#
+# environment
+# vim:ft=sh
 
 # To set your language for displaying messages and time/date formats, use the following:
-LANG=en_US.UTF8
+# LANG=en_US.UTF8
 
-## GNOME Keyring
-export $(gnome-keyring-daemon --start --components=pkcs11,secrets)
+# GNOME Keyring
+export "$(gnome-keyring-daemon --start --components=pkcs11,secrets)"
 
 # xdg-open applications
 export XDG_CURRENT_DESKTOP=XFCE
 export DE="xfce"
 
-# D-bus with openbox
+# dbus with openbox
 if which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
-    eval `dbus-launch --sh-syntax --exit-with-session`
+    eval "$(dbus-launch --sh-syntax --exit-with-session)"
 fi
-
-QT_QPA_PLATFORMTHEME=qt5ct

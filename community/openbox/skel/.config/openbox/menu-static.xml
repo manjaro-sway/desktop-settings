@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/  file:///usr/share/openbox/menu.xsd">
   <menu id="root-menu" label="Openbox 3">
     <separator label="Manjaro Openbox"/>
     <item label="Terminal">
@@ -9,7 +9,7 @@
     </item>
     <item label="Web Browser">
       <action name="Execute">
-        <command>exo-open --launch FileManager</command>
+        <command>exo-open --launch WebBrowser</command>
       </action>
     </item>
     <item label="File Manager">
@@ -19,16 +19,16 @@
     </item>
     <item label="Text Editor">
       <action name="Execute">
-        <command>manjaro-open -edit</command>
+        <command>geany</command>
       </action>
     </item>
     <separator/>
     <menu id="accessories" label="Accessories">
-        <item label="Calculator">
-          <action name="Execute">
-            <command>galculator</command>
-          </action>
-        </item>
+      <item label="Calculator">
+        <action name="Execute">
+          <command>galculator</command>
+        </action>
+      </item>
       <item label="Archive Manager">
         <action name="Execute">
           <command>file-roller</command>
@@ -75,8 +75,7 @@
       </item>
     </menu>
     <separator/>
-    <menu execute="manjaro-places-pipemenu" id="pipe-placesmenu" label="Places"/>
-    <menu execute="manjaro-recent-files-pipemenu" id="pipe-recentfilesmenu" label="Recent Files"/>
+    <menu execute="manjaro-places-pipemenu --recent ~/" id="pipe-placesmenu" label="Places"/>
     <separator/>
     <menu id="preferences" label="Preferences">
       <menu id="obConfig" label="Openbox">
@@ -169,26 +168,27 @@
     <menu id="system-settings" label="System Settings">
       <item label="Package Manager">
         <action name="Execute">
-          <command>pamac-manager</command>
+          <command>termite --exec=pacli</command>
         </action>
       </item>
       <item label="Root File Manager">
         <action name="Execute">
-          <command>gksudo thunar</command>
+          <command>gksu thunar</command>
         </action>
       </item>
       <item label="GParted">
         <action name="Execute">
-          <command>gksudo gparted</command>
+          <command>gksu gparted</command>
         </action>
       </item>
     </menu>
     <menu execute="manjaro-help-pipemenu" id="help" label="Help and Info"/>
     <menu execute="manjaro-kb-pipemenu" id="keybinds" label="Keybinds"/>
+    <separator/>
     <item label="Switch Menu">
       <action name="Execute">
         <command>switchmenu -dynamic</command>
-      </action>
+      </action>"
     </item>
     <separator/>
     <item label="Lock Screen">
@@ -198,8 +198,10 @@
     </item>
     <item label="Exit Openbox">
       <action name="Execute">
-        <command>oblogout</command>
+        <command>rofr.sh -l</command>
       </action>
     </item>
   </menu>
 </openbox_menu>
+<!-- vim:sw=2
+-->

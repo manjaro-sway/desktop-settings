@@ -10,8 +10,8 @@ NAME="mail"
 PNAME="Mail"
 FAIL_MSG="No Apps Installed"
 
-CMD=(evolution geary thunderbird mailspring)
-DESC=(Evolution Geary Thunderbird Mailspring)
+CMD=(evolution geary thunderbird mailspring sylpheed)
+DESC=(Evolution Geary Thunderbird Mailspring Sylpheed)
 
 if ! . "/usr/lib/manjaro/common/manjaro-include.cfg" 2> /dev/null; then
     echo -e "[ERROR]: Failed to source /usr/lib/manjaro/common/manjaro-include.cfg"
