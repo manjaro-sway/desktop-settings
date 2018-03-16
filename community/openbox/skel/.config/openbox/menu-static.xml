@@ -193,7 +193,7 @@
     <separator/>
     <item label="Lock Screen">
       <action name="Execute">
-        <command>i3lock-fancy -p</command>
+        <command>i3lock</command>
       </action>
     </item>
     <item label="Exit Openbox">
