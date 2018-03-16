@@ -34,7 +34,7 @@ while getopts ":hvqwcbrl" opt; do
         r)
             rofi -modi run,drun -show drun -line-padding 4 \
                 -columns 2 -padding 50 -hide-scrollbar \
-                -show-icons -drun-icon-theme "Vibrancy-Full-Dark-Teal"
+                -show-icons -drun-icon-theme "Vibrancy-Dark-Tealqu"
             ;;
         w)
             rofi -modi window -show window -hide-scrollbar \
@@ -60,10 +60,10 @@ while getopts ":hvqwcbrl" opt; do
         l)
             ANS=$(echo " Lock| Logout| Reboot| Shutdown" | \
                 rofi -sep "|" -dmenu -i -p 'System: ' "" -width 20 \
-                -hide-scrollbar -eh 1 -line-padding 4 -padding 20 -lines 4)
+                -hide-scrollbar -eh 1)
             case "$ANS" in
-                *Lock) lock ;;
-                *Logout) session-logout ;;
+                *Lock) ob_blurlog ;;
+                *Logout) oblogout_blur ;;
                 *Reboot) systemctl reboot ;;
                 *Shutdown) systemctl poweroff
             esac
