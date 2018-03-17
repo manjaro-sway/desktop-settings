@@ -1,0 +1,71 @@
+2018-03-17	rc.xml KEYBINDS
+-------------------------------
+
+ 0	W-1           				GoToDesktop
+ 1	W-2           				GoToDesktop
+ 2	W-3           				GoToDesktop
+ 3	W-4           				GoToDesktop
+ 4	S-W-1         				SendToDesktop
+ 5	S-W-2         				SendToDesktop
+ 6	S-W-3         				SendToDesktop
+ 7	S-W-4         				SendToDesktop
+ 8	A-Tab         				NextWindow
+ 9	W-Tab         				NextWindow
+10	S-W-Left      				SendToDesktopLeft
+11	S-W-Right     				SendToDesktopRight
+12	S-W-Up        				SendToDesktopUp
+13	S-W-Down      				SendToDesktopDown
+14	A-Escape      				Lower
+15	XF86AudioRaiseVolume	pamixer -i 2
+16	XF86AudioLowerVolume	pamixer -d 2
+17	XF86AudioMute  			pamixer -t
+18	XF86AudioStop  			playerctl stop
+19	XF86AudioPlay  			playerctl play-pause
+20	XF86AudioPrev  			playerctl previous
+21	XF86AudioNext  			playerctl next
+22	XF86MonBrightnessUp	xbacklight +10
+23	XF86MonBrightnessDown	xbacklight -10
+24	Print         				scrot 'screenshot_%Y%m%d-%H%M%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir P.....
+25	A-Print       				scrot -d 5 'screenshot_%Y%m%d-%H%M%S_$wx$h.png' -e 'mv $f $$(xdg-user-.....
+26	W-f           				exo-open --launch FileManager
+27	W-t           				exo-open --launch TerminalEmulator
+28	W-w           				exo-open --launch WebBrowser
+29	W-e           				geany
+30	C-A-m         				xfce4-settings-manager
+31	W-m           				audacious
+32	W-v           				pavucontrol
+33	W-s           				skippy-xd
+34	A-F1          				rofr.sh -r
+35	C-space       				rofr.sh -r
+36	W-x           				rofr.sh -l
+37	C-A-Delete     			rofr.sh -l
+38	W-S-Escape     			Exit
+39	C-S-BackSpace  			Restart
+40	C-S-Enter     				Reconfigure
+41	W-Escape      				xkill
+42	A-F4          				Close
+43	A-F5          				Iconify
+44	A-F6          				ToggleMaximize
+45	A-F8          				ToggleDecorations
+46	W-d           				ToggleShowDesktop
+47	W-b           				ToggleDecorations
+48	A-r           				Resize
+49	A-m           				Move
+50	S-W-q         				Close
+51	W-space       				root-menu
+52	A-space       				client-menu
+53	W-KP_1        				UnmaximizeFull
+54	W-KP_2        				UnmaximizeFull
+55	W-KP_3        				UnmaximizeFull
+56	W-KP_4        				UnmaximizeFull
+57	W-KP_5        				MaximizeFull
+58	W-KP_6        				UnmaximizeFull
+59	W-KP_7        				UnmaximizeFull
+60	W-KP_8        				UnmaximizeFull
+61	W-KP_9        				UnmaximizeFull
+62	W-Right       				UnmaximizeFull
+63	W-Left        				UnmaximizeFull
+64	W-Up          				MaximizeFull
+65	W-Down        				UnmaximizeFull
+66	W-A-Left      				UnmaximizeFull
+67	W-A-Right     				UnmaximizeFull

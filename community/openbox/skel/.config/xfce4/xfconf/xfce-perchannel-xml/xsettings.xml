@@ -2,7 +2,7 @@
 
 <channel name="xsettings" version="1.0">
   <property name="Net" type="empty">
-    <property name="ThemeName" type="string" value="Adapta-Nokto-Eta-Breath"/>
+    <property name="ThemeName" type="string" value="Adapta-Nokto-Breath"/>
     <property name="IconThemeName" type="string" value="Vibrancy-Light-Teal"/>
     <property name="DoubleClickTime" type="empty"/>
     <property name="DoubleClickDistance" type="empty"/>
@@ -24,7 +24,7 @@
     <property name="CanChangeAccels" type="bool" value="false"/>
     <property name="ColorPalette" type="empty"/>
     <property name="FontName" type="string" value="Roboto 10"/>
-    <property name="MonospaceFontName" type="string" value="Ubuntu Mono Regular 10"/>
+    <property name="MonospaceFontName" type="string" value="DejaVu Sans Mono 10"/>
     <property name="IconSizes" type="empty"/>
     <property name="KeyThemeName" type="empty"/>
     <property name="ToolbarStyle" type="string" value="icons"/>

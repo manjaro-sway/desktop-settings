@@ -3,11 +3,20 @@
 <action>
 	<icon>utilities-terminal</icon>
 	<name>Open Terminal Here</name>
-	<unique-id>1521225558007588-1</unique-id>
+	<unique-id>1521317528494802-1</unique-id>
 	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
-	<description>Example for a custom action</description>
+	<description>Open terminal here</description>
 	<patterns>*</patterns>
 	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>system-file-manager</icon>
+	<name>Open a root Thunar here</name>
+	<unique-id>1521317741628820-3</unique-id>
+	<command>gksu thunar %f</command>
+	<description>Opening a root Thunar</description>
+	<patterns>*</patterns>
 	<directories/>
 </action>
 </actions>

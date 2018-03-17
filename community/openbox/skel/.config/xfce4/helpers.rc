@@ -1,3 +1,5 @@
 FileManager=Thunar
 TerminalEmulator=custom-TerminalEmulator
-WebBrowser=firefox
+WebBrowser=chromium
+MailReader=sylpheed
+
