@@ -27,8 +27,8 @@
 ! ------------------------------------------------------------------------------
 ! xterm
 ! ------------------------------------------------------------------------------
-xterm*font: Fantasque Sans Mono Regular
-xterm*faceName: Fantasque Sans Mono Regular:size=11:antialias=false
+xterm*font: Ubuntu Mono Regular
+xterm*faceName: Ubuntu Mono Regular:size=11:antialias=false
 xterm*loginShell: true
 xterm*vt100*geometry: 90x34
 xterm*saveLines: 2000
@@ -49,7 +49,7 @@ URxvt*scrollBar_right: false
 URxvt*internalBorder: 0
 URxvt*externalBorder: 0
 URxvt*letterSpace: -1
-URxvt.font: xft:Fantasque Sans Mono Regular:size=11
+URxvt.font: xft:Ubuntu Mono Regular:size=11
 URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
 URxvt.copyCommand: xclip -i -selection clipboard
 URxvt.pasteCommand: xclip -o -selection clipboard
@@ -71,7 +71,7 @@ URxvt*buffered: false
 UXTerm*termName: xterm-256color
 UXTerm*cursorColor: white
 UXTerm*VT100.geometry: 90x30
-UXTerm*font: Fantasque Sans Mono Regular
+UXTerm*font: Ubuntu Mono Regular
 UXTerm*faceSize: 12
 UXTerm*dynamicColors: true
 UXTerm*utf8: 2
@@ -88,7 +88,7 @@ UXTerm*toolBar: false
 ! ------------------------------------------------------------------------------
 ! Rofi
 ! ------------------------------------------------------------------------------
-rofi.font: Fantasque Sans Mono Regular 12
+rofi.font: Ubuntu Mono Regular 12
 rofi.color-enabled: true
 rofi.color-window: #2b303b, #2b303b, #2b303b
 rofi.color-normal: #2b303b, #c0c5ce, #2b303b, #8fa1b3, #2b303b
