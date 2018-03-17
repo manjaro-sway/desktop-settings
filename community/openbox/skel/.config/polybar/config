@@ -15,7 +15,7 @@ include-file = $HOME/.config/polybar/modules.conf
 inherit = bar/master
 
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor = HDMI-1
+monitor = 
 
 modules-left   = jgmenu workspaces menu
 modules-center = window_switch clock
