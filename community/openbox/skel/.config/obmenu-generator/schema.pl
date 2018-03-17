@@ -83,6 +83,6 @@ our $SCHEMA = [
     {pipe => ['manjaro-kb-pipemenu', 'Display Keybinds', 'cs-keyboard']},
     {pipe => ['manjaro-help-pipemenu', 'Help and Info', 'info']},
     {sep => undef},
-    {item => ['i3lock-fancy -p', 'Lock Screen', 'lock']},
-    {item => ['oblogout', 'Exit Openbox', 'exit']},
+    {item => ['lock -- scrot', 'Lock Screen', 'lock']},
+    {item => ['rofr.sh -l', 'Exit Openbox', 'exit']},
     ]

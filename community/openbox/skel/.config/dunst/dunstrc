@@ -1,5 +1,5 @@
 [global]
-    font = Ubuntu 11
+    font = Roboto Regular 11
     markup = yes
     format = "<b>%s</b>\n%b"
     sort = yes

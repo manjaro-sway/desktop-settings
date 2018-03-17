@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
     <strength>10</strength>
@@ -18,7 +19,7 @@
     <primaryMonitor>Mouse</primaryMonitor>
   </placement>
   <theme>
-    <name>Adapta-Nokto-Eta-Breath</name>
+    <name>Adapta-Nokto-Breath</name>
     <titleLayout>NLIMC</titleLayout>
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
@@ -153,7 +154,9 @@
       <action name="NextWindow">
         <allDesktops>yes</allDesktops>
         <finalactions>
-          <action name="SendToDesktop"><to>current</to></action>
+          <action name="SendToDesktop">
+            <to>current</to>
+          </action>
           <action name="focus"/>
           <action name="raise"/>
         </finalactions>
@@ -724,7 +727,7 @@
     <manageDesktops>yes</manageDesktops>
   </menu>
   <applications>
-    <application name="oblogout">
+    <application name="rofr.sh -l">
       <position force="no">
         <monitor>1</monitor>
       </position>
