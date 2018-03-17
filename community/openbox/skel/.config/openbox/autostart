@@ -17,8 +17,5 @@ ob-autostart -d &
 # PolicyKit authentication
 lxpolkit &
 
-# Required for xfce settings to work
-xfsettingsd &
-
 # Side shortcuts for file managers
 xdg-user-dirs-gtk-update &
