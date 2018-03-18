@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+# manjaro-tint2restart: a script to restart all tint2 instances
+# Copyright (C) 2015 damo <damo@bunsenlabs.org>
+# Copyright (C) 2015-2016 John Crawley <john@bunsenlabs.org>
+# Borrowed with love and modified by the Manjaro boys.
+
+case $1 in
+    -h|--help)
+        echo -e "manjaro-tint2-restart a script to restart all running instances of tint2
+        \nOptions:\n\t-h --help\tshow this message and exit\n\nNo other options are supported"
+        exit 0
+esac
+
+if ! [[ $(pidof tint2) ]]; then
+    echo "No tint2 processes found"
+    exit 0
+fi
+
+declare -A commands
+
+while read -r pid cmd; do
+    if [[ ${cmd%% *} = tint2 ]]; then
+        kill "$pid"
+        commands[$cmd]=1
+    fi
+done <<< "$(pgrep -a tint2)"
+
+sleep 1
+while read -r pid cmd; do
+    if [[ ${cmd%% *} = tint2 ]]; then
+        kill -KILL "$pid"
+        commands[$cmd]=1
+    fi
+done <<< "$(pgrep -a tint2)"
+
+sleep 1
+for i in "${!commands[@]}"; do
+    (setsid $i &)
+    sleep 0.1
+done
+
+exit 0

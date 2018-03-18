@@ -1,0 +1,83 @@
+#!/usr/bin/env bash
+
+# manjaro-polybar-pipemenu - an Openbox pipemenu for polybar manipulation
+# Written for Manjaro by Nathaniel Maia <natemaaia10@gmail.com> 2017
+
+readonly CPATH="$HOME/.config/polybar"
+readonly HELP='
+\tmanjaro-polybar-pipemenu an Openbox Pipe Menu for Polybar
+\tIt should normally be called from an openbox menu.
+\nOptions:
+\t-h --help   show this message
+\n\tIf manjaro-polybar-pipemenu is called with no options (the usual method),
+\tit will output an xml openbox pipemenu for handling polybar sessions,
+\tand editing configuration files.
+\nFor more information, see "man polybar"
+and "Help">"Polybar" in the Manjaro menu.'
+
+case "$@" in
+    -h|--help) echo -e "$HELP" ; exit 0
+esac
+
+CONFIG="$CPATH/config"
+if ! . "/usr/lib/manjaro/common/manjaro-include.cfg" 2>/dev/null; then
+    echo $"Error: Failed to source /usr/lib/manjaro/common/manjaro-include.cfg" ; exit 1
+fi
+
+Editmenu() {
+    if [[ $(pidof polybar) ]]; then
+        menuSeparator
+        menuSubmenu "RunningBar" "Running Bars"
+        while read -r pid cmd; do
+            if [[ ${cmd%% *} = polybar ]]; then
+                CONF=${cmd##* }
+                CONFIG=$HOME/.config/polybar/config
+                [[ $CONF = polybar ]] && CONF=$CONFIG
+                if hash exo-open &>/dev/null; then
+                    menuItem "$CONF" "exo-open $CONFIG"
+                elif hash termite &>/dev/null; then
+                    menuItem "$CONF" "termite -e '$EDITOR $CONFIG'"
+                elif hash st &>/dev/null; then
+                    menuItem "$CONF" "st -e $EDITOR $CONFIG"
+                elif hash urxvt &>/dev/null; then
+                    menuItem "$CONF" "urxvt -e '$EDITOR $CONFIG'"
+                fi
+            fi
+        done <<< "$(pgrep -a polybar)"
+        menuSubmenuEnd
+    fi
+}
+
+Configs() {
+    menuSubmenu "EditConfigs" "Edit Configs"
+    if hash manjaro-polybar-edit &>/dev/null; then
+        menuItem "Edit Configs" "manjaro-polybar-edit"
+    fi
+    Editmenu
+    menuSubmenuEnd
+}
+
+Launchmenu() {
+    if hash manjaro-polybar-session &>/dev/null && [[ -f "$CPATH/sessions/openbox-sessionfile" ]]; then
+        if [[ $(pidof polybar) ]]; then
+            menuItem "Restart Polybar" "manjaro-polybar-session"
+        else
+            menuItem "Start Polybar" "manjaro-polybar-session"
+        fi
+    fi
+    if type manjaro-polyzen &>/dev/null; then
+        menuItem "Polybar GUI" "manjaro-polyzen"
+    fi
+}
+
+Killmenu() {
+    if [[ "$(pidof polybar)" ]]; then
+        menuItem "Stop Bars" "pkill polybar"
+    fi
+}
+
+menuStart "Polybarmenu" "Polybar"
+Launchmenu
+Killmenu
+Configs
+menuEnd

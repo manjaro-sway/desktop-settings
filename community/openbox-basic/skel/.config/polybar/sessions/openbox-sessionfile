@@ -1,0 +1,8 @@
+# Polybar openbox Sessionfile
+# DO NO edit this file, it will be overwritten by manjaro-polyzen
+# Instead make a custom sessionfile and use the -z FILE or --session FILE option
+# To load session at startup use the following line
+
+# sleep 1; manjaro-polybar-session &
+
+$HOME/.config/polybar/config openbox-bar

@@ -1,0 +1,13 @@
+# environment
+# vim:ft=sh
+
+# To set your language for displaying messages and time/date formats, use the following:
+# LANG=en_US.UTF8
+
+# GNOME Keyring
+export "$(gnome-keyring-daemon --start --components=pkcs11,secrets)"
+
+# dbus with openbox
+if which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
+    eval "$(dbus-launch --sh-syntax --exit-with-session)"
+fi
