@@ -171,7 +171,7 @@
     <separator/>
     <item label="Lock Screen">
       <action name="Execute">
-        <command>lock -- scrot</command>
+        <command>lockscreen -- scrot</command>
       </action>
     </item>
     <item label="Exit Openbox">

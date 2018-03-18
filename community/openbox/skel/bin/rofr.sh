@@ -62,7 +62,7 @@ while getopts ":hvqwcbrl" opt; do
                 rofi -sep "|" -dmenu -i -p 'System: ' "" -width 20 \
                 -hide-scrollbar -eh 2)
             case "$ANS" in
-                *Lock) lock -- scrot ;;
+                *Lock) lockscreen -- scrot ;;
                 *Logout) loginctl terminate-session $(loginctl session-status | head -n 1 | awk '{print $1}') ;;
                 *Reboot) systemctl reboot ;;
                 *Shutdown) systemctl poweroff
