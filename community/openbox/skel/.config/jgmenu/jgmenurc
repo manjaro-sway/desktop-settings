@@ -27,15 +27,15 @@ item_border      = 0
 sep_height       = 5
 
 icon_size        = 24
-font             = Ubuntu 12px
+font             = Ubuntu Nerd Font Book 12px
 
 sub_hover_action = 1
 terminal_exec    = termite
 terminal_args    = -e
 
-color_menu_bg    = #2c2c2c 100
+color_menu_bg    = #29353B 100
 color_menu_fg    = #8fa1b3 100
-color_norm_bg    = #2c2c2c 0
+color_norm_bg    = #29353B 0
 color_norm_fg    = #8fa1b3 100
 color_sel_bg     = #8fa1b3 60
 color_sel_fg     = #2b303b 100

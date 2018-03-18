@@ -1,5 +1,5 @@
 [global]
-    font = Roboto Regular 11
+    font = Ubuntu Nerd Font Book 11
     markup = yes
     format = "<b>%s</b>\n%b"
     sort = yes
@@ -34,17 +34,17 @@
 [shortcuts]
 
 [urgency_low]
-    background = "#2c2c2c"
+    background = "#29353B"
     foreground = "#c0c5ce"
     timeout = 3
 
 [urgency_normal]
-    background = "#2c2c2c"
+    background = "#29353B"
     foreground = "#c0c5ce"
     timeout = 3
 
 [urgency_critical]
-    background = "#2c2c2c"
+    background = "#29353B"
     foreground = "#bf616a"
     frame_color = "#bf616a"
     timeout = 5

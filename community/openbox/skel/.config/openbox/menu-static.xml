@@ -7,14 +7,14 @@
         <command>exo-open --launch TerminalEmulator</command>
       </action>
     </item>
-    <item label="Web Browser">
-      <action name="Execute">
-        <command>exo-open --launch WebBrowser</command>
-      </action>
-    </item>
     <item label="File Manager">
       <action name="Execute">
         <command>exo-open --launch FileManager</command>
+      </action>
+    </item>
+    <item label="Web Browser">
+      <action name="Execute">
+        <command>exo-open --launch WebBrowser</command>
       </action>
     </item>
     <item label="Text Editor">
@@ -32,6 +32,13 @@
       <item label="Archive Manager">
         <action name="Execute">
           <command>xarchiver</command>
+        </action>
+      </item>
+    </menu>
+    <menu id="office" label="Office">
+      <item label="PDF Viewer">
+        <action name="Execute">
+          <command>epdfview</command>
         </action>
       </item>
       <item label="Picture Viewer">
@@ -139,7 +146,7 @@
       </item>
       <item label="Screen Layout">
         <action name="Execute">
-          <command>lxrandr</command>
+          <command>arandr</command>
         </action>
       </item>
     </menu>

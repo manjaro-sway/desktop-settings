@@ -6,11 +6,11 @@
 rounded = 0
 border_width = 3
 border_sides = T
-background_color = #2c2c2c 0
+background_color = #29353B 0
 border_color = #1793d1 100
-background_color_hover = #2c2c2c 20
+background_color_hover = #29353B 20
 border_color_hover = #1793d1 100
-background_color_pressed = #2c2c2c 20
+background_color_pressed = #29353B 20
 border_color_pressed = #1793d1 100
 
 # Background 2: Default task, Iconified task
@@ -19,20 +19,20 @@ border_width = 0
 border_sides = TBLR
 background_color = #000000 0
 border_color = #000000 0
-background_color_hover = #2c2c2c 20
-border_color_hover = #2c2c2c 20
-background_color_pressed = #2c2c2c 20
-border_color_pressed = #2c2c2c 20
+background_color_hover = #29353B 20
+border_color_hover = #29353B 20
+background_color_pressed = #29353B 20
+border_color_pressed = #29353B 20
 
 # Background 3: Urgent task
 rounded = 0
 border_width = 3
 border_sides = T
-background_color = #2c2c2c 0
+background_color = #29353B 0
 border_color = #e64141 100
-background_color_hover = #2c2c2c 20
+background_color_hover = #29353B 20
 border_color_hover = #e64141 100
-background_color_pressed = #2c2c2c 20
+background_color_pressed = #29353B 20
 border_color_pressed = #e64141 100
 
 # Background 4: Inactive desktop name, Inactive taskbar
@@ -41,9 +41,9 @@ border_width = 0
 border_sides = LR
 background_color = #2b303b 80
 border_color = #000000 0
-background_color_hover = #2c2c2c 20
+background_color_hover = #29353B 20
 border_color_hover = #000000 0
-background_color_pressed = #2c2c2c 20
+background_color_pressed = #29353B 20
 border_color_pressed = #000000 0
 
 # Background 5: Active desktop name, Active taskbar, Battery, Button, Clock, Launcher, Systray
@@ -166,6 +166,7 @@ launcher_tooltip = 1
 launcher_item_app = /usr/share/applications/exo-file-manager.desktop
 launcher_item_app = /usr/share/applications/exo-terminal-emulator.desktop
 launcher_item_app = /usr/share/applications/geany.desktop
+launcher_item_app = /usr/share/applications/l3afpad.desktop
 launcher_item_app = /usr/share/applications/exo-web-browser.desktop
 
 #-------------------------------------

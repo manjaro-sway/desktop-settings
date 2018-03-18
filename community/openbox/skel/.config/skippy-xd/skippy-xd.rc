@@ -41,11 +41,12 @@ offsetX = 20
 offsetY = 20
 align = left
 border = #EFF0F1
-background = #212121
+#background = #212121
+background = #29353B
 opacity = 240
 text = #EFF0F1
 textShadow = none
-font = Fantasque Sans Mono Regular 12
+font = Ubuntu Nerd Font Book 12
 
 [bindings]
 miwMouse1 = focus
