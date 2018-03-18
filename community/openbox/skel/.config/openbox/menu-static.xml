@@ -31,7 +31,7 @@
       </item>
       <item label="Archive Manager">
         <action name="Execute">
-          <command>file-roller</command>
+          <command>xarchiver</command>
         </action>
       </item>
       <item label="Picture Viewer">
@@ -59,18 +59,6 @@
       <item label="Screenshot With Selection">
         <action name="Execute">
           <command>scrot -s 'screenshot_%Y%m%d-%H%M%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PICTURES) ; gpicview $$(xdg-user-dir PICTURES)/$f'</command>
-        </action>
-      </item>
-    </menu>
-    <menu id="multimedia" label="Multimedia">
-      <item label="Music Player">
-        <action name="Execute">
-          <command>lxmusic</command>
-        </action>
-      </item>
-      <item label="Video Player">
-        <action name="Execute">
-          <command>mpv --player-operation-mode=pseudo-gui</command>
         </action>
       </item>
     </menu>
@@ -133,11 +121,6 @@
         </action>
       </item>
       <separator/>
-      <item label="Appearance">
-        <action name="Execute">
-          <command>xfce4-appearance-settings</command>
-        </action>
-      </item>
       <item label="Wallpaper">
         <action name="Execute">
           <command>nitrogen</command>
@@ -149,11 +132,6 @@
         </action>
       </item>
       <separator/>
-      <item label="Settings Manager">
-        <action name="Execute">
-          <command>xfce4-settings-manager</command>
-        </action>
-      </item>
       <item label="Audio Settings">
         <action name="Execute">
           <command>pavucontrol</command>
@@ -203,5 +181,3 @@
     </item>
   </menu>
 </openbox_menu>
-<!-- vim:sw=2
--->

@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+# conky editor: will find conky files in ~/.config/conky, and allow opening them
+# Original concept by damo <damo@bunsenlabs.org> for BunsenLabs Linux, April 2015
+# Re Written by Nathaniel Maia For Manjaro, December 2017
+
+readonly TITLE="Manjaro Conky Edit"
+readonly ICON="--window-icon=/usr/share/icons/manjaro/maia/48x48.png"
+readonly TEXT="<big>Select Conkys to edit from the list</big>"
+readonly CHECKLIST="zenity --width=400 --height=500 $ICON --list --checklist --multiple"
+
+if [[ -d $HOME/.config/conky ]]; then
+    readonly FILES=($(find -L "$HOME/.config/conky" -maxdepth 4 -type f))
+    for file in "${FILES[@]}"; do
+        name=$(basename "$file")
+        if [[ $name = *conkyrc ]] || [[ $name = *conky ]]; then
+            LIST="$LIST FALSE $name"
+        fi
+    done
+else
+    MSG="<big>No conky configs found</big>\n\nConfigs must be located in:\n$HOME/.config/conky"
+    zenity --info --width=300 --height=150 $ICON --text="$MSG" &>/dev/null ; exit 0
+fi
+
+ANSWER=$($CHECKLIST --title="$TITLE" --text="$TEXT" --separator=" " --column="Select" --column="Conky Name" $LIST)
+if [[ $? == 1 ]]; then
+    exit 0
+else
+    for name in $ANSWER; do
+        for file in "${FILES[@]}"; do
+            if [[ $(basename "$file") = "$name" ]]; then
+                if hash exo-open &>/dev/null; then
+                    (exo-open "$file" &) ; break
+                elif hash termite &>/dev/null; then
+                    (termite -e "$EDITOR $file" &>/dev/null) ; break
+                elif hash st &>/dev/null; then
+                    (st -e $EDITOR $file &) ; break
+                elif hash urxvt &>/dev/null; then
+                    (urxvt -e "$EDITOR $file" &) ; break
+                fi
+            fi
+        done
+    done
+fi
+
+exit 0

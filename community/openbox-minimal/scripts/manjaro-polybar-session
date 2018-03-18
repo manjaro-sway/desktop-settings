@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+
+# manjaro-polybar-session: Polybar session launcher script for Manjaro
+# Copyright (C) 2017 Nathaniel Maia <natemaia10@gmail.com>
+
+if ! hash polybar read &>/dev/null; then
+    echo "[ERROR]: Missing Commands. It is required to install 'polybar' 'readline'" ; exit 1
+fi
+
+if ! [[ $WM ]]; then
+    readonly window_Managers=(bspwm i3 openbox xfce awesome)
+    for i in "${window_Managers[@]}"; do
+        if [[ $(wmctrl -m | grep -i name | awk '{print tolower($2)}') == "$i" ]]; then
+            readonly WM=$i ; break
+        elif [[ $(xprop -root -notype | grep "WM_NAME =" | tr -d '"' | awk '{print tolower($3)}') == "$i" ]]; then
+            readonly WM=$i ; break
+        elif [[ $(awk '{print tolower($0)}' <<< "$XDG_CURRENT_DESKTOP") == "$i" ]]; then
+            readonly WM=$i ; break
+        fi
+    done
+fi
+
+readonly CONFPATH="$HOME/.config/polybar"
+if [[ "$WM" ]]; then
+    SESSIONFILE="$CONFPATH/sessions/$WM-sessionfile"
+else
+    SESSIONFILE="$CONFPATH/sessions/sessionfile"
+fi
+
+readonly HELP='\nUSAGE:\n\tmanjaro-polybar-session [OPTIONS] [SESSIONFILE]
+\nOPTIONS:
+\t-h, --help\tPrint this usage message and exit
+\t-z, --session\tUse passed sessionfile instead of default
+\nEXAMPLES:\n\n\tRun the default session\n\t"manjaro-polybar-session &"
+\n\tLoad a session saved in ~/.sessionfile\n\t"manjaro-polybar-session -z $HOME/.sessionfile"
+\n\nSessions are handled on a per WM basis, for each WM, a WM-sessionfile will be created
+The script will launch the right session for each WM
+Bars in a session can be chosen by running "manjaro-polyzen" or manually configure sessionfile
+\n\nTo have session run at startup add the following line to your autostart:
+\n\tsleep1; manjaro-polybar-session &'
+
+start_Session() {
+    if [[ -f $SESSIONFILE ]]; then
+        [[ $(pidof polybar) ]] && pkill polybar
+        while read -r c b; do
+            if [[ "$c $b" =~ ^#.*$ ]] || ! ([[ $c ]] && [[ $b ]]) || ! [[ -f "$c" ]]; then
+                continue
+            else
+                polybar --reload --config="$c" "$b" &
+            fi
+        done < "$SESSIONFILE"
+    else
+        echo -e "No sessionfile found
+        \n\tPlease setup your config directory then run 'manjaro-polyzen' to setup a sessionfile in\n\n\t'$CONFPATH'"
+    fi
+    sleep 0.5
+    if ! [[ $(pidof polybar) ]] && hash manjaro-polyzen &>/dev/null; then
+        manjaro-polyzen &
+    fi
+}
+
+case $1 in
+    *help|-h) echo -e "$HELP" ; exit 0 ;;
+    -z|*session)
+        for arg in "$@"; do
+            if [[ -f $arg ]]; then
+                SESSIONFILE="$arg"
+            fi
+        done
+esac
+
+start_Session
+
+exit 0

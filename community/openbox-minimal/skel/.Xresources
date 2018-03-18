@@ -1,0 +1,95 @@
+! ------------------------------------------------------------------------------
+! theme colors
+! ------------------------------------------------------------------------------
+! special
+*.foreground: #c0c5ce
+*.background: #2b303b
+*.cursorColor: #c0c5ce
+
+*.color0: #2b303b
+*.color1: #bf616a
+*.color2: #a3be8c
+*.color3: #ebcb8b
+*.color4: #8fa1b3
+*.color5: #b48ead
+*.color6: #96b5b4
+*.color7: #65737e
+
+*.color8: #65737e
+*.color9: #bf616a
+*.color10: #a3be8c
+*.color11: #ebcb8b
+*.color12: #8fa1b3
+*.color13: #b48ead
+*.color14: #96b5b4
+*.color15: #F6F6F6
+
+! ------------------------------------------------------------------------------
+! xterm
+! ------------------------------------------------------------------------------
+xterm*font: DejaVu Sans Mono Book
+xterm*faceName: DejaVu Sans Mono Book:size=11:antialias=false
+xterm*loginShell: true
+xterm*vt100*geometry: 90x34
+xterm*saveLines: 2000
+xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*termName: xterm-256color
+xterm*eightBitInput: false
+
+! ------------------------------------------------------------------------------
+! URxvt
+! -----------------------------------------------------------------------------
+URxvt*saveline: 15000
+URxvt*termName: rxvt-256color
+URxvt*iso14755: false
+URxvt*depth: 32
+URxvt*background: [90]#2b303b
+URxvt*scrollBar: false
+URxvt*scrollBar_right: false
+URxvt*internalBorder: 0
+URxvt*externalBorder: 0
+URxvt*letterSpace: -1
+URxvt.font: xft:DejaVu Sans Mono Book:size=11
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
+URxvt.copyCommand: xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
+URxvt.keysym.m-c: perl:clipboard:copy
+URxvt.keysym.m-v: perl:clipboard:paste
+URxvt.urlLauncher: exo-open
+URxvt.underlineURLs: true
+URxvt.urlButton: 1
+URxvt.geometry: 90x30
+URxvt.tabbed.tabbar-fg: 4
+URxvt.tabbed.tabbar-bg: 16
+URxvt.tabbed.tab-fg: 15
+URxvt.tabbed.tab-bg: 4
+URxvt*buffered: false
+
+! ------------------------------------------------------------------------------
+! UXTerm
+! ------------------------------------------------------------------------------
+UXTerm*termName: xterm-256color
+UXTerm*cursorColor: white
+UXTerm*VT100.geometry: 90x30
+UXTerm*font: DejaVu Sans Mono Book
+UXTerm*faceSize: 12
+UXTerm*dynamicColors: true
+UXTerm*utf8: 2
+UXTerm*eightBitInput: true
+UXTerm*saveLines: 10000
+UXTerm*scrollKey: true
+UXTerm*scrollTtyOutput: false
+UXTerm*scrollBar: false
+UXTerm*rightScrollBar: false
+UXTerm*jumpScroll: true
+UXTerm*multiScroll: true
+UXTerm*toolBar: false
+
+! ------------------------------------------------------------------------------
+! Rofi
+! ------------------------------------------------------------------------------
+rofi.font: DejaVu Sans Mono Book 12
+rofi.color-enabled: true
+rofi.color-window: #2b303b, #2b303b, #2b303b
+rofi.color-normal: #2b303b, #c0c5ce, #2b303b, #8fa1b3, #2b303b
+rofi.separator-style: solid

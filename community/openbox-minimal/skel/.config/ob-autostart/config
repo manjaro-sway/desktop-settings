@@ -1,0 +1,7 @@
+# OB_Autostart config
+LAUNCH_LIST = [
+	 ("Enable skippy-xd window switcher","skippy-xd --config $HOME/.config/skippy-xd/skippy-xd.rc --start-daemon","1","*"),
+	 ("polybar","polybar -r openbox-bar","1","*"),
+	 ("Xcape Superkey","xcape -e 'Super_L=Alt_L|F1'","1","*"),
+	 ("Enable window snapping","opensnap --daemon -c /etc/opensnap","1","*"),
+	]
