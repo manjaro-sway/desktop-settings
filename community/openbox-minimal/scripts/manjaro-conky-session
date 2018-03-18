@@ -1,0 +1,86 @@
+#!/usr/bin/env bash
+
+#  Read saved Manjaro Conky session file(s) and start the conkys
+#  Written by damo <damo@bunsenlabs.org> for BunsenLabs Linux, April 2015
+#  Renamed and Rewritten for Manjaro and zenity
+#
+#  To start the default conky session at login, add the following line
+#  to config/openbox/autostart:
+#     (sleep 2s && manjaro-conky-session --autostart) &
+
+readonly CPATH="$HOME/.config/conky"
+readonly ICON="/usr/share/icons/Manjaro-Light/64x64/places/distributor-logo-archlabs.png"
+readonly DLG="zenity --question --width=220 --height=120 --window-icon=$ICON"
+readonly USAGE="\vUSAGE:\tmanjaro-conky-session [OPTION(S)]...FILES
+\n\tWith no command argument, the script uses the default
+\t\"\$CONKYPATH/conky-session\" sessionfile
+\vOPTIONS:\n\t--default\t: specify default sessionfile
+\t--autostart\t: no \"kill conky\" option asked for
+\tpath/to/sessionfile1  /path/to/sessionfile2 etc
+\vEXAMPLES:
+\tRun specified sessionfile at login:
+\t\"manjaro-conky-session --autostart /path/to/sessionfile\"
+\v\tRun default sessionfile, without killing running conkys:
+\t\"manjaro-conky-session --autostart\"
+\v\tRun several conky sessionfiles (option to kill conkys first):
+\t\"manjaro-conky-session --default sessionfile1 sessionfile2 etc\""
+
+# mutable session file
+SESSIONFILE="$CPATH/conky-sessionfile"
+
+findArgs() {
+    local i=0
+    for arg in "$@";do
+        if [[ $arg = "--default" ]]; then
+            arg=$SESSIONFILE
+        fi
+        if [[ $arg = "--autostart" ]]; then
+            NOKILL=1
+        fi
+        if [[ -f $arg ]]; then
+            rawArr[$i]=$arg
+            i=$((i + 1))
+        fi
+    done
+    if [[ ${#rawArr[@]} != 0 ]]; then
+        sessArr=($(printf "%s\n" "${rawArr[@]}" | sort -u))
+        if [[ $NOKILL = 0 ]]; then
+            killConkys
+        fi
+        for SESSION in "${sessArr[@]}"; do
+            source "$SESSION"
+        done
+    else
+        if [[ -f $SESSIONFILE ]] && [[ $NOKILL == 1 ]]; then
+            source "$SESSIONFILE"
+        else
+            echo -e "ERROR: sessionfile \"$SESSIONFILE\" not found. Using default"
+            conky -c "$CPATH/Manjaro.conkyrc"
+            exit 0
+        fi
+    fi
+}
+
+killConkys() {
+    if [[ $(pidof conky) ]]; then
+        if $DLG --title="Manjaro Conky Session" --text="<big>Kill running conkys first?</big>" &>/dev/null; then
+            killall conky ; sleep 0.2s
+        fi
+    fi
+}
+
+NOKILL=0
+if [[ $# == 0 ]]; then
+    killConkys
+    if ! [[ -f "$SESSIONFILE" ]]; then
+        echo -e "ERROR: sessionfile \"$SESSIONFILE\" not found. Using default" ; conky -c "$CPATH/Manjaro.conkyrc" ; exit 0
+    else
+        source "$SESSIONFILE"
+    fi
+elif [[ $1 = "-h" ]] || [[ $1 = "--help" ]]; then
+    echo -e "$USAGE" ; exit 0
+else
+    findArgs "$@"
+fi
+
+exit 0

@@ -1,0 +1,193 @@
+#!/usr/bin/env bash
+
+# Script to set the position of a moveable Conky
+# Written by @damo and @johnraff, November 2015 with major contributions by @xaos52
+# Borrowed by Manjaro
+
+readonly ICON="--window-icon=/usr/share/icons/manjaro/maia/48x48.png"
+readonly DIALOG="zenity --info $ICON"
+readonly QUESTION="zenity --question $ICON"
+# unset CONKYPATH posX_1 posY_1 posX_2 posY_2 OFFSET_X OFFSET_Y gapX gapY
+
+# makes array "config"
+parse_conkyfile(){
+    [[ -f $1 ]] || { echo "$1 is not a file." >&2;return 1;}
+    unset config
+    declare -Ag config
+    local name value
+    while read -r name value; do
+        [[ $name ]] || continue
+        [[ $name = TEXT* ]] && break
+        config["$name"]="$value"
+    done < <(sed 's/\#.*$//' "$1")
+}
+
+# usage: edit_conkyfile file name=value [name2=value2...]
+# use absolute path to file
+# parse_conkyfile should already have been run
+edit_conkyfile() {
+    [[ "$1" = /* ]] || {
+        echo "$0: $1 is not an absolute path." >&2
+        return 1
+    }
+    file=$1
+    shift
+    local name value
+    declare -ag sed_args
+    while [[ $1 ]]; do
+        unset name value sed_pattern sed_replace
+        name="${1%%=*}"
+        value="${1#*=}"
+        shift
+        [[ ${config["$name"]+x} ]] || {
+            echo "$0: config key $name does not exist" >&2
+            return 1
+        }
+        [[ ${config["$name"]//[[:space:]]} = "${value//[[:space:]]}" ]] && continue
+        (( ${#sed_args[@]} == 0 )) && sed_args=("-ri")
+        sed_pattern="^ *$name .*$"
+        grep -q "#conkymove, original value for $name:" "$file" ||
+        sed_replace="#conkymove, original value for $name: ${config[$name]}\n"
+        sed_replace+="$name $value"
+        sed_args+=("-e")
+        sed_args+=("s/$sed_pattern/$sed_replace/")
+    done
+    (( ${#sed_args[@]} )) && sed "${sed_args[@]}" "$file"
+}
+
+getStart() {    #   Get initial Conky position
+    unset CONKYPATH info1
+    declare -A info1
+    while read line; do
+        unset key value
+        [[ $line =~ Window\ id: ]] && {
+            ID=${line#*id:}
+            ID=${ID% \"*}
+        }
+        [[ $line != xwininfo:* && $line = *:* ]] && {
+            key=${line%:*}
+            value=${line#*:}
+            info1[$key]=$value
+        }
+    done < <(xwininfo)
+    # info now contains all the output of xwininfo
+
+    CMD=$(xprop -id "$ID"  WM_COMMAND | awk -F '", "' '{
+    cmd=$1
+    sub(/^.*{ "/,"",cmd)
+    for (i=1;i<=NF;i++)
+        if($i ~ /-([a-zA-Z])?c/){
+            i++
+            sub(/\" }$/,"",$i)
+            gsub(/\\\"/,"\"",$i)
+            print cmd,$i
+            exit
+        }
+        }'
+    )
+
+    if [[ ${CMD%% *} = conky ]];then
+        echo "Found a conky"
+        CONKYPATH=${CMD#* }
+        posX_1=${info1[Absolute upper-left X]}
+        posY_1=${info1[Absolute upper-left Y]}
+    else
+        echo "Selection is not a conky"
+        MSG="<big>Selection is not a conky</big>\n\nChoose again?"
+        $QUESTION --height=150 --width=200 --text="$MSG"
+        if [[ $? == 1 ]];then
+            exit 0
+        fi
+        getStart
+    fi
+}
+
+getFinish() {   #   Get new Conky position
+    unset info2
+    declare -A info2
+    while read -r line; do
+        unset key value
+        [[ $line != xwininfo:* && $line = *:* ]] && {
+            key=${line%:*}
+            value=${line#*:}
+            info2[$key]=$value
+        }
+    done < <(xwininfo -id "$ID")
+    posX_2=${info2[Absolute upper-left X]}
+    posY_2=${info2[Absolute upper-left Y]}
+}
+
+getOffset() {   # parse_conkyfile should already have been run
+    if [[ ${config[alignment]} = none ]]; then   # placement managed by Openbox
+        TXT="<big>This Conky has 'alignment none'</big>\nSo placement is handled by the Window Manager.\n"
+        $DIALOG --text="$TXT" --height=200 --width=300
+        exit 0
+    fi
+
+    OFFSET_X=$(( posX_2 - posX_1 ))
+    OFFSET_Y=$(( posY_2 - posY_1 ))
+
+    case ${config[alignment]} in
+        tr|top_right|mr|middle_right|br|bottom_right|mm|middle_middle|bm|bottom_middle|tm|top_middle)
+            gapX=$((${config[gap_x]} - OFFSET_X))
+            ;;
+        tl|top_left|ml|middle_left|bl|bottom_left)
+            gapX=$((${config[gap_x]} + OFFSET_X))
+            ;;
+    esac
+    case ${config[alignment]} in
+        tr|top_right|tl|top_left|tm|top_middle)
+            gapY=$((${config[gap_y]} + OFFSET_Y))
+            ;;
+        br|bottom_right|bl|bottom_left|bm|bottom_middle|mm|middle_middle|ml|middle_left|mr|middle_right)
+            gapY=$((${config[gap_y]} - OFFSET_Y))
+            ;;
+    esac
+}
+
+## check necessary tools are installed
+required_commands=(xwininfo xprop zenity) # array, space-separated words
+
+error_exit() {
+    echo "$0 error: $1" >&2
+    exit 1
+}
+
+missing_commands=()
+for i in "${required_commands[@]}"; do
+    hash "$i" || missing_commands+=(" $i")
+done
+[[ ${missing_commands[0]} ]] && error_exit "This script requires the following commands: ${missing_commands[*]}
+Please install the packages containing the missing commands and rerun the script."
+
+XMSG="<big>Click 'OK' to pick a conky</big>\nThen use the 'xwininfo' cursor\non the chosen conky to record its position."
+$QUESTION --text="$XMSG" --height=200 --width=300
+
+if [[ $? == 0 ]]; then
+    getStart
+elif [[ $? == 1 ]]; then
+    echo "  Cancelled: exiting..."
+    exit 0
+else
+    echo "  Cancelled: exiting..."
+    exit 0
+fi
+
+ZMSG="<big>Move the Conky to the desired location</big>\nAlt+L-mousebutton to drag.\n\nClick 'OK' to set the new position."
+$QUESTION --text="$ZMSG" --height=200 --width=300 --ok-label=Ok --cancel-label=Cancel
+
+if (( $? == 0 )); then
+    getFinish
+elif (( $? == 1 )); then
+    echo "  Cancelled: exiting..."
+    exit 0
+else
+    echo "  Cancelled: exiting..."
+    exit 0
+fi
+
+parse_conkyfile "$CONKYPATH"
+getOffset
+edit_conkyfile "$CONKYPATH" "gap_x"=$gapX "gap_y"=$gapY
+
+exit 0

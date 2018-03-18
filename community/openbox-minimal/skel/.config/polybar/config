@@ -1,0 +1,22 @@
+;=====================================================
+;     File Includes
+;=====================================================
+
+[section/base]
+include-file = $HOME/.config/polybar/master.conf
+include-file = $HOME/.config/polybar/modules.conf
+
+
+;=====================================================
+;     Openbox Bars
+;=====================================================
+
+[bar/openbox-bar]
+inherit = bar/master
+
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor = 
+
+modules-left   = jgmenu workspaces menu
+modules-center = window_switch clock
+modules-right  = pkg memory temperature coreuse network volume
