@@ -27,7 +27,7 @@ item_border      = 0
 sep_height       = 5
 
 icon_size        = 24
-font             = Ubuntu Nerd Font Book 12px
+font             = Roboto Regular 12px
 
 sub_hover_action = 1
 terminal_exec    = termite
