@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon=preferences-desktop-keyboard
+Icon[en_US]=preferences-desktop-keyboard
+Name[en_US]=Keybindings
+Exec=sxhkdrc
+Comment[en_US]=Edit sxhkdrc
+Name=Keybindings
+Comment=Edit sxhkdrc
