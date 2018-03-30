@@ -1,6 +1,6 @@
 #!/bin/dash
 if [ -z "$@" ]; then
-	site=startpage.com
+	site=google.com
 else
 	site="$@"
 fi
