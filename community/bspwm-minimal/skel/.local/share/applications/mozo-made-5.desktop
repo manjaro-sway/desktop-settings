@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=true
+Icon=preferences-desktop-sound
+Icon[en_US]=preferences-desktop-sound
+Name[en_US]=Bspwm rules
+Exec=bspwm-ruler
+Comment[en_US]=Edit bspwm rules interactively
+Name=Bspwm rules
+Comment=Edit bspwm rules interactively
