@@ -54,5 +54,5 @@ srandrd atorandr.sh --change
 ## Notify about package updates
 update-checker 7200 &
 xcape -e 'Super_L=Super_L|Shift_L|space' &
-#dbus-launch gsettings set org.mate.NotificationDaemon theme 'slider' && sed -i '/gsettings/d' ~/.config/bspwm/autostart &
+dbus-launch gsettings set org.mate.NotificationDaemon theme 'slider' && sed -i '/gsettings/d' ~/.config/bspwm/autostart &
 #lxpolkit &

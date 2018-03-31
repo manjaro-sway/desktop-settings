@@ -86,3 +86,4 @@ volumes-visible=true
 
 [org.nemo.preferences]
 bulk-rename-tool=[]
+thumbnail-limit=1073741824
