@@ -13,6 +13,7 @@ Options:
      -q      Persistant calculator dialog
      -w      Switch between open windows
      -r      Program launcher & run dialog
+     -m      Manjaro click
      -c      Select previous clipboard entries
      -b      Browser search by keyword
      -l      Session logout choice
@@ -21,7 +22,7 @@ EOF
 }
 
 #  Handle command line arguments
-while getopts ":hvqwcbrl" opt; do
+while getopts ":hvqwcbmrl" opt; do
     case $opt in
         h)
             _usage
@@ -31,36 +32,46 @@ while getopts ":hvqwcbrl" opt; do
             echo -e "$Name -- Version $Version"
             exit 0
             ;;
-        r)
-            rofi -modi run,drun -show drun -line-padding 4 \
-                -columns 2 -padding 50 -hide-scrollbar \
-                -show-icons -drun-icon-theme "Vibrancy-Light-Tealqu"
-            ;;
-        w)
-            rofi -modi window -show window -hide-scrollbar \
-                -eh 1 -padding 50 -line-padding 4
-            ;;
         q)
             rofi -modi "calc:qalc +u8 -nocurrencies" -padding 50 \
                 -show "calc:qalc +u8 -nocurrencies" -line-padding 4 \
-                -hide-scrollbar
+                -hide-scrollbar -font "Source Code Pro 12"
+            ;;
+        w)
+            rofi -modi window -show window -hide-scrollbar \
+                -eh 1 -padding 50 -line-padding 4 \
+                -font "Source Code Pro 12"
             ;;
         c)
             rofi -modi "clipboard:greenclip print" -padding 50 \
                 -line-padding 4 -show "clipboard:greenclip print" \
-                -hide-scrollbar
+                -hide-scrollbar -font "Source Code Pro 12"
             ;;
         b)
             surfraw -browser="$BROWSER" $(sr -elvi | awk -F'-' '{print $1}' \
                 | sed '/:/d' | awk '{$1=$1};1' | rofi -hide-scrollbar \
                 -kb-row-select 'Tab' -kb-row-tab 'Control+space' \
                 -dmenu -mesg 'Tab for Autocomplete' -i -p 'Web Search: ' \
-                -padding 50 -line-padding 4)
+                -padding 50 -line-padding 4 -font "Source Code Pro 12")
+            ;;
+        m)
+            rofi -location 1 -yoffset 40 -xoffset 10 \
+                -modi run,drun -show drun -line-padding 4 \
+                -columns 2 -padding 50 -hide-scrollbar \
+                -show-icons -drun-icon-theme "Vibrancy-Light-Teal" \
+                -font "Source Code Pro 12"
+            ;;
+        r)
+            rofi -modi run,drun -show drun -line-padding 4 \
+                -columns 2 -padding 50 -hide-scrollbar \
+                -show-icons -drun-icon-theme "Vibrancy-Light-Teal" \
+                -font "Source Code Pro 12"
             ;;
         l)
             ANS=$(echo " Lock| Logout| Reboot| Shutdown" | \
                 rofi -sep "|" -dmenu -i -p 'System: ' "" -width 20 \
-                -hide-scrollbar -eh 1 -line-padding 4 -padding 50 -lines 4)
+                -hide-scrollbar -eh 1 -line-padding 4 -padding 50 \
+                -lines 4 -font "Source Code Pro 12")
             case "$ANS" in
                 *Lock) lockscreen -- scrot ;;
                 *Logout) loginctl terminate-session $(loginctl session-status | head -n 1 | awk '{print $1}') ;;

@@ -1,5 +1,5 @@
 [global]
-    font = Ubuntu Nerd Font Book 11
+    font = Source Code Pro 11
     markup = yes
     format = "<b>%s</b>\n%b"
     sort = yes
