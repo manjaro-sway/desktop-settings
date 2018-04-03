@@ -18,5 +18,5 @@ inherit = bar/master
 monitor = 
 
 modules-left   = manjaro workspaces
-modules-center = window_switch clock
-modules-right  = pkg memory temperature coreuse network volume
+modules-center = clock
+modules-right  = window_switch pkg memory temperature coreuse network volume
