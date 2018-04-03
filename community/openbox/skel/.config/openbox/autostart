@@ -7,7 +7,6 @@ manjaro-compositor --start &
 
 # restore wallpaper
 nitrogen --restore &
-sleep 1; manjaro-polybar-session &
 
 # system tray
 sleep 1; trayer --edge bottom --align left --widthtype request --SetDockType false --expand true &
