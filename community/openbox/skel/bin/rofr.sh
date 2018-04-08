@@ -35,43 +35,40 @@ while getopts ":hvqwcbmrl" opt; do
         q)
             rofi -modi "calc:qalc +u8 -nocurrencies" -padding 50 \
                 -show "calc:qalc +u8 -nocurrencies" -line-padding 4 \
-                -hide-scrollbar -font "DejaVu Sans Mono Book 12"
+                -hide-scrollbar
             ;;
         w)
             rofi -modi window -show window -hide-scrollbar \
-                -eh 1 -padding 50 -line-padding 4 \
-                -font "DejaVu Sans Mono Book 12"
+                -eh 1 -padding 50 -line-padding 4
             ;;
         c)
             rofi -modi "clipboard:greenclip print" -padding 50 \
                 -line-padding 4 -show "clipboard:greenclip print" \
-                -hide-scrollbar -font "DejaVu Sans Mono Book 12"
+                -hide-scrollbar
             ;;
         b)
             surfraw -browser="$BROWSER" $(sr -elvi | awk -F'-' '{print $1}' \
                 | sed '/:/d' | awk '{$1=$1};1' | rofi -hide-scrollbar \
                 -kb-row-select 'Tab' -kb-row-tab 'Control+space' \
                 -dmenu -mesg 'Tab for Autocomplete' -i -p 'Web Search: ' \
-                -padding 50 -line-padding 4 -font "DejaVu Sans Mono Book 12")
+                -padding 50 -line-padding 4)
             ;;
         m)
             rofi -location 1 -yoffset 40 -xoffset 10 \
                 -modi run,drun -show drun -line-padding 4 \
                 -columns 2 -padding 50 -hide-scrollbar \
-                -show-icons -drun-icon-theme "Vibrancy-Light-Teal" \
-                -font "DejaVu Sans Mono Book 12"
+                -show-icons -drun-icon-theme "Vibrancy-Light-Teal" 
             ;;
         r)r
             rofi -modi run,drun -show drun -line-padding 4 \
                 -columns 2 -padding 50 -hide-scrollbar \
-                -show-icons -drun-icon-theme "Vibrancy-Light-Teal" \
-                -font "DejaVu Sans Mono Book 12"
+                -show-icons -drun-icon-theme "Vibrancy-Light-Teal" 
             ;;
         l)
             ANS=$(echo " Lock| Logout| Reboot| Shutdown" | \
                 rofi -sep "|" -dmenu -i -p 'System: ' "" -width 20 \
                 -hide-scrollbar -eh 1 -line-padding 4 -padding 50 \
-                -lines 4 -font "DejaVu Sans Mono Book 12")
+                -lines 4)
             case "$ANS" in
                 *Lock) lockscreen -- scrot ;;
                 *Logout) loginctl terminate-session $(loginctl session-status | head -n 1 | awk '{print $1}') ;;
