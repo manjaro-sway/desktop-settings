@@ -165,18 +165,17 @@ startup_notifications = 1
 launcher_tooltip = 1
 launcher_item_app = /usr/share/applications/exo-file-manager.desktop
 launcher_item_app = /usr/share/applications/exo-terminal-emulator.desktop
-launcher_item_app = /usr/share/applications/l3afpad.desktop
-launcher_item_app = /usr/share/applications/geany.desktop
+launcher_item_app = /usr/share/applications/scite.desktop
 launcher_item_app = /usr/share/applications/exo-web-browser.desktop
 
 #-------------------------------------
 # Clock
 time1_format = %H:%M
 time2_format =
-time1_font = Source Code Pro 12
+time1_font = DejaVu Sans Mono Book 12
 time1_timezone =
 time2_timezone =
-time2_font = Source Code Pro Light 0
+time2_font = DejaVu Sans Mono Book 0
 clock_font_color = #ffffff 100
 clock_padding = 10 4
 clock_background_id = 5
@@ -194,8 +193,8 @@ battery_tooltip = 1
 battery_low_status = 20
 battery_low_cmd = notify-send "Battery Low"
 battery_full_cmd =
-bat1_font = Source Code Pro 11
-bat2_font = Source Code Pro 0
+bat1_font = DejaVu Sans Mono Book 11
+bat2_font = DejaVu Sans Mono Book 0
 battery_font_color = #b5b5b5 100
 bat1_format =
 bat2_format =
@@ -233,5 +232,5 @@ tooltip_hide_timeout = 0
 tooltip_padding = 10 6
 tooltip_background_id = 6
 tooltip_font_color = #d8d8d8 100
-tooltip_font = Source Code Pro 10
+tooltip_font = DejaVu Sans Mono Book 10
 
