@@ -13,7 +13,7 @@ picture-uri='file:///usr/share/backgrounds/cinnamon_default.jpg'
 cursor-theme='xcursor-breeze-snow'
 font-name='Cantarell 10'
 gtk-theme='Adapta-Nokto-Eta-Maia'
-icon-theme='Vibrancy-Full-Dark-Teal'
+icon-theme='Papirus-Adapta-Nokto-Maia'
 
 [org.cinnamon.desktop.screensaver]
 ask-for-away-message=false
