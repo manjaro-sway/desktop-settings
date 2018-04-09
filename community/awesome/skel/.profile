@@ -8,7 +8,7 @@ PATH="/usr/local/sbin:/usr/local/bin:/usr/bin/core_perl:/usr/bin"
 export PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CONFIG_DIRS=/usr/etc/xdg:/etc/xdg
-export GUI_EDITOR=/usr/bin/gedit
+export GUI_EDITOR=/usr/bin/mousepad
 export BROWSER=/usr/bin/chromium
 export TERMINAL=/usr/bin/terminal
 export EDITOR=/usr/bin/micro
