@@ -251,7 +251,7 @@
     </keybind>
     <keybind key="W-e">
       <action name="Execute">
-        <command>geany</command>
+        <command>scite</command>
       </action>
     </keybind>
     <keybind key="C-A-m">

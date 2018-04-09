@@ -19,7 +19,7 @@
     </item>
     <item label="Text Editor">
       <action name="Execute">
-        <command>l3afpad</command>
+        <command>scite</command>
       </action>
     </item>
     <separator/>
@@ -31,7 +31,7 @@
       </item>
       <item label="Archive Manager">
         <action name="Execute">
-          <command>xarchiver</command>
+          <command>engrampa</command>
         </action>
       </item>
     </menu>
@@ -153,7 +153,7 @@
     <menu id="system-settings" label="System Settings">
       <item label="Package Manager">
         <action name="Execute">
-          <command>termite --exec=pacui</command>
+          <command>pamac</command>
         </action>
       </item>
       <item label="Root File Manager">

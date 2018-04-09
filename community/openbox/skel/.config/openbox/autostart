@@ -16,7 +16,7 @@ sleep 1; manjaro-polybar-session &
 ob-autostart -d &
 
 # PolicyKit authentication
-lxpolkit &
+mate-polkit &
 
 # Side shortcuts for file managers
 xdg-user-dirs-gtk-update &
