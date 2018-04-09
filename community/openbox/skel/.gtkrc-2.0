@@ -3,7 +3,7 @@
 
 gtk-theme-name="Adapta-Nokto-Breath"
 gtk-icon-theme-name="Vibrancy-Light-Teal"
-gtk-font-name="Ubuntu Light 10"
+gtk-font-name="Roboto Regular 10"
 gtk-cursor-theme-name="xcursor-breeze-snow"
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_ICONS

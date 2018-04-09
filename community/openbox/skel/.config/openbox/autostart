@@ -6,11 +6,11 @@ manjaro-compositor --start &
 # numlockx &
 
 # restore wallpaper
-nitrogen --restore &
+sleep 1; nitrogen --restore &
 sleep 1; manjaro-polybar-session &
 
 # system tray
-sleep 1; trayer --edge bottom --align left --widthtype request --SetDockType false --expand true &
+#sleep 1; trayer --edge bottom --align left --widthtype request --SetDockType false --expand true &
 
 # Openbox autostart
 ob-autostart -d &

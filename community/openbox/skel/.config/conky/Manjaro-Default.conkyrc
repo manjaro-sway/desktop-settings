@@ -47,7 +47,7 @@ draw_outline = false,
 
 extra_newline = false,
 format_human_readable = true,
-font = 'UbuntuMono Nerd Font Regular:size=11',
+font = 'DejaVu Sans Mono Book:size=11',
 max_text_width = 0,
 max_user_text = 16384,
 override_utf8_locale = true,
