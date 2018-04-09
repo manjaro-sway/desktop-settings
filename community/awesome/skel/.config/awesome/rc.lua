@@ -13,10 +13,9 @@ local hotkeys_popup = require("awful.hotkeys_popup").widget
 -- Lain
 local lain = require("lain")
 -- Freedesktop menu
-local freedesktop = require("freedesktop")
+-- local freedesktop = require("freedesktop")
 -- Enable VIM help for hotkeys widget when client with matching name is opened:
-require("awful.hotkeys_popup.keys.vim")
-
+-- require("awful.hotkeys_popup.keys.vim")
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -96,26 +95,26 @@ end
 
 -- {{{ Menu
 -- Create a launcher widget and a main menu
-myawesomemenu = {
-    { "hotkeys", function() return false, hotkeys_popup.show_help end },
-    { "manual", terminal .. " -e man awesome" },
-    { "edit config", string.format("%s -e %s %s", terminal2, editor, awesome.conffile) },
-    { "restart", awesome.restart },
-    { "quit", function() awesome.quit() end }
-}
-mymainmenu = freedesktop.menu.build({
-    before = {
-        { "Awesome", myawesomemenu, beautiful.awesome_icon },
+--myawesomemenu = {
+--    { "hotkeys", function() return false, hotkeys_popup.show_help end },
+--    { "manual", terminal .. " -e man awesome" },
+--    { "edit config", string.format("%s -e %s %s", terminal2, editor, awesome.conffile) },
+--    { "restart", awesome.restart },
+--    { "quit", function() awesome.quit() end }
+--}
+-- mymainmenu = freedesktop.menu.build({
+    -- before = {
+        -- { "Awesome", myawesomemenu, beautiful.awesome_icon },
         -- other triads can be put here
-    },
-    after = {
-        { "Open terminal", terminal },
+    -- },
+    -- after = {
+        -- { "Open terminal", terminal },
         -- other triads can be put here
-    }
-})
+    -- }
+-- })
 
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
-                                     menu = mymainmenu })
+                                     command = "/usr/bin/rofimenu" })
 
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
@@ -133,29 +132,7 @@ darkblue    = theme.bg_focus
 blue        = "#9EBABA"
 red         = "#EB8F8F"
 seperator = wibox.widget.textbox(' <span color="' .. blue .. '">| </span>')
-volseperator = wibox.widget.textbox(' <span color="' .. blue .. '">| Vol:</span>')
-
--- Battery
-batwidget = lain.widget.bat({
-    battery = "BAT0",
-    settings = function()
-        if bat_now.perc == "N/A" then
-            perc = "AC"
-        elseif tonumber(bat_now.perc) <= 15 then
-            perc = markup(red, bat_now.perc .. "%")
-        else
-            perc = bat_now.perc .. "%"
-        end
-        widget:set_markup(markup(blue, "Bat:") .. perc)
-    end
-})
-
--- load the widget code
-local volume_control = require("volume-control")
-
-
--- define your volume control, using default settings:
-volumecfg = volume_control({})
+spacer = wibox.widget.textbox(' <span color="' .. blue .. '"> </span>')
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -253,25 +230,21 @@ awful.screen.connect_for_each_screen(function(s)
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
-            layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
-            seperator,
-            wibox.widget.systray(),
-          --  volseperator,
-          --  volumecfg.widget,
-		  --  seperator,
-          --  batwidget,
-            seperator,
-            mytextclock,
-            s.mylayoutbox,
-        },
+                    layout = wibox.layout.fixed.horizontal,
+                    mykeyboardlayout,
+                    seperator,
+                    wibox.widget.systray(),
+                    seperator,
+                    mytextclock,
+                    s.mylayoutbox,
+                },
     }
 end)
 -- }}}
 
 -- {{{ Mouse bindings
 root.buttons(gears.table.join(
-    awful.button({ }, 3, function () mymainmenu:toggle() end),
+    awful.button({ }, 3, function () awful.util.spawn("rofimenu -desktop") end),
     awful.button({ }, 4, awful.tag.viewnext),
     awful.button({ }, 5, awful.tag.viewprev)
 ))
@@ -665,11 +638,4 @@ end
 --end)
 
 awful.util.spawn_with_shell("~/.config/awesome/autorun.sh")
-
--- add key bindings for volume
-local globalkeys = awful.util.table.join(
-    awful.key({}, "XF86AudioRaiseVolume", function() volumecfg:up() end),
-    awful.key({}, "XF86AudioLowerVolume", function() volumecfg:down() end),
-    awful.key({}, "XF86AudioMute",        function() volumecfg:toggle() end)
-)
 
