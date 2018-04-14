@@ -10,9 +10,9 @@ NAME="terminals"
 PNAME="Terminals"
 FAIL_MSG="No Apps Installed"
 
-CMD=(terminator tilda tilix urxvt st termite xfce4-terminal xterm)
+CMD=(terminator tilda tilix urxvt st termite xfce4-terminal xterm lxterminal)
 DESC=(Terminator Tilda Tilix Rxvt-Unicode "Suckless Terminal" Termite
-      Xfce4-terminal Xterm)
+      Xfce4-terminal Xterm "LX Terminal")
 
 if ! . "/usr/lib/manjaro/common/manjaro-include.cfg" 2>/dev/null; then
     echo -e "[ERROR]: Failed to source /usr/lib/manjaro/common/manjaro-include.cfg" ; exit 1

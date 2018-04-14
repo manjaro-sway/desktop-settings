@@ -142,8 +142,8 @@
     </keybind>
     <keybind key="A-Tab">
       <action name="NextWindow">
-        <allDesktops>yes</allDesktops>
         <raise>yes</raise>
+        <allDesktops>yes</allDesktops>
         <finalactions>
           <action name="Focus"/>
           <action name="UnshadeRaise"/>
@@ -155,7 +155,7 @@
         <allDesktops>yes</allDesktops>
         <finalactions>
           <action name="SendToDesktop">
-            <to>current</to>
+            <desktop>1</desktop>
           </action>
           <action name="focus"/>
           <action name="raise"/>
@@ -735,5 +735,3 @@
     </application>
   </applications>
 </openbox_config>
-<!-- vim:sw=2
--->

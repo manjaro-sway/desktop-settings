@@ -46,7 +46,7 @@ background = #29353B
 opacity = 240
 text = #EFF0F1
 textShadow = none
-font = DejaVu Sans Mono Book 12
+font = Ubuntu Nerd Font Book 12
 
 [bindings]
 miwMouse1 = focus

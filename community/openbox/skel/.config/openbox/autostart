@@ -1,9 +1,11 @@
+~/.screenlayout/dual-head.sh &
+
 # compton
-manjaro-compositor --start &
+sleep 1; manjaro-compositor --start &
 
 #$HOME/.config/setup &
 # enable numlock, commented out for laptop users
-# numlockx &
+sleep 1; numlockx &
 
 # restore wallpaper
 sleep 1; nitrogen --restore &
@@ -13,10 +15,10 @@ sleep 1; manjaro-polybar-session &
 #sleep 1; trayer --edge bottom --align left --widthtype request --SetDockType false --expand true &
 
 # Openbox autostart
-ob-autostart -d &
+sleep 1; ob-autostart -d &
 
 # PolicyKit authentication
-mate-polkit &
+sleep 1; lxpolkit &
 
 # Side shortcuts for file managers
 xdg-user-dirs-gtk-update &

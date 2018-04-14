@@ -55,20 +55,19 @@ while getopts ":hvqwcbmrl" opt; do
             ;;
         m)
             rofi -location 1 -yoffset 40 -xoffset 10 \
-                -modi run,drun -show drun -line-padding 4 \
+                -modi run,drun -show drun -line-padding 50 \
                 -columns 2 -padding 50 -hide-scrollbar \
-                -show-icons -drun-icon-theme "Vibrancy-Light-Teal" 
+                -show-icons -drun-icon-theme "Vibrancy-Light-Teal"
             ;;
-        r)r
-            rofi -modi run,drun -show drun -line-padding 4 \
+        r)
+            rofi -modi run,drun -show drun -line-padding 50 \
                 -columns 2 -padding 50 -hide-scrollbar \
                 -show-icons -drun-icon-theme "Vibrancy-Light-Teal" 
             ;;
         l)
             ANS=$(echo " Lock| Logout| Reboot| Shutdown" | \
-                rofi -sep "|" -dmenu -i -p 'System: ' "" -width 20 \
-                -hide-scrollbar -eh 1 -line-padding 4 -padding 50 \
-                -lines 4)
+                rofi -sep "|" -dmenu -i -p 'System ' "" -width 20 \
+                -hide-scrollbar -eh 1 -line-padding 4 -padding 50 -lines 4)
             case "$ANS" in
                 *Lock) lockscreen -- scrot ;;
                 *Logout) loginctl terminate-session $(loginctl session-status | head -n 1 | awk '{print $1}') ;;

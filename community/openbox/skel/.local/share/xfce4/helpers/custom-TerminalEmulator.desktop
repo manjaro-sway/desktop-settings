@@ -4,8 +4,9 @@ Version=1.0
 Encoding=UTF-8
 Type=X-XFCE-Helper
 X-XFCE-Category=TerminalEmulator
-X-XFCE-CommandsWithParameter=termite "%s"
-Icon=utilities-terminal
-Name=Termite
-X-XFCE-Commands=termite
+X-XFCE-CommandsWithParameter=/usr/sbin/lxterminal "%u"
+Icon=lxterminal
+Name=lxterminal
+X-XFCE-Commands=/usr/sbin/lxterminal
 GenericName=Termite
+
