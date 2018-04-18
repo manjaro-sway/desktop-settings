@@ -430,7 +430,7 @@
         <command>rofr.sh -r</command>
       </action>
     </keybind>
-    <keybind key="W-x">
+    <keybind key="C-A-l">
       <action name="Execute">
         <command>rofr.sh -l</command>
       </action>

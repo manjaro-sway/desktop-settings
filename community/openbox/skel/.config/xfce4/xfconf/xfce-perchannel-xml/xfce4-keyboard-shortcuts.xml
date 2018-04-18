@@ -23,13 +23,13 @@
       <property name="&lt;Alt&gt;F2" type="empty">
         <property name="startup-notify" type="bool" value="false"/>
       </property>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="string" value="i3lock-fancy"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="string" value="i3lock-fancy"/>
       <property name="XF86Mail" type="string" value="exo-open --launch MailReader"/>
       <property name="XF86Display" type="string" value="xfce4-display-settings --minimal"/>
       <property name="XF86WWW" type="string" value="exo-open --launch WebBrowser"/>
       <property name="&lt;Super&gt;p" type="string" value="xfce4-display-settings --minimal"/>
       <property name="override" type="bool" value="true"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="string" value="rofr.sh -l"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="string" value="rofr.sh -l"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
