@@ -1,0 +1,68 @@
+o W-1             	GoToDesktop
+o W-2             	GoToDesktop
+o W-3             	GoToDesktop
+o W-4             	GoToDesktop
+o S-W-1           	SendToDesktop
+o S-W-2           	SendToDesktop
+o S-W-3           	SendToDesktop
+o S-W-4           	SendToDesktop
+o A-Tab           	NextWindow
+o W-Tab           	NextWindow
+o S-W-Left        	SendToDesktopLeft
+o S-W-Right       	SendToDesktopRight
+o S-W-Up          	SendToDesktopUp
+o S-W-Down        	SendToDesktopDown
+o A-Escape        	Lower
+x XF86AudioRaiseVolume	pamixer -i 2
+x XF86AudioLowerVolume	pamixer -d 2
+x XF86AudioMute   	pamixer -t
+x XF86AudioStop   	playerctl stop
+x XF86AudioPlay   	playerctl play-pause
+x XF86AudioPrev   	playerctl previous
+x XF86AudioNext   	playerctl next
+x XF86MonBrightnessUp	xbacklight +10
+x XF86MonBrightnessDown	xbacklight -10
+x Print           	scrot 'screenshot_%Y%m%d-%H%M%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PICTURES) ; gpicview $$(xdg-user-dir PICTURES)/$f'
+x A-Print         	scrot -d 5 'screenshot_%Y%m%d-%H%M%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PICTURES) ; gpicview $$(xdg-user-dir PICTURES)/$f'
+x W-f             	exo-open --launch FileManager
+x W-t             	exo-open --launch TerminalEmulator
+x W-w             	exo-open --launch WebBrowser
+x W-e             	subl3
+x C-A-m           	xfce4-settings-manager
+x W-m             	audacious
+x W-v             	pavucontrol
+x W-s             	skippy-xd
+x A-F1            	rofr.sh -r
+x C-space         	rofr.sh -r
+x W-x             	rofr.sh -l
+x C-A-Delete      	rofr.sh -l
+o W-S-Escape      	Exit
+o C-S-BackSpace   	Restart
+o C-S-Enter       	Reconfigure
+x W-Escape        	xkill
+o A-F4            	Close
+o A-F5            	Iconify
+o A-F6            	ToggleMaximize
+o A-F8            	ToggleDecorations
+o W-d             	ToggleShowDesktop
+o W-b             	ToggleDecorations
+o A-r             	Resize
+o A-m             	Move
+o S-W-q           	Close
+o W-space         	root-menu
+o A-space         	client-menu
+o W-KP_1          	UnmaximizeFull
+o W-KP_2          	UnmaximizeFull
+o W-KP_3          	UnmaximizeFull
+o W-KP_4          	UnmaximizeFull
+o W-KP_5          	MaximizeFull
+o W-KP_6          	UnmaximizeFull
+o W-KP_7          	UnmaximizeFull
+o W-KP_8          	UnmaximizeFull
+o W-KP_9          	UnmaximizeFull
+o W-Right         	UnmaximizeFull
+o W-Left          	UnmaximizeFull
+o W-Up            	MaximizeFull
+o W-Down          	UnmaximizeFull
+o W-A-Left        	UnmaximizeFull
+o W-A-Right       	UnmaximizeFull

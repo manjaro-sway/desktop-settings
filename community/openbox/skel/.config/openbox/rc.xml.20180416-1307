@@ -19,43 +19,43 @@
     <primaryMonitor>Mouse</primaryMonitor>
   </placement>
   <theme>
-    <name>Day</name>
+    <name>Mavos</name>
     <titleLayout>NLIMC</titleLayout>
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>Roboto</name>
-      <size>11</size>
+      <name>Roboto Medium</name>
+      <size>12</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveWindow">
-      <name>Roboto</name>
+      <name>Roboto weight=255</name>
       <size>11</size>
       <weight>Normal</weight>
-      <slant>Italic</slant>
+      <slant>Normal</slant>
     </font>
     <font place="MenuHeader">
-      <name>Roboto</name>
-      <size>11</size>
+      <name>Roboto Medium</name>
+      <size>13</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuItem">
       <name>Roboto</name>
-      <size>10</size>
+      <size>11</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Roboto</name>
-      <size>10</size>
+      <name>Roboto Medium</name>
+      <size>12</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Roboto</name>
-      <size>10</size>
+      <name>Roboto Medium</name>
+      <size>11</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
@@ -76,15 +76,15 @@
     <popupShow>Never</popupShow>
     <popupPosition>Center</popupPosition>
     <popupFixedPosition>
-      <x>10</x>
-      <y>10</y>
+      <x>20</x>
+      <y>20</y>
     </popupFixedPosition>
   </resize>
   <margins>
-    <top>0</top>
-    <bottom>0</bottom>
-    <left>0</left>
-    <right>0</right>
+    <top>50</top>
+    <bottom>50</bottom>
+    <left>50</left>
+    <right>50</right>
   </margins>
   <dock>
     <position>Floating</position>
@@ -99,7 +99,6 @@
     <moveButton>Middle</moveButton>
   </dock>
   <keyboard>
-    <chainQuitKey/>
     <keybind key="W-1">
       <action name="GoToDesktop">
         <to>1</to>
@@ -142,8 +141,8 @@
     </keybind>
     <keybind key="A-Tab">
       <action name="NextWindow">
-        <allDesktops>yes</allDesktops>
         <raise>yes</raise>
+        <allDesktops>yes</allDesktops>
         <finalactions>
           <action name="Focus"/>
           <action name="UnshadeRaise"/>
@@ -155,157 +154,11 @@
         <allDesktops>yes</allDesktops>
         <finalactions>
           <action name="SendToDesktop">
-            <to>current</to>
+            <desktop>1</desktop>
           </action>
           <action name="focus"/>
           <action name="raise"/>
         </finalactions>
-      </action>
-    </keybind>
-    <!-- Window Tiling: Snap feature -->
-    <keybind key="W-Left">
-      <action name="UnmaximizeFull"/>
-      <action name="MaximizeVert"/>
-      <action name="MoveResizeTo">
-        <width>50%</width>
-      </action>
-      <action name="MoveToEdgeWest"/>
-    </keybind>
-    <keybind key="W-Right">
-      <action name="UnmaximizeFull"/>
-      <action name="MaximizeVert"/>
-      <action name="MoveResizeTo">
-        <width>50%</width>
-      </action>
-      <action name="MoveToEdgeEast"/>
-    </keybind>
-    <keybind key="W-F">
-      <action name="MaximizeFull"/>
-    </keybind>
-    <keybind key="W-S-F">
-      <action name="UnmaximizeFull"/>
-    </keybind>
-    <keybind key="W-S-k">
-      <action name="Unmaximize"/>
-      <action name="MoveResizeTo">
-        <x>-15</x>
-        <y>15</y>
-        <height>96%</height>
-        <width>47%</width>
-      </action>
-    </keybind>
-    <keybind key="W-S-j">
-      <action name="Unmaximize"/>
-      <action name="MoveResizeTo">
-        <x>15</x>
-        <y>15</y>
-        <height>96%</height>
-        <width>47%</width>
-      </action>
-    </keybind>
-    <!-- Top right-->
-    <keybind key="W-k">
-      <action name="Unmaximize"/>
-      <action name="MoveResizeTo">
-        <x>-15</x>
-        <y>15</y>
-      </action>
-    </keybind>
-    <!-- Top left-->
-    <keybind key="W-h">
-      <action name="Unmaximize"/>
-      <action name="MoveResizeTo">
-        <x>15</x>
-        <y>15</y>
-      </action>
-    </keybind>
-    <!-- Bottom left-->
-    <keybind key="W-j">
-      <action name="Unmaximize"/>
-      <action name="MoveResizeTo">
-        <x>15</x>
-        <y>-15</y>
-      </action>
-    </keybind>
-    <!-- Bottom right-->
-    <keybind key="W-l">
-      <action name="Unmaximize"/>
-      <action name="MoveResizeTo">
-        <x>-15</x>
-        <y>-15</y>
-      </action>
-    </keybind>
-    <keybind key="W-z">
-      <action name="Unmaximize"/>
-      <action name="MoveResizeTo">
-        <x>15</x>
-        <y>15</y>
-        <height>97%</height>
-        <width>32%</width>
-      </action>
-    </keybind>
-    <keybind key="W-x">
-      <action name="Unmaximize"/>
-      <action name="MoveResizeTo">
-        <x>34%</x>
-        <y>15</y>
-        <height>97%</height>
-        <width>32%</width>
-      </action>
-    </keybind>
-    <keybind key="W-c">
-      <action name="Unmaximize"/>
-      <action name="MoveResizeTo">
-        <x>-17</x>
-        <y>15</y>
-        <height>97%</height>
-        <width>32%</width>
-      </action>
-    </keybind>
-    <!-- Move -->
-    <keybind key="W-Right">
-      <action name="MoveRelative">
-        <x>20</x>
-        <y>0</y>
-      </action>
-    </keybind>
-    <keybind key="W-Left">
-      <action name="MoveRelative">
-        <x>-20</x>
-        <y>0</y>
-      </action>
-    </keybind>
-    <keybind key="W-Up">
-      <action name="MoveRelative">
-        <x>0</x>
-        <y>-20</y>
-      </action>
-    </keybind>
-    <keybind key="W-Down">
-      <action name="MoveRelative">
-        <x>0</x>
-        <y>20</y>
-      </action>
-    </keybind>
-    <!-- Resize -->
-    <keybind key="W-S-Right">
-      <action name="ResizeRelative">
-        <right>20</right>
-      </action>
-    </keybind>
-    <keybind key="W-S-Left">
-      <action name="ResizeRelative">
-        <right>-20</right>
-      </action>
-    </keybind>
-    <keybind key="W-S-Down">
-      <action name="ResizeRelative">
-        <bottom>20</bottom>
-      </action>
-    </keybind>
-    <keybind key="W-S-Up">
-      <action name="ResizeRelative">
-        <bottom>-20</bottom>
       </action>
     </keybind>
     <keybind key="S-W-Left">
@@ -414,6 +267,7 @@
       <action name="Execute">
         <command>pavucontrol</command>
       </action>
+      <action name="Focus"/>
     </keybind>
     <keybind key="W-s">
       <action name="Execute">
@@ -873,7 +727,7 @@
     <manageDesktops>yes</manageDesktops>
   </menu>
   <applications>
-    <application name="oblogout">
+    <application name="rofr.sh -l">
       <position force="no">
         <monitor>1</monitor>
       </position>
@@ -881,5 +735,3 @@
     </application>
   </applications>
 </openbox_config>
-<!-- vim:sw=2
--->

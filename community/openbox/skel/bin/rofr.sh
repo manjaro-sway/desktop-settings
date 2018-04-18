@@ -57,12 +57,12 @@ while getopts ":hvqwcbmrl" opt; do
             rofi -location 1 -yoffset 40 -xoffset 10 \
                 -modi run,drun -show drun -line-padding 50 \
                 -columns 2 -padding 50 -hide-scrollbar \
-                -show-icons -drun-icon-theme "Vibrancy-Light-Teal"
+                -show-icons -drun-icon-theme "Vibrancy-Light-Orange"
             ;;
         r)
             rofi -modi run,drun -show drun -line-padding 50 \
                 -columns 2 -padding 50 -hide-scrollbar \
-                -show-icons -drun-icon-theme "Vibrancy-Light-Teal" 
+                -show-icons -drun-icon-theme "Vibrancy-Light-Orange" 
             ;;
         l)
             ANS=$(echo " Lock| Logout| Reboot| Shutdown" | \

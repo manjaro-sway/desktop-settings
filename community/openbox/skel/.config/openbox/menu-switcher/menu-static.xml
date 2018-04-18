@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <openbox_menu>
-
 <menu id="accessories" label="Accessories">
 	<item label="Calculator">
 		<action name="Execute">
@@ -155,9 +154,9 @@
 			<command>exo-preferred-applications</command>
 		</action>
 	</item>
-	<item label="System settings">
+	<item label="Keyboard and Mouse">
 		<action name="Execute">
-			<command>xfce4-settings-manager</command>
+			<command>lxinput</command>
 		</action>
 	</item>
 </menu>

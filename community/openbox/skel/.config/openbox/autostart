@@ -5,20 +5,20 @@ sleep 1; manjaro-compositor --start &
 
 #$HOME/.config/setup &
 # enable numlock, commented out for laptop users
-sleep 1; numlockx &
+numlockx &
 
 # restore wallpaper
 sleep 1; nitrogen --restore &
 sleep 1; manjaro-polybar-session &
 
-# system tray
-#sleep 1; trayer --edge bottom --align left --widthtype request --SetDockType false --expand true &
-
 # Openbox autostart
 sleep 1; ob-autostart -d &
 
+# Required for xfce settings to work
+xfsettingsd &
+
 # PolicyKit authentication
-sleep 1; lxpolkit &
+lxpolkit &
 
 # Side shortcuts for file managers
 xdg-user-dirs-gtk-update &
