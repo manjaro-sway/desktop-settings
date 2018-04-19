@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <openbox_menu>
+
 <menu id="accessories" label="Accessories">
 	<item label="Calculator">
 		<action name="Execute">
@@ -154,9 +155,9 @@
 			<command>exo-preferred-applications</command>
 		</action>
 	</item>
-	<item label="Keyboard and Mouse">
+	<item label="System settings">
 		<action name="Execute">
-			<command>lxinput</command>
+			<command>xfce4-settings-manager</command>
 		</action>
 	</item>
 </menu>
@@ -184,9 +185,9 @@
 		</action>
 	</item>
 	<separator/>
+	<menu id="applications" label="Applications" execute="/usr/bin/obmenu-generator -S ~/.config/obmenu-generator/applications.pl"/>
 	<menu id="accessories"/>
 	<menu id="screenshot"/>
-	<menu id="applications" label="Applications" execute="/usr/bin/openbox-menu lxde-applications.menu"/>
 	<separator/>
 	<menu id="pipe-placesmenu" label="Places" execute="manjaro-places-pipemenu --recent ~/"/>
 	<separator/>

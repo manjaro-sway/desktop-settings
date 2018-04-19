@@ -185,9 +185,9 @@
 		</action>
 	</item>
 	<separator/>
+	<menu id="applications" label="Applications" execute="/usr/bin/obmenu-generator -S ~/.config/obmenu-generator/applications.pl"/>
 	<menu id="accessories"/>
 	<menu id="screenshot"/>
-	<menu id="applications" label="Applications" execute="/usr/bin/openbox-menu lxde-applications.menu"/>
 	<separator/>
 	<menu id="pipe-placesmenu" label="Places" execute="manjaro-places-pipemenu --recent ~/"/>
 	<separator/>
