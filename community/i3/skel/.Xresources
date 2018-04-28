@@ -6,13 +6,13 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-XTerm*background:   #292f34
+XTerm*background:   #222D31
 XTerm*foreground:   #d8d8d8
 XTerm*pointerColor: #1ABB9B
 XTerm*faceName:     Fixed
 XTerm*faceSize:     11
 
-*background:                      #292f34
+*background:                      #222D31
 *foreground:                      #d8d8d8
 *fading:                          8
 *fadeColor:                       black
@@ -21,7 +21,7 @@ XTerm*faceSize:     11
 *pointerColorForeground:          #16A085
 
 !! black dark/light
-*color0:                          #292f34
+*color0:                          #222D31
 *color8:                          #585858
 
 !! red dark/light
@@ -55,7 +55,7 @@ XTerm*faceSize:     11
 Xcursor.theme: xcursor-breeze
 Xcursor.size:                     0
 
-XTerm*background:                 #292f34
+XTerm*background:                 #222D31
 XTerm*foreground:                 #d8d8d8
 XTerm*reverseVideo:               on
 XTerm*faceName:                   Terminus:size=11:antialias=true
@@ -69,7 +69,7 @@ URxvt.font:                       9x15,xft:TerminessTTFNerdFontMono
 !! terminus names see end of file!
 
 URxvt.depth:                      32
-URxvt.background:                 [100]#292f34
+URxvt.background:                 [100]#222D31
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true
