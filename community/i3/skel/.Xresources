@@ -1,16 +1,18 @@
-Xft.dpi: 96
+Xft.dpi:       96
 Xft.antialias: true
-Xft.hinting: true
-Xft.rgba: rgb
-Xft.autohint: false
+Xft.hinting:   true
+Xft.rgba:      rgb
+Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-XTerm*background:   #222D31
-XTerm*foreground:   #d8d8d8
-XTerm*pointerColor: #1ABB9B
-XTerm*faceName:     Fixed
-XTerm*faceSize:     11
+XTerm*background:        #222D31
+XTerm*foreground:        #d8d8d8
+XTerm*pointerColor:      #1ABB9B
+XTerm*faceName:          Fixed
+XTerm*faceSize:          11
+XTerm*reverseVideo:      on
+XTerm*selectToClipboard: true
 
 *background:                      #222D31
 *foreground:                      #d8d8d8
@@ -55,12 +57,6 @@ XTerm*faceSize:     11
 Xcursor.theme: xcursor-breeze
 Xcursor.size:                     0
 
-XTerm*background:                 #222D31
-XTerm*foreground:                 #d8d8d8
-XTerm*reverseVideo:               on
-XTerm*faceName:                   Terminus:size=11:antialias=true
-XTerm*selectToClipboard:          true
-
 URxvt.font:                       9x15,xft:TerminessTTFNerdFontMono
 
 ! alternative font settings with 'terminus':
@@ -102,7 +98,6 @@ URxvt.keysym.Shift-Control-Down:  \033[1;6B
 ! URxvt*termName:                   string
 ! URxvt*geometry:                   geometry
 ! URxvt*chdir:                      string
-! URxvt*reverseVideo:               boolean
 ! URxvt*loginShell:                 boolean
 ! URxvt*multiClickTime:             number
 ! URxvt*jumpScroll:                 boolean
