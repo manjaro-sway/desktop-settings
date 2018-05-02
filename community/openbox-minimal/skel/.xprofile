@@ -1,0 +1,22 @@
+# .xprofile
+# vim:ft=sh
+# lightdm sources this file at boot
+# as well as our own xinitrc with startx
+
+export XDG_CONFIG_HOME=$HOME/.config
+
+if [ -d "/sbin" ]; then
+    PATH="/sbin:$PATH"
+fi
+
+if [ -d "/usr/sbin" ]; then
+    PATH="/usr/sbin:$PATH"
+fi
+
+if [ -d "$HOME/bin" ]; then
+    PATH=$HOME/bin:$PATH
+fi
+
+if which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
+    eval "$(dbus-launch --sh-syntax --exit-with-session)"
+fi
