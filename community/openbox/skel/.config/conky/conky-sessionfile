@@ -1,1 +1,0 @@
-conky -c ~/.config/conky/Manjaro-Default.conkyrc & sleep 0.5
