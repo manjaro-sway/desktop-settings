@@ -334,14 +334,14 @@ bar {
 	strip_workspace_numbers yes
 
     colors {
-        background #283339
+        background #202A2E
         statusline #F9FAF9
         separator  #454947
 
 #                      border  backgr. text
         focused_workspace  #F9FAF9 #16a085 #292F34
         active_workspace   #595B5B #353836 #FDF6E3
-        inactive_workspace #595B5B #283339 #EEE8D5
+        inactive_workspace #595B5B #202A2E #EEE8D5
         binding_mode       #16a085 #2C2C2C #F9FAF9
         urgent_workspace   #16a085 #FDF6E3 #E5201D
     }
@@ -365,8 +365,8 @@ bindsym $mod+m bar mode toggle
 #############################
 
 # Set inner/outer gaps
-gaps inner 10
-gaps outer -4
+gaps inner 14
+gaps outer -2
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
