@@ -1,0 +1,21 @@
+[preferences/editor]
+insert-spaces=true
+bracket-matching=true
+auto-indent=true
+scheme='classic'
+background-pattern='none'
+tabs-size=uint32 4
+wrap-last-split-mode='word'
+
+[org/gnome/gedit/preferences/ui]
+show-tabs-mode='auto'
+
+[org/gnome/gedit/plugins]
+active-plugins=['docinfo', 'filebrowser', 'modelines', 'spell', 'time']
+
+[org/gnome/gedit/state/window]
+size=(900, 700)
+state=128
+bottom-panel-size=140
+side-panel-size=200
+side-panel-active-page='GeditWindowDocumentsPanel'

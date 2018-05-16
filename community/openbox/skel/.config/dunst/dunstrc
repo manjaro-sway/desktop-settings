@@ -1,0 +1,50 @@
+[global]
+    font = Roboto Regular 11
+    markup = yes
+    format = "<b>%s</b>\n%b"
+    sort = yes
+    indicate_hidden = yes
+    alignment = center
+    bounce_freq = 0
+    show_age_threshold = 60
+    word_wrap = yes
+    ignore_newline = no
+    geometry = "400x10-20+40"
+    shrink = yes
+    transparency = 0
+    idle_threshold = 0
+    #monitor = 0
+    follow = mouse
+    sticky_history = yes
+    history_length = 20
+    show_indicators = no
+    line_height = 0
+    separator_height = 2
+    padding = 10
+    horizontal_padding = 20
+    frame_color = "#c0c5ce"
+    separator_color = frame
+    frame_width = 1
+    startup_notification = false
+    dmenu = /usr/bin/dmenu -p dunst:
+    browser = /usr/bin/chromium
+    icon_position = left
+    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+
+[shortcuts]
+
+[urgency_low]
+    background = "#29353B"
+    foreground = "#c0c5ce"
+    timeout = 3
+
+[urgency_normal]
+    background = "#29353B"
+    foreground = "#c0c5ce"
+    timeout = 3
+
+[urgency_critical]
+    background = "#29353B"
+    foreground = "#bf616a"
+    frame_color = "#bf616a"
+    timeout = 5

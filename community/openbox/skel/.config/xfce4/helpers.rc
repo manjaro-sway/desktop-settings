@@ -1,0 +1,5 @@
+TerminalEmulator=custom-TerminalEmulator
+WebBrowser=chromium
+MailReader=sylpheed-claws
+FileManager=Thunar
+

@@ -1,0 +1,2 @@
+conky -c ~/.config/conky/Openbox-Default-Keybinds.conkyrc & sleep 0.5
+conky -c ~/.config/conky/Openbox-Default-System.conkyrc & sleep 0.5
