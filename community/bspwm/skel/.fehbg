@@ -1,2 +1,2 @@
 #!/bin/sh
-feh  --bg-scale '/usr/share/backgrounds/bspwm-new.png' 
+feh  --bg-scale '/usr/share/backgrounds/illyria-bspwm-dark.png' 
