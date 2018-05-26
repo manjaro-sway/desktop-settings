@@ -6,16 +6,6 @@
 
 [[ -f ~/.Xdefaults ]] && xrdb -merge ~/.Xdefaults
 
-DMENU_FN="Terminus-15"
-DMENU_NB="#000000"
-DMENU_NF="#99CC99"
-DMENU_SB="#99CC99"
-DMENU_SF="#000000"
-DMENU_OPTIONS="-fn $DMENU_FN -nb $DMENU_NB -nf $DMENU_NF -sf $DMENU_SF -sb $DMENU_SB"
-#export DMENU_FN DMENU_NB DMENU_NF DMENU_SF DMENU_SB DMENU_OPTIONS
-
-# Bspwm is kept as default
-DEFAULT_SESSION=bspwm-session
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -48,30 +38,28 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
     done
     unset f
 fi
+if [ $TERM = linux ] || [ -e "/etc/systemd/system/graphical.target.wants/xlogin@$(whoami).service" ] ; then
+# Here Bspwm is kept as default
+session=${1:-bspwm}
 
-get_session(){
-	local dbus_args=(--sh-syntax --exit-with-session)
-	case $1 in
-		awesome) dbus_args+=(awesome) ;;
-		bspwm) dbus_args+=(bspwm-session) ;;
-		budgie) dbus_args+=(budgie-desktop) ;;
-		cinnamon) dbus_args+=(cinnamon-session) ;;
-		deepin) dbus_args+=(startdde) ;;
-		enlightenment) dbus_args+=(enlightenment_start) ;;
-		fluxbox) dbus_args+=(startfluxbox) ;;
-		gnome) dbus_args+=(gnome-session) ;;
-		i3|i3wm) dbus_args+=(i3 --shmlog-size 0) ;;
-		jwm) dbus_args+=(jwm) ;;
-		kde) dbus_args+=(startkde) ;;
-		lxde) dbus_args+=(startlxde) ;;
-		lxqt) dbus_args+=(lxqt-session) ;;
-		mate) dbus_args+=(mate-session) ;;
-		xfce) dbus_args+=(xfce4-session) ;;
-		openbox) dbus_args+=(openbox-session) ;;
-		*) dbus_args+=($DEFAULT_SESSION) ;;
-	esac
-
-	echo "dbus-launch ${dbus_args[*]}"
-}
-
-exec $(get_session)
+case $session in
+	awesome 		  ) exec dbus-launch --sh-syntax --exit-with-session awesome;;
+	jwm 			  ) exec dbus-launch --sh-syntax --exit-with-session jwm;;
+	deepin 			  ) exec dbus-launch --sh-syntax --exit-with-session startdde;;
+	enlightenment 	  ) exec dbus-launch --sh-syntax --exit-with-session enlightenment_start;;
+	gnome 			  ) exec dbus-launch --sh-syntax --exit-with-session gnome-session;;
+	bspwm 			  ) exec dbus-launch --sh-syntax --exit-with-session bspwm-session;;
+    i3|i3wm           ) exec dbus-launch --sh-syntax --exit-with-session i3;;
+    lxde 	          ) exec dbus-launch --sh-syntax --exit-with-session startlxde;;
+    lxqt         	  ) exec dbus-launch --sh-syntax --exit-with-session lxqt-session;;
+    i3|i3wm           ) exec dbus-launch --sh-syntax --exit-with-session i3;;
+    kde               ) exec dbus-launch --sh-syntax --exit-with-session startkde;;
+    cinnamon          ) exec dbus-launch --sh-syntax --exit-with-session cinnamon-session;;
+    budgie            ) exec dbus-launch --sh-syntax --exit-with-session budgie-desktop;;
+    mate              ) exec dbus-launch --sh-syntax --exit-with-session mate-session;;
+    openbox           ) exec dbus-launch --sh-syntax --exit-with-session openbox-session;;
+    xfce|xfce4        ) exec dbus-launch --sh-syntax --exit-with-session startxfce4;;
+    # No known session, try to run it as command
+    *                 ) exec dbus-launch --sh-syntax --exit-with-session $1;;
+esac
+fi
