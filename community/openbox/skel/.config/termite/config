@@ -1,0 +1,55 @@
+[options]
+scroll_on_output = false
+scroll_on_keystroke = true
+audible_bell = false
+mouse_autohide = false
+allow_bold = true
+dynamic_title = true
+urgent_on_bell = true
+clickable_url = true
+font = DejaVu Sans Mono Book 10
+scrollback_lines = 10000
+search_wrap = true
+icon_name = utilities-terminal
+geometry = 950x460
+clickable_url = true
+cursor_blink = system
+cursor_shape = block
+browser = exo-open
+filter_unmatched_urls = true
+
+# *************************
+[colors]
+background = rgba(41,47,52,0.90)
+foreground = #d8d8d8
+foreground_bold = #d8d8d8
+
+# Black, Gray, Silver, White
+color0 = #292f34
+color7 = #d8d8d8
+color8 = #0a6355
+color15 = #f8f8f8
+
+# Red
+color1 = #ab4642
+color9 = #ab4642
+
+# Green
+color2 = #99cc99
+color10 = #99cc99
+
+# Yellow
+color3 = #f7ca88
+color11 = #f7ca88
+
+# Blue
+color4 = #006a78
+color12 = #006a78
+
+# Purple
+color5 = #b48ead
+color13 = #b48ead
+
+# Teal
+color6 = #1abb9b
+color14 = #1abb9b

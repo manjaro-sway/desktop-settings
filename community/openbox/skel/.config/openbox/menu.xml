@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu>
+
+<menu id="disk-utilities" label="Disk Tools">
+    <item label="Clonezilla">
+        <action name="Execute">
+            <command>termite -e "sudo clonezilla"</command>
+        </action>
+    </item>
+    <item label="Gparted">
+        <action name="Execute">
+            <command>zensu gparted</command>
+        </action>
+    </item>
+    <item label="Testdisk">
+        <action name="Execute">
+            <command>termite -e "sudo testdisk"</command>
+        </action>
+    </item>
+    <item label="USB Image Writer">
+        <action name="Execute">
+            <command>mintstick -m iso</command>
+        </action>
+    </item>
+</menu>
+
+<menu id="screenshot" label="Screenshot">
+    <item label="Screenshot in 5">
+        <action name="Execute">
+            <command>scrot -d 5 &apos;%Y%m%d-%H%M%S_$wx$h_screenshot.png&apos; -e &apos;mv $f $$(xdg-user-dir PICTURES) ; gpicview $$(xdg-user-dir PICTURES)/$f&apos;</command>
+        </action>
+    </item>
+    <item label="Screenshot in 10">
+        <action name="Execute">
+            <command>scrot -d 10 &apos;%Y%m%d-%H%M%S_$wx$h_screenshot.png&apos; -e &apos;mv $f $$(xdg-user-dir PICTURES) ; gpicview $$(xdg-user-dir PICTURES)/$f&apos;</command>
+        </action>
+    </item>
+    <item label="Screenshot With Selection">
+        <action name="Execute">
+            <command>scrot -s &apos;%Y%m%d-%H%M%S_$wx$h_screenshot.png&apos; -e &apos;mv $f $$(xdg-user-dir PICTURES) ; gpicview $$(xdg-user-dir PICTURES)/$f&apos;</command>
+        </action>
+    </item>
+</menu>
+
+<menu id="preferences" label="Preferences">
+    <menu id="openbox-config" label="Openbox">
+        <item label="Configuration">
+            <action name="Execute">
+                <command>obconf</command>
+            </action>
+        </item>
+        <item label="Menu Editor">
+            <action name="Execute">
+                <command>kickshaw</command>
+            </action>
+        </item>
+        <item label="Keybind Editor">
+            <action name="Execute">
+                <command>obkey</command>
+            </action>
+        </item>
+        <item label="GUI Autostart Editor">
+            <action name="Execute">
+                <command>ob-autostart</command>
+            </action>
+        </item>
+        <separator />
+        <item label="Edit autostart">
+            <action name="Execute">
+                <command>xdg-open ~/.config/openbox/autostart</command>
+            </action>
+        </item>
+        <item label="Edit menu.xml">
+            <action name="Execute">
+                <command>xdg-open ~/.config/openbox/menu.xml</command>
+            </action>
+        </item>
+        <item label="Edit rc.xml">
+            <action name="Execute">
+                <command>xdg-open ~/.config/openbox/rc.xml</command>
+            </action>
+        </item>
+        <separator/>
+        <item label="Openbox Reconfigure">
+            <action name="Reconfigure"/>
+        </item>
+        <item label="Openbox Restart">
+            <action name="Restart"/>
+        </item>
+    </menu>
+
+    <menu id="system-settings" label="System">
+        <item label="Appearance">
+            <action name="Execute">
+                <command>xfce4-appearance-settings</command>
+            </action>
+        </item>
+        <item label="Audio Settings">
+            <action name="Execute">
+                <command>pavucontrol</command>
+            </action>
+        </item>
+        <item label="Add/Remove Software">
+            <action name="Execute">
+                <command>pamac-manager</command>
+            </action>
+        </item>
+        <item label="Screen Layout">
+            <action name="Execute">
+                <command>arandr</command>
+            </action>
+        </item>
+        <item label="Settings Manager">
+            <action name="Execute">
+                <command>xfce4-settings-manager</command>
+            </action>
+        </item>
+        <item label="Root File Manager">
+            <action name="Execute">
+                <command>zensu thunar</command>
+            </action>
+        </item>
+    </menu>
+    <menu id="CompositingPipeMenu" label="Compositor" execute="manjaro-compositor"/>
+    <menu id="PolybarPipeMenu" label="Polybar" execute="manjaro-polybar-pipemenu"/>
+    <menu id="ConkyPipeMenu" label="Conky" execute="manjaro-conky-pipemenu"/>
+    <menu id="TintPipeMenu" label="Tint2" execute="manjaro-tint2-pipemenu"/>
+    <separator/>
+    <item label="Panel Chooser">
+        <action name="Execute">
+            <command>manjaro-panel-chooser</command>
+        </action>
+    </item>
+    <item label="Wallpaper">
+        <action name="Execute">
+            <command>nitrogen</command>
+        </action>
+    </item>
+    <item label="Rofi Theme">
+        <action name="Execute">
+            <command>rofi-theme-selector</command>
+        </action>
+    </item>
+</menu>
+
+<menu id="root-menu" label="Openbox 3">
+    <separator label="Manjaro Openbox"/>
+    <item label="Terminal">
+        <action name="Execute">
+            <command>termite</command>
+        </action>
+    </item>
+    <item label="File Manager">
+        <action name="Execute">
+            <command>thunar</command>
+        </action>
+    </item>
+    <item label="Web Browser">
+        <action name="Execute">
+            <command>chromium</command>
+        </action>
+    </item>
+    <item label="Mail Reader">
+        <action name="Execute">
+            <command>sylpheed</command>
+        </action>
+    </item>
+    <item label="Text Editor">
+        <action name="Execute">
+            <command>gedit</command>
+        </action>
+    </item>
+    <item label="Calculator">
+        <action name="Execute">
+            <command>galculator</command>
+        </action>
+    </item>
+    <separator/>
+
+    <menu id="common-utilities"/>
+
+    <menu id="disk-utilities"/>
+
+    <menu id="network-utilities"/>
+
+    <menu id="screenshot"/>
+
+    <menu id="applications" label="Applications" execute="/usr/bin/obmenu-generator -S ~/.config/obmenu-generator/applications.pl"/>
+    <separator/>
+
+    <menu id="pipe-placesmenu" label="Places" execute="manjaro-places-pipemenu --recent ~/"/>
+    <separator/>
+
+    <menu id="preferences"/>
+    <menu id="keybinds" label="Keybinds" execute="manjaro-kb-pipemenu"/>
+    <separator/>
+
+    <menu id="help" label="Help and Info" execute="manjaro-help-pipemenu"/>
+    <separator/>
+    
+    <item label="Switch Menu">
+        <action name="Execute">
+            <command>switchmenu -dynamic</command>
+        </action>
+    </item>
+    <separator/>
+    <item label="Lock Screen">
+        <action name="Execute">
+            <command>lockscreen -- scrot</command>
+        </action>
+    </item>
+    <item label="Exit Openbox">
+        <action name="Execute">
+            <command>rofr.sh -l</command>
+        </action>
+    </item>
+</menu>
+
+</openbox_menu>

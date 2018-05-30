@@ -1,0 +1,1 @@
+conky -c ~/.config/conky/Openbox-Default.conkyrc & sleep 0.5

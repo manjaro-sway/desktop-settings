@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Action
+Tooltip=Open Folder As Root
+Name=Open Folder As Root
+Profiles=profile-zero;
+Icon=gtk-dialog-authentication
+
+[X-Action-Profile profile-zero]
+MimeTypes=inode/directory;
+Exec=/usr/bin/gksu /usr/bin/pcmanfm %u
+Name=Default profile

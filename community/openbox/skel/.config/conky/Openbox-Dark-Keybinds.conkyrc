@@ -1,0 +1,40 @@
+conky.config = {
+	alignment = 'bottom_left',
+	background = true,
+	color2 = 'e0e2e3',
+	cpu_avg_samples = 2,
+	default_color = 'e0e2e3',
+	double_buffer = true,
+	font = 'DejaVu Sans Mono Boot:size=10',
+	draw_shades = false,
+	gap_x = 25,
+	gap_y = 45,
+	minimum_width = 250,
+	no_buffers = true,
+	own_window = true,
+	own_window_type = 'override',
+	own_window_transparent = true,
+	update_interval = 2.0,
+	use_xft = true,
+}
+conky.text = [[
+${alignc}${font :size=24}SHORTCUT KEYS${font}
+${hr}
+[PrtSc]${alignr}Screenshot
+[Super]${alignr}JG Menu
+[Alt] + F1${alignr}JG Menu
+[Ctrl] + Space${alignr}Rofi Launcher
+[Alt] + F2${alignr}Rofi Launcher
+[Super] + Space${alignr}Openbox Menu
+[Alt] + Space${alignr}Window Menu
+[Super] + [Enter]${alignr}Terminal
+[Super] + e${alignr}Text Editor
+[Super] + f${alignr}File Manager
+[Super] + m${alignr}Music Player
+[Super] + w${alignr}Web Browser
+[Super] + v${alignr}Audio Control
+[Super] + s${alignr}Window Switcher
+[Ctrl] + [Shift] + [Enter]${alignr}Reload Configs
+[Ctrl] + [Alt] + L${alignr}Lock
+[Ctrl] + [Alt] + [Delete]${alignr}Logout
+]];
