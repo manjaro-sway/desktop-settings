@@ -1,5 +1,5 @@
 TerminalEmulator=custom-TerminalEmulator
 WebBrowser=chromium
-MailReader=sylpheed-claws
+MailReader=sylpheed
 FileManager=Thunar
 

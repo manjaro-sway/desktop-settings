@@ -1,5 +1,0 @@
-# OB_Autostart config
-LAUNCH_LIST = [ 
-	 ("Xcape Superkey","xcape -e 'Super_L=Alt_L|F1'","1","*"),
-	 ("Enable skippy-xd window switcher","skippy-xd --config $HOME/.config/skippy-xd/skippy-xd.rc --start-daemon","1","*"),
-	]
