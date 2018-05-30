@@ -39,7 +39,7 @@ xbacklight -set 15 &
 ## easily configurable if you prefer that. Not installed by default
 #run_once xfce4-panel -d
 #lemonpanel &
-limepanel &
+#limepanel &
 sleep 2s && bspc config top_padding 10 &
 #mylime &
 ## Light system tray to use with lemonbar. Disable if you dont need it. 
