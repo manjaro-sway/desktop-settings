@@ -6,9 +6,9 @@ Please maintainers, read up first on
 
 ### manjaro
 
-* [xfce](https://github.com/manjaro/manjaro-xfce-settings)
-* [kde](https://github.com/manjaro/manjaro-kde-settings)
-* [gnome](https://github.com/manjaro/manjaro-gnome-settings)
+* [xfce](https://gitlab.manjaro.org/profiles-and-settings/manjaro-xfce-settings)
+* [kde](https://gitlab.manjaro.org/profiles-and-settings/manjaro-kde-settings)
+* [gnome](https://gitlab.manjaro.org/profiles-and-settings/manjaro-gnome-settings)
 
 ### community
 
@@ -20,7 +20,7 @@ Please maintainers, read up first on
 * openbox
 * i3
 * lxde
-* [lxqt](https://github.com/manjaro/manjaro-lxqt-settings)
+* [lxqt](https://gitlab.manjaro.org/profiles-and-settings/manjaro-lxqt-settings)
 * mate
 * netbook
 * pantheon
