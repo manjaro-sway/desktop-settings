@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Login Window
+Comment=Configure the login window
+Exec=sh -c "budgie-panel --replace& sleep 2 && pkexec lightdm-settings"
+Icon=lightdm-settings
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Settings;System;XFCE;X-XFCE-SettingsDialog;X-XFCE-SystemSettings;
+X-KDE-SubstituteUID=true
