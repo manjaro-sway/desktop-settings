@@ -72,8 +72,6 @@ input-feedback-sounds=false
 [org.gnome.Terminal.Legacy.Profile]
 background-color='rgb(0,0,0)'
 foreground-color='rgb(170,179,170)'
-use-transparent-background=true
-background-transparency-percent=25
 use-theme-colors=false
 font='Droid Sans Mono Regular 11'
 
