@@ -12,6 +12,7 @@ Please maintainers, read up first on
 
 ### community
 
+* awesome
 * bspwm
 * budgie
 * cinnamon

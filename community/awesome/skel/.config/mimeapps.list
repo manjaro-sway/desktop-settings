@@ -1,11 +1,9 @@
-[Added Associations]
-text/x-lua=micro.desktop;mousepad.desktop;
-application/xml=mousepad.desktop;chromium.desktop;
-application/x-shellscript=mousepad.desktop;
-text/plain=mousepad.desktop;micro.desktop;
-
 [Default Applications]
+inode/directory=Thunar-folder-handler.desktop
 application/xml=mousepad.desktop
+application/x-shellscript=mousepad.desktop;
 text/x-lua=mousepad.desktop
-application/x-shellscript=mousepad.desktop
 text/plain=mousepad.desktop
+image/png=ristretto.desktop
+image/svg+xml=ristretto.desktop
+image/jpeg=ristretto.desktop

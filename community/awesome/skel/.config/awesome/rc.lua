@@ -44,13 +44,13 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(awful.util.getdir("config") .. "/themes/cesious/theme.lua")
+beautiful.notification_font = "Noto Sans Regular 14"
 
 -- This is used later as the default terminal and editor to run.
-terminal = "urxvtc"
+terminal = "xfce4-terminal"
 browser = "chromium"
 filemanager = "thunar"
-editor = os.getenv("EDITOR") or "micro"
-terminal2 = "st"
+editor = "mousepad"
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
 -- If you do not like this or do not have such a key,
@@ -99,9 +99,9 @@ end
 -- Create a launcher widget and a main menu
 myawesomemenu = {
     { "hotkeys", function() return false, hotkeys_popup.show_help end },
-    { "manual", terminal .. " -e man awesome" },
-    { "edit config", string.format("%s -e %s %s", terminal2, editor, awesome.conffile) },
-    { "edit theme", string.format("%s -e %s %s", terminal2, editor, ".config/awesome/themes/cesious/theme.lua") },
+    { "manual", terminal .. " -x man awesome" },
+    { "edit config", string.format("%s %s", editor, awesome.conffile) },
+    { "edit theme", string.format("%s %s", editor, ".config/awesome/themes/cesious/theme.lua") },
     { "restart", awesome.restart }
 }
 
@@ -128,7 +128,6 @@ mymainmenu = freedesktop.menu.build({
 })
 
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
-                                     -- command = "/usr/bin/rofimenu" })
                                      menu = mymainmenu })
 
 -- Menubar configuration
@@ -246,9 +245,8 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
                     layout = wibox.layout.fixed.horizontal,
-                    mykeyboardlayout,
-                    seperator,
                     wibox.widget.systray(),
+                    mykeyboardlayout,
                     seperator,
                     mytextclock,
                     s.mylayoutbox,
@@ -260,7 +258,6 @@ end)
 -- {{{ Mouse bindings
 root.buttons(gears.table.join(
 	awful.button({ }, 1, function () mymainmenu:hide() end),
-    -- awful.button({ }, 3, function () awful.util.spawn("rofimenu -desktop") end),
     awful.button({ }, 3, function () mymainmenu:toggle() end),
     awful.button({ }, 4, awful.tag.viewnext),
     awful.button({ }, 5, awful.tag.viewprev)
@@ -323,28 +320,32 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
 
-    awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
+    awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)                 end,
               {description = "increase master width factor", group = "layout"}),
-    awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)          end,
+    awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)                 end,
               {description = "decrease master width factor", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1, nil, true) end,
+    awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1, nil, true)        end,
               {description = "increase the number of master clients", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "l",     function () awful.tag.incnmaster(-1, nil, true) end,
+    awful.key({ modkey, "Shift"   }, "l",     function () awful.tag.incnmaster(-1, nil, true)        end,
               {description = "decrease the number of master clients", group = "layout"}),
-    awful.key({ modkey, "Control" }, "h",     function () awful.tag.incncol( 1, nil, true)    end,
+    awful.key({ modkey, "Control" }, "h",     function () awful.tag.incncol( 1, nil, true)           end,
               {description = "increase the number of columns", group = "layout"}),
-    awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
+    awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)           end,
               {description = "decrease the number of columns", group = "layout"}),
-    awful.key({ modkey,           }, "space", function () awful.util.spawn("/usr/bin/dmenu_recency")          end,
-              {description = "launch dmenu", group = "launcher"}),
     awful.key({ modkey, Shift     }, "b", function () awful.util.spawn("/usr/bin/chromium")          end,
               {description = "launch Browser", group = "launcher"}),
-    awful.key({ modkey, "Shift"   }, "p", function () awful.util.spawn("/usr/bin/rofi -show")          end,
+    awful.key({ modkey, "Control"}, "p", function () awful.util.spawn("/usr/bin/rofi -show drun -modi drun") end,
               {description = "launch rofi", group = "launcher"}),
-    awful.key({ modkey,           }, "e", function () awful.util.spawn("/usr/bin/thunar")          end,
+    awful.key({ modkey,           }, "e", function () awful.util.spawn("/usr/bin/thunar")            end,
               {description = "launch filemanager", group = "launcher"}),
-    awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
+    awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                       end,
               {description = "select previous", group = "layout"}),
+    awful.key({                   }, "Print", function () awful.util.spawn("/usr/bin/i3-scrot -d")   end,
+              {description = "capture a screenshot", group = "screenshot"}),
+    awful.key({"Control"          }, "Print", function () awful.util.spawn("/usr/bin/i3-scrot -w")   end,
+              {description = "capture a screenshot of active window", group = "screenshot"}),
+    awful.key({"Shift"            }, "Print", function () awful.util.spawn("/usr/bin/i3-scrot -s")   end,
+              {description = "capture a screenshot of selection", group = "screenshot"}),
 
     awful.key({ modkey, "Control" }, "n",
               function ()
@@ -526,7 +527,6 @@ awful.rules.rules = {
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" } },
-      except_any = { role = { "browser" }, class = { "Gedit", "gedit", "Nautilus", "Pamac-manager", "Pamac-updater" } },
       properties = { titlebars_enabled = true }
     },
 	

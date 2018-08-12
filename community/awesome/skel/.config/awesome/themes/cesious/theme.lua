@@ -6,10 +6,10 @@
 theme = {}
 theme.dir = "/usr/share/awesome/themes/cesious"
 
-theme.font          = "Terminus 12"
+theme.font          = "Noto Sans Regular 10"
 
-theme.bg_normal     = "#2D323C"
-theme.bg_focus      = "#404552"
+theme.bg_normal     = "#222D32"
+theme.bg_focus      = "#2C3940"
 theme.bg_urgent     = "#000000"
 theme.bg_minimize   = "#101010"
 theme.bg_systray    = theme.bg_normal

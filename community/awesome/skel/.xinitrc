@@ -9,15 +9,7 @@ usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
-DMENU_FN="Terminus-15"
-DMENU_NB="#000000"
-DMENU_NF="#99CC99"
-DMENU_SB="#99CC99"
-DMENU_SF="#000000"
-DMENU_OPTIONS="-fn $DMENU_FN -nb $DMENU_NB -nf $DMENU_NF -sf $DMENU_SF -sb $DMENU_SB"
-#export DMENU_FN DMENU_NB DMENU_NF DMENU_SF DMENU_SB DMENU_OPTIONS
-
-# Bspwm is kept as default
+# awesome is kept as default
 DEFAULT_SESSION=awesome
 
 # merge in defaults and keymaps
