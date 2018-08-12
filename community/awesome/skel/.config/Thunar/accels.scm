@@ -73,3 +73,5 @@
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-statusbar" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/show-hidden" "<Primary>h")
 ; (gtk_accel_path "<Actions>/ThunarLauncher/sendto-desktop" "")
+(gtk_accel_path "<Actions>/ThunarActions/uca-action-1519720523571987-1" "F4")
+(gtk_accel_path "<Actions>/ThunarActions/uca-action-1367866030392913-2" "<Primary>f")

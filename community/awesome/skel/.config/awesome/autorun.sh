@@ -1,21 +1,31 @@
 #!/usr/bin/env bash
 
+# run (only once) processes which spawn with the same name
 function run {
-  if ! pgrep $1 ; then
-    $@&
-  fi
+   if ! pgrep $1 ; then
+     $@&
+   fi
 }
-run nm-applet
-run dbus-launch update-checker
-run light-locker
-run pulseaudio -D
-run compton --shadow-exclude '!focused'
-run xcape -e 'Super_L=Super_L|Shift_L|p'
-run /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
-run thunar --daemon
-run xfce4-power-manager
-run pa-applet
-run xrdb merge ~/.Xresources
+
+# run (only once) processes which spawn with different name
+if ! pgrep gnome-keyring-d ; then
+    gnome-keyring-daemon --daemonize --login &
+fi
+if ! pgrep pulseaudio ; then
+    start-pulseaudio-x11 &
+fi
+if ! pgrep polkit-mate-aut ; then
+    /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
+fi
+if ! pgrep xfce4-power-man ; then
+    xfce4-power-manager &
+fi
+
 run xfsettingsd
-run gnome-keyring-daemon
-run urxvtd
+run nm-applet
+run light-locker
+run compton --shadow-exclude '!focused'
+run xcape -e 'Super_L=Super_L|Control_L|p'
+run thunar --daemon
+run pa-applet
+run pamac-tray
