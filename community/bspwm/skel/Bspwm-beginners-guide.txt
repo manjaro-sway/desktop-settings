@@ -17,9 +17,7 @@ Table of contents
 2.6.	Scripts
 
 3.		Terminal
-3.1.	Shells
-3.2.	Custom tools
-3.3.	Network
+3.1.	Custom tools
 
 4.		Support
 ---------------------
@@ -116,23 +114,8 @@ Table of contents
 
 	Bspwm edition uses roxterm as its default terminal. If you want something even light, install rxvt-unicode and use the launcher script "terminal". Both are preconfigured.
 	
--------
-3.1.	Shells
-
-	The default shell is zsh instead of bash. The its settings can be edited from ~/.zshrc. It provides automatic launching of bspwm on login in tty1, excellent tab completion, spelling corretion, and bash compatible syntax. This is the shell that is started when you log into console in tty.
-	
-	Roxterm is set launch different shell, however: fish. It is used here instead of zsh because it provides following advantages: autosuggestion, syntax highlighting and fzf keybindings. It is also slightly lighter on ram than zsh. It is not set as the default shell however, because this is known to cause issues with bspwm, because it is not compatible with bash syntax. If you have problems trying some bspwm commands, run first zsh and then try again. If you dislike fish you can disable it from your roxterm settings.
-	
-	Extra fzf keybindings provided by fish are: 
-		- Ctrl-t: file finder (multi-select enabled)
-		- Ctrl-r: search past commands
-		- Ctrl-x: execute past commands without confirmation
-		- Alt-c: cd into directories
-
-	Fish is used with fisherman plugin manager. See https://github.com/fisherman/fisherman for details.
-	
 -------	
-3.2.	Custom tools
+3.1.	Custom tools
 	Bspwm edition has some extra commandline tools that you may find useful:
 		
 		ranger			(file manager)
@@ -155,10 +138,6 @@ Table of contents
 		bc				(calculator)
 		ps_mem 			(show ram usage sorted by process)
 
--------
-3.3.	Network
-
-	This edition comes with the command line tool wpa_tui. It can be used to replace networkmanager with systemd-network. This has advantage of being more minimalistic option and using less system resources. However, networkmanager provides much nicer frontends (nmtui, nmcli-dmenu). To use this, run "wpa_tui" from command line and choose option 7.
 
 -------
 4.		Support

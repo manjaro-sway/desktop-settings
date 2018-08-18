@@ -6,24 +6,23 @@
 	You can also edit keybindings there.
 	
 	Mod4 is super key, on many keyboards marked with windows logo.	
-	As a rule of thumb, super+direction moves focus, 
-	super+shift+direction moves focused window,
-	and super+ctrl+direction resizes windows.
+	As a rule of thumb, super+<direction> moves focus, 
+	super+shift+<direction> moves focused window,
+	and super+ctrl+<direction> resizes windows.
 	
 	Arrow keys, wasd and hjkl represent directions and numbers represent
 	different workspaces. 
 	 
 	### Window manipulation ################################################################
 
-		Super + g                     |- Cycle preset window gap options
 		Alt + Tab                     |- Cycle windows
 		Super + Tab                   |- Open window switcher
 		Super + x                     |- Close window
 		Super + shift + x             |- Kill window
-		Super + direction             |- Move focus to the direction
-		Super + shift + direction     |- Move focused window to direction
-		Super + ctrl + direction      |- Resize focused window to direction
-		Alt + shift + direction       |- Preselect/split the rootwindow
+		Super + <direction>           |- Move focus to the direction
+		Super + shift + <direction>   |- Move focused window to direction
+		Super + ctrl + <direction>    |- Resize focused window to direction
+		Alt + shift + <direction>     |- Preselect/split the rootwindow
 		Super + 1-9                   |- Focus the desktop with that number
 		Super + shift + 1-9           |- Move focused window to desktop with that number	
 		Super + Enter                 |- Move window to the biggest available space 
@@ -38,7 +37,6 @@
 		Super + shift + t             |- Toggle pseudotiling	
 		Super + shift + f             |- Toggle fullscreen
 		Super + f                     |- Toggle monocle
-		Ctrl + space                  |- Change window gap
 		Super + o                     |- Make window private 
                               |  (Avoids splitting it automatically)
 		Super + Shift + q             |- Cleanly quit bspwm
