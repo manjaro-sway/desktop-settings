@@ -25,7 +25,7 @@ run xfsettingsd
 run nm-applet
 run light-locker
 run compton --shadow-exclude '!focused'
-run xcape -e 'Super_L=Super_L|Control_L|p'
+run xcape -e 'Super_L=Super_L|Control_L|Escape'
 run thunar --daemon
 run pa-applet
 run pamac-tray

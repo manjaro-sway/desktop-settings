@@ -334,7 +334,7 @@ globalkeys = gears.table.join(
               {description = "decrease the number of columns", group = "layout"}),
     awful.key({ modkey, Shift     }, "b", function () awful.util.spawn("/usr/bin/chromium")          end,
               {description = "launch Browser", group = "launcher"}),
-    awful.key({ modkey, "Control"}, "p", function () awful.util.spawn("/usr/bin/rofi -show drun -modi drun") end,
+    awful.key({ modkey, "Control"}, "Escape", function () awful.util.spawn("/usr/bin/rofi -show drun -modi drun") end,
               {description = "launch rofi", group = "launcher"}),
     awful.key({ modkey,           }, "e", function () awful.util.spawn("/usr/bin/thunar")            end,
               {description = "launch filemanager", group = "launcher"}),
