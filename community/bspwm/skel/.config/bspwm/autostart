@@ -1,6 +1,6 @@
 ##run_once is a script in /usr/bin that prevents running script if it is running already
 ##
-pulseaudio --start &
+pkill pulseaudio && dbus-launch pulseaudio --start &
 #sleep 2s && volume 37 &
 ## Load appearance settings
 xsetroot -cursor_name left_ptr &
@@ -36,7 +36,6 @@ srandrd atorandr.sh --change
 update-checker 7200 &
 ## Map super key to trigger rofi when used alone
 xcape -e 'Super_L=Super_L|Shift_L|space' &
-## Mate notification daemon
 dbus-launch gsettings set org.mate.NotificationDaemon theme 'slider' && sed -i '/gsettings/d' ~/.config/bspwm/autostart &
 ## Polkit agent
 /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
