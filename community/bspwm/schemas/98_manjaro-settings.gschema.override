@@ -1,9 +1,9 @@
 [org.mate.NotificationDaemon]
+popup-location='bottom_right'
 theme='slider'
 
 [x.dm.slick-greeter]
 background="/usr/share/backgrounds/manjarowall17_07.jpg"
-cursor-theme='xcursor-breeze'
 theme-name="Breath-Dark"
 icon-theme-name="Breeze-Maia-Dark"
 font-name="Noto Sans 12"
