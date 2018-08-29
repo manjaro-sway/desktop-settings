@@ -1,6 +1,6 @@
 ##run_once is a script in /usr/bin that prevents running script if it is running already
 ##
-pkill pulseaudio && dbus-launch pulseaudio --start &
+pkill pulseaudio; dbus-launch pulseaudio --start &
 #sleep 2s && volume 37 &
 ## Load appearance settings
 xsetroot -cursor_name left_ptr &
