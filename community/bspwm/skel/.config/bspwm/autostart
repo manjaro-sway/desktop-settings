@@ -29,7 +29,7 @@ xbacklight -set 15 &
 ## Welcome message
 notify-send "Welcome to Manjaro-bspwm! " "Press super + F1 to show keybindings" &
 ## Run screenlock when suspending
-i3lock-wait-for-suspend &
+light-locker &
 ## multimonitor support. Save monitor configurations with "autorandr.sh --save <profile>"
 srandrd atorandr.sh --change
 ## Notify about package updates
