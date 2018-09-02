@@ -1,8 +1,0 @@
-#!/bin/dash
-if [ -z "$@" ]; then
-	site=google.com
-else
-	site="$@"
-fi
-
-exec xlinks -g $site
