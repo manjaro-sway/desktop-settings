@@ -41,7 +41,3 @@ dbus-launch gsettings set org.mate.NotificationDaemon theme 'slider' && sed -i '
 ## Gnome keyring
 gnome-keyring-daemon &
 
-# Sound
-sleep 1 && pkill pulseaudio &
-sleep 2 && dbus-launch pulseaudio --start &  
-sleep 3 && volume 40 &
