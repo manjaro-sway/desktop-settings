@@ -1,6 +1,6 @@
 ##run_once is a script in /usr/bin that prevents running script if it is running already
 ##
-dbus-launch pulseaudio --start && volume 40 &
+
 ## Load appearance settings
 xsetroot -cursor_name left_ptr &
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0" &
@@ -40,3 +40,8 @@ dbus-launch gsettings set org.mate.NotificationDaemon theme 'slider' && sed -i '
 /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 ## Gnome keyring
 gnome-keyring-daemon &
+
+# Sound
+sleep 1 && pkill pulseaudio &
+sleep 2 && dbus-launch pulseaudio --start &  
+sleep 3 && volume 40 &
