@@ -1,0 +1,35 @@
+#ionicons         
+panel_height='25'
+mainfont='-*-terminus-medium-*-*-*-18-*-*-*-*-*-*-*'
+iconfont="TerminessTTF Nerd Font:size=15:antialias=true"
+thirdfont="TerminessTTF Nerd Font:size=16:antialias=true"
+#thirdfont="Ionicons:size=16:antialias=false"
+gap=15
+main_menu="rofimenu"
+networkmenu="networkmenu.sh"
+wifi_indicator=true
+window_button="%{A:bspc node -c:} %{A}"
+menu_icon=
+charging_icon=
+battery_full_icon=
+battery_draining_icon=
+battery_half_icon=
+battery_low_icon=
+time_icon=
+wired_icon="<->"
+disconnected_icon=
+#
+muted_icon=
+#
+unmuted_icon=
+tiling_icon=
+monocle_icon=
+title_length=80
+COLOR_FOCUSED_DESKTOP_FG='#FF16A085'
+COLOR_FOCUSED_DESKTOP_BG="#FF222D32"
+COLOR_DESKTOP_FG='#FFF6F9FF'
+COLOR_DESKTOP_BG="#FF222D32"
+DARKGREY="%{F#FF707880}"
+RED="%{F#FFA54242}"
+update_interval=3
+systemtray=0
