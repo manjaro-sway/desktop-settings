@@ -30,7 +30,7 @@ notify-send "Welcome to Manjaro-bspwm! " "Press super + F1 to show keybindings" 
 ## Run screenlock when suspending
 light-locker &
 ## multimonitor support. Save monitor configurations with "autorandr.sh --save <profile>"
-srandrd atorandr.sh --change
+srandrd atorandr.sh --change &
 ## Notify about package updates
 update-checker 7200 &
 ## Map super key to trigger rofi when used alone
