@@ -1,0 +1,11 @@
+[Desktop Entry]
+NoDisplay=true
+Version=1.0
+Encoding=UTF-8
+Type=X-XFCE-Helper
+X-XFCE-Category=TerminalEmulator
+X-XFCE-CommandsWithParameter=/usr/bin/lxterminal "%s"
+Icon=lxterminal
+Name=lxterminal
+X-XFCE-Commands=/usr/bin/lxterminal
+
