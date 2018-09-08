@@ -5,7 +5,7 @@
  */
 
 configuration {
-	modi: 							"combi,:rofind";
+	modi: 							"combi";
 	//combi-modi: 					"window,drun,\/:rofind,run";
 	combi-modi: 					"window,drun,run";
 	me-select-entry:				"MouseSecondary";
@@ -19,7 +19,7 @@ configuration {
     display-drun:                   "";
     // The display name of this browser
     display-window:                 "";
-    display-combi:                  "Go to";
+    display-combi:                  "Exec -> ";
     show-icons: true;
 }
 
