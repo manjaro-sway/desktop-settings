@@ -1,19 +1,22 @@
-import ranger.api
-from ranger.core.linemode import LinemodeBase
-from devicons import *
+import os
+terminal=terminal=os.getenv('TERM')
+if terminal != 'linux':
+  import ranger.api
+  from ranger.core.linemode import LinemodeBase
+  from devicons import *
 
-@ranger.api.register_linemode
-class DevIconsLinemode(LinemodeBase):
-  name = "devicons"
+  @ranger.api.register_linemode
+  class DevIconsLinemode(LinemodeBase):
+    name = "devicons"
 
-  uses_metadata = False
+    uses_metadata = False
 
-  def filetitle(self, file, metadata):
-    return devicon(file) + ' ' + file.relative_path
+    def filetitle(self, file, metadata):
+      return devicon(file) + ' ' + file.relative_path
 
-@ranger.api.register_linemode
-class DevIconsLinemodeFile(LinemodeBase):
-  name = "filename"
+  @ranger.api.register_linemode
+  class DevIconsLinemodeFile(LinemodeBase):
+    name = "filename"
 
-  def filetitle(self, file, metadata):
-    return devicon(file) + ' ' + file.relative_path
+    def filetitle(self, file, metadata):
+      return devicon(file) + ' ' + file.relative_path
