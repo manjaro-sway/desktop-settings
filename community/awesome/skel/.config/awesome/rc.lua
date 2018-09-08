@@ -47,7 +47,7 @@ beautiful.init(awful.util.getdir("config") .. "/themes/cesious/theme.lua")
 beautiful.notification_font = "Noto Sans Regular 14"
 
 -- This is used later as the default terminal and editor to run.
-terminal = "xfce4-terminal"
+terminal = "lxterminal"
 browser = "chromium"
 filemanager = "thunar"
 editor = "mousepad"
@@ -99,7 +99,7 @@ end
 -- Create a launcher widget and a main menu
 myawesomemenu = {
     { "hotkeys", function() return false, hotkeys_popup.show_help end },
-    { "manual", terminal .. " -x man awesome" },
+    { "manual", terminal .. " -e man awesome" },
     { "edit config", string.format("%s %s", editor, awesome.conffile) },
     { "edit theme", string.format("%s %s", editor, ".config/awesome/themes/cesious/theme.lua") },
     { "restart", awesome.restart }
@@ -115,9 +115,9 @@ myexitmenu = {
 
 mymainmenu = freedesktop.menu.build({
     before = {
-        { "Terminal", terminal, "/usr/share/icons/Adwaita/32x32/apps/utilities-terminal.png" },
+        { "Terminal", terminal, "/usr/share/icons/Moka/32x32/apps/utilities-terminal.png" },
         { "Browser", browser, "/usr/share/icons/hicolor/24x24/apps/chromium.png" },
-        { "Files", filemanager, "/usr/share/icons/Adwaita/32x32/apps/system-file-manager.png" },
+        { "Files", filemanager, "/usr/share/icons/Arc-Maia/places/32/user-home.png" },
         -- other triads can be put here
     },
     after = {
