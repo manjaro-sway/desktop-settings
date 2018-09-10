@@ -139,7 +139,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = awful.widget.textclock("%H:%M ")
+mytextclock = wibox.widget.textclock("%H:%M ")
 
 markup      = lain.util.markup
 darkblue    = theme.bg_focus
@@ -332,19 +332,19 @@ globalkeys = gears.table.join(
               {description = "increase the number of columns", group = "layout"}),
     awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)           end,
               {description = "decrease the number of columns", group = "layout"}),
-    awful.key({ modkey, Shift     }, "b", function () awful.util.spawn("/usr/bin/chromium")          end,
+    awful.key({ modkey, Shift     }, "b", function () awful.spawn("/usr/bin/chromium")          end,
               {description = "launch Browser", group = "launcher"}),
-    awful.key({ modkey, "Control"}, "Escape", function () awful.util.spawn("/usr/bin/rofi -show drun -modi drun") end,
+    awful.key({ modkey, "Control"}, "Escape", function () awful.spawn("/usr/bin/rofi -show drun -modi drun") end,
               {description = "launch rofi", group = "launcher"}),
-    awful.key({ modkey,           }, "e", function () awful.util.spawn("/usr/bin/thunar")            end,
+    awful.key({ modkey,           }, "e", function () awful.spawn("/usr/bin/thunar")            end,
               {description = "launch filemanager", group = "launcher"}),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                       end,
               {description = "select previous", group = "layout"}),
-    awful.key({                   }, "Print", function () awful.util.spawn("/usr/bin/i3-scrot -d")   end,
+    awful.key({                   }, "Print", function () awful.spawn("/usr/bin/i3-scrot -d")   end,
               {description = "capture a screenshot", group = "screenshot"}),
-    awful.key({"Control"          }, "Print", function () awful.util.spawn("/usr/bin/i3-scrot -w")   end,
+    awful.key({"Control"          }, "Print", function () awful.spawn("/usr/bin/i3-scrot -w")   end,
               {description = "capture a screenshot of active window", group = "screenshot"}),
-    awful.key({"Shift"            }, "Print", function () awful.util.spawn("/usr/bin/i3-scrot -s")   end,
+    awful.key({"Shift"            }, "Print", function () awful.spawn("/usr/bin/i3-scrot -s")   end,
               {description = "capture a screenshot of selection", group = "screenshot"}),
 
     awful.key({ modkey, "Control" }, "n",
@@ -625,7 +625,7 @@ for s = 1, screen.count() do screen[s]:connect_signal("arrange", function ()
       -- NOTE: also handled in focus, but that does not cover maximizing from a
       -- tiled state (when the client had focus).
       c.border_width = 0
-    elseif awful.client.floating.get(c) or layout == "floating" then
+    elseif c.floating or layout == "floating" then
       c.border_width = beautiful.border_width
     elseif layout == "max" or layout == "fullscreen" then
       c.border_width = 0
@@ -655,5 +655,5 @@ end
 --    end
 --end)
 
-awful.util.spawn_with_shell("~/.config/awesome/autorun.sh")
+awful.spawn.with_shell("~/.config/awesome/autorun.sh")
 
