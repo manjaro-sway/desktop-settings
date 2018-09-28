@@ -15,16 +15,16 @@ local lain = require("lain")
 -- Freedesktop menu
 local freedesktop = require("freedesktop")
 -- Enable VIM help for hotkeys widget when client with matching name is opened:
--- require("awful.hotkeys_popup.keys.vim")
+require("awful.hotkeys_popup.keys.vim")
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
 if awesome.startup_errors then
     naughty.notify({ preset = naughty.config.presets.critical,
-                     title = "Oops, there were errors during startup!",
-                     text = awesome.startup_errors })
+                                  title = "Oops, there were errors during startup!",
+                                  text = awesome.startup_errors })
 end
-
 -- Handle runtime errors after startup
 do
     local in_error = false
@@ -32,10 +32,9 @@ do
         -- Make sure we don't go into an endless error loop
         if in_error then return end
         in_error = true
-
         naughty.notify({ preset = naughty.config.presets.critical,
-                         title = "Oops, an error happened!",
-                         text = tostring(err) })
+                                      title = "Oops, an error happened!",
+                                      text = tostring(err) })
         in_error = false
     end)
 end
@@ -43,21 +42,20 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(awful.util.getdir("config") .. "/themes/cesious/theme.lua")
-beautiful.notification_font = "Noto Sans Regular 14"
-
+beautiful.init("/usr/share/awesome/themes/cesious/theme.lua")
+beautiful.icon_theme="Papirus-Adapta-Nokto"
 -- This is used later as the default terminal and editor to run.
-terminal = "lxterminal"
-browser = "chromium"
-filemanager = "thunar"
-editor = "mousepad"
+browser = "exo-open --launch WebBrowser" or "firefox"
+filemanager = "exo-open --launch FileManager" or "thunar"
+gui_editor = "mousepad"
+terminal = os.getenv("TERMINAL") or "lxterminal"
+
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
 -- If you do not like this or do not have such a key,
 -- I suggest you to remap Mod4 to another key using xmodmap or other tools.
 -- However, you can use another modifier like Mod1, but it may interact with others.
 modkey = "Mod4"
-
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     awful.layout.suit.tile,
@@ -65,13 +63,13 @@ awful.layout.layouts = {
     --awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
     -- awful.layout.suit.tile.top,
-    -- awful.layout.suit.fair,
-    -- awful.layout.suit.fair.horizontal,
+    awful.layout.suit.fair,
+    awful.layout.suit.fair.horizontal,
     -- awful.layout.suit.spiral,
     -- awful.layout.suit.spiral.dwindle,
     awful.layout.suit.max,
     -- awful.layout.suit.max.fullscreen,
-    -- awful.layout.suit.magnifier,
+    awful.layout.suit.magnifier,
     -- awful.layout.suit.corner.nw,
     -- awful.layout.suit.corner.ne,
     -- awful.layout.suit.corner.sw,
@@ -82,7 +80,6 @@ awful.layout.layouts = {
 -- {{{ Helper functions
 local function client_menu_toggle_fn()
     local instance = nil
-
     return function ()
         if instance and instance.wibox.visible then
             instance:hide()
@@ -98,54 +95,50 @@ end
 -- {{{ Menu
 -- Create a launcher widget and a main menu
 myawesomemenu = {
-    { "hotkeys", function() return false, hotkeys_popup.show_help end },
-    { "manual", terminal .. " -e man awesome" },
-    { "edit config", string.format("%s %s", editor, awesome.conffile) },
-    { "edit theme", string.format("%s %s", editor, ".config/awesome/themes/cesious/theme.lua") },
-    { "restart", awesome.restart }
+    { "hotkeys", function() return false, hotkeys_popup.show_help end, menubar.utils.lookup_icon("preferences-desktop-keyboard-shortcuts") },
+    { "manual", terminal .. " -e man awesome", menubar.utils.lookup_icon("system-help") },
+    { "edit config", gui_editor .. " " .. awesome.conffile,  menubar.utils.lookup_icon("accessories-text-editor") },
+    { "restart", awesome.restart, menubar.utils.lookup_icon("system-restart") }
 }
-
 myexitmenu = {
-    { "log out", function() awesome.quit() end, "/usr/share/icons/Arc-Maia/actions/24@2x/system-log-out.png" },
-    { "suspend", "systemctl suspend", "/usr/share/icons/Arc-Maia/actions/24@2x/gnome-session-suspend.png" },
-    { "hibernate", "systemctl hibernate", "/usr/share/icons/Arc-Maia/actions/24@2x/gnome-session-hibernate.png" },
-    { "reboot", "systemctl reboot", "/usr/share/icons/Arc-Maia/actions/24@2x/view-refresh.png" },
-    { "shutdown", "poweroff", "/usr/share/icons/Arc-Maia/actions/24@2x/system-shutdown.png" }
+    { "log out", function() awesome.quit() end, menubar.utils.lookup_icon("system-log-out") },
+    { "suspend", "systemctl suspend", menubar.utils.lookup_icon("system-suspend") },
+    { "hibernate", "systemctl hibernate", menubar.utils.lookup_icon("system-suspend-hibernate") },
+    { "reboot", "systemctl reboot", menubar.utils.lookup_icon("system-reboot") },
+    { "shutdown", "poweroff", menubar.utils.lookup_icon("system-shutdown") }
 }
-
 mymainmenu = freedesktop.menu.build({
+    icon_size = 32,
     before = {
-        { "Terminal", terminal, "/usr/share/icons/Moka/32x32/apps/utilities-terminal.png" },
-        { "Browser", browser, "/usr/share/icons/hicolor/24x24/apps/chromium.png" },
-        { "Files", filemanager, "/usr/share/icons/Arc-Maia/places/32/user-home.png" },
+        { "Terminal", terminal, menubar.utils.lookup_icon("utilities-terminal") },
+        { "Browser", browser, menubar.utils.lookup_icon("internet-web-browser") },
+        { "Files", filemanager, menubar.utils.lookup_icon("system-file-manager") },
         -- other triads can be put here
     },
     after = {
-        { "Awesome", myawesomemenu, "/usr/share/awesome/icons/awesome16.png" },
-        { "Exit", myexitmenu, "/usr/share/icons/Arc-Maia/actions/24@2x/system-restart.png" },
+        { "Awesome", myawesomemenu, "/usr/share/awesome/icons/awesome32.png" },
+        { "Exit", myexitmenu, menubar.utils.lookup_icon("system-shutdown") },
         -- other triads can be put here
     }
 })
-
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu })
-
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
+menubar.utils.terminal_execute_option = ' -x '
 -- }}}
-
--- Keyboard map indicator and switcher
-mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock("%H:%M ")
+-- Keyboard map indicator and switcher
+mykeyboardlayout = awful.widget.keyboardlayout()
 
 markup      = lain.util.markup
-darkblue    = theme.bg_focus
+darkblue    = beautiful.bg_focus
 blue        = "#9EBABA"
 red         = "#EB8F8F"
-seperator = wibox.widget.textbox(' <span color="' .. blue .. '">| </span>')
+separator = wibox.widget.textbox(' <span color="' .. blue .. '">| </span>')
 spacer = wibox.widget.textbox(' <span color="' .. blue .. '"> </span>')
 
 -- Create a wibox for each screen and add it
@@ -240,17 +233,17 @@ awful.screen.connect_for_each_screen(function(s)
             mylauncher,
             s.mytaglist,
             s.mypromptbox,
-            seperator,
+            separator,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
-                    layout = wibox.layout.fixed.horizontal,
-                    wibox.widget.systray(),
-                    mykeyboardlayout,
-                    seperator,
-                    mytextclock,
-                    s.mylayoutbox,
-                },
+            layout = wibox.layout.fixed.horizontal,
+            wibox.widget.systray(),
+            mykeyboardlayout,
+            separator,
+            mytextclock,
+            s.mylayoutbox,
+        },
     }
 end)
 -- }}}
@@ -332,7 +325,7 @@ globalkeys = gears.table.join(
               {description = "increase the number of columns", group = "layout"}),
     awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)           end,
               {description = "decrease the number of columns", group = "layout"}),
-    awful.key({ modkey, Shift     }, "b", function () awful.spawn("/usr/bin/chromium")          end,
+    awful.key({ modkey     }, "b", function () awful.spawn(browser)          end,
               {description = "launch Browser", group = "launcher"}),
     awful.key({ modkey, "Control"}, "Escape", function () awful.spawn("/usr/bin/rofi -show drun -modi drun") end,
               {description = "launch rofi", group = "launcher"}),
