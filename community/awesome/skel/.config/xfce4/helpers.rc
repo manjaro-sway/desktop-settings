@@ -1,3 +1,3 @@
-WebBrowser=chromium
+WebBrowser=firefox
 TerminalEmulator=custom-TerminalEmulator
 FileManager=Thunar

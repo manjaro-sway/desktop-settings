@@ -3,7 +3,7 @@
 <channel name="xsettings" version="1.0">
   <property name="Net" type="empty">
     <property name="ThemeName" type="string" value="Adapta-Nokto-Maia"/>
-    <property name="IconThemeName" type="string" value="Arc-Maia"/>
+    <property name="IconThemeName" type="string" value="Papirus-Adapta-Nokto-Maia"/>
     <property name="DoubleClickTime" type="empty"/>
     <property name="DoubleClickDistance" type="empty"/>
     <property name="DndDragThreshold" type="empty"/>
@@ -14,8 +14,8 @@
     <property name="EnableInputFeedbackSounds" type="empty"/>
   </property>
   <property name="Xft" type="empty">
-    <property name="DPI" type="empty"/>
-    <property name="Antialias" type="empty"/>
+    <property name="DPI" type="int" value="96"/>
+    <property name="Antialias" type="int" value="1"/>
     <property name="Hinting" type="int" value="1"/>
     <property name="HintStyle" type="string" value="hintslight"/>
     <property name="RGBA" type="string" value="rgb"/>
@@ -37,6 +37,9 @@
     <property name="DecorationLayout" type="empty"/>
   </property>
   <property name="Gdk" type="empty">
-    <property name="WindowScalingFactor" type="empty"/>
+    <property name="WindowScalingFactor" type="int" value="1"/>
+  </property>
+  <property name="Xfce" type="empty">
+    <property name="LastCustomDPI" type="int" value="96"/>
   </property>
 </channel>
