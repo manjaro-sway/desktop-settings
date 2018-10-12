@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <gconf>
 	<entry name="gtk_theme" mtime="1367400973" type="string">
-		<stringvalue>Adapta-Nokto-Eta-Maia</stringvalue>
+		<stringvalue>Matcha-dark-sea</stringvalue>
 	</entry>
 </gconf>
