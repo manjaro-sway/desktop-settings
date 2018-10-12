@@ -43,7 +43,12 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("/usr/share/awesome/themes/cesious/theme.lua")
-beautiful.icon_theme="Papirus-Adapta-Nokto"
+beautiful.icon_theme        = "Papirus-Dark"
+beautiful.bg_normal         = "#141A1B"
+beautiful.bg_focus          = "#222B2E"
+beautiful.font              = "Noto Sans Regular 10"
+beautiful.notification_font = "Noto Sans Bold 14"
+
 -- This is used later as the default terminal and editor to run.
 browser = "exo-open --launch WebBrowser" or "firefox"
 filemanager = "exo-open --launch FileManager" or "thunar"
