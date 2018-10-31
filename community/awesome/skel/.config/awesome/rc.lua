@@ -10,8 +10,6 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
--- Lain
-local lain = require("lain")
 -- Freedesktop menu
 local freedesktop = require("freedesktop")
 -- Enable VIM help for hotkeys widget when client with matching name is opened:
@@ -43,7 +41,12 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("/usr/share/awesome/themes/cesious/theme.lua")
-beautiful.icon_theme="Papirus-Adapta-Nokto"
+beautiful.icon_theme        = "Papirus-Dark"
+beautiful.bg_normal         = "#141A1B"
+beautiful.bg_focus          = "#222B2E"
+beautiful.font              = "Noto Sans Regular 10"
+beautiful.notification_font = "Noto Sans Bold 14"
+
 -- This is used later as the default terminal and editor to run.
 browser = "exo-open --launch WebBrowser" or "firefox"
 filemanager = "exo-open --launch FileManager" or "thunar"
@@ -133,7 +136,6 @@ mytextclock = wibox.widget.textclock("%H:%M ")
 -- Keyboard map indicator and switcher
 mykeyboardlayout = awful.widget.keyboardlayout()
 
-markup      = lain.util.markup
 darkblue    = beautiful.bg_focus
 blue        = "#9EBABA"
 red         = "#EB8F8F"
