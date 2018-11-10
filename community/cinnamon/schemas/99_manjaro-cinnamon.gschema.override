@@ -2,8 +2,8 @@
 alttab-switcher-style='thumbnails+preview'
 enabled-applets=['panel1:left:0:menu@cinnamon.org:0', 'panel1:left:1:separator@cinnamon.org:1', 'panel1:left:2:panel-launchers@cinnamon.org:2', 'panel1:left:3:separator@cinnamon.org:3', 'panel1:left:4:expo@cinnamon.org:4', 'panel1:left:5:show-desktop@cinnamon.org:5', 'panel1:left:6:window-list@cinnamon.org:6', 'panel1:right:0:notifications@cinnamon.org:7', 'panel1:right:1:workspace-switcher@cinnamon.org:8', 'panel1:right:2:windows-quick-list@cinnamon.org:9', 'panel1:right:3:separator@cinnamon.org:10', 'panel1:right:4:systray@cinnamon.org:11', 'panel1:right:5:separator@cinnamon.org:12', 'panel1:right:6:removable-drives@cinnamon.org:13', 'panel1:right:7:network@cinnamon.org:14', 'panel1:right:8:sound@cinnamon.org:15', 'panel1:right:9:power@cinnamon.org:16', 'panel1:right:10:inhibit@cinnamon.org:17', 'panel1:right:11:calendar@cinnamon.org:18', 'panel1:right:12:user@cinnamon.org:19']
 next-applet-id=20
-panels-resizable=['1:true']
 panels-height=['1:30']
+app-menu-icon-name='start-here'
 
 [org.cinnamon.desktop.background]
 picture-options='stretched'
