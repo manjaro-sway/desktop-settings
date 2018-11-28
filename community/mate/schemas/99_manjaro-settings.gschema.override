@@ -8,7 +8,7 @@ picture-options='stretched'
 
 [org.mate.interface]
 gtk-theme='Adapta-Maia'
-icon-theme='Papirus-Adapta-Maia'
+icon-theme='Papirus-Dark-Maia'
 
 [org.mate.Marco.general]
 theme='Adapta-Maia'
@@ -37,7 +37,7 @@ object-id-list=['brisk-menu', 'window-list', 'notification-area', 'clock', 'show
 toplevel-id-list=['bottom']
 
 [org.mate.caja.preferences]
-thumbnail-limit=1073741824
+thumbnail-limit=1000
 
 [org.mate.panel.toplevels.bottom]
 expand=true
@@ -95,7 +95,7 @@ theme='slate'
 [x.dm.slick-greeter]
 background="/usr/share/backgrounds/manjaro-mate/manjaro-mate.jpg"
 theme-name="Adapta-Nokto-Maia"
-icon-theme-name="Papirus-Adapta-Maia"
+icon-theme-name="Papirus-Dark-Maia"
 font-name="Cantarell Regular 10"
 
 
