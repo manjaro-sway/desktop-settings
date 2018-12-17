@@ -7,11 +7,11 @@ picture-filename='/usr/share/backgrounds/manjaro-mate/manjaro-mate.jpg'
 picture-options='stretched'
 
 [org.mate.interface]
-gtk-theme='Adapta-Maia'
+gtk-theme='Matcha-sea'
 icon-theme='Papirus-Dark-Maia'
 
 [org.mate.Marco.general]
-theme='Adapta-Maia'
+theme='Matcha-sea'
 compositing-fast-alt-tab=true
 compositing-manager=true
 
@@ -94,7 +94,7 @@ theme='slate'
 
 [x.dm.slick-greeter]
 background="/usr/share/backgrounds/manjaro-mate/manjaro-mate.jpg"
-theme-name="Adapta-Nokto-Maia"
+theme-name="Matcha-sea"
 icon-theme-name="Papirus-Dark-Maia"
 font-name="Cantarell Regular 10"
 
