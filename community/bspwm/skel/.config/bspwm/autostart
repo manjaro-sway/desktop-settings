@@ -40,4 +40,5 @@ dbus-launch gsettings set org.mate.NotificationDaemon theme 'slider' && sed -i '
 /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 ## Gnome keyring
 gnome-keyring-daemon &
-pcmanfm -d &
+thunar --daemon &
+sleep 1 && pkill dunst && /usr/lib/mate-notification-daemon/mate-notification-daemon
