@@ -27,8 +27,8 @@ xset -dpms &
 xbacklight -set 15 &
 ## Run screenlock when suspending
 light-locker &
-## multimonitor support. Save monitor configurations with "autorandr.sh --save <profile>"
-srandrd atorandr.sh --change &
+## Make monitor settings persist between reboots
+eval $(awk -F'=' '/Exec=/ {print $2}' ~/.config/autostart/lxrandr-autostart.desktop) &
 ## Notify about package updates
 update-checker 7200 &
 ## Map super key to trigger rofi when used alone
