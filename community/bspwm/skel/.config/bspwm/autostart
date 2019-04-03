@@ -9,7 +9,7 @@ xrdb merge .Xresources &
 sh ~/.fehbg &
 ## compositing. Required for shadows, transparency and stuff. 
 ## Reduces flicker. Disabling saves resources.
-compton -b &
+#compton -b &
 ## enable local fonts in .fonts directory
 xset +fp /usr/share/fonts/local &
 xset +fp /usr/share/fonts/misc &
@@ -38,7 +38,7 @@ dbus-launch gsettings set org.mate.NotificationDaemon theme 'slider' && sed -i '
 /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 ## Gnome keyring
 gnome-keyring-daemon &
-pcmanfm -d &
+thunar --daemon &
 /usr/lib/mate-notification-daemon/mate-notification-daemon &
 ## Welcome message
 sleep 1 && notify-send "Welcome to Manjaro-bspwm! " "Press super + F1 to show keybindings" &
