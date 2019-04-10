@@ -90,7 +90,7 @@ position=10
 object-type='applet'
 
 [org.mate.NotificationDaemon]
-theme='slate'
+theme='coco'
 
 [x.dm.slick-greeter]
 background="/usr/share/backgrounds/manjaro-mate/manjaro-mate.jpg"
