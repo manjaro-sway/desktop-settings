@@ -8,8 +8,14 @@ xrdb merge .Xresources &
 ## Wallpaper. Nitrogen just draws wallpaper, 
 sh ~/.fehbg &
 ## compositing. Required for shadows, transparency and stuff. 
+# Alter compton settings if using intel graphics
+GRAPHIC_CARD=$(lspci | grep -i "vga" | sed 's/.*://' | sed 's/(.*//' | sed 's/^[ \t]*//')
+if [[ $(echo $GRAPHIC_CARD | grep -i 'intel\|lenovo') != "" ]]; then MCODE='initrd=\intel-ucode.img'
+  sed -i 's/"xrender"/"glx"/' ~/.config/compton.conf
+  grep -q 'vsync = "opengl-swc";' ~/.config/compton.conf || echo 'vsync = "opengl-swc";' >> ~/.config/compton.conf
+fi
 ## Reduces flicker. Disabling saves resources.
-#compton -b &
+compton -b &
 ## enable local fonts in .fonts directory
 xset +fp /usr/share/fonts/local &
 xset +fp /usr/share/fonts/misc &
