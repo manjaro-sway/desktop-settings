@@ -12,7 +12,7 @@ picture-uri='file:///usr/share/backgrounds/cinnamon_default.jpg'
 [org.cinnamon.desktop.interface]
 cursor-theme='xcursor-breeze-snow'
 font-name='Cantarell 10'
-gtk-theme='Adapta-Nokto-Eta-Maia'
+gtk-theme='Mint-Y-Dark-Teal'
 icon-theme='Papirus-Adapta-Nokto-Maia'
 
 [org.cinnamon.desktop.screensaver]
@@ -32,7 +32,7 @@ volume-sound-file="/usr/share/sounds/LinuxMint/stereo/volume.oga"
 
 [org.cinnamon.desktop.wm.preferences]
 num-workspaces=2
-theme='Adapta-Nokto-Eta-Maia'
+theme='Mint-Y-Dark-Teal'
 titlebar-font='Cantarell 10'
 
 [org.cinnamon.sounds]
@@ -62,7 +62,7 @@ notification-enabled=true
 notification-file="/usr/share/sounds/LinuxMint/stereo/notification.oga"
 
 [org.cinnamon.theme]
-name='Adapta-Nokto-Maia'
+name='Mint-Y-Dark-Teal'
 
 [org.gnome.desktop.sound]
 theme-name="LinuxMint"
