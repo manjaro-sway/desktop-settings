@@ -71,7 +71,7 @@ configuration {
     highlight:     underline bold #ffffff;
 
     transparent: rgba(0,0,0,0);
-    font: "xos4 Terminus 16";
+    font: "TerminessTTF Nerd Font:size=16:antialias=true";
 }
 #window {
     location: center;

@@ -52,7 +52,7 @@ configuration {
 
 ////	TEXT	////
 
-	font:				"xos4 Terminus 18px";
+	font:				"TerminessTTF Nerd Font 18px";
 //    font:				"Knack Nerd Font 16px";
     text-color:			@foreground;
 
