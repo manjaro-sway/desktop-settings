@@ -1,6 +1,6 @@
 #ionicons         
 panel_height='25'
-mainfont='-*-terminus-medium-*-*-*-18-*-*-*-*-*-*-*'
+mainfont='TerminessTTF Nerd Font:size=18:antialias=true'
 iconfont="TerminessTTF Nerd Font:size=15:antialias=true"
 thirdfont="TerminessTTF Nerd Font:size=16:antialias=true"
 #thirdfont="Ionicons:size=16:antialias=false"

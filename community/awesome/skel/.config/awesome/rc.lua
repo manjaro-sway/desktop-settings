@@ -40,10 +40,13 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
+-- Chosen colors and buttons look alike adapta maia theme
 beautiful.init("/usr/share/awesome/themes/cesious/theme.lua")
 beautiful.icon_theme        = "Papirus-Dark"
-beautiful.bg_normal         = "#141A1B"
-beautiful.bg_focus          = "#222B2E"
+beautiful.bg_normal         = "#222D32"
+beautiful.bg_focus          = "#2C3940"
+beautiful.titlebar_close_button_normal = "/usr/share/awesome/themes/cesious/titlebar/close_normal_adapta.png"
+beautiful.titlebar_close_button_focus = "/usr/share/awesome/themes/cesious/titlebar/close_focus_adapta.png"
 beautiful.font              = "Noto Sans Regular 10"
 beautiful.notification_font = "Noto Sans Bold 14"
 
@@ -330,7 +333,7 @@ globalkeys = gears.table.join(
               {description = "launch Browser", group = "launcher"}),
     awful.key({ modkey, "Control"}, "Escape", function () awful.spawn("/usr/bin/rofi -show drun -modi drun") end,
               {description = "launch rofi", group = "launcher"}),
-    awful.key({ modkey,           }, "e", function () awful.spawn("/usr/bin/thunar")            end,
+    awful.key({ modkey,           }, "e", function () awful.spawn(filemanager)            end,
               {description = "launch filemanager", group = "launcher"}),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                       end,
               {description = "select previous", group = "layout"}),
