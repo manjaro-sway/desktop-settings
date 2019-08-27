@@ -1,6 +1,0 @@
-[Desktop Entry]
-Exec=msm_notifier
-Name=MSM Notifier
-StartupNotify=false
-Terminal=false
-Type=Application
