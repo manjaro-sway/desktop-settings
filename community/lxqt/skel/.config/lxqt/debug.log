@@ -1,0 +1,20 @@
+2018-07-12 10:40:51.592 (0x7fff09df6a70) Debug: New PolkitAgentListener  0x55697b48e8c0
+2018-07-12 10:40:51.595 (0x7fff09df6a70) Debug: Adding new listener  PolkitQt1::Agent::Listener(0x7fff09df6a80) for  0x55697b48e8c0
+2018-07-12 10:40:52.319 (0x7ffcb60c73f0) Warning: "Plugin \"panelvolume\" not found."
+2018-07-12 10:40:52.392 (0x7ffcb60c73f0) Debug: WinIdChange 1400008 handle QWidgetWindow(0x5633f01a9fb0, name="LXQtPanel panel1Window") QScreen(0x5633efdddb80, name="VGA-1")
+2018-07-12 10:40:52.422 (0x7ffcb60c73f0) Debug: Systray started
+2018-07-12 10:40:52.425 (0x7ffcb60c73f0) Warning: QDBusConnection: name 'org.freedesktop.UDisks2' had owner '' but we thought it was ':1.54'
+2018-07-12 10:40:52.475 (0x7ffe93cdd6a0) Debug: Starting idlenesswatcher
+2018-07-12 10:40:52.780 (0x7ffcb60c73f0) Warning:     * Error image is NULL
+2018-07-12 10:40:52.821 (0x7ffcb60c73f0) Warning:     * Error image is NULL
+2018-07-12 10:40:59.345 (0x7ffcb60c73f0) Warning:     * Error image is NULL
+2018-07-12 12:41:04.944 (0x7ffcb60c73f0) Warning: QXcbConnection: XCB error: 3 (BadWindow), sequence: 2056, resource id: 33554438, major code: 18 (ChangeProperty), minor code: 0
+2018-07-12 12:41:14.097 (0x7ffcb60c73f0) Warning: QXcbConnection: XCB error: 3 (BadWindow), sequence: 2137, resource id: 33554454, major code: 18 (ChangeProperty), minor code: 0
+2018-07-12 12:41:23.160 (0x7ffcbede2970) Warning: QFSFileEngine::open: No file name specified
+2018-07-12 12:41:23.161 (0x7ffcbede2970) Warning: QFSFileEngine::open: No file name specified
+2018-07-12 12:41:23.161 (0x7ffcbede2970) Warning: QFSFileEngine::open: No file name specified
+2018-07-12 12:41:23.161 (0x7ffcbede2970) Warning: QFSFileEngine::open: No file name specified
+2018-07-12 12:43:23.141 (0x7ffcb60c73f0) Warning: QXcbConnection: XCB error: 3 (BadWindow), sequence: 8812, resource id: 39845894, major code: 18 (ChangeProperty), minor code: 0
+2018-07-12 12:48:00.701 (0x7ffcb60c73f0) Warning: QXcbConnection: XCB error: 3 (BadWindow), sequence: 15496, resource id: 33554441, major code: 18 (ChangeProperty), minor code: 0
+2018-07-12 12:48:37.829 (0x7ffcb60c73f0) Warning: QXcbConnection: XCB error: 3 (BadWindow), sequence: 22304, resource id: 33554438, major code: 18 (ChangeProperty), minor code: 0
+2018-07-12 12:49:27.050 (0x7ffcb60c73f0) Debug: execAction "/usr/share/applications/pcmanfm-qt.desktop"

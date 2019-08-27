@@ -1,0 +1,12 @@
+[Desktop Entry]
+Comment=A X compositor
+Comment[pt]=Compositor para o servidor X
+Exec=compton --dbus
+GenericName=X compositor
+GenericName[pt]=Compositor X
+Name=Compton (X Compositor)
+Name[pt]=Compton (Compositor X)
+OnlyShowIn=LXQt;
+TryExec=compton
+Type=Application
+X-LXQt-Module=true

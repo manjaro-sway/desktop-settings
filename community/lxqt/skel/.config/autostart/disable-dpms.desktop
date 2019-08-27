@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=disable dpms
+Comment=Disable DPMS in Live-Session
+Exec=disable-dpms
+StartupNotify=false
+Terminal=false
+Hidden=false
