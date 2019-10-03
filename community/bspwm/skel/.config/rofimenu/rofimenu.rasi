@@ -52,7 +52,7 @@ configuration {
 
 ////	TEXT	////
 
-	font:				"NotoSansMono Nerd Font 18px";
+	font:				"Terminus 22px";
 //    font:				"Knack Nerd Font 16px";
     text-color:			@foreground;
 

@@ -71,7 +71,7 @@ configuration {
     highlight:     underline bold #ffffff;
 
     transparent: rgba(0,0,0,0);
-    font: "NotoSansMono Nerd Font 14";
+    font: "Terminus 18";
 }
 #window {
     location: center;
