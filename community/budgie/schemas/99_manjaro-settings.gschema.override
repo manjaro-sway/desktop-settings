@@ -8,7 +8,7 @@ pinned-launchers=['firefox.desktop', 'hexchat.desktop', 'org.gnome.Nautilus.desk
 [com.solus-project.budgie-raven]
 show-power-strip=true
 
-[org.gnome.desktop.background]
+[org.gnome.desktop.background:Budgie]
 picture-uri='file:///usr/share/backgrounds/manjaro-budgie/manjaro-budgie.jpg'
 show-desktop-icons=false
 

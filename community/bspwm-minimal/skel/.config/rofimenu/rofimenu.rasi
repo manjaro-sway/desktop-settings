@@ -30,8 +30,8 @@ configuration {
 ////	COLORS	////
 
 ////	uncomment to match bspwm edition theme
-	background:                  #222D32FF;
-	background-color:            #29353BFF;
+	background:                  #292f34FF;
+	background-color:            #292f3400;
 	foreground:                  #F6F9FFFF;
 	selected:                    #1ABB9BFF;
 	selected-foreground:         @foreground;
@@ -52,7 +52,7 @@ configuration {
 
 ////	TEXT	////
 
-	font:				"xos4 Terminus 18px";
+	font:				"Terminus 22px";
 //    font:				"Knack Nerd Font 16px";
     text-color:			@foreground;
 
@@ -103,7 +103,7 @@ window {
 //submenu-style
 sb-mainbox {
 	orientation:	horizontal;
-	children:		[ sidebar, vertibox ];
+	children:		[ mode-switcher, vertibox ];
 }
 //tabs-style
 tb-mainbox {
@@ -118,9 +118,9 @@ dt-mainbox {
 }
 horibox {
 	orientation:	horizontal;
-	children:		[ listview, sidebar ];
+	children:		[ listview, mode-switcher ];
 }
-sidebar {
+mode-switcher {
 	orientation:	vertical;
 }
 button {
