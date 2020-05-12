@@ -1,5 +1,5 @@
 #!/bin/bash
-dex -ae &
+dex -ae JADE &
 mutter &
 exec /usr/share/jadesktop/jade-desktop
 
