@@ -25,6 +25,7 @@ Please maintainers, read up first on
 * mate
 * netbook
 * pantheon
+* jade
 
 ### sonar
 

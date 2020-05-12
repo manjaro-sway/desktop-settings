@@ -1,0 +1,9 @@
+#!/bin/bash
+dex -ae &
+mutter & exec /home/vlopes/git/Jadesktop/src/jade-desktop
+#/usr/share/jadesktop/jade-desktop
+
+
+ 
+
+  

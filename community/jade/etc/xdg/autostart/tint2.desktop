@@ -1,0 +1,64 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+
+Name=Tint2
+
+GenericName=Panel
+GenericName[am]=ፓነል
+GenericName[ar]=الشريط
+GenericName[ast]=Panel
+GenericName[be]=Панэль
+GenericName[ca]=Quadre
+GenericName[cs]=Panel
+GenericName[da]=Panel
+GenericName[de]=Leiste
+GenericName[dz]=པེ་ནཱལ།
+GenericName[el]=Ταμπλό
+GenericName[en]=Tint2 panel
+GenericName[eo]=Panelo
+GenericName[es]=Panel
+GenericName[et]=Ääreriba
+GenericName[eu]=Panela
+GenericName[fi]=Paneeli
+GenericName[fr]=Panneau
+GenericName[gl]=Panel
+GenericName[he]=לוח
+GenericName[hu]=Panel
+GenericName[id]=Panel
+GenericName[it]=Pannello
+GenericName[ja]=パネル
+GenericName[kk]=Панель
+GenericName[ko]=패널
+GenericName[ku]=Panel
+GenericName[lv]=Panelis
+GenericName[mk]=Панел
+GenericName[nb]=Panel
+GenericName[nl]=Paneel
+GenericName[nn]=Panel
+GenericName[pa]=ਪੈਨਲ
+GenericName[pl]=Panel
+GenericName[pt]=Painel
+GenericName[ro]=Panou
+GenericName[ru]=Панель
+GenericName[si]=පුවරුව
+GenericName[sk]=Panel
+GenericName[sq]=Panel
+GenericName[sv]=Panel
+GenericName[ta]=பலகை
+GenericName[tr]=Panel
+GenericName[ug]=panel
+GenericName[uk]=Панель
+GenericName[ur]=پینل
+GenericName[vi]=Panel
+GenericName[zh]=面板
+
+Comment=Lightweight panel
+Comment[fr]=Panel léger
+Comment[pl]=Lekki panel
+Comment[ru]=Легковесная панель
+
+Exec=tint2
+Icon=tint2
+Terminal=false
+Categories=System;

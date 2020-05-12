@@ -1,0 +1,17 @@
+[Default Applications]
+application/x-executable=gedit.desktop
+application/pdf=evince.desktop
+text/plain=gedit.desktop
+application/xml=gedit.desktop
+application/x-shellscript=gedit.desktop
+image/png=gthumb.desktop;
+inode/directory=nautilus.desktop;
+
+[Added Associations]
+application/x-executable=gedit.desktop;
+application/pdf=evince.desktop;
+text/plain=gedit.desktop;
+application/xml=gedit.desktop;
+application/x-shellscript=gedit.desktop;
+image/png=gthumb.desktop;
+inode/directory=nautilus.desktop;
