@@ -222,7 +222,7 @@ script = webdad-speech.sh
 
 #[script-test]
 #    summary = "*script*"
-#    script = dunst_test.sh
+#    script = dunst-notify-speech.sh
 
 [ignore]
 # This notification will not be displayed
