@@ -218,11 +218,7 @@ timeout = 10
 
 [speech]
 summary = "*"
-script = webdad-speech.sh
-
-#[script-test]
-#    summary = "*script*"
-#    script = dunst-notify-speech.sh
+script = dunst-notify-speech.sh
 
 [ignore]
 # This notification will not be displayed
