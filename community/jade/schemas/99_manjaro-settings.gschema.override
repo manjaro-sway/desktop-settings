@@ -5,21 +5,12 @@ sched-idle='always'
 sched-idle='always'
 index-on-battery=false
 
-[org.gnome.desktop.background]
-picture-uri='file:///usr/share/backgrounds/manjaro-time/manjaro-time.xml'
-show-desktop-icons=false
-
-[org.gnome.desktop.screensaver]
-picture-uri='file:///usr/share/backgrounds/manjaro-time/manjaro-time.xml'
-
 [org.gnome.settings-daemon.plugins.color]
 night-light-enabled=true
 
 [org.gnome.desktop.interface]
 cursor-theme='xcursor-breeze'
-document-font-name='Sans 11'
 enable-animations=true
-font-name='Noto Sans 11'
 gtk-im-module='gtk-im-context-simple'
 gtk-theme='Matcha-sea'
 icon-theme='Papirus-Dark-Maia'
