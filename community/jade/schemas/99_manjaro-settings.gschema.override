@@ -8,14 +8,6 @@ index-on-battery=false
 [org.gnome.settings-daemon.plugins.color]
 night-light-enabled=true
 
-[org.gnome.desktop.interface]
-cursor-theme='xcursor-breeze'
-enable-animations=true
-gtk-im-module='gtk-im-context-simple'
-gtk-theme='Matcha-sea'
-icon-theme='Papirus-Dark-Maia'
-monospace-font-name='Hack 11'
-
 [org.gnome.desktop.wm.preferences]
 titlebar-uses-system-font=false
 button-layout='appmenu:minimize,maximize,close'
@@ -47,3 +39,8 @@ antialiasing='rgba'
 [org.gtk.Settings.FileChooser]
 sort-directories-first=true
 
+[org.guake.general]
+fullscreen-hide-tabbar=true
+use-trayicon=false
+window-height=100
+window-width=100
