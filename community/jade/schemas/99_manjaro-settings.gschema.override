@@ -39,7 +39,7 @@ antialiasing='rgba'
 [org.gtk.Settings.FileChooser]
 sort-directories-first=true
 
-[org.guake.general]
+[apps.guake.general]
 fullscreen-hide-tabbar=true
 use-trayicon=false
 window-height=100
