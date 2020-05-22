@@ -8,6 +8,16 @@ index-on-battery=false
 [org.gnome.settings-daemon.plugins.color]
 night-light-enabled=true
 
+[org.gnome.desktop.interface]
+cursor-theme='xcursor-breeze'
+document-font-name='Roboto 10'
+enable-animations=true
+font-name='Roboto 10'
+gtk-im-module='gtk-im-context-simple'
+gtk-theme='Matcha-sea'
+icon-theme='Papirus-Dark-Maia'
+monospace-font-name='Source Code Pro Regular 10'
+
 [org.gnome.desktop.wm.preferences]
 titlebar-uses-system-font=false
 button-layout='appmenu:minimize,maximize,close'
@@ -28,7 +38,7 @@ show-create-link=true
 
 [org.gnome.gedit.preferences.editor]
 auto-indent=true
-editor-font='Hack 12'
+editor-font='Source Code Pro Regular 10'
 scheme='solarized-dark'
 tabs-size=4
 use-default-font=false
@@ -39,7 +49,7 @@ antialiasing='rgba'
 [org.gtk.Settings.FileChooser]
 sort-directories-first=true
 
-[apps.guake.general]
+[guake.general]
 fullscreen-hide-tabbar=true
 use-trayicon=false
 window-height=100
