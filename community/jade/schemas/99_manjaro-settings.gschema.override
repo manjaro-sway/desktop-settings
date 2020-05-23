@@ -54,3 +54,5 @@ fullscreen-hide-tabbar=true
 use-trayicon=false
 window-height=100
 window-width=100
+use-scrollbar=false
+window-tabbar=false
