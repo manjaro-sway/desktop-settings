@@ -19,7 +19,7 @@ icon-theme='Papirus-Dark-Maia'
 monospace-font-name='Source Code Pro Regular 10'
 
 [org.gnome.desktop.wm.preferences]
-titlebar-uses-system-font=false
+titlebar-uses-system-font=true
 button-layout='appmenu:minimize,maximize,close'
 focus-mode='click'
 
