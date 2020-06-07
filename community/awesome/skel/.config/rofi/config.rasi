@@ -5,7 +5,7 @@
  */
 
 configuration {
-	modi: 							"combi,:rofind";
+	modi: 							"combi";
 	//combi-modi: 					"window,drun,\/:rofind,run";
 	combi-modi: 					"window,drun,run";
 	me-select-entry:				"MouseSecondary";
@@ -19,7 +19,7 @@ configuration {
     display-drun:                   "";
     // The display name of this browser
     display-window:                 "";
-    display-combi:                  "Go to";
+    display-combi:                  "Exec -> ";
     show-icons: true;
 }
 
@@ -71,7 +71,7 @@ configuration {
     highlight:     underline bold #ffffff;
 
     transparent: rgba(0,0,0,0);
-    font: "xos4 Terminus 16";
+    font: "Terminus 18";
 }
 #window {
     location: center;
@@ -100,7 +100,7 @@ configuration {
     background-color: @tcyan;
 }
 #message {
-    font: "xos4 Terminus 10";
+    font: "Noto Sans Mono Medium 12";
     color: @black;
 }
 
@@ -111,7 +111,7 @@ configuration {
     border: 2px 2px 2px 2px;
     border-radius:  30px 30px 0px 0px;
     border-color: @foreground;
-    font: "xos4 Terminus 18";
+    font: "NotoSansMono Nerd Font 18";
 }
 #entry,prompt,case-indicator {
     text-font: inherit;
