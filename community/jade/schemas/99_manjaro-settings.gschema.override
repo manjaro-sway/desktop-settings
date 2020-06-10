@@ -18,6 +18,14 @@ gtk-theme='Matcha-sea'
 icon-theme='Papirus-Dark-Maia'
 monospace-font-name='Source Code Pro Regular 10'
 
+[org.gnome.desktop.background]
+picture-uri='file:///usr/share/jadesktop/themes/default/backgrounds/background.jpg'
+
+[org.pantheon.desktop.gala.appearance]
+attach-modal-dialogs=true
+dim-parents=true
+workspace-switcher-background='file:///usr/share/jadesktop/themes/default/backgrounds/background.jpg'
+
 [org.gnome.desktop.wm.preferences]
 titlebar-uses-system-font=true
 button-layout='appmenu:minimize,maximize,close'

@@ -2,4 +2,4 @@
 Name=Jade
 Comment=Just Another Desktop Environment
 Exec=/usr/bin/jade-session
-Icon=/usr/share/icons/manjaro/green.svg
+Icon=/usr/share/jadesktop/images/logo.svg
