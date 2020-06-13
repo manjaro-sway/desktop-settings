@@ -1,6 +1,8 @@
 #!/bin/bash
 /usr/share/jadesktop/jade-desktop &
 dex -ae JADE &
+dunst &
+lxqt-powermanagement &
 exec gala 
 
 
