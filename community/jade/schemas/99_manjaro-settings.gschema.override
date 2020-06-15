@@ -64,3 +64,6 @@ window-height=100
 window-width=100
 use-scrollbar=false
 window-tabbar=false
+
+[org.blueberry]
+use-symbolic-links=false
