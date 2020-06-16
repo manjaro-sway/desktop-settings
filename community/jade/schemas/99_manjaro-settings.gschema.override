@@ -66,4 +66,4 @@ use-scrollbar=false
 window-tabbar=false
 
 [org.blueberry]
-use-symbolic-links=false
+use-symbolic-icons=false
