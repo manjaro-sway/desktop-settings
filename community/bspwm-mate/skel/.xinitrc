@@ -53,7 +53,7 @@ case $session in
     lxde 	          ) exec dbus-launch --sh-syntax --exit-with-session startlxde;;
     lxqt         	  ) exec dbus-launch --sh-syntax --exit-with-session lxqt-session;;
     i3|i3wm           ) exec dbus-launch --sh-syntax --exit-with-session i3;;
-    kde               ) exec dbus-launch --sh-syntax --exit-with-session startkde;;
+    kde               ) exec dbus-launch --sh-syntax --exit-with-session startplasma-x11;;
     cinnamon          ) exec dbus-launch --sh-syntax --exit-with-session cinnamon-session;;
     budgie            ) exec dbus-launch --sh-syntax --exit-with-session budgie-desktop;;
     mate              ) exec dbus-launch --sh-syntax --exit-with-session mate-session;;
