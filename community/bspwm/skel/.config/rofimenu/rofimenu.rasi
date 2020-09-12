@@ -178,3 +178,5 @@ element.selected.urgent {
 	background-color:	@selected-urgent-background;
 	text-color:			@selected-urgent-foreground;
 }
+
+element-icon { size: 2.5ch ; }
