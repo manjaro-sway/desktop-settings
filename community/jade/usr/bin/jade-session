@@ -3,6 +3,7 @@
 dex -ae JADE &
 dunst &
 lxqt-powermanagement &
+plank &
 exec gala 
 
 
