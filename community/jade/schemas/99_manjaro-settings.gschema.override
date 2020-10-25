@@ -67,3 +67,10 @@ window-tabbar=false
 
 [org.blueberry]
 use-symbolic-icons=false
+
+[net.launchpad.plank.docks.dock1]
+alignment='start'
+dock-items=['org.jade.desktop.toggleLauncher.dockitem', 'gala-multitaskingview.dockitem', 'org.jade.desktop.toggleScreen.dockitem', 'org.jade.desktop.toggleSettings.dockitem', 'org.jade.desktop.toggleSearch.dockitem', 'org.gnome.Nautilus.dockitem', 'org.gnome.Geary.dockitem', 'chromium.dockitem', 'trash.dockitem']
+hide-mode='intelligent'
+icon-size=32
+theme='Transparent'
