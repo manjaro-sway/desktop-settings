@@ -1,4 +1,5 @@
-on: [push]
+on:
+  push:
 
 jobs:
   trigger:
@@ -7,6 +8,7 @@ jobs:
     - 
       uses: peter-evans/repository-dispatch@v1
       with:
-        token: ${{ secrets.DISPATCH_TOKEN }}
-        repository: boredland/arch-repo
-        event-type: dependency_update
+        token: ${{ secrets.DISPATCH }}
+        repository: manjaro-sway/packages
+        event-type: package_update
+        client-payload: '{ "repository": "${{ github.repository }}", "sha": "${{ github.sha }}"}'
