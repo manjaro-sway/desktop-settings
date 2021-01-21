@@ -1,0 +1,35 @@
+name: trigger pkgbuild
+
+on:
+  release:
+    types: [published]  
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'tag to dispatch'
+        required: true
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+    - 
+      name: checkout
+      uses: actions/checkout@v2
+      with:
+        token: "${{ secrets.GITHUB_TOKEN }}"
+    - 
+      name: download tarball
+      run: |
+        VERSION=${{ github.event.release.tag_name || github.event.inputs.tag }}
+        echo "VERSION=${VERSION}" >> $GITHUB_ENV
+        curl --location --remote-header-name --remote-name --silent -O \
+          https://github.com/${{ github.repository }}/archive/${VERSION}.tar.gz
+        echo "MD5=$(md5sum ${{ github.event.repository.name }}-${VERSION}.tar.gz | cut -d ' ' -f 1)" >> $GITHUB_ENV
+    - 
+      uses: peter-evans/repository-dispatch@v1
+      with:
+        token: ${{ secrets.DISPATCH }}
+        repository: manjaro-sway/manjaro-sway-settings
+        event-type: source_update
+        client-payload: '{ "version": "${{ env.VERSION }}", "md5": "${{ env.MD5 }}"}'
