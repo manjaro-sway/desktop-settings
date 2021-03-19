@@ -44,13 +44,6 @@ default-zoom-level='small'
 thumbnail-limit=1000
 show-create-link=true
 
-[org.gnome.gedit.preferences.editor]
-auto-indent=true
-editor-font='Source Code Pro Regular 10'
-scheme='solarized-dark'
-tabs-size=4
-use-default-font=false
-
 [org.gnome.settings-daemon.plugins.xsettings]
 antialiasing='rgba'
 
@@ -65,12 +58,7 @@ window-width=100
 use-scrollbar=false
 window-tabbar=false
 
-[org.blueberry]
-use-symbolic-icons=false
-
 [net.launchpad.plank.dock.settings]
-alignment='start'
-dock-items=['org.jade.desktop.toggleLauncher.dockitem', 'gala-multitaskingview.dockitem', 'org.jade.desktop.toggleScreen.dockitem', 'org.jade.desktop.toggleSettings.dockitem', 'org.jade.desktop.toggleSearch.dockitem', 'org.gnome.Nautilus.dockitem', 'org.gnome.Geary.dockitem', 'chromium.dockitem', 'trash.dockitem', 'org.jade.desktop.exit.dockitem']
-hide-mode='intelligent'
+dock-items=['org.jade.desktop.toggleLauncher.dockitem', 'gala-multitaskingview.dockitem', 'org.jade.desktop.toggleSettings.dockitem', 'org.gnome.Nautilus.dockitem', 'org.gnome.Geary.dockitem', 'chromium.dockitem', 'trash.dockitem', 'org.jade.desktop.exit.dockitem']
 icon-size=32
 theme='Transparent'

@@ -57,7 +57,7 @@ get_session(){
 		mate) dbus_args+=(mate-session) ;;
 		xfce) dbus_args+=(xfce4-session) ;;
 		openbox) dbus_args+=(openbox-session) ;;
-		jade) dbus_args+=(jade-session) ;;
+		jde) dbus_args+=(jde-session) ;;
 		*) dbus_args+=($DEFAULT_SESSION) ;;
 	esac
 

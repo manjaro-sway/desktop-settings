@@ -142,8 +142,6 @@ separator_color = auto
 # automatically after a crash.
 startup_notification = false
 
-# dmenu path.
-#dmenu = /usr/bin/dmenu -p dunst:
 
 # Browser for opening urls in context menu.
 browser = /usr/bin/chromium
@@ -179,21 +177,21 @@ context = ctrl+shift+period
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-foreground = "#ffffff"
+foreground = "#f9f9f9ff"
 background = "#1e88e5"
 frame_color = "#1e88e5"
 timeout = 6
 
 [urgency_normal]
-foreground = "#ffffff"
-background = "#1e88e5"
-frame_color = "#1e88e5"
+foreground = "#222222"
+background = "#f9f9f9ff"
+frame_color = "#f9f9f9ff"
 timeout = 8
 
 [urgency_critical]
-foreground = "#ffffff"
-background = "#1e88e5"
-frame_color = "#1e88e5"
+foreground = "#222222"
+background = "#f9f9f9ff"
+frame_color = "#f9f9f9ff"
 timeout = 10
 
 
