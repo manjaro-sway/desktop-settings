@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Icon=display
+Exec=io.elementary.switchboard settings://display
+Terminal=false
+Type=Application
+Categories=Settings;DesktopSettings;
+X-AppStream-Ignore=true
+StartupNotify=false
+
+Name=Screen Settings
+Comment=Configure resolution and position of monitors and projectors.
+

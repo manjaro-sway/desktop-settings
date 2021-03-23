@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Icon=printer
+Exec=io.elementary.switchboard settings://printer
+Terminal=false
+Type=Application
+Categories=Settings;DesktopSettings;
+X-AppStream-Ignore=true
+StartupNotify=false
+
+Name=Printers
+Comment=Configure printers manage print queues and check ink levels.
+

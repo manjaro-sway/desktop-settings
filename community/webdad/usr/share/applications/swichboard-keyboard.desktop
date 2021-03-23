@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Icon=keyboard
+Exec=io.elementary.switchboard settings://input/keyboard
+Terminal=false
+Type=Application
+Categories=Settings;DesktopSettings;
+X-AppStream-Ignore=true
+StartupNotify=false
+
+Name=Keyboard Preferences
+Comment=Configure keyboard behavior layout and shortcuts.
+

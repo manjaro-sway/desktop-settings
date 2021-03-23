@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Icon=time
+Exec=io.elementary.switchboard settings://time
+Terminal=false
+Type=Application
+Categories=Settings;DesktopSettings;
+X-AppStream-Ignore=true
+StartupNotify=false
+
+Name=Date & time
+Comment=Configure date, time and select timezone.
+

@@ -59,6 +59,7 @@ use-scrollbar=false
 window-tabbar=false
 
 [net.launchpad.plank.dock.settings]
-dock-items=['org.jade.desktop.toggleLauncher.dockitem', 'gala-multitaskingview.dockitem', 'org.jade.desktop.toggleSettings.dockitem', 'org.gnome.Nautilus.dockitem', 'org.gnome.Geary.dockitem', 'chromium.dockitem', 'trash.dockitem', 'org.jade.desktop.exit.dockitem']
+dock-items=['org.jade.desktop.toggleLauncher.dockitem', 'gala-multitaskingview.dockitem', 'org.jade.desktop.toggleSettings.dockitem', 'org.gnome.Nautilus.dockitem', 'org.gnome.Geary.dockitem', 'firefox-developer-edition.dockitem', 'trash.dockitem', 'org.jade.desktop.exit.dockitem']
 icon-size=32
-theme='Transparent'
+hide-mode='intelligent'
+theme='webdad-default'

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Icon=cs-mouse
+Exec=io.elementary.switchboard settings://input/mouse
+Terminal=false
+Type=Application
+Categories=Settings;DesktopSettings;
+X-AppStream-Ignore=true
+StartupNotify=false
+
+Name=Mouse & Touchpad
+Comment=Configure mouse and touchpad.
+

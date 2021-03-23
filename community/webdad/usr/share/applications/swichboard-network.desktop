@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Icon=network_local
+Exec=io.elementary.switchboard settings://network
+Terminal=false
+Type=Application
+Categories=Settings;DesktopSettings;
+X-AppStream-Ignore=true
+StartupNotify=false
+
+Name=Network Connections
+Comment=Manage network devices and connectivity.
+

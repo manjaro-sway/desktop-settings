@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Icon=desktop
+Exec=io.elementary.switchboard settings://desktop/wallpaper
+Terminal=false
+Type=Application
+Categories=Settings;DesktopSettings;
+X-AppStream-Ignore=true
+StartupNotify=false
+
+Name=Desktop Customization
+Comment=Configure the dock, hot corners and wallpaper.
+

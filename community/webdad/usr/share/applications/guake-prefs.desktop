@@ -1,0 +1,23 @@
+[Desktop Entry]
+Name=Terminal Preferences
+Comment=Configure terminal sessions
+TryExec=guake
+Exec=guake -p
+Icon=terminal
+Type=Application
+StartupNotify=true
+Categories=GTK;GNOME;Settings;
+X-GNOME-Settings-Panel=terminal
+X-Desktop-File-Install-Version=0.15
+Keywords[cs]=Terminál
+Keywords[de]=Terminal
+Keywords[fr]=Terminal
+Keywords[it]=Terminale
+Keywords[ja]=Terminal
+Keywords[nb]=Terminal
+Keywords[nl]=Terminal
+Keywords[pl]=Terminal
+Keywords[ru]=Терминал
+Keywords[sv]=Terminal
+Keywords[zh_CN]=终端
+Keywords=Terminal
