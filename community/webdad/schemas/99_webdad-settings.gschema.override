@@ -59,7 +59,7 @@ use-scrollbar=false
 window-tabbar=false
 
 [net.launchpad.plank.dock.settings]
-dock-items=['io.jde.desktop.toggleLauncher.dockitem', 'gala-multitaskingview.dockitem', 'io.jde.desktop.toggleSettings.dockitem', 'org.gnome.Nautilus.dockitem', 'org.gnome.Geary.dockitem', 'firefox-developer-edition.dockitem', 'trash.dockitem', 'io.jde.desktop.exit.dockitem']
-icon-size=32
-hide-mode='intelligent'
+dock-items=['io.jde.desktop.toggleLauncher.dockitem', 'gala-multitaskingview.dockitem', 'io.jde.desktop.toggleSettings.dockitem', 'org.gnome.Nautilus.dockitem', 'org.gnome.Geary.dockitem', 'firefox-developer-edition.dockitem', 'deepin-screenshot.dockitem', 'trash.dockitem', 'io.jde.desktop.exit.dockitem']
+icon-size=30
+hide-mode='auto'
 theme='webdad-default'
