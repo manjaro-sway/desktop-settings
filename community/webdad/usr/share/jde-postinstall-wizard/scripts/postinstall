@@ -1,0 +1,12 @@
+#!/bin/bash
+
+DIR="/home/$USER/Projects"
+if [ ! -d "$DIR" ]; then
+
+    mkdir $DIR
+    mkdir $DIR/Git
+    mkdir $DIR/Templates
+    mkdir $DIR/Design
+    mkdir $DIR/Drafts
+
+fi
