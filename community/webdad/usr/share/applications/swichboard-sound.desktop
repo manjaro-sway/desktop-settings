@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Icon=cs-sound
-Exec=io.elementary.switchboard settings://time
+Exec=io.elementary.switchboard settings://sound
 Terminal=false
 Type=Application
 Categories=Settings;DesktopSettings;
