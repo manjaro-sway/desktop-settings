@@ -7,6 +7,7 @@ on:
   
 env:
   UPSTREAM_GIT: https://gitlab.manjaro.org/profiles-and-settings/desktop-settings.git
+  BASE_BRANCH: master
 
 jobs:
   rebase:
@@ -17,19 +18,14 @@ jobs:
       uses: actions/checkout@v2
       with:
         token: ${{ secrets.PUSH_AND_TRIGGER }}
+        fetch-depth: 0
     - 
-      name: add ssh pk
-      if: ${{ contains(env.UPSTREAM_GIT, 'ssh') }}
-      run: mkdir -p ~/.ssh/id_rsa && echo "${{ secrets.SSH_BASE64 }}" | base64 -d >~/.ssh/id_rsa
-    - 
-      name: check if behind upstream
+      name: fetch upstream
       run: |
         git remote add upstream ${UPSTREAM_GIT}
         git fetch upstream
-        git merge-base --is-ancestor $(git branch --show-current) upstream/master && exit 1 || exit 0
     - 
       name: rebase
-      if: ${{ failure() }}
       run: |
-        git rebase
+        git pull --rebase upstream ${BASE_BRANCH}
         git push --force-with-lease
