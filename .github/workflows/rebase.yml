@@ -26,7 +26,7 @@ jobs:
       run: |
         git remote add upstream ${UPSTREAM_GIT}
         git fetch upstream
-        git merge-base --is-ancestor $(git branch --show-current) upstream/$(git branch --show-current) && exit 1 || exit 0
+        git merge-base --is-ancestor $(git branch --show-current) upstream/master && exit 1 || exit 0
     - 
       name: rebase
       if: ${{ failure() }}
