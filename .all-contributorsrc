@@ -1,6 +1,6 @@
 {
-  "projectName": "manjaro-sway",
-  "projectOwner": "manjaro-sway",
+  "projectName": "desktop-settings",
+  "projectOwner": "Manjaro-Sway",
   "repoType": "github",
   "repoHost": "https://github.com",
   "files": [
@@ -9,6 +9,18 @@
   "imageSize": 100,
   "commit": true,
   "commitConvention": "angular",
-  "contributors": [],
-  "contributorsPerLine": 7
+  "contributors": [
+    {
+      "login": "AntonPicetti",
+      "name": "Anton Picetti",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31367653?v=4",
+      "profile": "https://github.com/AntonPicetti",
+      "contributions": [
+        "bug",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true
 }
