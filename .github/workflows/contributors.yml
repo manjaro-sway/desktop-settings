@@ -1,0 +1,22 @@
+name: "forward-all-contributors"
+on:
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+
+jobs:
+  add-contributors:
+    runs-on: ubuntu-latest
+    steps:
+    - name: check user has write access
+      uses: lannonbr/repo-permission-check-action@2.0.0
+      with:
+        permission: "write"
+    - name: create comment in target repo
+      uses: peter-evans/create-or-update-comment@v1
+      with:
+        issue-number: 73
+        repository: manjaro-sway/manjaro-sway
+        body: ${{ github.event.comment.body }}
+        token: ${{ secrets.PUSH_AND_TRIGGER }}
