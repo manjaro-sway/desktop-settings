@@ -26,7 +26,6 @@ set $theme /usr/share/sway/themes/matcha-green
 # Your preferred terminal emulator
 set $term foot
 set $term_client footclient
-set $term_server foot --server
 set $term_float $term_client -a floating_shell
 set $term_float_portrait $term_client -a floating_shell_portrait
 
