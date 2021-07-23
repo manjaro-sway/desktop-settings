@@ -28,8 +28,11 @@ set $term foot
 set $term_float footclient -a floating_shell
 set $term_float_portrait footclient -a floating_shell_portrait
 
+#Include the colors before use
+include $theme/definitions
+
 # Your preferred application launcher
-set $menu rofi -show combi -combi-modi "drun,run" -terminal $term -ssh-command  "{terminal} {ssh-client} {host} [-p {port}]" -run-shell-command "{terminal} {cmd}" -show-icons -font "$gui-font" -lines 10 -width 35 -color-normal "$background-color, $text-color, $background-color, $accent-color, $text-color" -color-window "$background-color, $selection-color"
+set $menu rofi -show combi -combi-modi "drun,run" -terminal $term -ssh-command  "{terminal} {ssh-client} {host} [-p {port}]" -run-shell-command "{terminal} {cmd}" -show-icons -font "$gui-font" -lines 10 -width 35 -theme-str 'window {background-color: #$background-color; text-color: #$text-color;} element selected.normal {background-color: #$selection-color; text-color: #$accent-color;} prompt {text-color:#$text-color;} textbox-prompt-colon { text-color: inherit;} entry { text-color: #$text-color;}'
 
 
 ### Lockscreen configuration
