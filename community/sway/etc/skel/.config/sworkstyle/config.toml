@@ -3,45 +3,51 @@
 # icon: Your beatifull icon
 #
 # verbose format:
-# 
-#       '{pattern}' = { type = 'generic' | 'exact', value = '{icon}' }
+#
+# '{pattern}' = { type = 'generic' | 'exact', value = '{icon}' }
 #
 #
 # If it couldn't match something it will print:
-# 
-# WARN [sworkstyle:config] No match for '{app_name}' with title '{title}' 
 #
-# You can use {title} to do a generic matching 
+# WARN [sworkstyle:config] No match for '{app_name}' with title '{title}'
+#
+# You can use {title} to do a generic matching
 # You can use {app_name} to do an exact match
- 
-fallback = ''
- 
+
+fallback = ''
+
 [matching]
-'discord' = ''
 'balena-etcher' = ''
-'Chia Blockchain' = ''
 'Steam' = ''
 'vlc' = ''
 'org.qbittorrent.qBittorrent' = ''
 'Thunderbird' = ''
-'thunderbird' = ''                                                                                                                                                                           
-'Postman' = ''                                                                                                                                                                               
-'Insomnia' = ''                                                                                                                                                                              
-'Bitwarden' = ''                                                                                                                                                                             
-'Google-chrome' = ''                                                                                                                                                                         
-'Chromium' = ''                                                                                                                                                                              
-'Slack' = ''                                                                                                                                                                                 
-'Code' = ''                                                                                                                                                                                  
-'code-oss' = ''                                                                                                                                                                              
-'Spotify' = ''                                                                                                                                                                               
-'/(?i)Github.*Firefox/' = ''                                                                                                                                                                 
-'firefox' = ''                                                                                                                                                                               
-'Nightly' = ''                                                                                                                                                                               
-'firefoxdeveloperedition' = ''                                                                                                                                                               
-'/nvim ?\w*/' = ''                                                                                                                                                                           
-'/npm/' = ''                                                                                                                                                                                 
-'/node/' = ''                                                                                                                                                                                
-'/yarn/' = ''                                                                                                                                                                                
-'Alacritty' = ''                                                                                                                                                                             
-'kitty' = ''                                                                                                                                                                                 
-'foot' = '' 
+'thunderbird' = ''
+'Insomnia' = ''
+'Bitwarden' = ''
+'Slack' = ''
+'Code' = ''
+'code-oss' = ''
+'Spotify' = ''
+'/GitHub/' = ''
+'/GitLab/' = ''
+'/nvim ?\w*/' = ''
+'/npm/' = ''
+'/node/' = ''
+'/yarn/' = ''
+'Alacritty' = ''
+'kitty' = ''
+'foot' = ''
+'font-manager' = ''
+'/Telegram/' = ''
+'/Stack Overflow/' = ''
+'/Bluetooth/' = ''
+'/Manjaro/' = ''
+'pamac-manager' = 'p'
+'/IntelliJ/' = ''
+
+'Google-chrome' = ''
+'Chromium' = ''
+'firefox' = ''
+'firefoxdeveloperedition' = ''
+'Brave-browser' = ''
