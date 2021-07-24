@@ -20,3 +20,6 @@ export TERMINAL_COMMAND=foot
 # sway-launcher-desktop with material icons
 export GLYPH_DESKTOP="󰄶 "
 export GLYPH_COMMAND="󰆍 "
+
+#Java theme
+export _JAVA_AWT_WM_NONREPARENTING=1
