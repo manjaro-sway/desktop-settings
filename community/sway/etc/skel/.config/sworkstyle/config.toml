@@ -20,7 +20,7 @@ fallback = ''
 ## partials
 '/GitHub/' = ''
 '/GitLab/' = ''
-'/nvim ?\w*/' = ''
+'/NVIM ?\w*/' = ''
 '/npm/' = ''
 '/node/' = ''
 '/yarn/' = ''
