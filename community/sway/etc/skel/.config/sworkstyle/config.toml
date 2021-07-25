@@ -13,6 +13,7 @@
 #
 # You can use {title} to do a generic matching
 # You can use {app_name} to do an exact match
+# You can find icons for nerd fonts here: https://www.nerdfonts.com/cheat-sheet
 
 fallback = ''
 
