@@ -26,7 +26,6 @@ fallback = ''
 '/node/' = ''
 '/yarn/' = ''
 '/Stack Overflow/' = ''
-'/Manjaro/' = ''
 
 ## browsers
 'Google-chrome' = ''
