@@ -68,7 +68,7 @@ set $pulseaudio $term_float pulsemixer
 set $help "$term_float man $HOME/.config/sway/help.man"
 
 # onscreen bar
-set $onscreen_bar bash /usr/share/sway/scripts/wob.sh
+set $onscreen_bar bash /usr/share/sway/scripts/wob.sh "$accent-colorFF" "$background-colorFF" 
 # calendar application
 set $calendar $term_float "khal interactive"
 
