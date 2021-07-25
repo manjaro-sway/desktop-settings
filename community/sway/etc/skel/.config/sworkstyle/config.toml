@@ -1,6 +1,6 @@
 #
 # pattern: Can either be the exact "app_name" (app_id/class) of the window or a regex string in the format of `"/{regex}/"` which will match the window "title".
-# icon: Your beatifull icon
+# icon: Your beatiful icon
 #
 # verbose format:
 #
@@ -17,38 +17,51 @@
 fallback = ''
 
 [matching]
-'balena-etcher' = ''
-'Steam' = ''
-'vlc' = ''
-'org.qbittorrent.qBittorrent' = ''
-'Thunderbird' = ''
-'thunderbird' = ''
-'Insomnia' = ''
-'Bitwarden' = ''
-'Slack' = ''
-'Code' = ''
-'code-oss' = ''
-'Spotify' = ''
+## partials
 '/GitHub/' = ''
 '/GitLab/' = ''
 '/nvim ?\w*/' = ''
 '/npm/' = ''
 '/node/' = ''
 '/yarn/' = ''
-'Alacritty' = ''
-'kitty' = ''
-'foot' = ''
-'font-manager' = ''
-'/Telegram/' = ''
 '/Stack Overflow/' = ''
-'/Bluetooth/' = ''
 '/Manjaro/' = ''
-'pamac-manager' = ''
-'/IntelliJ/' = ''
-'pcmanfm' = '練'
 
+## browsers
 'Google-chrome' = ''
 'Chromium' = ''
 'firefox' = ''
 'firefoxdeveloperedition' = ''
 'Brave-browser' = ''
+
+## default applications
+'foot' = ''
+'pcmanfm' = '練'
+'pamac-manager' = ''
+'/Bluetooth/' = ''
+
+## email
+'Thunderbird' = ''
+'thunderbird' = ''
+'evolution' = ''
+
+## ides
+'code' = ''
+'Code' = ''
+'code-oss' = ''
+'/IntelliJ/' = ''
+
+## additional applications
+'balena-etcher' = ''
+'Steam' = ''
+'vlc' = ''
+'org.qbittorrent.qBittorrent' = ''
+'Insomnia' = ''
+'Bitwarden' = ''
+'Slack' = ''
+'Spotify' = ''
+'Alacritty' = ''
+'kitty' = ''
+'font-manager' = ''
+'/Telegram/' = ''
+
