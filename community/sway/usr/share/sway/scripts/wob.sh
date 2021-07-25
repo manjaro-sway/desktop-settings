@@ -24,4 +24,4 @@ is_running_on_this_screen wob || {
     tail -f $wob_pipe | wob --border-color $1 --bar-color $1 --background-color $2 --anchor top --anchor center --margin 20 &
 }
 
-[[ "$new_value" ]] && echo $new_value > $wob_pipe     
+[[ "$new_value" ]] && echo $new_value > $wob_pipe
