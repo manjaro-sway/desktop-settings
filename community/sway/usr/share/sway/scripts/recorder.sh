@@ -4,12 +4,17 @@ pid=`pgrep wf-recorder`
 status=$?
 
 gif=false
+audio=""
 
-while getopts ":g:" arg; do
+while getopts ":g:a:" arg; do
   case $arg in
     g)
         gif=true
         echo "will save as gif" 
+        ;;
+    a)
+        audio="--audio=0"
+        echo "will record audio" 
         ;;
   esac
 done
@@ -47,7 +52,7 @@ then
     area=$(swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp)
 
     countdown
-    wf-recorder --audio=0 -g "$area" -f $file
+    wf-recorder ${audio} -g "$area" -f $file
     notify "Finished recording ${file}"
 
 
