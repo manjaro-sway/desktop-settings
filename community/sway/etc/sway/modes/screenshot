@@ -5,26 +5,17 @@ set $mode_screenshot "<span foreground='$color10'>󰄄</span>  \
 <span foreground='$color1'>—</span> \
 <span foreground='$color7'>(press <b>Shift</b> for Clipboard)</span>"
 
-set $grimshot /usr/share/sway/scripts/grimshot
-
-set $screenshot_screen_clipboard $grimshot --notify copy output
-set $screenshot_screen_file $grimshot --notify save output
-set $screenshot_selection_clipboard $grimshot --notify copy window
-set $screenshot_selection_file $grimshot --notify save window
-set $switch_default_mode swaymsg mode "default"
-
 mode --pango_markup $mode_screenshot {
     # output = currently active output
-    $bindsym o exec "$switch_default_mode && $screenshot_screen_file"
-    $bindsym Shift+o exec "$switch_default_mode && $screenshot_screen_clipboard"
+    $bindsym o mode "default", exec $screenshot_screen_file
+    $bindsym Shift+o mode "default", exec $screenshot_screen_clipboard
 
-    # pick the area to screenshot
-    $bindsym p exec "$switch_default_mode && $screenshot_selection_file"
-    $bindsym Shift+p exec "$switch_default_mode && $screenshot_selection_clipboard"
+    # pick the region to screenshot
+    $bindsym p mode "default", exec $screenshot_selection_file
+    $bindsym Shift+p mode "default", exec $screenshot_selection_clipboard
 
     # Return to default mode.
     $bindsym Escape mode "default"
-    $bindsym Return mode "default"
 }
 
 ## Launch // Screenshot Mode ##
