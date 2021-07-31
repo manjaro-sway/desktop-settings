@@ -7,16 +7,8 @@ function start(){
 	if [ ${location} = "on" ]; 
 	then
 		CONTENT=$(curl -s https://freegeoip.app/json/)
-		longitude=$(echo $CONTENT | jq .longitude)
-		latitude=$(echo $CONTENT | jq .latitude)
-		if [ -e $longitude ];
-		then
-			echo location ERROR: freegeoip.app
-			longitude="${longitude:-65}"
-			latitude="${latitude:-60}"
-		else
-			echo location OK:  $latitude $longitude
-		fi	
+		longitude=${$(echo $CONTENT | jq '.longitude // empty'):-${longitude:-65}}
+		latitude=${$(echo $CONTENT | jq '.latitude // empty'):-${latitude:-65}}
 		wlsunset -l $latitude -L $longitude -t $temp_low -T $temp_high -d $duration &
 	else
 		wlsunset -t $temp_low -T $temp_high -d $duration -S $sunrise -s $sunset &
