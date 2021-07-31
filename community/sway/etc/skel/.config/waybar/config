@@ -20,26 +20,34 @@
     "modules-left": [
         "custom/menu",
         "sway/workspaces",
-        "custom/scratchpad",
-        "sway/mode"
+        "custom/scratchpad"
     ],
     "modules-center": [
         "custom/wf-recorder",
-        "sway/window"
+        "sway/mode"
     ],
     "modules-right": [
+        // informational
+        "sway/language",
         "custom/help",
-        "network",
-        "bluetooth",
         "cpu",
         "memory",
         "battery",
         "temperature",
+
+        // connecting
+        "network",
+        "bluetooth",
+
+        // media
         "idle_inhibitor",
-        "custom/sunset",
         "pulseaudio",
+        "backlight",
+
+        // system
+        "custom/sunset",
         "custom/pacman",
-        "sway/language",
+
         "tray",
         "clock",
     ],
@@ -54,8 +62,8 @@
             "warning": 30,
             "critical": 15
         },
-        "format-charging": "",
-        "format": "{icon}",
+        "format-charging": "{capacity}%",
+        "format": "{icon}{capacity}%",
         "format-icons": ["","","","","",""],
         "tooltip": true,
         "bat": "BAT0"
@@ -71,7 +79,7 @@
 
     "cpu": {
         "interval": 5,
-        "format": "﬙",
+        "format": "﬙{usage}%",
         "states": {
             "warning": 70,
             "critical": 90
@@ -81,7 +89,7 @@
 
     "memory": {
         "interval": 5,
-        "format": "",
+        "format": "{}%",
         "states": {
             "warning": 70,
             "critical": 90
@@ -103,17 +111,19 @@
         "tooltip": false
     },
 
-    "sway/window": {
-        "format": "{}",
-        "max-length": 80
-    },
-
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
             "activated": "零",
             "deactivated": "鈴"
         }
+    },
+
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", ""],
+        "on-scroll-up": "light -A 1",
+        "on-scroll-down": "light -U 1"
     },
 
     "pulseaudio": {
@@ -134,7 +144,7 @@
     "temperature": {
       "critical-threshold": 90,
       "interval": 5,
-      "format": "{icon}",
+      "format": "{icon}{temperatureC}°C",
       "format-icons": ["","",""],
       "tooltip": true,
       "on-click": "swaymsg exec \"\\$term_float watch sensors\""
@@ -196,8 +206,8 @@
         "return-type": "json",
         "format" : "{icon}",
         "format-icons": {
-            "on": "ﯦ" ,
-            "off": "ﯧ" 
+            "on": "" ,
+            "off": "" 
         },
         "exec": "/usr/share/sway/scripts/sunset.sh",
         "on-click": "/usr/share/sway/scripts/sunset.sh toggle; pkill -RTMIN+8 waybar",
