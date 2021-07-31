@@ -62,8 +62,8 @@
             "warning": 30,
             "critical": 15
         },
-        "format-charging": "{capacity}%",
-        "format": "{icon}{capacity}%",
+        "format-charging": " {capacity}%",
+        "format": "{icon} {capacity}%",
         "format-icons": ["","","","","",""],
         "tooltip": true,
         "bat": "BAT0"
@@ -79,7 +79,7 @@
 
     "cpu": {
         "interval": 5,
-        "format": "﬙{usage}%",
+        "format": "﬙ {usage}%",
         "states": {
             "warning": 70,
             "critical": 90
@@ -89,7 +89,7 @@
 
     "memory": {
         "interval": 5,
-        "format": "{}%",
+        "format": " {}%",
         "states": {
             "warning": 70,
             "critical": 90
@@ -144,7 +144,7 @@
     "temperature": {
       "critical-threshold": 90,
       "interval": 5,
-      "format": "{icon}{temperatureC}°C",
+      "format": "{icon} {temperatureC}°C",
       "format-icons": ["","",""],
       "tooltip": true,
       "on-click": "swaymsg exec \"\\$term_float watch sensors\""
