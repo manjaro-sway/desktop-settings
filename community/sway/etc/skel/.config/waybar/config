@@ -27,7 +27,6 @@
         "sway/window"
     ],
     "modules-right": [
-        "custom/sunset",
         "network",
         "bluetooth",
         "cpu",
@@ -36,6 +35,7 @@
         "temperature",
         "backlight",
         "idle_inhibitor",
+        "custom/sunset",
         "pulseaudio",
         "custom/pacman",
         "tray",
@@ -216,7 +216,8 @@
             "on": "ﯦ" ,
             "off": "ﯧ" 
         },
-        "exec": "/bin/sh /usr/share/sway/scripts/sunset.sh",
-	    "on-click": "swaymsg exec /usr/share/sway/scripts/sunset.sh 'toggle'",
+        "exec": "/usr/share/sway/scripts/sunset.sh",
+        "on-click": "/usr/share/sway/scripts/sunset.sh toggle",
+        "exec-if": "/usr/share/sway/scripts/sunset.sh check"
     },
 }

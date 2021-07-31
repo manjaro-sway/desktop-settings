@@ -41,6 +41,10 @@ case $1'' in
 		start
 	fi
     ;;
+    'check')
+    command -v wlsunset
+    exit $?
+    ;;
 esac
 
 #Returns a string for Waybar 
