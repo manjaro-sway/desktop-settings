@@ -1,16 +1,13 @@
 set $mode_recording "<span foreground='$color10'></span>  \
 <span foreground='$color5'><b>Record</b></span> <span foreground='$color10'>(<b>r</b>)</span> \
 <span foreground='$color1'>—</span> \
-<span foreground='$color5'>(+ <span foreground='$color10'><b>Shift</b></span> for )</span> \
-<span foreground='$color1'>—</span> \
-<span foreground='$color7'>(+ <span foreground='$color10'><b>Ctrl</b></span> for gif)</span>"
+<span foreground='$color5'>(+ <span foreground='$color10'><b>Shift</b></span> for )</span>"
 
 set $recorder /usr/share/sway/scripts/recorder.sh
 
 mode --pango_markup $mode_recording {
         $bindsym r exec $recorder, mode "default"
-        $bindsym Shift+r exec $recorder --audio, mode "default"
-        $bindsym Shift+Ctrl+r exec $recorder --audio --gif, mode "default"
+        $bindsym Shift+r exec $recorder -a, mode "default"
 
         # Return to default mode.
         $bindsym Escape mode "default"
