@@ -118,17 +118,13 @@
 
     "pulseaudio": {
         "scroll-step": 5,
-        "format": "{icon} {volume}% {format_source}",
+        "format": "{icon}{volume}% {format_source}",
         "format-muted": "婢 {format_source}",
         "format-source": "{volume}%",
         "format-source-muted": "",
         "format-icons": {
-            "headphones": "",
-            "handsfree": "",
+            "headphone": "",
             "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
             "default": ["奄", "奔", "墳"]
         },
         "tooltip-format": "{icon} {volume}% {format_source}",
@@ -195,7 +191,7 @@
     },
     
     "custom/sunset": {
-        "interval": 2,
+        "interval": "once",
         "tooltip": false,
         "return-type": "json",
         "format" : "{icon}",
@@ -204,8 +200,9 @@
             "off": "ﯧ" 
         },
         "exec": "/usr/share/sway/scripts/sunset.sh",
-        "on-click": "/usr/share/sway/scripts/sunset.sh toggle",
-        "exec-if": "/usr/share/sway/scripts/sunset.sh check"
+        "on-click": "/usr/share/sway/scripts/sunset.sh toggle; pkill -RTMIN+8 waybar",
+        "exec-if": "/usr/share/sway/scripts/sunset.sh check",
+        "signal": 8
     },
 
     "custom/wf-recorder": {
