@@ -133,7 +133,7 @@
 
     "temperature": {
       "critical-threshold": 90,
-      "interval": 30,
+      "interval": 5,
       "format": "{icon}",
       "format-icons": ["","",""],
       "tooltip": true,
