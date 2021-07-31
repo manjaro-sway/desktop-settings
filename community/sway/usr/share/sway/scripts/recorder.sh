@@ -13,7 +13,7 @@ while getopts ":g:a:" arg; do
         echo "will save as gif" 
         ;;
     a)
-        audio="--audio=0"
+        audio="--audio"
         echo "will record audio" 
         ;;
   esac
