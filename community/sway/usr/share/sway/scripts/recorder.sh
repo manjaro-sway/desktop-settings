@@ -52,9 +52,9 @@ then
     area=$(swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp)
 
     countdown
-    wf-recorder ${audio} -g "$area" -f $file
+    (sleep 0.5 && pkill -RTMIN+8 waybar) &
+    wf-recorder ${audio} -g "$area" -f $file && pkill -RTMIN+8 waybar
     notify "Finished recording ${file}"
-
 
     if [ $gif == true ]
     then
@@ -65,4 +65,5 @@ then
     fi
 else 
     pkill --signal SIGINT wf-recorder
+    pkill -RTMIN+8 waybar
 fi

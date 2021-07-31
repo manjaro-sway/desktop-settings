@@ -3,23 +3,15 @@ set $mode_recording "<span foreground='$color10'></span>  \
 <span foreground='$color1'>—</span> \
 <span foreground='$color5'><b>Record (+ )</b></span> <span foreground='$color10'>(<b>a</b>)</span>"
 
-set $mode_recording_on "<span foreground='$color10'>壘</span>  \
-<span foreground='$color5'><b>Exit</b></span> <span foreground='$color10'>(<b>ESC</b>)</span>"
-
-mode --pango_markup $mode_recording_on {
-        $bindsym Escape exec killall -s SIGINT wf-recorder, mode "default"
-}
-
 set $recorder /usr/share/sway/scripts/recorder.sh --gif
 
 mode --pango_markup $mode_recording {
-        $bindsym r exec $recorder, mode $mode_recording_on
-        $bindsym a exec $recorder --audio, mode $mode_recording_on
-        # Return to default mode.
-        $bindsym Escape mode "default"
-        $bindsym Return mode "default"
+        $bindsym r exec $recorder, mode "default"
+        $bindsym a exec $recorder --audio, mode "default"
 }
 
 ## Launch // Recording Mode ##
 $bindsym $mod+Shift+r mode $mode_recording
 
+## Launch // Stop Recording Mode ##
+$bindsym $mod+Esc exec killall -s SIGINT wf-recorder
