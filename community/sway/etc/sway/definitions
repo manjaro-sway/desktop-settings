@@ -51,9 +51,6 @@ set $idle swayidle -w \
 set $statusbar waybar
 set $waybar_position top
 
-# shutdown command
-set $shutdown wlogout --buttons-per-row 3
-
 # pulseaudio command
 set $pulseaudio $term_float pulsemixer
 
