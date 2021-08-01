@@ -206,8 +206,8 @@
         "return-type": "json",
         "format" : "{icon}",
         "format-icons": {
-            "on": "" ,
-            "off": "" 
+            "on": "" ,
+            "off": "" 
         },
         "exec": "/usr/share/sway/scripts/sunset.sh",
         "on-click": "/usr/share/sway/scripts/sunset.sh toggle; pkill -RTMIN+8 waybar",
