@@ -161,8 +161,8 @@
         "interval": 3600,
         "exec-if": "[ $(pamac checkupdates -q | wc -l) -gt 0 ]",
         "exec": "pamac checkupdates -q | wc -l",
-        "on-click": "pamac-manager --updates; pkill -RTMIN+8 waybar",
-        "signal": 8
+        "on-click": "pamac-manager --updates; pkill -RTMIN+4 waybar",
+        "signal": 4
     },
 
     "custom/menu": {
@@ -198,7 +198,7 @@
         },
         "exec": "/bin/sh /usr/share/sway/scripts/scratchpad.sh",
         "on-click": "swaymsg 'scratchpad show'",
-        "signal": 8
+        "signal": 7
     },
     
     "custom/sunset": {
@@ -211,9 +211,9 @@
             "off": "" 
         },
         "exec": "/usr/share/sway/scripts/sunset.sh",
-        "on-click": "/usr/share/sway/scripts/sunset.sh toggle; pkill -RTMIN+8 waybar",
+        "on-click": "/usr/share/sway/scripts/sunset.sh toggle; pkill -RTMIN+6 waybar",
         "exec-if": "/usr/share/sway/scripts/sunset.sh check",
-        "signal": 8
+        "signal": 6
     },
 
     "custom/wf-recorder": {
@@ -238,7 +238,7 @@
     },
 
     "custom/playerctl": {
-        "interval": 10,
+        "interval": "once",
         "tooltip": true,
         "return-type": "json",
         "format" : "{icon}",
@@ -246,11 +246,11 @@
             "Playing": "奈",
             "Paused": ""
         },
-        "exec": "status=$(playerctl status) && title=$(playerctl metadata title) && artist=$(playerctl metadata artist) && echo {'\"alt\"':'\"'$status'\"', '\"tooltip\"':'\"'$title - $artist'\"'}",
-        "on-click": "playerctl play-pause; pkill -RTMIN+8 waybar",
-        "on-click-right": "playerctl next; pkill -RTMIN+8 waybar",
-        "on-scroll-up": "playerctl position 10+; pkill -RTMIN+8 waybar",
-        "on-scroll-down": "playerctl position 10-; pkill -RTMIN+8 waybar",
-        "signal": 8
+        "exec": "playerctl metadata --format '{\"alt\": \"{{status}}\", \"tooltip\": \"{{playerName}}:  {{markup_escape(title)}} - {{markup_escape(artist)}}\" }'",
+        "on-click": "playerctl play-pause; pkill -RTMIN+5 waybar",
+        "on-click-right": "playerctl next; pkill -RTMIN+5 waybar",
+        "on-scroll-up": "playerctl position 10+; pkill -RTMIN+5 waybar",
+        "on-scroll-down": "playerctl position 10-; pkill -RTMIN+5 waybar",
+        "signal": 5
     },
 }
