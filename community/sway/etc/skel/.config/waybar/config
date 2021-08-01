@@ -40,6 +40,7 @@
         "bluetooth",
 
         // media
+        "custom/playerctl",
         "idle_inhibitor",
         "pulseaudio",
         "backlight",
@@ -234,5 +235,22 @@
         "exec": "gh api '/notifications' -q '{ text: length }' | cat -",
         "exec-if": "command -v gh >/dev/null && gh auth status 2>&1 | grep -q -m 1 'Logged in' && gh api '/notifications' -q 'length' | grep -q -m 1 '0' ; test $? -eq 1",
         "on-click": "xdg-open https://github.com/notifications"
-    }
+    },
+
+    "custom/playerctl": {
+        "interval": 10,
+        "tooltip": true,
+        "return-type": "json",
+        "format" : "{icon}",
+        "format-icons": {
+            "Playing": "奈",
+            "Paused": ""
+        },
+        "exec": "status=$(playerctl status) && title=$(playerctl metadata title) && artist=$(playerctl metadata artist) && echo {'\"alt\"':'\"'$status'\"', '\"tooltip\"':'\"'$title - $artist'\"'}",
+        "on-click": "playerctl play-pause; pkill -RTMIN+8 waybar",
+        "on-click-right": "playerctl next; pkill -RTMIN+8 waybar",
+        "on-scroll-up": "playerctl position 10+; pkill -RTMIN+8 waybar",
+        "on-scroll-down": "playerctl position 10-; pkill -RTMIN+8 waybar",
+        "signal": 8
+    },
 }
