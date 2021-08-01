@@ -1,4 +1,5 @@
-set $mode_shutdown " \
+set $mode_shutdown "\
+<span foreground='$color10'></span>  \
 <span foreground='$color5'> \
 <span foreground='$color10'>(<b>h</b>)</span>hibernate \
 <span foreground='$color10'>(<b>l</b>)</span>lock \
