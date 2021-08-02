@@ -11,8 +11,6 @@ ZSH_THEME="agnoster"
 
 [ -d ~/.config/zsh/config.d/ ] && source ~/.config/zsh/config.d/*
 
-source $ZSH/oh-my-zsh.sh
-
 # Source manjaro config
 source ~/.zshrc
 
