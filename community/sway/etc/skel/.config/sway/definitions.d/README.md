@@ -4,9 +4,7 @@ refer to /etc/sway/definitions for global definitions that can be overridden her
 
 e.g.:
 
-* change modifier key from Win/Pine-Key to Alt: set $mod Mod1
-* change the background image: set $background /usr/share/wallpapers/manjaro-nudes.png
-* change the theme: set $theme /usr/share/sway/themes/matcha-blue
-* change waybar position: set $waybar_position bottom
-
-make a foot client instance the default terminal for even faster terminal windows: `set $term footclient`
+* change modifier key from Win/Pine-Key to Alt: `set $mod Mod1`
+* change the background image: `set $background /usr/share/wallpapers/manjaro-nudes.png`
+* change waybar position: `set $waybar_position bottom`
+* make a foot client instance the default terminal for even faster terminal windows: `set $term footclient`
