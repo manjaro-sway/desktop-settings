@@ -1,3 +1,4 @@
 config.d/*
 help.man
 !00-user.conf
+!10-nwg-wrapper.conf

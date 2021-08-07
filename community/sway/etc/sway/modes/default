@@ -3,13 +3,13 @@
 # Basics:
 #
 ## Launch // Terminal ##
-$bindsym $mod+Return exec $term
+$bindsym $mod+Return exec $term ;###Terminal
 
 ## Action // Kill focused window ##
-$bindsym $mod+Shift+q kill
+$bindsym $mod+Shift+q kill ;###Kill focused window
 
 ## Launch // Launcher ##
-$bindsym $mod+d exec $menu
+$bindsym $mod+d exec $menu ;###Launcher
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
@@ -19,7 +19,7 @@ $bindsym $mod+d exec $menu
 floating_modifier $mod normal
 
 ## Action // Reload Sway Configuration ##
-$bindsym $mod+Shift+c reload
+$bindsym $mod+Shift+c reload ;### Reload Sway
 
 ## Action // Increase volume of Master ##
 $bindsym XF86AudioRaiseVolume exec $onscreen_bar $(amixer sset Master 5%+ | sed -En 's/.*\[([0-9]+)%\].*/\1/p' | head -1)
@@ -48,16 +48,16 @@ $bindsym XF86TouchpadToggle input type:touchpad events toggle enabled disabled
 #
 # Move your focus around
 ## Navigation // Move focus // $mod + ↑ ↓ ← → ##
-$bindsym $mod+Left focus left
-$bindsym $mod+Down focus down
-$bindsym $mod+Up focus up
-$bindsym $mod+Right focus right
+$bindsym $mod+Left focus left ;###Move focus
+$bindsym $mod+Down focus down ;###Move focus
+$bindsym $mod+Up focus up ;###Move focus
+$bindsym $mod+Right focus right ;###Move focus
 
 ## Navigation // Move focussed window // $mod + Shift + ↑ ↓ ← → ##
-$bindsym $mod+Shift+Left move left
-$bindsym $mod+Shift+Down move down
-$bindsym $mod+Shift+Up move up
-$bindsym $mod+Shift+Right move right
+$bindsym $mod+Shift+Left move left ;###Move focussed window
+$bindsym $mod+Shift+Down move down ;###Move focussed window
+$bindsym $mod+Shift+Up move up ;###Move focussed window
+$bindsym $mod+Shift+Right move right ;###Move focussed window
 
 #
 # Workspaces:
@@ -90,31 +90,31 @@ $bindsym $mod+Shift+0 move container to workspace $ws10
 # Layout stuff:
 #
 ## Setting // Split windows horizontally ##
-$bindsym $mod+b splith
+$bindsym $mod+b splith ;###
 ## Setting // Split windows vertically ##
-$bindsym $mod+v splitv
+$bindsym $mod+v splitv ;###
 
 ## Action // Switch to window stacking ##
-$bindsym $mod+s layout stacking
+$bindsym $mod+s layout stacking ;###window stacking
 ## Action // Switch to window tabbing ##
-$bindsym $mod+w layout tabbed
+$bindsym $mod+w layout tabbed ;###window tabbing
 ## Action // Toggle window splitting ##
-$bindsym $mod+e layout toggle split
+$bindsym $mod+e layout toggle split ;###window splitting
 
 ## Action // Toggle fullscreen ##
-$bindsym $mod+f fullscreen
+$bindsym $mod+f fullscreen ;###Toggle fullscreen
 
 ## Action // Toggle floating ##
-$bindsym $mod+Shift+space floating toggle
+$bindsym $mod+Shift+space floating toggle ;###Toggle floating
 
 ## Navigation // Swap focus between the tiling area and the floating area ##
-$bindsym $mod+space focus mode_toggle
+$bindsym $mod+space focus mode_toggle ;###Swap focus floating area
 
 ## Navigation // Swap focus to the parent window ##
-$bindsym $mod+a focus parent
+$bindsym $mod+a focus parent ;###Swap focus to the parent
 
 ## Launch // Help ##
-$bindsym $mod+question exec $help
+$bindsym $mod+question exec $help ;###Help
 
 default_border pixel 1
 hide_edge_borders smart
