@@ -36,6 +36,7 @@ fallback = ''
 
 ## default applications
 'foot' = ''
+'/foot/' = ''
 'pcmanfm' = ''
 'pamac-manager' = ''
 '/Bluetooth/' = ''
