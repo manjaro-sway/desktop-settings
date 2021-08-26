@@ -1,0 +1,24 @@
+[org.freedesktop.Tracker.Extract]
+sched-idle='always'
+
+[org.freedesktop.Tracker.Miner.Files]
+sched-idle='always'
+index-on-battery=false
+
+[org.gnome.desktop.interface]
+cursor-theme='xcursor-breeze'
+document-font-name='Sans 11'
+enable-animations=true
+font-name='RobotoMono Nerd Font 11'
+gtk-im-module='gtk-im-context-simple'
+gtk-theme='Matcha-dark-sea'
+icon-theme='Papirus-Dark-Maia'
+monospace-font-name='RobotoMono Nerd Font Mono 11'
+
+[org.gnome.desktop.peripherals.touchpad]
+tap-to-click=true
+natural-scroll=false
+
+[org.gnome.desktop.wm.preferences]
+titlebar-uses-system-font=true
+focus-mode='sloppy'
