@@ -27,5 +27,7 @@ jobs:
     - 
       name: rebase
       run: |
+        git config user.email "info@jonas-strassel.de"
+        git config user.name "Jonas Strassel"
         git pull --rebase upstream ${BASE_BRANCH}
         git push --force-with-lease
