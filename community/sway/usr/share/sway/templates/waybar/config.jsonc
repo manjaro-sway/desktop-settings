@@ -257,10 +257,10 @@
         "signal": 5
     },
     "custom/clipboard": {
-        "format": " {}",
-        "tooltip": false,
+        "format": "",
+        "return-type": "json",
         "on-click": "swaymsg -q exec '$clipboard'",
-        "exec": "cliphist list | wc -l",
+        "exec": "printf '{\"tooltip\":\"%s\"}' $(cliphist list | wc -l)",
         "exec-if": "[ $(cliphist list | wc -l) -gt 0 ]"
     }
 }
