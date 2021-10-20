@@ -25,6 +25,7 @@
     "modules-center": [
         "custom/wf-recorder",
         "sway/mode",
+        "custom/events",
         "custom/weather"
     ],
     "modules-right": [
@@ -257,6 +258,7 @@
         "on-scroll-down": "playerctl position 10-; pkill -RTMIN+5 waybar",
         "signal": 5
     },
+
     "custom/clipboard": {
         "format": "",
         "return-type": "json",
@@ -264,6 +266,7 @@
         "exec": "printf '{\"tooltip\":\"%s\"}' $(cliphist list | wc -l)",
         "exec-if": "[ $(cliphist list | wc -l) -gt 0 ]"
     },
+
     "custom/weather": {
         "icon-size": 42,
         "format": "{}",
@@ -271,6 +274,17 @@
         "interval": 3600,
         // accepts a location as an argument (in quotes)
         "exec": "/usr/share/sway/scripts/weather.py", 
+        "return-type": "json"
+    },
+
+    "custom/events": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 300,
+        "format-icons": {
+            "default": ""
+        },
+        "exec": "/usr/share/sway/scripts/khal-info.py",
         "return-type": "json"
     }
 }
