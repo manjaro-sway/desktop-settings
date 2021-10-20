@@ -268,9 +268,9 @@
         "icon-size": 42,
         "format": "{}",
         "tooltip": true,
-        "on-click": "swaymsg exec 'foot -a scratchpad weather'",
         "interval": 3600,
-        "exec": "/usr/share/sway/scripts/weather.py",
+        // accepts a location as an argument (in quotes)
+        "exec": "/usr/share/sway/scripts/weather.py", 
         "return-type": "json"
     }
 }

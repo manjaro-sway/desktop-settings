@@ -4,6 +4,8 @@
 
 import json
 import requests
+import sys
+import urllib.parse
 from datetime import datetime
 
 WEATHER_CODES = {
@@ -59,8 +61,12 @@ WEATHER_CODES = {
 
 data = {}
 
+try:
+    city = urllib.parse.quote(sys.argv[1].strip())
+except:
+    city = ""
 
-weather = requests.get("https://wttr.in/?format=j1").json()
+weather = requests.get("https://wttr.in/" + city + "?format=j1").json()
 
 
 def format_time(time):
