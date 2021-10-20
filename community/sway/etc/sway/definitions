@@ -87,7 +87,7 @@ set $grimshot /usr/share/sway/scripts/grimshot
 set $image_upload /usr/share/sway/scripts/upload-image.sh
 set $screenshot_screen_clipboard $grimshot --notify copy output
 set $screenshot_screen_file $grimshot --notify save output
-set $screenshot_screen_upload $grimshot --notify save output | xargs $image_upload
+set $screenshot_screen_upload $screenshot_screen_file | xargs $image_upload
 set $screenshot_selection_clipboard $grimshot --notify copy window
 set $screenshot_selection_file $grimshot --notify save window
-set $screenshot_selection_upload $grimshot --notify save window | xargs $image_upload
+set $screenshot_selection_upload $screenshot_selection_file | xargs $image_upload
