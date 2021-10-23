@@ -14,7 +14,7 @@ mode --pango_markup $mode_shutdown {
     $bindsym l mode "default", exec $locking
 
     # logout
-    $bindsym e exec loginctl terminate-user $USER
+    $bindsym e exec loginctl terminate-user $USER&; rm -f $HOME/.cache/cliphist/db
 
     # suspend
     $bindsym u mode "default", exec systemctl suspend
@@ -23,10 +23,10 @@ mode --pango_markup $mode_shutdown {
     $bindsym h mode "default", exec systemctl hibernate
 
     # shutdown
-    $bindsym s exec systemctl poweroff
+    $bindsym s exec systemctl poweroff&; rm -f $HOME/.cache/cliphist/db
 
     # reboot
-    $bindsym r exec systemctl reboot
+    $bindsym r exec systemctl reboot&; rm -f $HOME/.cache/cliphist/db
 
     # Return to default mode.
     $bindsym Escape mode "default"
