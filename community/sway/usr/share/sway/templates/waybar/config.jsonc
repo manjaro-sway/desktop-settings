@@ -261,8 +261,9 @@
         "format": "",
         "return-type": "json",
         "on-click": "swaymsg -q exec '$clipboard'",
+        "on-click-right": "rm -f ~/.cache/cliphist/db",
         "exec": "printf '{\"tooltip\":\"%s\"}' $(cliphist list | wc -l)",
-        "exec-if": "[ $(cliphist list | wc -l) -gt 0 ]"
+        "exec-if": "command -v cliphist && [ $(cliphist list | wc -l) -gt 0 ]"
     },
     "custom/weather": {
         "icon-size": 42,
