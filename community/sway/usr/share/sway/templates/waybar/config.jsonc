@@ -116,8 +116,8 @@
     "backlight": {
         "format": "{icon} {percent}%",
         "format-icons": ["", "", ""],
-        "on-scroll-up": "light -T 1.05",
-        "on-scroll-down": "light -T 0.95"
+        "on-scroll-up": "light -r -A 1",
+        "on-scroll-down": "light -r -U 1"
     },
 
     "pulseaudio": {
