@@ -9,10 +9,6 @@ jobs:
   add-contributors:
     runs-on: ubuntu-latest
     steps:
-    - name: check user has write access
-      uses: lannonbr/repo-permission-check-action@2.0.0
-      with:
-        permission: "write"
     - name: create comment in target repo
       uses: peter-evans/create-or-update-comment@v1
       if: contains(github.event.comment.body, '@all-contributors')
