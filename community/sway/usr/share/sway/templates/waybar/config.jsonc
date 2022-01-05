@@ -18,7 +18,7 @@
     "position": "top",
 
     "modules-left": ["custom/menu", "sway/workspaces", "custom/scratchpad"],
-    "modules-center": ["custom/wf-recorder", "sway/mode", "custom/weather"],
+    "modules-center": ["custom/wf-recorder", "sway/mode", "custom/zeit", "custom/weather"],
     "modules-right": [
         // informational
         "sway/language",
@@ -292,5 +292,13 @@
             "ThunderySnowShowers": "",
             "VeryCloudy": ""
         }
+    },
+
+    "custom/zeit": {
+        "format": "{}",
+        "exec": "/bin/sh /usr/share/sway/scripts/zeit.sh",
+        "on-click": "/bin/sh /usr/share/sway/scripts/zeit.sh click",
+        "exec-if": "[ -x \"$(command -v zeit)\" ]",
+        "interval": 60
     }
 }
