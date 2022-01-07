@@ -1,36 +1,33 @@
 #!/bin/sh
+tracking=$(zeit tracking --no-colors)
 
-ZEIT_BIN=zeit
-
-tracking=$($ZEIT_BIN tracking --no-colors)
+if [[ "$1" == "status" ]]
+then
+    text=$(echo -n $tracking | grep -q 'tracking' && echo "tracking" || echo "stopped")
+    tooltip=$tracking
+    echo {\"text\":\"$text\"\,\"tooltip\":\"$tooltip\"\,\"class\":\"$text\"\,\"alt\":\"$text\"}
+fi
 
 if [[ "$1" == "click" ]]
 then
-  if echo "$tracking" | grep -q '^ ▶ tracking'
+  if echo "$tracking" | grep -q 'tracking'
   then
-    $ZEIT_BIN finish
-    exit 0
+    zeit finish
+  else
+    swaymsg exec \$zeit_list
   fi
-
-  selection=$($ZEIT_BIN list \
-    --only-projects-and-tasks \
-    --append-project-id-to-task \
-    | rofi \
-      --dmenu \
-      --sort-order default \
-      --cache-file /dev/null\
-  )
-
-  task=$(echo $selection | pcregrep -io1 '└── (.+) \[.+')
-  project=$(echo $selection | pcregrep -io1 '.+\[(.+)\]')
-
-  if [[ "$task" == "" ]] || [[ "$project" == "" ]]
-  then
-    exit 1
-  fi
-
-  $ZEIT_BIN track -p "$project" -t "$task"
-  exit 0
 fi
 
-echo -n $tracking
+if [[ "$1" == "track" ]]
+then
+    input=$(cat -)
+    task=$(echo $input | pcregrep -io1 '└── (.+) \[.+')
+    project=$(echo $input | pcregrep -io1 '.+\[(.+)\]')
+
+    if [[ "$task" == "" ]] || [[ "$project" == "" ]]
+    then
+        exit 1
+    fi
+
+    zeit track -p "$project" -t "$task"
+fi
