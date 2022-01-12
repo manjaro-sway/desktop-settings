@@ -26,7 +26,7 @@ floating_modifier $mod normal
 $bindsym $mod+Shift+c reload
 
 ## Action // Toggle Waybar ##
-$bindsym $mod+Shift+b exec killall -SIGUSR1 waybar
+$bindsym $mod+Shift+b exec pkill -SIGUSR1 waybar
 
 $bindsym XF86AudioRaiseVolume exec $volume_up
 
