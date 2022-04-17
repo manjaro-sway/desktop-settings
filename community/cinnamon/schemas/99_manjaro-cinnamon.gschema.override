@@ -33,7 +33,7 @@ volume-sound-file="/usr/share/sounds/LinuxMint/stereo/volume.oga"
 
 [org.cinnamon.desktop.wm.preferences]
 num-workspaces=2
-theme='Mint-Y-Dark-Teal'
+theme='Mint-Y'
 titlebar-font='Cantarell 10'
 
 [org.cinnamon.sounds]
