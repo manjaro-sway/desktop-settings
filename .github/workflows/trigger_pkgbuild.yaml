@@ -16,38 +16,28 @@ jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
-    - 
-      name: checkout
-      uses: actions/checkout@v2
-      with:
-        token: "${{ secrets.GITHUB_TOKEN }}"
-        fetch-depth: 0
-    -
-      name: md5
+    - name: checkout
+      uses: actions/checkout@v3
+    - uses: actions-ecosystem/action-get-latest-tag@v1
+      if: ${{ github.event_name == 'push' }}
+      id: get-latest-tag
+    - name: md5
       if: ${{ github.event_name == 'release' }}
       run: |
         curl --location --remote-header-name --silent -o release.tar.gz \
           https://github.com/${{ github.repository }}/archive/${{ github.event.release.tag_name || github.event.inputs.tag }}.tar.gz
         echo "MD5=$(md5sum release.tar.gz | cut -d ' ' -f 1)" >>$GITHUB_ENV
-    -
-      name: info
-      id: info
-      if: ${{ github.event_name == 'push' }}
-      run: |
-        echo "::set-output name=git-version::$(git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g')"
-    - 
-      uses: peter-evans/repository-dispatch@v1
+    - uses: peter-evans/repository-dispatch@v1
       if: ${{ github.event_name == 'release' }}
       with:
         token: ${{ secrets.DISPATCH }}
         repository: manjaro-sway/manjaro-sway-settings
         event-type: source_update
         client-payload: '{ "repository": "${{ github.repository }}", "version": "${{ github.event.release.tag_name || github.event.inputs.tag }}", "md5": "${{ env.MD5 }}" }'
-    -
-      uses: peter-evans/repository-dispatch@v1
+    - uses: peter-evans/repository-dispatch@v1
       if: ${{ github.event_name == 'push' }}
       with:
         token: ${{ secrets.DISPATCH }}
         repository: manjaro-sway/manjaro-sway-settings-git
         event-type: source_update
-        client-payload: '{ "repository": "${{ github.repository }}", "version": "${{ steps.info.outputs.git-version }}" }'
+        client-payload: '{ "repository": "${{ github.repository }}", "version": "${{ steps.get-latest-tag.outputs.tag }}.${{ github.sha }}" }'
