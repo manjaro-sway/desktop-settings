@@ -1,0 +1,80 @@
+configuration {
+	modi:				"drun";
+	font:				"Rubik 10";
+	display-drun: 			"";
+	sidebar-mode: 			false;
+}
+
+* {
+	bg:				#f8f9f7;
+	fg:				#372d2f;
+	button:				#c2c7be;
+
+	background-color:		@bg;
+	text-color:			@fg;
+}
+
+window { width: 50%; }
+
+prompt { enabled: false; }
+
+pfp {
+	padding:			50px;
+	width:				110px;
+	expand:				false;
+	border:				5px;
+	border-color:			@bg;
+	background-image:               url("img/pfp.png", height);
+}
+
+entry {
+	placeholder:			"Search";
+	expand:                         true;
+	padding:                        10px 2% 10px 2%;
+	vertical-align:			0.5;
+	background-color:               @fg;
+	text-color:			@bg;
+        placeholder-color:              @button;
+	margin:				29px 0 29px 0;
+	border:				5px;
+	border-color:			@bg;
+}
+
+inputbar {
+	children: 			[ pfp, entry ];
+	text-color:                     @fg;
+	expand:                         false;
+	spacing:			64px;
+	padding:			64px 64px 0 64px;
+	background-image:		url("img/banner.png", width);
+}
+
+listview {
+	columns:                        2;
+	lines:	                        4;
+	cycle:                          false;
+	dynamic:                        true;
+	layout:                         vertical;
+	padding:			16px 32px 32px 32px;
+}
+
+mainbox {
+	children:                       [ inputbar, listview ];
+	spacing:                       	2%;
+	layout:				horizontal;
+}
+
+element {
+	orientation:                    vertical;
+	padding:                        1.5% 0% 1.5% 0%;
+}
+
+element-text {
+	expand:                         true;
+	vertical-align:                 0.5;
+	margin:                         0.5% 3% 0% 3%;
+	background-color:               inherit;
+        text-color:                     inherit;
+}
+
+element selected { background-color: @button; }

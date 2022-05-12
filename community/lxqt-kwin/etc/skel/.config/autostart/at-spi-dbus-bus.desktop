@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=AT-SPI D-Bus Bus
+Exec=/usr/lib/at-spi-bus-launcher --launch-immediately
+OnlyShowIn=GNOME;Unity;Enlightenment;
+NoDisplay=true
+AutostartCondition=GSettings org.gnome.desktop.interface toolkit-accessibility
+X-GNOME-AutoRestart=true
+X-GNOME-Autostart-Phase=Initialization

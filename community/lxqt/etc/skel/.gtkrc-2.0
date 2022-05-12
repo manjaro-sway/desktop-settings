@@ -1,0 +1,10 @@
+
+# Created by lxqt-config-appearance (DO NOT EDIT!)
+gtk-theme-name = "NorseSolid"
+gtk-icon-theme-name = "Papirus-Dark"
+gtk-font-name = "Fira Sans 11"
+gtk-button-images = 1
+gtk-menu-images = 1
+gtk-toolbar-style = GTK_TOOLBAR_BOTH_HORIZ
+gtk-cursor-theme-name = pArch-24
+gtk-cursor-theme-size = 24
