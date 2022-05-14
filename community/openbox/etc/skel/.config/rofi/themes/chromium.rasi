@@ -1,0 +1,131 @@
+configuration {
+	modi:				"drun";
+	font:				"Rubik 10";
+	display-drun: 			"Apps";
+	display-run:			"";
+	drun-display-format:            "{name}";
+	sidebar-mode: 			false;
+}
+
+* {
+	bg:				#ffffff;
+	fg:				#3c4043;
+	button:				#dee1e6;
+
+	background-color:		@bg;
+	text-color:			@fg;
+}
+
+window {
+	children:			[ dummy, mainbox ];
+	transparency:                   "real";
+	border-radius:                  12px;
+	width:			    	50%;
+	padding: 			20px 0 0;
+	background-color:		@fg;
+}
+
+prompt { enabled: false; }
+
+textbox {
+	str:				"";
+	expand:				false;
+	horizontal-align:               0.5;
+        vertical-align:                 0.5;
+        background-color:               @fg;
+        border-radius:                  12px;
+        text-color:                     @bg;
+        font:                           "feather 17";
+        padding:                        0 1% 0;
+}
+
+entry {
+	placeholder:			"Search";
+	expand:                         true;
+	padding:                        2%;
+	background-color:               @button;
+        placeholder-color:              @fg;
+	border-radius:			12px;
+	cursor:				text;
+}
+
+inputbar {
+	children: 			[ textbox, entry ];
+	expand:                         false;
+	background-color:		@button;
+	border-radius:			12px;
+	margin:				20px 20px 0;
+}
+
+listview {
+	columns:                        2;
+	lines:	                        4;
+	cycle:                          false;
+	dynamic:                        true;
+	layout:                         vertical;
+	margin:				0 20px 20px;
+}
+
+mainbox {
+	children:                       [ inputbar, listview ];
+	spacing:                       	2%;
+	border-radius:			 12px;
+	margin:				-2px 0 0;
+}
+
+element {
+	orientation:                    vertical;
+	border-radius:                  12px;
+	padding:			2% 3%;
+}
+
+element-text {
+	expand:                         true;
+	vertical-align:                 0.5;
+	background-color:               inherit;
+        text-color:                     inherit;
+}
+
+element selected {
+	background-color:               @fg;
+	text-color:                     @bg;
+	border-radius:                  12px;
+}
+
+button {
+	padding:			2% 14% 2% 3%;
+	background-color:               @fg;
+	text-color:                     @bg;
+	border-radius:			0 0 0 12px;
+}
+
+button selected {
+	background-color:		@bg;
+	text-color:			@fg;
+	border-radius:			12px 12px 0 0;
+}
+
+dummy {
+	children:			[ box1, mode-switcher, box2 ];
+	orientation:			horizontal;
+	expand:				false;
+	background-image:               linear-gradient(to bottom, #3c4043, #3c4043, #3c4043, #3c4043, #ffffff, #ffffff, #ffffff, #ffffff);
+}
+
+box1 {
+	background-color:		@fg;
+	expand:				false;
+	padding:			0 2% 0;
+	margin:				0 -2px 0 0;
+	border-radius:			0 0 12px 0;	
+}
+
+box2 {
+	background-color:               @fg;
+	expand:				true;
+	border-radius:			0 0 0 12px;
+	margin:				0 0 0 -2px;
+}
+
+mode-switcher {	background-color: @fg; }
+listview, element, element selected, element-icon, element-text { cursor: pointer; }

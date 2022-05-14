@@ -1,0 +1,61 @@
+[options]
+resize_grip = false
+#geometry = 1920x1040
+scroll_on_output = true
+scroll_on_keystroke = true
+audible_bell = true
+visible_bell = true
+mouse_autohide = true
+dynamic_title = true
+urgent_on_bell = true
+clickable_url = true
+# ~ ! [{(
+#font = Envy Code R 10
+#font = lime.se 9px
+font = Source Code Pro 10
+scrollback_lines = 1024
+icon_name = terminal
+transparency = 1.7
+pseudo_transparency = true
+cursor_blink = on
+cursor_shape = block
+padding = 2
+border = #3f3f3f
+border_width = 0.5
+roundness = 2.0
+# $BROWSER is used by default
+browser = firefox
+
+[colors]
+background = rgba(38,38,38,0.90)
+foreground = #E2E2E2
+
+# Black, Gray, Silver, White
+color0 = #222222
+color7 = #AFAFAF
+color8 = #636363
+color15 = #ffffff
+
+# Red
+color1 = #ab4642
+color9 = #ab4642
+
+# Green
+color2 = #99cc99
+color10 = #99cc99
+
+# Yellow
+color3 = #f7ca88
+color11 = #f7ca88
+
+# Blue
+color4 = #006a78
+color12 = #006a78
+
+# Purple
+color5 = #b48ead
+color13 = #b48ead
+
+# Teal
+color6 = #1abb9b
+color14 = #1abb9b

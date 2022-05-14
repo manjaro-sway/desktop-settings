@@ -1,0 +1,5 @@
+// These settings override both User and Default settings for the Plain text syntax
+{
+	"translate_tabs_to_spaces": true,
+	"indent_to_bracket": true,
+}

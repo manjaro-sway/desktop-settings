@@ -1,0 +1,120 @@
+#!/bin/bash
+
+#function: test_image
+test_image () {
+    case $1 in
+     1|01)
+       echo a
+     ;;
+     2|02)
+       echo b
+     ;;
+     3|03)
+       echo c
+     ;;
+     4|04)
+       echo c
+     ;;
+     5|05)
+       echo c
+     ;;
+     6|06)
+       echo d
+     ;;
+     7|07)
+       echo e
+     ;;
+     8|08)
+       echo e
+     ;;
+     11)
+       echo 0
+     ;;
+     12)
+       echo h
+     ;;
+     13|14)
+       echo g
+     ;;
+     15)
+       echo l
+     ;;
+     16|17)
+       echo k
+     ;;
+     18|26)
+       echo i
+     ;;
+     19)
+       echo p
+     ;;
+     20|21|23)
+       echo o
+     ;;
+     22)
+       echo r
+     ;;
+     24|31)
+       echo E
+     ;;
+     25)
+       echo u
+     ;;
+     29)
+       echo v
+     ;;
+     30)
+       echo 5
+     ;;
+     32)
+       echo 6
+     ;;
+     33)
+       echo A
+     ;;
+     34|36|37)
+       echo B
+     ;;
+     35|38)
+       echo C
+     ;;
+     39|40)
+       echo G
+     ;;
+     41|42)
+       echo K
+     ;;
+     43|44)
+       echo O
+     ;;
+    esac
+}
+
+# PUT YOUR LOCATIONS PARAMETERS IN THE VARIABLES BELOW
+REGION_ID="EUR"
+COUNTRY_ID="DK"
+LOCATION_KEY="124594"
+LOCALIZED_NAME="AARHUS"
+
+address="https://rss.accuweather.com/rss/liveweather_rss.asp?metric=1&locCode=${REGION_ID}|${COUNTRY_ID}|${LOCATION_KEY}|${LOCALIZED_NAME}"
+
+killall wget
+wget -O ~/.config/conky/accu_weather/weather_raw $address
+
+
+if [[ -s ~/.config/conky/accu_weather/weather_raw ]]; then
+
+    egrep 'Currently|Forecast<\/title>|_31x31.gif' ~/.config/conky/accu_weather/weather_raw > ~/.config/conky/accu_weather/weather
+    sed -i '/AccuWeather\|Currently in/d' ~/.config/conky/accu_weather/weather
+    sed -i -e 's/^[ \t]*//g' -e 's/<title>\|<\/title>\|<description>\|<\/description>//g' ~/.config/conky/accu_weather/weather
+    sed -i -e 's/&lt;img src="/\n/g' ~/.config/conky/accu_weather/weather
+    sed -i '/^$/d' ~/.config/conky/accu_weather/weather
+    sed -i -e 's/_31x31.*$//g' -e 's/^.*\/icons\///g' ~/.config/conky/accu_weather/weather
+    sed -i -e '1s/.$//' -e '3s/.$//' -e '6s/.$//' ~/.config/conky/accu_weather/weather
+    for (( i=2; i<=8; i+=3 ))
+        do
+            im=$(sed -n ${i}p ~/.config/conky/accu_weather/weather)
+            sed -i $i"s/^.*$/$(test_image $im)/" ~/.config/conky/accu_weather/weather
+        done
+
+fi

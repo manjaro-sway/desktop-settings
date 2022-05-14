@@ -1,0 +1,6 @@
+# Written by lxqt-config-appearance
+[Icon Theme]
+Name=Default
+Comment=Default cursor theme
+Inherits=pArch-24
+Size=16

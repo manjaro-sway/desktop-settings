@@ -1,0 +1,69 @@
+configuration {
+	modi:				"drun";
+	font:				"Rubik 10";
+	display-drun: 			"";
+	drun-display-format:            "{name}";
+	sidebar-mode: 			false;
+}
+
+* {
+	bg:				#061115;
+	fg:				#d9d7d6;
+	button:				#0b151a;
+
+	background-color:		@bg;
+	text-color:			@fg;
+}
+
+window {
+	transparency:                   "real";
+	width:			    	40%;
+}
+
+prompt { enabled: false; }
+
+entry {
+	placeholder:			"Search";
+	placeholder-color:              @fg;
+	expand:                         true;
+	padding:                        1.5%;
+	border-radius:			8px;
+}
+
+inputbar {
+	children: 			[ prompt, entry ];
+	background-image:               url("img/bg.png");
+	expand:                         false;
+	border-radius:                  0px 0 8px 8px;
+	padding:                        100px 30px 30px 300px;
+}
+
+listview {
+	columns:                        1;
+	lines:	                        4;
+	cycle:                          false;
+	dynamic:                        true;
+	layout:                         vertical;
+	padding:			30px 200px 30px 30px;
+}
+
+mainbox { children: [ inputbar, listview ]; }
+
+element {
+	orientation:                    vertical;
+	padding:                        1.5% 0% 1.5% 0%;
+	border-radius:			8px;
+}
+
+element-text {
+	expand:                         true;
+	vertical-align:                 0.5;
+	margin:                         0.5% 3% 0% 3%;
+	background-color: 		inherit;
+	text-color:       		inherit;
+}
+
+element selected {
+	background-color:               @button;
+	border-radius:                  8px;
+}

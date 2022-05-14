@@ -1,0 +1,5 @@
+// Settings in here override those in "TrailingSpaces/trailing_spaces.sublime-settings"
+
+{
+    "trim_on_save": true,
+}

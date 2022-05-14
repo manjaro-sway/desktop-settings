@@ -1,0 +1,41 @@
+/************************************************
+ * ROFI ME Theme                                *
+ * THEME: Bento (from monkeytype)               *
+ * User: Detective Pikachu                      *
+ * Copyright: MIT                               *
+ ************************************************/
+
+ configuration {
+	modi:				    "drun";
+	display-drun: 			"";
+  	display-run: 			"";
+	drun-display-format:    "{name}";
+	sidebar-mode: 			false;
+}
+
+* {
+
+    gui00: #2D394D;
+
+    gui03: #FC7374;
+
+    gui01:      #2C2E3E;
+    gui03:      #3D4059;
+
+    gui04:      #C6D0E9;
+    gui05:      #63718B;
+
+    gui07:      #1A1A24;
+    gui0A:      #E6DFB8;
+}
+
+ #window {
+    transparency:                   "real";
+    border:							0% 0% 1.25% 0%;
+    border-color:					@gui05;
+    height:                         82.60%;
+    width:                          21.50%;
+    location:                       east;
+ }
+
+
