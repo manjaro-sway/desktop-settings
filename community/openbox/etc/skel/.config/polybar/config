@@ -1,0 +1,56 @@
+;=====================================================
+;     File Includes
+;=====================================================
+
+[section/base]
+include-file = $HOME/.config/polybar/master.conf
+include-file = $HOME/.config/polybar/modules.conf
+
+;=====================================================
+;     Network interfaces
+;=====================================================
+; use nmcli to list your devices - restart polybar
+; nmcli | grep -e en -e wl
+[nic]
+lan = eno1
+wlan = wlan0
+
+
+;=====================================================
+;     Openbox Bars
+;=====================================================
+
+[bar/openbox-bar-no-net]
+inherit = bar/master
+
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+; primary monitor '$(xrandr -q | grep " connected primary" | cut -d ' ' -f1)'
+monitor =
+monitor-fallback =
+
+tray-position = right
+tray-padding = 10
+;tray-transparent = true
+;tray-background = #0063ff
+
+modules-left   = jgmenu workspaces window_switch
+modules-center =
+modules-right  = memory coreuse clock
+
+
+[bar/openbox-bar]
+inherit = bar/master
+
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+; primary monitor '$(xrandr -q | grep " connected primary" | cut -d ' ' -f1)'
+monitor =
+monitor-fallback =
+
+tray-position = right
+tray-padding = 10
+;tray-transparent = true
+;tray-background = #0063ff
+
+modules-left   = jgmenu workspaces window_switch
+modules-center =
+modules-right  = network_wan network_lan memory coreuse clock

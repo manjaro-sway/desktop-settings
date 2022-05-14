@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Roboto+Mono:400,400i,700,700i&subset=latin-ext');
+
+.related { display: none; }
+
+*:not(:hover) > a.headerlink {
+    display: none;
+}
+
+html {
+    font-size: 20px;
+    font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    margin: 0;
+}
+
+body {
+    margin: 0 auto;
+
+    font-size: 14px;
+    line-height: 1rem;
+}
+
+.document {
+    display: flex;
+    justify-content: center;
+}
+
+.sphinxsidebar {
+    order: 0;
+    margin-right: 1rem;
+}
+
+.sphinxsidebarwrapper {
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+    padding-right: 20px;
+}
+
+.sphinxsidebarwrapper > ul > li > ul > li {
+    margin-top: 0.5rem;
+}
+
+.documentwrapper  {
+    order: 1;
+    max-width: 30rem;
+}
+
+.clearer  { display: none; }
+
+code, pre,
+dl.class > dt, dl.function > dt, dl.method > dt, dl.classmethod > dt, dl.attribute > dt
+{
+    font-family: "Roboto Mono",SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace;
+}
+
+h2 {
+    margin-top: 1rem;
+    border-bottom: 2px solid #aaa;
+    background-color: white;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+#contents > div.container p {
+    margin-bottom: 0;
+}
+
+#contents > div.container ul {
+    margin-top: 0;
+}
+
+ul, ol {
+    padding-left: 1rem;
+}
+
+dd {
+    margin-left: 1rem;
+}
+
+dd > :first-child {
+    margin-top: 0.25rem;
+}
+
+dd > ul:only-child, dd > ol:only-child {
+    padding-left: 0;
+}
+
+code.descname {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+dl {
+    margin: 1rem 0;
+}
+
+dl.classmethod > dt > em.property {
+    display: block;
+}
+
+dl.classmethod > dt > em.property::before {
+    content: '@';
+    display: inline;
+}
+
+li > p:only-child {
+    margin: 0;
+}
+
+a:not(:hover) {
+    text-decoration: none;
+}
+
+pre {
+    border: 1px solid #33333333;
+    border-radius: 2px;
+    padding: 0.25rem;
+    font-size: 13px;
+}
+
+div.footer {
+    text-align: center;
+    border-top: 2px solid #aaa;
+}

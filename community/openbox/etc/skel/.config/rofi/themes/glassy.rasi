@@ -1,0 +1,81 @@
+configuration {
+	modi:				"drun";
+	font:				"Rubik 10";
+	display-drun: 			"";
+	sidebar-mode: 			false;
+}
+
+* {
+	bg:				#01131a;
+	fg:				#f5f0f1;
+	button:				#09181f;
+
+	background-color:		@bg;
+	text-color:			@fg;
+}
+
+window {
+	transparency:                   "real";
+	border-radius:                  7px;
+	width:			    	40%;
+	fullscreen:			true;
+	background-color:		#0000;
+	padding:			100px 50% 100px 10%;
+}
+
+prompt { enabled: false; }
+
+entry {
+	placeholder:			"Search";
+	expand:                         true;
+	background-color:               @button;
+        placeholder-color:              @fg;
+	border-radius:			10px;
+	vertical-align:			0.5;
+	padding:			13px 2% 13px 2%;
+}
+
+inputbar {
+	children: 			[ prompt, entry ];
+	text-color:                     @fg;
+	expand:                         false;
+	padding:			64px 64px 32px 64px;
+	border-radius:			10px;
+	background-image:		url("img/glassy.jpg", width);
+}
+
+listview {
+	columns:                        1;
+	lines:	                        8;
+	cycle:                          false;
+	dynamic:                        true;
+	layout:                         vertical;
+	border-radius:			10px;
+	padding:			32px;
+}
+
+mainbox {
+	children:                       [ inputbar, listview ];
+	spacing:                       	2%;
+	background-color:		#0000;
+}
+
+element {
+	orientation:                    vertical;
+	border-radius:                  0%;
+	padding:                        1.5% 0% 1.5% 0%;
+}
+
+element-text {
+	expand:                         true;
+	vertical-align:                 0.5;
+	margin:                         0.5% 3% 0% 3%;
+	background-color:               inherit;
+        text-color:                     inherit;
+}
+
+element selected {
+	background-color:               @button;
+	text-color:                     @fg;
+	border-radius:                  6px;
+}

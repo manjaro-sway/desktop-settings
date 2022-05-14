@@ -1,0 +1,8 @@
+%YAML 1.2
+---
+hidden: true
+file_extensions:
+  - sublime_lib_test
+scope: source.sublime_lib_test
+contexts:
+  main: []
