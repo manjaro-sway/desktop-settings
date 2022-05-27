@@ -39,7 +39,7 @@ jobs:
         event-type: source_update
         client-payload: '{ "repository": "${{ github.repository }}", "version": "${{ github.event.release.tag_name || github.event.inputs.tag }}", "md5": "${{ env.MD5 }}" }'
     - uses: peter-evans/repository-dispatch@v1
-      if: ${{ github.event_name == 'push' }}
+      if: ${{ github.event_name == 'push' || github.event_name == 'release' }}
       with:
         token: ${{ secrets.DISPATCH }}
         repository: manjaro-sway/manjaro-sway-settings-git
