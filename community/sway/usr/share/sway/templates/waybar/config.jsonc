@@ -164,18 +164,14 @@
     "custom/menu": {
         "format": "",
         "on-click": "swaymsg exec \\$menu",
-        "tooltip": false,
-        "rotate": 180
+        "tooltip": false
     },
 
     "bluetooth": {
-        "format": "{icon}",
-        "interval": 30,
-        "format-icons": {
-            "enabled": "",
-            "disabled": ""
-        },
+        "format": "",
+        "format-disabled": "",
         "on-click": "blueberry",
+        "on-click-right": "rfkill toggle bluetooth",
         "tooltip-format": "{}"
     },
 
@@ -208,7 +204,7 @@
             "on": "",
             "off": ""
         },
-        "exec": "/usr/share/sway/scripts/sunset.sh",
+        "exec": "fallback_latitude=50.1 fallback_longitude=8.7 latitude= longitude= /usr/share/sway/scripts/sunset.sh",
         "on-click": "/usr/share/sway/scripts/sunset.sh toggle; pkill -RTMIN+6 waybar",
         "exec-if": "/usr/share/sway/scripts/sunset.sh check",
         "signal": 6
