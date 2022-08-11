@@ -101,34 +101,38 @@ end
 -- {{{ Menu
 -- Create a launcher widget and a main menu
 myawesomemenu = {
-    { "hotkeys", function() return false, hotkeys_popup.show_help end, menubar.utils.lookup_icon("preferences-desktop-keyboard-shortcuts") },
-    { "manual", terminal .. " -e man awesome", menubar.utils.lookup_icon("system-help") },
-    { "edit config", gui_editor .. " " .. awesome.conffile,  menubar.utils.lookup_icon("accessories-text-editor") },
-    { "restart", awesome.restart, menubar.utils.lookup_icon("system-restart") }
+    { "hotkeys", function() return false, hotkeys_popup.show_help end },
+    { "manual", terminal .. " -e man awesome" },
+    { "edit config", string.format("%s -e %s %s", terminal, editor, awesome.conffile) },
+    { "edit theme", string.format("%s -e %s %s", terminal, editor, ".config/awesome/themes/cesious/theme.lua") },
+    { "restart", awesome.restart }
 }
+
 myexitmenu = {
-    { "log out", function() awesome.quit() end, menubar.utils.lookup_icon("system-log-out") },
-    { "suspend", "systemctl suspend", menubar.utils.lookup_icon("system-suspend") },
-    { "hibernate", "systemctl hibernate", menubar.utils.lookup_icon("system-suspend-hibernate") },
-    { "reboot", "systemctl reboot", menubar.utils.lookup_icon("system-reboot") },
-    { "shutdown", "poweroff", menubar.utils.lookup_icon("system-shutdown") }
+    { "log out", function() awesome.quit() end, "/usr/share/icons/Arc-Maia/actions/24@2x/system-log-out.png" },
+    { "suspend", "systemctl suspend", "/usr/share/icons/Arc-Maia/actions/24@2x/gnome-session-suspend.png" },
+    { "hibernate", "systemctl hibernate", "/usr/share/icons/Arc-Maia/actions/24@2x/gnome-session-hibernate.png" },
+    { "reboot", "systemctl reboot", "/usr/share/icons/Arc-Maia/actions/24@2x/view-refresh.png" },
+    { "shutdown", "poweroff", "/usr/share/icons/Arc-Maia/actions/24@2x/system-shutdown.png" }
 }
+
 mymainmenu = freedesktop.menu.build({
-    icon_size = 32,
     before = {
-        { "Terminal", terminal, menubar.utils.lookup_icon("utilities-terminal") },
-        { "Browser", browser, menubar.utils.lookup_icon("internet-web-browser") },
-        { "Files", filemanager, menubar.utils.lookup_icon("system-file-manager") },
+        { "Terminal", terminal, "/usr/share/icons/Adwaita/32x32/apps/utilities-terminal.png" },
+        { "Browser", browser, "/usr/share/icons/hicolor/24x24/apps/chromium.png" },
+        { "Files", filemanager, "/usr/share/icons/Adwaita/32x32/apps/system-file-manager.png" },
         -- other triads can be put here
     },
     after = {
-        { "Awesome", myawesomemenu, "/usr/share/awesome/icons/awesome32.png" },
-        { "Exit", myexitmenu, menubar.utils.lookup_icon("system-shutdown") },
+        { "Awesome", myawesomemenu, "/usr/share/awesome/icons/awesome16.png" },
+        { "Exit", myexitmenu, "/usr/share/icons/Arc-Maia/actions/24@2x/system-restart.png" },
         -- other triads can be put here
     }
 })
+
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu })
+
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
