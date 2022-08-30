@@ -303,7 +303,7 @@
         },
         "exec": "/bin/sh /usr/share/sway/scripts/zeit.sh status",
         "on-click": "/bin/sh /usr/share/sway/scripts/zeit.sh click; pkill -RTMIN+10 waybar",
-        "exec-if": "[ -x \"$(command -v zeit)\" ]",
+        "exec-if": "[ -x $(command -v zeit) ]",
         "signal": 10
     },
 
