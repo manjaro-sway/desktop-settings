@@ -31,14 +31,14 @@ jobs:
       if: ${{ github.event_name == 'push' }}
       run: |
         echo "::set-output name=git-version::$(git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g')"
-    - uses: peter-evans/repository-dispatch@v1
+    - uses: peter-evans/repository-dispatch@v2
       if: ${{ github.event_name == 'release' }}
       with:
         token: ${{ secrets.DISPATCH }}
         repository: manjaro-sway/manjaro-sway-settings
         event-type: source_update
         client-payload: '{ "repository": "${{ github.repository }}", "version": "${{ github.event.release.tag_name || github.event.inputs.tag }}", "md5": "${{ env.MD5 }}" }'
-    - uses: peter-evans/repository-dispatch@v1
+    - uses: peter-evans/repository-dispatch@v2
       if: ${{ github.event_name == 'push' || github.event_name == 'release' }}
       with:
         token: ${{ secrets.DISPATCH }}
