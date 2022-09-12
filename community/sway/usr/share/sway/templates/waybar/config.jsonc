@@ -157,8 +157,8 @@
     "custom/pacman": {
         "format": " {}",
         "interval": 3600,
-        "exec-if": "[ $(pamac checkupdates -q | wc -l) -gt 0 ]",
-        "exec": "pamac checkupdates -q | wc -l",
+        "exec-if": "[ $(yay -Sy && yay -Qu | wc -l) -gt 0 ]",
+        "exec": "yay -Qu | wc -l",
         "on-click": "pamac-manager --updates; pkill -RTMIN+4 waybar",
         "signal": 4
     },
