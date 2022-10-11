@@ -85,7 +85,7 @@ $bindsym $mod+p exec env RUST_BACKTRACE=1 swayr switch-window &>> /tmp/swayr.log
 $bindsym Mod1+Tab exec env RUST_BACKTRACE=1 swayr switch-to-urgent-or-lru-window &>> /tmp/swayr.log
 
 ## Navigation // Switch to the last recently used workspace ##
-$bindsym Mod4+Tab workspace back_and_forth
+$bindsym $mod+Tab workspace back_and_forth
 
 #
 # Workspaces:
