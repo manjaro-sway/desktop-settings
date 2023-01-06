@@ -21,23 +21,24 @@ jobs:
       with:
         fetch-depth: 0
     - name: md5
+      id: md5
       if: ${{ github.event_name == 'release' }}
       run: |
         curl --location --remote-header-name --silent -o release.tar.gz \
           https://github.com/${{ github.repository }}/archive/${{ github.event.release.tag_name || github.event.inputs.tag }}.tar.gz
-        echo "MD5=$(md5sum release.tar.gz | cut -d ' ' -f 1)" >>$GITHUB_ENV
+        echo "md5=$(md5sum release.tar.gz | cut -d ' ' -f 1)" >>$GITHUB_OUTPUT
     - name: info
       id: info
       if: ${{ github.event_name == 'push' }}
       run: |
-        echo "::set-output name=git-version::$(git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g')"
+        echo "git-version=$(git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g')" >> $GITHUB_OUTPUT
     - uses: peter-evans/repository-dispatch@v2
       if: ${{ github.event_name == 'release' }}
       with:
         token: ${{ secrets.DISPATCH }}
         repository: manjaro-sway/manjaro-sway-settings
         event-type: source_update
-        client-payload: '{ "repository": "${{ github.repository }}", "version": "${{ github.event.release.tag_name || github.event.inputs.tag }}", "md5": "${{ env.MD5 }}" }'
+        client-payload: '{ "repository": "${{ github.repository }}", "version": "${{ github.event.release.tag_name || github.event.inputs.tag }}", "md5": "${{ steps.md5.outputs.md5 }}" }'
     - uses: peter-evans/repository-dispatch@v2
       if: ${{ github.event_name == 'push' || github.event_name == 'release' }}
       with:
