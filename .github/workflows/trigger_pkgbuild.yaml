@@ -19,6 +19,8 @@ jobs:
     - name: checkout
       uses: actions/checkout@v3
       with:
+        repository: manjaro-sway/desktop-settings
+        ref: sway
         fetch-depth: 0
     - name: md5
       id: md5
@@ -31,7 +33,7 @@ jobs:
       id: info
       if: ${{ github.event_name == 'push' }}
       run: |
-        echo "git-version=$(git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g')" >> $GITHUB_OUTPUT
+        echo "git-version=$(printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)")" >> $GITHUB_OUTPUT
     - uses: peter-evans/repository-dispatch@v2
       if: ${{ github.event_name == 'release' }}
       with:
