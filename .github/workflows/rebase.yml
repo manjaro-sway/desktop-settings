@@ -12,20 +12,19 @@ env:
 jobs:
   rebase:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-    - 
-      name: checkout
+    - name: checkout
       uses: actions/checkout@v3
       with:
-        token: ${{ secrets.PUSH_AND_TRIGGER }}
+        token: ${{ github.token }}
         fetch-depth: 0
-    - 
-      name: fetch upstream
+    - name: fetch upstream
       run: |
         git remote add upstream ${UPSTREAM_GIT}
         git fetch upstream
-    - 
-      name: rebase
+    - name: rebase
       run: |
         git config user.email "info@jonas-strassel.de"
         git config user.name "Jonas Strassel"
