@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
   schedule:
     - cron:  '*/30 * * * *'
-  
-env:
-  UPSTREAM_GIT: https://gitlab.manjaro.org/profiles-and-settings/desktop-settings.git
-  BASE_BRANCH: master
+
+concurrency:
+  group: rebase
+  cancel-in-progress: true
 
 jobs:
   rebase:
@@ -15,18 +15,9 @@ jobs:
     permissions:
       contents: write
     steps:
-    - name: checkout
-      uses: actions/checkout@v3
-      with:
-        token: ${{ github.token }}
-        fetch-depth: 0
-    - name: fetch upstream
-      run: |
-        git remote add upstream ${UPSTREAM_GIT}
-        git fetch upstream
-    - name: rebase
-      run: |
-        git config user.email "info@jonas-strassel.de"
-        git config user.name "Jonas Strassel"
-        git pull --rebase upstream ${BASE_BRANCH}
-        git push --force-with-lease
+      - name: rebase
+        uses: manjaro-contrib/action-rebase@main
+        with:
+          upstream: https://gitlab.manjaro.org/profiles-and-settings/desktop-settings.git
+          upstream-branch: master
+          token: ${{ secrets.DISPATCH_TOKEN }}
