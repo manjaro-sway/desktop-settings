@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-function status() {
+status() {
     systemctl --user is-active wluma >/dev/null 2>&1
 }
 
