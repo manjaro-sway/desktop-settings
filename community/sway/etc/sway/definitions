@@ -33,9 +33,9 @@ set $term_float footclient -a floating_shell
 set $onscreen_bar /usr/share/sway/scripts/wob.sh "$accent-color" "$background-color"
 
 # brightness control
-set $brightness $( /usr/share/sway/scripts/brightness.sh )
-set $brightness_up $onscreen_bar $brightness up
-set $brightness_down $onscreen_bar $brightness down
+set $brightness /usr/share/sway/scripts/brightness.sh
+set $brightness_up $brightness | $onscreen_bar $brightness up
+set $brightness_down $brightness | $onscreen_bar $brightness down
 
 # audio control
 set $sink_volume pactl get-sink-volume @DEFAULT_SINK@ | grep '^Volume:' | cut -d / -f 2 | tr -d ' ' | sed 's/%//'

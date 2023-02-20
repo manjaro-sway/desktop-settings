@@ -34,4 +34,8 @@ is_running_on_this_screen wob || {
     tail -f "$wob_pipe" | wob -c $ini &
 }
 
-[ "$new_value" ] && echo "$new_value" >"$wob_pipe"
+if [ "$new_value" != "" ]; then
+    echo "$new_value" >"$wob_pipe"
+else
+    cat >"$wob_pipe"
+fi
