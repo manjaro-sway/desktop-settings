@@ -7,7 +7,6 @@ args = [
     '-no-case-sensitive',
     '-no-drun-use-desktop-cache',
     '-p','{prompt}',
-    '-font','Roboto 11',
 ]
 
 [format]
