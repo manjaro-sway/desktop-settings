@@ -39,6 +39,9 @@ num-workspaces=2
 theme='Mint-Y'
 titlebar-font='Cantarell 10'
 
+[org.x.apps.portal]
+color-scheme='prefer-dark'
+
 [org.cinnamon.sounds]
 login-enabled=true
 login-file="/usr/share/sounds/LinuxMint/stereo/login.oga"
