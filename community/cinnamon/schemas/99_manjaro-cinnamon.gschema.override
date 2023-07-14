@@ -13,8 +13,11 @@ picture-uri='file:///usr/share/backgrounds/cinnamon_default.jpg'
 [org.cinnamon.desktop.interface]
 cursor-theme='Bibata-Modern-Ice'
 font-name='Cantarell 10'
-gtk-theme='Mint-Y-Dark-Teal'
+gtk-theme='Mint-L-Dark-Teal'
 icon-theme='Papirus-Adapta-Nokto-Maia'
+
+[org.cinnamon.theme]
+name='Mint-L-Dark-Teal'
 
 [org.cinnamon.desktop.screensaver]
 ask-for-away-message=false
@@ -61,9 +64,6 @@ unplug-enabled=true
 unplug-file="/usr/share/sounds/LinuxMint/stereo/unplug.oga"
 notification-enabled=true
 notification-file="/usr/share/sounds/LinuxMint/stereo/notification.oga"
-
-[org.cinnamon.theme]
-name='Mint-Y-Dark-Teal'
 
 [org.gnome.desktop.sound]
 theme-name="LinuxMint"
