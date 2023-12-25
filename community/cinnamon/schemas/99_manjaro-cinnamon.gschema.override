@@ -87,5 +87,5 @@ trash-icon-visible=false
 volumes-visible=true
 
 [org.nemo.preferences]
-bulk-rename-tool="b'bulky'"
+bulk-rename-tool=b'bulky'
 thumbnail-limit=1073741824
