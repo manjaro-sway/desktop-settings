@@ -1,5 +1,9 @@
 #!/bin/sh
-current_screen=$(swaymsg -t get_outputs | jq -r '.[] | select(.focused==true) | .name')
+make=$(swaymsg -t get_outputs | jq -r '.[] | select(.focused==true) | .make')
+model=$(swaymsg -t get_outputs | jq -r '.[] | select(.focused==true) | .model')
+name=$(swaymsg -t get_outputs | jq -r '.[] | select(.focused==true) | .name')
+current_screen="$make $model ($name)"
+
 increment=0.5
 
 current_scale() { 
@@ -9,7 +13,7 @@ current_scale() {
 next_scale=$(current_scale)
 
 scale() {
-    swaymsg output "\"$current_screen\"" scale "$next_scale"
+    [ -x "$(command -v way-displays)" ] && way-displays -s SCALE "$current_screen" $next_scale && way-displays -w || swaymsg output "\"$name\"" scale "$next_scale"
 }
 
 case $1'' in
