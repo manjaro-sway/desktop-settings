@@ -34,14 +34,14 @@ jobs:
       if: ${{ github.event_name == 'push' }}
       run: |
         echo "git-version=$(printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)")" >> $GITHUB_OUTPUT
-    - uses: peter-evans/repository-dispatch@v2
+    - uses: peter-evans/repository-dispatch@v3
       if: ${{ github.event_name == 'release' }}
       with:
         token: ${{ secrets.DISPATCH_TOKEN }}
         repository: manjaro-sway/manjaro-sway-settings
         event-type: source_update
         client-payload: '{ "repository": "${{ github.repository }}", "version": "${{ github.event.release.tag_name || github.event.inputs.tag }}", "md5": "${{ steps.md5.outputs.md5 }}" }'
-    - uses: peter-evans/repository-dispatch@v2
+    - uses: peter-evans/repository-dispatch@v3
       if: ${{ github.event_name == 'push' || github.event_name == 'release' }}
       with:
         token: ${{ secrets.DISPATCH_TOKEN }}
