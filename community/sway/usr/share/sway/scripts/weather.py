@@ -83,13 +83,11 @@ WWO_CODE = {
     "395": "HeavySnowShowers",
 }
 
+current_locale = (os.environ.get('LC_MEASUREMENT') or "en_GB").split('.')[0]
 data = {}
 city = ""
 temperature = "C"
 distance = "km"
-
-if os.environ['LC_MEASUREMENT']:
-    current_locale = os.environ['LC_MEASUREMENT'].split('.')[0]
 
 if current_locale == "en_US":
     temperature = "F"
