@@ -68,6 +68,9 @@ unplug-file="/usr/share/sounds/LinuxMint/stereo/unplug.oga"
 notification-enabled=true
 notification-file="/usr/share/sounds/LinuxMint/stereo/notification.oga"
 
+[org.gnome.desktop.interface]
+color-scheme='prefer-dark'
+
 [org.gnome.desktop.sound]
 theme-name="LinuxMint"
 event-sounds=false
