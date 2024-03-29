@@ -89,3 +89,6 @@ volumes-visible=true
 [org.nemo.preferences]
 bulk-rename-tool=b'bulky'
 thumbnail-limit=1073741824
+
+[org.onboard]
+start-minimized=true
