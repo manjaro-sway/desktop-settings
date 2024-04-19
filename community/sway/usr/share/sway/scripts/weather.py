@@ -128,8 +128,16 @@ except getopt.error as err:
     sys.exit(1)
 
 if city == "":
-    city_info = requests.get("https://ipinfo.io", timeout=10).json()
-    city = city_info["city"]
+    try:
+        city_info = requests.get("https://ipinfo.io", timeout=10).json()
+        city = city_info["city"]
+    except (
+        requests.exceptions.HTTPError,
+        requests.exceptions.ConnectionError,
+        requests.exceptions.Timeout,
+    ) as err:
+        print(str(err))
+        sys.exit(1)
 
 feels_like = f"FeelsLike{temperature}"
 temp = f"temp_{temperature}"
@@ -140,7 +148,15 @@ windspeed = "windspeedKmph"
 if distance == "miles":
     windspeed = "windspeedMiles"
 
-weather = requests.get("https://wttr.in/" + city + "?format=j1", timeout=10).json()
+try:
+    weather = requests.get("https://wttr.in/" + city + "?format=j1", timeout=10).json()
+except (
+    requests.exceptions.HTTPError,
+    requests.exceptions.ConnectionError,
+    requests.exceptions.Timeout,
+) as err:
+    print(str(err))
+    sys.exit(1)
 
 
 def format_time(time: str) -> str:
