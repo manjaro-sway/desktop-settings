@@ -220,8 +220,8 @@
         "return-type": "json",
         "format": "{}",
         "tooltip-format": "{tooltip}",
-        "exec": "echo '{\"class\": \"recording\",\"text\":\"󰑊\",\"tooltip\":\"press $mod+Esc to stop recording\"}'",
-        "exec-if": "pgrep wf-recorder",
+        "exec": "printf '{\"class\": \"recording\",\"text\":\"󰑊\",\"tooltip\":\"press $mod+Esc to stop recording\"}'",
+        "exec-if": "pgrep wf-recorder > /dev/null",
         "on-click": "waybar-signal recorder",
         "signal": 8
     },
