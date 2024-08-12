@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Pantheon
-Comment=This session provides elementary experience
-Exec=/usr/bin/pantheon-session
-TryExec=wingpanel
-Icon=
-Type=Application

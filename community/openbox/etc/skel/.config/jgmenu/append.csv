@@ -1,4 +1,0 @@
-^sep()
-Restart,systemctl -i reboot,system-reboot
-Log Out,openbox --exit,system-log-out
-Power Off,systemctl -i poweroff,system-shutdown
