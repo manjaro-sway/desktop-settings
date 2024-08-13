@@ -1,6 +1,0 @@
-The Python files in this directory are derived from the Python 3.6.5 source code. See the LICENSE file in this directory for licensing information.
-
-The files have been modified as follows:
-- A copyright notice has been added to each.
-- types.py is an incomplete excerpt of the original.
-- Imports have been modified as necessary.

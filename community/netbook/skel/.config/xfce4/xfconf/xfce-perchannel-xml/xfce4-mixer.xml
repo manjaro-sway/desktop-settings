@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<channel name="xfce4-mixer" version="1.0">
-  <property name="window-height" type="int" value="490"/>
-  <property name="window-width" type="int" value="784"/>
-</channel>

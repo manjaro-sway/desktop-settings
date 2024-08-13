@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Exec=hotcorners.py --daemon
-Hidden=true
-X-MATE-Autostart-enabled=true
-Name[en_US]=Hot-corners
-Name=Hot-corners
-Comment[en_US]=Python daemon to run arbitary commands at hot corners
-Comment=Python daemon to run arbitary commands at hot corners

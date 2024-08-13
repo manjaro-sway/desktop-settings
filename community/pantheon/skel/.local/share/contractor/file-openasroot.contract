@@ -1,7 +1,0 @@
-[Contractor Entry]
-Name=Open file as root
-Icon=scratch-text-editor
-Description=open file as root with scratch
-MimeType=text
-Exec=gksudo scratch-text-editor %U
-Gettext-Domain=scratch-text-editor
