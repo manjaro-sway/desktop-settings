@@ -231,12 +231,13 @@
     },
     "custom/theme": {
         "format": "{icon}",
-        "interval": 300,
+        "interval": 60,
         "tooltip": true,
         "format-icons": {
             "light": "",
             "dark": "",
-            "auto": "󱩷"
+            "auto_light": "󱩷",
+            "auto_dark": "󱩸"
         },
         "return-type": "json",
         "exec-if": "/usr/share/sway/scripts/theme-toggle.sh check",

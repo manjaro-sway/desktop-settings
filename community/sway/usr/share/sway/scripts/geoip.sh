@@ -1,16 +1,10 @@
 #!/bin/sh
-set -xu
+set -u
 
-GEO_CONTENT=$(curl -sL https://manjaro-sway.download/geoip)
-if [ "$GEO_CONTENT" != ""]; then
-    echo $GEO_CONTENT >"$HOME/.cache/geoip"
-elif [ -f "$HOME/.cache/geoip" ]; then
-    GEO_CONTENT=$(cat "$HOME/.cache/geoip")
+cache_file="$HOME/.cache/geoip"
+cache_time=$(date -r "$cache_file" +%s)
+yesterday_time=$(date -d 'now - 6 hour' +%s)
+if [ ! -f "$cache_file" ] || [ $cache_time -lt $yesterday_time ]; then
+    curl -sL https://manjaro-sway.download/geoip >"$cache_file"
 fi
-
-if [ "$GEO_CONTENT" != "" ]; then
-    echo $GEO_CONTENT
-    exit 0
-fi
-
-exit 1
+cat "$cache_file"
