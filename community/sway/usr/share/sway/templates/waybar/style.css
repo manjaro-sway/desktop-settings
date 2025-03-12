@@ -83,8 +83,8 @@ window#waybar {
 #custom-weather,
 #custom-theme,
 #tray {
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 /* -----------------------------------------------------------------------------
