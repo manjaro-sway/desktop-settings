@@ -83,7 +83,6 @@ case $1'' in
     fi
 
     printf '{"alt":"%s","tooltip":"%s"}\n' "$alt" "$text"
-    exit 0
     ;;
 esac
 
