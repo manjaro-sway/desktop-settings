@@ -12,7 +12,7 @@ picture-uri='file:///usr/share/backgrounds/cinnamon_default.jpg'
 
 [org.cinnamon.desktop.interface]
 cursor-theme='Bibata-Modern-Ice'
-font-name='Cantarell 10'
+font-name='Adwaita Sans 10'
 gtk-theme='Mint-L-Dark-Teal'
 icon-theme='Papirus-Adapta-Nokto-Maia'
 
@@ -37,7 +37,7 @@ volume-sound-file="/usr/share/sounds/LinuxMint/stereo/volume.oga"
 [org.cinnamon.desktop.wm.preferences]
 num-workspaces=2
 theme='Mint-Y'
-titlebar-font='Cantarell 10'
+titlebar-font='Adwaita Sans 10'
 
 [org.x.apps.portal]
 color-scheme='prefer-dark'
@@ -83,7 +83,7 @@ use-theme-colors=false
 font='Droid Sans Mono Regular 11'
 
 [org.nemo.desktop]
-font='Cantarell 10'
+font='Adwaita Sans 10'
 computer-icon-visible=true
 home-icon-visible=true
 trash-icon-visible=false
