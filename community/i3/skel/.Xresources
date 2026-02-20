@@ -54,7 +54,7 @@ XTerm*selectToClipboard: true
 *color7:                          #d8d8d8
 *color15:                         #f8f8f8
 
-Xcursor.theme: Breeze
+Xcursor.theme: breeze-cursors
 Xcursor.size:                     0
 
 URxvt.font:                       9x15,xft:TerminessTTFNerdFontMono
