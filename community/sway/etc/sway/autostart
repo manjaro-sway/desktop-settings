@@ -1,7 +1,5 @@
 # units
 
-# TODO: foot-server.socket unit is not shipped in this repo; add a
-# usr/lib/systemd/user/foot-server.socket unit file so the socket activation works.
 set $initialize_foot_server '[ -x "$(command -v foot)" ] && (systemctl --user start foot-server.socket; systemctl --user start foot-server)'
 set $initialize_swayr_daemon '[ -x "$(command -v swayrd)" ] && systemctl --user start swayrd'
 set $initialize_waybar '[ -x "$(command -v waybar)" ] && (systemctl --user start waybar || /usr/share/sway/scripts/waybar.sh)'
@@ -20,7 +18,6 @@ set $initialize_cliphist_store '[ -x "$(command -v cliphist)" ] && systemctl --u
 set $initialize_cliphist_watch '[ -x "$(command -v cliphist)" ] && systemctl --user start cliphist-watch'
 set $initialize_clip_persist '[ -x "$(command -v wl-clip-persist)" ] && systemctl --user start wl-clip-persist'
 set $initialize_calendar_daemon '[ -x "$(command -v calcurse)" ] && systemctl --user start calcurse-daemon'
-set $initialize_swappy_notify '[ -x "$(command -v swappy)" ] && systemctl --user start swappy-notify'
 set $initialize_watch_playerctl '[ -x "$(command -v playerctl)" ] && systemctl --user start watch-playerctl'
 
 # autostarts
