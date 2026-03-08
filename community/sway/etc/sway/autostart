@@ -37,4 +37,4 @@ set $apply_background swaymsg 'output * bg $background fill'
 
 # daemons
 
-set $nm_applet '[ -x "$(command -v nm-applet)" ] && pkill -U $USER -x nm-applet && dbus-launch nm-applet'
+set $nm_applet '[ -x "$(command -v nm-applet)" ] && pkill -U $USER -x nm-applet && nm-applet --indicator'
