@@ -6,9 +6,10 @@ import json
 import locale
 import sys
 import urllib.parse
+from datetime import date
+from os import path, environ, makedirs
 import requests
 import configparser
-from os import path, environ
 
 config_path = path.join(
     environ.get('XDG_CONFIG_HOME') or
@@ -47,15 +48,32 @@ city = urllib.parse.quote(args.city)
 temperature_unit = "fahrenheit" if temperature == "F" else "celsius"
 wind_speed_unit = "mph" if distance == "miles" else "kmh"
 
+cache_dir = path.join(
+    environ.get('XDG_CACHE_HOME') or path.join(environ['HOME'], '.cache'),
+    'manjaro-sway'
+)
+cache_file = path.join(cache_dir, f"weather-{city}-{temperature_unit}-{wind_speed_unit}-{date.today()}.json")
+
 try:
     headers = {"Accept-Language": f"{lng.replace('_', '-')},{lng.split('_')[0]};q=0.5"}
-    weather = requests.get(f"https://manjaro-sway.download/weather/{city}?temperature_unit={temperature_unit}&wind_speed_unit={wind_speed_unit}", timeout=10, headers=headers).json()
+    weather = requests.get(
+        f"https://manjaro-sway.download/weather/{city}?temperature_unit={temperature_unit}&wind_speed_unit={wind_speed_unit}",
+        timeout=10,
+        headers=headers
+    ).json()
+    makedirs(cache_dir, exist_ok=True)
+    with open(cache_file, 'w') as f:
+        json.dump(weather, f)
 except (
     requests.exceptions.HTTPError,
     requests.exceptions.ConnectionError,
     requests.exceptions.Timeout,
 ) as err:
-    print(str(err))
-    sys.exit(1)
+    if path.exists(cache_file):
+        with open(cache_file) as f:
+            weather = json.load(f)
+    else:
+        print(str(err), file=sys.stderr)
+        sys.exit(1)
 
 print(json.dumps(weather))
