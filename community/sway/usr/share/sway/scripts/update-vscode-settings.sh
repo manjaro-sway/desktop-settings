@@ -38,6 +38,7 @@ for variant in "Code" "Code - OSS" "Code - Insiders"; do
                 # Only update theme if current value is a managed theme
                 current_theme=$(jq -r '.["workbench.colorTheme"] // empty' "$file" 2>/dev/null)
                 if echo "$current_theme" | grep -qE "^($MANAGED_THEMES)$"; then
+                    # TODO: use jq (tmp file pattern) for the write here, same as the font write below.
                     sed -i "s/\"workbench.colorTheme\": \".*\"/\"workbench.colorTheme\": \"$VSCODE_THEME\"/" "$file"
                 fi
 

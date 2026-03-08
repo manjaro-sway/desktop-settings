@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 """Script for the Waybar weather module."""
 
+# TODO: migrate argument parsing from getopt to argparse (stdlib, idiomatic Python).
 import getopt
 import json
 import locale
@@ -10,6 +11,8 @@ import requests
 import configparser
 from os import path, environ
 
+# TODO: remove APPDATA — it is a Windows-only environment variable and is
+# never set on Linux; the fallback chain can start directly with XDG_CONFIG_HOME.
 config_path = path.join(
     environ.get('APPDATA') or
     environ.get('XDG_CONFIG_HOME') or

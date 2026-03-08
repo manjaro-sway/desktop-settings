@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# TODO: the cache read/write block is duplicated between 'status' and 'check'.
+# Extract into a shared function, e.g.:
+#   get_updates() { CACHE_FILE=...; if fresh then cat else pamac ... | tee; fi; }
+#   UPDATES=$(get_updates)
 case $1'' in
 'status') 
     CACHE_FILE="/tmp/pamac-checkupdates-$USER"

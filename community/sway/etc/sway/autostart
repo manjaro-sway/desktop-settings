@@ -1,5 +1,7 @@
 # units
 
+# TODO: foot-server.socket unit is not shipped in this repo; add a
+# usr/lib/systemd/user/foot-server.socket unit file so the socket activation works.
 set $initialize_foot_server '[ -x "$(command -v foot)" ] && (systemctl --user start foot-server.socket; systemctl --user start foot-server)'
 set $initialize_swayr_daemon '[ -x "$(command -v swayrd)" ] && systemctl --user start swayrd'
 set $initialize_waybar '[ -x "$(command -v waybar)" ] && (systemctl --user start waybar || /usr/share/sway/scripts/waybar.sh)'

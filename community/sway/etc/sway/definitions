@@ -51,6 +51,8 @@ set $scale_down $script_path/scale.sh down
 set $scale_default $script_path/scale.sh default
 
 # Audio control
+# TODO: migrate from pactl text-output parsing to wpctl (WirePlumber CLI),
+# which has stable machine-readable output and works natively with PipeWire.
 set $sink_volume pactl get-sink-volume @DEFAULT_SINK@ | grep '^Volume:' | cut -d / -f 2 | tr -d ' ' | sed 's/%//'
 set $source_volume pactl get-source-volume @DEFAULT_SOURCE@ | grep '^Volume:' | cut -d / -f 2 | tr -d ' ' | sed 's/%//'
 set $volume_down $onscreen_bar $(pactl set-sink-volume @DEFAULT_SINK@ -5% && $sink_volume)
@@ -109,6 +111,8 @@ set $ws10 number 10
 set $grimshot grimshot
 set $pipe_output $grimshot save output -
 set $pipe_selection $grimshot save area -
+# TODO: $notify_paste duplicates the notification swappy already shows after saving.
+# Remove $notify_paste and its use in $screenshot_screen / $screenshot_selection.
 set $notify_paste [[ $(wl-paste -l) == "image/png" ]] && notify-send "Screenshot copied to clipboard"
 set $swappy swappy -f -
 set $upload_pipe curl -s -F "file=@-;filename=.png" https://x0.at/ | tee >(wl-copy) >(xargs notify-send)

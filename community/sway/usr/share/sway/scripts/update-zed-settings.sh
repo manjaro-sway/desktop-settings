@@ -1,9 +1,10 @@
 #!/usr/bin/env sh
 
 # Script to update Zed Editor settings (font and theme)
-# Uses sed to preserve comments in JSONC files.
 # Only updates values that are currently managed (i.e. one of the known
 # sway-managed values), allowing user overrides to persist.
+# TODO: replace sed reads and writes with jq — settings.json is plain JSON
+# (not JSONC), so jq is safe and less fragile than regex substitution.
 
 # Handle arguments
 FONT_FAMILY=${1:-"JetBrainsMono NF"}
