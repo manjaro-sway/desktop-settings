@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 """Script for the Waybar weather module."""
 
-# TODO: migrate argument parsing from getopt to argparse (stdlib, idiomatic Python).
-import getopt
+import argparse
 import json
 import locale
 import sys
@@ -11,10 +10,7 @@ import requests
 import configparser
 from os import path, environ
 
-# TODO: remove APPDATA — it is a Windows-only environment variable and is
-# never set on Linux; the fallback chain can start directly with XDG_CONFIG_HOME.
 config_path = path.join(
-    environ.get('APPDATA') or
     environ.get('XDG_CONFIG_HOME') or
     path.join(environ['HOME'], '.config'),
     "weather.cfg"
@@ -29,56 +25,30 @@ current_locale, _ = locale.getlocale(locale.LC_NUMERIC)
 city = config.get('DEFAULT', 'city', fallback='auto')
 temperature = config.get('DEFAULT', 'temperature', fallback='C')
 distance = config.get('DEFAULT', 'distance', fallback='km')
-lng = config.get('DEFAULT', 'locale', fallback=locale.getlocale()[0] or current_locale)
+lng = config.get('DEFAULT', 'locale', fallback=locale.getlocale()[0] or current_locale or 'en_US')
 
 if current_locale == "en_US":
     temperature = temperature or "F"
     distance = distance or "miles"
 
-argument_list = sys.argv[1:]
-options = "t:c:d:"
-long_options = ["temperature=", "city=", "distance="]
+parser = argparse.ArgumentParser(description='Waybar weather module')
+parser.add_argument('-t', '--temperature', default=temperature, choices=['C', 'F'],
+                    help='Temperature unit: C (Celsius) or F (Fahrenheit)')
+parser.add_argument('-d', '--distance', default=distance, choices=['km', 'miles'],
+                    help='Distance unit: km or miles')
+parser.add_argument('-c', '--city', default=city,
+                    help='City name or "auto" for automatic detection')
+args = parser.parse_args()
+
+temperature = args.temperature.upper()
+distance = args.distance.lower()
+city = urllib.parse.quote(args.city)
+
+temperature_unit = "fahrenheit" if temperature == "F" else "celsius"
+wind_speed_unit = "mph" if distance == "miles" else "kmh"
 
 try:
-    args, values = getopt.getopt(argument_list, options, long_options)
-
-    for current_argument, current_value in args:
-        if current_argument in ("-t", "--temperature"):
-            temperature = current_value[0].upper()
-            if temperature not in ("C", "F"):
-                msg = "temperature unit is neither (C)elsius, nor (F)ahrenheit"
-                raise RuntimeError(
-                    msg,
-                    temperature,
-                )
-
-        elif current_argument in ("-d", "--distance"):
-            distance = current_value.lower()
-            if distance not in ("km", "miles"):
-                msg = "distance unit is neither km, nor miles", distance
-                raise RuntimeError(msg)
-
-        else:
-            city = urllib.parse.quote(current_value)
-
-except getopt.error as err:
-    print(str(err))
-    sys.exit(1)
-
-if temperature == "F":
-    temperature_unit = "fahrenheit"
-
-if temperature == "C":
-    temperature_unit = "celsius"
-
-if distance == "miles":
-    wind_speed_unit = "mph"
-
-if distance == "km":
-    wind_speed_unit = "kmh"
-
-try:
-    headers = {"Accept-Language": f"{lng.replace("_", "-")},{lng.split("_")[0]};q=0.5"}
+    headers = {"Accept-Language": f"{lng.replace('_', '-')},{lng.split('_')[0]};q=0.5"}
     weather = requests.get(f"https://manjaro-sway.download/weather/{city}?temperature_unit={temperature_unit}&wind_speed_unit={wind_speed_unit}", timeout=10, headers=headers).json()
 except (
     requests.exceptions.HTTPError,
