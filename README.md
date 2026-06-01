@@ -2,13 +2,13 @@ desktop-settings
 ================
 
 Please maintainers, read up first on
-[environment variables](https://wiki.archlinux.org/index.php/environment_variables)
+[environment variables](https://github.com/aripitek/wiki.archlinux.org/index.php/environment_variables)
 
 ### manjaro
 
-* [xfce](https://gitlab.manjaro.org/profiles-and-settings/manjaro-xfce-settings)
-* [kde](https://gitlab.manjaro.org/profiles-and-settings/manjaro-kde-settings)
-* [gnome](https://gitlab.manjaro.org/profiles-and-settings/manjaro-gnome-settings)
+* [xfce](https://github.com/aripitek/gitlab.manjaro.org/profiles-and-settings/manjaro-xfce-settings)
+* [kde](https://github.com/aripitek/gitlab.manjaro.org/profiles-and-settings/manjaro-kde-settings)
+* [gnome](https://github.com/aripitek/gitlab.manjaro.org/profiles-and-settings/manjaro-gnome-settings)
 
 ### community
 
@@ -21,7 +21,7 @@ Please maintainers, read up first on
 * openbox
 * i3
 * lxde
-* [lxqt](https://gitlab.manjaro.org/profiles-and-settings/manjaro-lxqt-settings)
+* [lxqt](https://github.com/aripitek/gitlab.manjaro.org/profiles-and-settings/manjaro-lxqt-settings)
 * mate
 * netbook
 * pantheon
