@@ -1,10 +1,10 @@
 [x.dm.slick-greeter]
-background=/usr/share/backgrounds/greeter_default.jpg
-background-color=#263138
+background='/usr/share/backgrounds/greeter_default.jpg'
+background-color='#263138'
 draw-grid=false
-theme-name=Mint-L-Dark-Teal
-icon-theme-name=Papirus-Dark-Maia
+theme-name='Mint-L-Dark-Teal'
+icon-theme-name='Papirus-Dark-Maia'
 font-name='Adwaita Sans 11'
 xft-antialias=true
-xft-hintstyle=hintfull
-enable-hidpi=auto
+xft-hintstyle='hintfull'
+enable-hidpi='auto'
